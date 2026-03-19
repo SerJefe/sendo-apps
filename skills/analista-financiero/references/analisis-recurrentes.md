@@ -7,7 +7,8 @@
 
 | Fecha | Tipo | Empresa/Activo | Modo | Notas |
 |-------|------|---------------|------|-------|
-| 2026-01-26 | Tesis de inversión + múltiplos | TIN (BVC) | Inversiones | Yield, NAV, caso educativo |
+| 2026-01-26 | Tesis de inversión + múltiplos | TIN (BVC) | Inversiones | Yield, NAV, caso educativo. Ver caso-tin.md |
+| 2026-02-26 | Análisis fundamental completo | INTU/Intuit (NASDAQ) | Inversiones | Scorecard, moats, skin in the game, múltiplos. Fuente Arena Alfa. Ver caso-intuit.md |
 | 2026-03-19 | Dashboard CxP | Condugas (Odoo) | Empresa | Aging, proveedores, contratos |
 
 ## Tipos de análisis definidos

@@ -112,8 +112,26 @@ Para cada análisis de empresa usar esta estructura:
 - **Cuentas de ahorro**: Liquidez
 - Empresas privadas: Condugas S.A. BIC, Construtem SAS, Inversora Sánchez Acevedo Terralinda
 
+## Scorecards (formato Arena Alfa)
+
+Cuando Sebastián pida análisis de acciones USA, usar el formato de scorecards por capas:
+
+### Scorecard Final Ajustada
+Criterios: Modelo de negocio, Moat, Crecimiento/Runway, Calidad financiera, Skin in the game, Management/ejecución, Riesgo global, Valuación/margen seguridad, Riesgo/recompensa.
+Rating: ⭐ a ⭐⭐⭐⭐⭐ con nota rápida.
+
+### Moats Scorecard
+Criterios: Switching costs, Activos intangibles/marca, Efecto red/data advantage, Cost advantage, Efficient scale, Ecosistema/cross-sell, IA + expertos.
+
+### Skin in the Game Scorecard
+Criterios: Insider ownership, Compensación alineada, Ownership requirements, Capital allocation, Dilución/SBC, Gobierno corporativo, Alineación real con accionistas.
+
+Fuente de referencia: Arena Alfa US (@ArenaAlfaUS). Sebastián sigue este servicio.
+
 ## Casos de estudio de referencia
-Cargar `references/caso-tin.md` para ver el estándar analítico esperado (análisis de TIN — fondo inmobiliario BVC, yield ~10%, análisis de múltiplos).
+- `references/caso-tin.md` — TIN (BVC): Fondo inmobiliario, yield ~10%, datos 3Q-2025, portafolio completo
+- `references/caso-intuit.md` — INTU (NASDAQ): Software financiero, scorecards completos, múltiplos, FCF, crecimiento 13% CAGR
+- Estos son el estándar de profundidad esperado. Replicar este nivel.
 
 ## Análisis recurrentes
 Mantener actualizado `references/analisis-recurrentes.md` con los tipos de análisis que Sebastián va pidiendo, para poder replicarlos sin que tenga que re-explicar.
