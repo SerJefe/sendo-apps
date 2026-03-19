@@ -106,3 +106,23 @@ node scripts/odoo-cxp-report.js
 ---
 
 *Workspace mantenido por Siendo 🎯 — Asistente integral de Sebastián Sánchez Acevedo*
+
+## Skills
+
+### analista-financiero
+Analista Financiero Senior con tres modos de operación:
+
+| Modo | Qué analiza | Fuentes |
+|------|------------|---------|
+| **Inversiones** | Empresas BVC, NYSE, NASDAQ | Reportes públicos, web, datos del usuario |
+| **Empresa** | Condugas, Construtem, grupo familiar | Odoo, documentos internos |
+| **Portafolio** | Cartera personal (Trii, Schwab) | Posiciones + datos de mercado |
+
+**Formato de salida**: 5 secciones (Tesis, Análisis Fundamental, Brechas, Puntos Estratégicos, Gráficos)
+
+**Archivos**:
+- `skills/analista-financiero/SKILL.md` — Instrucciones completas
+- `skills/analista-financiero/references/caso-tin.md` — Caso de estudio de referencia
+- `skills/analista-financiero/references/analisis-recurrentes.md` — Registro de análisis pedidos
+
+Ubicación en OpenClaw: `~/.openclaw/skills/analista-financiero/`
