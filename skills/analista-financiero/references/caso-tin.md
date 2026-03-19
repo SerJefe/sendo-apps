@@ -96,7 +96,63 @@ TIN es el fondo inmobiliario con mejor rentabilidad en Colombia (12.73% LTM, IPC
 4. **Margen EBITDA bajó** de 75% a 70%
 5. **Caída de precio** -9.05% reciente — ¿técnico o fundamental?
 
-## 9. Puntos de Conversación
+## 9. Valoración — La Clave del Caso
+
+### Descuento sobre NAV
+| Métrica | Valor |
+|---------|-------|
+| Valor patrimonial título (31-dic-2025) | $22,446 |
+| Precio mercado | $13,260 |
+| **P/NAV** | **0.59x** (cotiza al 59% de su patrimonio) |
+
+Se compran activos inmobiliarios al **60% de su valor comercial** en un mercado con déficit de vivienda.
+
+### Yield implícito al precio de mercado
+| Precio compra | Div anual estimado | **Yield implícito** |
+|--------------|-------------------|---------------------|
+| $13,300 | $1,228 | **9.2%** |
+| $12,000 | $1,228 | **10.2%** |
+| $11,000 | $1,228 | **11.1%** |
+| $10,000 | $1,228 | **12.2%** |
+
+Cálculo: Patrimonial $22,446 × Yield LTM 5.47% = $1,228/año = ~$102/mes por título.
+
+### Comparativo con PEI
+- PEI llegó a cotizar a **<0.2x patrimonio** en 2023 (~$23,000), luego rebotó a $78,000+
+- PEI hoy cotiza a **0.7x** patrimonio
+- Otros activos inmobiliarios Colombia cotizan a **0.5x** → equivaldría a ~$11,000 para TIN
+- Lección: el mercado puede hacer "salvajadas" con activos ilíquidos, pero eventualmente se corrigen
+
+### vs TES Colombia
+- TES cotizan entre 12%-13% → para institucionales puede ser más atractivo que 9-10% de TIN con menor liquidez
+- Pero TIN crece y se valoriza, TES no
+
+## 10. Tesis de Inversión Completa (voz de Sebastián)
+
+**Por qué compré hoy:**
+- Yield implícito 9-10% en un mercado donde inmobiliario renta 4-5%
+- Cotiza a 0.6x NAV — estoy comprando activos al 60% de su valor
+- Rentabilidad histórica 12.7% EA en 6 años + cotizando con descuento = interés compuesto brutal
+- Baja vacancia (3.4%), cartera sana (0.92%), arrendatarios sólidos
+- Formador de liquidez BVC desde 19-ene-2026
+
+**Estrategia de entrada:**
+- Compra inicial fuerte en $13,200-$13,500
+- Liquidez reservada para escalonamiento si cae a $10,000-$11,000
+- Hay vendedor grande visible → posibles caídas adicionales
+
+**Riesgos que me preocupan (en orden):**
+1. **Riesgo electoral**: Si Cepeda gana → continuación de gasto, déficit fiscal, política económica destructiva. Caídas fuertes en toda la BVC. "En 8 años se toma el control de cortes y BanRep"
+2. **100% deuda a tasa variable**: Mortal si suben tasas
+3. **Vencimientos de arriendos 2026**: ¿Renovarán?
+4. **Iliquidez**: Hay días sin negociación
+5. **TES competitivos**: 12-13% en TES vs 9-10% en TIN
+
+**Mitigante general**: Alta liquidez personal por riesgo electoral. Si se materializa, sacar % grande de dinero del país.
+
+## 11. Puntos de Conversación
 - ¿Por qué Davivienda supera el límite de prospecto del 30%? ¿Hay plan de diversificación?
 - Con 100% en tasa variable, ¿cuál es el escenario si BanRep sube tasas?
 - La distribución subió 47.7% — ¿es sostenible o es por venta de activos?
+- ¿Quién es el vendedor grande? ¿Institucional saliendo o liquidación forzada?
+- ¿Cuáles arriendos vencen en 2026 y hay señales de renovación?
