@@ -91,7 +91,7 @@ curl -s -H "Authorization: Bearer $WHOOP_TOKEN" 'https://api.prod.whoop.com/deve
 
 **Consultar transcripciones de hoy:**
 ```bash
-curl -s -H "X-API-Key: $LIMITLESS_API_KEY" "https://api.limitless.ai/v1/lifelogs?limit=10&date=$(date +%Y-%m-%d)"
+curl -s -H "X-API-Key: $LIMITLESS_API_KEY" "https://api.limitless.ai/v1/lifelogs?limit=3curl -s -H "X-API-Key: $LIMITLESS_API_KEY" "https://api.limitless.ai/v1/lifelogs?limit=10&date=$(date +%Y-%m-%d)"date=$(date +%Y-%m-%d)"
 ```
 
 **Consultar transcripciones de ayer:**
