@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>🏠 HUB Sebastián — Navegación Completa</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #fff; 
+  padding: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: linear-gradient(45deg, #292D63, #1D70B7);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+.status-bar {
+  background: rgba(0,0,0,0.3);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+.status-green { background: #22c55e; }
+.status-yellow { background: #F8B133; }
+.status-red { background: #ef4444; }
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.section-card {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  border-radius: 15px;
+  padding: 25px;
+  border-left: 4px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+}
+
+.section-card.critical { border-left-color: #ef4444; }
+.section-card.operational { border-left-color: #F8B133; }
+.section-card.strategic { border-left-color: #1D70B7; }
+.section-card.automation { border-left-color: #8b5cf6; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-icon {
+  font-size: 24px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.nav-link::after {
+  content: '→';
+  position: absolute;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+.link-icon {
+  font-size: 20px;
+  margin-right: 15px;
+  width: 24px;
+  text-align: center;
+}
+
+.link-content h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.link-content p {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.3;
+}
+
+.link-badge {
+  margin-left: auto;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-live { background: rgba(34,197,94,0.2); color: #86efac; }
+.badge-new { background: rgba(139,92,246,0.2); color: #c4b5fd; }
+.badge-ready { background: rgba(29,112,183,0.2); color: #93c5fd; }
+.badge-pending { background: rgba(248,177,51,0.2); color: #fcd34d; }
+
+.quick-access {
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.quick-access h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #F8B133;
+}
+
+.quick-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.quick-btn {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #292D63, #1D70B7);
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.quick-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(29,112,183,0.3);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #333;
+}
+
+.footer p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .main-grid { grid-template-columns: 1fr; gap: 20px; }
+  .quick-buttons { flex-direction: column; align-items: center; }
+  body { padding: 15px; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🏠 Sistema Sebastián</h1>
+  <p>Comando central organizado — Todo en un lugar</p>
+</div>
+
+<div class="status-bar">
+  <div class="status-item">
+    <div class="status-dot status-green"></div>
+    <span>Odoo conectado</span>
+  </div>
+  <div class="status-item">
+    <div class="status-dot status-yellow"></div>
+    <span>4 críticas pendientes</span>
+  </div>
+  <div class="status-item">
+    <div class="status-dot status-red"></div>
+    <span>EPM respuesta pendiente</span>
+  </div>
+  <div class="status-item">
+    <span>📅 Viernes 20 marzo 2026</span>
+  </div>
+</div>
+
+<div class="main-grid">
+  <!-- CRÍTICO & DIARIO -->
+  <div class="section-card critical">
+    <div class="section-header">
+      <span class="section-icon">🔴</span>
+      <span class="section-title">Crítico & Diario</span>
+    </div>
+    <div class="link-list">
+      <a href="#" class="nav-link">
+        <span class="link-icon">🎯</span>
+        <div class="link-content">
+          <h4>Centro de Tareas</h4>
+          <p>4 críticas HOY + 8 semana + 6 proyectos</p>
+        </div>
+        <span class="link-badge badge-live">LIVE</span>
+      </a>
+      
+      <a href="#" class="nav-link">
+        <span class="link-icon">🧠</span>
+        <div class="link-content">
+          <h4>Memoria del Día</h4>
+          <p>Decisiones y contexto importante</p>
+        </div>
+        <span class="link-badge badge-live">LIVE</span>
+      </a>
+      
+      <a href="#" class="nav-link">
+        <span class="link-icon">📋</span>
+        <div class="link-content">
+          <h4>Briefing Matutino</h4>
+          <p>Resumen + Limitless + calendarios</p>
+        </div>
+        <span class="link-badge badge-live">LIVE</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CONDUGAS OPERATIVO -->
+  <div class="section-card operational">
+    <div class="section-header">
+      <span class="section-icon">🏢</span>
+      <span class="section-title">Condugas Operativo</span>
+    </div>
+    <div class="link-list">
+      <a href="#" class="nav-link">
+        <span class="link-icon">📊</span>
+        <div class="link-content">
+          <h4>Análisis Enero 2026</h4>
+          <p>Crisis OYMA: -$280M, carta EPM enviada</p>
+        </div>
+        <span class="link-badge badge-pending">CRÍTICO</span>
+      </a>
+      
+      <a href="#" class="nav-link">
+        <span class="link-icon">🔍</span>
+        <div class="link-content">
+          <h4>Auditoría Odoo</h4>
+          <p>452 empleados, 602 cuentas, gaps</p>
+        </div>
+        <span class="link-badge badge-live">LIVE</span>
+      </a>
+      
+      <a href="#" class="nav-link">
+        <span class="link-icon">👥</span>
+        <div class="link-content">
+          <h4>Clasificación Empleados</h4>
+          <p>A/B/C framework, 452→250 plan</p>
+        </div>
+        <span class="link-badge badge-new">NUEVO</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ESTRATÉGICO -->
+  <div class="section-card strategic">
+    <div class="section-header">
+      <span class="section-icon">🚀</span>
+      <span class="section-title">Estratégico</span>
+    </div>
+    <div class="link-list">
+      <a href="#" class="nav-link">
+        <span class="link-icon">🗺️</span>
+        <div class="link-content">
+          <h4>Roadmap Abril 2026</h4>
+          <p>452→250 personas, automatización masiva</p>
+        </div>
+        <span class="link-badge badge-new">NUEVO</span>
+      </a>
+      
+      <a href="#" class="nav-link">
+        <span class="link-icon">🧠</span>
+        <div class="link-content">
+          <h4>Framework Desarrollo Humano</h4>
+          <p>Casos Lina/Andrea, patrocinio vs responsabilidad</p>
+        </div>
+        <span class="link-badge badge-new">NUEVO</span>
+      </a>
+      
+      <a href="#" class="nav-link">
+        <span class="link-icon">💡</span>
+        <div class="link-content">
+          <h4>Oportunidades Detectadas</h4>
+          <p>Camacol 27 mar ($12.5B), POT, mesa técnica</p>
+        </div>
+        <span class="link-badge badge-pending">TIMING</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- AUTOMATIZACIÓN -->
+  <div class="section-card automation">
+    <div class="section-header">
+      <span class="section-icon">🤖</span>
+      <span class="section-title">Automatización</span>
+    </div>
+    <div class="link-list">
+      <a href="#" class="nav-link">
+        <span class="link-icon">⚡</span>
+        <div class="link-content">
+          <h4>Ralph-Loop System</h4>
+          <p>Desarrollo autónomo 48h, $350M ROI/año</p>
+        </div>
+        <span class="link-badge badge-ready">READY</span>
+      </a>
+      
+      <a href="#" class="nav-link">
+        <span class="link-icon">🏦</span>
+        <div class="link-content">
+          <h4>Conciliación Bancaria</h4>
+          <p>12 bancos, $9.75M ahorro/mes</p>
+        </div>
+        <span class="link-badge badge-ready">READY</span>
+      </a>
+      
+      <a href="#" class="nav-link">
+        <span class="link-icon">👥</span>
+        <div class="link-content">
+          <h4>Nómina por Contrato</h4>
+          <p>452 empleados, distribución automática</p>
+        </div>
+        <span class="link-badge badge-ready">READY</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="quick-access">
+  <h3>⚡ Acceso Ultra-Rápido</h3>
+  <div class="quick-buttons">
+    <a href="#" class="quick-btn">🔥 Hoy</a>
+    <a href="#" class="quick-btn">⚠️ Crisis</a>
+    <a href="#" class="quick-btn">🤖 Automatización</a>
+    <a href="#" class="quick-btn">👥 Equipo</a>
+    <a href="#" class="quick-btn">📊 Reportes</a>
+    <a href="#" class="quick-btn">🧠 Memoria</a>
+  </div>
+</div>
+
+<div class="footer">
+  <p>🧠 <strong>Optimizado para TDAH:</strong> Todo visible, navegación mínima, información crítica destacada</p>
+  <p>🔄 Actualizado automáticamente | 🔒 Acceso seguro | 📱 Mobile-friendly</p>
+  <p style="margin-top: 20px; color: #444;">Sistema Sebastián v2.0 | Última actualización: 20 marzo 2026</p>
+</div>
+
+<script>
+// Auto-refresh status
+setInterval(() => {
+  const now = new Date();
+  const statusElements = document.querySelectorAll('.status-dot');
+  statusElements.forEach(el => {
+    el.style.animation = 'none';
+    setTimeout(() => el.style.animation = 'pulse 2s infinite', 100);
+  });
+}, 30000);
+
+// Click tracking para mejoras futuras
+document.querySelectorAll('.nav-link, .quick-btn').forEach(link => {
+  link.addEventListener('click', function(e) {
+    console.log('Accessed:', this.querySelector('h4')?.textContent || this.textContent);
+  });
+});
+</script>
+
+</body>
+</html>

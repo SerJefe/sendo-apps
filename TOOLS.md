@@ -98,3 +98,20 @@ curl -s -H "X-API-Key: $LIMITLESS_API_KEY" "https://api.limitless.ai/v1/lifelogs
 ```bash
 curl -s -H "X-API-Key: $LIMITLESS_API_KEY" "https://api.limitless.ai/v1/lifelogs?limit=10&date=$(date -d yesterday +%Y-%m-%d)"
 ```
+
+
+### Odoo (Condugas SA) - CONFIGURADO ✅
+
+- **URL**: https://condugas-sa.odoo.com
+- **DB**: siendoconsulting-condugas-main-27941080
+- **Usuario**: s.sanchez@condugas.com.co
+- **Versión**: 19.0 Enterprise
+- **Estado**: ✅ Conexión verificada 2026-03-20 14:37
+- **API Key**: Configurada securely en `.secrets/`
+- **Test script**: `scripts/test-odoo-connection.py`
+
+**Ready para:**
+- ✅ Conciliación bancaria automática
+- ✅ Distribución nómina por contrato
+- ✅ Clasificación 452 empleados
+- ✅ Early warning sistema contratos
