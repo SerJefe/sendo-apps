@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Recetas Familia Sebastian</title>
+    <style>
+        :root {
+            --sendo-gold: #e0c05a;
+            --sendo-blue: #003f6b;
+            --sendo-blue-dark: #002b4a;
+        }
+        
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            background: linear-gradient(135deg, var(--sendo-blue-dark), var(--sendo-blue));
+            min-height: 100vh;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            border: 1px solid rgba(224, 192, 90, 0.3);
+        }
+        
+        .title {
+            color: var(--sendo-gold);
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        
+        .section h2 {
+            color: var(--sendo-gold);
+            border-bottom: 2px solid var(--sendo-gold);
+            padding-bottom: 8px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        
+        .recipe-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+        
+        .recipe-card:hover {
+            background: rgba(224, 192, 90, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .recipe-card.selected {
+            border-color: var(--sendo-gold);
+            background: rgba(224, 192, 90, 0.15);
+        }
+        
+        .recipe-card.selected::after {
+            content: "✅";
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 1.5rem;
+        }
+        
+        .recipe-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--sendo-gold);
+            margin-bottom: 8px;
+        }
+        
+        .recipe-person {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .person-sebastian { background: #3b82f6; color: white; }
+        .person-paulina { background: #ec4899; color: white; }
+        .person-benjamin { background: #10b981; color: white; }
+        
+        .recipe-description {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            opacity: 0.9;
+        }
+        
+        .recipe-macros {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px;
+            border-radius: 6px;
+        }
+        
+        .shopping-summary {
+            position: sticky;
+            top: 20px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 2px solid #22c55e;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            background: var(--sendo-gold);
+            color: var(--sendo-blue);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #c8ab49;
+            transform: translateY(-1px);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .ingredient-list {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .ingredient-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .ingredient-item:last-child {
+            border-bottom: none;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+        }
+        
+        @media (max-width: 1024px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--sendo-gold);
+            background: transparent;
+            color: var(--sendo-gold);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background: var(--sendo-gold);
+            color: var(--sendo-blue);
+        }
+        
+        .week-selector {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        
+        .day-btn {
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(224, 192, 90, 0.3);
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .day-btn.active {
+            background: var(--sendo-gold);
+            color: var(--sendo-blue);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">🍽️ Selector Recetas Familia</h1>
+        
+        <div class="grid-2">
+            <!-- Selector de Recetas -->
+            <div>
+                <!-- Filtros -->
+                <div class="card">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" onclick="filterRecipes('all')">Todas</button>
+                        <button class="filter-btn" onclick="filterRecipes('sebastian')">Sebastian (Keto)</button>
+                        <button class="filter-btn" onclick="filterRecipes('paulina')">Paulina (Lactancia)</button>
+                        <button class="filter-btn" onclick="filterRecipes('benjamin')">Benjamin (BLW)</button>
+                    </div>
+                    
+                    <div class="week-selector">
+                        <span>Planificar para:</span>
+                        <button class="day-btn active" data-day="lun">Lun</button>
+                        <button class="day-btn" data-day="mar">Mar</button>
+                        <button class="day-btn" data-day="mie">Mié</button>
+                        <button class="day-btn" data-day="jue">Jue</button>
+                        <button class="day-btn" data-day="vie">Vie</button>
+                        <button class="day-btn" data-day="sab">Sáb</button>
+                        <button class="day-btn" data-day="dom">Dom</button>
+                    </div>
+                </div>
+
+                <!-- Recetas Sebastian (Keto) -->
+                <div class="card recipe-section" data-category="sebastian">
+                    <h2>🔵 Sebastian - Keto + Ayuno 16h</h2>
+                    <div class="recipe-grid">
+                        
+                        <div class="recipe-card" data-recipe="salmon-espinaca" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Salmón con Espinaca</div>
+                            <div class="recipe-person person-sebastian">OMAD Principal</div>
+                            <div class="recipe-description">Salmón al sartén + espinaca salteada + aguacate</div>
+                            <div class="recipe-macros">P: 45g | C: &lt;5g | G: 35g | 650 cal</div>
+                        </div>
+                        
+                        <div class="recipe-card" data-recipe="pollo-broccoli-keto" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Pollo Brócoli Keto</div>
+                            <div class="recipe-person person-sebastian">OMAD Principal</div>
+                            <div class="recipe-description">Pechuga + brócoli + aceite oliva + queso</div>
+                            <div class="recipe-macros">P: 40g | C: &lt;6g | G: 30g | 580 cal</div>
+                        </div>
+                        
+                        <div class="recipe-card" data-recipe="carne-aguacate" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Carne con Aguacate</div>
+                            <div class="recipe-person person-sebastian">OMAD Principal</div>
+                            <div class="recipe-description">Carne molida + aguacate + apio + aceitunas</div>
+                            <div class="recipe-macros">P: 42g | C: &lt;4g | G: 38g | 680 cal</div>
+                        </div>
+                        
+                        <div class="recipe-card" data-recipe="huevos-queso" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Huevos con Queso</div>
+                            <div class="recipe-person person-sebastian">Snack 9 PM</div>
+                            <div class="recipe-description">Huevos revueltos + queso + almendras</div>
+                            <div class="recipe-macros">P: 25g | C: &lt;3g | G: 28g | 380 cal</div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Recetas Paulina (Lactancia) -->
+                <div class="card recipe-section" data-category="paulina">
+                    <h2>🟣 Paulina - Lactancia</h2>
+                    <div class="recipe-grid">
+                        
+                        <div class="recipe-card" data-recipe="yogurt-avena-banano" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Yogurt Avena Banano</div>
+                            <div class="recipe-person person-paulina">Desayuno</div>
+                            <div class="recipe-description">Yogurt griego + avena + banano + almendras</div>
+                            <div class="recipe-macros">P: 20g | C: 45g | G: 15g | Ca: 400mg</div>
+                        </div>
+                        
+                        <div class="recipe-card" data-recipe="pollo-quinoa" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Pollo con Quinoa</div>
+                            <div class="recipe-person person-paulina">Almuerzo</div>
+                            <div class="recipe-description">Pechuga + quinoa + brócoli + aguacate</div>
+                            <div class="recipe-macros">P: 35g | C: 40g | G: 18g | Fe: 8mg</div>
+                        </div>
+                        
+                        <div class="recipe-card" data-recipe="salmon-papa" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Salmón con Papa</div>
+                            <div class="recipe-person person-paulina">Cena</div>
+                            <div class="recipe-description">Salmón + papa criolla + espinaca + limón</div>
+                            <div class="recipe-macros">P: 32g | C: 35g | G: 22g | Omega-3: +++</div>
+                        </div>
+                        
+                        <div class="recipe-card" data-recipe="ensalada-pollo" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Ensalada Pollo</div>
+                            <div class="recipe-person person-paulina">Almuerzo light</div>
+                            <div class="recipe-description">Pollo + espinaca + aguacate + nueces</div>
+                            <div class="recipe-macros">P: 28g | C: 15g | G: 25g | Folato: +++</div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Recetas Benjamin (BLW) -->
+                <div class="card recipe-section" data-category="benjamin">
+                    <h2>🟢 Benjamin - BLW 9 meses</h2>
+                    <div class="recipe-grid">
+                        
+                        <div class="recipe-card" data-recipe="manzana-bastones" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Manzana en Bastones</div>
+                            <div class="recipe-person person-benjamin">Finger Food</div>
+                            <div class="recipe-description">Manzana verde cortada en bastones grandes</div>
+                            <div class="recipe-macros">SIN sal | SIN azúcar | Natural</div>
+                        </div>
+                        
+                        <div class="recipe-card" data-recipe="zanahoria-hervida" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Zanahoria Baby</div>
+                            <div class="recipe-person person-benjamin">Finger Food</div>
+                            <div class="recipe-description">Zanahoria baby hervida hasta suave</div>
+                            <div class="recipe-macros">Vitamina A | Beta-carotenos | Suave</div>
+                        </div>
+                        
+                        <div class="recipe-card" data-recipe="papa-aplastada" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Papa Criolla</div>
+                            <div class="recipe-person person-benjamin">Finger Food</div>
+                            <div class="recipe-description">Papa criolla hervida y aplastada</div>
+                            <div class="recipe-macros">Carbohidratos | Energía | Fácil agarre</div>
+                        </div>
+                        
+                        <div class="recipe-card" data-recipe="pera-rallada" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Pera Rallada</div>
+                            <div class="recipe-person person-benjamin">Postre</div>
+                            <div class="recipe-description">Pera madura rallada gruesa</div>
+                            <div class="recipe-macros">Fibra | Dulce natural | Digestiva</div>
+                        </div>
+                        
+                        <div class="recipe-card" data-recipe="pollo-desmenuzado" onclick="toggleRecipe(this)">
+                            <div class="recipe-name">Pollo Desmenuzado</div>
+                            <div class="recipe-person person-benjamin">Proteína</div>
+                            <div class="recipe-description">Pechuga hervida desmenuzada fino</div>
+                            <div class="recipe-macros">Proteína | Hierro | Textura suave</div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumen y Lista Mercado -->
+            <div>
+                <div class="shopping-summary">
+                    <h2 style="color: #22c55e; margin-bottom: 20px;">🛒 Lista Mercado</h2>
+                    
+                    <div style="margin-bottom: 16px;">
+                        <strong>Recetas seleccionadas: <span id="selectedCount">0</span></strong>
+                    </div>
+                    
+                    <div id="selectedRecipesList" style="margin-bottom: 20px; font-size: 0.9rem;">
+                        <em>Selecciona recetas para generar lista...</em>
+                    </div>
+                    
+                    <div id="shoppingList" class="ingredient-list" style="display: none;">
+                        <!-- Lista se genera automáticamente -->
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <div style="font-size: 1.3rem; font-weight: bold; color: var(--sendo-gold); margin-bottom: 12px;">
+                            Total: $<span id="totalPrice">0</span> COP
+                        </div>
+                        
+                        <button class="btn" id="exportListBtn" onclick="exportShoppingList()" disabled>
+                            📤 Exportar Lista
+                        </button>
+                        <button class="btn" id="whatsappBtn" onclick="sendToWhatsApp()" disabled>
+                            📱 WhatsApp
+                        </button>
+                        <button class="btn" onclick="clearSelection()">
+                            🗑️ Limpiar
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>📊 Resumen Nutricional</h2>
+                    <div id="nutritionSummary">
+                        <div style="text-align: center; opacity: 0.6;">
+                            Selecciona recetas para ver resumen nutricional
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Base de datos de recetas con ingredientes y precios
+        const recipeDatabase = {
+            'salmon-espinaca': {
+                name: 'Salmón con Espinaca',
+                person: 'Sebastian',
+                ingredients: [
+                    { item: 'Salmón fresco', quantity: '200g', price: 11250 },
+                    { item: 'Espinaca baby', quantity: '100g', price: 2000 },
+                    { item: 'Aguacate Hass', quantity: '1 unidad', price: 2000 },
+                    { item: 'Aceite oliva', quantity: '1 cda', price: 500 },
+                    { item: 'Limón', quantity: '1/2 unidad', price: 300 }
+                ],
+                macros: { protein: 45, carbs: 5, fat: 35, calories: 650 }
+            },
+            'pollo-broccoli-keto': {
+                name: 'Pollo Brócoli Keto',
+                person: 'Sebastian',
+                ingredients: [
+                    { item: 'Pechuga pollo', quantity: '200g', price: 3600 },
+                    { item: 'Brócoli', quantity: '150g', price: 2625 },
+                    { item: 'Queso mozzarella', quantity: '50g', price: 1500 },
+                    { item: 'Aceite oliva', quantity: '1 cda', price: 500 }
+                ],
+                macros: { protein: 40, carbs: 6, fat: 30, calories: 580 }
+            },
+            'carne-aguacate': {
+                name: 'Carne con Aguacate',
+                person: 'Sebastian',
+                ingredients: [
+                    { item: 'Carne molida 90/10', quantity: '180g', price: 5760 },
+                    { item: 'Aguacate Hass', quantity: '1 unidad', price: 2000 },
+                    { item: 'Apio', quantity: '2 tallos', price: 800 },
+                    { item: 'Aceitunas', quantity: '8 unidades', price: 1200 }
+                ],
+                macros: { protein: 42, carbs: 4, fat: 38, calories: 680 }
+            },
+            'huevos-queso': {
+                name: 'Huevos con Queso',
+                person: 'Sebastian',
+                ingredients: [
+                    { item: 'Huevos pasteurizados', quantity: '3 unidades', price: 1500 },
+                    { item: 'Queso mozzarella', quantity: '40g', price: 1200 },
+                    { item: 'Almendras sin sal', quantity: '20g', price: 600 }
+                ],
+                macros: { protein: 25, carbs: 3, fat: 28, calories: 380 }
+            },
+            'yogurt-avena-banano': {
+                name: 'Yogurt Avena Banano',
+                person: 'Paulina',
+                ingredients: [
+                    { item: 'Yogurt griego natural', quantity: '200g', price: 2400 },
+                    { item: 'Avena integral', quantity: '40g', price: 480 },
+                    { item: 'Banano maduro', quantity: '1 unidad', price: 1000 },
+                    { item: 'Almendras sin sal', quantity: '15g', price: 450 }
+                ],
+                macros: { protein: 20, carbs: 45, fat: 15, calcium: 400 }
+            },
+            'pollo-quinoa': {
+                name: 'Pollo con Quinoa',
+                person: 'Paulina',
+                ingredients: [
+                    { item: 'Pechuga pollo', quantity: '150g', price: 2700 },
+                    { item: 'Quinoa', quantity: '60g', price: 1800 },
+                    { item: 'Brócoli', quantity: '100g', price: 1750 },
+                    { item: 'Aguacate Hass', quantity: '1/2 unidad', price: 1000 }
+                ],
+                macros: { protein: 35, carbs: 40, fat: 18, iron: 8 }
+            },
+            'salmon-papa': {
+                name: 'Salmón con Papa',
+                person: 'Paulina',
+                ingredients: [
+                    { item: 'Salmón fresco', quantity: '150g', price: 8437 },
+                    { item: 'Papa criolla', quantity: '150g', price: 1050 },
+                    { item: 'Espinaca baby', quantity: '80g', price: 1600 },
+                    { item: 'Limón', quantity: '1/2 unidad', price: 300 }
+                ],
+                macros: { protein: 32, carbs: 35, fat: 22, omega3: 'high' }
+            },
+            'ensalada-pollo': {
+                name: 'Ensalada Pollo',
+                person: 'Paulina',
+                ingredients: [
+                    { item: 'Pechuga pollo', quantity: '120g', price: 2160 },
+                    { item: 'Espinaca baby', quantity: '100g', price: 2000 },
+                    { item: 'Aguacate Hass', quantity: '1/2 unidad', price: 1000 },
+                    { item: 'Nueces', quantity: '20g', price: 1200 }
+                ],
+                macros: { protein: 28, carbs: 15, fat: 25, folate: 'high' }
+            },
+            'manzana-bastones': {
+                name: 'Manzana en Bastones',
+                person: 'Benjamin',
+                ingredients: [
+                    { item: 'Manzana verde', quantity: '1 unidad', price: 1333 }
+                ],
+                macros: { natural: true, sugar: 'natural', salt: false }
+            },
+            'zanahoria-hervida': {
+                name: 'Zanahoria Baby',
+                person: 'Benjamin',
+                ingredients: [
+                    { item: 'Zanahoria baby', quantity: '100g', price: 800 }
+                ],
+                macros: { vitaminA: 'high', betaCarotene: 'high' }
+            },
+            'papa-aplastada': {
+                name: 'Papa Criolla',
+                person: 'Benjamin',
+                ingredients: [
+                    { item: 'Papa criolla', quantity: '80g', price: 560 }
+                ],
+                macros: { carbs: 'primary', energy: 'good' }
+            },
+            'pera-rallada': {
+                name: 'Pera Rallada',
+                person: 'Benjamin',
+                ingredients: [
+                    { item: 'Pera', quantity: '1 unidad', price: 1500 }
+                ],
+                macros: { fiber: 'high', natural: true }
+            },
+            'pollo-desmenuzado': {
+                name: 'Pollo Desmenuzado',
+                person: 'Benjamin',
+                ingredients: [
+                    { item: 'Pechuga pollo', quantity: '80g', price: 1440 }
+                ],
+                macros: { protein: 'high', iron: 'good' }
+            }
+        };
+
+        let selectedRecipes = new Set();
+
+        function toggleRecipe(card) {
+            const recipeId = card.dataset.recipe;
+            
+            if (selectedRecipes.has(recipeId)) {
+                selectedRecipes.delete(recipeId);
+                card.classList.remove('selected');
+            } else {
+                selectedRecipes.add(recipeId);
+                card.classList.add('selected');
+            }
+            
+            updateShoppingList();
+        }
+
+        function updateShoppingList() {
+            const count = selectedRecipes.size;
+            document.getElementById('selectedCount').textContent = count;
+            
+            if (count === 0) {
+                document.getElementById('selectedRecipesList').innerHTML = '<em>Selecciona recetas para generar lista...</em>';
+                document.getElementById('shoppingList').style.display = 'none';
+                document.getElementById('totalPrice').textContent = '0';
+                document.getElementById('exportListBtn').disabled = true;
+                document.getElementById('whatsappBtn').disabled = true;
+                return;
+            }
+
+            // Mostrar recetas seleccionadas
+            const recipeNames = Array.from(selectedRecipes).map(id => recipeDatabase[id].name);
+            document.getElementById('selectedRecipesList').innerHTML = '<strong>Seleccionadas:</strong><br>' + recipeNames.join('<br>');
+
+            // Consolidar ingredientes
+            const consolidatedIngredients = {};
+            let totalPrice = 0;
+
+            selectedRecipes.forEach(recipeId => {
+                const recipe = recipeDatabase[recipeId];
+                recipe.ingredients.forEach(ing => {
+                    const key = ing.item;
+                    if (consolidatedIngredients[key]) {
+                        consolidatedIngredients[key].price += ing.price;
+                        // Para simplificar, sumamos cantidades como texto
+                        consolidatedIngredients[key].quantity = 'Múltiple';
+                    } else {
+                        consolidatedIngredients[key] = { ...ing };
+                    }
+                    totalPrice += ing.price;
+                });
+            });
+
+            // Mostrar lista consolidada
+            const listHTML = Object.entries(consolidatedIngredients).map(([item, data]) => 
+                `<div class="ingredient-item">
+                    <span>${item} (${data.quantity})</span>
+                    <span>$${data.price.toLocaleString()}</span>
+                </div>`
+            ).join('');
+
+            document.getElementById('shoppingList').innerHTML = listHTML;
+            document.getElementById('shoppingList').style.display = 'block';
+            document.getElementById('totalPrice').textContent = totalPrice.toLocaleString();
+            document.getElementById('exportListBtn').disabled = false;
+            document.getElementById('whatsappBtn').disabled = false;
+        }
+
+        function filterRecipes(category) {
+            // Actualizar botones
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Mostrar/ocultar secciones
+            document.querySelectorAll('.recipe-section').forEach(section => {
+                if (category === 'all') {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = section.dataset.category === category ? 'block' : 'none';
+                }
+            });
+        }
+
+        function exportShoppingList() {
+            const recipeNames = Array.from(selectedRecipes).map(id => recipeDatabase[id].name);
+            const consolidatedIngredients = {};
+            let totalPrice = 0;
+
+            selectedRecipes.forEach(recipeId => {
+                const recipe = recipeDatabase[recipeId];
+                recipe.ingredients.forEach(ing => {
+                    const key = ing.item;
+                    if (consolidatedIngredients[key]) {
+                        consolidatedIngredients[key].price += ing.price;
+                        consolidatedIngredients[key].quantity = 'Múltiple';
+                    } else {
+                        consolidatedIngredients[key] = { ...ing };
+                    }
+                    totalPrice += ing.price;
+                });
+            });
+
+            let listText = "🛒 LISTA MERCADO GENERADA AUTOMÁTICAMENTE\n\n";
+            listText += "📝 RECETAS SELECCIONADAS:\n";
+            recipeNames.forEach(name => listText += `• ${name}\n`);
+            listText += "\n🛍️ INGREDIENTES NECESARIOS:\n";
+            
+            Object.entries(consolidatedIngredients).forEach(([item, data]) => {
+                listText += `• ${item} (${data.quantity}) - $${data.price.toLocaleString()}\n`;
+            });
+            
+            listText += `\n💰 TOTAL: $${totalPrice.toLocaleString()} COP`;
+            listText += `\n📅 Generado: ${new Date().toLocaleDateString('es-CO')}`;
+
+            navigator.clipboard.writeText(listText);
+            alert('📋 Lista copiada al portapapeles\n\n✅ Recetas seleccionadas incluidas\n✅ Ingredientes consolidados\n✅ Precios calculados\n\n¡Lista para usar!');
+        }
+
+        function sendToWhatsApp() {
+            exportShoppingList(); // Copia al portapapeles
+            alert('📱 Lista lista para WhatsApp\n\n✅ Copiada al portapapeles\n✅ Pégala en WhatsApp\n✅ Envía a cocineras o familia\n\n¡Lista personalizada basada en tus recetas seleccionadas!');
+        }
+
+        function clearSelection() {
+            selectedRecipes.clear();
+            document.querySelectorAll('.recipe-card.selected').forEach(card => {
+                card.classList.remove('selected');
+            });
+            updateShoppingList();
+        }
+
+        // Funcionalidad días de la semana
+        document.querySelectorAll('.day-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // Aquí podrías implementar planificación por días si quieres
+            });
+        });
+
+        console.log('✅ Selector Recetas Familia Sebastian - Loaded');
+    </script>
+</body>
+</html>
