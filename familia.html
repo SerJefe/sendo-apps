@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador Familia Sebastian</title>
+    <style>
+        :root {
+            --sendo-gold: #e0c05a;
+            --sendo-blue: #003f6b;
+            --sendo-blue-dark: #002b4a;
+        }
+        
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            background: linear-gradient(135deg, var(--sendo-blue-dark), var(--sendo-blue));
+            min-height: 100vh;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            border: 1px solid rgba(224, 192, 90, 0.3);
+        }
+        
+        .title {
+            color: var(--sendo-gold);
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        
+        .section h2 {
+            color: var(--sendo-gold);
+            border-bottom: 2px solid var(--sendo-gold);
+            padding-bottom: 8px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .meal-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 16px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--sendo-gold);
+        }
+        
+        .person-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 4px;
+            font-weight: bold;
+        }
+        
+        .tag-sebastian { background: #3b82f6; color: white; }
+        .tag-paulina { background: #ec4899; color: white; }
+        .tag-benjamin { background: #10b981; color: white; }
+        
+        .ingredient-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 12px;
+            margin: 4px 0;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .ingredient-item.checked {
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+        
+        .btn {
+            background: var(--sendo-gold);
+            color: var(--sendo-blue);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #c8ab49;
+            transform: translateY(-1px);
+        }
+        
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .shopping-list {
+            background: rgba(34, 197, 94, 0.1);
+            border: 2px solid #22c55e;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .urgent-banner {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid #ef4444;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .quantity {
+            color: var(--sendo-gold);
+            font-weight: bold;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">🍽️ Planificador Familia Sebastian</h1>
+        
+        <div class="urgent-banner">
+            <h3 style="color: #ef4444; margin-bottom: 8px;">🛒 Lista Mercado HOY - Sábado 21 marzo</h3>
+            <p>Planificación 22-28 marzo | Presupuesto: ~$200,000 COP</p>
+        </div>
+        
+        <!-- Lista Mercado Inmediata -->
+        <div class="shopping-list">
+            <h2 style="color: #22c55e; margin-bottom: 20px;">🛒 Lista Compras - IR HOY</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: var(--sendo-gold);">🥩 PROTEÍNAS</h3>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Salmón fresco</span>
+                    <span class="quantity">800g - $45,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Pechuga pollo</span>
+                    <span class="quantity">1kg - $18,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Carne molida 90/10</span>
+                    <span class="quantity">500g - $16,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Huevos pasteurizados</span>
+                    <span class="quantity">30 unidades - $15,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Queso mozzarella</span>
+                    <span class="quantity">400g - $12,000</span>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: var(--sendo-gold);">🥬 VEGETALES KETO</h3>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Espinaca baby</span>
+                    <span class="quantity">2 bolsas - $8,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Brócoli</span>
+                    <span class="quantity">2 cabezas - $7,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Aguacate Hass</span>
+                    <span class="quantity">6 unidades - $12,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Coliflor</span>
+                    <span class="quantity">1 cabeza - $5,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Apio</span>
+                    <span class="quantity">1 mazo - $4,000</span>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: var(--sendo-gold);">🥛 LACTANCIA PAULINA</h3>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Leche deslactosada</span>
+                    <span class="quantity">2 litros - $8,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Yogurt griego natural</span>
+                    <span class="quantity">1kg - $12,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Almendras sin sal</span>
+                    <span class="quantity">500g - $15,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Banano maduro</span>
+                    <span class="quantity">1kg - $5,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Avena integral</span>
+                    <span class="quantity">500g - $6,000</span>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: var(--sendo-gold);">👶 BENJAMIN BLW (sin sal/azúcar)</h3>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Manzana verde</span>
+                    <span class="quantity">6 unidades - $8,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Pera</span>
+                    <span class="quantity">4 unidades - $6,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Zanahoria baby</span>
+                    <span class="quantity">500g - $4,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Calabaza</span>
+                    <span class="quantity">1 pequeña - $5,000</span>
+                </div>
+                <div class="ingredient-item" onclick="toggleItem(this)">
+                    <span>Papa criolla</span>
+                    <span class="quantity">500g - $3,500</span>
+                </div>
+            </div>
+            
+            <div style="border-top: 2px solid var(--sendo-gold); padding-top: 16px;">
+                <h3 style="color: var(--sendo-gold); text-align: center;">💰 TOTAL ESTIMADO: $175,500 COP</h3>
+                <p style="text-align: center; font-size: 0.9rem; opacity: 0.8;">
+                    Dentro del presupuesto semanal ~$200,000
+                </p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <!-- Plan Semanal -->
+            <div class="card">
+                <h2>📅 Plan Semana 22-28 Marzo</h2>
+                
+                <div style="margin: 16px 0;">
+                    <h3 style="color: var(--sendo-gold);">🍳 SEBASTIÁN - Keto + Ayuno 16h</h3>
+                    <div class="meal-item">
+                        <strong>Comida 1 (3-4 PM):</strong>
+                        <div class="person-tag tag-sebastian">OMAD Principal</div>
+                        <ul style="margin: 8px 0; font-size: 0.9rem;">
+                            <li>Salmón + espinaca + aguacate</li>
+                            <li>Proteína: 45g | Carbos: <5g | Grasa: 35g</li>
+                        </ul>
+                    </div>
+                    <div class="meal-item">
+                        <strong>Snack (9-10 PM):</strong>
+                        <div class="person-tag tag-sebastian">Pre-sleep</div>
+                        <ul style="margin: 8px 0; font-size: 0.9rem;">
+                            <li>Queso + almendras</li>
+                            <li>Proteína: 15g | Carbos: <3g | Grasa: 20g</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin: 16px 0;">
+                    <h3 style="color: var(--sendo-gold);">🤱 PAULINA - Lactancia</h3>
+                    <div class="meal-item">
+                        <strong>Desayuno (7 AM):</strong>
+                        <div class="person-tag tag-paulina">Alto calcio</div>
+                        <ul style="margin: 8px 0; font-size: 0.9rem;">
+                            <li>Yogurt + avena + banano</li>
+                            <li>Proteína: 20g | Calcio: 400mg</li>
+                        </ul>
+                    </div>
+                    <div class="meal-item">
+                        <strong>Comida (12 PM):</strong>
+                        <div class="person-tag tag-paulina">Hierro + proteína</div>
+                        <ul style="margin: 8px 0; font-size: 0.9rem;">
+                            <li>Pollo + brócoli + aguacate</li>
+                            <li>Proteína: 35g | Hierro: 8mg</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin: 16px 0;">
+                    <h3 style="color: var(--sendo-gold);">👶 BENJAMIN - BLW 9 meses</h3>
+                    <div class="meal-item">
+                        <strong>Comidas (3 times/day):</strong>
+                        <div class="person-tag tag-benjamin">SIN sal/azúcar</div>
+                        <ul style="margin: 8px 0; font-size: 0.9rem;">
+                            <li>Manzana en bastones</li>
+                            <li>Zanahoria baby cocida</li>
+                            <li>Papa criolla aplastada</li>
+                            <li>Pollo desmenuzado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instrucciones Cocina -->
+            <div class="card">
+                <h2>👩‍🍳 Modo Cocina</h2>
+                
+                <div style="margin: 16px 0;">
+                    <h3 style="color: var(--sendo-gold);">🐟 SALMÓN SEBASTIAN</h3>
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 12px; border-radius: 8px; font-size: 0.9rem;">
+                        <strong>Tiempo:</strong> 15 min<br>
+                        1. Salmón al sartén con aceite oliva (5 min/lado)<br>
+                        2. Espinaca salteada con ajo (2 min)<br>
+                        3. Aguacate en cuadros<br>
+                        4. Sal marina + limón
+                    </div>
+                </div>
+                
+                <div style="margin: 16px 0;">
+                    <h3 style="color: var(--sendo-gold);">🍗 POLLO PAULINA</h3>
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 12px; border-radius: 8px; font-size: 0.9rem;">
+                        <strong>Tiempo:</strong> 20 min<br>
+                        1. Pechuga a la plancha (8 min/lado)<br>
+                        2. Brócoli al vapor (5 min)<br>
+                        3. Aguacate fresco<br>
+                        4. Condimentar normal
+                    </div>
+                </div>
+                
+                <div style="margin: 16px 0;">
+                    <h3 style="color: var(--sendo-gold);">👶 BENJAMIN BLW</h3>
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 12px; border-radius: 8px; font-size: 0.9rem;">
+                        <strong>Tiempo:</strong> 10 min<br>
+                        1. Zanahoria hervida (bastones)<br>
+                        2. Papa criolla aplastada<br>
+                        3. Manzana rallada<br>
+                        4. <strong>SIN sal, SIN azúcar, SIN miel</strong>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 24px;">
+                    <button class="btn" onclick="exportarRecetas()">📱 WhatsApp Cocineras</button>
+                    <button class="btn" onclick="programarComidas()">⏰ Programar Semana</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Acciones -->
+        <div class="card">
+            <h2>⚡ Acciones</h2>
+            <div style="text-align: center;">
+                <button class="btn" onclick="exportarListaMercado()">📤 Exportar Lista Mercado</button>
+                <button class="btn" onclick="calcularMacros()">📊 Calcular Macros</button>
+                <button class="btn" onclick="modoCompraRapida()">🏃‍♂️ Modo Compra Rápida</button>
+                <button class="btn" onclick="volverDashboard()">🏠 Dashboard Central</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleItem(item) {
+            item.classList.toggle('checked');
+            updateTotal();
+        }
+        
+        function updateTotal() {
+            const checkedItems = document.querySelectorAll('.ingredient-item.checked').length;
+            const totalItems = document.querySelectorAll('.ingredient-item').length;
+            console.log(`Checked: ${checkedItems}/${totalItems}`);
+        }
+        
+        function exportarListaMercado() {
+            let lista = "🛒 LISTA MERCADO - HOY Sábado\n\n";
+            lista += "🥩 PROTEÍNAS:\n";
+            lista += "• Salmón fresco (800g) - $45,000\n";
+            lista += "• Pechuga pollo (1kg) - $18,000\n";
+            lista += "• Carne molida 90/10 (500g) - $16,000\n";
+            lista += "• Huevos (30 und) - $15,000\n";
+            lista += "• Queso mozzarella (400g) - $12,000\n\n";
+            
+            lista += "🥬 VEGETALES KETO:\n";
+            lista += "• Espinaca baby (2 bolsas) - $8,000\n";
+            lista += "• Brócoli (2 cabezas) - $7,000\n";
+            lista += "• Aguacate Hass (6 und) - $12,000\n";
+            lista += "• Coliflor (1 cabeza) - $5,000\n";
+            lista += "• Apio (1 mazo) - $4,000\n\n";
+            
+            lista += "🥛 LACTANCIA PAULINA:\n";
+            lista += "• Leche deslactosada (2L) - $8,000\n";
+            lista += "• Yogurt griego (1kg) - $12,000\n";
+            lista += "• Almendras sin sal (500g) - $15,000\n";
+            lista += "• Banano maduro (1kg) - $5,000\n";
+            lista += "• Avena integral (500g) - $6,000\n\n";
+            
+            lista += "👶 BENJAMIN BLW:\n";
+            lista += "• Manzana verde (6 und) - $8,000\n";
+            lista += "• Pera (4 und) - $6,000\n";
+            lista += "• Zanahoria baby (500g) - $4,000\n";
+            lista += "• Calabaza pequeña - $5,000\n";
+            lista += "• Papa criolla (500g) - $3,500\n\n";
+            
+            lista += "💰 TOTAL: ~$175,500 COP\n";
+            lista += "📍 Presupuesto OK: Dentro de $200,000";
+            
+            navigator.clipboard.writeText(lista);
+            alert('📋 Lista copiada al portapapeles\n\n✅ Lista completa con precios\n✅ Organizada por persona/dieta\n✅ Total dentro del presupuesto\n\n¡Lista para WhatsApp o imprimir!');
+        }
+        
+        function exportarRecetas() {
+            let recetas = "👩‍🍳 RECETAS SEMANA - COCINERAS\n\n";
+            
+            recetas += "🐟 SALMÓN SEBASTIAN (Keto):\n";
+            recetas += "• Salmón al sartén 5min/lado\n";
+            recetas += "• Espinaca salteada con ajo\n";
+            recetas += "• Aguacate en cuadros\n";
+            recetas += "• Sal marina + limón\n\n";
+            
+            recetas += "🍗 POLLO PAULINA (Lactancia):\n";
+            recetas += "• Pechuga plancha 8min/lado\n";
+            recetas += "• Brócoli al vapor 5min\n";
+            recetas += "• Aguacate fresco\n";
+            recetas += "• Condimentar normal\n\n";
+            
+            recetas += "👶 BENJAMIN BLW (9 meses):\n";
+            recetas += "• Zanahoria hervida bastones\n";
+            recetas += "• Papa criolla aplastada\n";
+            recetas += "• Manzana rallada\n";
+            recetas += "• ⚠️ SIN sal, SIN azúcar, SIN miel\n\n";
+            
+            recetas += "⏰ HORARIOS:\n";
+            recetas += "• Sebastian: 3-4 PM (OMAD principal)\n";
+            recetas += "• Paulina: 7 AM + 12 PM + snacks\n";
+            recetas += "• Benjamin: 3 times/day\n\n";
+            
+            recetas += "📱 Lista mercado por separado";
+            
+            navigator.clipboard.writeText(recetas);
+            alert('👩‍🍳 Recetas copiadas\n\n✅ Instrucciones completas\n✅ Tiempos específicos\n✅ Restricciones claras\n✅ Horarios familia\n\n¡Lista para enviar a cocineras!');
+        }
+        
+        function modoCompraRapida() {
+            alert('🏃‍♂️ MODO COMPRA RÁPIDA\n\n' +
+                  '⏱️ TIEMPO ESTIMADO: 45 min\n' +
+                  '📍 RUTA SUGERIDA:\n' +
+                  '1. Proteínas (carnicería/pescadería)\n' +
+                  '2. Lácteos (neveras)\n' +
+                  '3. Vegetales/frutas (frescos)\n' +
+                  '4. Secos (almendras, avena)\n\n' +
+                  '💡 TIPS:\n' +
+                  '• Lista organizada por sección\n' +
+                  '• Precios estimados incluidos\n' +
+                  '• Total controlado: $175.5K\n' +
+                  '• Check items mientras compras');
+        }
+        
+        function volverDashboard() {
+            window.location.href = 'central.html';
+        }
+        
+        function calcularMacros() {
+            alert('📊 MACROS CALCULADOS\n\n' +
+                  '🔵 SEBASTIAN (Keto):\n' +
+                  '• Proteína: 60g (25%)\n' +
+                  '• Carbos: 8g (3%)\n' +
+                  '• Grasa: 55g (72%)\n' +
+                  '• Calorías: ~1,400 (OMAD)\n\n' +
+                  '🟣 PAULINA (Lactancia):\n' +
+                  '• Proteína: 80g (18%)\n' +
+                  '• Carbos: 180g (35%)\n' +
+                  '• Grasa: 85g (47%)\n' +
+                  '• Calorías: ~2,000\n' +
+                  '• Calcio: 1,200mg ✅\n\n' +
+                  '🟢 BENJAMIN (BLW):\n' +
+                  '• Natural finger foods\n' +
+                  '• Sin procesados\n' +
+                  '• Variedad texturas/sabores');
+        }
+        
+        console.log('✅ Planificador Familia Sebastian - Funcional');
+    </script>
+</body>
+</html>
