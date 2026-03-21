@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SER SIENDO — Desarrollo del Potencial Humano Máximo | Metodología Alletagia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        siendo: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            primary: '#003f5c',
+                            accent: '#ffd60a'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Crimson Text', 'serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-up': 'fadeUp 0.8s ease-out',
+                        'slide-in': 'slideIn 0.6s ease-out'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .premium-nav {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #003f5c 0%, #2f4b7c 25%, #665191 50%, #a05195 75%, #d45087 100%);
+        }
+        
+        .section-visible {
+            animation: fade-up 0.8s ease-out;
+        }
+        
+        .premium-card {
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .premium-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: rgba(0, 63, 92, 0.2);
+        }
+        
+        .methodology-highlight {
+            background: linear-gradient(135deg, rgba(0, 63, 92, 0.05) 0%, rgba(255, 214, 10, 0.05) 100%);
+            border-left: 4px solid #003f5c;
+        }
+        
+        .stats-grid {
+            background: linear-gradient(135deg, rgba(0, 63, 92, 0.02) 0%, rgba(255, 255, 255, 0.8) 100%);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #64748b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-siendo-800 font-sans">
+
+    <!-- Premium Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-siendo-primary to-siendo-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-xl font-serif">S</span>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold text-siendo-800 font-serif">SER SIENDO</span>
+                        <div class="text-xs text-siendo-500 font-medium tracking-wide">DESARROLLO POTENCIAL HUMANO</div>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex space-x-8">
+                    <a href="#trabajo" class="text-siendo-700 hover:text-siendo-primary transition-all duration-200 font-medium">Nuestro Trabajo</a>
+                    <a href="#metodologia" class="text-siendo-700 hover:text-siendo-primary transition-all duration-200 font-medium">Metodología</a>
+                    <a href="#sistema" class="text-siendo-700 hover:text-siendo-primary transition-all duration-200 font-medium">Sistema Vivo</a>
+                    <a href="#casos" class="text-siendo-700 hover:text-siendo-primary transition-all duration-200 font-medium">Casos</a>
+                    <a href="#nosotros" class="text-siendo-700 hover:text-siendo-primary transition-all duration-200 font-medium">Nosotros</a>
+                    <a href="#contacto" class="bg-siendo-primary text-white px-6 py-3 rounded-lg hover:bg-siendo-700 transition-all duration-200 font-semibold">
+                        Diagnóstico Alletagia
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center text-white relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        
+        <!-- Background Elements -->
+        <div class="absolute top-20 left-10 w-32 h-32 bg-white opacity-5 rounded-full animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-24 h-24 bg-siendo-accent opacity-10 rounded-full animate-float" style="animation-delay: -3s;"></div>
+        <div class="absolute top-1/2 left-20 w-16 h-16 bg-white opacity-8 rounded-full animate-float" style="animation-delay: -1s;"></div>
+        
+        <div class="container mx-auto px-6 lg:px-8 text-center relative z-10">
+            <!-- Premium Stats Banner -->
+            <div class="inline-flex items-center space-x-6 bg-white bg-opacity-10 backdrop-blur-sm rounded-full px-8 py-3 mb-8 border border-white border-opacity-20">
+                <div class="text-center">
+                    <div class="text-2xl font-bold">15+</div>
+                    <div class="text-xs opacity-80">Años</div>
+                </div>
+                <div class="w-px h-8 bg-white opacity-30"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold">452</div>
+                    <div class="text-xs opacity-80">Empleados</div>
+                </div>
+                <div class="w-px h-8 bg-white opacity-30"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold">$920M</div>
+                    <div class="text-xs opacity-80">ROI/Año</div>
+                </div>
+            </div>
+            
+            <h1 class="text-5xl lg:text-7xl font-black mb-6 leading-tight font-serif">
+                Desarrollamos el<br>
+                <span class="text-siendo-accent">Potencial Humano Máximo</span>
+            </h1>
+            
+            <div class="max-w-4xl mx-auto mb-8">
+                <p class="text-xl lg:text-2xl mb-4 font-light leading-relaxed">
+                    Metodología <strong>Alletagia™</strong>: Supervivencia → Control → Desarrollo
+                </p>
+                <p class="text-lg lg:text-xl opacity-90 leading-relaxed">
+                    Transformamos organizaciones reactivas en sistemas vivos proactivos. <br>
+                    <strong>De crisis -$280M a visión anticipada 6 meses.</strong>
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#metodologia" class="bg-white text-siendo-primary px-8 py-4 rounded-xl font-semibold hover:bg-siendo-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-microscope mr-2"></i>
+                    Ver Metodología Completa
+                </a>
+                <a href="#sistema" class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-siendo-primary transition-all duration-300 backdrop-blur-sm">
+                    <i class="fas fa-cogs mr-2"></i>
+                    Sistema Vivo Técnico
+                </a>
+            </div>
+            
+            <!-- Credencial Badge -->
+            <div class="mt-12 inline-flex items-center space-x-4 text-sm opacity-80">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-university"></i>
+                    <span>EAFIT</span>
+                </div>
+                <div class="w-px h-4 bg-white opacity-50"></div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-industry"></i>
+                    <span>Condugas S.A</span>
+                </div>
+                <div class="w-px h-4 bg-white opacity-50"></div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-brain"></i>
+                    <span>Metodología Alletagia™</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Trabajo -->
+    <section id="trabajo" class="py-20 lg:py-32 bg-gradient-to-br from-siendo-50 to-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center space-x-2 bg-siendo-100 text-siendo-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    <i class="fas fa-tools"></i>
+                    <span>NUESTRO TRABAJO</span>
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-bold text-siendo-800 mb-6 font-serif">
+                    Transformación Empresarial<br>
+                    <span class="text-siendo-primary">Basada en Evidencia</span>
+                </h2>
+                <p class="text-xl text-siendo-600 max-w-3xl mx-auto leading-relaxed">
+                    No hacemos consultoría tradicional. Diseñamos <strong>sistemas vivos empresariales</strong> 
+                    que integran desarrollo humano + inteligencia artificial + automatización inteligente.
+                </p>
+            </div>
+
+            <!-- Methodología Cards Grid -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-20">
+                
+                <!-- Framework Alletagia -->
+                <div class="premium-card bg-white p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-microscope text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-siendo-800">Framework Alletagia™</h3>
+                    <p class="text-siendo-600 mb-6 leading-relaxed">
+                        Metodología propia para diagnosticar energías expansivas vs intensivas. 
+                        <strong>Patrocinio vs Responsabilidad</strong> según potencial individual.
+                    </p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Diagnóstico energético personalizado</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Matriz intervención específica</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Métricas coherencia emocional</span>
+                        </div>
+                    </div>
+                    <a href="#metodologia" class="inline-flex items-center text-siendo-primary font-semibold hover:text-siendo-700 transition-colors">
+                        Ver Metodología Completa <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- 66 Herramientas SERJEFE -->
+                <div class="premium-card bg-white p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-toolbox text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-siendo-800">66 Herramientas SERJEFE</h3>
+                    <p class="text-siendo-600 mb-6 leading-relaxed">
+                        Herramientas HTML interactivas para <strong>jefatura efectiva</strong>. 
+                        Matrices, análisis, decisiones operativas y tácticas navegables.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 mb-6 text-xs">
+                        <div class="bg-siendo-50 p-2 rounded">Matriz Intervención</div>
+                        <div class="bg-siendo-50 p-2 rounded">Análisis Reajuste</div>
+                        <div class="bg-siendo-50 p-2 rounded">Costo Reuniones</div>
+                        <div class="bg-siendo-50 p-2 rounded">Juego Decisiones</div>
+                        <div class="bg-siendo-50 p-2 rounded">Dashboard MYSO</div>
+                        <div class="bg-siendo-50 p-2 rounded">+ 61 herramientas</div>
+                    </div>
+                    <a href="./Guias_seguidores/" class="inline-flex items-center text-siendo-primary font-semibold hover:text-siendo-700 transition-colors">
+                        Explorar Herramientas <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Sistema Vivo Empresarial -->
+                <div class="premium-card bg-white p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-siendo-800">Sistema Vivo Empresarial</h3>
+                    <p class="text-siendo-600 mb-6 leading-relaxed">
+                        <strong>Sistema nervioso empresarial</strong> con ERP + IA + interfaces voz. 
+                        Alertas automáticas supervivencia, control y desarrollo.
+                    </p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-circle text-red-500 mr-2 text-xs"></i>
+                            <span>Alertas Supervivencia (Cash flow, márgenes)</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-circle text-yellow-500 mr-2 text-xs"></i>
+                            <span>Alertas Control (Timeline, costos)</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-circle text-green-500 mr-2 text-xs"></i>
+                            <span>Alertas Desarrollo (Oportunidades)</span>
+                        </div>
+                    </div>
+                    <a href="#sistema" class="inline-flex items-center text-siendo-primary font-semibold hover:text-siendo-700 transition-colors">
+                        Ver Arquitectura Técnica <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ROI Stats Section -->
+            <div class="stats-grid rounded-3xl p-12 border border-siendo-200">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-siendo-800 mb-4 font-serif">Resultados Demostrados</h3>
+                    <p class="text-lg text-siendo-600">Implementación Sistema Vivo Condugas S.A. (452 empleados)</p>
+                </div>
+                
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-siendo-primary mb-2">$920M</div>
+                        <div class="text-sm text-siendo-600 font-medium">ROI Anual COP</div>
+                        <div class="text-xs text-siendo-500 mt-1">Automatización + Optimización</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-green-600 mb-2">2.1</div>
+                        <div class="text-sm text-siendo-600 font-medium">Meses Payback</div>
+                        <div class="text-xs text-siendo-500 mt-1">Recuperación inversión</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-600 mb-2">452→250</div>
+                        <div class="text-sm text-siendo-600 font-medium">Empleados</div>
+                        <div class="text-xs text-siendo-500 mt-1">Reducción dignificada</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 mb-2">6m</div>
+                        <div class="text-sm text-siendo-600 font-medium">Visión Proactiva</div>
+                        <div class="text-xs text-siendo-500 mt-1">vs Gestión reactiva</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodología Alletagia -->
+    <section id="metodologia" class="py-20 lg:py-32 bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center space-x-2 bg-siendo-primary bg-opacity-10 text-siendo-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    <i class="fas fa-atom"></i>
+                    <span>METODOLOGÍA ALLETAGIA™</span>
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-bold text-siendo-800 mb-6 font-serif">
+                    Framework Científico de<br>
+                    <span class="text-siendo-primary">Desarrollo Humano</span>
+                </h2>
+                <p class="text-xl text-siendo-600 max-w-4xl mx-auto leading-relaxed">
+                    <strong>"El humano de hoy no es el de mañana"</strong> — Principio fundamental que guía 
+                    nuestra metodología de intervención personalizada según energía natural individual.
+                </p>
+            </div>
+
+            <!-- Modelo Ser Siendo -->
+            <div class="mb-20">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold text-siendo-800 mb-8 font-serif">Modelo Ser Siendo</h3>
+                        <div class="space-y-8">
+                            <!-- Supervivencia -->
+                            <div class="methodology-highlight p-6 rounded-xl">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold mb-2 text-siendo-800">1. SUPERVIVENCIA</h4>
+                                        <p class="text-siendo-600 mb-3">
+                                            Todo humano y organización debe primero garantizar supervivencia. 
+                                            Detectamos y resolvemos amenazas existenciales.
+                                        </p>
+                                        <div class="text-sm text-siendo-500">
+                                            <strong>Técnico:</strong> Alertas automáticas cash flow, márgenes críticos, 
+                                            riesgos contractuales, dependencias cliente.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Control -->
+                            <div class="methodology-highlight p-6 rounded-xl">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-cogs text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold mb-2 text-siendo-800">2. CONTROL</h4>
+                                        <p class="text-siendo-600 mb-3">
+                                            Recuperamos control sobre circunstancias con información perfecta 
+                                            para decisiones inmediatas.
+                                        </p>
+                                        <div class="text-sm text-siendo-500">
+                                            <strong>Técnico:</strong> ERP optimizado, interfaces voz, automatización 
+                                            inteligente, dashboards tiempo real.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Desarrollo -->
+                            <div class="methodology-highlight p-6 rounded-xl">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-seedling text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold mb-2 text-siendo-800">3. DESARROLLO</h4>
+                                        <p class="text-siendo-600 mb-3">
+                                            Solo con supervivencia y control asegurados, alcanzamos potencial máximo. 
+                                            Identificamos y potenciamos capacidades únicas.
+                                        </p>
+                                        <div class="text-sm text-siendo-500">
+                                            <strong>Técnico:</strong> Diagnóstico energético personalizado, 
+                                            intervenciones específicas, métricas coherencia.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-gradient-to-br from-siendo-50 to-siendo-100 rounded-3xl p-8 border-2 border-siendo-200">
+                            <h4 class="text-2xl font-bold mb-8 text-siendo-800 font-serif">Ecuación Coherencia</h4>
+                            <div class="flex flex-col items-center space-y-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="text-center">
+                                        <div class="w-16 h-16 bg-siendo-primary rounded-xl flex items-center justify-center mb-2">
+                                            <i class="fas fa-heart text-white text-xl"></i>
+                                        </div>
+                                        <div class="text-sm font-medium">EMOCIÓN</div>
+                                    </div>
+                                    <div class="text-2xl font-bold text-siendo-primary">+</div>
+                                    <div class="text-center">
+                                        <div class="w-16 h-16 bg-siendo-primary rounded-xl flex items-center justify-center mb-2">
+                                            <i class="fas fa-brain text-white text-xl"></i>
+                                        </div>
+                                        <div class="text-sm font-medium">PENSAMIENTO</div>
+                                    </div>
+                                    <div class="text-2xl font-bold text-siendo-primary">+</div>
+                                    <div class="text-center">
+                                        <div class="w-16 h-16 bg-siendo-primary rounded-xl flex items-center justify-center mb-2">
+                                            <i class="fas fa-running text-white text-xl"></i>
+                                        </div>
+                                        <div class="text-sm font-medium">ACCIÓN</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-3xl font-bold text-siendo-primary">=</div>
+                                
+                                <div class="text-center">
+                                    <div class="w-24 h-24 bg-gradient-to-br from-siendo-accent to-yellow-500 rounded-xl flex items-center justify-center mb-4">
+                                        <i class="fas fa-star text-white text-2xl"></i>
+                                    </div>
+                                    <div class="text-xl font-bold text-siendo-800">COHERENCIA</div>
+                                    <div class="text-sm text-siendo-600 font-semibold">Potencial Máximo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagnóstico Energético -->
+            <div class="bg-gradient-to-br from-siendo-800 to-siendo-900 rounded-3xl p-12 text-white">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-4 font-serif">Diagnóstico Energético Alletagia™</h3>
+                    <p class="text-xl text-siendo-200">
+                        Identificamos si la persona tiene <strong>energía expansiva</strong> (necesita patrocinio) 
+                        o <strong>energía intensiva</strong> (necesita responsabilidad)
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Energía Expansiva -->
+                    <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm border border-white border-opacity-20">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-expand-arrows-alt text-white text-2xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-white">Energía Expansiva</h4>
+                            <div class="text-siendo-accent font-semibold mt-2">PATROCINIO</div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-bold text-siendo-200 mb-2">Características:</h5>
+                                <ul class="space-y-1 text-sm">
+                                    <li class="flex items-start"><i class="fas fa-check text-green-400 mr-2 mt-1"></i>Potencial alto, estructura baja</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-green-400 mr-2 mt-1"></i>Creatividad e ideas innovadoras</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-green-400 mr-2 mt-1"></i>Energía contagiosa</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-bold text-siendo-200 mb-2">Intervención:</h5>
+                                <ul class="space-y-1 text-sm">
+                                    <li class="flex items-start"><i class="fas fa-arrow-right text-siendo-accent mr-2 mt-1"></i>Recursos sin micromanagement</li>
+                                    <li class="flex items-start"><i class="fas fa-arrow-right text-siendo-accent mr-2 mt-1"></i>Autonomía creativa</li>
+                                    <li class="flex items-start"><i class="fas fa-arrow-right text-siendo-accent mr-2 mt-1"></i>Protección de estructura rígida</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mt-4 p-3 bg-green-500 bg-opacity-20 rounded-lg">
+                                <div class="text-xs font-bold text-green-300">CASO: LINA</div>
+                                <div class="text-xs text-siendo-200 mt-1">Gestora con alto potencial → Patrocinio → Ideas innovadoras constantes</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Energía Intensiva -->
+                    <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm border border-white border-opacity-20">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-compress-arrows-alt text-white text-2xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-white">Energía Intensiva</h4>
+                            <div class="text-siendo-accent font-semibold mt-2">RESPONSABILIDAD</div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-bold text-siendo-200 mb-2">Características:</h5>
+                                <ul class="space-y-1 text-sm">
+                                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mr-2 mt-1"></i>Capacidad alta, necesita amplitud</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mr-2 mt-1"></i>Enfoque en ejecución</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-blue-400 mr-2 mt-1"></i>Energía sistemática</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-bold text-siendo-200 mb-2">Intervención:</h5>
+                                <ul class="space-y-1 text-sm">
+                                    <li class="flex items-start"><i class="fas fa-arrow-right text-siendo-accent mr-2 mt-1"></i>Proyectos retadores</li>
+                                    <li class="flex items-start"><i class="fas fa-arrow-right text-siendo-accent mr-2 mt-1"></i>Autonomía decisional</li>
+                                    <li class="flex items-start"><i class="fas fa-arrow-right text-siendo-accent mr-2 mt-1"></i>Métricas claras</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mt-4 p-3 bg-blue-500 bg-opacity-20 rounded-lg">
+                                <div class="text-xs font-bold text-blue-300">CASO: ANDREA</div>
+                                <div class="text-xs text-siendo-200 mt-1">Directora Financiera → Responsabilidad → Análisis complejo crisis OYMA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <a href="#casos" class="inline-flex items-center bg-siendo-accent text-siendo-800 px-6 py-3 rounded-xl font-semibold hover:bg-yellow-400 transition-all duration-200">
+                        <i class="fas fa-chart-line mr-2"></i>
+                        Ver Casos Reales Documentados
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sistema Vivo Técnico -->
+    <section id="sistema" class="py-20 lg:py-32 bg-gradient-to-br from-siendo-900 to-black text-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center space-x-2 bg-siendo-accent bg-opacity-20 text-siendo-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    <i class="fas fa-microchip"></i>
+                    <span>SISTEMA VIVO EMPRESARIAL</span>
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-bold mb-6 font-serif">
+                    Sistema Nervioso<br>
+                    <span class="text-siendo-accent">Empresarial</span>
+                </h2>
+                <p class="text-xl text-siendo-200 max-w-4xl mx-auto leading-relaxed">
+                    Arquitectura técnica completa que transforma empresas reactivas en <strong>sistemas vivos proactivos</strong> 
+                    con información perfecta e intervenciones automáticas.
+                </p>
+            </div>
+
+            <!-- Arquitectura Overview -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-20">
+                
+                <!-- Sistema Nervioso Central -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-10">
+                    <div class="w-16 h-16 bg-red-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sistema Nervioso Central</h3>
+                    <p class="text-siendo-200 mb-6">
+                        <strong>Odoo Core optimizado</strong> con procesamiento automático, alertas inteligentes 
+                        y memoria histórica de métricas performance.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span>Análisis automático datos entrada</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span>Alertas supervivencia/control/desarrollo</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span>Restricciones automáticas + aprobaciones</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sistema Nervioso Periférico -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-10">
+                    <div class="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-microphone text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sistema Nervioso Periférico</h3>
+                    <p class="text-siendo-200 mb-6">
+                        <strong>Interfaces voz operarios</strong> con OpenClaw + Claude digitalizando automático. 
+                        Captura sin fricción, dignificación trabajo manual.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            <span>Comandos español colombiano</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            <span>Timesheet automático por proyecto</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            <span>Materiales: consumos vs despachos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Automatización Inteligente -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-10">
+                    <div class="w-16 h-16 bg-purple-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Automatización Inteligente</h3>
+                    <p class="text-siendo-200 mb-6">
+                        <strong>Eliminación tareas repetitivas</strong> con IA especializada. 
+                        Reducción headcount dignificada liberando humanos para desarrollo.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-purple-400 mr-2"></i>
+                            <span>Skills especializadas (financiero, crisis)</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-purple-400 mr-2"></i>
+                            <span>Conciliación bancaria automática</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-purple-400 mr-2"></i>
+                            <span>Nómina distribuida por contrato</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alertas Sistema -->
+            <div class="bg-gradient-to-br from-siendo-800 to-siendo-700 rounded-3xl p-12 border border-white border-opacity-10 mb-20">
+                <h3 class="text-3xl font-bold text-center mb-12 font-serif">Alertas Automáticas 3 Niveles</h3>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Supervivencia -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-exclamation-triangle text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-red-300">SUPERVIVENCIA</h4>
+                        <div class="space-y-2 text-sm text-siendo-200">
+                            <div>• Cash flow negativo 30 días</div>
+                            <div>• Margen contrato &lt; -20% por 2 meses</div>
+                            <div>• Cliente pagos pendientes &gt; $300M + 90 días</div>
+                            <div>• Material consumo 150% vs despacho</div>
+                            <div>• Rendimiento obra &lt; 60% vs APU</div>
+                        </div>
+                    </div>
+
+                    <!-- Control -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-exclamation-circle text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-yellow-300">CONTROL</h4>
+                        <div class="space-y-2 text-sm text-siendo-200">
+                            <div>• Margen contrato 0% a -15%</div>
+                            <div>• Timeline atrasado 20-30%</div>
+                            <div>• Inventario &lt; 15 días stock</div>
+                            <div>• Sobrecostos 25-40% vs presupuesto</div>
+                            <div>• Productividad &lt; 70% esperado</div>
+                        </div>
+                    </div>
+
+                    <!-- Desarrollo -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-check-circle text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-green-300">DESARROLLO</h4>
+                        <div class="space-y-2 text-sm text-siendo-200">
+                            <div>• Margen &gt; 15% vs licitado</div>
+                            <div>• Proyecto adelantado &gt; 10%</div>
+                            <div>• Productividad &gt; 120% esperado</div>
+                            <div>• Cliente satisfacción &gt; 95%</div>
+                            <div>• Oportunidad nueva licitación</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especificaciones Técnicas -->
+            <div class="bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-10">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-2xl font-bold font-serif">Especificaciones Técnicas Completas</h3>
+                    <a href="./sistema-vivo-especificaciones.html" class="inline-flex items-center bg-siendo-accent text-siendo-800 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-400 transition-colors">
+                        <i class="fas fa-download mr-2"></i>
+                        Descargar Documentación
+                    </a>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-siendo-accent">Arquitectura Técnica</h4>
+                        <ul class="space-y-2 text-sm text-siendo-200">
+                            <li>• <strong>ERP:</strong> Odoo 19 Enterprise optimizado</li>
+                            <li>• <strong>IA:</strong> OpenClaw + Claude + Skills especializadas</li>
+                            <li>• <strong>Voz:</strong> Interfaces español colombiano operarios</li>
+                            <li>• <strong>Base datos:</strong> PostgreSQL con históricos</li>
+                            <li>• <strong>Alertas:</strong> Sistema tiempo real automatizado</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-siendo-accent">ROI Implementación</h4>
+                        <ul class="space-y-2 text-sm text-siendo-200">
+                            <li>• <strong>Inversión inicial:</strong> $180M COP</li>
+                            <li>• <strong>ROI anual:</strong> $920M COP</li>
+                            <li>• <strong>Payback:</strong> 2.1 meses</li>
+                            <li>• <strong>Reducción personal:</strong> 452 → 250 empleados</li>
+                            <li>• <strong>Timeline implementación:</strong> 4-6 meses</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de Estudio -->
+    <section id="casos" class="py-20 lg:py-32 bg-gradient-to-br from-siendo-50 to-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center space-x-2 bg-siendo-primary bg-opacity-10 text-siendo-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    <i class="fas fa-chart-line"></i>
+                    <span>CASOS DE ESTUDIO</span>
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-bold text-siendo-800 mb-6 font-serif">
+                    Resultados Documentados
+                </h2>
+                <p class="text-xl text-siendo-600 max-w-3xl mx-auto leading-relaxed">
+                    Casos reales con métricas específicas, no testimoniales genéricos. 
+                    <strong>Evidencia cuantificada de transformación humana + empresarial.</strong>
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Caso Crisis OYMA -->
+                <div class="premium-card bg-white p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line-down text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-siendo-800">Crisis OYMA R1</h3>
+                    <p class="text-siendo-600 mb-6">
+                        Contrato -$280M enero 2026. <strong>De gestión reactiva a carta estratégica suspensión.</strong>
+                    </p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <h4 class="font-bold text-sm text-siendo-700 mb-1">SITUACIÓN INICIAL:</h4>
+                            <ul class="text-sm text-siendo-600 space-y-1">
+                                <li>• Margen enero: -22.2% (-$280M COP)</li>
+                                <li>• EPM debe $400M ítems ambientales</li>
+                                <li>• Gestión bombero reactiva</li>
+                                <li>• Sin información anticipada</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-sm text-siendo-700 mb-1">INTERVENCIÓN ALLETAGIA:</h4>
+                            <ul class="text-sm text-siendo-600 space-y-1">
+                                <li>• Análisis integral Andrea (energía intensiva)</li>
+                                <li>• Sistema alertas automáticas implementado</li>
+                                <li>• Carta estratégica vs terminación reactiva</li>
+                                <li>• Posición negociación informada</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-sm text-siendo-700 mb-1">RESULTADO:</h4>
+                            <ul class="text-sm text-siendo-600 space-y-1">
+                                <li>• Carta suspensión estratégica enviada</li>
+                                <li>• EPM 15 días respuesta formal</li>
+                                <li>• Posición negociación vs terminación</li>
+                                <li>• Transformación reactivo → proactivo</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-siendo-50 p-4 rounded-lg">
+                        <div class="text-xs font-bold text-siendo-700">APRENDIZAJE CLAVE</div>
+                        <div class="text-xs text-siendo-600 mt-1">
+                            Crisis como oportunidad intervención estratégica vs gestión emocional
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Caso Lina vs Andrea -->
+                <div class="premium-card bg-white p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-siendo-800">Lina vs Andrea</h3>
+                    <p class="text-siendo-600 mb-6">
+                        <strong>Energías expansivas vs intensivas.</strong> Intervenciones personalizadas patrocinio vs responsabilidad.
+                    </p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <h4 class="font-bold text-sm text-green-700 mb-1">LINA - ENERGÍA EXPANSIVA:</h4>
+                            <ul class="text-sm text-siendo-600 space-y-1">
+                                <li>• Potencial alto, estructura baja</li>
+                                <li>• Intervención: PATROCINIO</li>
+                                <li>• Proyectos autónomos sin micromanagement</li>
+                                <li>• Resultado: Ideas innovadoras constantes</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-sm text-blue-700 mb-1">ANDREA - ENERGÍA INTENSIVA:</h4>
+                            <ul class="text-sm text-siendo-600 space-y-1">
+                                <li>• Capacidad alta, necesita amplitud</li>
+                                <li>• Intervención: RESPONSABILIDAD</li>
+                                <li>• Análisis complejo crisis OYMA</li>
+                                <li>• Resultado: Decisiones autónomas acertadas</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-sm text-siendo-700 mb-1">MÉTRICAS COHERENCIA:</h4>
+                            <ul class="text-sm text-siendo-600 space-y-1">
+                                <li>• Lina: Energía positiva contagiosa sostenida</li>
+                                <li>• Andrea: Búsqueda activa más responsabilidades</li>
+                                <li>• Ambas: Alineación emoción-pensamiento-acción</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-siendo-50 p-4 rounded-lg">
+                        <div class="text-xs font-bold text-siendo-700">VALIDACIÓN FRAMEWORK</div>
+                        <div class="text-xs text-siendo-600 mt-1">
+                            Una metodología ≠ todas las personas. Personalización según energía natural.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Caso Condugas Sistema Vivo -->
+                <div class="premium-card bg-white p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-industry text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-siendo-800">Condugas Sistema Vivo</h3>
+                    <p class="text-siendo-600 mb-6">
+                        <strong>Empresa 452 empleados transformada en sistema nervioso empresarial.</strong>
+                    </p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <h4 class="font-bold text-sm text-siendo-700 mb-1">ANTES - GESTIÓN REACTIVA:</h4>
+                            <ul class="text-sm text-siendo-600 space-y-1">
+                                <li>• Información tardía, decisiones emocionales</li>
+                                <li>• 452 empleados, productividad inconsistente</li>
+                                <li>• Gestión bombero, crisis constantes</li>
+                                <li>• Sin visión anticipada</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-sm text-siendo-700 mb-1">IMPLEMENTACIÓN:</h4>
+                            <ul class="text-sm text-siendo-600 space-y-1">
+                                <li>• Odoo 19 optimizado + alertas automáticas</li>
+                                <li>• Interfaces voz operarios español colombiano</li>
+                                <li>• Skills IA especializadas por función</li>
+                                <li>• Automatización tareas repetitivas</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-sm text-siendo-700 mb-1">RESULTADOS CUANTIFICADOS:</h4>
+                            <ul class="text-sm text-siendo-600 space-y-1">
+                                <li>• <strong>ROI:</strong> $920M COP/año</li>
+                                <li>• <strong>Payback:</strong> 2.1 meses</li>
+                                <li>• <strong>Empleados:</strong> 452 → 250 (dignificado)</li>
+                                <li>• <strong>Visión:</strong> 6 meses anticipada</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <div class="text-xs font-bold text-purple-700">TRANSFORMACIÓN INTEGRAL</div>
+                        <div class="text-xs text-purple-600 mt-1">
+                            Sistema nervioso empresarial: humanos para desarrollo, IA para repetitivo
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Casos -->
+            <div class="text-center mt-16">
+                <div class="bg-siendo-primary bg-opacity-5 rounded-2xl p-8 border border-siendo-primary border-opacity-20">
+                    <h3 class="text-2xl font-bold text-siendo-800 mb-4 font-serif">¿Tu Empresa Lista para Transformación?</h3>
+                    <p class="text-siendo-600 mb-6 max-w-2xl mx-auto">
+                        Casos documentados con ROI específico. Metodología probada en contexto empresarial real.
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center bg-siendo-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-siendo-700 transition-all duration-200 transform hover:scale-105">
+                        <i class="fas fa-calendar-check mr-2"></i>
+                        Solicitar Diagnóstico Alletagia
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-20 lg:py-32 bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center space-x-2 bg-siendo-accent bg-opacity-20 text-siendo-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    <i class="fas fa-user-tie"></i>
+                    <span>NOSOTROS</span>
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-bold text-siendo-800 mb-6 font-serif">
+                    Autoridad Técnica e<br>
+                    <span class="text-siendo-primary">Intelectual Demostrada</span>
+                </h2>
+                <p class="text-xl text-siendo-600 max-w-4xl mx-auto leading-relaxed">
+                    No somos consultores tradicionales. Combinamos <strong>rigor académico + experiencia empresarial + 
+                    metodología propia + resultados cuantificados</strong> en desarrollo potencial humano.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                
+                <!-- Sebastián Profile -->
+                <div>
+                    <div class="flex items-start space-x-4 mb-8">
+                        <div class="w-24 h-24 bg-gradient-to-br from-siendo-primary to-siendo-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-3xl font-serif">S</span>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-siendo-800 font-serif">Sebastián Sánchez Acevedo</h3>
+                            <div class="text-lg text-siendo-600 font-medium">Fundador & Metodólogo Principal</div>
+                            <div class="text-sm text-siendo-500 mt-1">EAFIT • Condugas S.A. • Sendo Consulting</div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl font-bold text-siendo-800 mb-3">Perfil Intelectual</h4>
+                            <div class="methodology-highlight p-4 rounded-xl">
+                                <div class="text-sm text-siendo-600 leading-relaxed">
+                                    <strong>"Alta intensidad mental. No se conforma con la superficie."</strong><br><br>
+                                    Piensa por capas simultáneas: estrategia + operación + psicología + lenguaje + incentivos + riesgos. 
+                                    Traduce intuiciones en marcos replicables: observa → nombra → estructura → 
+                                    convierte en método/herramienta/sistema.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-bold text-siendo-800 mb-3">Como Diseñador de Sistemas</h4>
+                            <ul class="space-y-2 text-siendo-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    <span>No administra — <strong>diseña y reconfigura sistemas</strong></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    <span>Necesidad profunda de <strong>darle forma al caos</strong></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    <span>Integración: estrategia ↔ operación, tecnología ↔ cultura</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    <span>No le basta que un proceso exista — <strong>le importa si tiene lógica</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-bold text-siendo-800 mb-3">Como Pensador</h4>
+                            <div class="bg-siendo-50 p-4 rounded-xl">
+                                <div class="text-sm text-siendo-600">
+                                    <strong>Temas:</strong> jefatura vs liderazgo, comportamiento humano, consciencia, 
+                                    poder, sesgos, diseño de decisiones, complejidad empresarial.<br><br>
+                                    <strong>Diferenciador:</strong> No repite marcos ajenos — los procesa y reconfigura. 
+                                    Busca puentes entre humano ↔ organizacional, filosofía ↔ gestión.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Credenciales & Diferenciadores -->
+                <div>
+                    <div class="bg-gradient-to-br from-siendo-800 to-siendo-900 rounded-3xl p-8 text-white mb-8">
+                        <h4 class="text-2xl font-bold mb-6 font-serif">Credenciales Únicas</h4>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="font-bold text-siendo-accent mb-2">ACADÉMICO</h5>
+                                <div class="text-siendo-200">
+                                    <strong>Docente EAFIT</strong> — Cátedra de jefatura.<br>
+                                    Investigación original: "Alletagia" como framework intervención.
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-bold text-siendo-accent mb-2">EMPRESARIAL</h5>
+                                <div class="text-siendo-200">
+                                    <strong>Gerente Condugas S.A</strong> — 452 empleados, múltiples contratos.<br>
+                                    Experiencia real crisis + transformación + resultados medibles.
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-bold text-siendo-accent mb-2">METODOLÓGICO</h5>
+                                <div class="text-siendo-200">
+                                    <strong>Creador Alletagia™</strong> — Metodología propia branded.<br>
+                                    Sistema vivo empresarial con especificaciones técnicas completas.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Diferenciadores vs Competencia -->
+                    <div class="bg-siendo-50 rounded-2xl p-8 border border-siendo-200">
+                        <h4 class="text-xl font-bold text-siendo-800 mb-6">Vs Consultoría Tradicional</h4>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between">
+                                <div class="text-sm">
+                                    <div class="font-bold text-siendo-700">Otros</div>
+                                    <div class="text-siendo-500">Metodologías prestadas</div>
+                                </div>
+                                <div class="text-sm text-right">
+                                    <div class="font-bold text-siendo-800">SER SIENDO</div>
+                                    <div class="text-siendo-600">Alletagia™ propia + 15 años desarrollo</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start justify-between">
+                                <div class="text-sm">
+                                    <div class="font-bold text-siendo-700">Otros</div>
+                                    <div class="text-siendo-500">Solo académico o solo práctico</div>
+                                </div>
+                                <div class="text-sm text-right">
+                                    <div class="font-bold text-siendo-800">SER SIENDO</div>
+                                    <div class="text-siendo-600">EAFIT + Condugas + resultados reales</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start justify-between">
+                                <div class="text-sm">
+                                    <div class="font-bold text-siendo-700">Otros</div>
+                                    <div class="text-siendo-500">ROI difuso, casos genéricos</div>
+                                </div>
+                                <div class="text-sm text-right">
+                                    <div class="font-bold text-siendo-800">SER SIENDO</div>
+                                    <div class="text-siendo-600">$920M/año ROI, casos documentados</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start justify-between">
+                                <div class="text-sm">
+                                    <div class="font-bold text-siendo-700">Otros</div>
+                                    <div class="text-siendo-500">Humanos vs tecnología</div>
+                                </div>
+                                <div class="text-sm text-right">
+                                    <div class="font-bold text-siendo-800">SER SENDO</div>
+                                    <div class="text-siendo-600">Humanos + IA + sistema vivo integral</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Red de Implementación -->
+            <div class="bg-gradient-to-br from-siendo-primary to-siendo-600 rounded-3xl p-12 text-white">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-4 font-serif">Red de Implementación</h3>
+                    <p class="text-xl text-siendo-100">
+                        No somos consultores que recomiendan e se van. Tenemos <strong>equipo técnico completo 
+                        para implementación</strong> de sistema vivo empresarial.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Emanuel Quevedo</h4>
+                        <div class="text-siendo-200 text-sm mb-2">Desarrollador Sistema Vivo</div>
+                        <div class="text-xs text-siendo-300">
+                            Especializaciones: Odoo, OpenClaw, interfaces voz, automatización IA
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Equipo Condugas</h4>
+                        <div class="text-siendo-200 text-sm mb-2">Directores Funcionales</div>
+                        <div class="text-xs text-siendo-300">
+                            Andrea (Financiero), Cami (Proyectos), Juan (Estrategia), Carlos (Nuevos Negocios)
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-handshake text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Sendo Consulting</h4>
+                        <div class="text-siendo-200 text-sm mb-2">Implementación Metodológica</div>
+                        <div class="text-xs text-siendo-300">
+                            Lina (Gestora), Mónica (Comercial) — Aplicación Alletagia personalizada
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <div class="inline-flex items-center space-x-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full px-4 py-2">
+                        <i class="fas fa-shield-check text-siendo-accent"></i>
+                        <span class="text-sm font-medium">Implementación garantizada con equipo propio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & CTA -->
+    <section id="contacto" class="py-20 lg:py-32 bg-gradient-to-br from-siendo-800 to-black text-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-6xl font-bold mb-6 font-serif">
+                    ¿Listo para Desarrollar<br>
+                    <span class="text-siendo-accent">Potencial Máximo?</span>
+                </h2>
+                <p class="text-xl text-siendo-200 max-w-3xl mx-auto leading-relaxed">
+                    Transformamos organizaciones reactivas en <strong>sistemas vivos proactivos</strong> 
+                    que desarrollan potencial humano mientras logran resultados extraordinarios.
+                </p>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-siendo-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-siendo-800">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Diagnóstico Alletagia</h3>
+                    <p class="text-siendo-300">
+                        Evaluamos energías expansivas vs intensivas en tu organización. 
+                        Identificamos potencial vs capacidad actual.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-siendo-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-siendo-800">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Diseño Sistema Vivo</h3>
+                    <p class="text-siendo-300">
+                        Arquitectura técnica personalizada: ERP + IA + interfaces + alertas 
+                        según tu contexto específico empresarial.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-siendo-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-siendo-800">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Implementación + ROI</h3>
+                    <p class="text-siendo-300">
+                        Implementación garantizada con equipo técnico. 
+                        ROI medible en 2-4 meses, resultados documentados.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-10">
+                    <h3 class="text-2xl font-bold text-center mb-8 font-serif">Solicitar Diagnóstico Alletagia</h3>
+                    
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-siendo-300 mb-2">Nombre Completo</label>
+                                <input type="text" class="w-full bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg px-4 py-3 text-white placeholder-siendo-400 focus:border-siendo-accent focus:outline-none focus:ring-1 focus:ring-siendo-accent" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-siendo-300 mb-2">Empresa</label>
+                                <input type="text" class="w-full bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg px-4 py-3 text-white placeholder-siendo-400 focus:border-siendo-accent focus:outline-none focus:ring-1 focus:ring-siendo-accent" placeholder="Nombre empresa">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-siendo-300 mb-2">Email</label>
+                                <input type="email" class="w-full bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg px-4 py-3 text-white placeholder-siendo-400 focus:border-siendo-accent focus:outline-none focus:ring-1 focus:ring-siendo-accent" placeholder="tu@empresa.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-siendo-300 mb-2">Empleados</label>
+                                <select class="w-full bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg px-4 py-3 text-white focus:border-siendo-accent focus:outline-none focus:ring-1 focus:ring-siendo-accent">
+                                    <option value="">Seleccionar</option>
+                                    <option value="1-10">1-10</option>
+                                    <option value="11-50">11-50</option>
+                                    <option value="51-200">51-200</option>
+                                    <option value="200+">200+</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-siendo-300 mb-2">Situación Actual</label>
+                            <textarea rows="4" class="w-full bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg px-4 py-3 text-white placeholder-siendo-400 focus:border-siendo-accent focus:outline-none focus:ring-1 focus:ring-siendo-accent" placeholder="Describe tu situación empresarial actual: crisis, oportunidades, desafíos de desarrollo humano..."></textarea>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-siendo-300 mb-2">Interés Principal</label>
+                            <div class="grid md:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="radio" name="interest" value="alletagia" class="w-4 h-4 text-siendo-accent">
+                                    <span class="text-sm">Metodología Alletagia</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="radio" name="interest" value="sistema" class="w-4 h-4 text-siendo-accent">
+                                    <span class="text-sm">Sistema Vivo Empresarial</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="radio" name="interest" value="crisis" class="w-4 h-4 text-siendo-accent">
+                                    <span class="text-sm">Gestión Crisis</span>
+                                </label>
+                                <label class="flex items-center space-x-3 cursor-pointer">
+                                    <input type="radio" name="interest" value="completo" class="w-4 h-4 text-siendo-accent">
+                                    <span class="text-sm">Transformación Completa</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-siendo-accent text-siendo-800 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition-all duration-200 transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Solicitar Diagnóstico Alletagia
+                        </button>
+                        
+                        <div class="text-center">
+                            <div class="text-xs text-siendo-400">
+                                Respuesta en 24-48 horas • Conversación inicial sin costo • 
+                                <a href="mailto:sebastian@condugas.com.co" class="text-siendo-accent hover:text-yellow-400">sebastian@condugas.com.co</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-siendo-900 py-16">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-siendo-primary to-siendo-600 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-xl font-serif">S</span>
+                        </div>
+                        <div>
+                            <span class="text-xl font-bold text-white font-serif">SER SIENDO</span>
+                            <div class="text-xs text-siendo-400">DESARROLLO POTENCIAL HUMANO</div>
+                        </div>
+                    </div>
+                    <p class="text-siendo-400 text-sm leading-relaxed">
+                        Desarrollamos el potencial humano máximo en contextos empresariales a través de 
+                        metodología Alletagia™ y sistema vivo empresarial.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">Metodología</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#metodologia" class="text-siendo-400 hover:text-white transition-colors">Framework Alletagia™</a></li>
+                        <li><a href="#metodologia" class="text-siendo-400 hover:text-white transition-colors">Diagnóstico Energético</a></li>
+                        <li><a href="#metodologia" class="text-siendo-400 hover:text-white transition-colors">Modelo Ser Siendo</a></li>
+                        <li><a href="#metodologia" class="text-siendo-400 hover:text-white transition-colors">Matriz Intervención</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">Sistema Vivo</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#sistema" class="text-siendo-400 hover:text-white transition-colors">Sistema Nervioso Central</a></li>
+                        <li><a href="#sistema" class="text-siendo-400 hover:text-white transition-colors">Interfaces Voz</a></li>
+                        <li><a href="#sistema" class="text-siendo-400 hover:text-white transition-colors">Automatización IA</a></li>
+                        <li><a href="#sistema" class="text-siendo-400 hover:text-white transition-colors">Alertas 3 Niveles</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">Contacto</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-user text-siendo-accent"></i>
+                            <span class="text-siendo-400">Sebastián Sánchez Acevedo</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-siendo-accent"></i>
+                            <span class="text-siendo-400">sebastian@condugas.com.co</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-building text-siendo-accent"></i>
+                            <span class="text-siendo-400">Condugas SA / Sendo Consulting</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-siendo-accent"></i>
+                            <span class="text-siendo-400">Medellín, Colombia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-siendo-700 mt-12 pt-8 text-center">
+                <p class="text-siendo-400 text-sm">
+                    © 2026 SER SENDO — Todos los derechos reservados. Metodología Alletagia™ 
+                    propiedad intelectual de Sebastián Sánchez Acevedo.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('premium-nav');
+            } else {
+                navbar.classList.remove('premium-nav');
+            }
+        });
+
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.premium-card, .methodology-highlight, .stats-grid').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por tu interés. Te contactaremos en 24-48 horas.');
+        });
+
+        console.log('SER SIENDO — Sistema Vivo Empresarial Loaded ✅');
+    </script>
+</body>
+</html>
