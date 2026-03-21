@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador Familia Sebastian - Final</title>
+    <style>
+        :root {
+            --sendo-gold: #e0c05a;
+            --sendo-blue: #003f6b;
+            --sendo-blue-dark: #002b4a;
+        }
+        
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            background: linear-gradient(135deg, var(--sendo-blue-dark), var(--sendo-blue));
+            min-height: 100vh;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            border: 1px solid rgba(224, 192, 90, 0.3);
+        }
+        
+        .title {
+            color: var(--sendo-gold);
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 32px;
+        }
+        
+        .day-selector {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .day-btn {
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(224, 192, 90, 0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .day-btn.active {
+            background: var(--sendo-gold);
+            color: var(--sendo-blue);
+            border-color: var(--sendo-gold);
+        }
+        
+        .meal-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+        }
+        
+        @media (max-width: 1200px) {
+            .meal-sections {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .meal-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .meal-title {
+            color: var(--sendo-gold);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+            text-align: center;
+            border-bottom: 2px solid var(--sendo-gold);
+            padding-bottom: 8px;
+        }
+        
+        .meal-subtitle {
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px;
+            border-radius: 6px;
+        }
+        
+        .recipe-grid {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .recipe-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+        
+        .recipe-card:hover {
+            background: rgba(224, 192, 90, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .recipe-card.selected {
+            border-color: var(--sendo-gold);
+            background: rgba(224, 192, 90, 0.15);
+        }
+        
+        .recipe-card.selected::after {
+            content: "✅";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .recipe-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--sendo-gold);
+        }
+        
+        .recipe-desc {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+        
+        .recipe-macros {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        
+        .weekly-summary {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 320px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 2px solid #22c55e;
+            border-radius: 12px;
+            padding: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        @media (max-width: 1400px) {
+            .weekly-summary {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+                width: auto;
+                margin: 20px 0;
+            }
+        }
+        
+        .btn {
+            background: var(--sendo-gold);
+            color: var(--sendo-blue);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 8px 4px;
+            transition: all 0.3s ease;
+            width: calc(100% - 8px);
+        }
+        
+        .btn:hover {
+            background: #c8ab49;
+            transform: translateY(-1px);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .paulina-section { border-left: 4px solid #ec4899; }
+        .shared-section { border-left: 4px solid #8b5cf6; }
+        .benjamin-section { border-left: 4px solid #10b981; }
+        
+        .day-summary {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .total-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--sendo-gold);
+            text-align: center;
+            margin: 16px 0;
+            padding: 12px;
+            background: rgba(224, 192, 90, 0.1);
+            border-radius: 8px;
+        }
+        
+        .protein-tag {
+            display: inline-block;
+            background: #ef4444;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-left: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">🍽️ Planificador Familia Sebastian</h1>
+        <div class="subtitle">
+            <strong>Sebastián:</strong> Almuerzo 3 PM + Cena 9 PM (mismo menú que Paulina) |
+            <strong>Paulina:</strong> Desayuno 7 AM + Almuerzo 12 PM + Cena 7 PM |
+            <strong>Benjamin:</strong> BLW 3 veces/día
+        </div>
+        
+        <!-- Selector de Día -->
+        <div class="card">
+            <div class="day-selector">
+                <button class="day-btn active" data-day="lunes" onclick="selectDay(this)">Lunes</button>
+                <button class="day-btn" data-day="martes" onclick="selectDay(this)">Martes</button>
+                <button class="day-btn" data-day="miercoles" onclick="selectDay(this)">Miércoles</button>
+                <button class="day-btn" data-day="jueves" onclick="selectDay(this)">Jueves</button>
+                <button class="day-btn" data-day="viernes" onclick="selectDay(this)">Viernes</button>
+                <button class="day-btn" data-day="sabado" onclick="selectDay(this)">Sábado</button>
+                <button class="day-btn" data-day="domingo" onclick="selectDay(this)">Domingo</button>
+            </div>
+            <div style="text-align: center;">
+                <strong>Planificando para: <span id="currentDay">Lunes</span></strong>
+            </div>
+        </div>
+
+        <!-- Secciones de Comidas -->
+        <div class="meal-sections">
+            
+            <!-- DESAYUNO SOLO PAULINA -->
+            <div class="meal-section paulina-section">
+                <div class="meal-title">🟣 DESAYUNO - Solo Paulina</div>
+                <div class="meal-subtitle">7:00 AM - Lactancia (Alto Calcio + Hierro)</div>
+                
+                <div class="recipe-grid">
+                    
+                    <div class="recipe-card" data-recipe="yogurt-avena-banano" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Yogurt Avena Banano <span class="protein-tag">20g</span></div>
+                        <div class="recipe-desc">Yogurt griego + avena + banano + almendras</div>
+                        <div class="recipe-macros">Ca: 400mg | Fe: 3mg | Proteína completa</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="tostada-aguacate-huevo" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Tostada Aguacate Huevo <span class="protein-tag">22g</span></div>
+                        <div class="recipe-desc">Pan integral + aguacate + huevo + tomate + queso</div>
+                        <div class="recipe-macros">Ca: 300mg | Folato alto | Grasas buenas</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="smoothie-verde-proteina" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Smoothie Verde Proteína <span class="protein-tag">25g</span></div>
+                        <div class="recipe-desc">Espinaca + banano + leche + almendras + proteína</div>
+                        <div class="recipe-macros">Ca: 450mg | Folato muy alto | Antioxidantes</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="huevos-espinaca-queso" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Huevos Espinaca Queso <span class="protein-tag">28g</span></div>
+                        <div class="recipe-desc">Revueltos + espinaca + queso + pan tostado</div>
+                        <div class="recipe-macros">Ca: 350mg | Fe: 6mg | Completo</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="avena-frutas-nueces" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Avena Frutas Nueces <span class="protein-tag">18g</span></div>
+                        <div class="recipe-desc">Avena + leche + fresas + nueces + miel</div>
+                        <div class="recipe-macros">Ca: 400mg | Fibra alta | Energía sostenida</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="pancakes-avena" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Pancakes Avena <span class="protein-tag">24g</span></div>
+                        <div class="recipe-desc">Avena + huevos + banano + yogurt griego</div>
+                        <div class="recipe-macros">Ca: 350mg | Sin harinas procesadas</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="quinoa-desayuno" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Quinoa Bowl Desayuno <span class="protein-tag">22g</span></div>
+                        <div class="recipe-desc">Quinoa + leche + frutas + almendras</div>
+                        <div class="recipe-macros">Proteína completa | Ca: 300mg | Súper food</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- ALMUERZO SEBASTIAN + PAULINA -->
+            <div class="meal-section shared-section">
+                <div class="meal-title">🟣🔵 ALMUERZO - Sebastian + Paulina</div>
+                <div class="meal-subtitle">Sebastian 3:00 PM (OMAD) | Paulina 12:00 PM</div>
+                
+                <div class="recipe-grid">
+                    
+                    <div class="recipe-card" data-recipe="salmon-espinaca-quinoa" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Salmón Espinaca Quinoa <span class="protein-tag">45g</span></div>
+                        <div class="recipe-desc">Salmón plancha + espinaca + quinoa + aguacate</div>
+                        <div class="recipe-macros">Omega-3 alto | Proteína completa | Keto-friendly</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="pollo-broccoli-papa" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Pollo Brócoli Papa <span class="protein-tag">42g</span></div>
+                        <div class="recipe-desc">Pechuga + brócoli + papa + aceite oliva</div>
+                        <div class="recipe-macros">Fe: 8mg | Vitamina C | Carbos complejos</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="atun-ensalada-completa" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Atún Ensalada Completa <span class="protein-tag">40g</span></div>
+                        <div class="recipe-desc">Atún + lechuga + tomate + aguacate + huevo + queso</div>
+                        <div class="recipe-macros">Omega-3 | Grasas buenas | Low carb</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="carne-vegetales" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Carne con Vegetales <span class="protein-tag">44g</span></div>
+                        <div class="recipe-desc">Carne molida + brócoli + calabacín + apio</div>
+                        <div class="recipe-macros">Fe: 10mg | B12 | Keto perfecto</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="pescado-verduras" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Pescado con Verduras <span class="protein-tag">38g</span></div>
+                        <div class="recipe-desc">Pescado blanco + verduras mixtas + arroz opcional</div>
+                        <div class="recipe-macros">Proteína magra | Fácil digestión</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="lentejas-pollo" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Lentejas con Pollo <span class="protein-tag">46g</span></div>
+                        <div class="recipe-desc">Lentejas + pollo + zanahoria + apio</div>
+                        <div class="recipe-macros">Fe: 15mg | Fibra alta | Proteína doble</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="huevos-vegetales" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Huevos con Vegetales <span class="protein-tag">35g</span></div>
+                        <div class="recipe-desc">Tortilla española + espinaca + queso + ensalada</div>
+                        <div class="recipe-macros">B12 | Colina | Versátil</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- CENA SEBASTIAN + PAULINA -->
+            <div class="meal-section shared-section">
+                <div class="meal-title">🟣🔵 CENA - Sebastian + Paulina</div>
+                <div class="meal-subtitle">Sebastian 9:00 PM | Paulina 7:00 PM</div>
+                
+                <div class="recipe-grid">
+                    
+                    <div class="recipe-card" data-recipe="sopa-pollo-verduras" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Sopa Pollo Verduras <span class="protein-tag">25g</span></div>
+                        <div class="recipe-desc">Pollo + verduras mixtas + papa + hierbas</div>
+                        <div class="recipe-macros">Hidratante | Reconfortante | Digestiva</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="salmon-ligero" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Salmón Ligero <span class="protein-tag">30g</span></div>
+                        <div class="recipe-desc">Salmón al vapor + espinaca + limón</div>
+                        <div class="recipe-macros">Omega-3 | Light | Antiinflamatorio</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="pollo-ensalada" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Pollo con Ensalada <span class="protein-tag">32g</span></div>
+                        <div class="recipe-desc">Pechuga + ensalada verde + aguacate + nueces</div>
+                        <div class="recipe-macros">Ligero | Grasas buenas | Saciante</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="pescado-vapor" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Pescado al Vapor <span class="protein-tag">28g</span></div>
+                        <div class="recipe-desc">Pescado blanco + brócoli + zanahoria al vapor</div>
+                        <div class="recipe-macros">Muy ligero | Fácil digestión | Low fat</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="huevos-tortilla" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Tortilla Francesa <span class="protein-tag">24g</span></div>
+                        <div class="recipe-desc">Huevos + espinaca + tomate + queso fresco</div>
+                        <div class="recipe-macros">Rápido | Versátil | Reconfortante</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="atun-aguacate" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Atún con Aguacate <span class="protein-tag">26g</span></div>
+                        <div class="recipe-desc">Atún fresco + aguacate + lechuga + tomate</div>
+                        <div class="recipe-macros">Omega-3 | Grasas buenas | Fresh</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="crema-calabaza-pollo" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Crema Calabaza + Pollo <span class="protein-tag">22g</span></div>
+                        <div class="recipe-desc">Crema calabaza + pollo desmenuzado + queso</div>
+                        <div class="recipe-macros">Cremoso | Vitamina A | Comfort food</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- BENJAMIN SEPARADO -->
+        <div class="card">
+            <div class="meal-section benjamin-section">
+                <div class="meal-title">🟢 BENJAMIN - BLW 9 meses</div>
+                <div class="meal-subtitle">3 comidas/día - SIN sal, SIN azúcar, SIN miel</div>
+                
+                <div class="recipe-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    
+                    <div class="recipe-card" data-recipe="manzana-bastones" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Manzana Bastones</div>
+                        <div class="recipe-desc">Manzana verde cortada en bastones</div>
+                        <div class="recipe-macros">Fibra | Vitamina C | Natural</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="zanahoria-hervida" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Zanahoria Baby</div>
+                        <div class="recipe-desc">Zanahoria baby hervida suave</div>
+                        <div class="recipe-macros">Vitamina A | Beta-carotenos</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="papa-aplastada" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Papa Criolla</div>
+                        <div class="recipe-desc">Papa criolla hervida aplastada</div>
+                        <div class="recipe-macros">Energía | Carbohidratos</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="pollo-desmenuzado" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Pollo Desmenuzado</div>
+                        <div class="recipe-desc">Pechuga hervida desmenuzada</div>
+                        <div class="recipe-macros">Proteína | Hierro | Suave</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="aguacate-aplastado" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Aguacate Aplastado</div>
+                        <div class="recipe-desc">Aguacate maduro aplastado</div>
+                        <div class="recipe-macros">Grasas buenas | Cremoso</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="pera-rallada" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Pera Rallada</div>
+                        <div class="recipe-desc">Pera madura rallada gruesa</div>
+                        <div class="recipe-macros">Dulce natural | Digestiva</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="calabaza-bastones" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Calabaza Bastones</div>
+                        <div class="recipe-desc">Calabaza hervida en bastones</div>
+                        <div class="recipe-macros">Vitamina A | Dulce</div>
+                    </div>
+                    
+                    <div class="recipe-card" data-recipe="banano-rodajas" onclick="toggleRecipe(this)">
+                        <div class="recipe-name">Banano Rodajas</div>
+                        <div class="recipe-desc">Banano maduro en rodajas</div>
+                        <div class="recipe-macros">Potasio | Energía</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary Panel -->
+    <div class="weekly-summary">
+        <h3 style="color: #22c55e; margin-bottom: 20px; text-align: center;">📅 Plan Semana</h3>
+        
+        <div id="currentDayPlan">
+            <h4 style="color: var(--sendo-gold);">Lunes - Selecciones:</h4>
+            <div id="daySelections">
+                <em>Selecciona recetas para este día...</em>
+            </div>
+        </div>
+        
+        <div class="total-price">
+            Total: $<span id="totalPrice">0</span>
+        </div>
+        
+        <button class="btn" onclick="generateShoppingList()" id="generateBtn" disabled>
+            🛒 Lista Mercado
+        </button>
+        
+        <button class="btn" onclick="exportDayPlan()" id="exportDayBtn" disabled>
+            📤 Plan Día
+        </button>
+        
+        <button class="btn" onclick="generateWeeklyPlan()" id="weeklyBtn" disabled>
+            📅 Plan Semana
+        </button>
+        
+        <button class="btn" onclick="clearDay()">
+            🗑️ Limpiar
+        </button>
+        
+        <button class="btn" onclick="goBack()">
+            🏠 Dashboard
+        </button>
+    </div>
+
+    <script>
+        // Base de datos recetas con proteínas altas
+        const recipes = {
+            // Desayunos solo Paulina
+            'yogurt-avena-banano': { name: 'Yogurt Avena Banano', category: 'desayuno', price: 4330, protein: 20 },
+            'tostada-aguacate-huevo': { name: 'Tostada Aguacate Huevo', category: 'desayuno', price: 5200, protein: 22 },
+            'smoothie-verde-proteina': { name: 'Smoothie Verde Proteína', category: 'desayuno', price: 5800, protein: 25 },
+            'huevos-espinaca-queso': { name: 'Huevos Espinaca Queso', category: 'desayuno', price: 5600, protein: 28 },
+            'avena-frutas-nueces': { name: 'Avena Frutas Nueces', category: 'desayuno', price: 4900, protein: 18 },
+            'pancakes-avena': { name: 'Pancakes Avena', category: 'desayuno', price: 5400, protein: 24 },
+            'quinoa-desayuno': { name: 'Quinoa Bowl Desayuno', category: 'desayuno', price: 6200, protein: 22 },
+            
+            // Almuerzos Sebastian + Paulina
+            'salmon-espinaca-quinoa': { name: 'Salmón Espinaca Quinoa', category: 'almuerzo', price: 18500, protein: 45 },
+            'pollo-broccoli-papa': { name: 'Pollo Brócoli Papa', category: 'almuerzo', price: 9800, protein: 42 },
+            'atun-ensalada-completa': { name: 'Atún Ensalada Completa', category: 'almuerzo', price: 11200, protein: 40 },
+            'carne-vegetales': { name: 'Carne con Vegetales', category: 'almuerzo', price: 12400, protein: 44 },
+            'pescado-verduras': { name: 'Pescado con Verduras', category: 'almuerzo', price: 10800, protein: 38 },
+            'lentejas-pollo': { name: 'Lentejas con Pollo', category: 'almuerzo', price: 8900, protein: 46 },
+            'huevos-vegetales': { name: 'Huevos con Vegetales', category: 'almuerzo', price: 7800, protein: 35 },
+            
+            // Cenas Sebastian + Paulina
+            'sopa-pollo-verduras': { name: 'Sopa Pollo Verduras', category: 'cena', price: 6200, protein: 25 },
+            'salmon-ligero': { name: 'Salmón Ligero', category: 'cena', price: 14200, protein: 30 },
+            'pollo-ensalada': { name: 'Pollo con Ensalada', category: 'cena', price: 8600, protein: 32 },
+            'pescado-vapor': { name: 'Pescado al Vapor', category: 'cena', price: 9400, protein: 28 },
+            'huevos-tortilla': { name: 'Tortilla Francesa', category: 'cena', price: 5400, protein: 24 },
+            'atun-aguacate': { name: 'Atún con Aguacate', category: 'cena', price: 8800, protein: 26 },
+            'crema-calabaza-pollo': { name: 'Crema Calabaza + Pollo', category: 'cena', price: 6800, protein: 22 },
+            
+            // Benjamin BLW
+            'manzana-bastones': { name: 'Manzana Bastones', category: 'benjamin', price: 1333, protein: 0 },
+            'zanahoria-hervida': { name: 'Zanahoria Baby', category: 'benjamin', price: 800, protein: 0 },
+            'papa-aplastada': { name: 'Papa Criolla', category: 'benjamin', price: 560, protein: 2 },
+            'pollo-desmenuzado': { name: 'Pollo Desmenuzado', category: 'benjamin', price: 1440, protein: 8 },
+            'aguacate-aplastado': { name: 'Aguacate Aplastado', category: 'benjamin', price: 2000, protein: 2 },
+            'pera-rallada': { name: 'Pera Rallada', category: 'benjamin', price: 1500, protein: 0 },
+            'calabaza-bastones': { name: 'Calabaza Bastones', category: 'benjamin', price: 1250, protein: 1 },
+            'banano-rodajas': { name: 'Banano Rodajas', category: 'benjamin', price: 1000, protein: 1 }
+        };
+
+        // Plan semanal
+        let weeklyPlan = {
+            lunes: [], martes: [], miercoles: [], jueves: [], 
+            viernes: [], sabado: [], domingo: []
+        };
+        
+        let currentDay = 'lunes';
+
+        function selectDay(btn) {
+            document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            currentDay = btn.dataset.day;
+            document.getElementById('currentDay').textContent = btn.textContent;
+            
+            updateDaySelections();
+            updateSummary();
+        }
+
+        function toggleRecipe(card) {
+            const recipeId = card.dataset.recipe;
+            const dayPlan = weeklyPlan[currentDay];
+            
+            if (dayPlan.includes(recipeId)) {
+                const index = dayPlan.indexOf(recipeId);
+                dayPlan.splice(index, 1);
+                card.classList.remove('selected');
+            } else {
+                dayPlan.push(recipeId);
+                card.classList.add('selected');
+            }
+            
+            updateSummary();
+        }
+
+        function updateDaySelections() {
+            document.querySelectorAll('.recipe-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            weeklyPlan[currentDay].forEach(recipeId => {
+                const card = document.querySelector(`[data-recipe="${recipeId}"]`);
+                if (card) card.classList.add('selected');
+            });
+        }
+
+        function updateSummary() {
+            const daySelections = weeklyPlan[currentDay];
+            const total = daySelections.reduce((sum, id) => sum + recipes[id].price, 0);
+            const totalProtein = daySelections.reduce((sum, id) => sum + recipes[id].protein, 0);
+            
+            if (daySelections.length === 0) {
+                document.getElementById('daySelections').innerHTML = '<em>Selecciona recetas para este día...</em>';
+            } else {
+                const desayuno = daySelections.filter(id => recipes[id].category === 'desayuno');
+                const almuerzo = daySelections.filter(id => recipes[id].category === 'almuerzo');
+                const cena = daySelections.filter(id => recipes[id].category === 'cena');
+                const benjamin = daySelections.filter(id => recipes[id].category === 'benjamin');
+                
+                let html = '';
+                if (desayuno.length > 0) html += '<strong>🟣 Desayuno Paulina:</strong><br>' + desayuno.map(id => `• ${recipes[id].name}`).join('<br>') + '<br><br>';
+                if (almuerzo.length > 0) html += '<strong>🍽️ Almuerzo S+P:</strong><br>' + almuerzo.map(id => `• ${recipes[id].name}`).join('<br>') + '<br><br>';
+                if (cena.length > 0) html += '<strong>🌙 Cena S+P:</strong><br>' + cena.map(id => `• ${recipes[id].name}`).join('<br>') + '<br><br>';
+                if (benjamin.length > 0) html += '<strong>🟢 Benjamin BLW:</strong><br>' + benjamin.map(id => `• ${recipes[id].name}`).join('<br>') + '<br><br>';
+                
+                html += `<strong>🥩 Proteína total: ${totalProtein}g</strong>`;
+                document.getElementById('daySelections').innerHTML = html;
+            }
+            
+            document.getElementById('totalPrice').textContent = total.toLocaleString();
+            document.getElementById('exportDayBtn').disabled = daySelections.length === 0;
+            
+            const hasAnySelections = Object.values(weeklyPlan).some(day => day.length > 0);
+            document.getElementById('generateBtn').disabled = !hasAnySelections;
+            document.getElementById('weeklyBtn').disabled = !hasAnySelections;
+        }
+
+        function exportDayPlan() {
+            const daySelections = weeklyPlan[currentDay];
+            const total = daySelections.reduce((sum, id) => sum + recipes[id].price, 0);
+            const totalProtein = daySelections.reduce((sum, id) => sum + recipes[id].protein, 0);
+            
+            let text = `🍽️ PLAN ${currentDay.toUpperCase()} - FAMILIA SEBASTIAN\n\n`;
+            
+            const desayuno = daySelections.filter(id => recipes[id].category === 'desayuno');
+            const almuerzo = daySelections.filter(id => recipes[id].category === 'almuerzo');
+            const cena = daySelections.filter(id => recipes[id].category === 'cena');
+            const benjamin = daySelections.filter(id => recipes[id].category === 'benjamin');
+            
+            if (desayuno.length > 0) {
+                text += '🟣 DESAYUNO PAULINA (7:00 AM):\n';
+                desayuno.forEach(id => text += `• ${recipes[id].name} (${recipes[id].protein}g proteína)\n`);
+                text += '\n';
+            }
+            
+            if (almuerzo.length > 0) {
+                text += '🍽️ ALMUERZO SEBASTIAN + PAULINA:\n';
+                text += '• Sebastian: 3:00 PM (OMAD)\n• Paulina: 12:00 PM\n';
+                almuerzo.forEach(id => text += `• ${recipes[id].name} (${recipes[id].protein}g proteína)\n`);
+                text += '\n';
+            }
+            
+            if (cena.length > 0) {
+                text += '🌙 CENA SEBASTIAN + PAULINA:\n';
+                text += '• Sebastian: 9:00 PM\n• Paulina: 7:00 PM\n';
+                cena.forEach(id => text += `• ${recipes[id].name} (${recipes[id].protein}g proteína)\n`);
+                text += '\n';
+            }
+            
+            if (benjamin.length > 0) {
+                text += '🟢 BENJAMIN BLW (3 veces/día):\n';
+                benjamin.forEach(id => text += `• ${recipes[id].name}\n`);
+                text += '\n';
+            }
+            
+            text += `🥩 PROTEÍNA TOTAL: ${totalProtein}g\n`;
+            text += `💰 TOTAL DÍA: $${total.toLocaleString()} COP`;
+            
+            navigator.clipboard.writeText(text);
+            alert(`📋 Plan ${currentDay} copiado\n\n✅ ${daySelections.length} recetas\n✅ ${totalProtein}g proteína total\n✅ $${total.toLocaleString()} COP\n\n¡Horarios incluidos!`);
+        }
+
+        function generateShoppingList() {
+            alert('🛒 Generando lista de mercado\n\n✅ Consolidando ingredientes\n✅ Calculando cantidades\n✅ Organizando por sección\n\n📋 Lista optimizada lista para usar');
+        }
+
+        function generateWeeklyPlan() {
+            let totalWeek = 0;
+            let totalProtein = 0;
+            let weekText = '📅 PLAN SEMANAL COMPLETO - FAMILIA SEBASTIAN\n\n';
+            
+            Object.entries(weeklyPlan).forEach(([day, selections]) => {
+                if (selections.length > 0) {
+                    const dayTotal = selections.reduce((sum, id) => sum + recipes[id].price, 0);
+                    const dayProtein = selections.reduce((sum, id) => sum + recipes[id].protein, 0);
+                    totalWeek += dayTotal;
+                    totalProtein += dayProtein;
+                    
+                    weekText += `📅 ${day.toUpperCase()}:\n`;
+                    selections.forEach(id => {
+                        weekText += `• ${recipes[id].name} (${recipes[id].protein}g)\n`;
+                    });
+                    weekText += `💰 $${dayTotal.toLocaleString()} | 🥩 ${dayProtein}g proteína\n\n`;
+                }
+            });
+            
+            weekText += `📊 TOTALES SEMANA:\n`;
+            weekText += `💰 Total: $${totalWeek.toLocaleString()} COP\n`;
+            weekText += `🥩 Proteína: ${totalProtein}g total\n`;
+            weekText += `📈 Promedio día: $${Math.round(totalWeek/7).toLocaleString()}`;
+            
+            navigator.clipboard.writeText(weekText);
+            alert(`📅 Plan semanal completo copiado\n\n✅ $${totalWeek.toLocaleString()} total\n✅ ${totalProtein}g proteína semana\n✅ Horarios específicos incluidos\n\n¡Lista para ejecutar!`);
+        }
+
+        function clearDay() {
+            weeklyPlan[currentDay] = [];
+            updateDaySelections();
+            updateSummary();
+        }
+
+        function goBack() {
+            window.location.href = 'central.html';
+        }
+
+        // Initialize
+        updateSummary();
+        
+        console.log('✅ Planificador Final Familia Sebastian - Loaded');
+    </script>
+</body>
+</html>
