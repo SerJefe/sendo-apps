@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>{{titulo}} — Procedimiento Condugas S.A.</title>
+<style>
+:root {
+  --condugas-primary: #292D63; --condugas-secondary: #1D70B7; --condugas-accent: #F8B133;
+  --condugas-yellow: #FFCD04; --condugas-bg: #B8D4EB; --condugas-border: #91B0CB;
+  --condugas-dark: #0A2240; --condugas-text: #333333;
+}
+body { font-family: 'Inter', system-ui, sans-serif; background: #fafafa; color: var(--condugas-text); }
+.header { background: linear-gradient(135deg, var(--condugas-primary), var(--condugas-secondary)); 
+          color: white; padding: 24px; text-align: center; }
+.header h1 { font-size: 24px; margin-bottom: 8px; }
+.header .subtitle { opacity: 0.9; font-size: 14px; }
+.container { max-width: 1000px; margin: 0 auto; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.content { padding: 32px; }
+.step { background: var(--condugas-bg); border-left: 4px solid var(--condugas-accent); 
+        padding: 16px; margin: 16px 0; border-radius: 0 8px 8px 0; }
+.step h3 { color: var(--condugas-primary); margin-bottom: 8px; }
+.field { background: #f8f9fa; border: 1px solid var(--condugas-border); 
+         padding: 8px 12px; margin: 4px 0; border-radius: 4px; font-family: monospace; }
+.warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 12px 0; }
+.success { background: #d4edda; border-left: 4px solid #28a745; padding: 12px; margin: 12px 0; }
+.error { background: #f8d7da; border-left: 4px solid #dc3545; padding: 12px; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+th { background: var(--condugas-primary); color: white; padding: 12px; text-align: left; }
+td { padding: 10px 12px; border-bottom: 1px solid #dee2e6; }
+tr:hover td { background: var(--condugas-bg); }
+.btn { background: var(--condugas-accent); color: white; padding: 8px 16px; 
+       border: none; border-radius: 4px; cursor: pointer; }
+.btn:hover { background: #e6a429; }
+.code { background: #2d3748; color: #e2e8f0; padding: 16px; border-radius: 8px; 
+        font-family: 'Courier New', monospace; margin: 16px 0; }
+</style></head>
+<body>
+<div class="container">
+<div class="header">
+<h1>{{titulo}}</h1>
+<div class="subtitle">Procedimiento Operativo Estándar — Condugas S.A. BIC</div>
+</div>
+<div class="content">{{contenido}}</div>
+</div></body></html>

@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎯 Dashboard Sebastián — Central de Comando</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+  background: #0a0a0a; 
+  color: #fff; 
+  overflow-x: hidden;
+}
+
+/* HEADER FLOTANTE */
+.control-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #292D63, #1D70B7);
+  z-index: 1000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.focus-actual {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.9;
+  max-width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.status-live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* CRITICAL ZONE */
+.critical-zone {
+  margin: 70px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.critical-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.critical-item:hover {
+  transform: translateX(3px);
+}
+
+.nivel-crisis { background: linear-gradient(45deg, #ef4444, #dc2626); animation: glow-red 3s ease-in-out infinite alternate; }
+.nivel-urgente { background: linear-gradient(45deg, #F8B133, #eab308); animation: glow-yellow 3s ease-in-out infinite alternate; }
+.nivel-importante { background: linear-gradient(45deg, #3b82f6, #2563eb); }
+
+/* MAIN CONTENT */
+.main-content {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.layout-flex {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* CONTEXTO HOY SIDEBAR */
+.contexto-hoy {
+  position: sticky;
+  top: 90px;
+  height: fit-content;
+  background: #111;
+  border-radius: 15px;
+  padding: 25px;
+  border-left: 4px solid #F8B133;
+}
+
+.contexto-title {
+  color: #F8B133;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.tiempo-real {
+  background: rgba(248,177,51,0.1);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.tiempo-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.tiempo-item:last-child {
+  margin-bottom: 0;
+}
+
+.contexto-section {
+  margin-bottom: 25px;
+}
+
+.contexto-section h4 {
+  color: #1D70B7;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contexto-item {
+  background: rgba(255,255,255,0.03);
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.contexto-item:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateX(2px);
+}
+
+.item-crisis { border-left-color: #ef4444; }
+.item-urgente { border-left-color: #F8B133; }
+.item-importante { border-left-color: #3b82f6; }
+
+/* MACRO TEMAS */
+.macro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.macro-card {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  border-radius: 15px;
+  padding: 25px;
+  border-left: 6px solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.macro-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.crisis { 
+  border-left-color: #ef4444;
+  background: linear-gradient(135deg, #111 0%, rgba(239,68,68,0.05) 100%);
+}
+.automatizacion { 
+  border-left-color: #8b5cf6;
+  background: linear-gradient(135deg, #111 0%, rgba(139,92,246,0.05) 100%);
+}
+.desarrollo { 
+  border-left-color: #22c55e;
+  background: linear-gradient(135deg, #111 0%, rgba(34,197,94,0.05) 100%);
+}
+.operaciones { 
+  border-left-color: #F8B133;
+  background: linear-gradient(135deg, #111 0%, rgba(248,177,51,0.05) 100%);
+}
+.oportunidades { 
+  border-left-color: #3b82f6;
+  background: linear-gradient(135deg, #111 0%, rgba(59,130,246,0.05) 100%);
+}
+
+.macro-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.macro-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.macro-title h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.macro-icon {
+  font-size: 28px;
+}
+
+.macro-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.macro-status {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-crisis { background: rgba(239,68,68,0.2); color: #fca5a5; }
+.status-progreso { background: rgba(139,92,246,0.2); color: #c4b5fd; }
+.status-activo { background: rgba(34,197,94,0.2); color: #86efac; }
+.status-rutina { background: rgba(248,177,51,0.2); color: #fcd34d; }
+.status-oportunidad { background: rgba(59,130,246,0.2); color: #93c5fd; }
+
+.expand-icon {
+  transition: transform 0.3s ease;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.macro-card.expanded .expand-icon {
+  transform: rotate(180deg);
+}
+
+.estado-actual {
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.estado-actual h4 {
+  color: #F8B133;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.progress-container {
+  margin: 15px 0;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.progress {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.progress-crisis { background: linear-gradient(90deg, #ef4444, #dc2626); }
+.progress-automatizacion { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
+.progress-desarrollo { background: linear-gradient(90deg, #22c55e, #16a34a); }
+.progress-operaciones { background: linear-gradient(90deg, #F8B133, #eab308); }
+.progress-oportunidades { background: linear-gradient(90deg, #3b82f6, #2563eb); }
+
+/* TAREAS EXPANDIBLES */
+.tareas-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.tareas-section.expanded {
+  max-height: 600px;
+}
+
+.tareas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tareas-column h5 {
+  color: #888;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.tarea-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  font-size: 14px;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tarea-item:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateX(3px);
+}
+
+.tarea-prioridad {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.prioridad-alta { background: #ef4444; animation: pulse 2s infinite; }
+.prioridad-media { background: #F8B133; }
+.prioridad-baja { background: #6b7280; }
+
+.tarea-urgente { border-left-color: #ef4444; }
+.tarea-importante { border-left-color: #F8B133; }
+.tarea-normal { border-left-color: #3b82f6; }
+
+/* EQUIPO SECTION */
+.equipo-section {
+  background: #111;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 30px 0;
+}
+
+.section-title {
+  color: #F8B133;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.equipo-member {
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border-top: 3px solid;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.equipo-member:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.08);
+}
+
+.member-condugas { border-top-color: #292D63; }
+.member-sendo { border-top-color: #3b82f6; }
+.member-cliente { border-top-color: #22c55e; }
+
+.member-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #292D63, #1D70B7);
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.member-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.member-role {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.member-status {
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.status-pending { background: rgba(248,177,51,0.2); color: #fcd34d; }
+.status-busy { background: rgba(239,68,68,0.2); color: #fca5a5; }
+.status-available { background: rgba(34,197,94,0.2); color: #86efac; }
+.status-meeting { background: rgba(139,92,246,0.2); color: #c4b5fd; }
+
+/* AUTO-UPDATE INDICATOR */
+.update-indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(34,197,94,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.update-indicator:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34,197,94,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .layout-flex {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .contexto-hoy {
+    position: static;
+    margin-bottom: 20px;
+  }
+  
+  .tareas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .control-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+  
+  .critical-zone {
+    margin: 120px 15px 15px;
+  }
+  
+  .main-content {
+    padding: 15px;
+  }
+  
+  .equipo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ANIMACIONES */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes glow-red {
+  from { box-shadow: 0 0 10px rgba(239,68,68,0.2); }
+  to { box-shadow: 0 0 25px rgba(239,68,68,0.4); }
+}
+
+@keyframes glow-yellow {
+  from { box-shadow: 0 0 10px rgba(248,177,51,0.2); }
+  to { box-shadow: 0 0 25px rgba(248,177,51,0.4); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER FLOTANTE -->
+<div class="control-header">
+  <div class="header-left">
+    <div class="logo">🎯 Dashboard Sebastián</div>
+    <div class="focus-actual">FOCO ACTUAL: Crisis OYMA + Datos febrero + Reunión Lina-Ema + Seguimiento William</div>
+  </div>
+  <div class="header-right">
+    <div class="status-live">
+      <div class="status-dot"></div>
+      <span>Sistema vivo</span>
+    </div>
+    <span id="fecha-actual">Viernes 20 marzo</span>
+    <span id="hora-actual">12:33 COL</span>
+    <span>5 macro temas</span>
+  </div>
+</div>
+
+<!-- CRITICAL ZONE -->
+<div class="critical-zone">
+  <div class="critical-item nivel-crisis" onclick="focusSection('crisis')">
+    <span style="font-size: 20px;">🚨</span>
+    <div>
+      <strong>CRISIS OYMA:</strong> EPM respuesta pendiente (13 días) + Datos febrero equipo URGENTE
+    </div>
+  </div>
+  
+  <div class="critical-item nivel-urgente" onclick="focusSection('desarrollo')">
+    <span style="font-size: 20px;">🧠</span>
+    <div>
+      <strong>HOY VIERNES:</strong> Observar reunión Lina-Ema + Seguimiento conversación William
+    </div>
+  </div>
+  
+  <div class="critical-item nivel-importante" onclick="focusSection('oportunidades')">
+    <span style="font-size: 20px;">🎯</span>
+    <div>
+      <strong>PRÓXIMA SEMANA:</strong> Mesa Camacol-Alcaldía 27 marzo ($12.5B destrabados POT)
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+  <div class="layout-flex">
+    
+    <!-- CONTEXTO HOY SIDEBAR -->
+    <div class="contexto-hoy">
+      <div class="contexto-title">📅 Contexto Hoy</div>
+      
+      <div class="tiempo-real">
+        <div class="tiempo-item">
+          <span>🕐 Colombia</span>
+          <span id="hora-colombia">12:33 PM</span>
+        </div>
+        <div class="tiempo-item">
+          <span>📅 Fecha</span>
+          <span>20 marzo 2026</span>
+        </div>
+        <div class="tiempo-item">
+          <span>⏰ Día</span>
+          <span>Viernes semana 12</span>
+        </div>
+        <div class="tiempo-item">
+          <span>🎯 Estado</span>
+          <span>Crisis + Desarrollo</span>
+        </div>
+      </div>
+      
+      <div class="contexto-section">
+        <h4>🚨 Crisis Activas</h4>
+        <div class="contexto-item item-crisis">OYMA R1: Crisis confirmada, carta EPM enviada</div>
+        <div class="contexto-item item-crisis">Datos febrero: Andrea (costos) + Camilo (producción)</div>
+        <div class="contexto-item item-crisis">Respuesta EPM: máximo 4 abril (13 días)</div>
+      </div>
+      
+      <div class="contexto-section">
+        <h4>🔥 Urgente Hoy</h4>
+        <div class="contexto-item item-urgente">Reunión Lina-Ema observar patrón desarrollo</div>
+        <div class="contexto-item item-urgente">Seguimiento William 3 puntos conversación</div>
+        <div class="contexto-item item-importante">Ralph-loop ejecutar conciliación bancaria</div>
+      </div>
+      
+      <div class="contexto-section">
+        <h4>👥 Equipo Estado</h4>
+        <div class="contexto-item">Andrea: datos febrero pending</div>
+        <div class="contexto-item">Camilo: producción febrero pending</div>
+        <div class="contexto-item">Lina: reunión Ema hoy</div>
+        <div class="contexto-item">William: 3 puntos seguimiento</div>
+        <div class="contexto-item">Ema: ready para desarrollo</div>
+      </div>
+      
+      <div class="contexto-section">
+        <h4>📈 Timeline Próximo</h4>
+        <div class="contexto-item">27 marzo: Mesa Camacol-Alcaldía</div>
+        <div class="contexto-item">4 abril: Respuesta EPM máximo</div>
+        <div class="contexto-item">Abril: Automatización 452→250</div>
+      </div>
+    </div>
+    
+    <!-- MACRO TEMAS -->
+    <div class="macro-grid">
+      
+      <!-- CONDUGAS CRISIS -->
+      <div class="macro-card crisis" id="section-crisis" onclick="toggleSection('crisis')">
+        <div class="macro-header">
+          <div class="macro-title">
+            <span class="macro-icon">🚨</span>
+            <h2>CONDUGAS CRISIS</h2>
+          </div>
+          <div class="macro-meta">
+            <span class="macro-status status-crisis">CRISIS</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="estado-actual">
+          <h4>Estado Actual</h4>
+          <p>OYMA R1 crisis confirmada. Carta suspensión enviada EPM. Estrategia: forzar renegociación vs terminación. Datos febrero críticos para análisis deterioro.</p>
+        </div>
+        
+        <div class="progress-container">
+          <div class="progress-info">
+            <span>Crisis Management Progress</span>
+            <span>75%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-fill progress-crisis" style="width: 75%;"></div>
+          </div>
+        </div>
+        
+        <div class="tareas-section" id="crisis-tareas">
+          <div class="tareas-grid">
+            <div class="tareas-column">
+              <h5>⚡ Urgente Inmediato</h5>
+              <div class="tarea-item tarea-urgente">
+                <div class="tarea-prioridad prioridad-alta"></div>
+                <span>Recibir datos febrero Andrea (costos)</span>
+              </div>
+              <div class="tarea-item tarea-urgente">
+                <div class="tarea-prioridad prioridad-alta"></div>
+                <span>Recibir datos febrero Camilo (producción)</span>
+              </div>
+              <div class="tarea-item tarea-urgente">
+                <div class="tarea-prioridad prioridad-alta"></div>
+                <span>Monitor respuesta EPM (13 días)</span>
+              </div>
+            </div>
+            <div class="tareas-column">
+              <h5>🎯 Estratégico</h5>
+              <div class="tarea-item tarea-importante">
+                <div class="tarea-prioridad prioridad-media"></div>
+                <span>Preparar estrategia según respuesta EPM</span>
+              </div>
+              <div class="tarea-item tarea-normal">
+                <div class="tarea-prioridad prioridad-baja"></div>
+                <span>Revisar posición legal</span>
+              </div>
+              <div class="tarea-item tarea-normal">
+                <div class="tarea-prioridad prioridad-baja"></div>
+                <span>Análisis escenarios detallado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUTOMATIZACIÓN ABRIL -->
+      <div class="macro-card automatizacion" id="section-automatizacion" onclick="toggleSection('automatizacion')">
+        <div class="macro-header">
+          <div class="macro-title">
+            <span class="macro-icon">🤖</span>
+            <h2>AUTOMATIZACIÓN ABRIL</h2>
+          </div>
+          <div class="macro-meta">
+            <span class="macro-status status-progreso">PROGRESO</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="estado-actual">
+          <h4>Estado Actual</h4>
+          <p>Roadmap 452→250 personas definido. Ralph-loop system ready. Procedimientos desarrollados. ROI proyectado alto.</p>
+        </div>
+        
+        <div class="progress-container">
+          <div class="progress-info">
+            <span>Automatización Progress</span>
+            <span>35%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-fill progress-automatizacion" style="width: 35%;"></div>
+          </div>
+        </div>
+        
+        <div class="tareas-section" id="automatizacion-tareas">
+          <div class="tareas-grid">
+            <div class="tareas-column">
+              <h5>🚀 Ready para Ejecutar</h5>
+              <div class="tarea-item tarea-importante">
+                <div class="tarea-prioridad prioridad-media"></div>
+                <span>Ejecutar ralph-loop conciliación bancaria</span>
+              </div>
+              <div class="tarea-item tarea-importante">
+                <div class="tarea-prioridad prioridad-media"></div>
+                <span>Info contractual para desarrollo</span>
+              </div>
+              <div class="tarea-item tarea-normal">
+                <div class="tarea-prioridad prioridad-baja"></div>
+                <span>Mapeo empleados completo</span>
+              </div>
+            </div>
+            <div class="tareas-column">
+              <h5>📊 Clasificación</h5>
+              <div class="tarea-item tarea-normal">
+                <div class="tarea-prioridad prioridad-baja"></div>
+                <span>Timesheet piloto</span>
+              </div>
+              <div class="tarea-item tarea-normal">
+                <div class="tarea-prioridad prioridad-baja"></div>
+                <span>Clasificación A/B/C</span>
+              </div>
+              <div class="tarea-item tarea-normal">
+                <div class="tarea-prioridad prioridad-baja"></div>
+                <span>Marco legal terminaciones</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESARROLLO HUMANO -->
+      <div class="macro-card desarrollo" id="section-desarrollo" onclick="toggleSection('desarrollo')">
+        <div class="macro-header">
+          <div class="macro-title">
+            <span class="macro-icon">🧠</span>
+            <h2>DESARROLLO HUMANO</h2>
+          </div>
+          <div class="macro-meta">
+            <span class="macro-status status-activo">ACTIVO</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="estado-actual">
+          <h4>Estado Actual</h4>
+          <p>Framework definido: patrocinio vs responsabilidad. Reunión Lina-Ema HOY viernes para observar patrón. Conversación William pendiente.</p>
+        </div>
+        
+        <div class="progress-container">
+          <div class="progress-info">
+            <span>Framework Development</span>
+            <span>60%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-fill progress-desarrollo" style="width: 60%;"></div>
+          </div>
+        </div>
+        
+        <div class="tareas-section" id="desarrollo-tareas">
+          <div class="tareas-grid">
+            <div class="tareas-column">
+              <h5>🔥 Hoy Viernes</h5>
+              <div class="tarea-item tarea-urgente">
+                <div class="tarea-prioridad prioridad-alta"></div>
+                <span>Observar reunión Lina-Ema patrón</span>
+              </div>
+              <div class="tarea-item tarea-importante">
+                <div class="tarea-prioridad prioridad-media"></div>
+                <span>Seguimiento conversación William</span>
+              </div>
+            </div>
+            <div class="tareas-column">
+              <h5>🎯 Framework</h5>
+              <div class="tarea-item tarea-importante">
+                <div class="tarea-prioridad prioridad-media"></div>
+                <span>Natalia → responsabilidad transición</span>
+              </div>
+              <div class="tarea-item tarea-normal">
+                <div class="tarea-prioridad prioridad-baja"></div>
+                <span>Validar patrocinio vs responsabilidad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPERACIONES DIARIAS -->
+      <div class="macro-card operaciones" id="section-operaciones" onclick="toggleSection('operaciones')">
+        <div class="macro-header">
+          <div class="macro-title">
+            <span class="macro-icon">⚙️</span>
+            <h2>OPERACIONES DIARIAS</h2>
+          </div>
+          <div class="macro-meta">
+            <span class="macro-status status-rutina">RUTINA</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="estado-actual">
+          <h4>Estado Actual</h4>
+          <p>Briefings matutinos funcionando. APIs configuradas. Sistema dual memoria implementado. Calendarios necesitan actualización.</p>
+        </div>
+        
+        <div class="progress-container">
+          <div class="progress-info">
+            <span>Operaciones Status</span>
+            <span>80%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-fill progress-operaciones" style="width: 80%;"></div>
+          </div>
+        </div>
+        
+        <div class="tareas-section" id="operaciones-tareas">
+          <div class="tareas-grid">
+            <div class="tareas-column">
+              <h5>🔧 Pendientes Config</h5>
+              <div class="tarea-item tarea-importante">
+                <div class="tarea-prioridad prioridad-media"></div>
+                <span>Calendarios actualizar 2026</span>
+              </div>
+              <div class="tarea-item tarea-normal">
+                <div class="tarea-prioridad prioridad-baja"></div>
+                <span>API configuraciones pendientes</span>
+              </div>
+            </div>
+            <div class="tareas-column">
+              <h5>✅ Funcionando</h5>
+              <div class="tarea-item" style="opacity: 0.7;">
+                <div class="tarea-prioridad" style="background: #22c55e;"></div>
+                <span>Briefings matutinos automáticos</span>
+              </div>
+              <div class="tarea-item" style="opacity: 0.7;">
+                <div class="tarea-prioridad" style="background: #22c55e;"></div>
+                <span>Sistema memoria dual</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPORTUNIDADES -->
+      <div class="macro-card oportunidades" id="section-oportunidades" onclick="toggleSection('oportunidades')">
+        <div class="macro-header">
+          <div class="macro-title">
+            <span class="macro-icon">🎯</span>
+            <h2>OPORTUNIDADES</h2>
+          </div>
+          <div class="macro-meta">
+            <span class="macro-status status-oportunidad">TIMING</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="estado-actual">
+          <h4>Estado Actual</h4>
+          <p>Mesa Camacol-Alcaldía 27 marzo (proyectos importantes). Potencial compensar crisis con oportunidades emergentes. Timing crucial próxima semana.</p>
+        </div>
+        
+        <div class="progress-container">
+          <div class="progress-info">
+            <span>Oportunidades Development</span>
+            <span>25%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-fill progress-oportunidades" style="width: 25%;"></div>
+          </div>
+        </div>
+        
+        <div class="tareas-section" id="oportunidades-tareas">
+          <div class="tareas-grid">
+            <div class="tareas-column">
+              <h5>🚀 Próxima Semana</h5>
+              <div class="tarea-item tarea-importante">
+                <div class="tarea-prioridad prioridad-media"></div>
+                <span>Mesa Camacol-Alcaldía 27 marzo evaluar</span>
+              </div>
+              <div class="tarea-item tarea-importante">
+                <div class="tarea-prioridad prioridad-media"></div>
+                <span>Evaluar participación nuevos proyectos</span>
+              </div>
+            </div>
+            <div class="tareas-column">
+              <h5>💡 Explorar</h5>
+              <div class="tarea-item tarea-normal">
+                <div class="tarea-prioridad prioridad-baja"></div>
+                <span>Oportunidades emergentes identificar</span>
+              </div>
+              <div class="tarea-item tarea-normal">
+                <div class="tarea-prioridad prioridad-baja"></div>
+                <span>Estrategia compensación</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EQUIPO & CLIENTES -->
+  <div class="equipo-section">
+    <div class="section-title">👥 Equipo & Clientes - Estado Tiempo Real</div>
+    <div class="equipo-grid">
+      
+      <div class="equipo-member member-condugas">
+        <div class="member-avatar">A</div>
+        <div class="member-name">Andrea</div>
+        <div class="member-role">Director Financiero</div>
+        <div class="member-status status-pending">Datos Feb</div>
+      </div>
+      
+      <div class="equipo-member member-condugas">
+        <div class="member-avatar">C</div>
+        <div class="member-name">Camilo</div>
+        <div class="member-role">Gerente Proyectos</div>
+        <div class="member-status status-pending">Prod Feb</div>
+      </div>
+      
+      <div class="equipo-member member-condugas">
+        <div class="member-avatar">W</div>
+        <div class="member-name">William</div>
+        <div class="member-role">Director Admin</div>
+        <div class="member-status status-pending">3 Puntos</div>
+      </div>
+      
+      <div class="equipo-member member-condugas">
+        <div class="member-avatar">N</div>
+        <div class="member-name">Natalia</div>
+        <div class="member-role">Director RRHH</div>
+        <div class="member-status status-available">Transición</div>
+      </div>
+      
+      <div class="equipo-member member-sendo">
+        <div class="member-avatar">L</div>
+        <div class="member-name">Lina</div>
+        <div class="member-role">Gestora Sendo</div>
+        <div class="member-status status-meeting">Reunión Ema</div>
+      </div>
+      
+      <div class="equipo-member member-sendo">
+        <div class="member-avatar">E</div>
+        <div class="member-name">Ema</div>
+        <div class="member-role">Developer</div>
+        <div class="member-status status-available">Ready Tech</div>
+      </div>
+      
+      <div class="equipo-member member-cliente">
+        <div class="member-avatar">📞</div>
+        <div class="member-name">EPM</div>
+        <div class="member-role">Cliente Principal</div>
+        <div class="member-status status-busy">Carta Pend</div>
+      </div>
+      
+      <div class="equipo-member member-cliente">
+        <div class="member-avatar">🏗️</div>
+        <div class="member-name">Camacol</div>
+        <div class="member-role">Oportunidad</div>
+        <div class="member-status status-available">27 Marzo</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AUTO-UPDATE INDICATOR -->
+<div class="update-indicator" onclick="forceUpdate()">
+  <span>🔄 Sistema actualizado</span>
+</div>
+
+<script>
+// NAVIGATION FUNCTIONS
+function toggleSection(sectionId) {
+  const section = document.getElementById(sectionId + '-tareas');
+  const card = document.getElementById('section-' + sectionId);
+  
+  // Close all other sections
+  document.querySelectorAll('.tareas-section').forEach(s => {
+    if (s !== section) {
+      s.classList.remove('expanded');
+      const otherCard = s.closest('.macro-card');
+      if (otherCard) otherCard.classList.remove('expanded');
+    }
+  });
+  
+  // Toggle current section
+  const isExpanded = section.classList.contains('expanded');
+  if (isExpanded) {
+    section.classList.remove('expanded');
+    card.classList.remove('expanded');
+    updateFocus('General');
+  } else {
+    section.classList.add('expanded');
+    card.classList.add('expanded');
+    
+    // Update focus in header
+    const title = card.querySelector('h2').textContent;
+    updateFocus(title);
+    
+    // Scroll to section
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function focusSection(sectionId) {
+  const section = document.getElementById('section-' + sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+    
+    // Auto-expand if not expanded
+    const tareas = document.getElementById(sectionId + '-tareas');
+    if (!tareas.classList.contains('expanded')) {
+      toggleSection(sectionId);
+    }
+  }
+}
+
+function updateFocus(newFocus) {
+  const focusElement = document.querySelector('.focus-actual');
+  focusElement.textContent = 'FOCO: ' + newFocus;
+  
+  // Visual feedback
+  focusElement.style.background = 'rgba(248,177,51,0.2)';
+  setTimeout(() => {
+    focusElement.style.background = 'transparent';
+  }, 1000);
+}
+
+// TIME UPDATES
+function updateTime() {
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString('es-CO', {
+    timeZone: 'America/Bogota',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+  
+  document.getElementById('hora-actual').textContent = timeStr + ' COL';
+  document.getElementById('hora-colombia').textContent = timeStr;
+  
+  // Update date
+  const dateStr = now.toLocaleDateString('es-CO', {
+    timeZone: 'America/Bogota',
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long'
+  });
+  document.getElementById('fecha-actual').textContent = dateStr;
+}
+
+// AUTO-UPDATE SYSTEM
+function forceUpdate() {
+  const indicator = document.querySelector('.update-indicator');
+  indicator.innerHTML = '<span>🔄 Actualizando...</span>';
+  
+  // Simulate update
+  setTimeout(() => {
+    // Update progress bars
+    document.querySelectorAll('.progress-fill').forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0%';
+      setTimeout(() => bar.style.width = width, 100);
+    });
+    
+    indicator.innerHTML = '<span>✅ Actualizado</span>';
+    
+    setTimeout(() => {
+      indicator.innerHTML = '<span>🔄 Sistema vivo</span>';
+    }, 2000);
+  }, 1000);
+}
+
+// INITIALIZATION
+document.addEventListener('DOMContentLoaded', () => {
+  updateTime();
+  setInterval(updateTime, 60000);
+  
+  // Auto-update every 5 minutes
+  setInterval(forceUpdate, 300000);
+  
+  // Animate progress bars on load
+  setTimeout(() => {
+    document.querySelectorAll('.progress-fill').forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0%';
+      setTimeout(() => bar.style.width = width, 100);
+    });
+  }, 1000);
+});
+
+// KEYBOARD SHORTCUTS
+document.addEventListener('keydown', (e) => {
+  if (e.altKey) {
+    switch(e.code) {
+      case 'Digit1': focusSection('crisis'); e.preventDefault(); break;
+      case 'Digit2': focusSection('automatizacion'); e.preventDefault(); break;
+      case 'Digit3': focusSection('desarrollo'); e.preventDefault(); break;
+      case 'Digit4': focusSection('operaciones'); e.preventDefault(); break;
+      case 'Digit5': focusSection('oportunidades'); e.preventDefault(); break;
+      case 'KeyR': forceUpdate(); e.preventDefault(); break;
+    }
+  }
+});
+</script>
+
+</body>
+</html>

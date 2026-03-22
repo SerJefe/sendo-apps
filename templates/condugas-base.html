@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>{{title}} — Condugas S.A.</title>
+<style>
+:root {
+  --condugas-primary: #292D63; --condugas-secondary: #1D70B7; --condugas-accent: #F8B133;
+  --condugas-yellow: #FFCD04; --condugas-bg: #B8D4EB; --condugas-border: #91B0CB;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', system-ui, sans-serif; background: linear-gradient(135deg, #0A2240, var(--condugas-primary)); color: #fff; }
+.slide { width: 100%; min-height: 100vh; padding: 48px 64px; page-break-after: always; }
+.header h1 { color: var(--condugas-accent); font-size: 36px; }
+.card { background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; border-left: 4px solid var(--condugas-secondary); }
+.negative { color: #dc3545; } .positive { color: #28a745; }
+table { width: 100%; border-collapse: collapse; }
+th { background: rgba(29,112,183,0.3); color: var(--condugas-accent); padding: 8px; }
+td { padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+</style></head><body>{{content}}</body></html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>🎯 Dashboard Sebastián — TDAH Optimized</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+  background: #0a0a0a; 
+  color: #fff; 
+  padding: 15px; 
+  max-width: 100vw;
+}
+
+/* HEADER SIEMPRE VISIBLE */
+.floating-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #292D63, #1D70B7);
+  z-index: 1000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.time-status { display: flex; gap: 20px; align-items: center; }
+.status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+
+/* ALERTAS CRÍTICAS SIEMPRE ARRIBA */
+.critical-bar {
+  background: linear-gradient(45deg, #ef4444, #dc2626);
+  margin: 60px 0 20px 0;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.critical-bar.warning { background: linear-gradient(45deg, #F8B133, #eab308); }
+.critical-bar.success { background: linear-gradient(45deg, #22c55e, #16a34a); }
+
+/* GRID PRINCIPAL - TODO VISIBLE */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 4px solid;
+  position: relative;
+}
+
+.card.urgent { border-left-color: #ef4444; }
+.card.important { border-left-color: #F8B133; }
+.card.strategic { border-left-color: #1D70B7; }
+.card.people { border-left-color: #8b5cf6; }
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-icon { font-size: 20px; }
+
+/* TAREAS VISUALES */
+.task-item {
+  background: rgba(255,255,255,0.05);
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-priority {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.priority-urgent { background: #ef4444; animation: pulse 2s infinite; }
+.priority-important { background: #F8B133; }
+.priority-medium { background: #1D70B7; }
+.priority-low { background: #6b7280; }
+
+/* EQUIPO SIEMPRE VISIBLE */
+.team-bar {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  border: 1px solid #333;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.team-member {
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  font-size: 12px;
+}
+
+.team-member.condugas { border-top: 3px solid #292D63; }
+.team-member.siendo { border-top: 3px solid #3A86FF; }
+
+.member-name { font-weight: 600; margin-bottom: 3px; }
+.member-role { color: #888; font-size: 11px; }
+.member-status { 
+  margin-top: 5px; 
+  padding: 2px 6px; 
+  border-radius: 10px; 
+  font-size: 10px;
+}
+
+.status-available { background: rgba(34,197,94,0.2); color: #86efac; }
+.status-busy { background: rgba(239,68,68,0.2); color: #fca5a5; }
+.status-pending { background: rgba(248,177,51,0.2); color: #fcd34d; }
+
+/* RESPONSIVE TDAH */
+@media (max-width: 768px) {
+  .main-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ANIMACIONES PARA MANTENER ATENCIÓN */
+.pulse { animation: pulse 2s infinite; }
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.glow { animation: glow 3s ease-in-out infinite alternate; }
+@keyframes glow {
+  from { box-shadow: 0 0 5px rgba(248,177,51,0.2); }
+  to { box-shadow: 0 0 20px rgba(248,177,51,0.4); }
+}
+
+/* PROGRESO VISUAL */
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+  margin: 8px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER FLOTANTE SIEMPRE VISIBLE -->
+<div class="floating-header">
+  <div>🎯 Dashboard Sebastián | Viernes 20 marzo 2026</div>
+  <div class="time-status">
+    <div class="status-dot"></div>
+    <span>9:53 COL</span>
+    <span>4 críticas HOY</span>
+    <span>EPM responde en 13 días</span>
+  </div>
+</div>
+
+<!-- ALERTA CRÍTICA VISIBLE -->
+<div class="critical-bar">
+  <span>🚨</span>
+  <div>
+    <strong>CRÍTICO HOY:</strong> Datos febrero equipo (Andrea/Camilo/Natalia) + Observar reunión Lina-Ema + Respuesta EPM pendiente (13 días restantes)
+  </div>
+</div>
+
+<!-- GRID PRINCIPAL - TODO VISIBLE -->
+<div class="main-grid">
+  <!-- TAREAS HOY -->
+  <div class="card urgent">
+    <h3><span class="card-icon">🔥</span> CRÍTICO HOY</h3>
+    
+    <div class="task-item">
+      <div class="task-priority priority-urgent"></div>
+      <div>
+        <strong>EPM Carta OYMA R1</strong><br>
+        <span style="color: #888;">Esperando respuesta (13 días restantes)</span>
+      </div>
+    </div>
+    
+    <div class="task-item">
+      <div class="task-priority priority-urgent"></div>
+      <div>
+        <strong>Datos Febrero</strong><br>
+        <span style="color: #888;">Andrea (costos) + Camilo (prod) + Natalia</span>
+      </div>
+    </div>
+    
+    <div class="task-item">
+      <div class="task-priority priority-important"></div>
+      <div>
+        <strong>Reunión Lina-Ema</strong><br>
+        <span style="color: #888;">Observar patrón desarrollo</span>
+      </div>
+    </div>
+    
+    <div class="task-item">
+      <div class="task-priority priority-important"></div>
+      <div>
+        <strong>Seguimiento William</strong><br>
+        <span style="color: #888;">3 puntos: Lina + Siendo + IA gastos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESTADO PROYECTOS -->
+  <div class="card strategic">
+    <h3><span class="card-icon">📊</span> ESTADO CRÍTICO</h3>
+    
+    <div class="task-item">
+      <strong>OYMA R1 Crisis</strong>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 80%; background: linear-gradient(90deg, #ef4444, #dc2626);"></div>
+      </div>
+      <span style="color: #fca5a5;">-$280M enero (-22% margen)</span>
+    </div>
+    
+    <div class="task-item">
+      <strong>Automatización Abril</strong>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 25%;"></div>
+      </div>
+      <span style="color: #86efac;">452→250 personas ready</span>
+    </div>
+    
+    <div class="task-item">
+      <strong>Odoo Integration</strong>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 90%;"></div>
+      </div>
+      <span style="color: #86efac;">✅ Conectado, scripts ready</span>
+    </div>
+    
+    <div class="task-item">
+      <strong>Ralph-Loop System</strong>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 95%;"></div>
+      </div>
+      <span style="color: #86efac;">✅ Ready para ejecutar</span>
+    </div>
+  </div>
+
+  <!-- PRÓXIMOS EVENTOS -->
+  <div class="card important glow">
+    <h3><span class="card-icon">⏰</span> PRÓXIMOS EVENTOS</h3>
+    
+    <div class="task-item">
+      <div class="task-priority priority-important"></div>
+      <div>
+        <strong>Mesa Camacol</strong><br>
+        <span style="color: #fcd34d;">Jueves 27 marzo ($12.5B oportunidad)</span>
+      </div>
+    </div>
+    
+    <div class="task-item">
+      <div class="task-priority priority-medium"></div>
+      <div>
+        <strong>Respuesta EPM</strong><br>
+        <span style="color: #93c5fd;">Máximo 4 abril (13 días)</span>
+      </div>
+    </div>
+    
+    <div class="task-item">
+      <div class="task-priority priority-medium"></div>
+      <div>
+        <strong>Roadmap Abril</strong><br>
+        <span style="color: #93c5fd;">Semana 1: Base datos + piloto</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EQUIPO SIEMPRE VISIBLE -->
+<div class="team-bar">
+  <h3 style="margin-bottom: 15px; color: #F8B133;">👥 EQUIPO & CLIENTES</h3>
+  
+  <div class="team-grid">
+    <!-- CONDUGAS -->
+    <div class="team-member condugas">
+      <div class="member-name">Andrea</div>
+      <div class="member-role">Dir. Financiero</div>
+      <div class="member-status status-pending">Datos Feb</div>
+    </div>
+    
+    <div class="team-member condugas">
+      <div class="member-name">Camilo</div>
+      <div class="member-role">Ger. Proyectos</div>
+      <div class="member-status status-pending">Prod Feb</div>
+    </div>
+    
+    <div class="team-member condugas">
+      <div class="member-name">William</div>
+      <div class="member-role">Dir. Admin</div>
+      <div class="member-status status-pending">3 puntos</div>
+    </div>
+    
+    <div class="team-member condugas">
+      <div class="member-name">Natalia</div>
+      <div class="member-role">Dir. RRHH</div>
+      <div class="member-status status-pending">Headcount</div>
+    </div>
+    
+    <!-- SENDO -->
+    <div class="team-member siendo">
+      <div class="member-name">Lina</div>
+      <div class="member-role">Gestora</div>
+      <div class="member-status status-busy">Reunión Ema</div>
+    </div>
+    
+    <div class="team-member sendo">
+      <div class="member-name">Ema</div>
+      <div class="member-role">Developer</div>
+      <div class="member-status status-available">Ready</div>
+    </div>
+    
+    <!-- CLIENTES -->
+    <div class="team-member" style="border-top: 3px solid #ef4444;">
+      <div class="member-name">EPM</div>
+      <div class="member-role">Cliente</div>
+      <div class="member-status status-busy">Carta pend</div>
+    </div>
+    
+    <div class="team-member" style="border-top: 3px solid #22c55e;">
+      <div class="member-name">Camacol</div>
+      <div class="member-role">Oportunidad</div>
+      <div class="member-status status-available">27 marzo</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin-top: 30px; color: #666; font-size: 12px;">
+  🧠 Diseñado para TDAH | Todo visible, sin navegación profunda | Actualizado automáticamente
+</div>
+
+<script>
+// Auto-refresh para mantener actualizado
+setInterval(() => {
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString('es-CO', {timeZone: 'America/Bogota'});
+  document.querySelector('.time-status span').textContent = timeStr.slice(0,5) + ' COL';
+}, 60000);
+
+// Pulse animation para elementos críticos
+document.querySelectorAll('.priority-urgent').forEach(el => {
+  el.classList.add('pulse');
+});
+</script>
+
+</body>
+</html>

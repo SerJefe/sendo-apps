@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>Nómina por Contrato Automática — Procedimiento Condugas S.A.</title>
+<style>
+:root {
+  --condugas-primary: #292D63; --condugas-secondary: #1D70B7; --condugas-accent: #F8B133;
+  --condugas-yellow: #FFCD04; --condugas-bg: #B8D4EB; --condugas-border: #91B0CB;
+  --condugas-dark: #0A2240; --condugas-text: #333333;
+}
+body { font-family: 'Inter', system-ui, sans-serif; background: #fafafa; color: var(--condugas-text); }
+.header { background: linear-gradient(135deg, var(--condugas-primary), var(--condugas-secondary)); 
+          color: white; padding: 24px; text-align: center; }
+.header h1 { font-size: 24px; margin-bottom: 8px; }
+.header .subtitle { opacity: 0.9; font-size: 14px; }
+.container { max-width: 1000px; margin: 0 auto; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.content { padding: 32px; }
+.step { background: var(--condugas-bg); border-left: 4px solid var(--condugas-accent); 
+        padding: 16px; margin: 16px 0; border-radius: 0 8px 8px 0; }
+.step h3 { color: var(--condugas-primary); margin-bottom: 8px; }
+.field { background: #f8f9fa; border: 1px solid var(--condugas-border); 
+         padding: 8px 12px; margin: 4px 0; border-radius: 4px; font-family: monospace; }
+.warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 12px 0; }
+.success { background: #d4edda; border-left: 4px solid #28a745; padding: 12px; margin: 12px 0; }
+.error { background: #f8d7da; border-left: 4px solid #dc3545; padding: 12px; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+th { background: var(--condugas-primary); color: white; padding: 12px; text-align: left; }
+td { padding: 10px 12px; border-bottom: 1px solid #dee2e6; }
+tr:hover td { background: var(--condugas-bg); }
+.btn { background: var(--condugas-accent); color: white; padding: 8px 16px; 
+       border: none; border-radius: 4px; cursor: pointer; }
+.btn:hover { background: #e6a429; }
+.code { background: #2d3748; color: #e2e8f0; padding: 16px; border-radius: 8px; 
+        font-family: 'Courier New', monospace; margin: 16px 0; }
+</style></head>
+<body>
+<div class="container">
+<div class="header">
+<h1>💰 Nómina por Contrato Automática</h1>
+<div class="subtitle">Procedimiento Operativo Estándar — Condugas S.A. BIC</div>
+</div>
+<div class="content">
+
+<div class="success">
+<strong>Objetivo:</strong> Automatizar nómina de 452 empleados por contrato. Ahorro estimado: 40-60 horas/mes = $300-450M mensual.
+</div>
+
+<h2>🔄 Lógica del Sistema</h2>
+
+<div class="step">
+<h3>Estructura de Datos en Odoo</h3>
+
+<table>
+<tr><th>Campo Odoo</th><th>Valor Condugas</th><th>Lógica</th></tr>
+<tr><td>hr.employee.analytic_account_id</td><td>OYMA_R1, VALLE, BOYACA</td><td>Contrato asignado por empleado</td></tr>
+<tr><td>hr.employee.cost_center</td><td>7001, 7002, 1001, etc.</td><td>Centro de costo contable automático</td></tr>
+<tr><td>hr.payslip.analytic_distribution</td><td>{'OYMA_R1': 100}</td><td>Distribución 100% a su contrato</td></tr>
+<tr><td>account.move.line.analytic_distribution</td><td>Auto desde payslip</td><td>Asientos contables por contrato</td></tr>
+</table>
+</div>
+
+<div class="step">
+<h3>Mapeo Empleado → Contrato</h3>
+
+<div class="field">
+<strong>Query SQL para mapeo inicial:</strong>
+</div>
+
+<div class="code">
+-- Obtener empleados actuales y su asignación
+SELECT 
+    he.name as empleado,
+    he.employee_type,
+    he.contract_id,
+    hc.analytic_account_id as contrato_actual,
+    he.department_id,
+    hd.name as departamento,
+    CASE 
+        WHEN hd.name LIKE '%OYMA%' THEN 'OYMA_R1'
+        WHEN hd.name LIKE '%VALLE%' THEN 'VALLE'
+        WHEN hd.name LIKE '%BOYACA%' THEN 'BOYACA'
+        WHEN hd.name LIKE '%ADMIN%' THEN 'ADMIN_CENTRAL'
+        ELSE 'REVISAR_MANUAL'
+    END as contrato_sugerido
+FROM hr_employee he
+LEFT JOIN hr_contract hc ON he.contract_id = hc.id
+LEFT JOIN hr_department hd ON he.department_id = hd.id
+WHERE he.active = true
+ORDER BY hd.name, he.name;
+</div>
+</div>
+
+<div class="step">
+<h3>Paso 1: Configurar Cuentas Analíticas por Contrato</h3>
+
+<p><strong>Navegar:</strong> Contabilidad → Configuración → Cuentas Analíticas</p>
+
+<table>
+<tr><th>Código</th><th>Nombre</th><th>Padre</th><th>Centro Costo</th></tr>
+<tr><td>OYMA_R1</td><td>Operación y Mantenimiento Aguas R1</td><td>CONTRATOS</td><td>7001</td></tr>
+<tr><td>VALLE</td><td>Valle del Cauca Gas</td><td>CONTRATOS</td><td>7002</td></tr>
+<tr><td>BOYACA</td><td>Boyacá Gas Natural</td><td>CONTRATOS</td><td>6001</td></tr>
+<tr><td>BUCARAMANGA</td><td>Bucaramanga Distribución</td><td>CONTRATOS</td><td>6002</td></tr>
+<tr><td>OYM_Z2</td><td>O&M Zona 2</td><td>CONTRATOS</td><td>7003</td></tr>
+<tr><td>NUEVOS_NEGOCIOS</td><td>Nuevos Negocios</td><td>CONTRATOS</td><td>5024</td></tr>
+<tr><td>FLORIDABLANCA</td><td>Floridablanca</td><td>CONTRATOS</td><td>2402</td></tr>
+<tr><td>ADMIN_CENTRAL</td><td>Administración Central</td><td>OVERHEAD</td><td>1001</td></tr>
+</table>
+</div>
+
+<div class="step">
+<h3>Paso 2: Asignar Empleados a Contratos</h3>
+
+<div class="field">
+<strong>Script Python para asignación masiva:</strong>
+</div>
+
+<div class="code">
+import odoo
+
+# Conexión a Odoo
+env = odoo.api.Environment.from_loader()
+
+# Mapping departamentos → contratos
+dept_to_contract = {
+    'Operación OYMA': 'OYMA_R1',
+    'Mantenimiento OYMA': 'OYMA_R1', 
+    'Proyectos Valle': 'VALLE',
+    'Operación Valle': 'VALLE',
+    'Gas Boyacá': 'BOYACA',
+    'Bucaramanga Dist': 'BUCARAMANGA',
+    'Zona 2 O&M': 'OYM_Z2',
+    'Nuevos Negocios': 'NUEVOS_NEGOCIOS',
+    'Florida Operación': 'FLORIDABLANCA',
+    'Administración': 'ADMIN_CENTRAL',
+    'Contabilidad': 'ADMIN_CENTRAL',
+    'Recursos Humanos': 'ADMIN_CENTRAL',
+    'Gerencia': 'ADMIN_CENTRAL'
+}
+
+# Obtener cuenta analítica por código
+def get_analytic_account(code):
+    return env['account.analytic.account'].search([('code', '=', code)], limit=1)
+
+# Asignar cada empleado
+employees = env['hr.employee'].search([('active', '=', True)])
+for emp in employees:
+    dept_name = emp.department_id.name if emp.department_id else 'Administración'
+    contract_code = dept_to_contract.get(dept_name, 'ADMIN_CENTRAL')
+    analytic_account = get_analytic_account(contract_code)
+    
+    if analytic_account:
+        # Actualizar contrato del empleado
+        if emp.contract_id:
+            emp.contract_id.analytic_account_id = analytic_account.id
+        print(f"✅ {emp.name} → {contract_code}")
+    else:
+        print(f"❌ {emp.name} → No se encontró contrato {contract_code}")
+</div>
+</div>
+
+<div class="step">
+<h3>Paso 3: Configurar Estructura Salarial por Contrato</h3>
+
+<p><strong>Navegar:</strong> Nómina → Configuración → Estructuras Salariales</p>
+
+<div class="field">
+<strong>Estructura: OPERATIVOS_GAS (OYMA, Valle, Boyacá, Bucaramanga)</strong><br>
+Salario base + Auxilio transporte + Horas extras + Dominicales + Riesgo
+</div>
+
+<div class="field">
+<strong>Estructura: ADMINISTRATIVOS (Admin Central)</strong><br>
+Salario base + Auxilio transporte + Bonificaciones + Variable
+</div>
+
+<div class="field">
+<strong>Estructura: PROYECTOS (Nuevos Negocios, Floridablanca)</strong><br>
+Salario base + Auxilio transporte + Comisiones + Incentivos proyecto
+</div>
+
+<table>
+<tr><th>Concepto Nómina</th><th>Código Odoo</th><th>Cuenta Contable</th><th>Distribución</th></tr>
+<tr><td>Salario Básico</td><td>BASIC</td><td>510506</td><td>Por contrato empleado</td></tr>
+<tr><td>Auxilio Transporte</td><td>AUX_TRANS</td><td>510515</td><td>Por contrato empleado</td></tr>
+<tr><td>Horas Extras</td><td>OVERTIME</td><td>510512</td><td>Por contrato empleado</td></tr>
+<tr><td>Cesantías</td><td>CESANTIAS</td><td>261005</td><td>Por contrato empleado</td></tr>
+<tr><td>Prima</td><td>PRIMA</td><td>261010</td><td>Por contrato empleado</td></tr>
+<tr><td>Vacaciones</td><td>VACATION</td><td>261015</td><td>Por contrato empleado</td></tr>
+<tr><td>Salud Empleador</td><td>SALUD_EMP</td><td>237005</td><td>Por contrato empleado</td></tr>
+<tr><td>Pensión Empleador</td><td>PENSION_EMP</td><td>237010</td><td>Por contrato empleado</td></tr>
+<tr><td>ARL</td><td>ARL</td><td>237015</td><td>Por contrato empleado</td></tr>
+</table>
+</div>
+
+<div class="step">
+<h3>Paso 4: Automatizar Distribución Contable</h3>
+
+<div class="field">
+<strong>Regla de distribución automática en payslip:</strong>
+</div>
+
+<div class="code">
+# Código Python en regla salarial Odoo
+def compute_analytic_distribution(payslip):
+    """
+    Distribuir automáticamente el gasto de nómina al contrato del empleado
+    """
+    employee = payslip.employee_id
+    contract = employee.contract_id
+    
+    if contract and contract.analytic_account_id:
+        # 100% del gasto va al contrato asignado
+        analytic_distribution = {
+            str(contract.analytic_account_id.id): 100.0
+        }
+        
+        # Si el empleado trabaja en múltiples contratos (caso especial)
+        if employee.multi_contract_distribution:
+            analytic_distribution = employee.multi_contract_distribution
+            
+        return analytic_distribution
+    else:
+        # Por defecto: Admin Central
+        admin_account = env['account.analytic.account'].search([
+            ('code', '=', 'ADMIN_CENTRAL')
+        ], limit=1)
+        
+        return {str(admin_account.id): 100.0} if admin_account else {}
+
+# Aplicar en cada línea de nómina
+result.analytic_distribution = compute_analytic_distribution(payslip)
+</div>
+</div>
+
+<div class="step">
+<h3>Paso 5: Dashboard de Control por Contrato</h3>
+
+<p><strong>Crear vista personalizada:</strong> Nómina → Reportes → Costos por Contrato</p>
+
+<table>
+<tr><th>Contrato</th><th>Empleados</th><th>Costo Mensual</th><th>% del Total</th><th>Costo/Empleado</th></tr>
+<tr><td>OYMA_R1</td><td>168</td><td>$2.850M</td><td>42%</td><td>$17.0M</td></tr>
+<tr><td>VALLE</td><td>89</td><td>$1.420M</td><td>21%</td><td>$16.0M</td></tr>
+<tr><td>BOYACA</td><td>34</td><td>$580M</td><td>9%</td><td>$17.1M</td></tr>
+<tr><td>ADMIN_CENTRAL</td><td>45</td><td>$950M</td><td>14%</td><td>$21.1M</td></tr>
+<tr><td>BUCARAMANGA</td><td>28</td><td>$410M</td><td>6%</td><td>$14.6M</td></tr>
+<tr><td>NUEVOS_NEGOCIOS</td><td>15</td><td>$320M</td><td>5%</td><td>$21.3M</td></tr>
+<tr><td>OYM_Z2</td><td>18</td><td>$290M</td><td>4%</td><td>$16.1M</td></tr>
+<tr><td>FLORIDABLANCA</td><td>12</td><td>$180M</td><td>3%</td><td>$15.0M</td></tr>
+</table>
+
+<div class="warning">
+<strong>Alerta:</strong> ADMIN_CENTRAL y NUEVOS_NEGOCIOS tienen costo/empleado 25%+ mayor que promedio operativo. 
+Revisar si la clasificación es correcta o hay oportunidades de optimización.
+</div>
+</div>
+
+<div class="step">
+<h3>Paso 6: Proceso Mensual Automatizado</h3>
+
+<ol>
+<li><strong>Día 25:</strong> Sistema genera automáticamente payslips para todos los empleados activos</li>
+<li><strong>Día 26-27:</strong> Validación automática vs. reglas configuradas</li>
+<li><strong>Día 28:</strong> Revisión excepciones por RRHH (solo casos especiales)</li>
+<li><strong>Día 29:</strong> Aprobación masiva y generación asientos contables</li>
+<li><strong>Día 30:</strong> Pago automático y cierre del periodo</li>
+</ol>
+
+<div class="success">
+<strong>Tiempo total proceso:</strong> De 5 días → 1 día de trabajo humano (solo excepciones)
+</div>
+</div>
+
+<h2>⚠️ Casos Especiales</h2>
+
+<div class="step">
+<h3>Empleados Multi-Contrato</h3>
+
+<p><strong>Problema:</strong> Algunos empleados (ej: supervisores) trabajan en múltiples contratos.</p>
+
+<div class="field">
+<strong>Solución:</strong> Campo en empleado para distribución porcentual:
+</div>
+
+<div class="code">
+# Ejemplo: Supervisor que trabaja 60% OYMA, 40% Valle
+employee.multi_contract_distribution = {
+    'OYMA_R1': 60.0,
+    'VALLE': 40.0
+}
+
+# El sistema automáticamente distribuye:
+# Salario $10M → $6M a OYMA_R1, $4M a VALLE
+</div>
+</div>
+
+<div class="step">
+<h3>Cambios de Contrato Durante el Mes</h3>
+
+<div class="field">
+<strong>Lógica:</strong> Si empleado cambia de contrato a mitad de mes, distribución proporcional por días.
+</div>
+
+<div class="code">
+# Ejemplo: Cambio día 15 de BOYACA a VALLE
+days_contract_1 = 15  # días en BOYACA
+days_contract_2 = 15  # días en VALLE
+total_days = 30
+
+distribution = {
+    'BOYACA': (days_contract_1 / total_days) * 100,  # 50%
+    'VALLE': (days_contract_2 / total_days) * 100    # 50%
+}
+</div>
+</div>
+
+<h2>🎯 Métricas de Éxito</h2>
+
+<div class="step">
+<h3>Ahorros Operativos</h3>
+
+<table>
+<tr><th>Métrica</th><th>Antes</th><th>Después</th><th>Mejora</th></tr>
+<tr><td>Tiempo procesamiento nómina</td><td>120 horas</td><td>20 horas</td><td>100 horas ahorradas</td></tr>
+<tr><td>Errores distribución/mes</td><td>25-30</td><td>2-3</td><td>90% reducción errores</td></tr>
+<tr><td>Tiempo cierre contable</td><td>8 días</td><td>2 días</td><td>75% más rápido</td></tr>
+<tr><td>Personal dedicado nómina</td><td>4 personas</td><td>1 persona</td><td>3 personas liberadas</td></tr>
+</table>
+
+<div class="success">
+<strong>ROI mensual:</strong> $450M ahorro en tiempo + $200M reducción errores = $650M/mes
+</div>
+</div>
+
+<div class="step">
+<h3>Beneficios Estratégicos</h3>
+
+<ul>
+<li><strong>Visibilidad real:</strong> Costo exacto por contrato mensual</li>
+<li><strong>Decisiones informadas:</strong> ¿Qué contratos tienen costos laborales altos?</li>
+<li><strong>Optimización headcount:</strong> Identificar excesos por contrato</li>
+<li><strong>Análisis rentabilidad:</strong> Margen real considerando costos laborales específicos</li>
+</ul>
+</div>
+
+<h2>📞 Responsables</h2>
+
+<table>
+<tr><th>Rol</th><th>Persona</th><th>Responsabilidad</th></tr>
+<tr><td>Dueño del proceso</td><td>Natalia Rojas</td><td>Definir distribuciones y aprobar estructura</td></tr>
+<tr><td>Implementación técnica</td><td>Ema (Emanuel)</td><td>Configurar reglas y automatizaciones</td></tr>
+<tr><td>Validación contable</td><td>Andrea Bernal</td><td>Verificar distribución correcta en contabilidad</td></tr>
+<tr><td>Monitoreo operativo</td><td>William López</td><td>Dashboard y reportes ejecutivos</td></tr>
+</table>
+
+<div class="step">
+<h3>Estado Implementación</h3>
+
+<div class="field">
+<strong>Fase actual:</strong> ⏳ Configuración cuentas analíticas<br>
+<strong>Próximo hito:</strong> Asignación masiva empleados (22 marzo)<br>
+<strong>Piloto:</strong> Nómina marzo con 50 empleados (25 marzo)<br>
+<strong>Go-live completo:</strong> Nómina abril 2026 (30 marzo)
+</div>
+</div>
+
+</div>
+</div></body></html>

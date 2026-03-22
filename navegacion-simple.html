@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>🎯 Navegación Simple Sebastián</title>
+<style>
+body { 
+  font-family: Arial, sans-serif; 
+  background: #0a0a0a; 
+  color: #fff; 
+  padding: 20px; 
+  max-width: 800px; 
+  margin: 0 auto;
+}
+.section { 
+  background: #111; 
+  border-radius: 10px; 
+  margin: 20px 0; 
+  padding: 20px; 
+  cursor: pointer;
+  border-left: 4px solid #F8B133;
+}
+.section:hover { background: #1a1a1a; }
+.section h2 { color: #F8B133; margin-bottom: 10px; }
+.details { display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #333; }
+.details.show { display: block; }
+.task { background: #1a1a1a; padding: 10px; margin: 5px 0; border-radius: 5px; }
+.urgent { border-left: 3px solid #ef4444; }
+.important { border-left: 3px solid #F8B133; }
+</style>
+</head>
+<body>
+<h1>🎯 Dashboard Sebastián</h1>
+
+<div class="section" onclick="toggle('crisis')">
+  <h2>🚨 CONDUGAS CRISIS</h2>
+  <p>OYMA R1: -$280M, carta EPM enviada, esperando respuesta</p>
+  
+  <div class="details" id="crisis">
+    <div class="task urgent">📋 Datos febrero pendientes (Andrea + Camilo)</div>
+    <div class="task urgent">⏰ Respuesta EPM máximo 4 abril (13 días)</div>
+    <div class="task important">📊 Análisis deterioro vs enero</div>
+    <div class="task important">⚖️ Preparar estrategia según respuesta EPM</div>
+  </div>
+</div>
+
+<div class="section" onclick="toggle('automatizacion')">
+  <h2>🤖 AUTOMATIZACIÓN ABRIL</h2>
+  <p>452→250 personas, ralph-loop ready, ROI $350M/año</p>
+  
+  <div class="details" id="automatizacion">
+    <div class="task important">🤖 Ejecutar ralph-loop conciliación bancaria (4h)</div>
+    <div class="task important">📄 Info contractual para Ema (Andre/Clau)</div>
+    <div class="task urgent">📊 Semana 1: Mapeo empleados + timesheet obligatorio</div>
+    <div class="task">🎯 Clasificación A/B/C con datos reales</div>
+  </div>
+</div>
+
+<div class="section" onclick="toggle('desarrollo')">
+  <h2>🧠 DESARROLLO HUMANO</h2>
+  <p>Framework Lina/Andrea, reunión Lina-Ema HOY</p>
+  
+  <div class="details" id="desarrollo">
+    <div class="task urgent">👁️ Observar reunión Lina-Ema HOY</div>
+    <div class="task important">📝 Seguimiento William (3 puntos)</div>
+    <div class="task important">👥 Natalia → responsabilidad Juan Guillermo</div>
+    <div class="task">🧠 Validar framework patrocinio vs responsabilidad</div>
+  </div>
+</div>
+
+<div class="section" onclick="toggle('oportunidades')">
+  <h2>🎯 OPORTUNIDADES</h2>
+  <p>Camacol 27 marzo ($12.5B), POT, nuevos negocios</p>
+  
+  <div class="details" id="oportunidades">
+    <div class="task important">🤝 Mesa Camacol-Alcaldía 27 marzo</div>
+    <div class="task important">✅ Confirmar si Carlos participó reuniones EPM</div>
+    <div class="task">🎯 Identificar oportunidades post-POT</div>
+  </div>
+</div>
+
+<div class="section" onclick="toggle('operaciones')">
+  <h2>⚙️ OPERACIONES</h2>
+  <p>Briefings, APIs, calendarios, rutinas</p>
+  
+  <div class="details" id="operaciones">
+    <div class="task important">📅 Calendarios Outlook 2026 (actuales solo 2025)</div>
+    <div class="task">💰 Gastos IA formalizar Condugas</div>
+    <div class="task">🏃 Configurar Whoop API</div>
+  </div>
+</div>
+
+<script>
+function toggle(id) {
+  const details = document.getElementById(id);
+  const isShown = details.classList.contains('show');
+  
+  // Cerrar todos
+  document.querySelectorAll('.details').forEach(d => d.classList.remove('show'));
+  
+  // Abrir el clickeado si estaba cerrado
+  if (!isShown) {
+    details.classList.add('show');
+  }
+}
+</script>
+
+</body>
+</html>
