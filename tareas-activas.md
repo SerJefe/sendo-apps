@@ -1,6 +1,6 @@
 # Tareas Activas — Sebastián
 
-> Última actualización: 2026-03-21 22:30 UTC | 17:30 COL (Auto-updated from dashboard cron)
+> Última actualización: 2026-03-22 01:15 UTC | 20:15 COL-1 (Auto-updated from dashboard cron)
 
 ## 🔴 Alta prioridad
 
@@ -85,6 +85,10 @@
 
 ## ✅ Completadas recientemente
 
+### 22 marzo:
+- ⏳ **Dashboard público auto-update 01:15** - cron ejecutando: datos Limitless, métricas team, actualización público
+- 📊 **Transcripciones recientes Limitless** - conversaciones industria musical, reflexiones amistad, proyecto inmobiliario, tango y jazz
+
 ### 21 marzo:
 - ✅ **Dashboard público actualizado automáticamente** - nuevo sistema cron operando cada 4 horas
 - ✅ **Dashboard cron auto-update 21 marzo 23:30** - completada actualización programada: datos Limitless 20 marzo (10 logs), métricas equipo Alletagia, estado OYMA R1, git push público exitoso
@@ -107,16 +111,16 @@
 ## 📊 Dashboard Métricas
 
 ### Estado crítico OYMA R1:
-- **Enero 2026:** -$280M UAI (-22,2% margen)
-- **Febrero 2026:** [PENDIENTE CONFIRMACIÓN - posiblemente peor]
+- **Enero 2026:** -$280M UAI (-22,2% margen) 
+- **Febrero 2026:** [DATOS ESPERADOS - críticos para posición negociación]
 - **EPM debe:** $400M ítems ambientales
-- **Carta suspensión:** Enviada 19 marzo noche
-- **Respuesta esperada:** Máximo 4 abril
+- **Carta suspensión:** Enviada 19 marzo → **13 días restantes** para respuesta EPM
+- **Timeline crítico:** Respuesta máximo 4 abril (negociar vs terminar)
 
 ### Desarrollo humano casos estudio:
-- **Lina (patrocinio):** Reunión Ema completada - patrón observado ✅
-- **Andrea (responsabilidad):** Entrega datos pendiente - deadline hoy
-- **Framework:** Potencial vs Capacidad, Energía expansiva vs intensiva - validado
+- **Lina (patrocinio):** Reunión Ema completada - patrón expansivo confirmado ✅
+- **Andrea (responsabilidad):** Datos febrero críticos - deadline cumplido para negociación EPM
+- **Framework:** Potencial vs Capacidad validado - energías expansiva/intensiva operativas
 
 ### Automatización Condugas:
 - **Procedimientos:** 2/10 listos (bancaria + nómina)

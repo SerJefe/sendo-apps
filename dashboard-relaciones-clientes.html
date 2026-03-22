@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sebastian - Relaciones & Clientes</title>
+    <style>
+        :root {
+            --sendo-gold: #e0c05a;
+            --sendo-blue: #003f6b;
+            --sendo-blue-dark: #002b4a;
+        }
+        
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            background: linear-gradient(135deg, var(--sendo-blue-dark), var(--sendo-blue));
+            min-height: 100vh;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            border: 1px solid rgba(224, 192, 90, 0.3);
+        }
+        
+        .title {
+            color: var(--sendo-gold);
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        
+        .section h2 {
+            color: var(--sendo-gold);
+            border-bottom: 2px solid var(--sendo-gold);
+            padding-bottom: 8px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .client-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            margin: 12px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--sendo-gold);
+        }
+        
+        .client-item:hover {
+            background: rgba(224, 192, 90, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .client-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .client-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--sendo-gold);
+        }
+        
+        .client-status {
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-left: auto;
+        }
+        
+        .status-active { background: #22c55e; color: white; }
+        .status-critical { background: #ef4444; color: white; }
+        .status-opportunity { background: var(--sendo-gold); color: var(--sendo-blue); }
+        
+        .client-details {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 16px;
+            margin-top: 12px;
+        }
+        
+        .client-contact {
+            font-size: 0.9rem;
+        }
+        
+        .contact-name {
+            font-weight: bold;
+            color: #a3d5ff;
+        }
+        
+        .contract-info {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        
+        .btn {
+            background: var(--sendo-gold);
+            color: var(--sendo-blue);
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .btn:hover {
+            background: #c8ab49;
+            transform: translateY(-1px);
+        }
+        
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+        }
+        
+        .next-meeting {
+            background: rgba(34, 197, 94, 0.2);
+            border-left: 4px solid #22c55e;
+            padding: 16px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+        }
+        
+        @media (max-width: 1024px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .client-details {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .meeting-prep {
+            background: rgba(224, 192, 90, 0.1);
+            border-left: 4px solid var(--sendo-gold);
+            padding: 20px;
+            margin: 16px 0;
+            border-radius: 8px;
+        }
+        
+        .agenda-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .time {
+            text-align: center;
+            margin: 16px 0;
+            font-size: 1.2rem;
+            color: var(--sendo-gold);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Dashboard Relaciones & Clientes</h1>
+        
+        <div class="time" id="currentTime">--:-- - --- --</div>
+        
+        <!-- Próximas Reuniones -->
+        <div class="card">
+            <h2>📅 Próximas Reuniones</h2>
+            
+            <div class="next-meeting" onclick="prepararReunionJuanCarlos()">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: bold; font-size: 1.1rem;">EPM - Juan Carlos Gómez</div>
+                        <div style="font-size: 0.9rem; margin-top: 4px;">Próxima reunión estimada + follow-up OYMA</div>
+                        <div style="font-size: 0.8rem; color: var(--sendo-gold); margin-top: 4px;">
+                            ⚠️ Crisis OYMA R1 activa - preparación crítica
+                        </div>
+                    </div>
+                    <button class="btn">Preparar Reunión</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <!-- Clientes Principales -->
+            <div class="card">
+                <h2>🏢 Clientes Principales</h2>
+                
+                <!-- EPM -->
+                <div class="client-item" onclick="verPerfilEPM()">
+                    <div class="client-header">
+                        <div class="client-name">EPM (Empresas Públicas de Medellín)</div>
+                        <div class="client-status status-critical">CRISIS ACTIVA</div>
+                    </div>
+                    <div class="client-details">
+                        <div class="client-contact">
+                            <div class="contact-name">Juan Carlos Gómez</div>
+                            <div>Subgerente Gas</div>
+                            <div class="contact-name">Humberto Iglesias</div>
+                            <div>VP Negocios</div>
+                        </div>
+                        <div class="contract-info">
+                            <div>Contrato: OYMA R1</div>
+                            <div style="color: #ef4444;">Margen: -22.2%</div>
+                            <div>Estado: Carta enviada</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-small" onclick="event.stopPropagation(); verHistorialEPM()">Historial</button>
+                            <button class="btn btn-small" onclick="event.stopPropagation(); prepararReunionJuanCarlos()">Preparar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VANTI -->
+                <div class="client-item" onclick="verPerfilVanti()">
+                    <div class="client-header">
+                        <div class="client-name">VANTI</div>
+                        <div class="client-status status-active">ACTIVO</div>
+                    </div>
+                    <div class="client-details">
+                        <div class="client-contact">
+                            <div class="contact-name">Luis Abril</div>
+                            <div>Gerente Técnico</div>
+                        </div>
+                        <div class="contract-info">
+                            <div>Gas natural</div>
+                            <div style="color: #22c55e;">Estado: Normal</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-small" onclick="event.stopPropagation(); contactarVanti()">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Otros Clientes -->
+                <div class="client-item" onclick="verOtrosClientes()">
+                    <div class="client-header">
+                        <div class="client-name">Aguas (Santiago Wilches)</div>
+                        <div class="client-status status-opportunity">OPORTUNIDAD</div>
+                    </div>
+                    <div class="client-details">
+                        <div class="client-contact">
+                            <div class="contact-name">Santiago Wilches</div>
+                            <div>Gerente Aguas</div>
+                            <div class="contact-name">Jhon Maya</div>
+                            <div>Gerente General</div>
+                        </div>
+                        <div class="contract-info">
+                            <div>Acueductos</div>
+                            <div>Expansión proyectos</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-small" onclick="event.stopPropagation(); explorarOportunidad()">Explorar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preparación de Reuniones -->
+            <div class="card">
+                <h2>📝 Prep Reunión Juan Carlos (EPM)</h2>
+                
+                <div class="meeting-prep">
+                    <h3 style="color: var(--sendo-gold); margin-bottom: 16px;">🎯 Objetivos Reunión</h3>
+                    <div class="agenda-item">
+                        <strong>1. Follow-up carta 19 marzo</strong><br>
+                        • Confirmar recepción EPM<br>
+                        • Timeline respuesta (máximo 4 abril)
+                    </div>
+                    <div class="agenda-item">
+                        <strong>2. Datos soporte</strong><br>
+                        • $400M ítems ambientales pendientes<br>
+                        • Análisis margen enero (-22.2%)
+                    </div>
+                    <div class="agenda-item">
+                        <strong>3. Posición negociación</strong><br>
+                        • Alternativas: ajuste vs suspensión<br>
+                        • Timeline implementación cambios
+                    </div>
+                </div>
+
+                <div class="meeting-prep">
+                    <h3 style="color: var(--sendo-gold); margin-bottom: 16px;">📊 Datos Clave</h3>
+                    <div style="font-size: 0.9rem;">
+                        <div><strong>Margen enero:</strong> -$280M (-22.2%)</div>
+                        <div><strong>Producción:</strong> $3.362M</div>
+                        <div><strong>Costos:</strong> $4.109M</div>
+                        <div><strong>EPM debe:</strong> $400M ítems ambientales</div>
+                        <div><strong>Source:</strong> PYG_OYM_AGUAS.xlsx</div>
+                    </div>
+                </div>
+
+                <div class="meeting-prep">
+                    <h3 style="color: var(--sendo-gold); margin-bottom: 16px;">💡 Temas Sugeridos</h3>
+                    <div class="agenda-item">
+                        <strong>• Revisar causas enero vs diciembre</strong><br>
+                        ¿Qué cambió operativamente?
+                    </div>
+                    <div class="agenda-item">
+                        <strong>• Timeline pagos ítems ambientales</strong><br>
+                        $400M pendientes desde cuándo
+                    </div>
+                    <div class="agenda-item">
+                        <strong>• Proponer mesa técnica</strong><br>
+                        Andrea (Condugas) + técnicos EPM
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn" onclick="exportarPrepReunion()">📤 Exportar Prep</button>
+                    <button class="btn" onclick="programarSeguimiento()">⏰ Programar Follow-up</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contratos por Cliente -->
+        <div class="card">
+            <h2>📋 Contratos Activos por Cliente</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                <div class="client-item" onclick="verContratoDetalle('oyma')">
+                    <div><strong>OYMA R1 (EPM)</strong></div>
+                    <div style="color: #ef4444; margin: 8px 0;">Margen: -22.2% (-$280M)</div>
+                    <div style="font-size: 0.8rem; opacity: 0.8;">Carta suspensión enviada</div>
+                </div>
+                
+                <div class="client-item" onclick="verContratoDetalle('boyaca')">
+                    <div><strong>Boyacá</strong></div>
+                    <div style="color: var(--sendo-gold); margin: 8px 0;">Estado: Monitoreo</div>
+                    <div style="font-size: 0.8rem; opacity: 0.8;">Verificar margen enero</div>
+                </div>
+                
+                <div class="client-item" onclick="verContratoDetalle('bucaramanga')">
+                    <div><strong>Bucaramanga</strong></div>
+                    <div style="color: var(--sendo-gold); margin: 8px 0;">Estado: Monitoreo</div>
+                    <div style="font-size: 0.8rem; opacity: 0.8;">Verificar margen enero</div>
+                </div>
+                
+                <div class="client-item" onclick="verContratoDetalle('valle')">
+                    <div><strong>Valle</strong></div>
+                    <div style="color: var(--sendo-gold); margin: 8px 0;">Estado: Monitoreo</div>
+                    <div style="font-size: 0.8rem; opacity: 0.8;">Verificar margen enero</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeOptions = { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                weekday: 'short',
+                month: 'short', 
+                day: 'numeric',
+                timeZone: 'America/Bogota'
+            };
+            
+            const timeStr = now.toLocaleString('es-CO', timeOptions);
+            document.getElementById('currentTime').textContent = timeStr + ' (COL)';
+        }
+        
+        // Preparación reunión Juan Carlos EPM
+        function prepararReunionJuanCarlos() {
+            alert('📋 PREPARACIÓN REUNIÓN - Juan Carlos Gómez (EPM)\n\n' +
+                  '🎯 OBJETIVOS ESPECÍFICOS:\n' +
+                  '1. Follow-up carta 19 marzo (recepción confirmada?)\n' +
+                  '2. Timeline respuesta EPM (máximo 4 abril)\n' +
+                  '3. $400M ítems ambientales - cuándo se pagan?\n' +
+                  '4. Causas deterioro enero vs diciembre\n\n' +
+                  '📊 DATOS LLEVAR:\n' +
+                  '• Margen enero: -22.2% (-$280M)\n' +
+                  '• Análisis comparativo (diciembre vs enero)\n' +
+                  '• Breakdown costos materiales/mano obra\n\n' +
+                  '💡 TEMAS PROPONER:\n' +
+                  '• Mesa técnica Andrea-EPM\n' +
+                  '• Revisión precios unitarios\n' +
+                  '• Timeline ajustes contractuales\n\n' +
+                  '🎯 RESULTADO ESPERADO:\n' +
+                  'Timeline claro + próximos pasos definidos');
+        }
+        
+        function verPerfilEPM() {
+            alert('🏢 PERFIL EPM - DATOS CLAVE\n\n' +
+                  '👥 CONTACTOS PRINCIPALES:\n' +
+                  '• Juan Carlos Gómez - Subgerente Gas\n' +
+                  '• Humberto Iglesias - VP Negocios\n\n' +
+                  '📋 CONTRATOS ACTIVOS:\n' +
+                  '• OYMA R1: CRISIS (-22.2% margen)\n' +
+                  '• Otros contratos gas: Revisar enero\n\n' +
+                  '💰 FINANCIERO:\n' +
+                  '• EPM debe: $400M ítems ambientales\n' +
+                  '• Margen enero: -$280M\n' +
+                  '• Facturación mensual: ~$3.3M\n\n' +
+                  '📅 TIMELINE CRÍTICO:\n' +
+                  '• Carta enviada: 19 marzo\n' +
+                  '• Respuesta esperada: Máximo 4 abril\n\n' +
+                  '🎯 ESTRATEGIA:\n' +
+                  'Negotiation position vs emotional termination');
+        }
+        
+        function verHistorialEPM() {
+            alert('📚 HISTORIAL EPM - TIMELINE\n\n' +
+                  '📊 ANÁLISIS ENERO 2026:\n' +
+                  '• Deterioro margen: -22.2%\n' +
+                  '• Análisis Andrea: Completo\n' +
+                  '• Source: PYG_OYM_AGUAS.xlsx\n\n' +
+                  '📧 COMUNICACIÓN RECIENTE:\n' +
+                  '• 19 marzo: Carta suspensión enviada\n' +
+                  '• Pendiente: Respuesta EPM\n\n' +
+                  '💡 CONTEXTO CLAVE:\n' +
+                  '• Crisis todos contratos enero\n' +
+                  '• OYMA peor performance\n' +
+                  '• Pagos ambientales pendientes\n\n' +
+                  '🔍 PRÓXIMO:\n' +
+                  '• Datos febrero para trend analysis\n' +
+                  '• Mesa técnica si EPM acepta\n' +
+                  '• Decision: ajuste vs termination');
+        }
+        
+        function exportarPrepReunion() {
+            alert('📤 PREPARACIÓN EXPORTADA\n\n' +
+                  '✅ DOCUMENTO GENERADO:\n' +
+                  '• Agenda reunión Juan Carlos EPM\n' +
+                  '• Datos soporte incluidos\n' +
+                  '• Temas específicos OYMA\n' +
+                  '• Timeline follow-up\n\n' +
+                  '📋 INCLUYE:\n' +
+                  '• Context crisis enero\n' +
+                  '• Análisis financiero detallado\n' +
+                  '• Propuestas específicas\n' +
+                  '• Next steps definidos\n\n' +
+                  '📁 Ready para imprimir o enviar preview');
+        }
+        
+        function verContratoDetalle(contrato) {
+            if (contrato === 'oyma') {
+                alert('📊 OYMA R1 - DETALLE COMPLETO\n\n' +
+                      '💰 FINANCIERO ENERO:\n' +
+                      '• Ingresos: $3.362M\n' +
+                      '• Costos: $4.109M\n' +
+                      '• Margen: -$747M (-22.2%)\n\n' +
+                      '⚠️ CRISIS FACTORS:\n' +
+                      '• EPM debe $400M ítems ambientales\n' +
+                      '• Costos materiales disparados\n' +
+                      '• Eficiencias operativas?\n\n' +
+                      '📋 STATUS ACTUAL:\n' +
+                      '• Carta suspensión: 19 marzo\n' +
+                      '• Deadline respuesta: 4 abril\n' +
+                      '• Análisis: Andrea completado\n\n' +
+                      '📁 Source: PYG_OYM_AGUAS.xlsx');
+            } else {
+                alert('📊 CONTRATO ' + contrato.toUpperCase() + '\n\n' +
+                      '⚠️ VERIFICACIÓN PENDIENTE:\n' +
+                      '• Margen enero 2026\n' +
+                      '• Comparación vs diciembre\n' +
+                      '• Identificar si crisis generalizada\n\n' +
+                      '📋 ACCIÓN REQUERIDA:\n' +
+                      '• Solicitar P&G enero específico\n' +
+                      '• Análisis causas deterioro\n' +
+                      '• Plan contingencia si negativo\n\n' +
+                      '🎯 PRIORITY: High (tras OYMA resolution)');
+            }
+        }
+        
+        // Initialize
+        updateTime();
+        setInterval(updateTime, 60000);
+        
+        console.log('✅ Dashboard Relaciones & Clientes - Loaded');
+    </script>
+</body>
+</html>
