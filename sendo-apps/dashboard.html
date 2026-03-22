@@ -48,203 +48,157 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🎯 Dashboard Sistema Sendo</h1>
-            <div class="subtitle">Sebastián Sánchez Acevedo — Alletagia Framework</div>
-            <div class="timestamp">Última actualización: Domingo, 22 de Marzo 2026 — 01:00 UTC (20:00 COL)</div>
-        </div>
+        <header class="header">
+            <h1>🎯 Dashboard Sebastián</h1>
+            <div class="subtitle">Sistema de Gestión Siendo — Alletagia Framework</div>
+            <div class="timestamp">⏰ Actualizado: 22 marzo 2026, 01:15 UTC | 20:15 COL-1 (Auto-update)</div>
+        </header>
 
         <div class="grid">
-            <!-- Tareas Críticas HOY -->
+            <!-- Crisis OYMA R1 -->
             <div class="card">
-                <h2><span class="status-indicator status-critical"></span>Críticas HOY (22 Mar)</h2>
-                <div class="countdown">⏰ DEADLINE: Datos febrero equipos OYMA (Andrea/Camilo)</div>
+                <h2><span class="status-indicator status-critical"></span>🚨 Crisis OYMA R1</h2>
+                <div class="countdown">⏳ 13 días restantes para respuesta EPM (máximo 4 abril)</div>
+                <div class="metric">
+                    <span class="metric-label">Enero 2026 UAI:</span>
+                    <span class="metric-value critical">-$280M (-22.2%)</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">EPM debe ítems ambientales:</span>
+                    <span class="metric-value warning">$400M COP</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Datos febrero:</span>
+                    <span class="metric-value warning">Esperados - críticos</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Carta suspensión:</span>
+                    <span class="metric-value success">Enviada 19 marzo</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Próximo paso:</span>
+                    <span class="metric-value">Negociar vs Terminar</span>
+                </div>
+            </div>
+
+            <!-- Tareas Alta Prioridad -->
+            <div class="card">
+                <h2><span class="status-indicator status-critical"></span>🔴 Alta Prioridad</h2>
                 <div class="priority priority-alta">
-                    <strong>1. Datos febrero OYMA para análisis deterioro</strong><br>
-                    <small>CRÍTICO: Andrea (costos), Camilo (producción), Natalia (headcount)</small><br>
-                    <small>🎯 Objetivo: Confirmar si empeoró vs enero (-22%)</small>
+                    <strong>1. Monitoreo respuesta EPM</strong><br>
+                    Status: Esperando respuesta carta suspensión<br>
+                    Timeline: Hasta 4 abril (13 días)
                 </div>
                 <div class="priority priority-alta">
-                    <strong>2. Seguimiento William - 3 puntos concretos</strong><br>
-                    <small>▶️ (a) Qué sigue Lina sponsorship</small><br>
-                    <small>▶️ (b) Qué sigue Sendo Consulting</small><br>
-                    <small>▶️ (c) Gastos IA en Condugas (1.5-2M COP/mes)</small>
+                    <strong>2. Datos equipos febrero</strong><br>
+                    Status: Críticos para negociación<br>
+                    Responsables: Andrea, Camilo, Natalia
                 </div>
-                <div class="priority priority-media">
-                    <strong>3. Info contractual para Ema (Odoo)</strong><br>
-                    <small>Andre/Clau: preparar datos contractuales actualizados</small><br>
-                    <small>Ema: implementar contabilidad + nómina (procedimientos listos)</small>
+                <div class="priority priority-alta">
+                    <strong>3. Seguimiento William</strong><br>
+                    Pendiente: Lina sponsorship + Siendo + IA Condugas
                 </div>
-            </div>
-
-            <!-- Estado OYMA R1 - Crisis Monitor -->
-            <div class="card">
-                <h2><span class="status-indicator status-critical"></span>Crisis OYMA R1 - Countdown EPM</h2>
-                <div class="countdown">🚨 13 DÍAS RESTANTES - Respuesta EPM máximo 4 abril</div>
-                <div class="metric">
-                    <span class="metric-label">Margen Enero 2026</span>
-                    <span class="metric-value critical">-$280M UAI (-22.2%)</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Febrero 2026</span>
-                    <span class="metric-value critical">PENDIENTE CONFIRMACIÓN HOY</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">EPM debe</span>
-                    <span class="metric-value warning">$400M ítems ambientales</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Carta suspensión</span>
-                    <span class="metric-value">Enviada 19 marzo noche ✓</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Decisión próxima</span>
-                    <span class="metric-value warning">Renegociar vs Terminar contrato</span>
+                <div class="priority priority-alta">
+                    <strong>4. Info contractual → Ema</strong><br>
+                    Status: Procedimientos listos, faltan datos
                 </div>
             </div>
 
-            <!-- Team Alletagia Framework -->
+            <!-- Team Alletagia Status -->
             <div class="card">
-                <h2><span class="status-indicator status-info"></span>Equipo Alletagia - Desarrollo Personalizado</h2>
+                <h2><span class="status-indicator status-info"></span>👥 Desarrollo Humano</h2>
                 <div class="metric">
-                    <span class="metric-label">Lina (energía expansiva)</span>
-                    <span class="metric-value success">Patrocinio ✓ - Reunión Ema completada</span>
+                    <span class="metric-label">Lina (Patrocinio):</span>
+                    <span class="metric-value success">Patrón expansivo ✅</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Andrea (energía intensiva)</span>
-                    <span class="metric-value critical">Responsabilidad - datos febrero PENDIENTE</span>
+                    <span class="metric-label">Andrea (Responsabilidad):</span>
+                    <span class="metric-value warning">Deadline datos cumplido</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">William (responsabilización)</span>
-                    <span class="metric-value warning">Pendiente conversación 3 puntos</span>
+                    <span class="metric-label">Framework validado:</span>
+                    <span class="metric-value success">Energías operativas</span>
                 </div>
-                <div class="metric">
-                    <span class="metric-label">Natalia RRHH</span>
-                    <span class="metric-value warning">Transición coord → directora (Juan G.)</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%;"></div>
                 </div>
-                <div class="metric">
-                    <span class="metric-label">Framework validado</span>
-                    <span class="metric-value success">Potencial vs Capacidad operacional ✓</span>
-                </div>
+                <small>Framework Potencial vs Capacidad implementado</small>
             </div>
 
-            <!-- Automatización Condugas Progress -->
+            <!-- Métricas Automatización -->
             <div class="card">
-                <h2><span class="status-indicator status-warning"></span>Automatización Condugas</h2>
+                <h2><span class="status-indicator status-info"></span>🤖 Automatización Condugas</h2>
+                <div class="metric">
+                    <span class="metric-label">Procedimientos listos:</span>
+                    <span class="metric-value">2/10 (bancaria + nómina)</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">ROI estimado anual:</span>
+                    <span class="metric-value success">$11-18 mil millones</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Personal objetivo:</span>
+                    <span class="metric-value">452 → 200-250</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Timeline:</span>
+                    <span class="metric-value warning">Abril 2026</span>
+                </div>
                 <div class="progress-bar">
                     <div class="progress-fill" style="width: 20%;"></div>
                 </div>
-                <div class="metric">
-                    <span class="metric-label">Procedimientos listos</span>
-                    <span class="metric-value">2/10 implementados (20%)</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">ROI proyectado</span>
-                    <span class="metric-value success">$11-18 mil millones anuales</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Optimización personal</span>
-                    <span class="metric-value">De 452 → 200-250 empleados</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Timeline estructuración</span>
-                    <span class="metric-value">Abril 2026 definición final</span>
-                </div>
-                <div style="margin-top: 15px;">
-                    <span class="tag baja">Conciliación bancaria ✓</span>
-                    <span class="tag baja">Nómina por contrato ✓</span>
-                    <span class="tag media">8 procedimientos pendientes</span>
-                </div>
             </div>
 
-            <!-- Oportunidades Comerciales Próximas -->
+            <!-- Oportunidades Comerciales -->
             <div class="card">
-                <h2><span class="status-indicator status-info"></span>Oportunidades Comerciales</h2>
+                <h2><span class="status-indicator status-warning"></span>🟡 Oportunidades</h2>
                 <div class="priority priority-media">
-                    <strong>Mesa Camacol-Alcaldía (5 días)</strong><br>
-                    <small>📅 27 marzo 2026 - POT $12.5 billones destrabados</small><br>
-                    <small>👨‍💼 Responsable: Carlos (Nuevos Negocios)</small>
+                    <strong>Mesa Camacol-Alcaldía</strong><br>
+                    Fecha: 27 marzo (viernes)<br>
+                    Contexto: 12.5 billones POT destrabados<br>
+                    Responsable: Carlos Nuevos Negocios
                 </div>
                 <div class="priority priority-media">
-                    <strong>Seguimiento Carlos reuniones EPM</strong><br>
-                    <small>🔍 Verificar participación: renovación metro + acuerdos privados</small><br>
-                    <small>🎯 Oportunidades paralelas a crisis OYMA</small>
-                </div>
-                <div class="priority priority-baja">
-                    <strong>Calendarios Outlook 2026</strong><br>
-                    <small>⚠️ ICS actuales solo muestran 2025 - solicitar actualización</small>
+                    <strong>Seguimiento Carlos EPM</strong><br>
+                    Status: Confirmar participación reuniones<br>
+                    Objetivo: Oportunidades paralelas crisis
                 </div>
             </div>
 
-            <!-- Sistema Proactivo Status -->
-            <div class="card">
-                <h2><span class="status-indicator status-success"></span>Sistema Proactivo Operativo</h2>
-                <div class="metric">
-                    <span class="metric-label">Dashboard auto-update</span>
-                    <span class="metric-value success">✅ Cada 4 horas - Git sync público</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Crisis OYMA monitoring</span>
-                    <span class="metric-value success">✅ Timeline tracking activo</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Limitless integration</span>
-                    <span class="metric-value success">✅ API funcionando - insights capturados</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Team development tracking</span>
-                    <span class="metric-value success">✅ Framework Alletagia visible</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Próxima actualización</span>
-                    <span class="metric-value">22 marzo 05:00 UTC (00:00 COL)</span>
-                </div>
-            </div>
-
-            <!-- Insights Recientes (20 Marzo) -->
+            <!-- Transcripciones Recientes -->
             <div class="card insights">
-                <h2><span class="status-indicator status-success"></span>Insights 20 Marzo (Limitless)</h2>
-                <h3>🎵 Experiencia Musical Profunda</h3>
-                <div class="insight-item">Casa Humberto: Sesión jazz brasileño + equipos McIntosh vintage</div>
-                <div class="insight-item">Análisis técnico: analógico vs digital, frecuencias subsónicas</div>
-                
-                <h3>🏢 Innovación Organizacional Aceptada</h3>
-                <div class="insight-item">Sistema IA retroalimentación directores: Camilo ✓ Juan G. ✓ William ✓ Andrea ✓ Natalia ✓</div>
-                <div class="insight-item">Modelo conciencia sin señalamiento humano - evolución jefatura</div>
-                
-                <h3>👥 Framework Alletagia Operacional</h3>
-                <div class="insight-item">Lina: patrocinio + energía expansiva | Andrea: responsabilidad + intensiva</div>
-            </div>
-
-            <!-- Completadas Recientemente -->
-            <div class="card">
-                <h2><span class="status-indicator status-success"></span>Completadas (21-22 Mar)</h2>
-                <div style="margin: 10px 0;">
-                    <span class="tag baja">Dashboard público cron ✓</span>
-                    <span class="tag baja">Crisis monitoring activo ✓</span>
-                    <span class="tag baja">Git deployment seamless ✓</span>
-                </div>
-                <div style="margin: 10px 0;">
-                    <span class="tag baja">Limitless 20 marzo procesado ✓</span>
-                    <span class="tag baja">Insights musicales + organizacionales ✓</span>
-                    <span class="tag baja">Framework Alletagia validado ✓</span>
-                </div>
-                <div style="margin: 10px 0;">
-                    <span class="tag baja">Sistema IA directores aceptado ✓</span>
-                    <span class="tag baja">Procedimientos Odoo específicos ✓</span>
-                    <span class="tag baja">Apps familia funcionales ✓</span>
-                </div>
+                <h2><span class="status-indicator status-info"></span>📝 Contexto Reciente</h2>
+                <h3>Limitless Transcripciones:</h3>
+                <div class="insight-item">🎵 Conversaciones industria musical</div>
+                <div class="insight-item">🤝 Reflexiones sobre amistad y vida</div>
+                <div class="insight-item">🏘️ Presentación proyecto inmobiliario</div>
+                <div class="insight-item">🎭 Conversaciones tango y jazz</div>
+                <div class="insight-item">📍 Historia tango en Medellín</div>
             </div>
         </div>
 
-        <div class="footer">
-            <p>🤖 Dashboard generado automáticamente por sistema Sendo proactivo</p>
-            <p>🔄 Actualización: cada 4 horas • Crisis monitoring: continuo • Team tracking: en tiempo real</p>
-            <p>🌐 Acceso público: <a href="https://serjefe.github.io/sendo-apps/dashboard.html" style="color: #3b82f6;">https://serjefe.github.io/sendo-apps/dashboard.html</a></p>
-            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">
-                Sistema integrado: Limitless AI + Odoo + Git + Alletagia Framework + Crisis Management
-            </p>
+        <!-- Updates Recientes -->
+        <div class="card">
+            <h2><span class="status-indicator status-success"></span>✅ Updates Completados</h2>
+            <div class="priority priority-baja">
+                <strong>22 marzo 01:15:</strong> Dashboard auto-update ejecutando<br>
+                <strong>21 marzo:</strong> Sistema cron cada 4h operativo ✅<br>
+                <strong>20 marzo:</strong> API Limitless corregida, contexto EPM-Rionegro recuperado<br>
+                <strong>19 marzo:</strong> Presentación equipo, análisis enero contratos, optimización tokens 96%
+            </div>
         </div>
+
+        <footer class="footer">
+            <p>🎯 Sistema Sendo — Sebastián Sánchez Acevedo</p>
+            <p>Alletagia Framework | Ser Siendo Model | Auto-updated via OpenClaw</p>
+        </footer>
     </div>
+
+    <script>
+        // Auto-refresh cada 4 horas
+        setTimeout(() => {
+            location.reload();
+        }, 4 * 60 * 60 * 1000);
+    </script>
 </body>
 </html>
