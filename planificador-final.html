@@ -522,6 +522,10 @@
             📅 Plan Semana
         </button>
         
+        <button class="btn" onclick="showRecipeDetails()" id="recipeDetailsBtn" disabled>
+            📖 Ver Recetas
+        </button>
+        
         <button class="btn" onclick="clearDay()">
             🗑️ Limpiar
         </button>
@@ -647,6 +651,7 @@
             const hasAnySelections = Object.values(weeklyPlan).some(day => day.length > 0);
             document.getElementById('generateBtn').disabled = !hasAnySelections;
             document.getElementById('weeklyBtn').disabled = !hasAnySelections;
+            document.getElementById('recipeDetailsBtn').disabled = daySelections.length === 0;
         }
 
         function exportDayPlan() {
@@ -695,7 +700,96 @@
         }
 
         function generateShoppingList() {
-            alert('🛒 Generando lista de mercado\n\n✅ Consolidando ingredientes\n✅ Calculando cantidades\n✅ Organizando por sección\n\n📋 Lista optimizada lista para usar');
+            // Recopilar todas las recetas seleccionadas
+            const allSelectedRecipes = [];
+            Object.values(weeklyPlan).forEach(dayPlan => {
+                dayPlan.forEach(recipeId => {
+                    if (!allSelectedRecipes.includes(recipeId)) {
+                        allSelectedRecipes.push(recipeId);
+                    }
+                });
+            });
+            
+            if (allSelectedRecipes.length === 0) {
+                alert('❌ Selecciona al menos una receta primero');
+                return;
+            }
+
+            // Ingredientes por receta (base de datos simple)
+            const ingredients = {
+                'yogurt-avena-banano': ['Yogurt griego 500g', 'Avena 250g', 'Banano 6 unidades', 'Almendras 200g'],
+                'tostada-aguacate-huevo': ['Pan integral 1 paquete', 'Aguacate 4 unidades', 'Huevos 12 unidades', 'Tomate 3 unidades', 'Queso fresco 250g'],
+                'salmon-espinaca-quinoa': ['Salmón 800g', 'Espinaca fresca 300g', 'Quinoa 500g', 'Aguacate 2 unidades'],
+                'pollo-broccoli-papa': ['Pechuga pollo 800g', 'Brócoli 500g', 'Papa 1kg', 'Aceite oliva'],
+                'atun-ensalada-completa': ['Atún lomo 4 latas', 'Lechuga 2 unidades', 'Tomate 4 unidades', 'Huevos 6 unidades'],
+                'sopa-pollo-verduras': ['Pollo presa 600g', 'Zanahoria 500g', 'Apio 1 manojo', 'Papa 500g'],
+                'manzana-bastones': ['Manzana verde 6 unidades'],
+                'zanahoria-hervida': ['Zanahoria baby 500g'],
+                'papa-aplastada': ['Papa criolla 500g'],
+                'pollo-desmenuzado': ['Pechuga pollo 300g'],
+                'aguacate-aplastado': ['Aguacate 2 unidades'],
+                'banano-rodajas': ['Banano 4 unidades']
+            };
+
+            // Consolidar ingredientes
+            const shoppingList = {};
+            allSelectedRecipes.forEach(recipeId => {
+                const recipeIngredients = ingredients[recipeId] || [`Ingredientes para ${recipes[recipeId].name}`];
+                recipeIngredients.forEach(ingredient => {
+                    const baseIngredient = ingredient.split(' ')[0]; // Primer palabra
+                    if (!shoppingList[baseIngredient]) {
+                        shoppingList[baseIngredient] = [];
+                    }
+                    if (!shoppingList[baseIngredient].includes(ingredient)) {
+                        shoppingList[baseIngredient].push(ingredient);
+                    }
+                });
+            });
+
+            // Generar texto de lista
+            let listText = '🛒 LISTA DE MERCADO - FAMILIA SEBASTIAN\n\n';
+            
+            // Organizar por secciones
+            const sections = {
+                'PROTEÍNAS': ['Salmón', 'Pollo', 'Atún', 'Huevos'],
+                'VERDURAS': ['Espinaca', 'Brócoli', 'Lechuga', 'Tomate', 'Zanahoria', 'Apio'],
+                'FRUTAS': ['Manzana', 'Banano', 'Aguacate'],
+                'GRANOS': ['Quinoa', 'Avena'],
+                'LÁCTEOS': ['Yogurt', 'Queso'],
+                'OTROS': ['Papa', 'Pan', 'Aceite', 'Almendras']
+            };
+
+            Object.entries(sections).forEach(([section, items]) => {
+                const sectionItems = [];
+                items.forEach(item => {
+                    if (shoppingList[item]) {
+                        sectionItems.push(...shoppingList[item]);
+                        delete shoppingList[item];
+                    }
+                });
+                
+                if (sectionItems.length > 0) {
+                    listText += `📦 ${section}:\n`;
+                    sectionItems.forEach(item => listText += `• ${item}\n`);
+                    listText += '\n';
+                }
+            });
+
+            // Agregar items restantes
+            const remainingItems = Object.values(shoppingList).flat();
+            if (remainingItems.length > 0) {
+                listText += '📦 OTROS:\n';
+                remainingItems.forEach(item => listText += `• ${item}\n`);
+                listText += '\n';
+            }
+
+            listText += `📊 TOTAL RECETAS: ${allSelectedRecipes.length}\n`;
+            listText += `💰 ESTIMADO: $${Object.values(weeklyPlan).flat().reduce((sum, id) => sum + recipes[id].price, 0).toLocaleString()} COP\n\n`;
+            listText += '✅ Lista optimizada para mercado\n🏪 Organizada por secciones';
+
+            // Copiar al clipboard
+            navigator.clipboard.writeText(listText);
+            alert(`🛒 Lista de mercado generada\n\n✅ ${allSelectedRecipes.length} recetas incluidas\n✅ Organizada por secciones\n✅ Copiada al clipboard\n\n¡Lista para imprimir!`);
         }
 
         function generateWeeklyPlan() {
@@ -725,6 +819,67 @@
             
             navigator.clipboard.writeText(weekText);
             alert(`📅 Plan semanal completo copiado\n\n✅ $${totalWeek.toLocaleString()} total\n✅ ${totalProtein}g proteína semana\n✅ Horarios específicos incluidos\n\n¡Lista para ejecutar!`);
+        }
+
+        function showRecipeDetails() {
+            const daySelections = weeklyPlan[currentDay];
+            if (daySelections.length === 0) {
+                alert('❌ Selecciona al menos una receta primero');
+                return;
+            }
+
+            // Base de datos de recetas detalladas
+            const recipeDetails = {
+                'yogurt-avena-banano': {
+                    ingredients: ['1 taza yogurt griego', '1/2 taza avena', '1 banano maduro', '1 puñado almendras'],
+                    instructions: ['1. Mezclar yogurt con avena', '2. Cortar banano en rodajas', '3. Añadir almendras picadas', '4. Servir frío'],
+                    time: '5 min', portions: '1 porción'
+                },
+                'salmon-espinaca-quinoa': {
+                    ingredients: ['200g salmón fresco', '1 taza espinaca fresca', '1/2 taza quinoa', '1/2 aguacate'],
+                    instructions: ['1. Cocinar quinoa en agua (15 min)', '2. Sellar salmón a la plancha (6 min)', '3. Saltear espinaca (2 min)', '4. Servir con aguacate'],
+                    time: '20 min', portions: '2 porciones'
+                },
+                'pollo-broccoli-papa': {
+                    ingredients: ['200g pechuga pollo', '1 taza brócoli', '2 papas medianas', '2 cda aceite oliva'],
+                    instructions: ['1. Hervir papas (15 min)', '2. Cocinar pollo a la plancha (12 min)', '3. Cocinar brócoli al vapor (8 min)', '4. Sazonar y servir'],
+                    time: '25 min', portions: '2 porciones'
+                },
+                'manzana-bastones': {
+                    ingredients: ['1 manzana verde mediana'],
+                    instructions: ['1. Lavar manzana', '2. Cortar en bastones gruesos', '3. Servir inmediatamente'],
+                    time: '2 min', portions: '1 porción bebé'
+                },
+                'sopa-pollo-verduras': {
+                    ingredients: ['150g pollo presa', '1 zanahoria', '2 tallos apio', '1 papa pequeña', '3 tazas agua'],
+                    instructions: ['1. Hervir pollo (20 min)', '2. Agregar verduras picadas', '3. Cocinar 15 min más', '4. Desmenuzar pollo y servir'],
+                    time: '40 min', portions: '3 porciones'
+                }
+            };
+
+            let detailsText = `📖 RECETAS DETALLADAS - ${currentDay.toUpperCase()}\n\n`;
+            
+            daySelections.forEach(recipeId => {
+                const recipe = recipes[recipeId];
+                const details = recipeDetails[recipeId] || {
+                    ingredients: ['Ver ingredientes en app de recetas'],
+                    instructions: ['Preparar según preferencia familiar'],
+                    time: '15-20 min',
+                    portions: '2 porciones'
+                };
+                
+                detailsText += `🍽️ ${recipe.name.toUpperCase()}\n`;
+                detailsText += `⏱️ ${details.time} | 👥 ${details.portions} | 🥩 ${recipe.protein}g proteína\n\n`;
+                detailsText += `📝 INGREDIENTES:\n`;
+                details.ingredients.forEach(ing => detailsText += `• ${ing}\n`);
+                detailsText += `\n📋 PREPARACIÓN:\n`;
+                details.instructions.forEach(step => detailsText += `${step}\n`);
+                detailsText += `\n💰 Costo aprox: $${recipe.price.toLocaleString()} COP\n`;
+                detailsText += `${'─'.repeat(40)}\n\n`;
+            });
+
+            navigator.clipboard.writeText(detailsText);
+            alert(`📖 Recetas detalladas copiadas\n\n✅ ${daySelections.length} recetas completas\n✅ Con ingredientes y preparación\n✅ Tiempos de cocción incluidos\n\n¡Listas para cocinar!`);
         }
 
         function clearDay() {
