@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💪 Planificador Ejercicio & Fisioterapia - Sebastián & Paulina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .exercise-card {
+            transition: all 0.3s ease;
+        }
+        .exercise-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+        }
+        .progress-ring {
+            transition: all 0.3s ease;
+        }
+        .calendar-day {
+            transition: all 0.2s ease;
+        }
+        .calendar-day:hover {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            color: white;
+        }
+        .intensity-low { background: linear-gradient(45deg, #10b981, #34d399); }
+        .intensity-medium { background: linear-gradient(45deg, #f59e0b, #fbbf24); }
+        .intensity-high { background: linear-gradient(45deg, #ef4444, #f87171); }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800">💪 Planificador Ejercicio & Fisio</h1>
+                    <p class="text-sm text-gray-600">Sebastián (Ayuno + Pádel) • Paulina (Post-parto + Lactancia) • Familia Activa</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="generateWeekPlan" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-calendar-plus mr-2"></i>Generar Semana
+                    </button>
+                    <button id="trackProgress" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                        <i class="fas fa-chart-line mr-2"></i>Ver Progreso
+                    </button>
+                    <button id="physioMode" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                        <i class="fas fa-user-md mr-2"></i>Modo Fisio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-6">
+        <div class="grid lg:grid-cols-4 gap-6">
+            
+            <!-- Planificación Semanal Principal -->
+            <div class="lg:col-span-3">
+                
+                <!-- Stats Dashboard -->
+                <div class="grid md:grid-cols-4 gap-4 mb-6">
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-500">Sebastián Esta Semana</h3>
+                                <p class="text-2xl font-bold text-blue-600" id="sebastianWeekly">0/5</p>
+                                <p class="text-xs text-gray-500">Entrenamientos</p>
+                            </div>
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-dumbbell text-blue-600"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-500">Paulina Esta Semana</h3>
+                                <p class="text-2xl font-bold text-pink-600" id="paulinaWeekly">0/4</p>
+                                <p class="text-xs text-gray-500">Sesiones Fisio</p>
+                            </div>
+                            <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-heart-pulse text-pink-600"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-500">Próximo Pádel</h3>
+                                <p class="text-2xl font-bold text-green-600" id="nextPadel">Hoy 7PM</p>
+                                <p class="text-xs text-gray-500">Club Campestre</p>
+                            </div>
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-tennis-ball text-green-600"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-500">Tiempo Familiar</h3>
+                                <p class="text-2xl font-bold text-purple-600" id="familyTime">2h</p>
+                                <p class="text-xs text-gray-500">Actividades Benjamin</p>
+                            </div>
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-baby text-purple-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendario Semanal -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">📅 Semana del <span id="currentWeek"></span></h2>
+                    
+                    <div class="grid grid-cols-7 gap-2" id="weeklyCalendar">
+                        <!-- Días se generarán dinámicamente -->
+                    </div>
+                </div>
+
+                <!-- Rutinas Detalladas -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">🏋️‍♂️ Rutinas de Hoy</h2>
+                    <div id="todayRoutines" class="space-y-6">
+                        <!-- Las rutinas se mostrarán aquí -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel Lateral -->
+            <div class="space-y-6">
+                
+                <!-- Configuración Personal -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">⚙️ Configuración</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Sebastián Settings -->
+                        <div>
+                            <h3 class="font-medium text-gray-700 mb-2">Sebastián (Ayuno + Pádel)</h3>
+                            <div class="space-y-2">
+                                <div>
+                                    <label class="block text-sm text-gray-600 mb-1">Horario ejercicio preferido</label>
+                                    <select id="sebastianTime" class="w-full border rounded-lg px-3 py-2 text-sm">
+                                        <option value="morning">6:00-8:00 AM (Antes oficina)</option>
+                                        <option value="afternoon" selected>4:00-6:00 PM (Post almuerzo)</option>
+                                        <option value="evening">7:00-9:00 PM (Después oficina)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-gray-600 mb-1">Intensidad objetivo</label>
+                                    <select id="sebastianIntensity" class="w-full border rounded-lg px-3 py-2 text-sm">
+                                        <option value="moderate">Moderada (Mantenimiento)</option>
+                                        <option value="high" selected>Alta (Performance pádel)</option>
+                                        <option value="variable">Variable (Según energía)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-gray-600 mb-1">Días pádel/semana</label>
+                                    <select id="padelDays" class="w-full border rounded-lg px-3 py-2 text-sm">
+                                        <option value="2">2 días</option>
+                                        <option value="3" selected>3 días</option>
+                                        <option value="4">4 días</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paulina Settings -->
+                        <div class="border-t pt-4">
+                            <h3 class="font-medium text-gray-700 mb-2">Paulina (Post-parto + Lactancia)</h3>
+                            <div class="space-y-2">
+                                <div>
+                                    <label class="block text-sm text-gray-600 mb-1">Fase recuperación</label>
+                                    <select id="paulinaPhase" class="w-full border rounded-lg px-3 py-2 text-sm">
+                                        <option value="early">Temprana (0-6 semanas)</option>
+                                        <option value="intermediate" selected>Intermedia (6-12 semanas)</option>
+                                        <option value="advanced">Avanzada (3+ meses)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-gray-600 mb-1">Tiempo disponible/sesión</label>
+                                    <select id="paulinaTime" class="w-full border rounded-lg px-3 py-2 text-sm">
+                                        <option value="15">15 minutos</option>
+                                        <option value="30" selected>30 minutos</option>
+                                        <option value="45">45 minutos</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-gray-600 mb-1">Prioridad</label>
+                                    <select id="paulinaPriority" class="w-full border rounded-lg px-3 py-2 text-sm">
+                                        <option value="core" selected>Core + Piso pélvico</option>
+                                        <option value="posture">Postura + Espalda</option>
+                                        <option value="energy">Energía + Cardio suave</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benjamin Settings -->
+                        <div class="border-t pt-4">
+                            <h3 class="font-medium text-gray-700 mb-2">Benjamin (9 meses + Desarrollo)</h3>
+                            <div class="space-y-2">
+                                <div>
+                                    <label class="block text-sm text-gray-600 mb-1">Actividades desarrollo</label>
+                                    <select id="benjaminActivities" class="w-full border rounded-lg px-3 py-2 text-sm">
+                                        <option value="basic" selected>Básicas (Gateo, equilibrio)</option>
+                                        <option value="advanced">Avanzadas (Pre-caminar)</option>
+                                        <option value="sensory">Sensoriales (Texturas, sonidos)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-gray-600 mb-1">Tiempo familiar activo/día</label>
+                                    <select id="familyActiveTime" class="w-full border rounded-lg px-3 py-2 text-sm">
+                                        <option value="30">30 minutos</option>
+                                        <option value="60" selected>1 hora</option>
+                                        <option value="90">1.5 horas</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Métricas y Seguimiento -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">📊 Métricas</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Progreso Sebastián -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Sebastián - Consistencia</span>
+                                <span id="sebastianConsistency">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full transition-all duration-500" id="sebastianBar" style="width: 85%"></div>
+                            </div>
+                            <div class="text-xs text-gray-500 mt-1">Meta: 5 entrenamientos/semana</div>
+                        </div>
+
+                        <!-- Progreso Paulina -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Paulina - Recuperación</span>
+                                <span id="paulinaRecovery">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-pink-600 h-2 rounded-full transition-all duration-500" id="paulinaBar" style="width: 70%"></div>
+                            </div>
+                            <div class="text-xs text-gray-500 mt-1">Core strength + Postura</div>
+                        </div>
+
+                        <!-- Actividad Familiar -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Actividad Familiar</span>
+                                <span id="familyActivity">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full transition-all duration-500" id="familyBar" style="width: 90%"></div>
+                            </div>
+                            <div class="text-xs text-gray-500 mt-1">Tiempo activo con Benjamin</div>
+                        </div>
+                    </div>
+
+                    <!-- Whoop Integration -->
+                    <div class="mt-6 p-4 bg-gradient-to-r from-red-50 to-red-100 rounded-lg border border-red-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-red-800">🔴 Whoop Integration</h3>
+                            <button id="connectWhoop" class="text-xs bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700">
+                                Conectar
+                            </button>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-red-700">Recovery:</span>
+                                <span class="font-bold text-red-800" id="whoopRecovery">--</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-red-700">Strain:</span>
+                                <span class="font-bold text-red-800" id="whoopStrain">--</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-red-700">Sleep:</span>
+                                <span class="font-bold text-red-800" id="whoopSleep">--</span>
+                            </div>
+                        </div>
+                        <div class="text-xs text-red-600 mt-2">
+                            Conecta Whoop para ajustar intensidad automáticamente
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">⚡ Acciones Rápidas</h2>
+                    
+                    <div class="space-y-3">
+                        <button class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors text-sm">
+                            <i class="fas fa-play mr-2"></i>Empezar Rutina Ahora
+                        </button>
+                        <button class="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-colors text-sm">
+                            <i class="fas fa-check mr-2"></i>Marcar Completado
+                        </button>
+                        <button class="w-full bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600 transition-colors text-sm">
+                            <i class="fas fa-clock mr-2"></i>Posponer 1 Hora
+                        </button>
+                        <button class="w-full bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition-colors text-sm">
+                            <i class="fas fa-exclamation mr-2"></i>Reportar Lesión
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Base de datos de ejercicios y rutinas
+        const exerciseDatabase = {
+            // SEBASTIÁN - PÁDEL + FUERZA
+            sebastian: {
+                padel: {
+                    name: "Pádel Competitivo",
+                    duration: "90-120 min",
+                    intensity: "high",
+                    type: "sport",
+                    equipment: "Raqueta, pelotas, court",
+                    calories: 600,
+                    description: "Partido competitivo o entrenamiento técnico",
+                    warmup: ["5 min trote suave", "Movimientos articulares", "Golpes sin fuerza"],
+                    main: ["Técnica específica 30 min", "Partido/entrenamiento 60 min"],
+                    cooldown: ["Estiramientos 10 min", "Hidratación"]
+                },
+                strength: {
+                    name: "Entrenamiento Fuerza + Core",
+                    duration: "45-60 min", 
+                    intensity: "high",
+                    type: "strength",
+                    equipment: "Mancuernas, kettlebell, mat",
+                    calories: 400,
+                    description: "Fuerza funcional para pádel + core stability",
+                    exercises: [
+                        "Sentadillas goblet 3x12",
+                        "Press militar 3x10", 
+                        "Peso muerto rumano 3x10",
+                        "Plancha lateral 3x30s c/lado",
+                        "Russian twists 3x20",
+                        "Burpees 3x8"
+                    ]
+                },
+                cardio: {
+                    name: "Cardio Intervalos",
+                    duration: "30-40 min",
+                    intensity: "medium",
+                    type: "cardio", 
+                    equipment: "Ninguno o cinta",
+                    calories: 350,
+                    description: "Cardio en ayuno o pre-pádel",
+                    structure: "5 min calentamiento + 20 min intervalos (1 min alta, 1 min baja) + 5 min vuelta calma"
+                }
+            },
+
+            // PAULINA - POST-PARTO FISIOTERAPIA
+            paulina: {
+                core_recovery: {
+                    name: "Core Recovery + Piso Pélvico",
+                    duration: "30 min",
+                    intensity: "low",
+                    type: "physio",
+                    equipment: "Mat, pelota pilates",
+                    description: "Fortalecimiento progresivo core post-parto",
+                    exercises: [
+                        "Respiración diafragmática 5 min",
+                        "Elevación pelvis 15 reps",
+                        "Dead bug 10 c/lado",
+                        "Wall sit 30-60s", 
+                        "Cat-cow stretch 10 reps",
+                        "Kegel exercises 3 sets"
+                    ]
+                },
+                posture_correction: {
+                    name: "Corrección Postural + Espalda",
+                    duration: "25 min",
+                    intensity: "low",
+                    type: "physio",
+                    equipment: "Banda elástica, mat",
+                    description: "Combate postura lactancia + fortalece espalda",
+                    exercises: [
+                        "Rows con banda 15 reps",
+                        "Aperturas posteriores 12 reps",
+                        "Elevación brazos en W 15 reps",
+                        "Chin tucks 10 reps",
+                        "Estiramientos pecho 30s c/lado",
+                        "Rotaciones cervicales suaves"
+                    ]
+                },
+                gentle_cardio: {
+                    name: "Cardio Suave + Energía",
+                    duration: "20 min",
+                    intensity: "low",
+                    type: "cardio",
+                    equipment: "Ninguno",
+                    description: "Boost energía sin agotar para lactancia",
+                    structure: "Caminata con intervalos suaves + movimientos articulares"
+                }
+            },
+
+            // FAMILIA - BENJAMIN DESARROLLO
+            family: {
+                tummy_time_active: {
+                    name: "Tummy Time + Desarrollo Motor",
+                    duration: "15-20 min",
+                    intensity: "low",
+                    type: "development",
+                    equipment: "Manta, juguetes",
+                    description: "Estimulación desarrollo Benjamin + ejercicio padres",
+                    activities: [
+                        "Tummy time con juguetes 5 min",
+                        "Padres: squats mientras Benjamin explora",
+                        "Gateo estimulado con túneles",
+                        "Ejercicios equilibrio con apoyo",
+                        "Estimulación sensorial texturas"
+                    ]
+                },
+                walk_park: {
+                    name: "Caminata Familiar Parque",
+                    duration: "30-45 min",
+                    intensity: "low",
+                    type: "family",
+                    equipment: "Coche, manta",
+                    description: "Ejercicio suave + tiempo aire libre Benjamin",
+                    benefits: "Vitamin D, aire fresco, socialización Benjamin"
+                },
+                swimming_family: {
+                    name: "Natación Familiar (futura)",
+                    duration: "45 min",
+                    intensity: "medium",
+                    type: "family",
+                    equipment: "Traje baño, flotadores",
+                    description: "Para cuando Benjamin tenga 12+ meses",
+                    note: "Excelente ejercicio completo para toda la familia"
+                }
+            }
+        };
+
+        // Planificador inteligente
+        const fitnessPlanner = {
+            generateWeeklyPlan: function() {
+                const week = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+                const padelDays = parseInt(document.getElementById('padelDays').value);
+                const sebastianIntensity = document.getElementById('sebastianIntensity').value;
+                const paulinaPhase = document.getElementById('paulinaPhase').value;
+                
+                let weekPlan = {};
+                
+                // Lógica inteligente de planificación
+                week.forEach((day, index) => {
+                    weekPlan[day] = {
+                        sebastian: this.planSebastian(day, index, padelDays, sebastianIntensity),
+                        paulina: this.planPaulina(day, index, paulinaPhase),
+                        family: this.planFamily(day, index),
+                        notes: []
+                    };
+                });
+                
+                return weekPlan;
+            },
+
+            planSebastian: function(day, index, padelDays, intensity) {
+                // Lógica pádel: Martes, Jueves, Sábado típicamente
+                const padelSchedule = [1, 3, 5]; // índices de días preferidos
+                
+                if (padelSchedule.slice(0, padelDays).includes(index)) {
+                    return {
+                        primary: exerciseDatabase.sebastian.padel,
+                        time: "7:00 PM",
+                        location: "Club Campestre"
+                    };
+                } else if (index === 0 || index === 4) { // Lunes, Viernes
+                    return {
+                        primary: exerciseDatabase.sebastian.strength,
+                        time: "6:00 AM",
+                        location: "Gym casa"
+                    };
+                } else if (index === 2) { // Miércoles
+                    return {
+                        primary: exerciseDatabase.sebastian.cardio,
+                        time: "6:30 AM",
+                        location: "Gym casa"
+                    };
+                } else {
+                    return {
+                        primary: "descanso",
+                        time: "---",
+                        location: "Recovery day"
+                    };
+                }
+            },
+
+            planPaulina: function(day, index, phase) {
+                const frequency = phase === 'early' ? 3 : phase === 'intermediate' ? 4 : 5;
+                const scheduleDays = [0, 2, 4, 6].slice(0, frequency); // Lunes, Miércoles, Viernes, Domingo
+                
+                if (scheduleDays.includes(index)) {
+                    const routines = [
+                        exerciseDatabase.paulina.core_recovery,
+                        exerciseDatabase.paulina.posture_correction,
+                        exerciseDatabase.paulina.gentle_cardio
+                    ];
+                    return {
+                        primary: routines[index % 3],
+                        time: "9:00 AM",
+                        location: "Casa - sala"
+                    };
+                } else {
+                    return {
+                        primary: "descanso activo",
+                        time: "flexible",
+                        location: "Estiramientos suaves"
+                    };
+                }
+            },
+
+            planFamily: function(day, index) {
+                // Actividades familiares fines de semana principalmente
+                if (index === 5 || index === 6) { // Sábado, Domingo
+                    return {
+                        primary: index === 5 ? exerciseDatabase.family.walk_park : exerciseDatabase.family.tummy_time_active,
+                        time: "10:00 AM",
+                        location: "Parque La Presidenta / Casa"
+                    };
+                } else {
+                    return {
+                        primary: exerciseDatabase.family.tummy_time_active,
+                        time: "6:00 PM",
+                        location: "Casa"
+                    };
+                }
+            }
+        };
+
+        // Renderizado UI
+        function renderWeeklyCalendar(weekPlan) {
+            const calendarDiv = document.getElementById('weeklyCalendar');
+            const days = Object.keys(weekPlan);
+            
+            calendarDiv.innerHTML = '';
+            
+            days.forEach((day, index) => {
+                const dayPlan = weekPlan[day];
+                const today = new Date().getDay();
+                const isToday = index === today;
+                
+                const dayDiv = document.createElement('div');
+                dayDiv.className = `calendar-day p-4 rounded-lg border-2 ${isToday ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} cursor-pointer`;
+                
+                // Determinar intensidad del día
+                const hasHighIntensity = dayPlan.sebastian.primary?.intensity === 'high';
+                const intensityClass = hasHighIntensity ? 'intensity-high' : 
+                                     dayPlan.sebastian.primary === 'descanso' ? 'intensity-low' : 'intensity-medium';
+                
+                dayDiv.innerHTML = `
+                    <div class="text-center">
+                        <h3 class="font-bold text-sm text-gray-800 mb-2">${day}</h3>
+                        
+                        <!-- Sebastián -->
+                        <div class="mb-2">
+                            <div class="w-3 h-3 ${intensityClass} rounded-full mx-auto mb-1"></div>
+                            <div class="text-xs text-gray-600">
+                                ${dayPlan.sebastian.primary?.name || dayPlan.sebastian.primary}
+                            </div>
+                            <div class="text-xs text-gray-500">${dayPlan.sebastian.time}</div>
+                        </div>
+                        
+                        <!-- Paulina -->
+                        <div class="mb-2 border-t pt-2">
+                            <div class="text-xs text-pink-600 font-medium">
+                                ${dayPlan.paulina.primary?.name || dayPlan.paulina.primary}
+                            </div>
+                            <div class="text-xs text-gray-500">${dayPlan.paulina.time}</div>
+                        </div>
+                        
+                        <!-- Familia -->
+                        <div class="border-t pt-1">
+                            <div class="text-xs text-purple-600">
+                                ${dayPlan.family.primary?.name || 'Tummy time'}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                // Click handler para mostrar detalles
+                dayDiv.addEventListener('click', () => showDayDetails(day, dayPlan));
+                
+                calendarDiv.appendChild(dayDiv);
+            });
+        }
+
+        function showDayDetails(day, dayPlan) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-xl p-8 max-w-2xl w-full mx-4 max-h-96 overflow-y-auto">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800">${day} - Plan Detallado</h2>
+                        <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Sebastián -->
+                        <div class="border rounded-lg p-4">
+                            <h3 class="text-lg font-bold text-blue-600 mb-2">🏃‍♂️ Sebastián</h3>
+                            <div class="text-sm">
+                                <strong>${dayPlan.sebastian.primary?.name || dayPlan.sebastian.primary}</strong><br>
+                                ⏰ ${dayPlan.sebastian.time} | 📍 ${dayPlan.sebastian.location}<br>
+                                ${dayPlan.sebastian.primary?.description || ''}
+                            </div>
+                        </div>
+                        
+                        <!-- Paulina -->
+                        <div class="border rounded-lg p-4">
+                            <h3 class="text-lg font-bold text-pink-600 mb-2">🤱 Paulina</h3>
+                            <div class="text-sm">
+                                <strong>${dayPlan.paulina.primary?.name || dayPlan.paulina.primary}</strong><br>
+                                ⏰ ${dayPlan.paulina.time} | 📍 ${dayPlan.paulina.location}<br>
+                                ${dayPlan.paulina.primary?.description || ''}
+                            </div>
+                        </div>
+                        
+                        <!-- Familia -->
+                        <div class="border rounded-lg p-4">
+                            <h3 class="text-lg font-bold text-purple-600 mb-2">👨‍👩‍👶 Familia</h3>
+                            <div class="text-sm">
+                                <strong>${dayPlan.family.primary?.name || 'Actividad Benjamin'}</strong><br>
+                                ⏰ ${dayPlan.family.time} | 📍 ${dayPlan.family.location}<br>
+                                ${dayPlan.family.primary?.description || 'Desarrollo motor y tiempo de calidad'}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function renderTodayRoutines() {
+            const today = new Date().toLocaleDateString('es-ES', { weekday: 'long' });
+            const todayCapitalized = today.charAt(0).toUpperCase() + today.slice(1);
+            
+            // Por ahora mostramos rutinas de ejemplo
+            const routinesDiv = document.getElementById('todayRoutines');
+            routinesDiv.innerHTML = `
+                <div class="exercise-card bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-6 text-white">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">🏃‍♂️ Sebastián - ${today === 'martes' ? 'Pádel' : 'Entrenamiento Fuerza'}</h3>
+                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">7:00 PM</span>
+                    </div>
+                    <p class="mb-4">${today === 'martes' ? 'Partido competitivo Club Campestre' : 'Rutina fuerza funcional + core'}</p>
+                    <div class="flex items-center space-x-4">
+                        <button class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50">
+                            <i class="fas fa-play mr-2"></i>Empezar
+                        </button>
+                        <button class="bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg hover:bg-opacity-30">
+                            <i class="fas fa-info-circle mr-2"></i>Detalles
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="exercise-card bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl p-6 text-white">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">🤱 Paulina - Core Recovery</h3>
+                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">9:00 AM</span>
+                    </div>
+                    <p class="mb-4">Fortalecimiento progresivo core + piso pélvico</p>
+                    <div class="flex items-center space-x-4">
+                        <button class="bg-white text-pink-600 px-4 py-2 rounded-lg font-semibold hover:bg-pink-50">
+                            <i class="fas fa-play mr-2"></i>Empezar
+                        </button>
+                        <button class="bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg hover:bg-opacity-30">
+                            <i class="fas fa-heart-pulse mr-2"></i>Adaptar
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="exercise-card bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-6 text-white">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">👨‍👩‍👶 Familia - Tummy Time Activo</h3>
+                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">6:00 PM</span>
+                    </div>
+                    <p class="mb-4">Desarrollo motor Benjamin + ejercicio padres</p>
+                    <div class="flex items-center space-x-4">
+                        <button class="bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50">
+                            <i class="fas fa-baby mr-2"></i>Empezar
+                        </button>
+                        <button class="bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg hover:bg-opacity-30">
+                            <i class="fas fa-toys mr-2"></i>Ideas
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Event Listeners
+        let currentWeekPlan = {};
+
+        document.getElementById('generateWeekPlan').addEventListener('click', function() {
+            currentWeekPlan = fitnessPlanner.generateWeeklyPlan();
+            renderWeeklyCalendar(currentWeekPlan);
+            
+            // Update week date
+            const today = new Date();
+            const monday = new Date(today.setDate(today.getDate() - today.getDay() + 1));
+            document.getElementById('currentWeek').textContent = monday.toLocaleDateString('es-CO');
+        });
+
+        document.getElementById('connectWhoop').addEventListener('click', function() {
+            // Simular conexión Whoop
+            document.getElementById('whoopRecovery').textContent = '75%';
+            document.getElementById('whoopStrain').textContent = '12.4';
+            document.getElementById('whoopSleep').textContent = '85%';
+            
+            this.textContent = 'Conectado ✓';
+            this.classList.remove('bg-red-600', 'hover:bg-red-700');
+            this.classList.add('bg-green-600');
+        });
+
+        document.getElementById('physioMode').addEventListener('click', function() {
+            // Modo fisioterapeuta con rutinas detalladas
+            const physioWindow = window.open('', '_blank', 'width=1200,height=800');
+            physioWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>🩺 MODO FISIOTERAPEUTA</title>
+                    <script src="https://cdn.tailwindcss.com"></script>
+                </head>
+                <body class="bg-gray-50 p-8">
+                    <div class="max-w-4xl mx-auto">
+                        <header class="bg-purple-600 text-white p-6 rounded-lg mb-6 text-center">
+                            <h1 class="text-3xl font-bold">🩺 MODO FISIOTERAPEUTA</h1>
+                            <p class="text-lg mt-2">Rutinas Detalladas - Familia Sebastián</p>
+                        </header>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-white rounded-lg p-6 shadow-lg">
+                                <h2 class="text-xl font-bold text-pink-600 mb-4">🤱 PAULINA - POST-PARTO</h2>
+                                <div class="space-y-4">
+                                    <div>
+                                        <h3 class="font-bold">Core Recovery (30 min)</h3>
+                                        <ul class="text-sm text-gray-600 ml-4">
+                                            <li>• Respiración diafragmática 5 min</li>
+                                            <li>• Elevación pelvis 15 reps</li>
+                                            <li>• Dead bug 10 c/lado</li>
+                                            <li>• Wall sit 30-60s</li>
+                                            <li>• Cat-cow stretch 10 reps</li>
+                                            <li>• Kegel exercises 3 sets</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold">Corrección Postural (25 min)</h3>
+                                        <ul class="text-sm text-gray-600 ml-4">
+                                            <li>• Rows con banda 15 reps</li>
+                                            <li>• Aperturas posteriores 12 reps</li>
+                                            <li>• Elevación brazos en W 15 reps</li>
+                                            <li>• Chin tucks 10 reps</li>
+                                            <li>• Estiramientos pecho 30s c/lado</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-6 shadow-lg">
+                                <h2 class="text-xl font-bold text-blue-600 mb-4">🏃‍♂️ SEBASTIÁN - PÁDEL</h2>
+                                <div class="space-y-4">
+                                    <div>
+                                        <h3 class="font-bold">Entrenamiento Fuerza (45 min)</h3>
+                                        <ul class="text-sm text-gray-600 ml-4">
+                                            <li>• Sentadillas goblet 3x12</li>
+                                            <li>• Press militar 3x10</li>
+                                            <li>• Peso muerto rumano 3x10</li>
+                                            <li>• Plancha lateral 3x30s c/lado</li>
+                                            <li>• Russian twists 3x20</li>
+                                            <li>• Burpees 3x8</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold">Prevención Lesiones</h3>
+                                        <ul class="text-sm text-gray-600 ml-4">
+                                            <li>• Calentamiento específico 10 min</li>
+                                            <li>• Estiramientos dinámicos</li>
+                                            <li>• Movilidad hombro y muñeca</li>
+                                            <li>• Core stability antes del juego</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 bg-white rounded-lg p-6 shadow-lg">
+                            <h2 class="text-xl font-bold text-purple-600 mb-4">👨‍👩‍👶 BENJAMIN - DESARROLLO MOTOR (9 meses)</h2>
+                            <div class="grid md:grid-cols-3 gap-4">
+                                <div>
+                                    <h3 class="font-bold">Tummy Time (15 min)</h3>
+                                    <ul class="text-sm text-gray-600">
+                                        <li>• Juguetes coloridos al frente</li>
+                                        <li>• Textura variada en manta</li>
+                                        <li>• Estimulación visual</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">Gateo Estimulado</h3>
+                                    <ul class="text-sm text-gray-600">
+                                        <li>• Túneles caseros</li>
+                                        <li>• Objetos interesantes</li>
+                                        <li>• Superficies seguras</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">Pre-Equilibrio</h3>
+                                    <ul class="text-sm text-gray-600">
+                                        <li>• Sentado con apoyo</li>
+                                        <li>• Transiciones postura</li>
+                                        <li>• Juegos de alcance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <footer class="mt-8 text-center text-gray-600">
+                            <p>📱 Generado automáticamente por Planificador Ejercicio Familiar</p>
+                            <button onclick="window.print()" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+                                🖨️ Imprimir Rutinas
+                            </button>
+                        </footer>
+                    </div>
+                </body>
+                </html>
+            `);
+        });
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTodayRoutines();
+            document.getElementById('generateWeekPlan').click();
+        });
+
+        console.log('💪 Planificador Ejercicio Familiar Loaded ✅');
+    </script>
+</body>
+</html>
