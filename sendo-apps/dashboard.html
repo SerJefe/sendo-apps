@@ -48,124 +48,97 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎯 Dashboard Sebastián</h1>
-            <div class="subtitle">Sistema Integrado Ser Sendo • Alletagia Framework</div>
-            <div class="timestamp">Última actualización: Domingo, 22 Marzo 2026 - 00:00 UTC / 19:00 COL (Auto-updated)</div>
+            <h1>Dashboard Sebastián</h1>
+            <div class="subtitle">Sistema de Gestión Sendo • Alletagia Framework</div>
+            <div class="timestamp">Última actualización: 2026-03-22 00:16 UTC | Auto-actualizado via cron</div>
         </div>
 
         <div class="grid">
-            <!-- Crisis OYMA Status -->
+            <!-- Crisis OYMA R1 -->
             <div class="card">
                 <h2><span class="status-indicator status-critical"></span>Crisis OYMA R1</h2>
+                <div class="priority priority-alta">
+                    <strong>Estado:</strong> Carta suspensión enviada EPM (19 mar)
+                    <br><strong>Deadline:</strong> Respuesta EPM hasta 4 abril
+                    <br><strong>Impacto:</strong> -$280M UAI enero (-22% margen)
+                    <br><strong>Pendiente:</strong> EPM debe $400M ítems ambientales
+                </div>
                 <div class="metric">
                     <span class="metric-label">Margen Enero 2026</span>
-                    <span class="metric-value critical">-$280M (-22.2%)</span>
+                    <span class="metric-value critical">-22.2%</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">EPM Debe Ambientales</span>
-                    <span class="metric-value critical">$400M COP</span>
+                    <span class="metric-label">Pérdida UAI</span>
+                    <span class="metric-value critical">$280M COP</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Carta Suspensión</span>
-                    <span class="metric-value warning">Enviada 19 Mar</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Respuesta Esperada</span>
-                    <span class="metric-value">Máx 4 Abril</span>
-                </div>
-                <div class="priority priority-alta">
-                    <strong>CRÍTICO:</strong> Datos febrero pendientes para posición negociación
+                    <span class="metric-label">Datos Febrero</span>
+                    <span class="metric-value warning">PENDIENTE</span>
                 </div>
             </div>
 
-            <!-- Tareas Prioritarias -->
+            <!-- Tareas Alta Prioridad -->
             <div class="card">
-                <h2><span class="status-indicator status-warning"></span>Tareas Alta Prioridad</h2>
+                <h2><span class="status-indicator status-warning"></span>Tareas Críticas</h2>
                 <div class="priority priority-alta">
-                    <strong>1.</strong> Monitorear respuesta EPM carta suspensión
-                    <div class="tag alta">Deadline: 4 Abril</div>
+                    <strong>1. Datos equipos febrero</strong><br>
+                    Recibir análisis deterioro vs enero (-22%)<br>
+                    <span class="tag alta">HOY</span>
                 </div>
                 <div class="priority priority-alta">
-                    <strong>2.</strong> Datos equipos febrero (Andrea, Camilo, Natalia)
-                    <div class="tag alta">Urgente HOY</div>
+                    <strong>2. Seguimiento William</strong><br>
+                    3 puntos: Lina, Sendo Consulting, gastos IA<br>
+                    <span class="tag media">PENDIENTE</span>
                 </div>
                 <div class="priority priority-media">
-                    <strong>3.</strong> Conversación William: Lina + Siendo + IA gastos
-                    <div class="tag media">Seguimiento</div>
-                </div>
-                <div class="priority priority-media">
-                    <strong>4.</strong> Info contractual para Ema (Odoo implementation)
-                    <div class="tag media">Delegable</div>
+                    <strong>3. Info contractual Ema</strong><br>
+                    Datos para montar contabilidad/nómina Odoo<br>
+                    <span class="tag media">EN PROCESO</span>
                 </div>
             </div>
 
-            <!-- Team Alletagia Development -->
+            <!-- Team Alletagia Status -->
             <div class="card">
-                <h2><span class="status-indicator status-success"></span>Desarrollo Equipo Alletagia</h2>
+                <h2><span class="status-indicator status-info"></span>Equipo Alletagia</h2>
                 <div class="metric">
                     <span class="metric-label">Lina (Patrocinio)</span>
-                    <span class="metric-value success">Reunión Ema completada ✅</span>
+                    <span class="metric-value success">✅ Reunión Ema completada</span>
                 </div>
                 <div class="metric">
                     <span class="metric-label">Andrea (Responsabilidad)</span>
-                    <span class="metric-value warning">Datos pendientes</span>
+                    <span class="metric-value warning">📊 Datos pendientes</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">William (Sponsor-IA)</span>
-                    <span class="metric-value">Conversación pendiente</span>
+                    <span class="metric-label">Ema (Desarrollo)</span>
+                    <span class="metric-value">🔧 Odoo setup ready</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Natalia RRHH</span>
-                    <span class="metric-value warning">Transición directora</span>
-                </div>
-                <div class="insight-item">
-                    <strong>Framework validado:</strong> Energía expansiva (patrocinio) vs intensiva (responsabilidad)
+                    <span class="metric-label">Framework validado</span>
+                    <span class="metric-value success">Energía expansiva vs intensiva</span>
                 </div>
             </div>
 
-            <!-- Automatización Condugas -->
+            <!-- Automatización Progress -->
             <div class="card">
                 <h2><span class="status-indicator status-info"></span>Automatización Condugas</h2>
                 <div class="metric">
-                    <span class="metric-label">Procedimientos Listos</span>
-                    <span class="metric-value success">2/10 (Bancaria + Nómina)</span>
+                    <span class="metric-label">Procedimientos listos</span>
+                    <span class="metric-value">2/10 completados</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 20%;"></div>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">ROI Estimado</span>
-                    <span class="metric-value success">$11-18 mil millones anuales</span>
+                    <span class="metric-label">ROI estimado anual</span>
+                    <span class="metric-value success">$11-18 mil millones</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Personal Objetivo</span>
+                    <span class="metric-label">Reducción personal objetivo</span>
                     <span class="metric-value">452 → 200-250 personas</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Timeline Roadmap</span>
-                    <span class="metric-value">Abril 2026</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 20%"></div>
-                </div>
-            </div>
-
-            <!-- Limitless Recent Insights -->
-            <div class="card">
-                <h2><span class="status-indicator status-info"></span>Limitless Recent (20 Mar)</h2>
-                <div class="insight-item">
-                    <strong>Sesión Musical Completa:</strong> Casa Humberto, experiencia audiófilo + jazz brasileño
-                </div>
-                <div class="insight-item">
-                    <strong>Reflexiones Jefatura:</strong> Sistema retroalimentación IA directores Condugas aceptado
-                </div>
-                <div class="insight-item">
-                    <strong>Proyecto Inmobiliario:</strong> Presentación nueva oportunidad Ipanema
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Logs Procesados</span>
-                    <span class="metric-value success">5/5 (20 Mar)</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Datos Hoy</span>
-                    <span class="metric-value warning">0 logs (21 Mar)</span>
+                    <span class="metric-label">Timeline</span>
+                    <span class="metric-value warning">Abril 2026</span>
                 </div>
             </div>
 
@@ -173,72 +146,83 @@
             <div class="card">
                 <h2><span class="status-indicator status-success"></span>Oportunidades</h2>
                 <div class="priority priority-media">
-                    <strong>Mesa Camacol-Alcaldía</strong>
-                    <br>POT: 12.5 billones destrabados
-                    <div class="tag media">27 Marzo</div>
+                    <strong>Mesa Camacol-Alcaldía</strong><br>
+                    27 marzo • 12.5 billones destrabados POT<br>
+                    <span class="tag baja">Carlos Nuevos Negocios</span>
                 </div>
                 <div class="priority priority-baja">
-                    <strong>Carlos Reuniones EPM</strong>
-                    <br>Metro + acuerdos privados
-                    <div class="tag baja">Seguimiento</div>
+                    <strong>Seguimiento Carlos-EPM</strong><br>
+                    Identificar oportunidades paralelas crisis OYMA<br>
+                    <span class="tag baja">EXPLORACIÓN</span>
+                </div>
+            </div>
+
+            <!-- Limitless Recent Activity -->
+            <div class="card">
+                <h2><span class="status-indicator status-info"></span>Actividad Reciente</h2>
+                <div class="insight-item">
+                    <strong>20 mar:</strong> Conversaciones industria musical
+                </div>
+                <div class="insight-item">
+                    <strong>20 mar:</strong> Reflexiones amistad y vida
+                </div>
+                <div class="insight-item">
+                    <strong>21 mar:</strong> Dashboard evolution - funcionalidad real
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Suscripción Odoo</span>
-                    <span class="metric-value success">Salvada (~$5,400)</span>
+                    <span class="metric-label">Transcripciones 20 mar</span>
+                    <span class="metric-value">2 logs procesados</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Sistema proactivo</span>
+                    <span class="metric-value success">✅ Activo</span>
                 </div>
             </div>
         </div>
 
-        <!-- Dashboard Status & Completadas -->
-        <div class="grid">
-            <div class="card insights">
-                <h2><span class="status-indicator status-success"></span>Completadas Recientemente</h2>
-                <div class="insight-item">
-                    ✅ <strong>21 Mar:</strong> Dashboard público actualizado automáticamente (sistema cron cada 4h)
-                </div>
-                <div class="insight-item">
-                    ✅ <strong>20 Mar:</strong> Limitless API corregida - estructura data.lifelogs funcionando
-                </div>
-                <div class="insight-item">
-                    ✅ <strong>20 Mar:</strong> Procedimientos Odoo específicos - conciliación + nómina paleta Condugas
-                </div>
-                <div class="insight-item">
-                    ✅ <strong>19 Mar:</strong> Presentación equipo 10 slides + análisis enero 2026 (-22%)
-                </div>
-                <div class="insight-item">
-                    ✅ <strong>Sistema optimización tokens:</strong> 96% reducción, scripts JSON automáticos
-                </div>
+        <!-- Insights Alletagia Framework -->
+        <div class="card insights">
+            <h2>🎯 Insights Alletagia Framework</h2>
+            <h3>Patrones Detectados</h3>
+            <div class="insight-item">
+                <strong>Energía Intensiva Dominante:</strong> Durante crisis OYMA, patrón bifásico operaciones día + reflexión noche
             </div>
-
-            <div class="card">
-                <h2><span class="status-indicator status-info"></span>Dashboard Metrics</h2>
-                <div class="metric">
-                    <span class="metric-label">Auto-Updates Hoy</span>
-                    <span class="metric-value success">1/6 completados</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Próxima Actualización</span>
-                    <span class="metric-value">04:00 UTC (23:00 COL)</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Sistema Estado</span>
-                    <span class="metric-value success">Operativo ✅</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Git Status</span>
-                    <span class="metric-value success">Sincronizado</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 92%"></div>
-                </div>
+            <div class="insight-item">
+                <strong>Gap Crítico:</strong> Pide datos técnicos, necesita validación filosófica Ser Sendo
+            </div>
+            <div class="insight-item">
+                <strong>Alletagia Instintivo:</strong> William responsabilización vs Lina patrocinio - framework aplicado naturalmente
+            </div>
+            <div class="insight-item">
+                <strong>Transición Detectada:</strong> Gestor crisis → Arquitecto sistema (automatización)
+            </div>
+            <div class="insight-item">
+                <strong>Feedback Style:</strong> Datos reales primero, funcionalidad sobre estética, integration vs segregation
             </div>
         </div>
 
         <div class="footer">
-            <p>🎯 Dashboard Sebastián Sánchez • Sistema Ser Sendo • Framework Alletagia</p>
-            <p>Auto-actualización cada 4 horas • Próximo update: 04:00 UTC</p>
-            <p>Acceso público: <a href="https://serjefe.github.io/sendo-apps/dashboard.html" style="color: #3b82f6;">serjefe.github.io/sendo-apps/dashboard.html</a></p>
+            Dashboard público actualizado automáticamente cada 4 horas<br>
+            Sistema Sendo • Framework Alletagia • <a href="https://serjefe.github.io/sendo-apps/" style="color: #3b82f6;">Apps Completas</a>
         </div>
     </div>
+
+    <script>
+        // Auto-refresh cada 4 horas
+        setTimeout(() => window.location.reload(), 4 * 60 * 60 * 1000);
+        
+        // Animation on load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.card').forEach((card, i) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, i * 100);
+            });
+        });
+    </script>
 </body>
 </html>
