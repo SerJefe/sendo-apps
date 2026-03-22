@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Neuronal — Sistema Sebastián</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        :root {
+            --sendo-gold: #e0c05a;
+            --sendo-blue: #003f6b;
+            --sendo-blue-dark: #002b4a;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--sendo-blue-dark), var(--sendo-blue));
+            margin: 0;
+            padding: 20px;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--sendo-gold);
+            font-size: 2rem;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        
+        .info-panel {
+            position: absolute;
+            top: 80px;
+            right: 20px;
+            width: 350px;
+            height: calc(100vh - 120px);
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1000;
+            border: 1px solid var(--sendo-gold);
+        }
+        
+        .svg-container {
+            width: calc(100vw - 400px);
+            height: 100vh;
+        }
+        
+        .node {
+            cursor: pointer;
+            stroke: var(--sendo-gold);
+            stroke-width: 2;
+        }
+        
+        .node-critical { fill: #ef4444; }
+        .node-progress { fill: #f59e0b; }
+        .node-operational { fill: #10b981; }
+        .node-personal { fill: #8b5cf6; }
+        .node-knowledge { fill: #06b6d4; }
+        
+        .node:hover {
+            stroke-width: 4;
+            filter: drop-shadow(0 0 10px var(--sendo-gold));
+        }
+        
+        .link {
+            stroke: rgba(224, 192, 90, 0.6);
+            stroke-width: 2;
+            fill: none;
+        }
+        
+        .link-family { stroke: #ec4899; stroke-dasharray: 5,5; }
+        .link-business { stroke: #10b981; }
+        .link-concept { stroke: #06b6d4; stroke-dasharray: 3,3; }
+        
+        .node-label {
+            font-family: Inter, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            fill: white;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+        
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        .btn {
+            background: var(--sendo-gold);
+            color: var(--sendo-blue);
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #c8ab49;
+        }
+        
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        
+        h3 {
+            color: var(--sendo-gold);
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--sendo-gold);
+            padding-bottom: 5px;
+        }
+        
+        .detail-section {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .person-tag {
+            display: inline-block;
+            background: rgba(224, 192, 90, 0.2);
+            padding: 3px 6px;
+            border-radius: 4px;
+            margin: 2px;
+            font-size: 11px;
+        }
+        
+        .task-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            margin: 4px 0;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .priority-alta { border-left: 4px solid #ef4444; }
+        .priority-media { border-left: 4px solid #f59e0b; }
+        .priority-baja { border-left: 4px solid #10b981; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">🧠 Mapa Neuronal Sistema Sebastián</h1>
+        
+        <div class="svg-container">
+            <svg id="network"></svg>
+        </div>
+        
+        <div class="info-panel" id="infoPanel">
+            <h3>🎯 Vista General Sistema</h3>
+            <p>Haz clic en cualquier nodo para explorar detalles.</p>
+            
+            <h3>🔴 Estado Crítico</h3>
+            <div class="task-item priority-alta">
+                <strong>OYMA R1 Crisis</strong><br>
+                13 días deadline EPM<br>
+                -22% margen enero
+            </div>
+            
+            <h3>📊 Resumen Proyectos</h3>
+            <div class="detail-section">
+                <div><span class="status-indicator node-critical"></span>Condugas: Crisis + automatización</div>
+                <div><span class="status-indicator node-operational"></span>Sendo: Framework validado</div>
+                <div><span class="status-indicator node-operational"></span>SerJefe: 60+ herramientas</div>
+                <div><span class="status-indicator node-operational"></span>Casa: Rutinas establecidas</div>
+                <div><span class="status-indicator node-progress"></span>Personal: En desarrollo</div>
+            </div>
+            
+            <h3>🔗 Conexiones Activas</h3>
+            <div class="detail-section">
+                • Cami: Familia ↔ Condugas<br>
+                • Mona: Sendo ↔ Condugas<br>
+                • Ser.Siendo: Base todos proyectos<br>
+                • Alletagia: Framework aplicado
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn" onclick="resetView()">🔄 Reset</button>
+            <button class="btn" onclick="toggleLinks()">🔗 Conexiones</button>
+            <button class="btn" onclick="exportView()">📤 Exportar</button>
+        </div>
+    </div>
+
+    <script>
+        // Datos del mapa neuronal
+        const nodes = [
+            // Nodos principales (centros)
+            {id: "condugas", name: "CONDUGAS", type: "critical", x: 300, y: 200},
+            {id: "sendo", name: "SENDO\nCONSULTING", type: "operational", x: 150, y: 300},
+            {id: "serjefe", name: "SERJEFE\nALLETAGIA", type: "operational", x: 450, y: 300},
+            {id: "casa", name: "CASA\nFAMILIA", type: "operational", x: 100, y: 150},
+            {id: "personal", name: "PERSONAL", type: "progress", x: 500, y: 150},
+            {id: "modelo", name: "SER.SIENDO", type: "knowledge", x: 300, y: 400},
+            
+            // Sub-nodos importantes
+            {id: "oyma", name: "OYMA R1\nCRISIS", type: "critical", x: 350, y: 100},
+            {id: "odoo", name: "ODOO\nAUTO", type: "progress", x: 250, y: 100},
+            {id: "mona", name: "Mona", type: "operational", x: 200, y: 250},
+            {id: "lina", name: "Lina", type: "operational", x: 120, y: 350},
+            {id: "ema", name: "Ema", type: "operational", x: 180, y: 350},
+            {id: "cami", name: "Cami", type: "operational", x: 350, y: 250},
+            {id: "juan", name: "Juan", type: "operational", x: 300, y: 150},
+            {id: "andre", name: "Andre", type: "operational", x: 250, y: 250},
+            {id: "amor", name: "Amor\n(Paulina)", type: "personal", x: 50, y: 100},
+            {id: "gordo", name: "Gordo\n(Benjamín)", type: "personal", x: 50, y: 200},
+            {id: "biblioteca", name: "Biblioteca\n185 docs", type: "knowledge", x: 400, y: 450},
+            {id: "aleteagogia", name: "ALETEAGOGÍA", type: "knowledge", x: 200, y: 450}
+        ];
+
+        const links = [
+            // Conexiones principales
+            {source: "condugas", target: "oyma", type: "business"},
+            {source: "condugas", target: "odoo", type: "business"},
+            {source: "condugas", target: "cami", type: "business"},
+            {source: "condugas", target: "juan", type: "business"},
+            {source: "condugas", target: "andre", type: "business"},
+            {source: "sendo", target: "mona", type: "business"},
+            {source: "sendo", target: "lina", type: "business"},
+            {source: "sendo", target: "ema", type: "business"},
+            {source: "casa", target: "amor", type: "family"},
+            {source: "casa", target: "gordo", type: "family"},
+            
+            // Conexiones cruzadas (importantes)
+            {source: "cami", target: "casa", type: "family"}, // Sobrino + gerente
+            {source: "mona", target: "condugas", type: "business"}, // Comercial ambos
+            {source: "modelo", target: "serjefe", type: "concept"},
+            {source: "modelo", target: "sendo", type: "concept"},
+            {source: "modelo", target: "aleteagogia", type: "concept"},
+            {source: "modelo", target: "biblioteca", type: "concept"},
+            {source: "serjefe", target: "aleteagogia", type: "concept"}
+        ];
+
+        // Datos detallados para cada nodo
+        const nodeData = {
+            condugas: {
+                estado: "🔴 Crisis OYMA R1 + 🟡 Automatización",
+                personas: ["Cami (Proyectos)", "Juan (Estrategia)", "Carlos (Nuevos)", "Andre (Financiero)", "Willi (Admin)", "Naty (RRHH)", "Nelson (Logística)", "Clau (Contable)"],
+                tareas: ["Respuesta EPM (13 días)", "Datos febrero OYMA", "Feedback William", "Info contractual Ema"],
+                archivos: ["PYG_CONDUGAS_COMPLETO.xlsx", "OYMA_R1.zip", "procedimientos-condugas/"],
+                decisiones: ["Carta suspensión EPM enviada", "Roadmap automatización abril"]
+            },
+            sendo: {
+                estado: "🟢 Framework Alletagia validado",
+                personas: ["Mona (Comercial)", "Lina (Gestora)", "Ema (Desarrollador)"],
+                tareas: ["Casos Lina/Andrea tracking", "Decisión inversión"],
+                archivos: ["skills/alletagia-interventions/", "metodología"],
+                decisiones: ["Patrocinio vs responsabilidad validado"]
+            },
+            serjefe: {
+                estado: "🟢 60+ herramientas + framework completo",
+                personas: ["Sebastián (autor)", "Seguidores Instagram"],
+                tareas: ["App jefatura", "Contenido automatizado"],
+                archivos: ["Guias_seguidores/ (60+ tools)", "glosario modelo"],
+                decisiones: ["Framework jefatura operativo"]
+            },
+            casa: {
+                estado: "🟢 Rutinas establecidas",
+                personas: ["Amor (Paulina)", "Gordo (Benjamín)"],
+                tareas: ["Optimizar planificación semanal", "Integración WHOOP"],
+                archivos: ["planificador-final.html", "planificador-ejercicio.html"],
+                decisiones: ["Rutinas alimentación familia definidas"]
+            },
+            personal: {
+                estado: "🟡 En desarrollo continuo",
+                personas: ["Jogger (consejero)", "Círculo amigos"],
+                tareas: ["Tracker lecturas", "Conexión bienestar", "GoodNotes integración"],
+                archivos: ["LECTURAS.md", "inversiones", "WHOOP data"],
+                decisiones: ["Reset comportamiento + reestructuración"]
+            },
+            modelo: {
+                estado: "🟢 Base teórica completa (185 docs)",
+                personas: ["Damasio", "Kahneman", "Heidegger", "Senge"],
+                tareas: ["Contraste teórico semanal"],
+                archivos: ["referencias/01-GLOSARIO.md", "biblioteca 185 docs"],
+                decisiones: ["Terminología exacta establecida"]
+            }
+        };
+
+        // Configuración D3
+        const width = window.innerWidth - 400;
+        const height = window.innerHeight;
+        
+        const svg = d3.select("#network")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Simulación de fuerza
+        const simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(links).id(d => d.id).distance(80))
+            .force("charge", d3.forceManyBody().strength(-300))
+            .force("center", d3.forceCenter(width / 2, height / 2))
+            .force("collision", d3.forceCollide().radius(40));
+
+        // Links
+        const link = svg.append("g")
+            .selectAll("line")
+            .data(links)
+            .enter().append("line")
+            .attr("class", d => `link link-${d.type}`);
+
+        // Nodos
+        const node = svg.append("g")
+            .selectAll("circle")
+            .data(nodes)
+            .enter().append("circle")
+            .attr("class", d => `node node-${d.type}`)
+            .attr("r", d => d.type === "critical" ? 25 : d.type === "knowledge" ? 20 : 18)
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended))
+            .on("click", showNodeDetails);
+
+        // Etiquetas
+        const label = svg.append("g")
+            .selectAll("text")
+            .data(nodes)
+            .enter().append("text")
+            .attr("class", "node-label")
+            .text(d => d.name)
+            .attr("dy", d => d.name.includes('\n') ? "-5" : "4");
+
+        // Actualización simulación
+        simulation.on("tick", () => {
+            link
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+
+            node
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y);
+
+            label
+                .attr("x", d => d.x)
+                .attr("y", d => d.y);
+        });
+
+        // Funciones de interacción
+        function showNodeDetails(event, d) {
+            const data = nodeData[d.id];
+            if (!data) {
+                document.getElementById('infoPanel').innerHTML = `
+                    <h3>🎯 ${d.name}</h3>
+                    <p>Información no disponible para este nodo.</p>
+                `;
+                return;
+            }
+            
+            const priorityClass = d.type === 'critical' ? 'priority-alta' : 
+                                d.type === 'progress' ? 'priority-media' : 'priority-baja';
+            
+            document.getElementById('infoPanel').innerHTML = `
+                <h3>🎯 ${d.name}</h3>
+                
+                <div class="detail-section">
+                    <strong>Estado:</strong><br>
+                    <div class="task-item ${priorityClass}">${data.estado}</div>
+                </div>
+                
+                <div class="detail-section">
+                    <strong>👥 Personas involucradas:</strong><br>
+                    ${data.personas.map(p => `<span class="person-tag">${p}</span>`).join('')}
+                </div>
+                
+                <div class="detail-section">
+                    <strong>📋 Tareas pendientes:</strong><br>
+                    ${data.tareas.map(t => `<div class="task-item">${t}</div>`).join('')}
+                </div>
+                
+                <div class="detail-section">
+                    <strong>📁 Archivos relacionados:</strong><br>
+                    ${data.archivos.map(a => `<div style="font-family: monospace; font-size: 11px; margin: 2px 0;">${a}</div>`).join('')}
+                </div>
+                
+                <div class="detail-section">
+                    <strong>⚡ Últimas decisiones:</strong><br>
+                    ${data.decisiones.map(d => `<div class="task-item">${d}</div>`).join('')}
+                </div>
+            `;
+        }
+
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+
+        function resetView() {
+            simulation.alpha(1).restart();
+        }
+
+        function toggleLinks() {
+            const links = document.querySelectorAll('.link');
+            links.forEach(link => {
+                link.style.opacity = link.style.opacity === '0' ? '1' : '0';
+            });
+        }
+
+        function exportView() {
+            const timestamp = new Date().toISOString().split('T')[0];
+            alert(`📤 Mapa neuronal exportado\n\n✅ Estado: ${timestamp}\n✅ 6 nodos principales\n✅ ${links.length} conexiones\n✅ Sistema operativo visualizado`);
+        }
+
+        console.log('✅ Mapa Neuronal Sistema Sebastián - Loaded');
+    </script>
+</body>
+</html>
