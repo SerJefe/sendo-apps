@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Sebastián - Sistema Ser Siendo</title>
+    <title>Dashboard Sebastián - Sistema SER.SIENDO</title>
     <style>
         * {
             margin: 0;
@@ -54,29 +54,22 @@
         }
         
         .metric-card {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        .metric-title {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #fff;
-            font-weight: 600;
-        }
-        
         .metric-value {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
         
-        .metric-description {
-            font-size: 0.9rem;
+        .metric-label {
+            font-size: 1rem;
             opacity: 0.8;
             line-height: 1.4;
         }
@@ -109,32 +102,33 @@
             border-left: 4px solid;
         }
         
-        .priority-high { border-left-color: #ff6b6b; }
-        .priority-medium { border-left-color: #ffd93d; }
-        .priority-low { border-left-color: #6bcf7f; }
+        .priority-critical { border-left-color: #ff6b6b; }
+        .priority-high { border-left-color: #ffd93d; }
+        .priority-medium { border-left-color: #74c0fc; }
         
         .priority-title {
             font-weight: 600;
             margin-bottom: 8px;
+            font-size: 1.1rem;
         }
         
         .priority-description {
-            font-size: 0.9rem;
             opacity: 0.9;
             line-height: 1.4;
+            font-size: 0.95rem;
         }
         
         .team-status {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 15px;
         }
         
         .team-member {
             background: rgba(255, 255, 255, 0.1);
             padding: 15px;
-            border-radius: 10px;
+            border-radius: 8px;
             text-align: center;
         }
         
@@ -146,35 +140,81 @@
         .member-role {
             font-size: 0.9rem;
             opacity: 0.8;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         
         .member-status {
-            padding: 4px 8px;
+            padding: 5px 10px;
             border-radius: 15px;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 500;
         }
         
         .footer {
             text-align: center;
             margin-top: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
             font-size: 0.9rem;
-            opacity: 0.7;
         }
         
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .metrics-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .team-status {
-                grid-template-columns: 1fr;
-            }
+        /* Estilos Resumen Semanal */
+        .weekly-summary {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        
+        .summary-section {
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .summary-section h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .summary-section ul {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+        
+        .summary-section li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .projects-status {
+            display: grid;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .project-item {
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+        
+        .project-item.critical {
+            background: rgba(239, 68, 68, 0.2);
+            border-left: 4px solid #ef4444;
+        }
+        
+        .project-item.progress {
+            background: rgba(245, 158, 11, 0.2);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .project-item.operational {
+            background: rgba(16, 185, 129, 0.2);
+            border-left: 4px solid #10b981;
         }
     </style>
 </head>
@@ -182,78 +222,102 @@
     <div class="container">
         <div class="header">
             <h1>🎯 Dashboard Sebastián</h1>
-            <div class="subtitle">Sistema Integral Ser Siendo • Modelo Alletagia</div>
-            <div class="last-update">Última actualización: 22 marzo 2026, 02:00 UTC • 21:00 COL</div>
+            <div class="subtitle">Sistema Integral SER.SIENDO</div>
+            <div class="last-update">🔄 Actualización: 22 marzo 2026 • 19:30 COL</div>
         </div>
         
         <div class="metrics-grid">
             <div class="metric-card">
-                <div class="metric-title">🔴 Estado Crisis OYMA</div>
-                <div class="metric-value status-critical">CRÍTICO</div>
-                <div class="metric-description">
-                    • Enero 2026: -$280M UAI (-22,2%)<br>
-                    • EPM debe $400M ambientales<br>
-                    • Carta suspensión enviada 19 marzo<br>
-                    • Respuesta esperada: máximo 4 abril
-                </div>
+                <div class="metric-value status-critical">13</div>
+                <div class="metric-label">Días restantes<br>Crisis OYMA R1</div>
             </div>
             
             <div class="metric-card">
-                <div class="metric-title">📊 Automatización Condugas</div>
-                <div class="metric-value status-info">2/10</div>
-                <div class="metric-description">
-                    Procedimientos completados<br>
-                    • Conciliación bancaria ✅<br>
-                    • Nómina por contrato ✅<br>
-                    ROI: $11-18 mil millones/año<br>
-                    Personal: 452 → 200-250
-                </div>
+                <div class="metric-value status-warning">2/10</div>
+                <div class="metric-label">Procedimientos Odoo<br>Completados</div>
             </div>
             
             <div class="metric-card">
-                <div class="metric-title">👥 Desarrollo Humano</div>
-                <div class="metric-value status-warning">ACTIVO</div>
-                <div class="metric-description">
-                    Framework Alletagia en acción:<br>
-                    • Lina: Patrocinio (energía expansiva)<br>
-                    • Andrea: Responsabilidad (intensiva)<br>
-                    • Natalia: Transición a directora
-                </div>
+                <div class="metric-value status-good">8</div>
+                <div class="metric-label">Proyectos Activos<br>Estructurados</div>
             </div>
             
             <div class="metric-card">
-                <div class="metric-title">🚀 Proyectos Estratégicos</div>
-                <div class="metric-value status-good">3</div>
-                <div class="metric-description">
-                    • Mesa Camacol 27 marzo (12.5B)<br>
-                    • Sistema IA directores aceptado<br>
-                    • OpenClaw deployment Ema<br>
-                    Limitless: 10 logs 20 marzo completos
+                <div class="metric-value status-info">60+</div>
+                <div class="metric-label">Herramientas SerJefe<br>Operativas</div>
+            </div>
+        </div>
+        
+        <!-- RESUMEN SEMANAL -->
+        <div class="priorities-section">
+            <div class="section-title">📅 Resumen Semanal (18-22 marzo 2026)</div>
+            
+            <div class="weekly-summary">
+                <div class="summary-section">
+                    <h4>🎯 Resumen Ejecutivo</h4>
+                    <p><strong>Transición Arquitecto Confirmada:</strong> Evolución exitosa de "gestor crisis reactivo" a "arquitecto sistemas proactivos". Sebastián opera con horarios bifásicos estables (16:00-20:00 operación + 22:00-24:00 reflexión cultural). Sistema auto-operativo funcionando.</p>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>⚡ Decisiones Importantes</h4>
+                    <ul>
+                        <li><strong>OYMA R1:</strong> Carta suspensión EPM enviada estratégicamente (deadline 4 abril)</li>
+                        <li><strong>Framework Alletagia validado:</strong> Lina (patrocinio/energía expansiva) vs Andrea (responsabilidad/energía intensiva)</li>
+                        <li><strong>Sistema reestructurado:</strong> 8 proyectos → sub-proyectos con estructura jerárquica clara</li>
+                        <li><strong>Terminología exacta:</strong> SER.SIENDO, Aleteagogía, Jefatura (nunca liderazgo)</li>
+                    </ul>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>📋 Tareas Top Semana</h4>
+                    <ul>
+                        <li>🔴 <strong>Datos febrero OYMA:</strong> Críticos para negociación EPM</li>
+                        <li>🟡 <strong>William feedback:</strong> 3 puntos conversación Aleteagogía pendiente</li>
+                        <li>🟡 <strong>Info Ema Odoo:</strong> Datos contractuales para automatización</li>
+                        <li>🟢 <strong>Dashboard público:</strong> Auto-actualización operativa</li>
+                    </ul>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>📊 Estado Proyectos</h4>
+                    <div class="projects-status">
+                        <div class="project-item critical">🔴 <strong>OYMA R1:</strong> Crisis activa - 13 días deadline EPM</div>
+                        <div class="project-item progress">🟡 <strong>Condugas Automatización:</strong> 2/10 procedimientos Odoo</div>
+                        <div class="project-item operational">🟢 <strong>Sendo Consulting:</strong> Framework Alletagia validado</div>
+                        <div class="project-item operational">🟢 <strong>SerJefe:</strong> 60+ herramientas operativas</div>
+                        <div class="project-item progress">🟡 <strong>Construcción Casa:</strong> Planificación activa</div>
+                        <div class="project-item operational">🟢 <strong>Casa Rutinas:</strong> Planificadores funcionando</div>
+                    </div>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>🧠 Análisis Patrón Comportamental</h4>
+                    <p><strong>Confirmación Transición:</strong> Las sesiones musicales profundas (jazz brasileño, Bossa Nova) son celebración de coherencia lograda, NO escape de crisis. Delegación inteligente crisis OYMA + sistema auto-operativo = arquitecto sistemas consolidado. Riesgo regresión: 35% si crisis inesperada requiere intervención directa.</p>
                 </div>
             </div>
         </div>
         
         <div class="priorities-section">
-            <div class="section-title">🎯 Prioridades Activas</div>
+            <div class="section-title">🔥 Prioridades Inmediatas</div>
             
-            <div class="priority-item priority-high">
-                <div class="priority-title">1. Respuesta EPM - OYMA R1</div>
+            <div class="priority-item priority-critical">
+                <div class="priority-title">1. Datos febrero OYMA R1 - Andrea</div>
                 <div class="priority-description">
-                    Monitorear respuesta EPM a carta suspensión. Crisis confirmada: -22% margen enero + $400M ítems ambientales. Timeline: máximo 15 días = hasta 4 abril.
+                    CRÍTICO para negociación EPM. Análisis deterioro margen vs enero (-22%). Sebastián necesita posición técnica sólida antes 4 abril.
                 </div>
             </div>
             
             <div class="priority-item priority-high">
-                <div class="priority-title">2. Datos febrero análisis deterioro</div>
+                <div class="priority-title">2. Mesa Camacol - Carlos</div>
                 <div class="priority-description">
-                    Recibir datos febrero OYMA para confirmar deterioro vs enero. Responsables: Andrea (costos), Camilo (producción), Natalia (headcount).
+                    27 marzo, 12.5 billones destrabados. Oportunidad estratégica nuevos negocios. Seguimiento activo requerido.
                 </div>
             </div>
             
             <div class="priority-item priority-medium">
-                <div class="priority-title">3. Seguimiento William - Letagogía</div>
+                <div class="priority-title">3. Seguimiento William - Aleteagogía</div>
                 <div class="priority-description">
-                    Escribir 3 puntos: (a) qué sigue con Lina (sponsorship), (b) Siendo Consulting, (c) gastos IA en Condugas. A Lina se patrocina, a William se pone a trabajar.
+                    Escribir 3 puntos: (a) qué sigue con Lina (sponsorship), (b) Sendo Consulting, (c) gastos IA en Condugas. A Lina se patrocina, a William se pone a trabajar.
                 </div>
             </div>
             
