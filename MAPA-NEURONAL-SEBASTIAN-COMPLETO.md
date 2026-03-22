@@ -11,7 +11,7 @@
 - **COHERENCIA = EMOCIÓN + PENSAMIENTO + ACCIÓN** alineados
 - **Tres decisiones**: Sobrevivir → Control → Desarrollo
 - **Tres motivadores**: Identidad + Autonomía + Disfrute
-- **Letagogía**: (palabra creada) = desarrollo potencial through conversaciones
+- **Aleteagogía**: (palabra creada por Sebastián) = conducción activa hacia verdad desvelada a través conversaciones
 
 ### Alletagia - Framework Jefatura Aplicado
 - **Diagnóstico energético**: Expansiva vs Intensiva (no temperamentos)

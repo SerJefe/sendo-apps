@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sebastián - Sistema SER.SIENDO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        
+        .last-update {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .metric-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+        
+        .status-critical { color: #ff6b6b; }
+        .status-warning { color: #ffd93d; }
+        .status-good { color: #6bcf7f; }
+        .status-info { color: #74c0fc; }
+        
+        .priorities-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .priority-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid;
+        }
+        
+        .priority-critical { border-left-color: #ff6b6b; }
+        .priority-high { border-left-color: #ffd93d; }
+        .priority-medium { border-left-color: #74c0fc; }
+        
+        .priority-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .priority-description {
+            opacity: 0.9;
+            line-height: 1.4;
+            font-size: 0.95rem;
+        }
+        
+        .team-status {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .team-member {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .member-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .member-role {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        .member-status {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* Estilos Resumen Semanal */
+        .weekly-summary {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        
+        .summary-section {
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .summary-section h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .summary-section ul {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+        
+        .summary-section li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .projects-status {
+            display: grid;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .project-item {
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+        
+        .project-item.critical {
+            background: rgba(239, 68, 68, 0.2);
+            border-left: 4px solid #ef4444;
+        }
+        
+        .project-item.progress {
+            background: rgba(245, 158, 11, 0.2);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .project-item.operational {
+            background: rgba(16, 185, 129, 0.2);
+            border-left: 4px solid #10b981;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Dashboard Sebastián</h1>
+            <div class="subtitle">Sistema Integral SER.SIENDO</div>
+            <div class="last-update">🔄 Actualización: 22 marzo 2026 • 19:30 COL</div>
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value status-critical">13</div>
+                <div class="metric-label">Días restantes<br>Crisis OYMA R1</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value status-warning">2/10</div>
+                <div class="metric-label">Procedimientos Odoo<br>Completados</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value status-good">8</div>
+                <div class="metric-label">Proyectos Activos<br>Estructurados</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value status-info">60+</div>
+                <div class="metric-label">Herramientas SerJefe<br>Operativas</div>
+            </div>
+        </div>
+        
+        <!-- RESUMEN SEMANAL -->
+        <div class="priorities-section">
+            <div class="section-title">📅 Resumen Semanal (18-22 marzo 2026)</div>
+            
+            <div class="weekly-summary">
+                <div class="summary-section">
+                    <h4>🎯 Resumen Ejecutivo</h4>
+                    <p><strong>Transición Arquitecto Confirmada:</strong> Evolución exitosa de "gestor crisis reactivo" a "arquitecto sistemas proactivos". Sebastián opera con horarios bifásicos estables (16:00-20:00 operación + 22:00-24:00 reflexión cultural). Sistema auto-operativo funcionando.</p>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>⚡ Decisiones Importantes</h4>
+                    <ul>
+                        <li><strong>OYMA R1:</strong> Carta suspensión EPM enviada estratégicamente (deadline 4 abril)</li>
+                        <li><strong>Framework Alletagia validado:</strong> Lina (patrocinio/energía expansiva) vs Andrea (responsabilidad/energía intensiva)</li>
+                        <li><strong>Sistema reestructurado:</strong> 8 proyectos → sub-proyectos con estructura jerárquica clara</li>
+                        <li><strong>Terminología exacta:</strong> SER.SIENDO, Aleteagogía, Jefatura (nunca liderazgo)</li>
+                    </ul>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>📋 Tareas Top Semana</h4>
+                    <ul>
+                        <li>🔴 <strong>Datos febrero OYMA:</strong> Críticos para negociación EPM</li>
+                        <li>🟡 <strong>William feedback:</strong> 3 puntos conversación Aleteagogía pendiente</li>
+                        <li>🟡 <strong>Info Ema Odoo:</strong> Datos contractuales para automatización</li>
+                        <li>🟢 <strong>Dashboard público:</strong> Auto-actualización operativa</li>
+                    </ul>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>📊 Estado Proyectos</h4>
+                    <div class="projects-status">
+                        <div class="project-item critical">🔴 <strong>OYMA R1:</strong> Crisis activa - 13 días deadline EPM</div>
+                        <div class="project-item progress">🟡 <strong>Condugas Automatización:</strong> 2/10 procedimientos Odoo</div>
+                        <div class="project-item operational">🟢 <strong>Sendo Consulting:</strong> Framework Alletagia validado</div>
+                        <div class="project-item operational">🟢 <strong>SerJefe:</strong> 60+ herramientas operativas</div>
+                        <div class="project-item progress">🟡 <strong>Construcción Casa:</strong> Planificación activa</div>
+                        <div class="project-item operational">🟢 <strong>Casa Rutinas:</strong> Planificadores funcionando</div>
+                    </div>
+                </div>
+                
+                <div class="summary-section">
+                    <h4>🧠 Análisis Patrón Comportamental</h4>
+                    <p><strong>Confirmación Transición:</strong> Las sesiones musicales profundas (jazz brasileño, Bossa Nova) son celebración de coherencia lograda, NO escape de crisis. Delegación inteligente crisis OYMA + sistema auto-operativo = arquitecto sistemas consolidado. Riesgo regresión: 35% si crisis inesperada requiere intervención directa.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="priorities-section">
+            <div class="section-title">🔥 Prioridades Inmediatas</div>
+            
+            <div class="priority-item priority-critical">
+                <div class="priority-title">1. Datos febrero OYMA R1 - Andrea</div>
+                <div class="priority-description">
+                    CRÍTICO para negociación EPM. Análisis deterioro margen vs enero (-22%). Sebastián necesita posición técnica sólida antes 4 abril.
+                </div>
+            </div>
+            
+            <div class="priority-item priority-high">
+                <div class="priority-title">2. Mesa Camacol - Carlos</div>
+                <div class="priority-description">
+                    27 marzo, 12.5 billones destrabados. Oportunidad estratégica nuevos negocios. Seguimiento activo requerido.
+                </div>
+            </div>
+            
+            <div class="priority-item priority-medium">
+                <div class="priority-title">3. Seguimiento William - Aleteagogía</div>
+                <div class="priority-description">
+                    Escribir 3 puntos: (a) qué sigue con Lina (sponsorship), (b) Sendo Consulting, (c) gastos IA en Condugas. A Lina se patrocina, a William se pone a trabajar.
+                </div>
+            </div>
+            
+            <div class="priority-item priority-medium">
+                <div class="priority-title">4. Info contractual Ema - Odoo</div>
+                <div class="priority-description">
+                    Pasar info contractual actualizada para montar contabilidad y nómina en Odoo. Procedimientos específicos ya creados, necesita datos para implementar.
+                </div>
+            </div>
+        </div>
+        
+        <div class="priorities-section">
+            <div class="section-title">👥 Estado Equipo Alletagia</div>
+            <div class="team-status">
+                <div class="team-member">
+                    <div class="member-name">Lina</div>
+                    <div class="member-role">Gestora Siendo</div>
+                    <div class="member-status status-warning">Patrocinio Activo</div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-name">Ema</div>
+                    <div class="member-role">Desarrollo</div>
+                    <div class="member-status status-good">Setup OpenClaw</div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-name">Andrea</div>
+                    <div class="member-role">Financiero Condugas</div>
+                    <div class="member-status status-critical">Datos Febrero Urgente</div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-name">William</div>
+                    <div class="member-role">Admin Condugas</div>
+                    <div class="member-status status-warning">Sistema IA Activo</div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-name">Natalia</div>
+                    <div class="member-role">RRHH Condugas</div>
+                    <div class="member-status status-warning">Transición</div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-name">Carlos</div>
+                    <div class="member-role">Nuevos Negocios</div>
+                    <div class="member-status status-info">Mesa Camacol</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Dashboard público • Sistema integral de decisión Sebastián Sánchez<br>
+            Powered by OpenClaw + Alletagia Framework<br>
+            🔄 Auto-actualización cada 6 horas
+        </div>
+    </div>
+</body>
+</html>

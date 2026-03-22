@@ -1,6 +1,6 @@
 # Tareas Activas — Sebastián
 
-> Última actualización: 2026-03-22 01:15 UTC | 20:15 COL-1 (Auto-updated from dashboard cron)
+> Última actualización: 2026-03-22 01:30 UTC | 20:30 COL-1 (Auto-updated from dashboard cron)
 
 ## 🔴 Alta prioridad
 

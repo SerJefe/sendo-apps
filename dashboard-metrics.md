@@ -1,16 +1,17 @@
-# Dashboard Metrics — 2026-03-22 01:00 UTC
+# Dashboard Metrics — 2026-03-22 02:00 UTC
 
 ## Crisis OYMA R1 Status
 - **Estado crítico**: -$280M UAI enero (-22,2% margen)
 - **Deadline EPM**: 4 abril (respuesta carta suspensión)
 - **Datos febrero**: PENDIENTE - crítico para posición negociación
 - **Timeline**: 13 días restantes para decisión renegociar vs terminar
+- **Update status**: Monitoreando respuesta EPM (carta enviada estratégicamente)
 
 ## Team Alletagia Development
 - **Lina (patrocinio)**: Reunión Ema completada, patrón expansivo confirmado ✅
-- **Andrea (responsabilidad)**: Entrega datos pendiente - deadline crítico hoy
+- **Andrea (responsabilidad)**: Datos febrero críticos - deadline para negociación EPM
 - **Framework**: Potencial vs Capacidad validado operacionalmente
-- **William responsabilización**: Pendiente 3 puntos concretos 
+- **William responsabilización**: Pendiente 3 puntos concretos (Lina sponsorship + Siendo + gastos IA) 
 
 ## Automatización Condugas Progress
 - **Procedimientos**: 2/10 implementados (bancaria + nómina Odoo)
