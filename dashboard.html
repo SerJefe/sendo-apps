@@ -1,315 +1,433 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Sebastián - Sistema Ser Siendo</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .header .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 5px;
-        }
-        
-        .last-update {
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-        
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .metric-card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .metric-title {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #fff;
-            font-weight: 600;
-        }
-        
-        .metric-value {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .metric-description {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            line-height: 1.4;
-        }
-        
-        .status-critical { color: #ff6b6b; }
-        .status-warning { color: #ffd93d; }
-        .status-good { color: #6bcf7f; }
-        .status-info { color: #74c0fc; }
-        
-        .priorities-section {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .section-title {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        
-        .priority-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 4px solid;
-        }
-        
-        .priority-high { border-left-color: #ff6b6b; }
-        .priority-medium { border-left-color: #ffd93d; }
-        .priority-low { border-left-color: #6bcf7f; }
-        
-        .priority-title {
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        
-        .priority-description {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            line-height: 1.4;
-        }
-        
-        .team-status {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .team-member {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        
-        .member-name {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .member-role {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-bottom: 8px;
-        }
-        
-        .member-status {
-            padding: 4px 8px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .metrics-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .team-status {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Sebastián — Sistema SER.SENDO</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Instrument+Serif&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+ --bg: #07090d;
+ --surface: #0e1218;
+ --surface2: #141a24;
+ --surface3: #1a2232;
+ --border: #1e2a3a;
+ --border-hover: #2a3a50;
+ --text: #e2e8f0;
+ --text-dim: #64748b;
+ --text-muted: #475569;
+ --cyan: #06b6d4;
+ --cyan-glow: rgba(6,182,212,0.15);
+ --orange: #f97316;
+ --orange-glow: rgba(249,115,22,0.15);
+ --green: #22c55e;
+ --green-dim: rgba(34,197,94,0.15);
+ --red: #ef4444;
+ --red-dim: rgba(239,68,68,0.15);
+ --yellow: #eab308;
+ --yellow-dim: rgba(234,179,8,0.15);
+ --purple: #a78bfa;
+}
+
+body {
+ background: var(--bg);
+ color: var(--text);
+ font-family: 'DM Sans', system-ui, sans-serif;
+ margin: 0;
+ padding: 20px;
+ min-height: 100vh;
+ font-size: 14px;
+ line-height: 1.5;
+}
+
+.dashboard-container {
+ max-width: 1400px;
+ margin: 0 auto;
+ display: grid;
+ gap: 25px;
+}
+
+.header-section {
+ text-align: center;
+ background: linear-gradient(135deg, var(--surface2), var(--surface3));
+ padding: 30px;
+ border-radius: 15px;
+ border: 1px solid var(--border);
+ box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.main-title {
+ font-family: 'Instrument Serif', serif;
+ font-size: 2.2rem;
+ margin: 0 0 10px 0;
+ background: linear-gradient(135deg, var(--cyan), var(--orange));
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-weight: 700;
+}
+
+.subtitle {
+ font-size: 1rem;
+ color: var(--text-dim);
+ margin: 0;
+}
+
+.timestamp {
+ margin-top: 15px;
+ padding: 8px 16px;
+ background: var(--cyan-glow);
+ border: 1px solid var(--cyan);
+ border-radius: 8px;
+ display: inline-block;
+ font-family: 'JetBrains Mono', monospace;
+ font-size: 0.85rem;
+ color: var(--cyan);
+}
+
+.metrics-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ gap: 20px;
+}
+
+.metric-card {
+ background: var(--surface2);
+ border: 1px solid var(--border);
+ border-radius: 12px;
+ padding: 20px;
+ transition: all 0.3s ease;
+ box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.metric-card:hover {
+ border-color: var(--border-hover);
+ transform: translateY(-2px);
+ box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.metric-title {
+ font-size: 0.9rem;
+ font-weight: 600;
+ margin-bottom: 12px;
+ color: var(--text-dim);
+ display: flex;
+ align-items: center;
+ gap: 8px;
+}
+
+.metric-value {
+ font-size: 1.8rem;
+ font-weight: 700;
+ margin-bottom: 8px;
+ font-family: 'JetBrains Mono', monospace;
+}
+
+.metric-description {
+ font-size: 0.85rem;
+ color: var(--text-dim);
+ line-height: 1.4;
+}
+
+.status-critical { color: var(--red); }
+.status-warning { color: var(--yellow); }
+.status-good { color: var(--green); }
+.status-info { color: var(--cyan); }
+
+.priorities-section {
+ background: var(--surface2);
+ border: 1px solid var(--border);
+ border-radius: 12px;
+ padding: 25px;
+ box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+ font-size: 1.1rem;
+ margin-bottom: 20px;
+ font-weight: 600;
+ color: var(--text);
+ display: flex;
+ align-items: center;
+ gap: 10px;
+}
+
+.priority-item {
+ background: var(--surface3);
+ padding: 15px;
+ border-radius: 10px;
+ margin-bottom: 15px;
+ border-left: 4px solid;
+ transition: all 0.2s ease;
+}
+
+.priority-item:hover {
+ background: var(--border);
+}
+
+.priority-critical { border-left-color: var(--red); }
+.priority-high { border-left-color: var(--orange); }
+.priority-medium { border-left-color: var(--yellow); }
+.priority-low { border-left-color: var(--green); }
+
+.priority-title {
+ font-weight: 600;
+ margin-bottom: 8px;
+ color: var(--text);
+}
+
+.priority-description {
+ font-size: 0.9rem;
+ color: var(--text-dim);
+ line-height: 1.4;
+}
+
+.completed-section {
+ background: var(--green-dim);
+ border: 1px solid var(--green);
+ border-radius: 12px;
+ padding: 25px;
+}
+
+.completed-item {
+ background: rgba(34, 197, 94, 0.1);
+ padding: 12px;
+ border-radius: 8px;
+ margin-bottom: 10px;
+ border-left: 3px solid var(--green);
+}
+
+.team-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 15px;
+ margin-top: 20px;
+}
+
+.team-member {
+ background: var(--surface3);
+ padding: 15px;
+ border-radius: 10px;
+ text-align: center;
+ border: 1px solid var(--border);
+}
+
+.member-name {
+ font-weight: 600;
+ margin-bottom: 5px;
+}
+
+.member-role {
+ font-size: 0.9rem;
+ color: var(--text-dim);
+ margin-bottom: 8px;
+}
+
+.member-status {
+ padding: 4px 8px;
+ border-radius: 6px;
+ font-size: 0.8rem;
+ font-weight: 500;
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🎯 Dashboard Sebastián</h1>
-            <div class="subtitle">Sistema Integral Ser Siendo • Modelo Alletagia</div>
-            <div class="last-update">Última actualización: 23 marzo 2026, 01:40 COL • WHOOP token requiere renovación</div>
+    <div class="dashboard-container">
+        <div class="header-section">
+            <h1 class="main-title">Dashboard Sebastián</h1>
+            <p class="subtitle">Sistema SER.SIENDO — Arquitecto de Sistemas</p>
+            <div class="timestamp">Actualizado: 25 marzo 2026 • 3:25 PM COL</div>
         </div>
         
         <div class="metrics-grid">
             <div class="metric-card">
-                <div class="metric-title">🔴 Estado Crisis OYMA</div>
-                <div class="metric-value status-critical">CRÍTICO</div>
+                <div class="metric-title">🔥 Crisis OYMA R1</div>
+                <div class="metric-value status-critical">9 DÍAS</div>
                 <div class="metric-description">
-                    • Enero 2026: -$280M UAI (-22,2%)<br>
-                    • EPM debe $400M ambientales<br>
-                    • Carta suspensión enviada 19 marzo<br>
-                    • Respuesta esperada: máximo 4 abril
+                    Deadline EPM: 4 abril<br>
+                    • PowerPoint desequilibrio listo: $3.300M<br>
+                    • Estrategia Camacol estructurada<br>
+                    • Feb: -55.2% margen (-$611M UAI)
                 </div>
             </div>
             
             <div class="metric-card">
                 <div class="metric-title">📊 WHOOP Status Hoy</div>
-                <div class="metric-value status-warning">—</div>
+                <div class="metric-value status-warning">67%</div>
                 <div class="metric-description">
-                    Recovery: Sin datos<br>
-                    • Sleep: 4h56m (Performance 55%)<br>
-                    • Sleep debt: 1h38m | Cycles: 4<br>
-                    ⚠️ Poco sueño - día para tomar con calma
+                    Recovery: Sin datos disponibles<br>
+                    • Sleep: 6h28m (Performance 67%)<br>
+                    • Sleep debt: 2h07m | Eficiencia: 84.8%<br>
+                    ⚠️ Día moderado sin recovery data
                 </div>
             </div>
             
             <div class="metric-card">
-                <div class="metric-title">👥 Desarrollo Humano</div>
-                <div class="metric-value status-warning">ACTIVO</div>
+                <div class="metric-title">⚡ Transformación</div>
+                <div class="metric-value status-good">CONSOLIDADA</div>
                 <div class="metric-description">
-                    Framework Alletagia en acción:<br>
-                    • Lina: Patrocinio (energía expansiva)<br>
-                    • Andrea: Responsabilidad (intensiva)<br>
-                    • Natalia: Transición a directora
+                    Arquitecto de Sistemas funcionando:<br>
+                    • Delegación inteligente activa<br>
+                    • Equipos trabajando autónomamente<br>
+                    • "No convencer, exigir" validado
                 </div>
             </div>
             
             <div class="metric-card">
-                <div class="metric-title">🚀 Proyectos Estratégicos</div>
-                <div class="metric-value status-good">3</div>
+                <div class="metric-title">💰 Estado Financiero</div>
+                <div class="metric-value status-warning">MIXTO</div>
                 <div class="metric-description">
-                    • Mesa Camacol 27 marzo (12.5B)<br>
-                    • Sistema IA formalizado<br>
-                    • OpenClaw deployment Ema<br>
-                    Limitless: Última captura 20 marzo
+                    Feb vs Enero (+$487M consolidado):<br>
+                    • Sin OYMA: +$332M UAI proyectado<br>
+                    • 3 contratos recuperados (Z2, Valle, Boyacá)<br>
+                    • Margen: -6.6% vs -22.8% enero
                 </div>
             </div>
         </div>
         
         <div class="priorities-section">
-            <div class="section-title">🎯 Prioridades Activas</div>
+            <div class="section-title">🎯 Tareas Críticas Esta Semana</div>
             
-            <div class="priority-item priority-high">
-                <div class="priority-title">1. Respuesta EPM - OYMA R1</div>
+            <div class="priority-item priority-critical">
+                <div class="priority-title">1. Reducción Personal - Trazabilidad Riesgos</div>
                 <div class="priority-description">
-                    Monitorear respuesta EPM a carta suspensión. Crisis confirmada: -22% margen enero + $400M ítems ambientales. Timeline: máximo 15 días = hasta 4 abril.
+                    Metodología "primero despedir, luego automatizar" CON análisis completo: riesgos contractuales, jurídicos y de cumplimiento. Más allá del 6.5% administrativo.
+                </div>
+            </div>
+            
+            <div class="priority-item priority-critical">
+                <div class="priority-title">2. Revisiones P&G - Reducciones Urgentes</div>
+                <div class="priority-description">
+                    Equipos analizando valores Estado Pérdidas y Ganancias. Meta: identificar dónde hacer reducciones urgentes esta semana. Tu supervisión activa requerida.
                 </div>
             </div>
             
             <div class="priority-item priority-high">
-                <div class="priority-title">2. Datos febrero análisis deterioro</div>
+                <div class="priority-title">3. Presentación EPM - Finalización</div>
                 <div class="priority-description">
-                    Recibir datos febrero OYMA para confirmar deterioro vs enero. Responsables: Andrea (costos), Camilo (producción), Natalia (headcount).
+                    PowerPoint técnico listo. Confirmar fecha presentación. Dos frentes: ítems ambientales ($322M + $1.031M) + desequilibrio reajustes ($320M+). Art. 27 Ley 80/1993.
                 </div>
             </div>
             
             <div class="priority-item priority-medium">
-                <div class="priority-title">3. Seguimiento William - Letagogía</div>
+                <div class="priority-title">4. Composición Vertical Costos OYMA</div>
                 <div class="priority-description">
-                    Escribir 3 puntos: (a) qué sigue con Lina (sponsorship), (b) Siendo Consulting, (c) gastos IA en Condugas. A Lina se patrocina, a William se pone a trabajar.
-                </div>
-            </div>
-            
-            <div class="priority-item priority-medium">
-                <div class="priority-title">4. Info contractual Ema - Odoo</div>
-                <div class="priority-description">
-                    Pasar info contractual actualizada para montar contabilidad y nómina en Odoo. Procedimientos específicos ya creados, necesita datos para implementar.
+                    Análisis 10 costos más grandes por cuenta vs febrero anterior. Necesario para decisiones reducción. Pendiente acceso Power BI/Excel empresarial.
                 </div>
             </div>
         </div>
         
+        <div class="completed-section">
+            <div class="section-title">✅ Completado Hoy (Archivo Consultable)</div>
+            
+            <div class="completed-item">
+                <strong>PowerPoint Desequilibrio Económico</strong><br>
+                CW350951 v3 - 7 slides técnico-jurídicos. Dos frentes $3.300M mínimo. Base Art. 27 Ley 80/1993 + Teoría imprevisión.
+            </div>
+            
+            <div class="completed-item">
+                <strong>Estrategia EPM-Camacol</strong><br>
+                Argumentos técnicos: fórmula Camacol 22% vs 45% peso real. Proporción ayudantes/oficiales diferente. "Constructores Y contratistas".
+            </div>
+            
+            <div class="completed-item">
+                <strong>Red Neuronal Decisiones</strong><br>
+                Framework Juan Esteban publicado: NO quiere → SÍ quiere → RENUNCIO. Herramienta aplicable otros casos.
+            </div>
+            
+            <div class="completed-item">
+                <strong>Sistema Organización Contratos</strong><br>
+                Dashboard visual funcionando: contratos (punteados), personas (llenos), crisis (rojos), delegaciones (azul). NUSI identificada.
+            </div>
+            
+            <div class="completed-item">
+                <strong>Limitless Procesamiento COMPLETO</strong><br>
+                25 transcripciones 24-mar procesadas vs 4 iniciales. Configuración corregida: SIEMPRE procesar TODAS usando resúmenes automáticos.
+            </div>
+        </div>
+        
         <div class="priorities-section">
-            <div class="section-title">👥 Estado Equipo Alletagia</div>
-            <div class="team-status">
+            <div class="section-title">👥 Estado Equipo - Delegación Activa</div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-name">Andre</div>
+                    <div class="member-role">Director Financiero</div>
+                    <div class="member-status status-warning">Datos Feb + P&G</div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-name">Camilo</div>
+                    <div class="member-role">Gerente Proyectos</div>
+                    <div class="member-status status-good">Estrategia EPM</div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-name">Juan Guillermo</div>
+                    <div class="member-role">Gerente Estrategia</div>
+                    <div class="member-status status-info">Análisis Riesgos</div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-name">Equipos</div>
+                    <div class="member-role">P&G Reviews</div>
+                    <div class="member-status status-warning">En Proceso</div>
+                </div>
+                
                 <div class="team-member">
                     <div class="member-name">Lina</div>
                     <div class="member-role">Gestora Siendo</div>
-                    <div class="member-status status-warning">Patrocinio Activo</div>
+                    <div class="member-status status-good">Patrocinio Activo</div>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-name">Ema</div>
-                    <div class="member-role">Desarrollo</div>
-                    <div class="member-status status-good">Setup OpenClaw</div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-name">Andrea</div>
-                    <div class="member-role">Financiero Condugas</div>
-                    <div class="member-status status-critical">Datos Febrero</div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-name">William</div>
-                    <div class="member-role">Admin Condugas</div>
-                    <div class="member-status status-warning">Seguimiento IA</div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-name">Natalia</div>
-                    <div class="member-role">RRHH Condugas</div>
-                    <div class="member-status status-warning">Transición</div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-name">Carlos</div>
-                    <div class="member-role">Nuevos Negocios</div>
-                    <div class="member-status status-info">Mesa Camacol</div>
+                    <div class="member-role">Desarrollador</div>
+                    <div class="member-status status-info">Odoo Info Pendiente</div>
                 </div>
             </div>
         </div>
         
-        <div class="footer">
-            Dashboard público • Sistema integral de decisión Sebastián Sánchez<br>
-            Powered by OpenClaw + Alletagia Framework<br>
-            🔄 Auto-actualización cada 6 horas
+        <div class="priorities-section">
+            <div class="section-title">📈 Mañana 26 Marzo - Pipeline</div>
+            
+            <div class="priority-item priority-high">
+                <div class="priority-title">Consolidar Hallazgos Revisiones P&G</div>
+                <div class="priority-description">
+                    Recibir resultados análisis equipos. Identificar reducciones específicas más urgentes para implementar.
+                </div>
+            </div>
+            
+            <div class="priority-item priority-high">
+                <div class="priority-title">Finalizar Análisis Riesgos Contractuales</div>
+                <div class="priority-description">
+                    Completar trazabilidad riesgos para reducción personal. Matriz: contractual + jurídico + cumplimiento.
+                </div>
+            </div>
+            
+            <div class="priority-item priority-medium">
+                <div class="priority-title">Briefing Matutino Contextualizado</div>
+                <div class="priority-description">
+                    Limitless COMPLETO procesado (configuración corregida). Contexto continuo sin "iniciar de nuevo" cada sesión.
+                </div>
+            </div>
         </div>
     </div>
+    
+    <script>
+        // Auto-refresh timestamp
+        document.addEventListener('DOMContentLoaded', function() {
+            const timestamp = document.querySelector('.timestamp');
+            const now = new Date().toLocaleString('es-CO', {
+                timeZone: 'America/Bogota',
+                day: '2-digit',
+                month: 'long',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            // Keep static timestamp for consistency
+            console.log('Dashboard loaded:', now);
+        });
+    </script>
 </body>
 </html>
