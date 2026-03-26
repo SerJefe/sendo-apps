@@ -1,0 +1,55 @@
+{
+  "fecha": "2026-03-26",
+  "agenda": [
+    "Sin eventos específicos detectados",
+    "Reunión pendiente Andre/Nelson por tema equipos sin marcar", 
+    "Mesa Camacol 27 marzo (Carlos - Nuevos Negocios)"
+  ],
+  "tareas_urgentes": [
+    {
+      "tarea": "OYMA R1: Datos febrero para análisis deterioro",
+      "responsable": "Andre/Cami",
+      "prioridad": "CRÍTICO"
+    },
+    {
+      "tarea": "PowerPoint OYMA R1: Contrastar narración gerente vs archivo",
+      "responsable": "Sebastián",
+      "prioridad": "ALTO"
+    },
+    {
+      "tarea": "Dashboard actualización: Resolver frustración detectada",
+      "responsable": "Sebastián", 
+      "prioridad": "ALTO"
+    },
+    {
+      "tarea": "Conversación Juan Guillermo: Responsabilizar Natalia RRHH",
+      "responsable": "Sebastián",
+      "prioridad": "MEDIO"
+    }
+  ],
+  "whoop": {
+    "recovery": "Sin datos",
+    "sleep": "4h 02m (37%)",
+    "deuda": "2h 07m",
+    "recomendacion": "Día con calma, priorizar solo críticas"
+  },
+  "limitless_ayer": {
+    "decisiones_criticas": [
+      "OYMA R1: Solicitud suspensión enviada EPM (600M pérdidas)",
+      "Reducciones personal: 3 renuncias + metodología despedir→automatizar",
+      "Condugas→Construtem: 272M anticipo deuda doña Olga"
+    ],
+    "estado_mental": "Transición arquitecto: 'Siento hasta que me liberé' - sin dolor decisiones difíciles",
+    "compromisos": [
+      "Bote Guatapé: 75-85M evaluación sábado",
+      "Asesoría fiscal transferencia"
+    ]
+  },
+  "ideas_capturadas": [
+    "Centro desarrollo potencial humano: enfoque asesorías prácticas",
+    "Plataforma textil: 250K empleos déficit, modelo Rappi moda",
+    "Guatemala expansión: potencial centroamérica",
+    "Estados Unidos: BIM + automatización constructoras",
+    "Principio humildad: 'A veces es mejor cuando uno no sabe'"
+  ]
+}
