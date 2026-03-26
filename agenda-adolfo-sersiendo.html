@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Sesiones SER.SIENDO - Adolfo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #333; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; min-height: 100vh; }
+        .header { background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header p { font-size: 1.2em; opacity: 0.9; }
+        .content { padding: 40px; }
+        .session { margin-bottom: 40px; border: 2px solid #e1e1e1; border-radius: 15px; overflow: hidden; background: #fafafa; }
+        .session-header { background: #2c5530; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .session-title { font-size: 1.4em; font-weight: bold; }
+        .session-number { background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 0.9em; }
+        .session-content { padding: 30px; }
+        .date-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 25px; }
+        .date-option { padding: 18px; border: 2px solid #4a7c59; border-radius: 10px; cursor: pointer; transition: all 0.3s; background: white; }
+        .date-option:hover { background: #f0f8f0; transform: translateY(-2px); }
+        .date-option.recommended { border-color: #2c5530; background: #e8f5e8; }
+        .date-option.conflict { border-color: #dc3545; background: #ffeaea; opacity: 0.7; cursor: not-allowed; }
+        .date-main { font-weight: bold; font-size: 1.1em; color: #2c5530; }
+        .date-details { font-size: 0.9em; color: #666; margin-top: 5px; }
+        .conflict-note { color: #dc3545; font-weight: bold; font-size: 0.8em; margin-top: 5px; }
+        .topics { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .topics h4 { color: #2c5530; margin-bottom: 10px; }
+        .topics ul { list-style: none; padding: 0; }
+        .topics li { padding: 8px 0; border-bottom: 1px dotted #ddd; }
+        .topics li:before { content: "→"; color: #4a7c59; font-weight: bold; margin-right: 10px; }
+        .summary { background: #e8f5e8; padding: 30px; border-radius: 10px; margin: 30px 0; border-left: 5px solid #2c5530; }
+        .summary h3 { color: #2c5530; margin-bottom: 15px; }
+        .btn { background: #2c5530; color: white; padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer; font-size: 1em; margin: 10px 5px; text-decoration: none; display: inline-block; }
+        .btn:hover { background: #4a7c59; }
+        .legend { display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap; }
+        .legend-item { display: flex; align-items: center; gap: 8px; }
+        .legend-color { width: 20px; height: 20px; border-radius: 3px; }
+        .recommended-color { background: #e8f5e8; border: 2px solid #2c5530; }
+        .available-color { background: white; border: 2px solid #4a7c59; }
+        .conflict-color { background: #ffeaea; border: 2px solid #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 SESIONES MODELO SER.SIENDO</h1>
+            <p>Agenda para estudio y conceptualización con Adolfo Delgado</p>
+        </div>
+
+        <div class="content">
+            <div class="summary">
+                <h3>Resumen del Programa</h3>
+                <p><strong>Duración:</strong> 4 sesiones cada 15 días<br>
+                <strong>Horario:</strong> 3:30 PM - 6:30 PM (3 horas)<br>
+                <strong>Días disponibles:</strong> Lunes, Miércoles, Jueves<br>
+                <strong>Inicio:</strong> Semana del 6 de abril 2026</p>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color recommended-color"></div>
+                    <span>Fecha recomendada</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color available-color"></div>
+                    <span>Fecha disponible</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color conflict-color"></div>
+                    <span>Conflicto identificado</span>
+                </div>
+            </div>
+
+            <div class="session">
+                <div class="session-header">
+                    <div class="session-title">SESIÓN 1: Fundamentos SER.SIENDO</div>
+                    <div class="session-number">1/4</div>
+                </div>
+                <div class="session-content">
+                    <div class="date-options">
+                        <div class="date-option recommended">
+                            <div class="date-main">Lunes 7 Abril</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="date-details">✅ Sin conflictos detectados</div>
+                        </div>
+                        <div class="date-option conflict">
+                            <div class="date-main">Miércoles 9 Abril</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="conflict-note">⚠️ IX Encuentro Nacional Ventas CAMACOL (Barranquilla)</div>
+                        </div>
+                        <div class="date-option recommended">
+                            <div class="date-main">Jueves 10 Abril</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="date-details">✅ Sin conflictos detectados</div>
+                        </div>
+                    </div>
+                    <div class="topics">
+                        <h4>Temas a cubrir:</h4>
+                        <ul>
+                            <li>Introducción general al modelo SER.SIENDO</li>
+                            <li>Conceptos nucleares: SER vs SIENDO</li>
+                            <li>Coherencia como base del sistema</li>
+                            <li>Tres Decisiones humanas básicas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="session">
+                <div class="session-header">
+                    <div class="session-title">SESIÓN 2: Tres Motivadores & Aleteagogía</div>
+                    <div class="session-number">2/4</div>
+                </div>
+                <div class="session-content">
+                    <div class="date-options">
+                        <div class="date-option recommended">
+                            <div class="date-main">Lunes 21 Abril</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="date-details">✅ Sin conflictos detectados</div>
+                        </div>
+                        <div class="date-option recommended">
+                            <div class="date-main">Miércoles 23 Abril</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="date-details">✅ Sin conflictos detectados</div>
+                        </div>
+                        <div class="date-option recommended">
+                            <div class="date-main">Jueves 24 Abril</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="date-details">✅ Sin conflictos detectados</div>
+                        </div>
+                    </div>
+                    <div class="topics">
+                        <h4>Temas a cubrir:</h4>
+                        <ul>
+                            <li>Tres Motivadores: Identidad, Autonomía, Disfrutar</li>
+                            <li>Introducción a Aleteagogía (ἀλήθεια + ἀγωγός)</li>
+                            <li>Diferencias críticas: Jefatura vs Liderazgo</li>
+                            <li>Aplicación práctica en contextos reales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="session">
+                <div class="session-header">
+                    <div class="session-title">SESIÓN 3: Framework de Jefatura</div>
+                    <div class="session-number">3/4</div>
+                </div>
+                <div class="session-content">
+                    <div class="date-options">
+                        <div class="date-option recommended">
+                            <div class="date-main">Lunes 5 Mayo</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="date-details">✅ Sin conflictos detectados</div>
+                        </div>
+                        <div class="date-option conflict">
+                            <div class="date-main">Miércoles 7 Mayo</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="conflict-note">⚠️ Urabá Región Digital CAMACOL (8AM-5PM)</div>
+                        </div>
+                        <div class="date-option recommended">
+                            <div class="date-main">Jueves 8 Mayo</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="date-details">✅ Sin conflictos detectados</div>
+                        </div>
+                    </div>
+                    <div class="topics">
+                        <h4>Temas a cubrir:</h4>
+                        <ul>
+                            <li>Tres tipos de jefe: Instintivo, Técnico, Integrador</li>
+                            <li>Organización como cuerpo vivo</li>
+                            <li>Energías expansiva vs intensiva</li>
+                            <li>Casos prácticos: Lina (patrocinio) vs Andrea (responsabilidad)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="session">
+                <div class="session-header">
+                    <div class="session-title">SESIÓN 4: Aplicación & Consolidación</div>
+                    <div class="session-number">4/4</div>
+                </div>
+                <div class="session-content">
+                    <div class="date-options">
+                        <div class="date-option recommended">
+                            <div class="date-main">Lunes 19 Mayo</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="date-details">✅ Sin conflictos detectados</div>
+                        </div>
+                        <div class="date-option conflict">
+                            <div class="date-main">Miércoles 21 Mayo</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="conflict-note">⚠️ Foro Económico Sectorial Urabá CAMACOL</div>
+                        </div>
+                        <div class="date-option recommended">
+                            <div class="date-main">Jueves 22 Mayo</div>
+                            <div class="date-details">3:30 PM - 6:30 PM</div>
+                            <div class="date-details">✅ Sin conflictos detectados</div>
+                        </div>
+                    </div>
+                    <div class="topics">
+                        <h4>Temas a cubrir:</h4>
+                        <ul>
+                            <li>Integración completa del modelo</li>
+                            <li>Herramientas prácticas de implementación</li>
+                            <li>Casos de estudio personalizados</li>
+                            <li>Plan de acción post-programa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary">
+                <h3>🏆 FECHAS RECOMENDADAS (Sin conflictos)</h3>
+                <p><strong>Opción A (Lunes):</strong> 7 abril → 21 abril → 5 mayo → 19 mayo<br>
+                <strong>Opción B (Jueves):</strong> 10 abril → 24 abril → 8 mayo → 22 mayo<br>
+                <strong>Opción C (Mixta):</strong> 7 abril → 23 abril → 8 mayo → 19 mayo</p>
+            </div>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="#" class="btn">📅 Confirmar Fechas Seleccionadas</a>
+                <a href="#" class="btn" style="background: #6c757d;">📞 Consultar con Adolfo</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
