@@ -1,0 +1,85 @@
+{
+  "fecha": "2026-03-26",
+  "contratos": [
+    {
+      "id": "oyma_r1",
+      "nombre": "OYMA R1 (EPM Rionegro)",
+      "margen": -22,
+      "status": "crisis",
+      "valor_contrato": "3300M",
+      "equipo": "Cami, Juan",
+      "deadline": "2026-04-04",
+      "alertas": ["Solicitud suspensión enviada", "Pérdidas 600M último mes"]
+    },
+    {
+      "id": "boyaca",
+      "nombre": "Boyacá",
+      "margen": 8,
+      "status": "operativo",
+      "valor_contrato": null,
+      "equipo": "Cami, Andre",
+      "deadline": null,
+      "alertas": []
+    },
+    {
+      "id": "bucaramanga", 
+      "nombre": "Bucaramanga",
+      "margen": 5,
+      "status": "operativo",
+      "valor_contrato": null,
+      "equipo": "Andre",
+      "deadline": null,
+      "alertas": []
+    },
+    {
+      "id": "floridablanca",
+      "nombre": "Floridablanca", 
+      "margen": 4,
+      "status": "operativo",
+      "valor_contrato": null,
+      "equipo": null,
+      "deadline": null,
+      "alertas": []
+    },
+    {
+      "id": "jerico",
+      "nombre": "Jericó",
+      "margen": 6,
+      "status": "operativo", 
+      "valor_contrato": null,
+      "equipo": null,
+      "deadline": null,
+      "alertas": []
+    },
+    {
+      "id": "om_z2",
+      "nombre": "O&M Z2",
+      "margen": 2,
+      "status": "monitoreo",
+      "valor_contrato": null,
+      "equipo": null, 
+      "deadline": null,
+      "alertas": ["Requiere monitoreo especial"]
+    },
+    {
+      "id": "valle",
+      "nombre": "Valle",
+      "margen": 7,
+      "status": "operativo",
+      "valor_contrato": null,
+      "equipo": null,
+      "deadline": null,
+      "alertas": []
+    },
+    {
+      "id": "perdidas",
+      "nombre": "Pérdidas",
+      "margen": -15,
+      "status": "crisis", 
+      "valor_contrato": null,
+      "equipo": null,
+      "deadline": null,
+      "alertas": ["Requiere intervención", "Análisis causas pendiente"]
+    }
+  ]
+}

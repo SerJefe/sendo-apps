@@ -1,0 +1,192 @@
+{
+  "fecha": "2026-03-26",
+  "lineas": {
+    "condugas": {
+      "nombre": "CONDUGAS",
+      "total_proyectos": 10,
+      "proyectos": [
+        {
+          "id": "oyma_r1",
+          "nombre": "OYMA R1",
+          "estado": "crisis",
+          "responsable": "Cami, Juan",
+          "proxima_accion": "Datos febrero + respuesta EPM"
+        },
+        {
+          "id": "automatizacion_odoo",
+          "nombre": "Automatización Odoo", 
+          "estado": "desarrollo",
+          "responsable": "Ema",
+          "proxima_accion": "Info contractual pendiente"
+        },
+        {
+          "id": "boyaca",
+          "nombre": "Boyacá",
+          "estado": "operativo", 
+          "responsable": "Cami, Andre",
+          "proxima_accion": "Monitoreo P&G mensual"
+        },
+        {
+          "id": "bucaramanga",
+          "nombre": "Bucaramanga",
+          "estado": "operativo",
+          "responsable": "Andre", 
+          "proxima_accion": "Análisis comparativo vs OYMA"
+        },
+        {
+          "id": "floridablanca",
+          "nombre": "Floridablanca",
+          "estado": "operativo",
+          "responsable": null,
+          "proxima_accion": "Revisión contractual pendiente"
+        },
+        {
+          "id": "jerico_contrato",
+          "nombre": "Jericó (Contrato)",
+          "estado": "operativo",
+          "responsable": null,
+          "proxima_accion": "Operación estable"
+        },
+        {
+          "id": "om_z2", 
+          "nombre": "O&M Z2",
+          "estado": "monitoreo",
+          "responsable": null,
+          "proxima_accion": "Monitoreo especial requerido"
+        },
+        {
+          "id": "valle",
+          "nombre": "Valle", 
+          "estado": "operativo",
+          "responsable": null,
+          "proxima_accion": "Operación estable"
+        },
+        {
+          "id": "perdidas",
+          "nombre": "Pérdidas",
+          "estado": "crisis",
+          "responsable": null,
+          "proxima_accion": "Análisis causas + plan recuperación"
+        },
+        {
+          "id": "nuevos_negocios",
+          "nombre": "Nuevos Negocios",
+          "estado": "desarrollo",
+          "responsable": "Carlos",
+          "proxima_accion": "Mesa Camacol 27 marzo"
+        }
+      ]
+    },
+    "sendo_consulting": {
+      "nombre": "SENDO CONSULTING",
+      "total_proyectos": 6,
+      "proyectos": [
+        {
+          "id": "framework_alletagia",
+          "nombre": "Framework Aleteagogía",
+          "estado": "operativo",
+          "responsable": "Sebastián",
+          "proxima_accion": "Framework validado y operativo"
+        },
+        {
+          "id": "caso_lina",
+          "nombre": "Caso Lina (Patrocinio)",
+          "estado": "seguimiento",
+          "responsable": "Sebastián",
+          "proxima_accion": "Monitoreo reunión Ema"
+        },
+        {
+          "id": "caso_andrea",
+          "nombre": "Caso Andrea (Responsabilidad)",
+          "estado": "seguimiento", 
+          "responsable": "Sebastián",
+          "proxima_accion": "Tracking evolución vs Lina"
+        },
+        {
+          "id": "consultoria_vendemos",
+          "nombre": "Consultoría Vendemos",
+          "estado": "operativo",
+          "responsable": "Sebastián",
+          "proxima_accion": "Seguimiento framework decisiones"
+        },
+        {
+          "id": "prospectos_dojo",
+          "nombre": "Prospectos DOJO+Implantech",
+          "estado": "desarrollo",
+          "responsable": "Lina",
+          "proxima_accion": "Seguimiento leads + propuesta"
+        },
+        {
+          "id": "clientes_odoo",
+          "nombre": "Clientes Odoo/ERP",
+          "estado": "desarrollo",
+          "responsable": "Emanuel",
+          "proxima_accion": "Implementación + pipeline comercial"
+        }
+      ]
+    },
+    "patrimonio": {
+      "nombre": "PATRIMONIO", 
+      "total_proyectos": 3,
+      "proyectos": [
+        {
+          "id": "construccion_casa",
+          "nombre": "Construcción Casa",
+          "estado": "desarrollo",
+          "responsable": "Nelson Orozco",
+          "proxima_accion": "Definir etapa actual + cronograma"
+        },
+        {
+          "id": "montesereno",
+          "nombre": "Viabilidad Lote Montesereno", 
+          "estado": "evaluacion",
+          "responsable": "Sebastián",
+          "proxima_accion": "Análisis viabilidad financiera"
+        },
+        {
+          "id": "jerico_personal",
+          "nombre": "Jericó Personal",
+          "estado": "crisis",
+          "responsable": "Sebastián", 
+          "proxima_accion": "Clarificar alcance proyecto"
+        }
+      ]
+    },
+    "familia": {
+      "nombre": "FAMILIA",
+      "total_proyectos": 1,
+      "proyectos": [
+        {
+          "id": "viaje_miami_nyc",
+          "nombre": "Viaje Miami+NYC Mundial",
+          "estado": "planificacion",
+          "responsable": "Sebastián + Paulina",
+          "proxima_accion": "Definir fechas + logística"
+        }
+      ]
+    },
+    "serjefe": {
+      "nombre": "SERJEFE/ALLETAGIA",
+      "total_proyectos": 1, 
+      "proyectos": [
+        {
+          "id": "producto_serjefe",
+          "nombre": "Producto SerJefe",
+          "estado": "operativo",
+          "responsable": "Sebastián",
+          "proxima_accion": "App jefatura + contenido automatizado"
+        }
+      ]
+    }
+  },
+  "resumen": {
+    "total_proyectos": 21,
+    "por_estado": {
+      "crisis": 3,
+      "operativo": 8,
+      "desarrollo": 7,
+      "seguimiento": 2,
+      "evaluacion": 1
+    }
+  }
+}
