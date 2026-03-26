@@ -3,401 +3,241 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mapa Neuronal — Sebastián SER.SIENDO</title>
+<title>Red Neuronal — Sebastián SER.SIENDO</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', system-ui, sans-serif; background: #07090d; color: #e2e8f0; overflow: hidden; }
-
-#controls {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 10;
-  background: rgba(7,9,13,0.92); backdrop-filter: blur(12px);
-  border-bottom: 1px solid #1e2a3a; padding: 10px 16px;
-  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-}
-#controls h1 { font-size: 16px; font-weight: 500; color: #06b6d4; margin-right: auto; }
-.filter-btn {
-  background: #141a24; border: 1px solid #1e2a3a; color: #64748b;
-  padding: 4px 12px; border-radius: 6px; font-size: 12px; cursor: pointer;
-  transition: all 0.2s;
-}
-.filter-btn:hover, .filter-btn.active { border-color: #06b6d4; color: #06b6d4; background: rgba(6,182,212,0.1); }
-.filter-btn.all.active { border-color: #f97316; color: #f97316; background: rgba(249,115,22,0.1); }
-
-#info-panel {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 10;
-  background: rgba(7,9,13,0.95); backdrop-filter: blur(12px);
-  border-top: 1px solid #1e2a3a; padding: 16px 20px;
-  transform: translateY(100%); transition: transform 0.3s ease;
-  max-height: 40vh; overflow-y: auto;
-}
-#info-panel.open { transform: translateY(0); }
-#info-panel h2 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
-#info-panel .type { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
-#info-panel .detail { font-size: 13px; color: #94a3b8; line-height: 1.6; }
-#info-panel .connections { margin-top: 8px; }
-#info-panel .conn-tag {
-  display: inline-block; font-size: 11px; background: #141a24; border: 1px solid #1e2a3a;
-  border-radius: 4px; padding: 2px 8px; margin: 2px 4px 2px 0; color: #94a3b8;
-}
-#close-panel {
-  position: absolute; top: 12px; right: 16px; background: none; border: none;
-  color: #64748b; font-size: 20px; cursor: pointer;
-}
-
-svg { width: 100vw; height: 100vh; display: block; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans','Segoe UI',system-ui,sans-serif;background:#07090d;color:#e2e8f0;overflow:hidden}
+#controls{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(7,9,13,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(6,182,212,0.15);padding:8px 12px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+#controls h1{font-size:14px;font-weight:500;color:#06b6d4;margin-right:8px}
+.fb{background:transparent;border:1px solid #1e2a3a;color:#475569;padding:3px 10px;border-radius:20px;font-size:11px;cursor:pointer;transition:all 0.2s}
+.fb:hover,.fb.on{border-color:#06b6d4;color:#06b6d4;background:rgba(6,182,212,0.08)}
+.fb.all.on{border-color:#f97316;color:#f97316;background:rgba(249,115,22,0.08)}
+.sep{width:1px;height:16px;background:#1e2a3a;margin:0 2px}
+#legend{position:fixed;bottom:12px;left:12px;z-index:10;background:rgba(7,9,13,0.9);backdrop-filter:blur(8px);border:1px solid rgba(6,182,212,0.12);border-radius:8px;padding:8px 12px;font-size:10px;display:flex;flex-wrap:wrap;gap:6px 12px;max-width:360px}
+.lg{display:flex;align-items:center;gap:4px;color:#64748b}
+.ld{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.lr{width:8px;height:8px;border-radius:50%;flex-shrink:0;border:2px solid;background:transparent}
+#ip{position:fixed;bottom:0;right:0;z-index:10;width:320px;background:rgba(7,9,13,0.95);backdrop-filter:blur(12px);border-left:1px solid rgba(6,182,212,0.15);border-top:1px solid rgba(6,182,212,0.15);border-radius:12px 0 0 0;padding:16px 18px;transform:translateX(100%);transition:transform 0.3s;max-height:60vh;overflow-y:auto}
+#ip.open{transform:translateX(0)}
+#ip h2{font-size:16px;font-weight:600;margin-bottom:2px}
+#ip .tp{font-size:10px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;font-family:monospace}
+#ip .dt{font-size:12px;color:#94a3b8;line-height:1.6}
+#ip .tg{margin-top:8px;display:flex;flex-wrap:wrap;gap:4px}
+#ip .t{font-size:10px;background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.2);border-radius:4px;padding:2px 6px;color:#06b6d4;font-family:monospace}
+#cb{position:absolute;top:10px;right:12px;background:none;border:none;color:#475569;font-size:18px;cursor:pointer}
+svg{width:100vw;height:100vh;display:block}
 </style>
 </head>
 <body>
-
 <div id="controls">
-  <h1>Mapa Neuronal SER.SIENDO</h1>
-  <button class="filter-btn all active" onclick="filterGroup('all')">Todo</button>
-  <button class="filter-btn" onclick="filterGroup('condugas')">Condugas</button>
-  <button class="filter-btn" onclick="filterGroup('siendo')">Siendo</button>
-  <button class="filter-btn" onclick="filterGroup('serjefe')">SerJefe</button>
-  <button class="filter-btn" onclick="filterGroup('patrimonio')">Patrimonio</button>
-  <button class="filter-btn" onclick="filterGroup('familia')">Familia</button>
-  <button class="filter-btn" onclick="filterGroup('modelo')">Modelo</button>
+<h1>SER.SIENDO</h1>
+<button class="fb all on" onclick="fG('all',this)">Todo</button><span class="sep"></span>
+<button class="fb" onclick="fG('condugas',this)">Condugas</button>
+<button class="fb" onclick="fG('siendo',this)">Siendo</button>
+<button class="fb" onclick="fG('serjefe',this)">SerJefe</button>
+<button class="fb" onclick="fG('patrimonio',this)">Patrimonio</button>
+<button class="fb" onclick="fG('familia',this)">Familia</button>
+<button class="fb" onclick="fG('modelo',this)">Modelo</button>
+<span class="sep"></span>
+<button class="fb" onclick="fT('persona',this)">Personas</button>
+<button class="fb" onclick="fT('contrato',this)">Contratos</button>
+<button class="fb" onclick="fT('crisis',this)">Crisis</button>
+<button class="fb" onclick="fS('hacer',this)">Por hacer</button>
+<button class="fb" onclick="fS('delegar',this)">Delegar</button>
 </div>
-
-<div id="info-panel">
-  <button id="close-panel" onclick="closePanel()">×</button>
-  <h2 id="panel-name"></h2>
-  <div class="type" id="panel-type"></div>
-  <div class="detail" id="panel-detail"></div>
-  <div class="connections" id="panel-connections"></div>
+<div id="legend">
+<div class="lg"><span class="ld" style="background:#f97316"></span>Sebastián</div>
+<div class="lg"><span class="ld" style="background:#06b6d4"></span>Persona</div>
+<div class="lg"><span class="ld" style="background:#7f1d1d;border:1px solid #ef4444"></span>Crisis</div>
+<div class="lg"><span class="ld" style="background:#a78bfa"></span>Concepto</div>
+<div class="lg"><span class="lr" style="border-color:#ef4444"></span>Contrato</div>
+<div class="lg"><span class="lr" style="border-color:#eab308"></span>Socio</div>
+<div class="lg"><span class="lr" style="border-color:#f97316"></span>⚡ Por hacer</div>
+<div class="lg"><span class="lr" style="border-color:#06b6d4"></span>↗ Delegar</div>
+<div class="lg"><span class="ld" style="background:#334155"></span>Cliente</div>
 </div>
-
+<div id="ip"><button id="cb" onclick="cP()">×</button><h2 id="pn"></h2><div class="tp" id="pt"></div><div class="dt" id="pd"></div><div class="tg" id="pg"></div></div>
 <svg id="graph"></svg>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script>
-const nodes = [
-  // CENTER
-  {id:"sebastian", label:"Sebastián", group:"center", type:"persona", r:28, detail:"CEO Condugas, fundador Siendo Consulting, creador modelo SER.SIENDO y Alletagia"},
-
-  // MODELO TEÓRICO
-  {id:"sersiendo", label:"SER.SIENDO", group:"modelo", type:"concepto", r:22, detail:"Modelo filosófico: el ser no es estático, es un proceso continuo. Solo se es siendo."},
-  {id:"aleteagogia", label:"Aleteagogía", group:"modelo", type:"concepto", r:18, detail:"De Aletheia (verdad desvelada) + Agōgós (guía). Conducción hacia la verdad del otro sin imponer. Verbo: aleteaguiar."},
-  {id:"coherencia", label:"Coherencia", group:"modelo", type:"concepto", r:16, detail:"Emoción + pensamiento + acción ALINEADOS. No es absoluta — es contextual y temporal."},
-  {id:"tres-decisiones", label:"3 Decisiones", group:"modelo", type:"concepto", r:16, detail:"1. Sobrevivir 2. Recuperar control 3. Desarrollarse — en ese orden."},
-  {id:"tres-motivadores", label:"3 Motivadores", group:"modelo", type:"concepto", r:15, detail:"1. Identidad 2. Autonomía 3. Disfrutar"},
-  {id:"jefatura", label:"Jefatura", group:"modelo", type:"concepto", r:17, detail:"NUNCA liderazgo. El jefe es el sistema nervioso de la organización. 3 tipos: instintivo, técnico, integrador."},
-  {id:"alletagia", label:"Alletagia", group:"modelo", type:"concepto", r:17, detail:"Framework completo de jefatura basado en SER.SIENDO. Incluye energía expansiva vs intensiva."},
-  {id:"sandbox", label:"Sandbox Decisiones", group:"modelo", type:"concepto", r:15, detail:"Espacio para experimentar decisiones, evaluarlas y medir impacto. Persona de negocio explica la emoción detrás de cada decisión."},
-  {id:"manual-interv", label:"Manual Intervención", group:"modelo", type:"concepto", r:15, detail:"Protocolo grupal: escucho completo → me pregunto → tengo dudas/riesgo/aporte → identifico emoción → planteo lógica. Incluye escalamiento."},
-  {id:"10-elementos", label:"10 Elementos Equipo", group:"modelo", type:"concepto", r:14, detail:"Oct 2024: 1.Toma decisiones 2.Cumplir promesas 3.Pensamiento sistémico 4.Lograr que equipo logre 5.Planes teleológicos 6.Objetivos contundentes 7.Confiable 8.Solucionador 9.Madurez 10.Conversaciones francas."},
-  {id:"9-competencias", label:"9 Competencias Jefe", group:"modelo", type:"concepto", r:14, detail:"1.Responsabilización estratégica 2.Comunicar sentido 3.Diseño objetivos sistémicos 4.Ayudar a descubrir fortalezas 5.Claridad y coherencia 6.Identificación elementos intervención 7.Equipos autónomos 8.Emociones 9.Intervenciones útiles."},
-
-  // CONDUGAS
-  {id:"condugas", label:"Condugas", group:"condugas", type:"empresa", r:24, detail:"Empresa principal de gas. 452 empleados. 8 contratos activos. Crisis OYMA R1."},
-  {id:"oyma", label:"OYMA R1", group:"condugas", type:"proyecto", r:18, detail:"Crisis: -22% margen, -$280M UAI. Carta suspensión EPM enviada 19 mar. Deadline: 4 abril."},
-  {id:"odoo", label:"Odoo Automatización", group:"condugas", type:"proyecto", r:16, detail:"2/10 procedimientos. ROI $11-18 mil millones. 452→250 personas."},
-  {id:"contratos", label:"8 Contratos", group:"condugas", type:"proyecto", r:14, detail:"Boyacá, Bucaramanga, Floridablanca, Jericó, O&M Z2, OZZLO, Pérdidas, Valle"},
-  {id:"cami", label:"Cami", group:"condugas", type:"persona", r:13, detail:"Juan Camilo Berrio — Gerente Proyectos. También es sobrino (familia). Energía expansiva."},
-  {id:"andre", label:"Andre", group:"condugas", type:"persona", r:13, detail:"Andrea Bernal — Directora Financiera/Contable. Energía intensiva — responsabilidad."},
-  {id:"willi", label:"Willi", group:"condugas", type:"persona", r:12, detail:"William López — Director Administrativo. Energía intensiva. 3 puntos de feedback pendientes."},
-  {id:"juan", label:"Juan", group:"condugas", type:"persona", r:12, detail:"Juan Guillermo — Gerente Estrategia."},
-  {id:"carlos", label:"Carlos", group:"condugas", type:"persona", r:12, detail:"Carlos Hernán López — Gerente Nuevos Negocios. Mesa Camacol 27 mar."},
-  {id:"naty-rrhh", label:"Naty", group:"condugas", type:"persona", r:11, detail:"Natalia Rojas — Directora RRHH. Transición coordinadora → directora."},
-  {id:"nelson", label:"Nelson", group:"condugas", type:"persona", r:11, detail:"Favio Nelson Escobar — Director Logística."},
-  {id:"clau-c", label:"Clau", group:"condugas", type:"persona", r:11, detail:"Claudia Quintero — Directora Contable."},
-  {id:"epm", label:"EPM", group:"condugas", type:"cliente", r:15, detail:"Cliente principal. Juan Carlos Gómez (Sub Gas), Humberto Iglesias (VP Negocios). $400M deuda."},
-  {id:"doctor", label:"Doctor", group:"condugas", type:"persona", r:11, detail:"Camilo Marín — Abogado. Proveedor clave."},
-  {id:"hilda", label:"Hilda", group:"condugas", type:"persona", r:11, detail:"Hilda — Comercial Condugas. Correctores, personas con clientes buscados."},
-  {id:"jpablo", label:"J Pablo", group:"condugas", type:"persona", r:11, detail:"Juan Pablo — Análisis financiero y proyectos. Tiene su análisis de Ayura."},
-  {id:"ugpp", label:"UGPP Auditoría", group:"condugas", type:"proyecto", r:13, detail:"Análisis auditoría IBC. Plan completo de desatrazo. Planillas Odoo para informe."},
-  {id:"redes-condugas", label:"Redes Condugas", group:"condugas", type:"proyecto", r:13, detail:"LinkedIn (B2B), IG (B2C), YouTube (culturizar), TikTok. Crear GPTs y Gems para contenido."},
-  {id:"volquiria", label:"Volquiria", group:"condugas", type:"proyecto", r:12, detail:"Proyecto de inicio rápido. Diseño, ejecución, estructura de costos. Inversión y método de pago."},
-  {id:"silar", label:"SILAR", group:"condugas", type:"proyecto", r:12, detail:"Reunión SILAR dic 2025. Problemas: info Bucaramanga, Ayura $10M favores, OLMA cesión."},
-  {id:"adolfo", label:"Adolfo", group:"condugas", type:"persona", r:13, detail:"Adolfo León Delgado — Mentor/asesor. Parte de Junta directiva junto con Gilberto, Mario Naranjo, Marisol."},
-
-  // SIENDO CONSULTING
-  {id:"siendo", label:"Siendo Consulting", group:"siendo", type:"empresa", r:22, detail:"Consultoría en jefatura y desarrollo humano. Framework Alletagia validado."},
-  {id:"mona", label:"Mona", group:"siendo", type:"persona", r:14, detail:"Mónica González — Comercial. Conecta Siendo con Condugas."},
-  {id:"lina", label:"Lina", group:"siendo", type:"persona", r:14, detail:"Lina Russi — Gestora. Energía expansiva — necesita patrocinio."},
-  {id:"ema", label:"Ema", group:"siendo", type:"persona", r:14, detail:"Emanuel Quevedo (@esqb4) — Desarrollador. Odoo, apps, implementaciones técnicas."},
-  {id:"vendemos", label:"Vendemos", group:"siendo", type:"cliente", r:14, detail:"Cliente activo de consultoría. Caso de intervención con 4 sesiones de jefatura."},
-  {id:"dojo", label:"DOJO", group:"siendo", type:"prospecto", r:12, detail:"Prospecto con Lina. En acercamiento."},
-  {id:"implantech", label:"Implantech", group:"siendo", type:"prospecto", r:12, detail:"Prospecto con Lina. En acercamiento."},
-  {id:"clientes-odoo", label:"Clientes Odoo", group:"siendo", type:"prospecto", r:13, detail:"Pipeline con Emanuel para implementar Odoo como ERP/CRM a clientes y amigos."},
-
-  // SERJEFE
-  {id:"serjefe", label:"SerJefe", group:"serjefe", type:"marca", r:20, detail:"Marca de contenido sobre jefatura. 60+ herramientas interactivas. Instagram. Web premium."},
-  {id:"guias", label:"60+ Guías", group:"serjefe", type:"producto", r:16, detail:"Herramientas HTML interactivas para jefatura. En Guias_seguidores/."},
-  {id:"contenido-ig", label:"Contenido IG", group:"serjefe", type:"proyecto", r:14, detail:"Marca @SerJefe en Instagram. Contenido sobre jefatura y modelo SER.SIENDO."},
-  {id:"app-jefatura", label:"App Jefatura", group:"serjefe", type:"proyecto", r:14, detail:"App no-code en desarrollo. Jefatura con sentido."},
-  {id:"web-siendo", label:"Web SER.SIENDO", group:"serjefe", type:"proyecto", r:14, detail:"Página web premium Alletagia. siendo-premium.html."},
-
-  // PATRIMONIO
-  {id:"patrimonio", label:"Patrimonio", group:"patrimonio", type:"área", r:20, detail:"Inversiones, propiedades, proyectos personales de construcción."},
-  {id:"casa", label:"Construcción Casa", group:"patrimonio", type:"proyecto", r:16, detail:"Proyecto de construcción familiar. Muchos procesos abiertos."},
-  {id:"montesereno", label:"Lote Montesereno", group:"patrimonio", type:"proyecto", r:14, detail:"Lote que le pagaron. Pendiente iniciar viabilidad para construir."},
-  {id:"jerico-personal", label:"Proyecto Jericó", group:"patrimonio", type:"proyecto", r:14, detail:"Proyecto a título personal, no de Condugas."},
-  {id:"inversiones", label:"Inversiones", group:"patrimonio", type:"proyecto", r:15, detail:"Charles Schwab, Trii, Insights. Bolsa cayendo — necesita monitoreo activo."},
-  {id:"casa-ozzlo", label:"Casa OZZLO", group:"patrimonio", type:"proyecto", r:13, detail:"Negociación y oferta estructural. Avances pendientes. Contenedores, anticipo obra civil."},
-  {id:"bio-suroeste", label:"Bio Suroeste", group:"patrimonio", type:"proyecto", r:12, detail:"Proyecto con Rafa en Jericó + plan turismo."},
-  {id:"gob-corporativo", label:"Gob. Corporativo", group:"patrimonio", type:"proyecto", r:13, detail:"Inicio gobierno corporativo. Presentación familia. Cuadro patrimonio, dividendos, finanzas personales."},
-  {id:"maquinaria", label:"Inversión Maquinaria", group:"patrimonio", type:"proyecto", r:12, detail:"Futuro: acero, mov tierras, alcantarillado, gas/agua, volqueta. Actual: topos, compresores, concreto. Diversificar: zanjas, mini retros, separadoras."},
-
-  // FAMILIA
-  {id:"familia", label:"Familia", group:"familia", type:"área", r:20, detail:"Vida personal, salud, familia, viajes."},
-  {id:"amor", label:"Amor (Paulina)", group:"familia", type:"persona", r:16, detail:"Paulina Echeverri — Esposa."},
-  {id:"gordo", label:"Gordo (Benjamín)", group:"familia", type:"persona", r:15, detail:"Benjamín — Hijo. 9 meses. BLW."},
-  {id:"pa", label:"Pa (Jairo)", group:"familia", type:"persona", r:13, detail:"Jairo Sánchez — Padre."},
-  {id:"ma", label:"Ma (Olga)", group:"familia", type:"persona", r:13, detail:"Olga Acevedo — Madre."},
-  {id:"whoop", label:"WHOOP", group:"familia", type:"herramienta", r:14, detail:"Tracker de salud. Recovery, sleep, strain. Conectado al Claw."},
-  {id:"viaje-mundial", label:"Viaje Mundial", group:"familia", type:"proyecto", r:14, detail:"Miami + NYC época mundial. Buscar boletas Colombia, Brasil o Argentina."},
-  {id:"rutinas", label:"Rutinas Familia", group:"familia", type:"proyecto", r:13, detail:"Planificadores comidas keto, ejercicio, fisio Paulina, BLW Gordo."},
-  {id:"heartbeat", label:"Rutina 12 Pasos", group:"modelo", type:"concepto", r:14, detail:"1.Agenda previa/futura 2.Agente correo 3.Resumen GPT/Limitless 4.Agenda ISS 5.Todoist/Odoo 6.Análisis WhatsApp/GoodNotes/Notion 7.Agenda proyectos míos 8.GPT notas 9.Resumen día 10.Fisio/pádel/gym/estudio 11.Objetivos y conectar 12.Cabeza"},
-  {id:"rutina-lunes", label:"Rutina Lunes", group:"modelo", type:"concepto", r:13, detail:"0.Resumen GPT 1.Resumen Limitless 2.Agente correo 3.Revisar agendas SerJefe/Condugas/Construcción/Inversiones 4.Agendar con código 5.Carruseles y modelos. Incluye S-RC-D por contrato."},
+const N=[
+{id:"sebastian",label:"Sebastián",g:"center",tp:"persona",r:30,dt:"CEO Condugas · Siendo Consulting · SER.SIENDO · Alletagia",st:""},
+// MODELO
+{id:"sersiendo",label:"SER.SIENDO",g:"modelo",tp:"concepto",r:24,dt:"El ser no es estático, es un proceso continuo. Solo se es siendo."},
+{id:"aleteagogia",label:"Aleteagogía",g:"modelo",tp:"concepto",r:17,dt:"Aletheia + Agōgós. Conducción hacia la verdad del otro. El arte de servirle al otro en su descubrimiento."},
+{id:"coherencia",label:"Coherencia (EPA)",g:"modelo",tp:"concepto",r:16,dt:"Emoción + Pensamiento + Acción alineados."},
+{id:"3dec",label:"S → RC → D",g:"modelo",tp:"concepto",r:17,dt:"Sobrevivir → Recuperar Control → Desarrollarse. Base del Comité SV."},
+{id:"3mot",label:"3 Motivadores",g:"modelo",tp:"concepto",r:14,dt:"Identidad · Autonomía · Disfrutar"},
+{id:"jefatura",label:"Jefatura",g:"modelo",tp:"concepto",r:17,dt:"NUNCA liderazgo. El jefe es el sistema nervioso de la organización."},
+{id:"alletagia",label:"Alletagia",g:"modelo",tp:"concepto",r:17,dt:"Framework jefatura. Energía expansiva (patrocinio) vs intensiva (responsabilidad)."},
+{id:"sandbox",label:"Sandbox Decisiones",g:"modelo",tp:"concepto",r:14,dt:"Experimentar decisiones, medir impacto. Persona explica emoción. Boosting + Nudge."},
+{id:"manual",label:"Manual Intervención",g:"modelo",tp:"concepto",r:14,dt:"Escucho completo → me pregunto → dudas/riesgo/aporte → emoción → lógica."},
+{id:"10el",label:"10 Elementos",g:"modelo",tp:"concepto",r:13,dt:"Toma decisiones · Promesas · Pensamiento sistémico · Equipo logre · Teleología · Objetivos · Confiable · Solucionador · Madurez · Conversaciones francas"},
+{id:"9comp",label:"9 Competencias",g:"modelo",tp:"concepto",r:13,dt:"Responsabilización · Sentido · Objetivos · Fortalezas · Claridad · Intervención · Autonomía · Emociones · Utilidad"},
+{id:"hb",label:"Rutina 12 Pasos",g:"modelo",tp:"proceso",r:13,dt:"Agenda·Correo·GPT/Limitless·ISS·Todoist/Odoo·WhatsApp/GoodNotes·Proyectos·Notas·Resumen·Físico·Objetivos·Cabeza"},
+{id:"rlunes",label:"Rutina Lunes",g:"modelo",tp:"proceso",r:12,dt:"Resumen GPT → Limitless → Correo → Agendas → S-RC-D por contrato → Carruseles"},
+// CONDUGAS
+{id:"condugas",label:"Condugas",g:"condugas",tp:"empresa",r:26,dt:"Gas natural. 452 empleados. 8 contratos. Crisis caja 4-8 días."},
+{id:"csv",label:"Comité SV",g:"condugas",tp:"proceso",r:18,dt:"Semanal. 16 KPIs. Mar 16: 8 días caja, 73% déficit producción, 45% facturación.",st:"crisis"},
+{id:"ccaja",label:"Crisis Caja",g:"condugas",tp:"crisis",r:16,dt:"Ene→Mar: 4-8 días caja. Reducción 10% personal. Proveedores sin pago. Construtem en riesgo.",st:"crisis"},
+{id:"uci",label:"UCI",g:"condugas",tp:"proceso",r:15,dt:"Unidad Crisis Interna. Ene 2025: Prod $3,273M vs Costos $3,598M = -$325M. Fragilidad: si sale gente clave, colapsa. $200M obra no cobrada. Metacrosis.",st:"crisis"},
+{id:"6ceros",label:"6 Ceros",g:"condugas",tp:"proyecto",r:13,dt:"Urgente: programación, digitación, segmentación personal clave. Hilda en 6 cero. Romper fragilidad organizacional. Terceros como servicio.",st:"hacer"},
+// CONTRATOS
+{id:"ayura",label:"Ayura ⚠️",g:"condugas",tp:"contrato",r:16,dt:"EN CIERRE. Cliente: EPM. Socio: SILAR. Reclamación EPM pendiente. Cierre con socio activo. JuanPa fue director.",st:"crisis"},
+{id:"buca",label:"Bucaramanga",g:"condugas",tp:"contrato",r:14,dt:"Cliente: Vantí. Socio: SILAR."},
+{id:"oyma",label:"OYMA R1 ⚠️",g:"condugas",tp:"contrato",r:17,dt:"Cliente: EPM. Socio: SILAR. -22% margen. Carta suspensión 19 mar. Deadline 4 abr. Deben $2,150M.",st:"crisis"},
+{id:"norm",label:"Normalización",g:"condugas",tp:"contrato",r:14,dt:"Pérdidas. Cliente: EPM. $500M pérdidas."},
+{id:"valle",label:"Valle",g:"condugas",tp:"contrato",r:14,dt:"Cliente: GdO. Pérdidas ambientales. Salida personas."},
+{id:"boyaca",label:"Boyacá",g:"condugas",tp:"contrato",r:13,dt:"Cliente: Vantí. No pago subcontratistas."},
+{id:"florida",label:"Floridablanca",g:"condugas",tp:"contrato",r:13,dt:"Cliente: Metrogas. Residente sin casa."},
+{id:"jcond",label:"Jericó",g:"condugas",tp:"contrato",r:13,dt:"Depurar ppsto acueducto."},
+{id:"nneg",label:"Nuevos Negocios",g:"condugas",tp:"proceso",r:14,dt:"Constructoras e independientes. Carlos H gerente. Ofertas Risaralda + Quindío.",st:"hacer"},
+// CLIENTES
+{id:"epm",label:"EPM",g:"condugas",tp:"cliente",r:16,dt:"JC Gómez (Sub Gas), Humberto Iglesias (VP). Debe $400M+. Contratos: Ayura, OYMA, Normalización."},
+{id:"vanti",label:"Vantí",g:"condugas",tp:"cliente",r:14,dt:"Bucaramanga y Boyacá. Reajustes pendientes."},
+{id:"gdo",label:"GdO",g:"condugas",tp:"cliente",r:12,dt:"Gas del Oriente. Cliente Valle."},
+{id:"metrogas",label:"Metrogas",g:"condugas",tp:"cliente",r:12,dt:"Floridablanca. Terminación pendiente."},
+// SOCIO
+{id:"silar",label:"SILAR",g:"condugas",tp:"socio",r:16,dt:"Socio: Ayura (cierre) + Bucaramanga (Vantí) + OYMA (EPM). Problemas dic 2025: equipos alquilados sin consultar."},
+// PERSONAS CONDUGAS
+{id:"cami",label:"Cami",g:"condugas",tp:"persona",r:13,dt:"Juan Camilo Berrio — Ger Proyectos. Sobrino. Expansiva.",st:"delegar"},
+{id:"andre",label:"Andre",g:"condugas",tp:"persona",r:13,dt:"Andrea Bernal — Dir Financiera. Intensiva.",st:"delegar"},
+{id:"willi",label:"Willi",g:"condugas",tp:"persona",r:12,dt:"William López — Dir Admin. 3 puntos feedback.",st:"hacer"},
+{id:"juang",label:"Juan G",g:"condugas",tp:"persona",r:12,dt:"Juan Guillermo — Ger Estrategia."},
+{id:"carlosh",label:"Carlos H",g:"condugas",tp:"persona",r:12,dt:"Carlos Hernán López — Ger Nuevos Negocios. Camacol 27 mar."},
+{id:"naty",label:"Naty",g:"condugas",tp:"persona",r:11,dt:"Natalia Rojas — Dir RRHH."},
+{id:"nelson",label:"Nelson",g:"condugas",tp:"persona",r:11,dt:"Favio Nelson Escobar — Dir Logística.",st:"hacer"},
+{id:"clau",label:"Clau",g:"condugas",tp:"persona",r:11,dt:"Claudia Quintero — Dir Contable."},
+{id:"jp",label:"JuanPa",g:"condugas",tp:"persona",r:13,dt:"Ing Productividad (antes Dir Ayura). Cambio de rol. Análisis Ayura."},
+{id:"hilda",label:"Hilda",g:"condugas",tp:"persona",r:11,dt:"Comercial."},
+{id:"adolfo",label:"Adolfo",g:"condugas",tp:"persona",r:13,dt:"Mentor. Junta: Adolfo, Gilberto, Mario Naranjo, Marisol."},
+{id:"doctor",label:"Doctor",g:"condugas",tp:"persona",r:11,dt:"Camilo Marín — Abogado. 5 contratos."},
+// PROYECTOS CONDUGAS
+{id:"odoo",label:"Odoo",g:"condugas",tp:"proyecto",r:15,dt:"2/10 procedimientos. ROI $11-18 mil M. Talleres Odoo.",st:"hacer"},
+{id:"ugpp",label:"UGPP",g:"condugas",tp:"proyecto",r:12,dt:"Auditoría IBC. Desatrazo.",st:"hacer"},
+{id:"redes",label:"Redes",g:"condugas",tp:"proyecto",r:12,dt:"LinkedIn B2B · IG B2C · YouTube · TikTok. GPTs/Gems.",st:"hacer"},
+// SIENDO
+{id:"siendo",label:"Siendo",g:"siendo",tp:"empresa",r:22,dt:"Consultoría jefatura. Alletagia validado."},
+{id:"mona",label:"Mona",g:"siendo",tp:"persona",r:13,dt:"Mónica González — Comercial."},
+{id:"lina",label:"Lina",g:"siendo",tp:"persona",r:14,dt:"Lina Russi — Gestora. Expansiva. 20%, $1M/mes.",st:"delegar"},
+{id:"ema",label:"Ema",g:"siendo",tp:"persona",r:14,dt:"Emanuel — Dev. Odoo, apps.",st:"delegar"},
+{id:"vendemos",label:"Vendemos",g:"siendo",tp:"cliente",r:14,dt:"Cliente activo. 4 sesiones jefatura."},
+{id:"dojo",label:"DOJO",g:"siendo",tp:"prospecto",r:11,dt:"Prospecto con Lina.",st:"hacer"},
+{id:"implantech",label:"Implantech",g:"siendo",tp:"prospecto",r:11,dt:"Prospecto con Lina.",st:"hacer"},
+{id:"codoo",label:"Clientes Odoo",g:"siendo",tp:"prospecto",r:12,dt:"Pipeline con Emanuel.",st:"hacer"},
+{id:"stgo",label:"Santiago W",g:"siendo",tp:"persona",r:11,dt:"Propuesta pendiente.",st:"hacer"},
+// SERJEFE
+{id:"serjefe",label:"SerJefe",g:"serjefe",tp:"marca",r:20,dt:"60+ guías interactivas. Instagram. Web premium."},
+{id:"guias",label:"60+ Guías",g:"serjefe",tp:"producto",r:15,dt:"HTML interactivas jefatura."},
+{id:"ig",label:"IG",g:"serjefe",tp:"proyecto",r:13,dt:"@SerJefe. Carruseles.",st:"hacer"},
+{id:"app",label:"App",g:"serjefe",tp:"proyecto",r:13,dt:"No-code. Jefatura con sentido.",st:"hacer"},
+{id:"web",label:"Web Premium",g:"serjefe",tp:"proyecto",r:12,dt:"siendo-premium.html"},
+// PATRIMONIO
+{id:"pat",label:"Patrimonio",g:"patrimonio",tp:"área",r:20,dt:"Inversiones, propiedades, gobierno."},
+{id:"casa",label:"Casa",g:"patrimonio",tp:"proyecto",r:16,dt:"Construcción. Diseño ✓. Crédito. Obra civil.",st:"hacer"},
+{id:"monte",label:"Montesereno",g:"patrimonio",tp:"proyecto",r:13,dt:"Lote. Viabilidad."},
+{id:"jpersonal",label:"Jericó Pers.",g:"patrimonio",tp:"proyecto",r:13,dt:"Bio Suroeste + Rafa + turismo.",st:"hacer"},
+{id:"inv",label:"Inversiones",g:"patrimonio",tp:"proyecto",r:14,dt:"Schwab · Trii · Insights. Dashboard pend.",st:"hacer"},
+{id:"gobcorp",label:"Gob. Corp.",g:"patrimonio",tp:"proyecto",r:13,dt:"Cuadro patrimonio. Presentación familia.",st:"hacer"},
+{id:"ozzlo",label:"Casa OZZLO",g:"patrimonio",tp:"proyecto",r:12,dt:"Oferta estructural ✓. Negociación."},
+{id:"maq",label:"Maquinaria",g:"patrimonio",tp:"proyecto",r:12,dt:"Acero, mov tierras, zanjas, mini retros."},
+// FAMILIA
+{id:"fam",label:"Familia",g:"familia",tp:"área",r:20,dt:"Vida, salud, amor."},
+{id:"amor",label:"Amor ❤️",g:"familia",tp:"persona",r:16,dt:"Paulina Echeverri. DEDICAR TIEMPO."},
+{id:"gordo",label:"Gordo",g:"familia",tp:"persona",r:15,dt:"Benjamín. BLW."},
+{id:"pa",label:"Pa",g:"familia",tp:"persona",r:13,dt:"Jairo Sánchez."},
+{id:"ma",label:"Ma",g:"familia",tp:"persona",r:12,dt:"Olga Acevedo."},
+{id:"whoop",label:"WHOOP",g:"familia",tp:"herramienta",r:13,dt:"Recovery · Sleep · Strain."},
+{id:"viaje",label:"Viaje Mundial",g:"familia",tp:"proyecto",r:13,dt:"Miami + NYC. Boletas.",st:"hacer"},
+{id:"rut",label:"Rutinas",g:"familia",tp:"proceso",r:12,dt:"Keto · Pádel · Fisio · BLW."},
 ];
-
-const links = [
-  // Sebastian al centro
-  {source:"sebastian", target:"condugas", strength:0.8},
-  {source:"sebastian", target:"siendo", strength:0.7},
-  {source:"sebastian", target:"serjefe", strength:0.6},
-  {source:"sebastian", target:"patrimonio", strength:0.5},
-  {source:"sebastian", target:"familia", strength:0.8},
-  {source:"sebastian", target:"sersiendo", strength:0.9},
-
-  // Modelo
-  {source:"sersiendo", target:"aleteagogia"},
-  {source:"sersiendo", target:"coherencia"},
-  {source:"sersiendo", target:"tres-decisiones"},
-  {source:"sersiendo", target:"tres-motivadores"},
-  {source:"sersiendo", target:"jefatura"},
-  {source:"jefatura", target:"alletagia"},
-  {source:"alletagia", target:"serjefe"},
-  {source:"alletagia", target:"siendo"},
-
-  // New modelo connections
-  {source:"alletagia", target:"sandbox"},
-  {source:"alletagia", target:"manual-interv"},
-  {source:"alletagia", target:"10-elementos"},
-  {source:"alletagia", target:"9-competencias"},
-  {source:"sandbox", target:"tres-decisiones"},
-  {source:"10-elementos", target:"jefatura"},
-
-  // Condugas
-  {source:"condugas", target:"oyma"},
-  {source:"condugas", target:"odoo"},
-  {source:"condugas", target:"contratos"},
-  {source:"condugas", target:"cami"},
-  {source:"condugas", target:"andre"},
-  {source:"condugas", target:"willi"},
-  {source:"condugas", target:"juan"},
-  {source:"condugas", target:"carlos"},
-  {source:"condugas", target:"naty-rrhh"},
-  {source:"condugas", target:"nelson"},
-  {source:"condugas", target:"clau-c"},
-  {source:"condugas", target:"epm"},
-  {source:"condugas", target:"doctor"},
-  {source:"oyma", target:"epm"},
-  {source:"oyma", target:"andre"},
-  {source:"oyma", target:"cami"},
-  {source:"odoo", target:"ema"},
-  {source:"condugas", target:"hilda"},
-  {source:"condugas", target:"jpablo"},
-  {source:"condugas", target:"ugpp"},
-  {source:"condugas", target:"redes-condugas"},
-  {source:"condugas", target:"volquiria"},
-  {source:"condugas", target:"silar"},
-  {source:"condugas", target:"adolfo"},
-  {source:"jpablo", target:"oyma"},
-  {source:"adolfo", target:"siendo"},
-
-  // Siendo
-  {source:"siendo", target:"mona"},
-  {source:"siendo", target:"lina"},
-  {source:"siendo", target:"ema"},
-  {source:"siendo", target:"vendemos"},
-  {source:"siendo", target:"dojo"},
-  {source:"siendo", target:"implantech"},
-  {source:"siendo", target:"clientes-odoo"},
-  {source:"lina", target:"dojo"},
-  {source:"lina", target:"implantech"},
-  {source:"ema", target:"clientes-odoo"},
-  {source:"ema", target:"odoo"},
-
-  // Cross connections
-  {source:"mona", target:"condugas"},
-  {source:"cami", target:"familia"},
-
-  // SerJefe
-  {source:"serjefe", target:"guias"},
-  {source:"serjefe", target:"contenido-ig"},
-  {source:"serjefe", target:"app-jefatura"},
-  {source:"serjefe", target:"web-siendo"},
-  {source:"serjefe", target:"aleteagogia"},
-
-  // Patrimonio
-  {source:"patrimonio", target:"casa"},
-  {source:"patrimonio", target:"montesereno"},
-  {source:"patrimonio", target:"jerico-personal"},
-  {source:"patrimonio", target:"inversiones"},
-  {source:"patrimonio", target:"casa-ozzlo"},
-  {source:"patrimonio", target:"bio-suroeste"},
-  {source:"patrimonio", target:"gob-corporativo"},
-  {source:"patrimonio", target:"maquinaria"},
-  {source:"gob-corporativo", target:"familia"},
-  {source:"bio-suroeste", target:"jerico-personal"},
-
-  // Familia
-  {source:"familia", target:"amor"},
-  {source:"familia", target:"gordo"},
-  {source:"familia", target:"pa"},
-  {source:"familia", target:"ma"},
-  {source:"familia", target:"whoop"},
-  {source:"familia", target:"viaje-mundial"},
-  {source:"familia", target:"rutinas"},
-  {source:"casa", target:"amor"},
-  {source:"sersiendo", target:"heartbeat"},
-  {source:"sersiendo", target:"rutina-lunes"},
-  {source:"heartbeat", target:"rutina-lunes"},
+const L=[
+{s:"sebastian",t:"condugas"},{s:"sebastian",t:"siendo"},{s:"sebastian",t:"serjefe"},{s:"sebastian",t:"pat"},{s:"sebastian",t:"fam"},{s:"sebastian",t:"sersiendo"},
+// Modelo
+{s:"sersiendo",t:"aleteagogia"},{s:"sersiendo",t:"coherencia"},{s:"sersiendo",t:"3dec"},{s:"sersiendo",t:"3mot"},{s:"sersiendo",t:"jefatura"},{s:"sersiendo",t:"hb"},{s:"sersiendo",t:"rlunes"},{s:"jefatura",t:"alletagia"},{s:"alletagia",t:"sandbox"},{s:"alletagia",t:"manual"},{s:"alletagia",t:"10el"},{s:"alletagia",t:"9comp"},{s:"alletagia",t:"serjefe"},{s:"alletagia",t:"siendo"},{s:"3dec",t:"csv"},
+// Condugas
+{s:"condugas",t:"csv"},{s:"condugas",t:"ccaja"},{s:"condugas",t:"odoo"},{s:"condugas",t:"ugpp"},{s:"condugas",t:"redes"},{s:"condugas",t:"nneg"},{s:"csv",t:"ccaja"},{s:"csv",t:"oyma"},
+// Contratos → Clientes → Socio
+{s:"condugas",t:"ayura"},{s:"ayura",t:"epm"},{s:"ayura",t:"silar"},{s:"ayura",t:"jp"},
+{s:"condugas",t:"oyma"},{s:"oyma",t:"epm"},{s:"oyma",t:"silar"},
+{s:"condugas",t:"buca"},{s:"buca",t:"vanti"},{s:"buca",t:"silar"},
+{s:"condugas",t:"norm"},{s:"norm",t:"epm"},
+{s:"condugas",t:"valle"},{s:"valle",t:"gdo"},
+{s:"condugas",t:"boyaca"},{s:"boyaca",t:"vanti"},
+{s:"condugas",t:"florida"},{s:"florida",t:"metrogas"},
+{s:"condugas",t:"jcond"},
+// Personas
+{s:"condugas",t:"cami"},{s:"condugas",t:"andre"},{s:"condugas",t:"willi"},{s:"condugas",t:"juang"},{s:"condugas",t:"carlosh"},{s:"condugas",t:"naty"},{s:"condugas",t:"nelson"},{s:"condugas",t:"clau"},{s:"condugas",t:"jp"},{s:"condugas",t:"hilda"},{s:"condugas",t:"adolfo"},{s:"condugas",t:"doctor"},
+{s:"carlosh",t:"nneg"},{s:"andre",t:"csv"},{s:"odoo",t:"ema"},{s:"ccaja",t:"epm"},{s:"cami",t:"fam"},{s:"adolfo",t:"siendo"},
+{s:"condugas",t:"uci"},{s:"uci",t:"ccaja"},{s:"uci",t:"csv"},{s:"uci",t:"6ceros"},{s:"6ceros",t:"hilda"},{s:"6ceros",t:"odoo"},
+// Siendo
+{s:"siendo",t:"mona"},{s:"siendo",t:"lina"},{s:"siendo",t:"ema"},{s:"siendo",t:"vendemos"},{s:"siendo",t:"dojo"},{s:"siendo",t:"implantech"},{s:"siendo",t:"codoo"},{s:"siendo",t:"stgo"},{s:"lina",t:"dojo"},{s:"lina",t:"implantech"},{s:"ema",t:"codoo"},{s:"mona",t:"condugas"},
+// SerJefe
+{s:"serjefe",t:"guias"},{s:"serjefe",t:"ig"},{s:"serjefe",t:"app"},{s:"serjefe",t:"web"},{s:"serjefe",t:"aleteagogia"},
+// Patrimonio
+{s:"pat",t:"casa"},{s:"pat",t:"monte"},{s:"pat",t:"jpersonal"},{s:"pat",t:"inv"},{s:"pat",t:"gobcorp"},{s:"pat",t:"ozzlo"},{s:"pat",t:"maq"},{s:"gobcorp",t:"fam"},
+// Familia
+{s:"fam",t:"amor"},{s:"fam",t:"gordo"},{s:"fam",t:"pa"},{s:"fam",t:"ma"},{s:"fam",t:"whoop"},{s:"fam",t:"viaje"},{s:"fam",t:"rut"},{s:"casa",t:"amor"},
 ];
-
-const colors = {
-  center: "#f97316",
-  modelo: "#a78bfa",
-  condugas: "#ef4444",
-  siendo: "#06b6d4",
-  serjefe: "#8b5cf6",
-  patrimonio: "#22c55e",
-  familia: "#f472b6",
-};
-
-const typeColors = {
-  persona: 1, empresa: 0.9, proyecto: 0.7, concepto: 0.85,
-  cliente: 0.65, prospecto: 0.5, marca: 0.9, producto: 0.7,
-  área: 0.85, herramienta: 0.6
-};
-
-const W = window.innerWidth, H = window.innerHeight;
-const svg = d3.select("#graph").attr("width", W).attr("height", H);
-
-const g = svg.append("g");
-
-// Zoom
-svg.call(d3.zoom().scaleExtent([0.3, 4]).on("zoom", (e) => {
-  g.attr("transform", e.transform);
-}));
-
-const simulation = d3.forceSimulation(nodes)
-  .force("link", d3.forceLink(links).id(d=>d.id).distance(d => {
-    const s = nodes.find(n=>n.id===d.source.id||n.id===d.source);
-    const t = nodes.find(n=>n.id===d.target.id||n.id===d.target);
-    return (s&&t) ? (s.r||15)+(t.r||15)+30 : 80;
-  }).strength(d => d.strength || 0.3))
-  .force("charge", d3.forceManyBody().strength(-200))
-  .force("center", d3.forceCenter(W/2, H/2))
-  .force("collision", d3.forceCollide().radius(d=>d.r+8))
-  .force("x", d3.forceX(W/2).strength(0.05))
-  .force("y", d3.forceY(H/2).strength(0.05));
-
-const link = g.append("g").selectAll("line")
-  .data(links).join("line")
-  .attr("stroke", "#1e2a3a").attr("stroke-width", 0.5).attr("stroke-opacity", 0.6);
-
-const node = g.append("g").selectAll("g")
-  .data(nodes).join("g")
-  .attr("cursor", "pointer")
-  .call(d3.drag()
-    .on("start", (e,d) => { if(!e.active) simulation.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
-    .on("drag", (e,d) => { d.fx=e.x; d.fy=e.y; })
-    .on("end", (e,d) => { if(!e.active) simulation.alphaTarget(0); d.fx=null; d.fy=null; })
-  );
-
-node.append("circle")
-  .attr("r", d=>d.r)
-  .attr("fill", d=> colors[d.group] || "#64748b")
-  .attr("fill-opacity", d=> typeColors[d.type] || 0.7)
-  .attr("stroke", d=> colors[d.group] || "#64748b")
-  .attr("stroke-width", d=> d.id==="sebastian" ? 2 : 0.5)
-  .attr("stroke-opacity", 0.8);
-
-node.append("text")
-  .text(d=>d.label)
-  .attr("text-anchor", "middle")
-  .attr("dy", d=> d.r > 18 ? "0.35em" : d.r+12+"px")
-  .attr("fill", d=> d.r > 18 ? "#fff" : "#94a3b8")
-  .attr("font-size", d=> d.r > 20 ? "11px" : d.r > 15 ? "10px" : "9px")
-  .attr("font-weight", d=> d.r > 18 ? "600" : "400")
-  .attr("pointer-events", "none");
-
-node.on("click", (e, d) => {
+const links=L.map(l=>({source:l.s,target:l.t}));
+const GC={center:"#f97316",modelo:"#a78bfa",condugas:"#ef4444",siendo:"#06b6d4",serjefe:"#8b5cf6",patrimonio:"#22c55e",familia:"#f472b6"};
+function sty(d){
+  let f=GC[d.g]||"#475569",sk=f,sw=0.5,op=0.75,da="",ri=null;
+  if(d.tp==="persona"){op=0.9}
+  if(d.tp==="empresa"||d.tp==="marca"){op=0.95;sw=1.5}
+  if(d.tp==="concepto"){op=0.7}
+  if(d.tp==="contrato"){f="transparent";sw=2;op=1;da="4 2"}
+  if(d.tp==="cliente"){f="#1e293b";sk="#475569";op=0.8}
+  if(d.tp==="socio"){f="#1e293b";sk="#eab308";sw=2;op=0.9}
+  if(d.tp==="crisis"){f="#7f1d1d";sk="#ef4444";sw=2;op=1}
+  if(d.tp==="prospecto"){op=0.4;da="3 3";f="transparent"}
+  if(d.tp==="proceso"){op=0.6;da="2 2"}
+  if(d.tp==="herramienta"){op=0.5}
+  if(d.tp==="área"){op=0.85;sw=1}
+  if(d.st==="crisis")ri="#ef4444";
+  if(d.st==="hacer")ri="#f97316";
+  if(d.st==="delegar")ri="#06b6d4";
+  return{f,sk,sw,op,da,ri}
+}
+const W=window.innerWidth,H=window.innerHeight;
+const svg=d3.select("#graph").attr("width",W).attr("height",H);
+const g=svg.append("g");
+svg.call(d3.zoom().scaleExtent([0.2,5]).on("zoom",e=>g.attr("transform",e.transform)));
+const sim=d3.forceSimulation(N)
+  .force("link",d3.forceLink(links).id(d=>d.id).distance(d=>{const s=N.find(n=>n.id===(d.source.id||d.source)),t=N.find(n=>n.id===(d.target.id||d.target));return(s&&t)?(s.r||14)+(t.r||14)+25:70}).strength(0.25))
+  .force("charge",d3.forceManyBody().strength(-180))
+  .force("center",d3.forceCenter(W/2,H/2))
+  .force("collision",d3.forceCollide().radius(d=>d.r+6))
+  .force("x",d3.forceX(W/2).strength(0.04))
+  .force("y",d3.forceY(H/2).strength(0.04));
+const lk=g.append("g").selectAll("line").data(links).join("line").attr("stroke","#1e293b").attr("stroke-width",0.4).attr("stroke-opacity",0.5);
+const nd=g.append("g").selectAll("g").data(N).join("g").attr("cursor","pointer")
+  .call(d3.drag().on("start",(e,d)=>{if(!e.active)sim.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y}).on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y}).on("end",(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
+nd.each(function(d){const s=sty(d);if(s.ri){d3.select(this).append("circle").attr("r",d.r+4).attr("fill","none").attr("stroke",s.ri).attr("stroke-width",1.5).attr("stroke-dasharray","3 2").attr("opacity",0.7)}});
+nd.append("circle").attr("r",d=>d.r).each(function(d){const s=sty(d);d3.select(this).attr("fill",s.f).attr("stroke",s.sk).attr("stroke-width",s.sw).attr("fill-opacity",s.op).attr("stroke-opacity",0.8);if(s.da)d3.select(this).attr("stroke-dasharray",s.da)});
+nd.append("text").text(d=>d.label).attr("text-anchor","middle").attr("dy",d=>d.r>16?"0.35em":(d.r+11)+"px").attr("fill",d=>{if(d.tp==="contrato"||d.tp==="prospecto")return GC[d.g]||"#94a3b8";return d.r>16?"#fff":"#94a3b8"}).attr("font-size",d=>d.r>20?"11px":d.r>14?"9.5px":"8.5px").attr("font-weight",d=>d.r>16?"600":"400").attr("pointer-events","none");
+nd.on("click",(e,d)=>{
   e.stopPropagation();
-  document.getElementById("panel-name").textContent = d.label;
-  document.getElementById("panel-type").textContent = d.type + " · " + d.group;
-  document.getElementById("panel-type").style.color = colors[d.group] || "#64748b";
-  document.getElementById("panel-detail").textContent = d.detail || "";
-
-  const conns = links.filter(l => (l.source.id||l.source)===d.id || (l.target.id||l.target)===d.id);
-  const connNames = conns.map(l => {
-    const otherId = (l.source.id||l.source)===d.id ? (l.target.id||l.target) : (l.source.id||l.source);
-    const other = nodes.find(n=>n.id===otherId);
-    return other ? other.label : otherId;
-  });
-  document.getElementById("panel-connections").innerHTML =
-    "<strong style='font-size:12px;color:#64748b'>Conexiones:</strong><br>" +
-    connNames.map(n=>"<span class='conn-tag'>"+n+"</span>").join("");
-  document.getElementById("info-panel").classList.add("open");
-
-  // Highlight
-  node.select("circle").attr("opacity", n => {
-    if(n.id===d.id) return 1;
-    const connected = conns.some(l=> (l.source.id||l.source)===n.id || (l.target.id||l.target)===n.id);
-    return connected ? 0.9 : 0.15;
-  });
-  node.select("text").attr("opacity", n => {
-    if(n.id===d.id) return 1;
-    const connected = conns.some(l=> (l.source.id||l.source)===n.id || (l.target.id||l.target)===n.id);
-    return connected ? 1 : 0.1;
-  });
-  link.attr("stroke-opacity", l => {
-    return (l.source.id===d.id || l.target.id===d.id) ? 0.8 : 0.05;
-  }).attr("stroke", l => {
-    return (l.source.id===d.id || l.target.id===d.id) ? (colors[d.group]||"#64748b") : "#1e2a3a";
-  });
+  document.getElementById("pn").textContent=d.label;
+  document.getElementById("pt").textContent=d.tp+(d.st?" · "+d.st.toUpperCase():"")+" · "+d.g;
+  document.getElementById("pt").style.color=GC[d.g]||"#64748b";
+  document.getElementById("pd").textContent=d.dt||"";
+  const cn=links.filter(l=>(l.source.id||l.source)===d.id||(l.target.id||l.target)===d.id);
+  const cx=cn.map(l=>{const o=(l.source.id||l.source)===d.id?(l.target.id||l.target):(l.source.id||l.source);return N.find(n=>n.id===o)}).filter(Boolean);
+  document.getElementById("pg").innerHTML=cx.map(n=>"<span class='t' style='border-color:"+(GC[n.g]||"#334155")+"30;color:"+(GC[n.g]||"#64748b")+"'>"+n.label+"</span>").join("");
+  document.getElementById("ip").classList.add("open");
+  nd.select("circle:last-of-type").attr("opacity",n=>{if(n.id===d.id)return 1;return cn.some(l=>(l.source.id||l.source)===n.id||(l.target.id||l.target)===n.id)?0.85:0.08});
+  nd.selectAll("text").attr("opacity",n=>{if(n.id===d.id)return 1;return cn.some(l=>(l.source.id||l.source)===n.id||(l.target.id||l.target)===n.id)?1:0.05});
+  lk.attr("stroke-opacity",l=>(l.source.id===d.id||l.target.id===d.id)?0.7:0.03).attr("stroke",l=>(l.source.id===d.id||l.target.id===d.id)?(GC[d.g]||"#475569"):"#1e293b");
 });
-
-svg.on("click", () => { resetHighlight(); closePanel(); });
-
-function resetHighlight() {
-  node.select("circle").attr("opacity", 1);
-  node.select("text").attr("opacity", 1);
-  link.attr("stroke-opacity", 0.6).attr("stroke", "#1e2a3a");
-}
-
-function closePanel() {
-  document.getElementById("info-panel").classList.remove("open");
-  resetHighlight();
-}
-
-function filterGroup(group) {
-  document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
-  event.target.classList.add("active");
-
-  if(group==="all") {
-    node.attr("display", "block");
-    link.attr("display", "block");
-    resetHighlight();
-    return;
-  }
-
-  node.attr("display", d => (d.group===group || d.id==="sebastian") ? "block" : "none");
-  link.attr("display", l => {
-    const sg = (l.source.group||"");
-    const tg = (l.target.group||"");
-    return (sg===group || tg===group || l.source.id==="sebastian" || l.target.id==="sebastian") ? "block" : "none";
-  });
-}
-
-simulation.on("tick", () => {
-  link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
-  node.attr("transform", d=>`translate(${d.x},${d.y})`);
-});
+svg.on("click",()=>{rH();cP()});
+function rH(){nd.select("circle:last-of-type").each(function(d){d3.select(this).attr("opacity",sty(d).op)});nd.selectAll("text").attr("opacity",1);lk.attr("stroke-opacity",0.5).attr("stroke","#1e293b")}
+function cP(){document.getElementById("ip").classList.remove("open");rH()}
+function cl(){document.querySelectorAll(".fb").forEach(b=>b.classList.remove("on"))}
+function fG(gr,btn){cl();btn.classList.add("on");if(gr==="all"){nd.attr("display","block");lk.attr("display","block");rH();return}nd.attr("display",d=>(d.g===gr||d.id==="sebastian")?"block":"none");lk.attr("display",l=>{return((l.source.g||"")==gr||(l.target.g||"")==gr||l.source.id==="sebastian"||l.target.id==="sebastian")?"block":"none"})}
+function fT(tp,btn){cl();btn.classList.add("on");nd.attr("display",d=>(d.tp===tp||d.id==="sebastian")?"block":"none");lk.attr("display",l=>((l.source.tp||"")==tp||(l.target.tp||"")==tp)?"block":"none")}
+function fS(st,btn){cl();btn.classList.add("on");nd.attr("display",d=>(d.st===st||d.id==="sebastian")?"block":"none");lk.attr("display","none")}
+sim.on("tick",()=>{lk.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);nd.attr("transform",d=>"translate("+d.x+","+d.y+")")});
 </script>
 </body>
 </html>

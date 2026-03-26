@@ -1,687 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Sebastián — Sistema SER.SIENDO</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #07090d;
-            --surface: #0e1218;
-            --surface2: #141a24;
-            --border: #1e2a3a;
-            --text: #e2e8f0;
-            --text-dim: #64748b;
-            --text-muted: #475569;
-            --cyan: #06b6d4;
-            --cyan-glow: rgba(6,182,212,0.15);
-            --orange: #f97316;
-            --green: #22c55e;
-            --red: #ef4444;
-            --yellow: #eab308;
-            --purple: #a78bfa;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        /* Header */
-        .header {
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--cyan);
-        }
-
-        .nav {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav a:hover {
-            color: var(--cyan);
-        }
-
-        /* Main */
-        .main {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-            display: grid;
-            gap: 2rem;
-        }
-
-        /* Grid layouts */
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-
-        /* Cards */
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-        }
-
-        .card h2 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
-
-        .card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            color: var(--text);
-        }
-
-        /* Status indicators */
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.25rem 0.75rem;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .status.crisis { background: rgba(239,68,68,0.15); color: var(--red); }
-        .status.operativo { background: rgba(34,197,94,0.15); color: var(--green); }
-        .status.desarrollo { background: rgba(249,115,22,0.15); color: var(--orange); }
-        .status.monitoreo { background: rgba(234,179,8,0.15); color: var(--yellow); }
-
-        /* WHOOP cards */
-        .whoop-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .whoop-card {
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .whoop-card .label {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            margin-bottom: 0.5rem;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .whoop-card .value {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--cyan);
-        }
-
-        /* Project list */
-        .project {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .project:last-child {
-            border-bottom: none;
-        }
-
-        .project-info h4 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .project-info p {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-        }
-
-        /* Contratos */
-        .contrato {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-
-        .contrato:last-child {
-            margin-bottom: 0;
-        }
-
-        .contrato-info h4 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .contrato-info p {
-            font-size: 0.85rem;
-            color: var(--text-dim);
-        }
-
-        .margen {
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        .margen.positive { color: var(--green); }
-        .margen.negative { color: var(--red); }
-
-        /* KPIs */
-        .kpi {
-            text-align: center;
-            padding: 1rem;
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-        }
-
-        .kpi-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--cyan);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .kpi-label {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            margin-top: 0.5rem;
-        }
-
-        /* Briefing */
-        .briefing {
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.5rem;
-            white-space: pre-line;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* Loading states */
-        .loading {
-            color: var(--text-dim);
-            font-style: italic;
-        }
-
-        .error {
-            color: var(--red);
-        }
-
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .grid-4 { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 768px) {
-            .main { padding: 1rem; }
-            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-            .header-content { flex-direction: column; gap: 1rem; }
-            .whoop-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard Sebastián — SER.SIENDO</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#07090d;--bg2:#0c1017;--bg3:#111827;--cyan:#06b6d4;--orange:#f97316;--red:#ef4444;--green:#22c55e;--yellow:#eab308;--purple:#a78bfa;--pink:#f472b6;--text:#e2e8f0;--muted:#64748b;--border:#1e293b}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+a{color:var(--cyan);text-decoration:none}
+nav{position:sticky;top:0;z-index:50;background:rgba(7,9,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:6px;padding:10px 16px;overflow-x:auto}
+nav .logo{font-family:'Instrument Serif',serif;font-size:18px;color:var(--cyan);margin-right:auto;white-space:nowrap}
+nav button{background:transparent;border:1px solid var(--border);color:var(--muted);padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap;font-family:inherit;transition:.2s}
+nav button:hover,nav button.on{border-color:var(--cyan);color:var(--cyan);background:rgba(6,182,212,.08)}
+main{max-width:1200px;margin:0 auto;padding:16px}
+section{display:none}section.show{display:block}
+h2{font-family:'Instrument Serif',serif;font-size:24px;font-weight:400;margin-bottom:16px}
+h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:20px 0 10px}
+.grid{display:grid;gap:12px}.g2{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.g4{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.card .label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.card .val{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:500;margin:4px 0}
+.card .sub{font-size:12px;color:var(--muted)}
+.card.crisis{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.05)}
+.kpi-row{display:grid;grid-template-columns:1fr 100px 80px;gap:0;font-size:13px;padding:7px 0;border-bottom:1px solid var(--border);align-items:center}
+.kpi-row.head{font-weight:600;color:var(--muted);font-size:11px;text-transform:uppercase}
+.kpi-val{font-family:'JetBrains Mono',monospace;text-align:right}
+.st{font-size:10px;padding:2px 8px;border-radius:4px;text-align:center;display:inline-block}
+.st-r{background:rgba(239,68,68,.15);color:#f87171}.st-y{background:rgba(234,179,8,.15);color:#fbbf24}.st-g{background:rgba(34,197,94,.15);color:#4ade80}
+.contrato{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:6px}
+.contrato.crisis{border-color:rgba(239,68,68,.35)}
+.cname{font-weight:500;font-size:14px}.cclient{font-size:11px;color:var(--muted)}.cmargen{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:500}
+.proj{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:8px}
+.pname{font-weight:600;font-size:14px}.pline{font-size:10px;padding:2px 8px;border-radius:4px;margin-left:6px}
+.pdesc{font-size:12px;color:var(--muted);margin:4px 0}.ppeople{font-size:11px;color:var(--muted)}.paction{font-size:12px;color:var(--cyan);margin-top:4px}
+.line-condugas{background:rgba(239,68,68,.12);color:#f87171}.line-siendo{background:rgba(6,182,212,.12);color:#22d3ee}.line-serjefe{background:rgba(167,139,250,.12);color:#c4b5fd}.line-patrimonio{background:rgba(34,197,94,.12);color:#4ade80}.line-familia{background:rgba(244,114,182,.12);color:#f9a8d4}
+.link-row{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.link-btn{background:var(--bg3);border:1px solid var(--border);padding:8px 16px;border-radius:8px;color:var(--cyan);font-size:13px;transition:.2s}
+.link-btn:hover{border-color:var(--cyan)}
+footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);margin-top:32px}
+</style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">SER.SIENDO</div>
-            <nav class="nav">
-                <a href="./">← Sistema</a>
-                <a href="mapa-neuronal.html">Mapa Neuronal</a>
-                <a href="reportes/">Reportes</a>
-                <a href="https://github.com/SerJefe/siendo-apps" target="_blank">Repositorio</a>
-            </nav>
-        </div>
-    </header>
+<nav>
+<span class="logo">SER.SIENDO</span>
+<button class="on" onclick="show('inicio')">Inicio</button>
+<button onclick="show('comite')">Comité SV</button>
+<button onclick="show('contratos')">Contratos</button>
+<button onclick="show('proyectos')">Proyectos</button>
+<button onclick="show('equipo')">Equipo</button>
+<button onclick="show('briefing')">Briefing</button>
+<button onclick="window.open('mapa-neuronal.html','_blank')">Mapa</button>
+</nav>
+<main>
+<section id="inicio" class="show">
+<h2>Centro de Control</h2>
+<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px" id="fdate"></p>
+<div class="grid g4">
+<div class="card crisis"><div class="label">Caja</div><div class="val" id="k-caja">8 días</div><div class="sub">objetivo: >30 días</div></div>
+<div class="card crisis"><div class="label">OYMA R1</div><div class="val" style="color:var(--red)">11 días</div><div class="sub">Deadline EPM: 4 abril</div></div>
+<div class="card" style="border-color:rgba(234,179,8,.3)"><div class="label">Facturación</div><div class="val" id="k-fact">45%</div><div class="sub">del target mensual</div></div>
+<div class="card"><div class="label">EBITDA</div><div class="val" id="k-ebitda">-$950M</div><div class="sub">consolidado</div></div>
+</div>
+<h3>WHOOP</h3>
+<div class="grid g3">
+<div class="card"><div class="label">Recovery</div><div class="val" id="w-rec">Sin datos</div></div>
+<div class="card"><div class="label">Sleep</div><div class="val" id="w-slp">Sin datos</div></div>
+<div class="card"><div class="label">Strain</div><div class="val" id="w-str">Sin datos</div></div>
+</div>
+<h3>Acceso rápido</h3>
+<div class="link-row">
+<a class="link-btn" href="mapa-neuronal.html">Mapa Neuronal (78 nodos)</a>
+<a class="link-btn" href="reportes/analisis-oyma-q1-2026.html">Informe OYMA Q1</a>
+</div>
+</section>
 
-    <main class="main">
-        <!-- WHOOP + KPIs principales -->
-        <section>
-            <div class="whoop-grid">
-                <div class="whoop-card">
-                    <div class="label">RECOVERY</div>
-                    <div class="value" id="whoop-recovery">Sin datos</div>
-                </div>
-                <div class="whoop-card">
-                    <div class="label">SLEEP</div>
-                    <div class="value" id="whoop-sleep">Sin datos</div>
-                </div>
-                <div class="whoop-card">
-                    <div class="label">CRÍTICAS</div>
-                    <div class="value" id="tareas-criticas">Sin datos</div>
-                </div>
-            </div>
-        </section>
+<section id="comite">
+<h2>Comité de Sobrevivencia — 16 KPIs</h2>
+<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px">Modelo: Sobrevivir → Recuperar Control → Desarrollarse</p>
+<div id="kpit"></div>
+</section>
 
-        <!-- Comité SV - 16 KPIs -->
-        <section class="card">
-            <h2>📊 Comité SV — KPIs Ejecutivos</h2>
-            <div class="grid-4" id="kpis-grid">
-                <div class="kpi">
-                    <div class="kpi-value" id="kpi-caja">--</div>
-                    <div class="kpi-label">Caja (días)</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value" id="kpi-facturacion">--</div>
-                    <div class="kpi-label">Facturación %</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value" id="kpi-produccion">--</div>
-                    <div class="kpi-label">Producción Déficit %</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value" id="kpi-ebitda">--</div>
-                    <div class="kpi-label">EBITDA (M)</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">2</div>
-                    <div class="kpi-label">Proyectos Crisis</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">8</div>
-                    <div class="kpi-label">Contratos Activos</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">21</div>
-                    <div class="kpi-label">Proyectos Total</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">452</div>
-                    <div class="kpi-label">Empleados</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">9</div>
-                    <div class="kpi-label">Días OYMA Deadline</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">5</div>
-                    <div class="kpi-label">Líneas Negocio</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">6</div>
-                    <div class="kpi-label">Equipo Directo</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">185</div>
-                    <div class="kpi-label">Documentos Modelo</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">60+</div>
-                    <div class="kpi-label">Herramientas SerJefe</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">3.3B</div>
-                    <div class="kpi-label">OYMA Valor (COP)</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">90+</div>
-                    <div class="kpi-label">Nodos Neurales</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-value">4.21</div>
-                    <div class="kpi-label">Versión Sistema</div>
-                </div>
-            </div>
-        </section>
+<section id="contratos">
+<h2>Contratos Condugas</h2>
+<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px">8 contratos · 452 empleados</p>
+<div id="clist"></div>
+</section>
 
-        <div class="grid-2">
-            <!-- Contratos Condugas -->
-            <section class="card">
-                <h2>🏢 Contratos Condugas</h2>
-                <div id="contratos-list">
-                    <div class="loading">Cargando contratos...</div>
-                </div>
-            </section>
+<section id="proyectos">
+<h2>Todos los Proyectos</h2>
+<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px">Condugas · Siendo Consulting · SerJefe · Patrimonio · Familia</p>
+<div id="plist"></div>
+</section>
 
-            <!-- Proyectos Críticos -->
-            <section class="card">
-                <h2>🔴 Crisis Activas</h2>
-                <div class="project">
-                    <div class="project-info">
-                        <h4>OYMA R1 (EPM Rionegro)</h4>
-                        <p>Solicitud suspensión enviada • Deadline 4 abril</p>
-                    </div>
-                    <span class="status crisis">CRÍTICO</span>
-                </div>
-                <div class="project">
-                    <div class="project-info">
-                        <h4>Jericó Personal</h4>
-                        <p>Clarificar alcance proyecto</p>
-                    </div>
-                    <span class="status crisis">DEFINIR</span>
-                </div>
-                <div class="project">
-                    <div class="project-info">
-                        <h4>Pérdidas (Contrato)</h4>
-                        <p>Análisis causas + plan recuperación</p>
-                    </div>
-                    <span class="status crisis">INTERVENCIÓN</span>
-                </div>
-            </section>
-        </div>
+<section id="equipo">
+<h2>Equipo</h2>
+<div class="grid g3">
+<div class="card"><div class="label">Condugas · Proyectos</div><div class="val" style="font-size:16px">Cami</div><div class="sub">Juan Camilo Berrio · Expansiva</div></div>
+<div class="card"><div class="label">Condugas · Finanzas</div><div class="val" style="font-size:16px">Andre</div><div class="sub">Andrea Bernal · Intensiva</div></div>
+<div class="card"><div class="label">Condugas · Admin</div><div class="val" style="font-size:16px">Willi</div><div class="sub">William López</div></div>
+<div class="card"><div class="label">Condugas · RRHH</div><div class="val" style="font-size:16px">Naty</div><div class="sub">Natalia Rojas</div></div>
+<div class="card"><div class="label">Condugas · Logística</div><div class="val" style="font-size:16px">Nelson</div><div class="sub">Favio Nelson Escobar</div></div>
+<div class="card"><div class="label">Condugas · Contable</div><div class="val" style="font-size:16px">Clau</div><div class="sub">Claudia Quintero</div></div>
+<div class="card"><div class="label">Condugas · Estrategia</div><div class="val" style="font-size:16px">Juan G</div><div class="sub">Juan Guillermo</div></div>
+<div class="card"><div class="label">Condugas · Nuevos Neg.</div><div class="val" style="font-size:16px">Carlos H</div><div class="sub">Carlos Hernán López</div></div>
+<div class="card"><div class="label">Condugas · Productividad</div><div class="val" style="font-size:16px">JuanPa</div><div class="sub">Ex-dir Ayura</div></div>
+<div class="card"><div class="label">Mentor · Junta</div><div class="val" style="font-size:16px">Adolfo</div><div class="sub">Gilberto, Mario, Marisol</div></div>
+<div class="card"><div class="label">Siendo · Gestora</div><div class="val" style="font-size:16px">Lina</div><div class="sub">Lina Russi · Expansiva</div></div>
+<div class="card"><div class="label">Siendo · Comercial</div><div class="val" style="font-size:16px">Mona</div><div class="sub">Mónica González</div></div>
+<div class="card"><div class="label">Siendo · Dev</div><div class="val" style="font-size:16px">Ema</div><div class="sub">Emanuel · Odoo, apps</div></div>
+<div class="card"><div class="label">Abogado</div><div class="val" style="font-size:16px">Doctor</div><div class="sub">Camilo Marín · 5 contratos</div></div>
+</div>
+</section>
 
-        <!-- Todos los Proyectos -->
-        <section class="card">
-            <h2>📋 Todos los Proyectos (21)</h2>
-            <div class="grid-3">
-                <!-- CONDUGAS -->
-                <div>
-                    <h3>🏢 CONDUGAS (10)</h3>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>OYMA R1</h4>
-                            <p>Cami, Juan • Crisis</p>
-                        </div>
-                        <span class="status crisis">CRISIS</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Automatización Odoo</h4>
-                            <p>Ema • 2/10 procedimientos</p>
-                        </div>
-                        <span class="status desarrollo">DEV</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Boyacá</h4>
-                            <p>Cami, Andre • Margen 8%</p>
-                        </div>
-                        <span class="status operativo">OK</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Bucaramanga</h4>
-                            <p>Andre • Margen 5%</p>
-                        </div>
-                        <span class="status operativo">OK</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Floridablanca</h4>
-                            <p>Margen 4%</p>
-                        </div>
-                        <span class="status operativo">OK</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Jericó (Contrato)</h4>
-                            <p>Margen 6%</p>
-                        </div>
-                        <span class="status operativo">OK</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>O&M Z2</h4>
-                            <p>Margen 2%</p>
-                        </div>
-                        <span class="status monitoreo">WATCH</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Valle</h4>
-                            <p>Margen 7%</p>
-                        </div>
-                        <span class="status operativo">OK</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Pérdidas</h4>
-                            <p>Margen -15%</p>
-                        </div>
-                        <span class="status crisis">CRISIS</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Nuevos Negocios</h4>
-                            <p>Carlos • Mesa Camacol</p>
-                        </div>
-                        <span class="status desarrollo">DEV</span>
-                    </div>
-                </div>
+<section id="briefing">
+<h2>Briefing Diario</h2>
+<div style="text-align:center;padding:40px;color:var(--muted);font-size:14px">
+El briefing se genera cada mañana desde el Claw (@Siendo_bot).<br>
+Cuando esté disponible, aparecerá acá.<br><br>
+<span style="font-size:12px">Rutina 12 pasos: Agenda → Correo → GPT/Limitless → ISS → Todoist/Odoo → WhatsApp/GoodNotes → Proyectos → Notas → Resumen → Físico → Objetivos → Cabeza</span>
+</div>
+</section>
+</main>
+<footer>SER.SIENDO · Alletagia · Aleteagogía · Jefatura, nunca liderazgo — Dashboard v2 · 26 mar 2026</footer>
+<script>
+function show(id){document.querySelectorAll('section').forEach(s=>s.classList.remove('show'));document.getElementById(id).classList.add('show');document.querySelectorAll('nav button:not(:last-child)').forEach(b=>b.classList.remove('on'));event.target.classList.add('on')}
+document.getElementById('fdate').textContent='Hoy: '+new Date().toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 
-                <!-- SIENDO CONSULTING -->
-                <div>
-                    <h3>🎯 SENDO CONSULTING (6)</h3>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Framework Aleteagogía</h4>
-                            <p>Sebastián • Validado</p>
-                        </div>
-                        <span class="status operativo">OK</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Caso Lina (Patrocinio)</h4>
-                            <p>Energía expansiva</p>
-                        </div>
-                        <span class="status desarrollo">TRACK</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Caso Andrea (Responsabilidad)</h4>
-                            <p>Energía intensiva</p>
-                        </div>
-                        <span class="status desarrollo">TRACK</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Consultoría Vendemos</h4>
-                            <p>Cliente activo</p>
-                        </div>
-                        <span class="status operativo">OK</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Prospectos DOJO+Implantech</h4>
-                            <p>Lina • Comercial</p>
-                        </div>
-                        <span class="status desarrollo">PROS</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Clientes Odoo/ERP</h4>
-                            <p>Emanuel • Pipeline</p>
-                        </div>
-                        <span class="status desarrollo">TECH</span>
-                    </div>
-                </div>
+// KPIs
+fetch('./data/kpis.json').then(r=>r.json()).then(d=>{
+if(d.caja_dias)document.getElementById('k-caja').textContent=d.caja_dias+' días';
+if(d.facturacion_pct)document.getElementById('k-fact').textContent=d.facturacion_pct+'%';
+if(d.ebitda)document.getElementById('k-ebitda').textContent='$'+d.ebitda+'M';
+if(d.whoop){if(d.whoop.recovery)document.getElementById('w-rec').textContent=d.whoop.recovery;if(d.whoop.sleep)document.getElementById('w-slp').textContent=d.whoop.sleep;if(d.whoop.strain)document.getElementById('w-str').textContent=d.whoop.strain}
+}).catch(()=>{});
 
-                <!-- OTROS -->
-                <div>
-                    <h3>💰 PATRIMONIO + OTROS (5)</h3>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Construcción Casa</h4>
-                            <p>Nelson Orozco</p>
-                        </div>
-                        <span class="status desarrollo">BUILD</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Lote Montesereno</h4>
-                            <p>Análisis viabilidad</p>
-                        </div>
-                        <span class="status desarrollo">EVAL</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Jericó Personal</h4>
-                            <p>Clarificar alcance</p>
-                        </div>
-                        <span class="status crisis">CRISIS</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Portafolio Inversiones</h4>
-                            <p>Schwab, Trii, Insights</p>
-                        </div>
-                        <span class="status operativo">OK</span>
-                    </div>
-                    <div class="project">
-                        <div class="project-info">
-                            <h4>Viaje Miami+NYC</h4>
-                            <p>Sebastián + Paulina</p>
-                        </div>
-                        <span class="status desarrollo">PLAN</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+const kpis=[
+{n:'Caja en días',v:'8 días',s:'r'},{n:'Ingreso facturable vs meta',v:'45%',s:'r'},{n:'Déficit producción',v:'73%',s:'r'},{n:'EBITDA consolidado',v:'-$950M',s:'r'},
+{n:'Margen operativo',v:'-6.6%',s:'y'},{n:'Cash burn rate',v:'-$9.3M/día',s:'y'},{n:'Desvío costos vs presupuesto',v:'10%',s:'y'},{n:'Incumplimientos contractuales',v:'3',s:'r'},
+{n:'Obra asignada vs capacidad',v:'73%',s:'r'},{n:'Salidas personal clave',v:'2',s:'y'},{n:'Incidentes cultura/rumores',v:'Rumor económico',s:'y'},{n:'Datos confiables',v:'Parcial',s:'y'},
+{n:'Deuda/Activo total',v:'52%',s:'r'},{n:'Tiempo firme contratos',v:'11.5 años',s:'g'},{n:'Liquidez 2 años',v:'20',s:'y'},{n:'Abastecimiento crítico',v:'Construtem riesgo',s:'r'}
+];
+const kt=document.getElementById('kpit');
+kt.innerHTML='<div class="kpi-row head"><span>Indicador</span><span style="text-align:right">Valor</span><span style="text-align:center">Estado</span></div>';
+kpis.forEach(k=>{kt.innerHTML+=`<div class="kpi-row"><span>${k.n}</span><span class="kpi-val">${k.v}</span><span style="text-align:center"><span class="st st-${k.s}">${k.s==='r'?'Crítico':k.s==='y'?'Atención':'OK'}</span></span></div>`});
 
-        <!-- Briefing del día -->
-        <section class="card">
-            <h2>📋 Briefing Diario</h2>
-            <div class="briefing" id="briefing-content">
-Cargando briefing del día...
+// Contratos
+const contracts=[
+{n:'OYMA R1',c:'EPM · SILAR',m:-22,crisis:true},{n:'Normalización (Pérdidas)',c:'EPM',m:-15,crisis:true},{n:'Ayura',c:'EPM · SILAR',m:null,crisis:true},
+{n:'Valle',c:'GdO',m:7},{n:'Boyacá',c:'Vantí',m:8},{n:'Bucaramanga',c:'Vantí · SILAR',m:5},{n:'Floridablanca',c:'Metrogas',m:4},{n:'Jericó',c:'EPM',m:6}
+];
+fetch('./data/contratos.json').then(r=>r.json()).then(d=>{renderC(d.contratos||d)}).catch(()=>{renderC(contracts)});
+function renderC(arr){const l=document.getElementById('clist');l.innerHTML='';arr.forEach(c=>{const m=c.margen!==undefined?c.margen:c.m;const cr=c.crisis||c.status==='crisis';const col=m===null?'var(--muted)':m<0?'var(--red)':m<5?'var(--yellow)':'var(--green)';l.innerHTML+=`<div class="contrato${cr?' crisis':''}"><div><div class="cname">${c.nombre||c.n}</div><div class="cclient">${c.cliente||c.c||''}</div></div><div class="cmargen" style="color:${col}">${m!==null&&m!==undefined?m+'%':'Cierre'}</div></div>`})}
 
-Mientras tanto, recordatorio de estructura:
-1. Panorama en una frase
-2. Lo más importante detectado  
-3. Pendientes activos reales
-4. Riesgos o tensiones
-5. Recomendación de foco
-6. Acciones prioritarias
-7. Ajuste personal según energía
-8. Oportunidades IA/automatización
-9. Vacíos de información
-            </div>
-        </section>
-    </main>
-
-    <script>
-        // Load data from JSON files
-        async function loadData() {
-            try {
-                // Load KPIs
-                const kpisResponse = await fetch('./data/kpis.json');
-                if (kpisResponse.ok) {
-                    const kpis = await kpisResponse.json();
-                    updateKPIs(kpis);
-                } else {
-                    throw new Error('KPIs not available');
-                }
-            } catch (error) {
-                console.error('Error loading KPIs:', error);
-                updateWHOOPError();
-            }
-
-            try {
-                // Load contratos
-                const contratosResponse = await fetch('./data/contratos.json');
-                if (contratosResponse.ok) {
-                    const contratos = await contratosResponse.json();
-                    updateContratos(contratos);
-                } else {
-                    throw new Error('Contratos not available');
-                }
-            } catch (error) {
-                console.error('Error loading contratos:', error);
-                document.getElementById('contratos-list').innerHTML = '<div class="error">Sin datos de contratos</div>';
-            }
-        }
-
-        function updateKPIs(data) {
-            const kpis = data.comite_sv;
-            
-            // Update WHOOP
-            document.getElementById('whoop-recovery').textContent = kpis.whoop_recovery || 'Sin datos';
-            document.getElementById('whoop-sleep').textContent = kpis.whoop_sleep || 'Sin datos';
-            document.getElementById('tareas-criticas').textContent = kpis.tareas_criticas || 'Sin datos';
-            
-            // Update main KPIs
-            document.getElementById('kpi-caja').textContent = kpis.caja_dias || '--';
-            document.getElementById('kpi-facturacion').textContent = kpis.facturacion_pct ? kpis.facturacion_pct + '%' : '--';
-            document.getElementById('kpi-produccion').textContent = kpis.produccion_deficit_pct ? kpis.produccion_deficit_pct + '%' : '--';
-            document.getElementById('kpi-ebitda').textContent = kpis.ebitda || '--';
-        }
-
-        function updateContratos(data) {
-            const contratos = data.contratos;
-            const container = document.getElementById('contratos-list');
-            
-            container.innerHTML = contratos.map(contrato => `
-                <div class="contrato">
-                    <div class="contrato-info">
-                        <h4>${contrato.nombre}</h4>
-                        <p>${contrato.status} • ${contrato.equipo || 'Sin asignar'}</p>
-                        ${contrato.alertas.length > 0 ? `<p style="color: var(--red); font-size: 0.8rem;">${contrato.alertas.join(' • ')}</p>` : ''}
-                    </div>
-                    <div class="margen ${contrato.margen >= 0 ? 'positive' : 'negative'}">
-                        ${contrato.margen >= 0 ? '+' : ''}${contrato.margen}%
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function updateWHOOPError() {
-            document.getElementById('whoop-recovery').textContent = 'Sin datos';
-            document.getElementById('whoop-sleep').textContent = 'Sin datos';
-            document.getElementById('tareas-criticas').textContent = 'Sin datos';
-            document.getElementById('kpi-caja').textContent = '--';
-            document.getElementById('kpi-facturacion').textContent = '--';
-            document.getElementById('kpi-produccion').textContent = '--';
-            document.getElementById('kpi-ebitda').textContent = '--';
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', loadData);
-        
-        // Refresh data every 5 minutes
-        setInterval(loadData, 5 * 60 * 1000);
-    </script>
+// Proyectos
+const P=[
+{nombre:'OYMA R1 — Respuesta EPM',linea:'condugas',estado:'CRISIS',responsable:'Cami, Andre, Naty',accion:'Deadline 4 abril',desc:'-22% margen. Carta suspensión 19 mar.'},
+{nombre:'Crisis Caja',linea:'condugas',estado:'CRISIS',responsable:'Andre',accion:'Mantener >5 días',desc:'4-8 días ene→mar. Proveedores sin pago.'},
+{nombre:'UCI Condugas',linea:'condugas',estado:'CRISIS',responsable:'Sebastián',accion:'Reducir fragilidad',desc:'Prod $3,273M vs Costos $3,598M = -$325M'},
+{nombre:'Comité SV Semanal',linea:'condugas',estado:'Activo',responsable:'Sebastián',accion:'16 KPIs cada semana',desc:'S → RC → D aplicado a los 8 contratos'},
+{nombre:'Automatización Odoo',linea:'condugas',estado:'Desarrollo',responsable:'Ema, Andre, Clau',accion:'Info contractual Ema',desc:'2/10 procedimientos. ROI $11-18 mil M.'},
+{nombre:'Proyecto 6 Ceros',linea:'condugas',estado:'Urgente',responsable:'Hilda',accion:'Segmentar personal clave',desc:'Programación, digitación, romper fragilidad.'},
+{nombre:'Redes Condugas',linea:'condugas',estado:'Planificación',responsable:'Mona',accion:'GPTs y Gems',desc:'LinkedIn B2B, IG, YouTube, TikTok'},
+{nombre:'UGPP Auditoría',linea:'condugas',estado:'Pendiente',responsable:'Andre, Clau',accion:'Plan desatrazo IBC',desc:'Auditoría planillas Odoo.'},
+{nombre:'Consultoría Vendemos',linea:'siendo',estado:'Activo',responsable:'Lina, Sebastián',accion:'Completar 4 sesiones',desc:'Cliente activo. Modelo jefatura aplicado.'},
+{nombre:'Prospectos DOJO + Implantech',linea:'siendo',estado:'Prospecto',responsable:'Lina',accion:'Acercamiento',desc:'Pipeline consultoría con Lina.'},
+{nombre:'Clientes Odoo/ERP',linea:'siendo',estado:'Prospecto',responsable:'Ema',accion:'Pipeline implementación',desc:'Odoo ERP/CRM para clientes externos.'},
+{nombre:'SerJefe Contenido IG',linea:'serjefe',estado:'Activo',responsable:'Sebastián',accion:'Carruseles semanales',desc:'60+ guías interactivas. @SerJefe'},
+{nombre:'App Jefatura',linea:'serjefe',estado:'Desarrollo',responsable:'Ema',accion:'No-code prototype',desc:'Jefatura con sentido.'},
+{nombre:'Web Premium Alletagia',linea:'serjefe',estado:'Desarrollo',responsable:'Ema',accion:'siendo-premium.html',desc:'Plataforma modelo SER.SIENDO.'},
+{nombre:'Construcción Casa',linea:'patrimonio',estado:'Activo',responsable:'Amor, Oscar, Andrés',accion:'Cerramiento + obras previas',desc:'Licencia pend. Acero vigas. Comités obra #1-4.'},
+{nombre:'Lote Montesereno',linea:'patrimonio',estado:'Pendiente',responsable:'Sebastián',accion:'Iniciar viabilidad',desc:'Lote pagado. Viabilidad construcción.'},
+{nombre:'Proyecto Jericó Personal',linea:'patrimonio',estado:'Desarrollo',responsable:'Rafa',accion:'Bio Suroeste + turismo',desc:'A título personal.'},
+{nombre:'Inversiones/Portafolio',linea:'patrimonio',estado:'Monitoreo',responsable:'Sebastián',accion:'Dashboard inversiones',desc:'Schwab, Trii, Insights. Bolsa cayendo.'},
+{nombre:'Casa OZZLO',linea:'patrimonio',estado:'Negociación',responsable:'Sebastián',accion:'Avances',desc:'Oferta estructural revisada.'},
+{nombre:'Gobierno Corporativo',linea:'patrimonio',estado:'Inicio',responsable:'Sebastián, Adolfo',accion:'Cuadro patrimonio + presentación',desc:'Finanzas personales, dividendos.'},
+{nombre:'Inversión Maquinaria',linea:'patrimonio',estado:'Planificación',responsable:'Nelson, Carlos',accion:'Caso negocio equipos',desc:'Acero, mov tierras, zanjas, retros.'},
+{nombre:'Viaje Mundial',linea:'familia',estado:'Planificación',responsable:'Amor',accion:'Boletas Col/Bra/Arg',desc:'Miami + NYC época mundial.'},
+{nombre:'Rutinas Familia',linea:'familia',estado:'Activo',responsable:'Amor',accion:'WHOOP integración',desc:'Keto, pádel, fisio Paulina, BLW Gordo.'},
+];
+fetch('./data/proyectos.json').then(r=>r.json()).then(d=>{renderP(d.proyectos||d)}).catch(()=>{renderP(P)});
+function renderP(arr){const l=document.getElementById('plist');l.innerHTML='';arr.forEach(p=>{l.innerHTML+=`<div class="proj"><div><span class="pname">${p.nombre}</span><span class="pline line-${p.linea}">${p.linea}</span></div><div class="pdesc">${p.desc||''}</div><div class="ppeople">${p.responsable||'—'} · ${p.estado||''}</div><div class="paction">→ ${p.accion||''}</div></div>`})}
+</script>
 </body>
 </html>
