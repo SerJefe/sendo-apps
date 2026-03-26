@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuentas de Cobro - Sebastián Sánchez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .factura {
+            background: white;
+            padding: 40px;
+            border: 2px solid #333;
+            page-break-after: always;
+            min-height: 700px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .encabezado {
+            text-align: left;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .titulo {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .fecha-lugar {
+            text-align: right;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .destinatario {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .debe-a {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .monto {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .concepto {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .retencion {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 13px;
+        }
+        .costos {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .pago {
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .firma {
+            margin-top: 40px;
+        }
+        .firma-fecha {
+            margin-bottom: 20px;
+        }
+        .firma-nombre {
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        @media print {
+            body { background: white; }
+            .container { grid-template-columns: 1fr; }
+            .factura { 
+                page-break-after: always;
+                border: 2px solid #000;
+                margin-bottom: 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- CUENTA DE COBRO 121 - MARZO -->
+        <div class="factura">
+            <div class="encabezado">
+                SEBASTIAN SANCHEZ ACEVEDO<br>
+                Calle 27 Sur No. 27-21<br>
+                Celular: 312 850 8826
+            </div>
+            
+            <div class="titulo">
+                CUENTA DE COBRO No. 121
+            </div>
+            
+            <div class="fecha-lugar">
+                Medellín, 18 de Marzo 2026
+            </div>
+            
+            <div class="destinatario">
+                VENDEMOS PROPIEDAD RAIZ SAS<br>
+                Nit: 901328177-2
+            </div>
+            
+            <div class="debe-a">
+                DEBE A: SEBASTIÁN SÁNCHEZ ACEVEDO C.C. 1037604445
+            </div>
+            
+            <div class="monto">
+                La suma de UN MILLÓN DOSCIENTOS MIL PESOS M.L.V. ($1.200.000,00) correspondientes al tema PROCESO DE ACOMPAÑAMIENTO GERENCIAL, realizado en marzo de 2026.
+            </div>
+            
+            <div class="retencion">
+                Para efectos de la aplicación de retención en la fuente establecida en el artículo 383 parágrafo 2 del ET, la cual se aplica a los pagos o abonos en cuenta por concepto de ingresos por honorarios o por prestación de servicios personales, CERTIFICO QUE NO TENGO CONTRATADA O VINCULADA A ALGUNA PERSONA para el desarrollo de mi actividad económica, por tanto solicito no aplicar la retención en la fuente a ingresos laborales. En el momento que los vincule me comprometo a informar.
+            </div>
+            
+            <div class="costos">
+                Manifiesto al agente retenedor que no usare costos en mi declaración de renta, por tal razón favor ejecutar la retención según artículo 383.
+            </div>
+            
+            <div class="pago">
+                Por favor consignar en la cuenta de ahorros BANCOLOMBIA #267550898-84. A mi nombre.
+            </div>
+            
+            <div class="firma">
+                <div class="firma-fecha">
+                    Se firma en Medellín, a los (18) dieciocho días del mes de marzo de 2026.
+                </div>
+                
+                <div style="margin-top: 60px; border-bottom: 1px solid #000; width: 300px;"></div>
+                <div class="firma-nombre">
+                    SEBASTIAN SANCHEZ ACEVEDO<br>
+                    C.C. 1037604445
+                </div>
+            </div>
+        </div>
+        
+        <!-- CUENTA DE COBRO 122 - ABRIL -->
+        <div class="factura">
+            <div class="encabezado">
+                SEBASTIAN SANCHEZ ACEVEDO<br>
+                Calle 27 Sur No. 27-21<br>
+                Celular: 312 850 8826
+            </div>
+            
+            <div class="titulo">
+                CUENTA DE COBRO No. 122
+            </div>
+            
+            <div class="fecha-lugar">
+                Medellín, 1 de Abril 2026
+            </div>
+            
+            <div class="destinatario">
+                VENDEMOS PROPIEDAD RAIZ SAS<br>
+                Nit: 901328177-2
+            </div>
+            
+            <div class="debe-a">
+                DEBE A: SEBASTIÁN SÁNCHEZ ACEVEDO C.C. 1037604445
+            </div>
+            
+            <div class="monto">
+                La suma de UN MILLÓN DOSCIENTOS MIL PESOS M.L.V. ($1.200.000,00) correspondientes al tema PROCESO DE ACOMPAÑAMIENTO GERENCIAL, realizado en abril de 2026.
+            </div>
+            
+            <div class="retencion">
+                Para efectos de la aplicación de retención en la fuente establecida en el artículo 383 parágrafo 2 del ET, la cual se aplica a los pagos o abonos en cuenta por concepto de ingresos por honorarios o por prestación de servicios personales, CERTIFICO QUE NO TENGO CONTRATADA O VINCULADA A ALGUNA PERSONA para el desarrollo de mi actividad económica, por tanto solicito no aplicar la retención en la fuente a ingresos laborales. En el momento que los vincule me comprometo a informar.
+            </div>
+            
+            <div class="costos">
+                Manifiesto al agente retenedor que no usare costos en mi declaración de renta, por tal razón favor ejecutar la retención según artículo 383.
+            </div>
+            
+            <div class="pago">
+                Por favor consignar en la cuenta de ahorros BANCOLOMBIA #267550898-84. A mi nombre.
+            </div>
+            
+            <div class="firma">
+                <div class="firma-fecha">
+                    Se firma en Medellín, a los (1) primero días del mes de abril de 2026.
+                </div>
+                
+                <div style="margin-top: 60px; border-bottom: 1px solid #000; width: 300px;"></div>
+                <div class="firma-nombre">
+                    SEBASTIAN SANCHEZ ACEVEDO<br>
+                    C.C. 1037604445
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

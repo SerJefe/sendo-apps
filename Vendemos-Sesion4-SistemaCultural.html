@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendemos - Sesión 4: Sistema Cultural</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            overflow-x: auto;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .fase {
+            background: rgba(255,255,255,0.1);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid;
+        }
+        .fase-1 { border-color: #ff6b6b; }
+        .fase-2 { border-color: #feca57; }
+        .fase-3 { border-color: #48dbfb; }
+        .fase-4 { border-color: #00d2d3; }
+        
+        #neural-network {
+            width: 100%;
+            height: 600px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .sistema-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .sistema-box {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 3px solid #4ecdc4;
+        }
+        
+        .accion-item {
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #ff6b6b;
+        }
+        
+        .metric {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 30px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #ff6b6b, #4ecdc4);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 30px 0;
+            padding-left: 100px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 41px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4ecdc4;
+            border: 3px solid #1a1a2e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Vendemos: De Microgestión a Arquitectura Cultural</h1>
+            <p>Juan Esteban Vélez - Evolución Sistémica Aleteagogía</p>
+        </div>
+
+        <!-- RED NEURONAL DE EVOLUCIÓN -->
+        <h2>📊 Red Neuronal de Evolución</h2>
+        <div id="neural-network"></div>
+
+        <!-- TIMELINE DE TRANSFORMACIÓN -->
+        <h2>📈 Timeline de Transformación</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="fase fase-1">
+                    <h3>🔴 SESIÓN 1: Diagnóstico Crisis (Microgestión)</h3>
+                    <p><strong>Problema identificado:</strong> Gerente operando en el "cómo" (cronogramas, descansos) invalidando agencia del equipo</p>
+                    <p><strong>Síntomas:</strong> Vendedores históricos vs administración, incentivos contradictorios (individual vs colaborativo)</p>
+                    <div class="metric">Confusión de Roles</div>
+                    <div class="metric">Falta Pensamiento Sistémico</div>
+                    <div class="metric">Gestión Transición Fallida</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="fase fase-2">
+                    <h3>🟡 SESIÓN 2: Gestión Emocional (Validación)</h3>
+                    <p><strong>Avance:</strong> Comprensión de resistencia como miedo a pérdida, no "mala actitud"</p>
+                    <p><strong>Herramienta:</strong> Modelo Bridges - Zona Neutra, validación emocional</p>
+                    <div class="metric">Narrativa del Cambio</div>
+                    <div class="metric">Conversaciones Individuales</div>
+                    <div class="metric">Escucha Fenomenológica</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="fase fase-3">
+                    <h3>🔵 SESIÓN 3: Definición Identidad (BREAKTHROUGH)</h3>
+                    <p><strong>Logro crítico:</strong> Framework de decisiones aplicado - Juan Esteban define QUÉ ES la empresa</p>
+                    <p><strong>Tarea 26:</strong> "Boutique vs Masivo" - Decisión de SER, no solo hacer</p>
+                    <div class="metric">No Quiere: Masividad sin alma</div>
+                    <div class="metric">Sí Quiere: Desarrollo humano integral</div>
+                    <div class="metric">Renuncia: Crecimiento acelerado</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="fase fase-4">
+                    <h3>🟢 SESIÓN 4: Sistema Operativo Cultural (HOY)</h3>
+                    <p><strong>Objetivo:</strong> Convertir identidad clara en arquitectura sistemática</p>
+                    <p><strong>Enfoque:</strong> Juan Esteban como arquitecto de contextos, no gestor de tareas</p>
+                    <div class="metric">Orquestación Sistémica</div>
+                    <div class="metric">Roles Redefinidos</div>
+                    <div class="metric">Métricas Culturales</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ANÁLISIS SER.SIENDO -->
+        <h2>🎯 Análisis SER.SIENDO de la Identidad Vendemos</h2>
+        <div class="sistema-grid">
+            <div class="sistema-box">
+                <h3>SER (Esencia/Raíz)</h3>
+                <div class="accion-item">
+                    <strong>Cercanía auténtica:</strong> "Reconocidos por cercanía con clientes, seguridad y acompañamiento profesional"
+                </div>
+                <div class="accion-item">
+                    <strong>Desarrollo humano:</strong> "Empresa que aporta personal y profesionalmente a las personas"
+                </div>
+                <div class="accion-item">
+                    <strong>Innovación curada:</strong> "Portafolio de proyectos innovadores tipo boutique"
+                </div>
+                <div class="accion-item">
+                    <strong>Especialización:</strong> "Especialistas en vivienda campestre"
+                </div>
+            </div>
+            
+            <div class="sistema-box">
+                <h3>SIENDO (Proceso/Acción)</h3>
+                <div class="accion-item">
+                    <strong>Filtrado consciente:</strong> "No proyectos que no creemos desde concepto"
+                </div>
+                <div class="accion-item">
+                    <strong>Relaciones profundas:</strong> "No empleados que vean cliente como símbolo $"
+                </div>
+                <div class="accion-item">
+                    <strong>Crecimiento sostenible:</strong> "No masividad que desconoce empleados"
+                </div>
+                <div class="accion-item">
+                    <strong>Bienestar integral:</strong> "Incentivar bienestar mental y físico"
+                </div>
+            </div>
+        </div>
+
+        <!-- IMPLICACIONES SISTÉMICAS -->
+        <h2>⚙️ Implicaciones Sistémicas para Orquestar</h2>
+        <div class="sistema-grid">
+            <div class="sistema-box">
+                <h3>📋 1. CRITERIOS DE DECISIÓN</h3>
+                <div class="accion-item">
+                    <strong>Filtro Proyectos:</strong> ¿Creemos en la esencia? ¿Aporta a comunidad?
+                </div>
+                <div class="accion-item">
+                    <strong>Filtro Personal:</strong> ¿Alineado con desarrollo humano? ¿Colaborativo?
+                </div>
+                <div class="accion-item">
+                    <strong>Filtro Aliados:</strong> ¿Constructores que crean tejido social?
+                </div>
+            </div>
+            
+            <div class="sistema-box">
+                <h3>🎭 2. REDEFINICIÓN DE ROLES</h3>
+                <div class="accion-item">
+                    <strong>Gerente → Arquitecto Cultural:</strong> Diseña contextos, no cronogramas
+                </div>
+                <div class="accion-item">
+                    <strong>Vendedores → Asesores de Vida:</strong> Acompañan decisiones vitales, no venden unidades
+                </div>
+                <div class="accion-item">
+                    <strong>Equipo → Comunidad de Aprendizaje:</strong> Desarrollo mutuo, no competencia interna
+                </div>
+            </div>
+            
+            <div class="sistema-box">
+                <h3>📊 3. MÉTRICAS COHERENCIA</h3>
+                <div class="accion-item">
+                    <strong>Desarrollo Personal:</strong> ¿Cada empleado creció este trimestre?
+                </div>
+                <div class="accion-item">
+                    <strong>Satisfacción Cliente:</strong> ¿Sienten acompañamiento real?
+                </div>
+                <div class="accion-item">
+                    <strong>Calidad Proyectos:</strong> ¿Cada proyecto aporta a comunidad?
+                </div>
+                <div class="accion-item">
+                    <strong>Sostenibilidad:</strong> ¿Crecimiento respeta valores?
+                </div>
+            </div>
+            
+            <div class="sistema-box">
+                <h3>🔄 4. RITUALES CULTURALES</h3>
+                <div class="accion-item">
+                    <strong>Reunión Semanal:</strong> ¿Qué aprendimos? ¿Cómo crecimos?
+                </div>
+                <div class="accion-item">
+                    <strong>Revisión Proyectos:</strong> ¿Coherente con identidad?
+                </div>
+                <div class="accion-item">
+                    <strong>Feedback 360:</strong> ¿Cómo aporto al desarrollo del otro?
+                </div>
+                <div class="accion-item">
+                    <strong>Celebración Logros:</strong> Reconocer crecimiento humano, no solo ventas
+                </div>
+            </div>
+        </div>
+
+        <!-- PROPUESTA DE INTERVENCIÓN -->
+        <h2>🚀 Propuesta de Intervención Empresarial</h2>
+        
+        <div class="fase fase-4">
+            <h3>MÓDULO 1: Redefinición de Equipo (¿Qué ES un equipo?)</h3>
+            <div class="accion-item">
+                <strong>Sesión 1:</strong> De grupo de vendedores → Comunidad de crecimiento mutuo
+            </div>
+            <div class="accion-item">
+                <strong>Sesión 2:</strong> Roles complementarios vs competencia destructiva
+            </div>
+            <div class="accion-item">
+                <strong>Sesión 3:</strong> Liderazgo rotativo - cada uno lidera en su especialidad
+            </div>
+        </div>
+
+        <div class="fase fase-3">
+            <h3>MÓDULO 2: Objetivos Sistémicos (No solo metas de venta)</h3>
+            <div class="accion-item">
+                <strong>Sesión 1:</strong> Objetivos de desarrollo personal por empleado
+            </div>
+            <div class="accion-item">
+                <strong>Sesión 2:</strong> Métricas de satisfacción del cliente (acompañamiento)
+            </div>
+            <div class="accion-item">
+                <strong>Sesión 3:</strong> KPIs de calidad cultural (bienestar, aprendizaje)
+            </div>
+        </div>
+
+        <div class="fase fase-2">
+            <h3>MÓDULO 3: Comunicación y Feedback</h3>
+            <div class="accion-item">
+                <strong>Sesión 1:</strong> Conversaciones de desarrollo vs evaluación de desempeño
+            </div>
+            <div class="accion-item">
+                <strong>Sesión 2:</strong> Feedback como regalo (ayudar al crecimiento del otro)
+            </div>
+            <div class="accion-item">
+                <strong>Sesión 3:</strong> Resolución de conflictos desde la complementariedad
+            </div>
+        </div>
+
+        <div class="fase fase-1">
+            <h3>MÓDULO 4: Sostenimiento Cultural</h3>
+            <div class="accion-item">
+                <strong>Sesión 1:</strong> Rituales para mantener identidad bajo presión
+            </div>
+            <div class="accion-item">
+                <strong>Sesión 2:</strong> Sistema de mentorías internas (veteranos desarrollan juniors)
+            </div>
+            <div class="accion-item">
+                <strong>Sesión 3:</strong> Juan Esteban como facilitador permanente, no controlador
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center; font-size: 0.9em; opacity: 0.7;">
+            <p>Framework Aleteagogía aplicado - Sebastián Sánchez Acevedo</p>
+            <p>Caso Vendemos - Transformación de Microgestión a Arquitectura Cultural</p>
+        </div>
+    </div>
+
+    <script>
+        // Red neuronal de evolución
+        const svg = d3.select("#neural-network")
+            .append("svg")
+            .attr("width", "100%")
+            .attr("height", "100%");
+
+        const width = 1200;
+        const height = 500;
+
+        // Nodos de la evolución
+        const nodes = [
+            // Sesión 1 - Problemas
+            {id: "microgestión", x: 100, y: 100, label: "Microgestión", color: "#ff6b6b", size: 8},
+            {id: "cronogramas", x: 200, y: 150, label: "Hacer Cronogramas", color: "#ff6b6b", size: 6},
+            {id: "resistencia", x: 150, y: 200, label: "Resistencia Equipo", color: "#ff6b6b", size: 6},
+            
+            // Sesión 2 - Comprensión
+            {id: "validación", x: 350, y: 100, label: "Validación Emocional", color: "#feca57", size: 7},
+            {id: "bridges", x: 400, y: 180, label: "Modelo Bridges", color: "#feca57", size: 6},
+            {id: "escucha", x: 300, y: 220, label: "Escucha Activa", color: "#feca57", size: 6},
+            
+            // Sesión 3 - Identidad  
+            {id: "identidad", x: 600, y: 120, label: "Identidad Empresarial", color: "#48dbfb", size: 10},
+            {id: "boutique", x: 700, y: 80, label: "Boutique vs Masivo", color: "#48dbfb", size: 8},
+            {id: "desarrollo", x: 650, y: 200, label: "Desarrollo Humano", color: "#48dbfb", size: 7},
+            {id: "renuncia", x: 550, y: 250, label: "A qué Renuncio", color: "#48dbfb", size: 7},
+            
+            // Sesión 4 - Sistema
+            {id: "arquitecto", x: 900, y: 100, label: "Arquitecto Cultural", color: "#00d2d3", size: 10},
+            {id: "roles", x: 950, y: 180, label: "Nuevos Roles", color: "#00d2d3", size: 7},
+            {id: "métricas", x: 850, y: 220, label: "Métricas Coherencia", color: "#00d2d3", size: 7},
+            {id: "rituales", x: 1000, y: 120, label: "Rituales", color: "#00d2d3", size: 6}
+        ];
+
+        // Conexiones de evolución
+        const links = [
+            // De problemas a comprensión
+            {source: "microgestión", target: "validación"},
+            {source: "cronogramas", target: "bridges"},
+            {source: "resistencia", target: "escucha"},
+            
+            // De comprensión a identidad
+            {source: "validación", target: "identidad"},
+            {source: "bridges", target: "boutique"},
+            {source: "escucha", target: "desarrollo"},
+            {source: "identidad", target: "renuncia"},
+            
+            // De identidad a sistema
+            {source: "identidad", target: "arquitecto"},
+            {source: "boutique", target: "roles"},
+            {source: "desarrollo", target: "métricas"},
+            {source: "renuncia", target: "rituales"},
+            
+            // Conexiones internas
+            {source: "arquitecto", target: "roles"},
+            {source: "arquitecto", target: "métricas"},
+            {source: "roles", target: "rituales"}
+        ];
+
+        // Dibujar conexiones
+        svg.selectAll("line")
+            .data(links)
+            .enter().append("line")
+            .attr("x1", d => nodes.find(n => n.id === d.source).x)
+            .attr("y1", d => nodes.find(n => n.id === d.source).y)
+            .attr("x2", d => nodes.find(n => n.id === d.target).x)
+            .attr("y2", d => nodes.find(n => n.id === d.target).y)
+            .attr("stroke", "rgba(255,255,255,0.3)")
+            .attr("stroke-width", 2);
+
+        // Dibujar nodos
+        svg.selectAll("circle")
+            .data(nodes)
+            .enter().append("circle")
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y)
+            .attr("r", d => d.size)
+            .attr("fill", d => d.color)
+            .attr("stroke", "rgba(255,255,255,0.5)")
+            .attr("stroke-width", 2);
+
+        // Labels
+        svg.selectAll("text")
+            .data(nodes)
+            .enter().append("text")
+            .attr("x", d => d.x)
+            .attr("y", d => d.y - d.size - 5)
+            .attr("text-anchor", "middle")
+            .attr("fill", "white")
+            .attr("font-size", "12px")
+            .attr("font-weight", "bold")
+            .text(d => d.label);
+
+        // Fases
+        const fases = [
+            {x: 150, y: 50, label: "SESIÓN 1: Diagnóstico", color: "#ff6b6b"},
+            {x: 350, y: 50, label: "SESIÓN 2: Validación", color: "#feca57"},
+            {x: 600, y: 50, label: "SESIÓN 3: Identidad", color: "#48dbfb"},
+            {x: 950, y: 50, label: "SESIÓN 4: Sistema", color: "#00d2d3"}
+        ];
+
+        svg.selectAll(".fase-label")
+            .data(fases)
+            .enter().append("text")
+            .attr("class", "fase-label")
+            .attr("x", d => d.x)
+            .attr("y", d => d.y)
+            .attr("text-anchor", "middle")
+            .attr("fill", d => d.color)
+            .attr("font-size", "14px")
+            .attr("font-weight", "bold")
+            .text(d => d.label);
+    </script>
+</body>
+</html>
