@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-03-26",
+  "fecha": "2026-03-28",
   "comite_sv": {
     "caja_dias": 8,
     "facturacion_pct": 45,
@@ -19,5 +19,10 @@
     "Centro desarrollo potencial humano",
     "Plataforma textil (250K empleos)",
     "Bote Guatapé validado"
-  ]
+  ],
+  "whoop": {
+    "recovery": 29,
+    "sleep": "7h 15m (89%)",
+    "strain": "12.4"
+  }
 }
