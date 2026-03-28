@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terret — Diagnóstico Inicial | Siendo Resulting</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+–bg: #080808;
+–bg-card: rgba(255,255,255,0.025);
+–bg-card-hover: rgba(255,255,255,0.05);
+–gold: #c9a84c;
+–gold-light: #e8d59a;
+–gold-dim: rgba(201,168,76,0.12);
+–text: #e8e4dc;
+–text-dim: rgba(232,228,220,0.45);
+–text-mid: rgba(232,228,220,0.65);
+–accent-red: #c0392b;
+–accent-amber: #d4a017;
+–accent-green: #27ae60;
+–accent-blue: #2980b9;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+background: var(–bg);
+color: var(–text);
+font-family: ‘DM Sans’, sans-serif;
+line-height: 1.7;
+overflow-x: hidden;
+-webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: 920px; margin: 0 auto; padding: 0 2rem; }
+
+.section-label {
+font-size: 0.65rem;
+font-weight: 700;
+letter-spacing: 0.4em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 0.75rem;
+opacity: 0;
+animation: fadeUp 0.8s ease forwards;
+}
+
+.section-title {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(1.8rem, 4vw, 2.6rem);
+font-weight: 300;
+line-height: 1.2;
+margin-bottom: 1rem;
+color: var(–text);
+opacity: 0;
+animation: fadeUp 0.8s ease 0.1s forwards;
+}
+
+.section-desc {
+font-size: 0.95rem;
+color: var(–text-mid);
+max-width: 640px;
+margin-bottom: 2.5rem;
+opacity: 0;
+animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+.divider {
+width: 60px;
+height: 1px;
+background: var(–gold-dim);
+margin: 5rem auto;
+}
+
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══ HERO ═══ */
+.hero {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+position: relative;
+padding: 2rem;
+}
+
+.hero::before {
+content: ‘’;
+position: absolute;
+top: 0; left: 0; right: 0; bottom: 0;
+background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.05) 0%, transparent 55%);
+pointer-events: none;
+}
+
+.hero-badge {
+display: inline-block;
+font-size: 0.6rem;
+font-weight: 700;
+letter-spacing: 0.45em;
+text-transform: uppercase;
+color: var(–gold);
+border: 1px solid var(–gold-dim);
+padding: 0.5rem 1.5rem;
+margin-bottom: 2.5rem;
+opacity: 0;
+animation: fadeUp 1s ease 0.2s forwards;
+}
+
+.hero h1 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(2.5rem, 6vw, 4.2rem);
+font-weight: 300;
+line-height: 1.15;
+margin-bottom: 1.5rem;
+opacity: 0;
+animation: fadeUp 1s ease 0.4s forwards;
+}
+
+.hero h1 span { color: var(–gold); font-style: italic; }
+
+.hero-sub {
+font-size: 1.05rem;
+color: var(–text-mid);
+max-width: 540px;
+margin: 0 auto 2rem;
+opacity: 0;
+animation: fadeUp 1s ease 0.6s forwards;
+}
+
+.hero-meta {
+font-size: 0.75rem;
+color: var(–text-dim);
+letter-spacing: 0.15em;
+opacity: 0;
+animation: fadeUp 1s ease 0.8s forwards;
+}
+
+/* ═══ FINDINGS ═══ */
+.findings-section { padding: 4rem 0; }
+
+.finding-item {
+display: grid;
+grid-template-columns: 80px 1fr;
+gap: 1.5rem;
+align-items: start;
+padding: 2rem 0;
+border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.finding-item:last-child { border-bottom: none; }
+
+.finding-icon {
+width: 56px; height: 56px; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-size: 1.2rem; margin-top: 0.25rem;
+}
+.finding-icon.critical { background: rgba(192,57,43,0.1); border: 1px solid rgba(192,57,43,0.2); color: var(–accent-red); }
+.finding-icon.warning { background: rgba(212,160,23,0.1); border: 1px solid rgba(212,160,23,0.2); color: var(–accent-amber); }
+.finding-icon.note { background: rgba(41,128,185,0.1); border: 1px solid rgba(41,128,185,0.2); color: var(–accent-blue); }
+
+.finding-content h4 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.2rem; font-weight: 500; margin-bottom: 0.4rem;
+}
+.finding-content .what { font-size: 0.9rem; color: var(–text-mid); margin-bottom: 0.5rem; }
+.finding-content .impact {
+font-size: 0.85rem; color: var(–text-dim);
+padding-left: 1rem; border-left: 2px solid var(–gold-dim); font-style: italic;
+}
+
+/* ═══ MAP ═══ */
+.map-section { padding: 4rem 0; }
+
+.map-visual {
+position: relative;
+background: var(–bg-card);
+border: 1px solid rgba(255,255,255,0.04);
+border-radius: 12px;
+padding: 3rem 2.5rem;
+margin-top: 1rem;
+overflow: hidden;
+}
+.map-visual::before {
+content: ‘’; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+background: linear-gradient(90deg, transparent, var(–gold-dim), transparent);
+}
+
+.map-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; }
+.map-row:last-child { margin-bottom: 0; }
+.map-node { text-align: center; flex: 1; }
+.map-node-dot { width: 14px; height: 14px; border-radius: 50%; margin: 0 auto 0.6rem; }
+.map-node-dot.active { background: var(–accent-green); box-shadow: 0 0 12px rgba(39,174,96,0.3); }
+.map-node-dot.partial { background: var(–accent-amber); box-shadow: 0 0 12px rgba(212,160,23,0.3); }
+.map-node-dot.missing { background: var(–accent-red); box-shadow: 0 0 12px rgba(192,57,43,0.3); }
+.map-node-dot.unused { background: rgba(255,255,255,0.15); border: 1px dashed rgba(255,255,255,0.2); }
+.map-node-label { font-size: 0.72rem; color: var(–text-mid); font-weight: 500; }
+.map-node-status { font-size: 0.62rem; color: var(–text-dim); margin-top: 0.2rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.map-connector { width: 40px; height: 1px; background: rgba(255,255,255,0.08); flex-shrink: 0; }
+
+.map-legend {
+display: flex; gap: 2rem; margin-top: 2rem; padding-top: 1.5rem;
+border-top: 1px solid rgba(255,255,255,0.04); justify-content: center;
+}
+.map-legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; color: var(–text-dim); }
+.map-legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+/* ═══ QUESTIONS ═══ */
+.questions-section { padding: 4rem 0; }
+
+.question-block {
+background: var(–bg-card);
+border: 1px solid rgba(255,255,255,0.04);
+border-left: 3px solid var(–gold-dim);
+border-radius: 0 8px 8px 0;
+padding: 1.8rem 2rem;
+margin-bottom: 1.2rem;
+transition: all 0.3s ease;
+}
+.question-block:hover { border-left-color: var(–gold); background: var(–bg-card-hover); }
+
+.question-num { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.3em; color: var(–gold); text-transform: uppercase; margin-bottom: 0.5rem; }
+.question-text { font-family: ‘Cormorant Garamond’, serif; font-size: 1.2rem; font-weight: 400; color: var(–text); line-height: 1.5; }
+.question-why { font-size: 0.82rem; color: var(–text-dim); margin-top: 0.6rem; font-style: italic; }
+
+/* ═══ ROADMAP ═══ */
+.roadmap-section { padding: 4rem 0; }
+.roadmap-phases { display: grid; grid-template-columns: 1fr; }
+
+.roadmap-phase {
+display: grid;
+grid-template-columns: 120px 40px 1fr;
+align-items: start;
+min-height: 120px;
+}
+
+.phase-label { text-align: right; padding-right: 1rem; padding-top: 0.2rem; }
+.phase-label h4 { font-family: ‘Cormorant Garamond’, serif; font-size: 1rem; font-weight: 500; color: var(–gold-light); }
+.phase-label span { font-size: 0.65rem; color: var(–text-dim); text-transform: uppercase; letter-spacing: 0.15em; }
+.phase-line { display: flex; flex-direction: column; align-items: center; }
+.phase-dot { width: 12px; height: 12px; border-radius: 50%; background: var(–gold); border: 2px solid var(–bg); box-shadow: 0 0 0 2px var(–gold-dim); z-index: 1; margin-top: 0.35rem; }
+.phase-dot.future { background: transparent; border-color: var(–gold-dim); box-shadow: none; }
+.phase-track { width: 1px; flex: 1; background: linear-gradient(to bottom, var(–gold-dim), rgba(255,255,255,0.04)); }
+.phase-content { padding: 0 0 2.5rem 1rem; }
+.phase-content p { font-size: 0.88rem; color: var(–text-mid); line-height: 1.65; }
+
+/* ═══ CLOSING ═══ */
+.closing-section { padding: 6rem 0; text-align: center; }
+
+.closing-box { max-width: 620px; margin: 0 auto; padding: 0 1rem; }
+
+.closing-box h2 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(1.5rem, 3.5vw, 2rem);
+font-weight: 300; margin-bottom: 1.5rem; line-height: 1.35;
+}
+
+.closing-box p { font-size: 0.92rem; color: var(–text-mid); line-height: 1.75; margin-bottom: 1rem; }
+.closing-box p:last-of-type { margin-bottom: 0; }
+
+.closing-signature {
+margin-top: 3rem; padding-top: 2rem;
+border-top: 1px solid rgba(255,255,255,0.04);
+}
+.closing-signature .names { font-family: ‘Cormorant Garamond’, serif; font-size: 1.1rem; font-weight: 400; color: var(–gold-light); margin-bottom: 0.3rem; }
+.closing-signature .from { font-size: 0.7rem; color: var(–text-dim); letter-spacing: 0.3em; text-transform: uppercase; }
+
+/* ═══ FOOTER ═══ */
+.footer { text-align: center; padding: 3rem 2rem; border-top: 1px solid rgba(255,255,255,0.03); }
+.footer-brand { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: var(–gold-dim); margin-bottom: 0.5rem; }
+.footer-sub { font-size: 0.72rem; color: var(–text-dim); }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+.finding-item { grid-template-columns: 1fr; gap: 0.8rem; }
+.finding-icon { margin: 0; }
+.map-row { flex-direction: column; gap: 1rem; }
+.map-connector { width: 1px; height: 20px; }
+.roadmap-phase { grid-template-columns: 1fr; gap: 0.5rem; }
+.phase-label { text-align: left; padding: 0; }
+.phase-line { display: none; }
+.phase-content { padding: 0 0 2rem 0; }
+.map-legend { flex-wrap: wrap; gap: 1rem; }
+}
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+
+<section class="hero">
+  <div class="hero-badge">Diagnóstico Inicial</div>
+  <h1>Terret, <span>por dentro</span></h1>
+  <p class="hero-sub">Revisamos la instancia de Odoo de Terret. Esto es lo que encontramos, lo que implica para el negocio y lo que nos falta entender para poder proponer algo que sirva de verdad.</p>
+  <p class="hero-meta">Siendo Resulting &mdash; Marzo 2026</p>
+</section>
+
+<!-- ═══ FINDINGS ═══ -->
+
+<div class="divider"></div>
+<section class="findings-section container reveal">
+  <div class="section-label">Observación del sistema</div>
+  <div class="section-title">Lo que encontramos en el Odoo de Terret</div>
+  <p class="section-desc">Esto no es un juicio. Es una fotografía. Se revisó la instancia y estos son los hallazgos que tienen impacto directo en la operación y en las decisiones del negocio.</p>
+
+  <div class="finding-item reveal">
+    <div class="finding-icon critical">⚠</div>
+    <div class="finding-content">
+      <h4>Contabilidad y DIAN desconectadas</h4>
+      <p class="what">No se encontró configuración de información exógena ni conexión con los requerimientos de la DIAN. Los tipos de diario, caja menor y caja general no están parametrizados.</p>
+      <p class="impact">La información contable que produce el sistema hoy no es confiable para tomar decisiones financieras ni para responder ante la autoridad tributaria.</p>
+    </div>
+  </div>
+
+  <div class="finding-item reveal">
+    <div class="finding-icon critical">⚠</div>
+    <div class="finding-content">
+      <h4>Productos sin costos</h4>
+      <p class="what">Los productos están cargados (caucho, etiquetas, medias deportivas, empaques, códigos de barra), pero la mayoría no tiene precio de costo asignado.</p>
+      <p class="impact">El inventario existe como lista, pero sin costos no hay balances reales, ni márgenes de rentabilidad, ni forma de saber lo que cada producto le cuesta a Terret.</p>
+    </div>
+  </div>
+
+  <div class="finding-item reveal">
+    <div class="finding-icon warning">◉</div>
+    <div class="finding-content">
+      <h4>Nómina y empleados sin configurar</h4>
+      <p class="what">No hay empleados creados en el sistema. Nómina no está operando dentro de Odoo.</p>
+      <p class="impact">Una empresa que está creciendo y no tiene su estructura de personas en el sistema está tomando decisiones de equipo sin datos ni trazabilidad.</p>
+    </div>
+  </div>
+
+  <div class="finding-item reveal">
+    <div class="finding-icon warning">◉</div>
+    <div class="finding-content">
+      <h4>Café y marca deportiva en la misma empresa</h4>
+      <p class="what">Hay un punto de venta tipo restaurante/café integrado en la misma instancia de la marca deportiva.</p>
+      <p class="impact">Dos unidades de negocio con lógicas distintas en la misma empresa contaminan contabilidad, reportes y claridad operativa. Lo natural sería una estructura de filial o compañía separada.</p>
+    </div>
+  </div>
+
+  <div class="finding-item reveal">
+    <div class="finding-icon note">◈</div>
+    <div class="finding-content">
+      <h4>Flujos de diseño y proyectos subutilizados</h4>
+      <p class="what">Hay tableros de planeación, solicitudes de diseño, marketing de contenidos y automatizaciones configurados, pero sin datos reales fluyendo por ellos.</p>
+      <p class="impact">La estructura existe pero no está conectada con la operación real. Eso produce la sensación de que Odoo es para mover botoncitos sin que pase nada.</p>
+    </div>
+  </div>
+
+  <div class="finding-item reveal">
+    <div class="finding-icon note">◈</div>
+    <div class="finding-content">
+      <h4>Shopify sin puente real</h4>
+      <p class="what">Hay intención de conectar Shopify con Odoo, pero la integración no está operando de manera que los datos fluyan automáticamente.</p>
+      <p class="impact">Cada venta que entra por Shopify y no se refleja en Odoo es una venta invisible para el sistema de gestión. Se pierde trazabilidad, inventario y contabilidad en tiempo real.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MAP ═══ -->
+
+<div class="divider"></div>
+<section class="map-section container reveal">
+  <div class="section-label">Vista de conjunto</div>
+  <div class="section-title">Mapa del sistema actual</div>
+  <p class="section-desc">Qué módulos están activos, cuáles existen pero no operan y cuáles faltan.</p>
+
+  <div class="map-visual">
+    <div class="map-row">
+      <div class="map-node">
+        <div class="map-node-dot missing"></div>
+        <div class="map-node-label">Contabilidad</div>
+        <div class="map-node-status">Sin DIAN</div>
+      </div>
+      <div class="map-connector"></div>
+      <div class="map-node">
+        <div class="map-node-dot partial"></div>
+        <div class="map-node-label">Inventario</div>
+        <div class="map-node-status">Sin costos</div>
+      </div>
+      <div class="map-connector"></div>
+      <div class="map-node">
+        <div class="map-node-dot missing"></div>
+        <div class="map-node-label">Nómina</div>
+        <div class="map-node-status">Vacío</div>
+      </div>
+      <div class="map-connector"></div>
+      <div class="map-node">
+        <div class="map-node-dot partial"></div>
+        <div class="map-node-label">Ventas</div>
+        <div class="map-node-status">Sin integración</div>
+      </div>
+    </div>
+    <div class="map-row">
+      <div class="map-node">
+        <div class="map-node-dot unused"></div>
+        <div class="map-node-label">Proyectos</div>
+        <div class="map-node-status">Tableros vacíos</div>
+      </div>
+      <div class="map-connector"></div>
+      <div class="map-node">
+        <div class="map-node-dot unused"></div>
+        <div class="map-node-label">Diseño</div>
+        <div class="map-node-status">Sin flujo real</div>
+      </div>
+      <div class="map-connector"></div>
+      <div class="map-node">
+        <div class="map-node-dot unused"></div>
+        <div class="map-node-label">Marketing</div>
+        <div class="map-node-status">Sin datos</div>
+      </div>
+      <div class="map-connector"></div>
+      <div class="map-node">
+        <div class="map-node-dot partial"></div>
+        <div class="map-node-label">POS / Café</div>
+        <div class="map-node-status">Mezclado</div>
+      </div>
+    </div>
+    <div class="map-legend">
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:var(--accent-green);"></div> Operando bien</div>
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:var(--accent-amber);"></div> Existe pero incompleto</div>
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:var(--accent-red);"></div> Falta o desconfigurado</div>
+      <div class="map-legend-item"><div class="map-legend-dot" style="background:rgba(255,255,255,0.15);border:1px dashed rgba(255,255,255,0.3);"></div> Instalado sin uso</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUESTIONS ═══ -->
+
+<div class="divider"></div>
+<section class="questions-section container reveal">
+  <div class="section-label">Lo que nos falta</div>
+  <div class="section-title">Preguntas abiertas</div>
+  <p class="section-desc">El sistema muestra los vacíos técnicos. Pero para saber qué vale la pena tocar primero, hace falta entender hacia dónde va Terret.</p>
+
+  <div class="question-block reveal">
+    <div class="question-num">01 — Intención</div>
+    <div class="question-text">Si tuvieras que escribir una sola frase del para qué quieres transformar la operación de Terret, ¿cuál sería?</div>
+    <div class="question-why">No es lo mismo ordenar para sobrevivir que ordenar para crecer. Eso cambia qué se prioriza.</div>
+  </div>
+
+  <div class="question-block reveal">
+    <div class="question-num">02 — Dolor</div>
+    <div class="question-text">¿Qué problema duele más hoy? ¿Costos que no se ven? ¿Tiempo perdido? ¿Falta de control? ¿Calidad? ¿Servicio?</div>
+    <div class="question-why">Las soluciones técnicas se priorizan por el dolor real del negocio, no por lo que el software puede hacer.</div>
+  </div>
+
+  <div class="question-block reveal">
+    <div class="question-num">03 — Horizonte</div>
+    <div class="question-text">¿Qué quieres que sea distinto en Terret dentro de un año? ¿Y dentro de tres?</div>
+    <div class="question-why">La implementación tecnológica tiene que servir a un horizonte, no solo a un problema de hoy.</div>
+  </div>
+
+  <div class="question-block reveal">
+    <div class="question-num">04 — Riesgo</div>
+    <div class="question-text">¿Cuál sería el peor escenario si no se toca nada en los próximos 18 meses?</div>
+    <div class="question-why">Esto pone en perspectiva la urgencia real vs. la urgencia percibida.</div>
+  </div>
+
+  <div class="question-block reveal">
+    <div class="question-num">05 — Lo que no se toca</div>
+    <div class="question-text">¿Qué parte de la transformación no es negociable? ¿Y qué cosas no quieres que cambien — valores, estilo, cultura?</div>
+    <div class="question-why">Toda transformación tiene bordes. Conocerlos evita proponer algo que destruya lo que ya funciona.</div>
+  </div>
+
+  <div class="question-block reveal">
+    <div class="question-num">06 — Criterio de éxito</div>
+    <div class="question-text">¿Cómo sabrías que esto tuvo éxito? ¿Qué tendrías que ver o poder hacer que hoy no puedes?</div>
+    <div class="question-why">Sin esto, cualquier implementación se vuelve opinión. Con esto, hay una vara de medida compartida.</div>
+  </div>
+</section>
+
+<!-- ═══ ROADMAP ═══ -->
+
+<div class="divider"></div>
+<section class="roadmap-section container reveal">
+  <div class="section-label">Forma de trabajo</div>
+  <div class="section-title">Cómo funciona esto</div>
+  <p class="section-desc">No es un paquete cerrado. Cada paso se define con la realidad del negocio.</p>
+
+  <div class="roadmap-phases">
+    <div class="roadmap-phase reveal">
+      <div class="phase-label"><h4>Conversa</h4><span>Paso 1</span></div>
+      <div class="phase-line"><div class="phase-dot"></div><div class="phase-track"></div></div>
+      <div class="phase-content">
+        <p>Una conversación donde las preguntas de arriba son la guía. De ahí sale un briefing que se procesa para construir algo que se parezca a la realidad de Terret y no a una plantilla genérica.</p>
+      </div>
+    </div>
+    <div class="roadmap-phase reveal">
+      <div class="phase-label"><h4>Diagnóstico</h4><span>Paso 2</span></div>
+      <div class="phase-line"><div class="phase-dot"></div><div class="phase-track"></div></div>
+      <div class="phase-content">
+        <p>Se cruza lo conversado con lo que ya se encontró en el sistema. Resultado: un mapa claro de qué hay que corregir, qué completar, qué diseñar de cero y qué no vale la pena tocar todavía.</p>
+      </div>
+    </div>
+    <div class="roadmap-phase reveal">
+      <div class="phase-label"><h4>Implementación</h4><span>Paso 3</span></div>
+      <div class="phase-line"><div class="phase-dot"></div><div class="phase-track"></div></div>
+      <div class="phase-content">
+        <p>Se configura y se deja operando lo esencial primero. Cada módulo se entrega funcionando, con capacitación y con criterio de para qué se usa — no como lista de funcionalidades.</p>
+      </div>
+    </div>
+    <div class="roadmap-phase reveal">
+      <div class="phase-label"><h4>Evolución</h4><span>Paso 4</span></div>
+      <div class="phase-line"><div class="phase-dot future"></div><div class="phase-track"></div></div>
+      <div class="phase-content">
+        <p>Ya operando, se empieza a ver qué más necesita el negocio: automatizaciones, integración con Shopify, APIs, conexión con la app en desarrollo. El sistema crece con Terret.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CLOSING ═══ -->
+
+<div class="divider"></div>
+<section class="closing-section container reveal">
+  <div class="closing-box">
+    <div class="section-label">Para qué es este documento</div>
+    <h2>Esto es lo que pudimos leer desde afuera</h2>
+    <p>Este diagnóstico se hizo revisando la instancia de Odoo. No le pedimos nada a nadie — quisimos ver qué dice el sistema por sí solo y qué le está costando al negocio lo que hoy no está funcionando.</p>
+    <p>Lo que está claro es que la base técnica necesita trabajo y hay módulos que hoy no le están aportando a Terret. Lo que no podemos saber desde afuera es hacia dónde va el negocio, qué duele más y qué se considera prioritario.</p>
+    <p>Si tiene sentido, el paso natural es una conversa. Sin propuesta armada, sin compromiso previo. Simplemente entender bien para poder pensar bien.</p>
+
+```
+<div class="closing-signature">
+  <div class="names">Emanuel &amp; Sebastián</div>
+  <div class="from">Siendo Resulting</div>
+</div>
+```
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-brand">Siendo Resulting</div>
+  <div class="footer-sub">Consultoría · Implementación · Transformación</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
