@@ -1,55 +1,52 @@
 {
-  "fecha": "2026-03-26",
-  "agenda": [
-    "Sin eventos específicos detectados",
-    "Reunión pendiente Andre/Nelson por tema equipos sin marcar", 
-    "Mesa Camacol 27 marzo (Carlos - Nuevos Negocios)"
-  ],
-  "tareas_urgentes": [
+  "fecha": "2026-03-30",
+  "dia": "Lunes",
+  "semana": 13,
+  "whoop": {
+    "sueno_horas": "4h29m",
+    "performance": 45,
+    "deficit": "2h07m",
+    "recovery": null,
+    "recomendacion": "DÍA DE CALMA — solo tareas esenciales"
+  },
+  "estado_critico": {
+    "oyma_r1": {
+      "estado": "Crisis activa con represalias EPM",
+      "deadline": "4 abril",
+      "dias_restantes": 5
+    },
+    "transicion_directores": {
+      "estado": "Semana 1 iniciada",
+      "salidas": ["Natalia (15-abr)", "Claudia (30-abr)"]
+    },
+    "arquitecto": {
+      "dias_consolidado": 12,
+      "estado": "Sin regresión"
+    }
+  },
+  "prioridades": [
     {
-      "tarea": "OYMA R1: Datos febrero para análisis deterioro",
-      "responsable": "Andre/Cami",
-      "prioridad": "CRÍTICO"
+      "titulo": "Auditoría sistema Terret + propuesta diagnóstico",
+      "proyecto": "sendo-consulting",
+      "urgencia": "alta",
+      "deadline": "hoy"
     },
     {
-      "tarea": "PowerPoint OYMA R1: Contrastar narración gerente vs archivo",
-      "responsable": "Sebastián",
-      "prioridad": "ALTO"
+      "titulo": "Implementar cronograma semana 1 transición directores",
+      "proyecto": "condugas", 
+      "urgencia": "alta",
+      "deadline": "hoy"
     },
     {
-      "tarea": "Dashboard actualización: Resolver frustración detectada",
-      "responsable": "Sebastián", 
-      "prioridad": "ALTO"
-    },
-    {
-      "tarea": "Conversación Juan Guillermo: Responsabilizar Natalia RRHH",
-      "responsable": "Sebastián",
-      "prioridad": "MEDIO"
+      "titulo": "Transición Andrea nómina abril 1 — solo transaccional",
+      "proyecto": "condugas",
+      "urgencia": "media", 
+      "deadline": "2 días"
     }
   ],
-  "whoop": {
-    "recovery": "Sin datos",
-    "sleep": "4h 02m (37%)",
-    "deuda": "2h 07m",
-    "recomendacion": "Día con calma, priorizar solo críticas"
-  },
-  "limitless_ayer": {
-    "decisiones_criticas": [
-      "OYMA R1: Solicitud suspensión enviada EPM (600M pérdidas)",
-      "Reducciones personal: 3 renuncias + metodología despedir→automatizar",
-      "Condugas→Construtem: 272M anticipo deuda doña Olga"
-    ],
-    "estado_mental": "Transición arquitecto: 'Siento hasta que me liberé' - sin dolor decisiones difíciles",
-    "compromisos": [
-      "Bote Guatapé: 75-85M evaluación sábado",
-      "Asesoría fiscal transferencia"
-    ]
-  },
-  "ideas_capturadas": [
-    "Centro desarrollo potencial humano: enfoque asesorías prácticas",
-    "Plataforma textil: 250K empleos déficit, modelo Rappi moda",
-    "Guatemala expansión: potencial centroamérica",
-    "Estados Unidos: BIM + automatización constructoras",
-    "Principio humildad: 'A veces es mejor cuando uno no sabe'"
-  ]
-} 
+  "contraste_teorico": "Framework Tres Decisiones aplicado a Terret: Supervivencia (Odoo roto) → Control (diagnóstico) → Desarrollo (metodología)",
+  "reflexion": "Terret = validación metodología Sendo fuera Condugas + testing OSDAB en marca real",
+  "energia": "precaución",
+  "patron": "arquitecto estable",
+  "foco": "Siendo Consulting expansión"
+}
