@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing Intervención Sendo Consulting | Transformación Digital</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --sendo-azul: #1e3a8a;
+            --sendo-verde: #059669;
+            --sendo-amarillo: #f59e0b;
+            --sendo-rojo: #dc2626;
+            --fondo-claro: #f8fafc;
+            --texto-principal: #1e293b;
+            --texto-secundario: #64748b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--texto-principal);
+            background: var(--fondo-claro);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--sendo-azul), #3b82f6);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .objetivos {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--sendo-verde);
+        }
+        
+        .antes-despues {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .antes, .despues {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .antes {
+            border-left: 5px solid var(--sendo-rojo);
+        }
+        
+        .despues {
+            border-left: 5px solid var(--sendo-verde);
+        }
+        
+        .seccion {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .seccion h2 {
+            color: var(--sendo-azul);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .seccion h3 {
+            color: var(--sendo-verde);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+        
+        .cronograma {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .cronograma-mes {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--sendo-azul);
+        }
+        
+        .cronograma-mes h4 {
+            color: var(--sendo-azul);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        code {
+            background: #f1f5f9;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .codigo {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+        }
+        
+        .alerta {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            color: var(--sendo-rojo);
+        }
+        
+        .exito {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            color: var(--sendo-verde);
+        }
+        
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .metrica {
+            display: inline-block;
+            background: var(--sendo-azul);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+            font-weight: 600;
+        }
+        
+        .footer {
+            background: var(--sendo-azul);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .antes-despues {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🛠️ BRIEFING INTERVENCIÓN SENDO CONSULTING</h1>
+        <p>Transformación Digital - Sistema Nervioso Empresarial</p>
+        <div style="margin-top: 1rem;">
+            <span class="metrica">452 → 250 empleados</span>
+            <span class="metrica">$1,200M ahorro anual</span>
+            <span class="metrica">Alertas automáticas</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="objetivos">
+            <h2>🎯 VISIÓN GENERAL: QUÉ QUEREMOS LOGRAR</h2>
+            <div class="antes-despues">
+                <div class="antes">
+                    <h3>📊 ANTES (Situación actual)</h3>
+                    <ul>
+                        <li>452 empleados con 45% sobrecarga administrativa</li>
+                        <li>Crisis OYMA no detectada hasta -$280M pérdidas</li>
+                        <li>Procesos 90% manuales + doble digitación</li>
+                        <li>Sebastián no ve problemas hasta 3 meses después</li>
+                        <li>Licitaciones analizadas manualmente (2/mes)</li>
+                    </ul>
+                </div>
+                <div class="despues">
+                    <h3>🚀 DESPUÉS (Objetivo final)</h3>
+                    <ul>
+                        <li>250 empleados optimizados + automatización integral</li>
+                        <li>Alertas automáticas crisis 6 meses antes</li>
+                        <li>Operarios hablan al sistema, no escriben</li>
+                        <li>Sebastián ve todo tiempo real en dashboard</li>
+                        <li>Licitaciones analizadas automáticamente (15/mes)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="seccion">
+            <h2>🧠 ARQUITECTURA SISTEMA VIVO</h2>
+            <h3>🎯 OBJETIVO: Sistema nervioso empresarial (Centro + Periferia)</h3>
+            
+            <h4>🧠 CENTRO (Odoo Core):</h4>
+            <div class="codigo">
+FUNCIÓN: Procesar + Decidir + Alertar
+COMPONENTES:
+• Database central única fuente verdad
+• Algoritmos alertas 3 niveles automáticos  
+• Dashboard ejecutivo tiempo real
+• Workflow aprobaciones automáticas
+            </div>
+
+            <h4>👂 PERIFERIA (Interfaces):</h4>
+            <div class="codigo">
+FUNCIÓN: Capturar + Enviar datos al centro
+COMPONENTES:
+• Interface voz operarios (OpenClaw + Claude)
+• Tablets campo 4G tiempo real
+• APIs bancos + clientes automáticas
+• Sensores materiales + timesheet
+            </div>
+        </div>
+
+        <div class="seccion">
+            <h2>👥 EMPLEADOS 4D: CLASIFICACIÓN AUTOMÁTICA</h2>
+            <h3>🎯 OBJETIVO: Identificar automáticamente quién va en 452→250</h3>
+            
+            <h4>📊 DIMENSIONES CLASIFICACIÓN:</h4>
+            <ul>
+                <li><strong>D1 - PROYECTO:</strong> Boyacá, Valle, OYMA, Floridablanca, etc.</li>
+                <li><strong>D2 - PROCESO:</strong> Administrativo, Técnico, Logístico, Financiero</li>
+                <li><strong>D3 - JERÁRQUICO:</strong> Sebastián → Directores → Managers → Supervisores → Operativos</li>
+                <li><strong>D4 - DISTRIBUCIÓN:</strong> Operativo, Central, Estratégico, Indirecto</li>
+            </ul>
+
+            <div class="exito">
+                <strong>Target final:</strong> 250 empleados = 70 A_CONSERVAR + 120 B_OPTIMIZAR + 60 C_AUTOMATIZAR
+            </div>
+        </div>
+
+        <div class="seccion">
+            <h2>🏦 CONCILIACIÓN BANCARIA AUTOMÁTICA</h2>
+            <h3>🎯 OBJETIVO: Andrea no digita, solo aprueba</h3>
+            
+            <h4>📊 BANCOS PRIORITARIOS:</h4>
+            <div class="antes-despues">
+                <div class="antes">
+                    <h4>TIER 1 (Automatizar primero):</h4>
+                    <ul>
+                        <li>Bancolombia 1016 → Cuenta principal operaciones</li>
+                        <li>Bancolombia 9169 OYMZ2 → Específica contrato OYMA</li>
+                        <li>Davivienda → Nómina + pagos empleados</li>
+                        <li>Banco Bogotá → Cuenta EPM + clientes principales</li>
+                    </ul>
+                </div>
+                <div class="despues">
+                    <h4>TIER 2 (Automatizar después):</h4>
+                    <ul>
+                        <li>Bancolombia 0235, 2179, 8289, 8721 → Cuentas secundarias</li>
+                        <li>AV Villas 4070 → Proveedores específicos</li>
+                        <li>Banco Occidente → Operaciones regionales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="seccion">
+            <h2>🎤 INTERFACE VOZ OPERARIOS</h2>
+            <h3>🎯 OBJETIVO: Operarios analfabetos alimentan sistema hablando</h3>
+            
+            <h4>🗣️ COMANDOS NATURALES ESPAÑOL:</h4>
+            <div class="codigo">
+ENTRADA MATERIALES:
+"Consumí cincuenta metros tubería PVC cuatro pulgadas proyecto Boyacá"
+→ Sistema: "Registrado. Te quedan ciento veinte metros. ¿Necesitas pedido?"
+
+TIMESHEET:
+"Terminé soldadura tramo dos, empiezo excavación tramo tres" 
+→ Sistema: "Timesheet actualizado. Avance proyecto sesenta y cinco por ciento."
+
+PROBLEMAS:
+"Hay problema calidad soldadura, necesito supervisor"
+→ Sistema: "Supervisor Carlos notificado. Llega en veinte minutos."
+            </div>
+        </div>
+
+        <div class="seccion">
+            <h2>💰 INTELIGENCIA LICITACIONES</h2>
+            <h3>🎯 OBJETIVO: Detectar automáticamente mejores oportunidades + generar ofertas</h3>
+            
+            <h4>🔍 PORTALES MONITOREADOS:</h4>
+            <ul>
+                <li>secop.gov.co/api/licitaciones</li>
+                <li>epm.com.co/contratacion</li>
+                <li>boyaca.gov.co/contratacion</li>
+                <li>antioquia.gov.co/licitaciones</li>
+            </ul>
+
+            <div class="exito">
+                <strong>Resultado:</strong> Análisis automático 15 licitaciones/mes vs 2 actuales
+            </div>
+        </div>
+
+        <div class="cronograma">
+            <h2>📅 CRONOGRAMA IMPLEMENTACIÓN</h2>
+            
+            <div class="cronograma-mes">
+                <h4>🎯 ABRIL: Base Funcional</h4>
+                <ul>
+                    <li><strong>Semana 1:</strong> Configuración Odoo base + 452 empleados</li>
+                    <li><strong>Semana 2:</strong> Cuentas analíticas contratos + bancos básico</li>
+                    <li><strong>Semana 3:</strong> Sistema alertas + timesheet contratos</li>
+                    <li><strong>Semana 4:</strong> Go-live production + nómina automática</li>
+                </ul>
+            </div>
+
+            <div class="cronograma-mes">
+                <h4>🎯 MAYO: Automatización Avanzada</h4>
+                <ul>
+                    <li><strong>Semana 1:</strong> Interface voz operarios + alertas supervivencia</li>
+                    <li><strong>Semana 2:</strong> Inteligencia licitaciones + mobile optimization</li>
+                    <li><strong>Semana 3:</strong> Algoritmos learning + APIs EPM</li>
+                    <li><strong>Semana 4:</strong> Sistema completamente operativo</li>
+                </ul>
+            </div>
+
+            <div class="cronograma-mes">
+                <h4>🎯 JUNIO: Optimización + Scale</h4>
+                <ul>
+                    <li><strong>Semana 1-2:</strong> Optimización empleados 452→250 real</li>
+                    <li><strong>Semana 3-4:</strong> Advanced analytics + producto comercial</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="alerta">
+            <h3>🚨 PUNTOS CRÍTICOS</h3>
+            <ul>
+                <li><strong>Cambio cultural:</strong> 452 empleados adaptándose sistema voz</li>
+                <li><strong>Integración bancos:</strong> APIs pueden requerir negociación</li>
+                <li><strong>Validación datos:</strong> Migración histórica compleja</li>
+                <li><strong>Training intensivo:</strong> 3 semanas capacitación total</li>
+            </ul>
+        </div>
+
+        <div class="seccion">
+            <h2>🎯 ENTREGABLES SEMANALES</h2>
+            
+            <h3>📋 CADA SEMANA SE DEBE ENTREGAR:</h3>
+            <ul>
+                <li><strong>Semana 1:</strong> Odoo funcionando con 452 empleados + campos custom 4D</li>
+                <li><strong>Semana 2:</strong> Separación financiera automática + reportes P&L Andrea</li>
+                <li><strong>Semana 3:</strong> Sistema alertas + timesheet obligatorio + clasificación A/B/C</li>
+                <li><strong>Semana 4:</strong> Production live + nómina automática + sistema stable</li>
+            </ul>
+        </div>
+
+        <div class="exito">
+            <h2>🎯 ÉXITO FINAL</h2>
+            <p><strong>Sistema funcionando = Sebastián ve todo tiempo real + operarios hablan + alertas automáticas + 452→250 empleados + $1,200M ahorro anual</strong></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>SENDO CONSULTING</strong> | Transformación Digital Empresarial</p>
+        <p>Briefing completo disponible para implementación inmediata</p>
+    </div>
+</body>
+</html>
