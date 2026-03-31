@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing Diagnóstico OSDAB | Sendo Consulting</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --sendo-azul: #1e3a8a;
+            --sendo-verde: #059669;
+            --sendo-amarillo: #f59e0b;
+            --sendo-rojo: #dc2626;
+            --fondo-claro: #f8fafc;
+            --texto-principal: #1e293b;
+            --texto-secundario: #64748b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--texto-principal);
+            background: var(--fondo-claro);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--sendo-azul), #3b82f6);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .metodologia {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--sendo-verde);
+        }
+        
+        .fase {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .fase h2 {
+            color: var(--sendo-azul);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        
+        .preguntas {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .pregunta {
+            background: white;
+            border-left: 4px solid var(--sendo-azul);
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .senales {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .alerta {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 1rem;
+            color: var(--sendo-rojo);
+        }
+        
+        .positivo {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 1rem;
+            color: var(--sendo-verde);
+        }
+        
+        .clasificacion {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .nivel {
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        
+        .supervivencia {
+            background: #fee2e2;
+            border-left: 4px solid var(--sendo-rojo);
+            color: var(--sendo-rojo);
+        }
+        
+        .control {
+            background: #fef3c7;
+            border-left: 4px solid var(--sendo-amarillo);
+            color: #a16207;
+        }
+        
+        .desarrollo {
+            background: #dcfce7;
+            border-left: 4px solid var(--sendo-verde);
+            color: var(--sendo-verde);
+        }
+        
+        .matriz {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        
+        .matriz-header {
+            background: var(--sendo-azul);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .matriz-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .matriz-cell {
+            padding: 1rem;
+            text-align: center;
+            border-right: 1px solid #e2e8f0;
+        }
+        
+        .cronograma {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .mes {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-left: 4px solid var(--sendo-azul);
+        }
+        
+        .criterios {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .criterio-go {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .criterio-no-go {
+            background: #fee2e2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .criterio-cuidado {
+            background: #fef3c7;
+            border: 1px solid #fde68a;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .propuesta {
+            background: linear-gradient(135deg, var(--sendo-azul), #3b82f6);
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .etapa {
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .inversion {
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        ul, ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
+        
+        .footer {
+            background: var(--sendo-azul);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .senales, .criterios {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 BRIEFING DIAGNÓSTICO OSDAB</h1>
+        <p>Framework de Evaluación Empresarial ANTES de Intervención</p>
+        <p style="margin-top: 1rem; font-size: 1rem; opacity: 0.8;">
+            <strong>Objetivo → Situación → Dificultades → Alternativas → Plan</strong>
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="metodologia">
+            <h2>🎯 METODOLOGÍA OSDAB × SER.SIENDO</h2>
+            <p><strong>Framework integrado con Tres Decisiones:</strong> Sobrevivir → Recuperar Control → Desarrollarse</p>
+            <p>25 preguntas estructuradas para determinar si proceder con intervención empresarial</p>
+        </div>
+
+        <div class="fase">
+            <h2>📋 FASE 1: OBJETIVO (¿Hacia dónde van?)</h2>
+            
+            <div class="preguntas">
+                <h3>Preguntas Core:</h3>
+                <div class="pregunta">1. "¿Cuál es el objetivo principal que los motiva a buscar transformación ahora?"</div>
+                <div class="pregunta">2. "Si pudieran lograr UNA SOLA COSA en los próximos 12 meses, ¿cuál sería?"</div>
+                <div class="pregunta">3. "¿Qué significa 'éxito' para ustedes como organización?"</div>
+                <div class="pregunta">4. "¿Cuánto están dispuestos a invertir para lograr ese objetivo?"</div>
+            </div>
+
+            <div class="senales">
+                <div class="alerta">
+                    <h4>❌ Señales de Alerta:</h4>
+                    <ul>
+                        <li>Múltiples objetivos inconexos</li>
+                        <li>"Queremos mejorar todo"</li>
+                        <li>Inversión indefinida</li>
+                    </ul>
+                </div>
+                <div class="positivo">
+                    <h4>✅ Señales Positivas:</h4>
+                    <ul>
+                        <li>Objetivo específico claro</li>
+                        <li>Equipo directivo alineado</li>
+                        <li>Inversión definida</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="fase">
+            <h2>📊 FASE 2: SITUACIÓN (¿Dónde están hoy?)</h2>
+            
+            <div class="preguntas">
+                <h4>Preguntas Supervivencia:</h4>
+                <div class="pregunta">5. "¿Cuál es su situación de caja los próximos 3 meses?"</div>
+                <div class="pregunta">6. "¿Qué pasaría si su principal cliente se va mañana?"</div>
+                <div class="pregunta">7. "¿Cuántas crisis han tenido en el último año que no vieron venir?"</div>
+                
+                <h4>Preguntas Control:</h4>
+                <div class="pregunta">8. "¿Qué información necesita el CEO para tomar decisiones y cuánto demora en obtenerla?"</div>
+                <div class="pregunta">9. "¿Cuántos procesos dependen de UNA persona específica?"</div>
+                <div class="pregunta">10. "¿Pueden predecir sus costos el próximo trimestre?"</div>
+                
+                <h4>Preguntas Desarrollo:</h4>
+                <div class="pregunta">11. "¿Cuál fue su última innovación que impactó resultados?"</div>
+                <div class="pregunta">12. "¿Cómo miden si están creciendo realmente?"</div>
+            </div>
+
+            <div class="clasificacion">
+                <h4>Clasificación Automática:</h4>
+                <div class="nivel supervivencia">🔴 SUPERVIVENCIA: Cash flow < 90d, dependencia 1 cliente > 60%, crisis mensuales</div>
+                <div class="nivel control">🟡 CONTROL: Información tardía > 15d, procesos persona-dependientes > 70%</div>
+                <div class="nivel desarrollo">🟢 DESARROLLO: Sistemas funcionando, métricas claras, innovación activa</div>
+            </div>
+        </div>
+
+        <div class="fase">
+            <h2>⚠️ FASE 3: DIFICULTADES (¿Qué los limita?)</h2>
+            
+            <div class="preguntas">
+                <h3>Preguntas Diagnósticas:</h3>
+                <div class="pregunta">13. "¿Cuál es la frustración #1 del equipo directivo?"</div>
+                <div class="pregunta">14. "¿Qué están haciendo manualmente que debería ser automático?"</div>
+                <div class="pregunta">15. "¿Cuánto tiempo pasa el CEO apagando incendios vs construyendo futuro?"</div>
+                <div class="pregunta">16. "¿Qué información necesitan y no tienen?"</div>
+                <div class="pregunta">17. "¿Cuál es el cuello de botella que más los frena?"</div>
+            </div>
+
+            <h4>Análisis 4 Dimensiones:</h4>
+            <ul>
+                <li><strong>PERSONAS:</strong> Competencias vs necesidades, motivación vs carga</li>
+                <li><strong>PROCESOS:</strong> Eficiencia vs duplicación, sistematización vs manual</li>
+                <li><strong>TECNOLOGÍA:</strong> Herramientas vs necesidades, integración vs silos</li>
+                <li><strong>INFORMACIÓN:</strong> Disponibilidad vs decisiones, tiempo real vs histórica</li>
+            </ul>
+        </div>
+
+        <div class="fase">
+            <h2>🔄 FASE 4: ALTERNATIVAS (¿Qué opciones tienen?)</h2>
+            
+            <div class="preguntas">
+                <h3>Preguntas Estratégicas:</h3>
+                <div class="pregunta">18. "¿Qué han intentado antes y por qué no funcionó?"</div>
+                <div class="pregunta">19. "¿Cuáles son sus 3 opciones para resolver esto?"</div>
+                <div class="pregunta">20. "¿Qué pasaría si no hacen nada?"</div>
+                <div class="pregunta">21. "¿Prefieren evolución gradual o transformación disruptiva?"</div>
+            </div>
+
+            <div class="matriz">
+                <div class="matriz-header">MATRIZ EVALUACIÓN IMPACTO × FACILIDAD</div>
+                <div class="matriz-row">
+                    <div class="matriz-cell" style="background: #dcfce7;"><strong>A1: Quick wins</strong><br>(hacer primero)</div>
+                    <div class="matriz-cell" style="background: #fef3c7;"><strong>A2: Mejoras menores</strong><br>(cuando tengan tiempo)</div>
+                </div>
+                <div class="matriz-row">
+                    <div class="matriz-cell" style="background: #dbeafe;"><strong>B1: Proyectos complejos</strong><br>(planear bien)</div>
+                    <div class="matriz-cell" style="background: #fee2e2;"><strong>B2: Evitar</strong><br>(desperdicio recursos)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fase">
+            <h2>📝 FASE 5: PLAN (¿Cómo lo van a lograr?)</h2>
+            
+            <div class="preguntas">
+                <h3>Preguntas Implementación:</h3>
+                <div class="pregunta">22. "¿Quién va a liderar internamente esta transformación?"</div>
+                <div class="pregunta">23. "¿Cuánto tiempo pueden dedicar a esto sin descuidar operación?"</div>
+                <div class="pregunta">24. "¿Qué necesitan ver en 30 días para saber que va bien?"</div>
+                <div class="pregunta">25. "¿Están dispuestos a tomar decisiones difíciles (reducción personal, cambio procesos)?"</div>
+            </div>
+
+            <div class="cronograma">
+                <h4>Cronograma Definición:</h4>
+                <div class="mes"><strong>MES 1:</strong> Quick wins identificados (10% mejora visible)</div>
+                <div class="mes"><strong>MES 3:</strong> Sistemas base funcionando (50% procesos optimizados)</div>
+                <div class="mes"><strong>MES 6:</strong> Transformación consolidada (80% objetivos logrados)</div>
+                <div class="mes"><strong>MES 12:</strong> Nueva operación estabilizada (ROI positivo)</div>
+            </div>
+        </div>
+
+        <div class="fase">
+            <h2>✅ CRITERIOS DECISIÓN GO/NO-GO</h2>
+            
+            <div class="criterios">
+                <div class="criterio-go">
+                    <h4>🟢 PROCEDER SI:</h4>
+                    <ul>
+                        <li>Objetivo claro + presupuesto definido</li>
+                        <li>Champion interno identificado</li>
+                        <li>Urgencia real (no puede esperar > 6 meses)</li>
+                        <li>Disposición cambios estructurales</li>
+                        <li>Quick wins identificados</li>
+                    </ul>
+                </div>
+                
+                <div class="criterio-no-go">
+                    <h4>❌ NO PROCEDER SI:</h4>
+                    <ul>
+                        <li>Múltiples objetivos sin priorizar</li>
+                        <li>Presupuesto indefinido o insuficiente</li>
+                        <li>Resistencia equipo directivo</li>
+                        <li>Solo quieren "modernizar" sin cambio real</li>
+                        <li>No tienen urgencia</li>
+                    </ul>
+                </div>
+                
+                <div class="criterio-cuidado">
+                    <h4>⚠️ PRECAUCIÓN SI:</h4>
+                    <ul>
+                        <li>Crisis supervivencia activa</li>
+                        <li>Cambios directivos recientes</li>
+                        <li>Sector en transformación disruptiva</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="propuesta">
+            <h2>🎯 PROPUESTA MODELO SENDO</h2>
+            <p><strong>Si cumplen criterios → Propuesta 3 Etapas:</strong></p>
+            
+            <div class="etapa">
+                <h4>ETAPA 1: DIAGNÓSTICO PROFUNDO (2-4 semanas)</h4>
+                <ul>
+                    <li>Análisis 360° operación actual</li>
+                    <li>Identificación gaps + oportunidades</li>
+                    <li>Quick wins implementación inmediata</li>
+                    <li><strong>Entregable:</strong> Mapa transformación + ROI proyectado</li>
+                </ul>
+            </div>
+            
+            <div class="etapa">
+                <h4>ETAPA 2: IMPLEMENTACIÓN CORE (3-6 meses)</h4>
+                <ul>
+                    <li>Sistemas información tiempo real</li>
+                    <li>Automatización procesos críticos</li>
+                    <li>Optimización estructura + costos</li>
+                    <li><strong>Entregable:</strong> Nueva operación funcionando</li>
+                </ul>
+            </div>
+            
+            <div class="etapa">
+                <h4>ETAPA 3: ESCALABILIDAD (6-12 meses)</h4>
+                <ul>
+                    <li>Inteligencia predictiva + alertas</li>
+                    <li>Optimización avanzada recursos</li>
+                    <li>Preparación crecimiento sostenible</li>
+                    <li><strong>Entregable:</strong> Sistema auto-operativo</li>
+                </ul>
+            </div>
+
+            <div class="inversion">
+                <h4>Inversión Referencia:</h4>
+                <p><strong>Diagnóstico:</strong> $15-30M COP | <strong>Implementación:</strong> $50-150M COP</p>
+                <p><strong>ROI Esperado:</strong> 3-5X inversión primer año</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>SENDO CONSULTING</h3>
+        <p>Framework OSDAB × SER.SIENDO</p>
+        <p><em>"Transformamos empresas desde la coherencia empresarial"</em></p>
+    </div>
+</body>
+</html>
