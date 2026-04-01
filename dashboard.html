@@ -48,6 +48,7 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 <button class="on" onclick="show('inicio')">Inicio</button>
 <button onclick="show('comite')">Comité SV</button>
 <button onclick="show('contratos')">Contratos</button>
+<button onclick="show('tareas')">Tareas Hoy</button>
 <button onclick="show('proyectos')">Proyectos</button>
 <button onclick="show('equipo')">Equipo</button>
 <button onclick="show('briefing')">Briefing</button>
@@ -183,5 +184,69 @@ const P=[
 fetch('./data/proyectos.json').then(r=>r.json()).then(d=>{renderP(d.proyectos||d)}).catch(()=>{renderP(P)});
 function renderP(arr){const l=document.getElementById('plist');l.innerHTML='';arr.forEach(p=>{l.innerHTML+=`<div class="proj"><div><span class="pname">${p.nombre}</span><span class="pline line-${p.linea}">${p.linea}</span></div><div class="pdesc">${p.desc||''}</div><div class="ppeople">${p.responsable||'—'} · ${p.estado||''}</div><div class="paction">→ ${p.accion||''}</div></div>`})}
 </script>
+
+<section id="tareas" class="show">
+<h2>📋 Tareas Críticas — 1 Abril 2026</h2>
+
+<div class="card crisis" style="margin-bottom:16px;">
+<div class="label">🚨 CRISIS OYMA R1</div>
+<div class="val">3 días restantes</div>
+<div class="sub">Deadline EPM: 4 abril • $737M en juego • Evidencia técnica devastadora lista</div>
+</div>
+
+<h3>🔴 CRÍTICAS - INMEDIATO</h3>
+<div style="background:var(--bg2);border:1px solid var(--red);border-radius:8px;padding:16px;margin-bottom:16px;">
+<div style="font-weight:600;margin-bottom:8px;">CONFIRMAR AGENDA PRESENTACIÓN EPM</div>
+<div style="font-size:12px;color:var(--muted);margin-bottom:6px;">📅 Deadline: 4 abril 2026 | 👤 Sebastián | 🎯 OYMA R1</div>
+<div style="font-size:11px;color:#ef4444;">Evidencia técnica GOLD STANDARD: CW257858 vs CW350951 - Timeline represalia 12 días innegable</div>
+</div>
+
+<div style="background:var(--bg2);border:1px solid var(--orange);border-radius:8px;padding:16px;margin-bottom:16px;">
+<div style="font-weight:600;margin-bottom:8px;">GESTIONAR TENSIÓN EQUIPOS GENERALIZADA</div>
+<div style="font-size:12px;color:var(--muted);margin-bottom:6px;">📅 Inmediato | 👤 Sebastián | 🎯 Crisis caja + salidas</div>
+<div style="font-size:11px;color:#f97316;">Organigrama: 85% personal bajo Cami = concentración peligrosa. Carlos Hernán $4M efectivo sospechoso</div>
+</div>
+
+<h3>⚡ DESARROLLOS TECNOLÓGICOS</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px;">
+<div style="font-weight:600;font-size:14px;margin-bottom:4px;">Cloud Code App</div>
+<div style="font-size:11px;color:var(--muted);">Herramienta evaluación procesos • MVP en desarrollo</div>
+<div style="background:var(--bg);height:4px;border-radius:2px;margin:8px 0;"><div style="background:var(--orange);width:60%;height:100%;border-radius:2px;"></div></div>
+</div>
+<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px;">
+<div style="font-weight:600;font-size:14px;margin-bottom:4px;">✅ Dispositivos Transcripción</div>
+<div style="font-size:11px;color:var(--muted);">$900 USD • 5 dispositivos Amazon • Odoo ID #1492</div>
+<div style="background:var(--green);height:4px;border-radius:2px;margin:8px 0;"></div>
+</div>
+</div>
+
+<h3>🧠 INSIGHTS LIMITLESS HOY</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px;">
+<div style="font-weight:600;font-size:13px;margin-bottom:8px;">Aleteagogía Digital Evolución</div>
+<ul style="font-size:11px;color:var(--muted);line-height:1.4;padding-left:12px;">
+<li>"Personas llegan con decisión tomada, no con discurso"</li>
+<li>Método refinado: intervención desde lenguaje del otro</li>
+<li>Herramientas Cloud: red conceptos conversaciones</li>
+</ul>
+</div>
+<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px;">
+<div style="font-weight:600;font-size:13px;margin-bottom:8px;">Modelo Negocio Sendo</div>
+<ul style="font-size:11px;color:var(--muted);line-height:1.4;padding-left:12px;">
+<li>SGI automatizado: empresas odian pero obligatorio</li>
+<li>Sendo Results: pago por resultados medibles</li>
+<li>Escalabilidad: piloto Condugas → PYMES Colombia</li>
+</ul>
+</div>
+</div>
+
+<div style="margin-top:20px;text-align:center;padding:16px;background:var(--bg2);border-radius:8px;">
+<div style="font-size:12px;color:var(--muted);margin-bottom:4px;">Estado Arquitecto</div>
+<div style="font-size:13px;font-weight:600;color:var(--cyan);">EVOLUTIVO AVANZADO</div>
+<div style="font-size:11px;color:var(--muted);">Integración filosofía+tecnología+negocio+personal • Crisis como laboratorio sistémico</div>
+</div>
+</section>
+
 </body>
 </html>
