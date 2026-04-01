@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Tareas Ejecutables - Sebastián</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+        .container { max-width: 1600px; margin: 0 auto; padding: 20px; }
+        
+        .header { text-align: center; margin-bottom: 30px; background: linear-gradient(135deg, #1e40af, #7c3aed); padding: 25px; border-radius: 15px; }
+        .header h1 { font-size: 2.8em; margin-bottom: 10px; }
+        .header .subtitle { font-size: 1.3em; opacity: 0.9; }
+        
+        .deadline-alert { background: linear-gradient(135deg, #dc2626, #991b1b); padding: 20px; border-radius: 12px; margin-bottom: 25px; text-align: center; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
+        
+        .filters { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        .filter-btn { background: #1e293b; border: 2px solid #334155; color: #94a3b8; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+        .filter-btn.active, .filter-btn:hover { border-color: #3b82f6; color: #3b82f6; background: #1e3a8a; }
+        
+        .task-section { margin-bottom: 30px; background: #1e293b; border-radius: 15px; overflow: hidden; }
+        .section-header { background: #334155; padding: 20px; display: flex; align-items: center; justify-content: space-between; }
+        .section-title { font-size: 1.5em; font-weight: bold; }
+        .task-counter { background: #475569; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; }
+        
+        .task-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); gap: 20px; padding: 20px; }
+        
+        .task-card { 
+            background: #0f172a; 
+            border: 2px solid transparent; 
+            border-radius: 12px; 
+            padding: 20px; 
+            transition: 0.3s;
+            position: relative;
+        }
+        .task-card.critica { border-color: #dc2626; box-shadow: 0 0 20px rgba(220, 38, 38, 0.3); }
+        .task-card.alta { border-color: #ea580c; }
+        .task-card.media { border-color: #ca8a04; }
+        .task-card.baja { border-color: #059669; }
+        
+        .task-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        
+        .task-header { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
+        .task-icon { font-size: 2em; flex-shrink: 0; }
+        .task-info { flex: 1; }
+        .task-title { font-size: 1.2em; font-weight: bold; margin-bottom: 8px; }
+        .task-meta { font-size: 0.9em; color: #94a3b8; margin-bottom: 8px; }
+        .task-context { background: #0c1220; padding: 15px; border-radius: 8px; margin: 15px 0; font-size: 0.9em; border-left: 4px solid #3b82f6; }
+        
+        .action-steps { margin-top: 15px; }
+        .action-step { background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 8px; border-left: 4px solid #10b981; cursor: pointer; transition: 0.3s; }
+        .action-step:hover { background: #374151; }
+        .action-step.completed { opacity: 0.6; background: #064e3b; }
+        .step-number { background: #10b981; color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8em; margin-right: 10px; }
+        
+        .progress-section { background: #0f172a; padding: 15px; border-radius: 8px; margin-top: 15px; }
+        .progress-bar { background: #374151; height: 8px; border-radius: 4px; margin: 8px 0; overflow: hidden; }
+        .progress-fill { height: 100%; transition: width 0.5s ease; }
+        .progress-critica { background: #dc2626; }
+        .progress-alta { background: #ea580c; }
+        .progress-media { background: #ca8a04; }
+        .progress-baja { background: #059669; }
+        
+        .quick-actions { display: flex; gap: 10px; margin-top: 15px; }
+        .quick-btn { padding: 8px 16px; border-radius: 6px; border: none; cursor: pointer; font-size: 0.8em; transition: 0.3s; }
+        .btn-primary { background: #2563eb; color: white; }
+        .btn-secondary { background: #6b7280; color: white; }
+        .btn-success { background: #059669; color: white; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .stat-card { background: #1e293b; padding: 20px; border-radius: 12px; text-align: center; border: 1px solid #334155; }
+        .stat-number { font-size: 2.5em; font-weight: bold; margin-bottom: 5px; }
+        .stat-label { color: #94a3b8; font-size: 1.1em; }
+        
+        .completed-toggle { margin-top: 30px; text-align: center; }
+        
+        .next-actions { background: linear-gradient(135deg, #0f766e, #065f46); padding: 25px; border-radius: 15px; margin-top: 30px; }
+        .next-actions h3 { font-size: 1.8em; margin-bottom: 20px; text-align: center; }
+        .next-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .next-item { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; }
+        
+        @media (max-width: 768px) {
+            .task-grid { grid-template-columns: 1fr; }
+            .filters { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Gestor de Tareas Ejecutables</h1>
+            <div class="subtitle">Sistema completo de seguimiento y ejecución - Sebastián Sánchez</div>
+            <div style="margin-top: 15px; font-size: 1em; opacity: 0.8;">
+                Miércoles 1 Abril 2026 - 12:06 PM COL
+            </div>
+        </div>
+        
+        <div class="deadline-alert">
+            <h2>⚡ CRISIS OYMA R1 - DEADLINE 4 ABRIL</h2>
+            <p style="font-size: 1.2em; margin-top: 10px;">3 días restantes | $737M en juego | Evidencia técnica devastadora lista</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" style="color: #dc2626;">6</div>
+                <div class="stat-label">Tareas Críticas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" style="color: #ea580c;">8</div>
+                <div class="stat-label">Alta Prioridad</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" style="color: #ca8a04;">12</div>
+                <div class="stat-label">Media Prioridad</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" style="color: #059669;">15</div>
+                <div class="stat-label">Completadas</div>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterTasks('all')">Todas</button>
+            <button class="filter-btn" onclick="filterTasks('critica')">🚨 Críticas</button>
+            <button class="filter-btn" onclick="filterTasks('alta')">🔴 Alta</button>
+            <button class="filter-btn" onclick="filterTasks('media')">🟡 Media</button>
+            <button class="filter-btn" onclick="filterTasks('condugas')">Condugas</button>
+            <button class="filter-btn" onclick="filterTasks('sendo')">Sendo</button>
+            <button class="filter-btn" onclick="filterTasks('personal')">Personal</button>
+        </div>
+        
+        <!-- TAREAS CRÍTICAS -->
+        <div class="task-section">
+            <div class="section-header">
+                <div class="section-title">🚨 CRISIS ACTIVA - CRÍTICAS</div>
+                <div class="task-counter">6 tareas</div>
+            </div>
+            <div class="task-grid">
+                
+                <!-- OYMA R1 -->
+                <div class="task-card critica" data-priority="critica" data-project="oyma-r1">
+                    <div class="task-header">
+                        <div class="task-icon">⚡</div>
+                        <div class="task-info">
+                            <div class="task-title">CONFIRMAR AGENDA PRESENTACIÓN EPM</div>
+                            <div class="task-meta">📅 Deadline: 4 abril | 👤 Sebastián | 🎯 $737M</div>
+                        </div>
+                    </div>
+                    <div class="task-context">
+                        <strong>EVIDENCIA TÉCNICA GOLD STANDARD:</strong> CW257858 vs CW350951 - Catalina Betancur timeline represalia 12 días innegable. PowerPoint técnico + fundamento jurídico Art. 27 Ley 80/1993 listo.
+                    </div>
+                    <div class="action-steps">
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">1</span>
+                            Llamar Cami confirmación estado documentación final EPM
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">2</span>
+                            Revisar PowerPoint técnico última vez (30 min máximo)
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">3</span>
+                            Confirmar hora exacta reunión + asistentes + modalidad
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">4</span>
+                            Preparar backup plan si posponen reunión
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 5px;">
+                            <span>Progreso</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-critica" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-btn btn-primary" onclick="startTask(this)">🚀 Empezar</button>
+                        <button class="quick-btn btn-secondary">📱 Contactar Cami</button>
+                        <button class="quick-btn btn-success">✅ Marcar completa</button>
+                    </div>
+                </div>
+                
+                <!-- REUNIÓN DON GUSTAVO -->
+                <div class="task-card critica" data-priority="critica" data-project="condugas">
+                    <div class="task-header">
+                        <div class="task-icon">🎭</div>
+                        <div class="task-info">
+                            <div class="task-title">ESTRATEGIA REUNIÓN DON GUSTAVO/PAOLA</div>
+                            <div class="task-meta">📅 3 abril | 👤 Sebastián + Cami | 🎯 Postura clara</div>
+                        </div>
+                    </div>
+                    <div class="task-context">
+                        <strong>POSTURA DEFINIDA:</strong> "Si viene Paola NO me reúno" - Solo con mamá presente, límite 3:00 PM, Cami preparando documentos backup (correos Andrea, cláusulas).
+                    </div>
+                    <div class="action-steps">
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">1</span>
+                            Confirmar con Cami si Paola asiste o no
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">2</span>
+                            Revisar documentos backup que preparó Cami
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">3</span>
+                            Definir agenda específica reunión (máximo 3 puntos)
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">4</span>
+                            Plan B si Paola aparece (retirarse cortésmente)
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 5px;">
+                            <span>Progreso</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-critica" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-btn btn-primary" onclick="startTask(this)">🚀 Empezar</button>
+                        <button class="quick-btn btn-secondary">📞 Llamar Cami</button>
+                        <button class="quick-btn btn-secondary">📄 Ver docs</button>
+                    </div>
+                </div>
+                
+                <!-- TENSIÓN EQUIPOS -->
+                <div class="task-card critica" data-priority="critica" data-project="condugas">
+                    <div class="task-header">
+                        <div class="task-icon">⚠️</div>
+                        <div class="task-info">
+                            <div class="task-title">GESTIONAR CRISIS TENSIÓN EQUIPOS</div>
+                            <div class="task-meta">📅 Inmediato | 👤 Sebastián | 🎯 Crisis caja</div>
+                        </div>
+                    </div>
+                    <div class="task-context">
+                        <strong>SITUACIÓN CRÍTICA:</strong> 85% personal bajo Cami (525 empleados), Carlos Hernán operación $4M sospechosa, todos gerentes+directores reportando crisis + salidas anunciadas.
+                    </div>
+                    <div class="action-steps">
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">1</span>
+                            Reunión virtual 8 directores - mensaje unificado
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">2</span>
+                            Decisión definitiva Carlos Hernán (dentro/fuera)
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">3</span>
+                            Plan comunicación salidas sin generar pánico
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">4</span>
+                            Redistribución carga Cami (concentración peligrosa)
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 5px;">
+                            <span>Progreso</span>
+                            <span>20%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-critica" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-btn btn-primary" onclick="startTask(this)">🚀 Empezar</button>
+                        <button class="quick-btn btn-secondary">📧 Convocar reunión</button>
+                        <button class="quick-btn btn-secondary">⚖️ Evaluar Carlos H</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- ALTA PRIORIDAD -->
+        <div class="task-section">
+            <div class="section-header">
+                <div class="section-title">🔴 ALTA PRIORIDAD</div>
+                <div class="task-counter">8 tareas</div>
+            </div>
+            <div class="task-grid">
+                
+                <!-- ESTADOS FINANCIEROS -->
+                <div class="task-card alta" data-priority="alta" data-project="condugas">
+                    <div class="task-header">
+                        <div class="task-icon">💰</div>
+                        <div class="task-info">
+                            <div class="task-title">RESOLVER ADVERTENCIA ESTADOS FINANCIEROS</div>
+                            <div class="task-meta">📅 2 abril | 👤 Rodrigo + Sebastián | 🎯 $1.200M</div>
+                        </div>
+                    </div>
+                    <div class="task-context">
+                        Cambios metodológicos post-cierre 90 municipios RIESGOSO. Requiere aval revisoría fiscal antes modificación.
+                    </div>
+                    <div class="action-steps">
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">1</span>
+                            Llamar Rodrigo estado revisoría fiscal respuesta
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">2</span>
+                            Revisar advertencia formal enviada (validar contenido)
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">3</span>
+                            Plan contingencia si no aprueban cambios
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 5px;">
+                            <span>Progreso</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-alta" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-btn btn-primary" onclick="startTask(this)">🚀 Empezar</button>
+                        <button class="quick-btn btn-secondary">☎️ Rodrigo</button>
+                    </div>
+                </div>
+                
+                <!-- ODOO CRÍTICO -->
+                <div class="task-card alta" data-priority="alta" data-project="condugas">
+                    <div class="task-header">
+                        <div class="task-icon">⚙️</div>
+                        <div class="task-info">
+                            <div class="task-title">EJECUTAR PLAN ODOO 5 DÍAS CRÍTICOS</div>
+                            <div class="task-meta">📅 2 abril | 👤 Claudia+Natalia+Andrea | 🎯 Operativo</div>
+                        </div>
+                    </div>
+                    <div class="task-context">
+                        12 bancos extractos + 39 nóminas marzo + 75 empleados datos faltantes. Sistema "espejismo digital" actual.
+                    </div>
+                    <div class="action-steps">
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">1</span>
+                            Claudia: Cargar extractos 12 bancos marzo
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">2</span>
+                            Natalia: Confirmar 39 nóminas pendientes
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">3</span>
+                            Andrea: Completar datos 75 empleados faltantes
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">4</span>
+                            Validación cruzada datos vs realidad
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 5px;">
+                            <span>Progreso</span>
+                            <span>25%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-alta" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-btn btn-primary" onclick="startTask(this)">🚀 Empezar</button>
+                        <button class="quick-btn btn-secondary">📋 Asignar tareas</button>
+                    </div>
+                </div>
+                
+                <!-- FRAMEWORK SENDO -->
+                <div class="task-card alta" data-priority="alta" data-project="sendo-consulting">
+                    <div class="task-header">
+                        <div class="task-icon">🧠</div>
+                        <div class="task-info">
+                            <div class="task-title">FRAMEWORK SENDO CONSULTING OSDAB</div>
+                            <div class="task-meta">📅 2 abril | 👤 Emanuel + Sebastián | 🎯 Metodología</div>
+                        </div>
+                    </div>
+                    <div class="task-context">
+                        25 preguntas estructuradas OSDAB validadas. Aplicar a Terret como caso piloto metodología.
+                    </div>
+                    <div class="action-steps">
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">1</span>
+                            Revisar 25 preguntas OSDAB con Emanuel
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">2</span>
+                            Aplicar framework completo a Terret
+                        </div>
+                        <div class="action-step" onclick="toggleStep(this)">
+                            <span class="step-number">3</span>
+                            Documentar resultados como caso estudio
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 5px;">
+                            <span>Progreso</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-alta" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-btn btn-primary" onclick="startTask(this)">🚀 Empezar</button>
+                        <button class="quick-btn btn-secondary">📋 Ver framework</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- PRÓXIMAS ACCIONES INMEDIATAS -->
+        <div class="next-actions">
+            <h3>⚡ PRÓXIMAS ACCIONES INMEDIATAS (2 horas)</h3>
+            <div class="next-grid">
+                <div class="next-item">
+                    <h4>🚨 OYMA R1 (30 min)</h4>
+                    <p><strong>HACER AHORA:</strong> Llamar Cami confirmación estado final documentación + hora exacta reunión EPM + backup plan.</p>
+                </div>
+                <div class="next-item">
+                    <h4>⚠️ Carlos Hernán (20 min)</h4>
+                    <p><strong>DECIDIR:</strong> Dentro o fuera definitivo. Documentar decisión + comunicar equipo si es necesario.</p>
+                </div>
+                <div class="next-item">
+                    <h4>📞 Rodrigo (15 min)</h4>
+                    <p><strong>VERIFICAR:</strong> Estado revisoría fiscal respuesta + plan contingencia si rechazan cambios.</p>
+                </div>
+                <div class="next-item">
+                    <h4>🎭 Don Gustavo (25 min)</h4>
+                    <p><strong>PREPARAR:</strong> Confirmar si viene Paola + revisar docs Cami + agenda específica 3 puntos.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; padding: 25px; background: #1e293b; border-radius: 15px;">
+            <h3>Estado Sistema: EVOLUTIVO AVANZADO</h3>
+            <p>Integración filosofía+tecnología+negocio+personal</p>
+            <p><strong>Crisis como laboratorio sistémico SER.SENDO</strong></p>
+        </div>
+    </div>
+    
+    <script>
+        function toggleStep(element) {
+            element.classList.toggle('completed');
+        }
+        
+        function filterTasks(filter) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            const taskCards = document.querySelectorAll('.task-card');
+            
+            taskCards.forEach(card => {
+                if (filter === 'all') {
+                    card.style.display = 'block';
+                } else if (filter === 'critica' || filter === 'alta' || filter === 'media') {
+                    if (card.dataset.priority === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                } else {
+                    // Filter by project
+                    if (card.dataset.project && card.dataset.project.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+        
+        function startTask(button) {
+            button.innerHTML = '⏱️ En progreso...';
+            button.style.background = '#ca8a04';
+            
+            // Find parent card and highlight it
+            const taskCard = button.closest('.task-card');
+            taskCard.style.border = '3px solid #10b981';
+            
+            setTimeout(() => {
+                button.innerHTML = '✅ Iniciada';
+                button.style.background = '#059669';
+            }, 2000);
+        }
+        
+        // Auto-refresh every 30 minutes
+        setInterval(() => {
+            location.reload();
+        }, 1800000);
+    </script>
+</body>
+</html>
