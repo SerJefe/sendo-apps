@@ -118,11 +118,8 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 
 <section id="briefing">
 <h2>Briefing Diario</h2>
-<div style="text-align:center;padding:40px;color:var(--muted);font-size:14px">
-El briefing se genera cada mañana desde el Claw (@Siendo_bot).<br>
-Cuando esté disponible, aparecerá acá.<br><br>
-<span style="font-size:12px">Rutina 12 pasos: Agenda → Correo → GPT/Limitless → ISS → Todoist/Odoo → WhatsApp/GoodNotes → Proyectos → Notas → Resumen → Físico → Objetivos → Cabeza</span>
-</div>
+<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px" id="bf-date"></p>
+<div id="bf-body"><div style="text-align:center;padding:30px;color:var(--muted)">Cargando briefing...</div></div>
 </section>
 </main>
 <footer>SER.SIENDO · Alletagia · Aleteagogía · Jefatura, nunca liderazgo — Dashboard v2 · 26 mar 2026</footer>
@@ -184,6 +181,22 @@ const P=[
 ];
 fetch('./data/proyectos.json').then(r=>r.json()).then(d=>{renderP(d.proyectos||d)}).catch(()=>{renderP(P)});
 function renderP(arr){const l=document.getElementById('plist');l.innerHTML='';arr.forEach(p=>{l.innerHTML+=`<div class="proj"><div><span class="pname">${p.nombre}</span><span class="pline line-${p.linea}">${p.linea}</span></div><div class="pdesc">${p.desc||''}</div><div class="ppeople">${p.responsable||'—'} · ${p.estado||''}</div><div class="paction">→ ${p.accion||''}</div></div>`})}
+
+// BRIEFING FETCH
+fetch('./data/briefing.json').then(r=>r.json()).then(b=>{
+  document.getElementById('bf-date').textContent='Briefing del '+b.fecha;
+  let h='';
+  if(b.agenda&&b.agenda.length){h+='<h3>Agenda</h3>';b.agenda.forEach(a=>{h+='<div style="padding:4px 0;font-size:13px;border-bottom:1px solid var(--border)">'+a+'</div>'})}
+  if(b.tareas_urgentes&&b.tareas_urgentes.length){h+='<h3>Tareas urgentes</h3>';b.tareas_urgentes.forEach(t=>{var pc=t.prioridad==="CRÍTICO"?"var(--red)":t.prioridad==="ALTO"?"var(--orange)":"var(--yellow)";h+='<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><div><div style="font-size:14px;font-weight:500">'+t.tarea+'</div><div style="font-size:11px;color:var(--muted)">'+t.responsable+'</div></div><span style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(239,68,68,.1);color:'+pc+';font-weight:600">'+t.prioridad+'</span></div>'})}
+  if(b.whoop){h+='<h3>WHOOP</h3><div class="grid g4"><div class="card"><div class="label">Recovery</div><div class="val" style="font-size:16px">'+(b.whoop.recovery||"—")+'</div></div><div class="card"><div class="label">Sleep</div><div class="val" style="font-size:16px">'+(b.whoop.sleep||"—")+'</div></div><div class="card"><div class="label">Deuda</div><div class="val" style="font-size:16px">'+(b.whoop.deuda||"—")+'</div></div><div class="card"><div class="label">Reco</div><div class="val" style="font-size:12px">'+(b.whoop.recomendacion||"—")+'</div></div></div>'}
+  if(b.limitless_ayer){var li=b.limitless_ayer;h+='<h3>Limitless — ayer</h3>';if(li.decisiones_criticas){li.decisiones_criticas.forEach(d=>{h+='<div style="font-size:13px;padding:4px 0;border-bottom:1px solid var(--border);color:var(--orange)">'+d+'</div>'})}if(li.estado_mental){h+='<div style="font-size:13px;color:var(--cyan);padding:8px 12px;background:var(--bg3);border-radius:8px;margin:8px 0;border-left:3px solid var(--cyan)">'+li.estado_mental+'</div>'}if(li.compromisos){li.compromisos.forEach(c=>{h+='<div style="font-size:13px;padding:3px 0;color:var(--muted)">→ '+c+'</div>'})}}
+  if(b.ideas_capturadas&&b.ideas_capturadas.length){h+='<h3>Ideas capturadas</h3>';b.ideas_capturadas.forEach(i=>{h+='<div style="font-size:13px;padding:4px 0;border-bottom:1px solid var(--border);color:var(--purple)">'+i+'</div>'})}
+  if(b.contenido_raw&&!b.agenda){h+='<div style="font-size:13px;white-space:pre-wrap;line-height:1.6;color:var(--text)">'+b.contenido_raw.replace(/^# .+$/gm,"").substring(0,3000)+'</div>'}
+  if(!h){h='<div style="text-align:center;padding:30px;color:var(--muted)">Sin briefing disponible</div>'}
+  document.getElementById('bf-body').innerHTML=h;
+  if(b.whoop){if(b.whoop.recovery&&b.whoop.recovery!=="Sin datos")document.getElementById("w-rec").textContent=b.whoop.recovery;if(b.whoop.sleep)document.getElementById("w-slp").textContent=b.whoop.sleep}
+}).catch(function(){document.getElementById('bf-body').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Sin briefing disponible.<br><span style=font-size:12px>El Claw lo genera cada mañana</span></div>'});
+
 </script>
 
 <section id="tareas" class="show">
