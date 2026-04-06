@@ -1,122 +1,143 @@
 {
   "tareas": [
     {
-      "tarea": "Reunirse para revisar problema financiero de 2000 millones",
-      "responsable": "Sebastian y equipo gerencial",
-      "prioridad": "crítica",
-      "contexto": "ANS amenaza con multas de 250 millones, necesidad de definir estrategia de pago o acuerdos laborales"
+      "tarea": "Mandar pagarés para acuerdo de pago con gerentes y directores",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "contexto": "Presión de 2000 millones de pesos pendientes por PM"
     },
     {
-      "tarea": "Recopilar información completa del proceso centro de operaciones",
+      "tarea": "Recopilar información del proceso centro de operaciones",
       "responsable": "Andrés Avendaño",
-      "prioridad": "media",
-      "contexto": "Proyecto de automatización, entrega de cuestionario hasta cubrir todos los procesos"
-    },
-    {
-      "tarea": "Completar auditoría de nómina y documentación de empleados",
-      "responsable": "Tatiana",
       "prioridad": "alta",
-      "contexto": "48.6% empleados completos, organización de carpetas y archivos faltantes"
+      "contexto": "Fase de descubrimiento para automatización de operaciones"
     },
     {
-      "tarea": "Definir estructura empresarial para consultorías",
+      "tarea": "Preparar equipaje para Guatapé",
       "responsable": "Sebastian",
       "prioridad": "media",
-      "contexto": "Necesidad de separar cuentas de cliente nuevo de Condugas actual"
+      "contexto": "Salida familiar con termos, balones y computador"
+    },
+    {
+      "tarea": "Comprar 5 computadores adicionales para Valle",
+      "responsable": "Andrea",
+      "prioridad": "media",
+      "contexto": "Ya se compraron 5, faltan otros 5 del paquete de 25"
+    },
+    {
+      "tarea": "Pasar propuesta de 20 millones mensuales a Natalia Sánchez",
+      "responsable": "Carlos López",
+      "prioridad": "alta",
+      "contexto": "Servicios de nómina, contabilidad y gestión humana para Constru"
     }
   ],
   "ideas": [
     {
-      "idea": "Crear acuerdos de pago con trabajo para presionar al equipo adormecido",
-      "contexto": "2000 millones de deuda, equipo sin conciencia del impacto",
-      "linea_negocio": "jefatura_estrategica"
+      "idea": "Crear aplicación de escritorio con base de datos local para evitar problemas de conectividad",
+      "contexto": "Dificultades con aplicaciones web que requieren conexión",
+      "linea_negocio": "desarrollo_tecnologico"
     },
     {
-      "idea": "Implementar sistema de automatización para centro de operaciones",
-      "contexto": "10000 operaciones mensuales, alta dependencia de personas, dispersión de herramientas",
-      "linea_negocio": "automatizacion_procesos"
+      "idea": "Implementar herramienta de auditoría automática de nómina",
+      "contexto": "48.6% empleados completos identificados automáticamente",
+      "linea_negocio": "gestion_humana"
     },
     {
-      "idea": "Ofrecer servicios integrales de gestión a Constru por 20 millones mensuales",
-      "contexto": "Contabilidad, gestión humana, nómina, trazabilidad de camiones",
-      "linea_negocio": "outsourcing_administrativo"
+      "idea": "Desarrollar centro de operaciones unificado con automatización de rutas",
+      "contexto": "10,000 operaciones mensuales manejadas manualmente",
+      "linea_negocio": "automatizacion"
+    },
+    {
+      "idea": "Crear matriz de scoring para priorización de procesos automatizables",
+      "contexto": "Evaluación sistemática de criticidad e impacto de procesos",
+      "linea_negocio": "consultoria"
     }
   ],
   "frases_poderosas": [
     {
       "frase": "Las empresas contratan gente para que las personas trabajen para las empresas, no para que la empresa trabaje para las personas",
-      "contexto": "Confrontando al equipo sobre responsabilidades y rendimiento"
+      "contexto": "Confrontando equipo adormecido por presión de PM"
     },
     {
-      "frase": "Yo estoy hoy me lancé con una belleza de actitud, masticándole duro",
-      "contexto": "Estado de determinación y confrontación directa con problemas"
+      "frase": "Son 2000 hijos de putas millones de pesos, no entiendo si no hay conciencia",
+      "contexto": "Frustración por falta de urgencia del equipo ante crisis financiera"
     },
     {
-      "frase": "Darlo todo hasta que yo quede tranquilo",
-      "contexto": "Filosofía personal de trabajo y compromiso total"
+      "frase": "Yo doy todo hasta que yo quede tranquilo",
+      "contexto": "Filosofía personal de Sebastian ante adversidades"
     }
   ],
   "decisiones": [
     {
-      "decision": "Confrontar directamente al equipo con pagarés o acuerdos de pago",
-      "involucrados": "Sebastian, gerentes, directores",
-      "impacto": "Movilización del equipo frente a crisis de 2000 millones"
+      "decision": "Implementar acuerdos de pago con pagarés para responsabilizar al equipo",
+      "involucrados": [
+        "gerentes",
+        "directores",
+        "Sebastian"
+      ],
+      "impacto": "Presión directa sobre responsables de 2000 millones pendientes"
     },
     {
-      "decision": "Implementar proyecto de automatización centro de operaciones",
-      "involucrados": "Sebastian, Andrés Avendaño, equipo técnico",
-      "impacto": "Reducción de dependencia humana y 700 millones de ahorro anual"
+      "decision": "Cambiar estrategia de aplicaciones web a escritorio con base de datos local",
+      "involucrados": [
+        "Sebastian",
+        "William"
+      ],
+      "impacto": "Mayor estabilidad y funcionalidad sin dependencia de conectividad"
     },
     {
-      "decision": "Confirmar reunión para abril 9",
-      "involucrados": "Sebastian, Adolfo",
-      "impacto": "Continuidad de colaboración estratégica"
+      "decision": "Estructurar nueva línea de consulting separada de Condugas",
+      "involucrados": [
+        "Sebastian",
+        "equipo consulting"
+      ],
+      "impacto": "Independencia operativa y financiera para nuevos clientes"
     }
   ],
   "personas": [
     {
       "nombre": "Adolfo",
-      "contexto": "Conversación telefónica sobre crisis empresarial y planes personales",
-      "tipo_relacion": "socio_estrategico"
+      "contexto": "Conversación telefónica sobre crisis empresarial y retiro personal",
+      "tipo_relacion": "consejero_personal"
     },
     {
       "nombre": "Andrés Avendaño",
-      "contexto": "Coordinador centro de operaciones, entrevistado para proyecto automatización",
+      "contexto": "Coordinador centro de operaciones para proyecto automatización",
       "tipo_relacion": "colaborador_interno"
-    },
-    {
-      "nombre": "Tatiana",
-      "contexto": "Responsable de auditoría de nómina y organización documental",
-      "tipo_relacion": "colaborador_interno"
-    },
-    {
-      "nombre": "William",
-      "contexto": "Desarrollo técnico de aplicaciones y soporte sistemas",
-      "tipo_relacion": "colaborador_tecnico"
     },
     {
       "nombre": "Natalia Sánchez",
-      "contexto": "Cliente potencial para servicios integrales Constru",
+      "contexto": "Cliente potencial para servicios de gestión humana y contabilidad",
       "tipo_relacion": "cliente_potencial"
+    },
+    {
+      "nombre": "William",
+      "contexto": "Desarrollador trabajando en aplicación de matriz de scoring",
+      "tipo_relacion": "colaborador_tecnico"
+    },
+    {
+      "nombre": "Carlos López",
+      "contexto": "Responsable de propuesta comercial de 20 millones mensuales",
+      "tipo_relacion": "colaborador_comercial"
     }
   ],
   "estado_emocional": {
-    "emocion": "determinacion_combativa",
+    "emocion": "frustración_combativa",
     "coherencia_epa": "alta",
-    "reflexion": "Sebastian muestra coherencia total entre su estado emocional de determinación, su pensamiento estratégico claro sobre confrontar problemas directamente, y sus acciones concretas de presión al equipo y desarrollo de soluciones. Su frase 'masticándole duro' refleja esta alineación perfecta entre sentir, pensar y actuar en modo SER.SIENDO de jefe confrontativo."
+    "reflexion": "Sebastian muestra coherencia entre su emoción (frustración por inacción del equipo), pensamiento (estrategias de presión y responsabilización) y acción (implementación de pagarés y confrontación directa). Su estado SER.SIENDO se manifiesta en su determinación de 'dar todo hasta quedar tranquilo', ejerciendo jefatura auténtica ante la crisis."
   },
   "conceptos_modelo": [
     {
-      "concepto": "SER.SIENDO jefe confrontativo",
-      "desarrollo": "Sebastian ejemplifica el concepto de estar SIENDO jefe en tiempo real, no solo pensando en serlo. Su confrontación directa con el equipo sobre los 2000 millones, sus decisiones inmediatas sobre acuerdos de pago, y su actitud de 'masticándole duro' muestran jefatura auténtica en acción, no simulacro de liderazgo."
+      "concepto": "Jefatura vs Liderazgo",
+      "desarrollo": "Sebastian ejercita jefatura auténtica al confrontar directamente la falta de conciencia del equipo ante los 2000 millones en riesgo, implementando consecuencias concretas (pagarés) en lugar de motivación superficial"
     },
     {
-      "concepto": "Aleteagogia de la crisis",
-      "desarrollo": "La crisis de 2000 millones funciona como elemento aleteagógico que revela la verdadera naturaleza del equipo. Sebastian usa esta presión para enseñar responsabilidad real, confrontando la comodidad de que 'no es de ellos' y forzando conciencia sobre el impacto."
+      "concepto": "Coherencia EPA",
+      "desarrollo": "Alineación entre emoción (frustración), pensamiento (estrategias de presión) y acción (implementación de pagarés), demostrando integridad en la respuesta ante la crisis"
     },
     {
-      "concepto": "Coherencia EPA en automatización",
-      "desarrollo": "El proyecto de centro de operaciones muestra coherencia entre emoción (frustración por dependencia humana), pensamiento (análisis de 700 millones de sobrecosto) y acción (implementación de matriz de scoring y desarrollo de soluciones). Perfecta alineación estratégica."
+      "concepto": "Aleteagogia Tecnológica",
+      "desarrollo": "Aplicación del modelo pedagógico en el desarrollo de herramientas como la matriz de scoring, donde la enseñanza-aprendizaje se da a través de la construcción colaborativa de soluciones técnicas"
     }
   ]
 }
