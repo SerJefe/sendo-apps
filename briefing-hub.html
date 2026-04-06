@@ -878,7 +878,7 @@ section {
     });
   }
 
-  function toggleTask(taskId) {
+  async function toggleTask(taskId) {
     const allTareas = tareasData?.tareas || [];
     const task = allTareas.find(t => t.id === taskId);
     if (!task) return;
@@ -886,15 +886,37 @@ section {
     const currentEstado = localOverrides[taskId]?.estado || task.estado;
     const newEstado = currentEstado === 'abierta' ? 'cerrada' : 'abierta';
 
+    // Optimistic UI update
     if (newEstado === task.estado) {
       delete localOverrides[taskId];
     } else {
       localOverrides[taskId] = { estado: newEstado };
     }
-
     saveOverrides();
     renderTablero();
-    showToast(newEstado === 'cerrada' ? 'Tarea marcada como cerrada (local)' : 'Tarea reabierta (local)');
+
+    // Try API call to VPS
+    try {
+      const res = await fetch('http://72.60.28.156:8099/toggle', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: taskId })
+      });
+      if (!res.ok) throw new Error('API error');
+      const updated = await res.json();
+      // Sync local state with server response
+      const serverTask = allTareas.find(t => t.id === taskId);
+      if (serverTask) {
+        serverTask.estado = updated.estado;
+        serverTask.fecha_cierre = updated.fecha_cierre;
+      }
+      delete localOverrides[taskId];
+      saveOverrides();
+      renderTablero();
+      showToast(newEstado === 'cerrada' ? 'Tarea cerrada' : 'Tarea reabierta');
+    } catch (e) {
+      showToast('Guardado local - sincronizar pendiente', 3500);
+    }
   }
 
   function renderSemanal() {
