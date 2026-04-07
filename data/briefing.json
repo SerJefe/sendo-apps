@@ -1,6 +1,67 @@
 {
   "fecha": "2026-04-07",
-  "tareas_candidatas": [],
+  "tareas_candidatas": [
+    {
+      "tarea": "Hacer acuerdo de pago por 2000 millones de pesos con PM o solicitar que firmen pagarés",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Reunirse el 9 de abril",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Revisar qué cuenta municipal fue utilizada, cómo se sacó el efectivo y a quién se le entregó",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Recopilar toda la información faltante sobre procesos y articular situaciones",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Crear nuevo proyecto de automatización: análisis, programación, recepción y digitalización",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Evaluar matriz de scoring de procesos del centro de operaciones",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Entregar cuestionario de conocimiento del proyecto de unificación del centro de operaciones día a día hasta cubrir todos los procesos",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Seguimiento de trazabilidad con William",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Comprar cinco computadores adicionales para enviar a Valle",
+      "responsable": "Andrea",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Instalar y configurar servidor remoto/cloud para el proyecto",
+      "responsable": "Equipo técnico",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Organizar archivos de nómina y funciones según estructura 1.1, 1.2, 2.1 en carpeta correspondiente",
+      "responsable": "Equipo administrativo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Instalar PostgreSQL con configuración por defecto",
+      "responsable": "Equipo técnico",
+      "prioridad": "media"
+    }
+  ],
   "ideas_capturadas": [
     "Inicio de la conversación y preparativos",
     "Discusión sobre objetos y pertenencias",
