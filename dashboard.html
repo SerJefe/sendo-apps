@@ -42,6 +42,16 @@ h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;
 footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);margin-top:32px}
 .filter-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;transition:.2s}
 .filter-btn:hover,.filter-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(6,182,212,.08)}
+
+.radar-p1{border-left:3px solid var(--red);background:rgba(239,68,68,.04)}
+.radar-p2{border-left:3px solid var(--orange);background:rgba(249,115,22,.04)}
+.radar-p3{border-left:3px solid var(--yellow);background:rgba(234,179,8,.04)}
+.radar-p4{border-left:3px solid var(--muted);background:rgba(100,116,139,.04)}
+.radar-stat{text-align:center;padding:12px}
+.radar-stat .num{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600}
+.radar-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:2px}
+.sla-ok{color:var(--green)}.sla-warn{color:var(--orange)}.sla-expired{color:var(--red)}
+.cat-chip{font-size:10px;padding:2px 8px;border-radius:4px;display:inline-block;margin-right:4px}
 </style>
 </head>
 <body>
@@ -53,6 +63,7 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 <button onclick="show('tareas')">Tareas Hoy</button>
 <button onclick="show('revisar')">Revisar <span id="pendientes-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
 <button onclick="show('mistareas')">Mis Tareas</button>
+<button onclick="show('radar')">Radar <span id="radar-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
 <button onclick="show('proyectos')">Proyectos</button>
 <button onclick="show('equipo')">Equipo</button>
 <button onclick="show('briefing')">Briefing</button>
@@ -117,6 +128,41 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
   Cerradas <span id="cerradas-count" style="font-family:'JetBrains Mono',monospace;color:var(--muted)"></span> ▾
 </h3>
 <div id="tareas-cerradas" style="display:none"></div>
+</section>
+
+
+<section id="radar">
+<h2>Radar de Alertas</h2>
+<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px">Correos clasificados por criticidad desde Power Automate y scripts</p>
+
+<div class="grid g4" id="radar-stats-grid">
+  <div class="card"><div class="radar-stat"><div class="num" id="rs-p1" style="color:var(--red)">-</div><div class="lbl">P1 Critico</div></div></div>
+  <div class="card"><div class="radar-stat"><div class="num" id="rs-p2" style="color:var(--orange)">-</div><div class="lbl">P2 Urgente</div></div></div>
+  <div class="card"><div class="radar-stat"><div class="num" id="rs-p3" style="color:var(--yellow)">-</div><div class="lbl">P3 Importante</div></div></div>
+  <div class="card"><div class="radar-stat"><div class="num" id="rs-sla" style="color:var(--red)">-</div><div class="lbl">SLA Vencido</div></div></div>
+</div>
+
+<div style="display:flex;gap:8px;margin:16px 0;flex-wrap:wrap">
+  <button onclick="filterRadar('todas')" class="filter-btn active" data-rf="todas">Todas</button>
+  <button onclick="filterRadar('P1')" class="filter-btn" data-rf="P1">P1</button>
+  <button onclick="filterRadar('P2')" class="filter-btn" data-rf="P2">P2</button>
+  <button onclick="filterRadar('P3')" class="filter-btn" data-rf="P3">P3</button>
+  <span style="border-left:1px solid var(--border);margin:0 4px"></span>
+  <button onclick="filterRadarCat('clientes')" class="filter-btn" data-rc>Clientes</button>
+  <button onclick="filterRadarCat('bancos')" class="filter-btn" data-rc>Bancos</button>
+  <button onclick="filterRadarCat('legal')" class="filter-btn" data-rc>Legal</button>
+  <button onclick="filterRadarCat('entes_reguladores')" class="filter-btn" data-rc>Entes</button>
+  <button onclick="filterRadarCat('gobierno')" class="filter-btn" data-rc>Gobierno</button>
+  <button onclick="filterRadarCat('proveedores')" class="filter-btn" data-rc>Proveedores</button>
+</div>
+
+<h3>Alertas activas <span id="radar-count" style="font-family:'JetBrains Mono',monospace;color:var(--cyan)"></span></h3>
+<div id="radar-list"><div style="text-align:center;padding:30px;color:var(--muted)">Cargando...</div></div>
+
+<h3 style="cursor:pointer;margin-top:20px" onclick="document.getElementById('radar-resueltas').style.display=document.getElementById('radar-resueltas').style.display==='none'?'block':'none'">
+  Resueltas <span id="radar-resueltas-count" style="font-family:'JetBrains Mono',monospace;color:var(--muted)"></span> &#9662;
+</h3>
+<div id="radar-resueltas" style="display:none"></div>
 </section>
 
 <section id="proyectos">
@@ -362,6 +408,150 @@ function filterTareas(f) {
 
 loadPendientes();
 loadMisTareas();
+
+
+// === RADAR DE ALERTAS ===
+const ALERT_API='http://72.60.28.156:8098';
+let radarFilter='todas';
+let radarCatFilter=null;
+let allAlertas=[];
+
+const CAT_LABELS={clientes:'Clientes',bancos:'Bancos',legal:'Legal',entes_reguladores:'Entes',gobierno:'Gobierno',proveedores:'Proveedores',siendo:'Siendo',personal:'Personal',hseq:'HSEQ'};
+const CAT_COLORS={clientes:'var(--cyan)',bancos:'var(--green)',legal:'var(--red)',entes_reguladores:'var(--purple)',gobierno:'var(--orange)',proveedores:'var(--yellow)',siendo:'var(--pink)',personal:'var(--muted)'};
+const NIV_COLORS={P1:'var(--red)',P2:'var(--orange)',P3:'var(--yellow)',P4:'var(--muted)'};
+
+async function loadRadar() {
+  try {
+    const r = await fetch(ALERT_API+'/alertas/activas');
+    const data = await r.json();
+    allAlertas = data.alertas || [];
+    const s = data.stats || {};
+
+    document.getElementById('rs-p1').textContent = s.p1||0;
+    document.getElementById('rs-p2').textContent = s.p2||0;
+    document.getElementById('rs-p3').textContent = s.p3||0;
+    document.getElementById('rs-sla').textContent = s.sla_vencido||0;
+    document.getElementById('radar-badge').textContent = s.p1 ? s.p1 : '';
+
+    renderRadarList();
+  } catch(e) {
+    document.getElementById('radar-list').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">API no disponible — asegurar que el servicio alertas-api corre en el VPS</div>';
+  }
+
+  // Also load resolved
+  try {
+    const r2 = await fetch(ALERT_API+'/alertas');
+    const d2 = await r2.json();
+    const resueltas = (d2.alertas||[]).filter(a=>a.estado==='resuelto');
+    document.getElementById('radar-resueltas-count').textContent = resueltas.length;
+    if(resueltas.length) {
+      document.getElementById('radar-resueltas').innerHTML = resueltas.slice(0,20).map(a=>renderAlertCard(a,true)).join('');
+    } else {
+      document.getElementById('radar-resueltas').innerHTML='<div style="text-align:center;padding:20px;color:var(--muted)">Sin alertas resueltas</div>';
+    }
+  } catch(e){}
+}
+
+function renderRadarList() {
+  let filtered = allAlertas;
+  if(radarFilter!=='todas') filtered = filtered.filter(a=>a.nivel===radarFilter);
+  if(radarCatFilter) filtered = filtered.filter(a=>a.categoria===radarCatFilter);
+
+  document.getElementById('radar-count').textContent = filtered.length;
+  if(!filtered.length) {
+    document.getElementById('radar-list').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Sin alertas activas'+(radarFilter!=='todas'?' con filtro '+radarFilter:'')+'</div>';
+    return;
+  }
+
+  document.getElementById('radar-list').innerHTML = filtered.map(a=>renderAlertCard(a,false)).join('');
+}
+
+function renderAlertCard(a, isResolved) {
+  const now = new Date();
+  const sla = a.sla_deadline ? new Date(a.sla_deadline) : null;
+  let slaClass = 'sla-ok';
+  let slaText = '';
+  if(sla && !isResolved) {
+    const diff = sla - now;
+    if(diff < 0) { slaClass='sla-expired'; slaText='SLA VENCIDO'; }
+    else if(diff < 3600000) { slaClass='sla-warn'; slaText='<1h'; }
+    else { slaText=Math.round(diff/3600000)+'h'; }
+  }
+  if(isResolved && a.fecha_atencion) {
+    slaText = 'Resuelto ' + a.fecha_atencion.slice(0,10);
+  }
+
+  const catLabel = CAT_LABELS[a.categoria] || a.categoria;
+  const catColor = CAT_COLORS[a.categoria] || 'var(--muted)';
+  const nivColor = NIV_COLORS[a.nivel] || 'var(--muted)';
+
+  return '<div class="card radar-'+a.nivel+'" style="margin-bottom:8px;'+(isResolved?'opacity:.5':'')+'" id="ra-'+a.id+'">' +
+    '<div style="display:flex;justify-content:space-between;align-items:flex-start">' +
+      '<div style="flex:1">' +
+        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">' +
+          '<span style="font-size:11px;font-weight:600;color:'+nivColor+'">'+a.nivel+'</span>' +
+          '<span class="cat-chip" style="background:rgba(6,182,212,.1);color:'+catColor+'">'+catLabel+'</span>' +
+          (slaText?'<span style="font-size:10px" class="'+slaClass+'">'+slaText+'</span>':'') +
+        '</div>' +
+        '<div style="font-size:14px;font-weight:500">'+a.asunto+'</div>' +
+        '<div style="font-size:12px;color:var(--muted);margin-top:2px">'+a.remitente+'</div>' +
+        (a.snippet?'<div style="font-size:11px;color:var(--muted);margin-top:4px;opacity:.7">'+a.snippet.slice(0,120)+'...</div>':'') +
+        '<div style="font-size:10px;color:var(--muted);margin-top:4px">' +
+          (a.palabras_detectadas||[]).map(function(w){return '<span style="background:rgba(239,68,68,.1);color:var(--red);padding:1px 5px;border-radius:3px;margin-right:3px">'+w+'</span>'}).join('') +
+          ' &middot; '+a.responsable_sugerido+' &middot; '+(a.fecha_recibido||'').slice(0,16).replace('T',' ') +
+          ' &middot; <span style="font-size:10px;padding:1px 5px;border-radius:3px;background:rgba(6,182,212,.1);color:var(--cyan)">'+a.fuente+'</span>' +
+        '</div>' +
+      '</div>' +
+      (!isResolved ?
+        '<div style="display:flex;flex-direction:column;gap:4px;margin-left:12px">' +
+          '<button onclick="resolveAlert(\''+a.id+'\')" style="background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer" title="Marcar resuelta">Resolver</button>' +
+          '<button onclick="assignAlert(\''+a.id+'\')" style="background:rgba(6,182,212,.1);color:var(--cyan);border:1px solid rgba(6,182,212,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer" title="Marcar como asignada">Asignar</button>' +
+        '</div>'
+      : '') +
+    '</div>' +
+  '</div>';
+}
+
+function filterRadar(nivel) {
+  radarFilter = nivel;
+  radarCatFilter = null;
+  document.querySelectorAll('[data-rf]').forEach(function(b){b.classList.remove('active')});
+  document.querySelectorAll('[data-rc]').forEach(function(b){b.classList.remove('active')});
+  document.querySelector('[data-rf="'+nivel+'"]').classList.add('active');
+  renderRadarList();
+}
+
+function filterRadarCat(cat) {
+  radarCatFilter = radarCatFilter===cat ? null : cat;
+  radarFilter = 'todas';
+  document.querySelectorAll('[data-rf]').forEach(function(b){b.classList.remove('active')});
+  document.querySelectorAll('[data-rc]').forEach(function(b){b.classList.remove('active')});
+  document.querySelector('[data-rf="todas"]').classList.add('active');
+  if(radarCatFilter) {
+    event.target.classList.add('active');
+  }
+  renderRadarList();
+}
+
+async function resolveAlert(id) {
+  const el = document.getElementById('ra-'+id);
+  if(el) el.style.opacity='0.3';
+  try {
+    await fetch(ALERT_API+'/alertas/estado', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({id:id, estado:'resuelto'})});
+    toast('Alerta resuelta','ok');
+    setTimeout(function(){loadRadar()}, 300);
+  } catch(e) { toast('Error','err'); if(el)el.style.opacity='1'; }
+}
+
+async function assignAlert(id) {
+  try {
+    await fetch(ALERT_API+'/alertas/estado', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({id:id, estado:'asignado'})});
+    toast('Alerta asignada','ok');
+    loadRadar();
+  } catch(e) { toast('Error','err'); }
+}
+
+loadRadar();
 
 </script>
 

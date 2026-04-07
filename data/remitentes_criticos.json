@@ -1,0 +1,187 @@
+{
+  "clientes_estrategicos": {
+    "nivel_default": "P1",
+    "dominios": [
+      "@epm.com.co",
+      "@vanti.com.co",
+      "@metrogas"
+    ],
+    "nombres": [
+      "Gases de Occidente"
+    ],
+    "palabras_escalamiento_p1": [
+      "interventor",
+      "interventoría",
+      "supervisión",
+      "informe",
+      "hallazgo",
+      "no conformidad"
+    ]
+  },
+  "bancos_financiero": {
+    "nivel_default": "P2",
+    "dominios": [
+      "@bancolombia.com",
+      "@davivienda.com",
+      "@bancodebogota.com",
+      "@bancodeoccidente.com",
+      "@avvillas.com"
+    ],
+    "nombres": [
+      "Bancolombia",
+      "Davivienda",
+      "Banco de Bogotá",
+      "Banco de Occidente",
+      "AV Villas"
+    ],
+    "palabras_escalamiento_p1": [
+      "crédito",
+      "mora",
+      "vencimiento",
+      "embargo",
+      "pagos",
+      "obligación",
+      "cartera",
+      "refinanciación",
+      "desembolso",
+      "garantía",
+      "pagaré"
+    ],
+    "excepciones_p1_siempre": [
+      "revisoría fiscal",
+      "revisor fiscal"
+    ],
+    "excepciones_p2": [
+      "contador externo"
+    ],
+    "aseguradoras": {
+      "nombres": [
+        "Rasher",
+        "Triple AAA"
+      ],
+      "p1_si": [
+        "póliza",
+        "siniestro"
+      ],
+      "default": "P2"
+    }
+  },
+  "legal_contractual": {
+    "nivel_default": "P1",
+    "dominios": [],
+    "nombres": [
+      "abogado",
+      "firma de abogados"
+    ],
+    "contextos": [
+      "notificación judicial",
+      "juzgado",
+      "DIAN",
+      "incumplimiento",
+      "notificación contractual",
+      "notificación policial",
+      "interventoría"
+    ]
+  },
+  "entes_reguladores": {
+    "nivel_default": "P1",
+    "dominios": [],
+    "nombres": [
+      "CREG",
+      "Superservicios",
+      "SSPD",
+      "ARL Colmena",
+      "Secretaría de Salud",
+      "Secretaría de Ambiente",
+      "CAR",
+      "Corantioquia"
+    ]
+  },
+  "proveedores_criticos": {
+    "nivel_default": "P2",
+    "dominios": [],
+    "nombres": [],
+    "categorias": [
+      "tubería",
+      "materiales",
+      "subcontratista",
+      "transportador",
+      "maquinaria",
+      "arriendo",
+      "celular",
+      "servicios públicos"
+    ]
+  },
+  "gobierno_corporativo": {
+    "p1_siempre": [
+      "Adolfo",
+      "socio",
+      "accionista",
+      "junta directiva",
+      "auditoría interna",
+      "auditoría externa"
+    ],
+    "equipo_directivo": {
+      "nivel_default": "P2",
+      "nombres": [
+        "William López",
+        "Natalia Rojas",
+        "Andrea Bernal",
+        "Nelson Escobar",
+        "Claudia Quintero",
+        "Alejandro Roldán",
+        "Emanuel",
+        "Lina Russi",
+        "Hilda Martínez",
+        "Juan Pablo Franco",
+        "Alexandra Botero",
+        "Carlos López",
+        "Juan Guillermo Pérez Soberón",
+        "Mónica González",
+        "Margoth Hernández",
+        "Edwar Tello",
+        "Carlos Acevedo",
+        "Diana Giraldo",
+        "Aldemar Bermúdez",
+        "Alex Arteaga"
+      ],
+      "palabras_escalamiento_p1": [
+        "incumplimiento",
+        "sanción",
+        "urgente",
+        "accidente",
+        "renuncia",
+        "demanda"
+      ]
+    }
+  },
+  "personal_siendo": {
+    "siendo_consulting": {
+      "nivel_default": "P2",
+      "nombres": [
+        "Vendemos",
+        "DOJO",
+        "Implantech"
+      ]
+    },
+    "universidad": {
+      "nivel_default": "P3"
+    },
+    "familia": {
+      "nivel_default": "P2",
+      "nombres": [
+        "Paulina",
+        "Benjamín"
+      ]
+    },
+    "tech_suscripciones": {
+      "nivel_default": "P3",
+      "nombres": [
+        "Apple"
+      ],
+      "p2_si": [
+        "vencimiento"
+      ]
+    }
+  }
+}

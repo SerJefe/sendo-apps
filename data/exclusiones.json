@@ -1,0 +1,22 @@
+{
+  "patrones_asunto": [
+    "newsletter",
+    "suscríbete",
+    "unsubscribe",
+    "weekly digest",
+    "daily summary"
+  ],
+  "remitentes": [
+    "no-reply@",
+    "noreply@",
+    "notifications@",
+    "mailer-daemon@"
+  ],
+  "reglas": [
+    "Newsletters y publicidad",
+    "Notificaciones automáticas de apps (salvo si menciona 'vencimiento')",
+    "Firmas repetitivas sin contenido nuevo",
+    "Correos de no-reply informativos",
+    "CC sin acción directa"
+  ]
+}

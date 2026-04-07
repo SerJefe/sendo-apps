@@ -1,0 +1,70 @@
+{
+  "alertas": [
+    {
+      "id": "f359c5a9",
+      "fuente": "m365",
+      "cuenta": "gerencia@condugas.com",
+      "remitente": "william.lopez@condugas.com",
+      "asunto": "Informe avance proyecto Vanti Q1",
+      "snippet": "Adjunto el informe de avance del primer trimestre del contrato con Vanti...",
+      "fecha_recibido": "2026-04-07T06:18:56.308783",
+      "categoria": "personal",
+      "nivel": "P3",
+      "palabras_detectadas": [
+        "informe",
+        "avance"
+      ],
+      "responsable_sugerido": "Sebastián",
+      "estado": "nuevo",
+      "sla_deadline": "2026-04-09T06:18:56.308783",
+      "fecha_atencion": null,
+      "comentario_cierre": null
+    },
+    {
+      "id": "e3e06928",
+      "fuente": "m365",
+      "cuenta": "gerencia@condugas.com",
+      "remitente": "creditos@bancolombia.com",
+      "asunto": "Vencimiento obligacion crediticia",
+      "snippet": "Le informamos que su credito rotativo vence el 15 de abril...",
+      "fecha_recibido": "2026-04-07T06:18:56.298519",
+      "categoria": "bancos",
+      "nivel": "P1",
+      "palabras_detectadas": [
+        "vencimiento"
+      ],
+      "responsable_sugerido": "Sebastián",
+      "estado": "nuevo",
+      "sla_deadline": "2026-04-07T06:48:56.298519",
+      "fecha_atencion": null,
+      "comentario_cierre": null
+    },
+    {
+      "id": "8e348b23",
+      "fuente": "m365",
+      "cuenta": "gerencia@condugas.com",
+      "remitente": "interventoria@epm.com.co",
+      "asunto": "Hallazgo No Conformidad Contrato 2024-001",
+      "snippet": "Se reporta no conformidad en la ejecucion del contrato...",
+      "fecha_recibido": "2026-04-07T06:18:56.287379",
+      "categoria": "clientes",
+      "nivel": "P1",
+      "palabras_detectadas": [
+        "hallazgo",
+        "no conformidad"
+      ],
+      "responsable_sugerido": "Sebastián",
+      "estado": "nuevo",
+      "sla_deadline": "2026-04-07T06:48:56.287379",
+      "fecha_atencion": null,
+      "comentario_cierre": null
+    }
+  ],
+  "stats": {
+    "total": 0,
+    "p1": 0,
+    "p2": 0,
+    "p3": 0,
+    "p4": 0
+  }
+}

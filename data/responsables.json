@@ -1,0 +1,38 @@
+{
+  "clientes_estrategicos": {
+    "primero": "Cami",
+    "escala": "Sebastián"
+  },
+  "bancos_financiero": {
+    "primero": "Andre",
+    "escala": "Sebastián"
+  },
+  "legal_contractual": {
+    "primero": "Andre / abogado",
+    "escala": "Sebastián"
+  },
+  "entes_reguladores": {
+    "primero": "Cami / área técnica",
+    "escala": "Sebastián"
+  },
+  "proveedores_criticos": {
+    "primero": "Nelson",
+    "escala": "Sebastián"
+  },
+  "hseq": {
+    "primero": "Área HSEQ",
+    "escala": "Sebastián"
+  },
+  "gobierno_corporativo": {
+    "primero": "Sebastián",
+    "escala": "Adolfo"
+  },
+  "siendo_consulting": {
+    "primero": "Sebastián / Lina",
+    "escala": "—"
+  },
+  "personal": {
+    "primero": "Sebastián",
+    "escala": "—"
+  }
+}
