@@ -40,8 +40,6 @@ h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;
 .link-btn{background:var(--bg3);border:1px solid var(--border);padding:8px 16px;border-radius:8px;color:var(--cyan);font-size:13px;transition:.2s}
 .link-btn:hover{border-color:var(--cyan)}
 footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);margin-top:32px}
-.filter-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;transition:.2s}
-.filter-btn:hover,.filter-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(6,182,212,.08)}
 </style>
 </head>
 <body>
@@ -51,8 +49,7 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 <button onclick="show('comite')">Comité SV</button>
 <button onclick="show('contratos')">Contratos</button>
 <button onclick="show('tareas')">Tareas Hoy</button>
-<button onclick="show('revisar')">Revisar <span id="pendientes-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
-<button onclick="show('mistareas')">Mis Tareas</button>
+<button onclick="window.open('GESTOR_TAREAS_EJECUTABLES.html','_blank')">📋 Gestor</button>
 <button onclick="show('proyectos')">Proyectos</button>
 <button onclick="show('equipo')">Equipo</button>
 <button onclick="show('briefing')">Briefing</button>
@@ -93,32 +90,6 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 <div id="clist"></div>
 </section>
 
-
-<section id="revisar">
-<h2>Revisar Tareas</h2>
-<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px">Tareas extraídas de Limitless — aceptá las reales, rechazá las que no son</p>
-<div style="display:flex;gap:8px;margin-bottom:16px;">
-  <button onclick="bulkAction('accept')" style="background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.3);padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;">Aceptar todas</button>
-  <button onclick="bulkAction('reject')" style="background:rgba(239,68,68,.1);color:var(--red);border:1px solid rgba(239,68,68,.2);padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;">Rechazar todas</button>
-</div>
-<div id="pendientes-list"><div style="text-align:center;padding:30px;color:var(--muted)">Cargando...</div></div>
-</section>
-
-<section id="mistareas">
-<h2>Mis Tareas</h2>
-<div style="display:flex;gap:8px;margin-bottom:16px;">
-  <button onclick="filterTareas('todas')" class="filter-btn active">Todas</button>
-  <button onclick="filterTareas('mias')" class="filter-btn">Mías</button>
-  <button onclick="filterTareas('equipo')" class="filter-btn">Equipo</button>
-</div>
-<h3>Abiertas <span id="abiertas-count" style="font-family:'JetBrains Mono',monospace;color:var(--cyan)"></span></h3>
-<div id="tareas-abiertas"></div>
-<h3 style="cursor:pointer" onclick="document.getElementById('tareas-cerradas').style.display=document.getElementById('tareas-cerradas').style.display==='none'?'block':'none'">
-  Cerradas <span id="cerradas-count" style="font-family:'JetBrains Mono',monospace;color:var(--muted)"></span> ▾
-</h3>
-<div id="tareas-cerradas" style="display:none"></div>
-</section>
-
 <section id="proyectos">
 <h2>Todos los Proyectos</h2>
 <p style="font-size:12px;color:var(--muted);margin:-10px 0 16px">Condugas · Siendo Consulting · SerJefe · Patrimonio · Familia</p>
@@ -153,7 +124,7 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 </main>
 <footer>SER.SIENDO · Alletagia · Aleteagogía · Jefatura, nunca liderazgo — Dashboard v2 · 26 mar 2026</footer>
 <script>
-function show(id){document.querySelectorAll('section').forEach(s=>s.classList.remove('show'));document.getElementById(id).classList.add('show');document.querySelectorAll('nav button').forEach(b=>b.classList.remove('on'));if(event&&event.target)event.target.classList.add('on')}
+function show(id){document.querySelectorAll('section').forEach(s=>s.classList.remove('show'));document.getElementById(id).classList.add('show');document.querySelectorAll('nav button:not(:last-child)').forEach(b=>b.classList.remove('on'));event.target.classList.add('on')}
 document.getElementById('fdate').textContent='Hoy: '+new Date().toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 
 // KPIs
@@ -225,143 +196,6 @@ fetch('./data/briefing.json').then(r=>r.json()).then(b=>{
   document.getElementById('bf-body').innerHTML=h;
   if(b.whoop){if(b.whoop.recovery&&b.whoop.recovery!=="Sin datos")document.getElementById("w-rec").textContent=b.whoop.recovery;if(b.whoop.sleep)document.getElementById("w-slp").textContent=b.whoop.sleep}
 }).catch(function(){document.getElementById('bf-body').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Sin briefing disponible.<br><span style=font-size:12px>El Claw lo genera cada mañana</span></div>'});
-
-
-// === TASK REVIEW & TRACKER ===
-const API='http://72.60.28.156:8099';
-
-function toast(msg, type='info') {
-  const t = document.createElement('div');
-  t.textContent = msg;
-  t.style.cssText = 'position:fixed;bottom:20px;right:20px;padding:10px 20px;border-radius:8px;font-size:13px;z-index:999;transition:opacity .3s;' +
-    (type==='ok'?'background:#065f46;color:#34d399':'background:#7f1d1d;color:#fca5a5');
-  document.body.appendChild(t);
-  setTimeout(()=>{t.style.opacity='0';setTimeout(()=>t.remove(),300)},2500);
-}
-
-async function loadPendientes() {
-  try {
-    const r = await fetch(API+'/pendientes');
-    const data = await r.json();
-    const items = data.pendientes || data || [];
-    document.getElementById('pendientes-badge').textContent = items.length || '';
-    const el = document.getElementById('pendientes-list');
-    if (!items.length) { el.innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Sin tareas pendientes de revisi\u00f3n</div>'; return; }
-
-    const byDate = {};
-    items.forEach(t => { (byDate[t.fecha] = byDate[t.fecha]||[]).push(t); });
-
-    let html = '';
-    Object.keys(byDate).sort().reverse().forEach(fecha => {
-      html += '<h3 style="margin-top:16px">' + fecha + '</h3>';
-      byDate[fecha].forEach(t => {
-        const priColor = t.prioridad==='critica'?'var(--red)':t.prioridad==='alta'?'var(--orange)':'var(--yellow)';
-        const tipoColor = t.tipo==='compromiso'?'var(--cyan)':t.tipo==='seguimiento'?'var(--purple)':'var(--muted)';
-        html += '<div id="p-'+t.id+'" class="card" style="margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;transition:opacity .3s,transform .3s">' +
-          '<div style="flex:1">' +
-            '<div style="font-size:14px;font-weight:500">' + t.tarea + '</div>' +
-            '<div style="font-size:11px;color:var(--muted);margin-top:4px">' + (t.responsable||'') +
-              ' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(6,182,212,.1);color:'+tipoColor+'">' + (t.tipo||'') + '</span>' +
-              ' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(239,68,68,.1);color:'+priColor+'">' + (t.prioridad||'') + '</span>' +
-            '</div>' +
-          '</div>' +
-          '<div style="display:flex;gap:6px;margin-left:12px">' +
-            '<button onclick="reviewTask(\''+t.id+'\',\'reject\')" style="background:rgba(239,68,68,.1);color:#f87171;border:1px solid rgba(239,68,68,.2);padding:5px 12px;border-radius:5px;font-size:11px;cursor:pointer">Reject</button>' +
-            '<button onclick="reviewTask(\''+t.id+'\',\'accept\')" style="background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.3);padding:5px 12px;border-radius:5px;font-size:11px;cursor:pointer">Accept</button>' +
-          '</div>' +
-        '</div>';
-      });
-    });
-    el.innerHTML = html;
-  } catch(e) {
-    document.getElementById('pendientes-list').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">API no disponible</div>';
-  }
-}
-
-async function reviewTask(id, action) {
-  const el = document.getElementById('p-'+id);
-  if(el) { el.style.opacity='0'; el.style.transform='translateX('+(action==='accept'?'':'\u2212')+'50px)'; }
-  try {
-    await fetch(API+'/'+action, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({id})});
-    toast(action==='accept'?'Tarea aceptada':'Tarea rechazada', 'ok');
-    setTimeout(()=>{ if(el)el.remove(); loadPendientes(); if(action==='accept')loadMisTareas(); }, 300);
-  } catch(e) { toast('Error de conexi\u00f3n','err'); if(el){el.style.opacity='1';el.style.transform='none';} }
-}
-
-async function bulkAction(action) {
-  const items = document.querySelectorAll('[id^="p-"]');
-  for(const el of items) {
-    const id = el.id.replace('p-','');
-    try { await fetch(API+'/'+action, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({id})}); } catch(e) {}
-  }
-  toast(action==='accept'?'Todas aceptadas':'Todas rechazadas', 'ok');
-  loadPendientes();
-  if(action==='accept') loadMisTareas();
-}
-
-let currentFilter = 'todas';
-async function loadMisTareas() {
-  try {
-    const r = await fetch(API+'/tareas');
-    const data = await r.json();
-    const tareas = data.tareas || [];
-
-    let abiertas = tareas.filter(t => t.estado==='abierta');
-    let cerradas = tareas.filter(t => t.estado==='cerrada');
-
-    if(currentFilter==='mias') {
-      abiertas = abiertas.filter(t => (t.responsable||'').toLowerCase().includes('sebastian'));
-      cerradas = cerradas.filter(t => (t.responsable||'').toLowerCase().includes('sebastian'));
-    } else if(currentFilter==='equipo') {
-      abiertas = abiertas.filter(t => !(t.responsable||'').toLowerCase().includes('sebastian'));
-      cerradas = cerradas.filter(t => !(t.responsable||'').toLowerCase().includes('sebastian'));
-    }
-
-    const priOrder = {critica:0, alta:1, media:2, baja:3};
-    abiertas.sort((a,b) => (priOrder[a.prioridad]||3) - (priOrder[b.prioridad]||3));
-    cerradas.sort((a,b) => (b.fecha_cierre||'').localeCompare(a.fecha_cierre||''));
-
-    document.getElementById('abiertas-count').textContent = abiertas.length;
-    document.getElementById('cerradas-count').textContent = cerradas.length;
-
-    const renderTask = (t, isCerrada) => {
-      const priColor = t.prioridad==='critica'?'var(--red)':t.prioridad==='alta'?'var(--orange)':'var(--yellow)';
-      return '<div class="card" style="margin-bottom:6px;display:flex;align-items:center;gap:12px;'+(isCerrada?'opacity:.5':'')+'">' +
-        '<input type="checkbox" '+(isCerrada?'checked':'')+' onchange="toggleTarea(\''+t.id+'\')" style="width:18px;height:18px;cursor:pointer;accent-color:var(--cyan)">' +
-        '<div style="flex:1">' +
-          '<div style="font-size:13px;'+(isCerrada?'text-decoration:line-through':'')+'">' + t.tarea + '</div>' +
-          '<div style="font-size:11px;color:var(--muted)">' + (t.responsable||'') + ' \u00b7 ' + (t.fecha_creacion||t.fecha||'') +
-            ' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(239,68,68,.1);color:'+priColor+'">' + (t.prioridad||'') + '</span>' +
-            (t.vencida?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(239,68,68,.2);color:var(--red)">vencida</span>':'') +
-          '</div>' +
-        '</div>' +
-      '</div>';
-    };
-
-    document.getElementById('tareas-abiertas').innerHTML = abiertas.length ? abiertas.map(t=>renderTask(t,false)).join('') : '<div style="text-align:center;padding:20px;color:var(--muted)">Sin tareas abiertas</div>';
-    document.getElementById('tareas-cerradas').innerHTML = cerradas.length ? cerradas.map(t=>renderTask(t,true)).join('') : '<div style="text-align:center;padding:20px;color:var(--muted)">Sin tareas cerradas</div>';
-  } catch(e) {
-    document.getElementById('tareas-abiertas').innerHTML='<div style="text-align:center;padding:20px;color:var(--muted)">API no disponible</div>';
-  }
-}
-
-async function toggleTarea(id) {
-  try {
-    await fetch(API+'/toggle', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({id})});
-    toast('Tarea actualizada', 'ok');
-    loadMisTareas();
-  } catch(e) { toast('Error de conexi\u00f3n','err'); }
-}
-
-function filterTareas(f) {
-  currentFilter = f;
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-  event.target.classList.add('active');
-  loadMisTareas();
-}
-
-loadPendientes();
-loadMisTareas();
 
 </script>
 
