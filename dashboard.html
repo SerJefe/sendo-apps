@@ -274,7 +274,7 @@ fetch('./data/briefing.json').then(r=>r.json()).then(b=>{
 
 
 // === TASK REVIEW & TRACKER ===
-const API='http://72.60.28.156:8099';
+const API='https://72.60.28.156.nip.io:8443/tasks';
 
 function toast(msg, type='info') {
   const t = document.createElement('div');
@@ -411,7 +411,7 @@ loadMisTareas();
 
 
 // === RADAR DE ALERTAS ===
-const ALERT_API='http://72.60.28.156:8098';
+const ALERT_API='https://72.60.28.156.nip.io:8443';
 let radarFilter='todas';
 let radarCatFilter=null;
 let allAlertas=[];
