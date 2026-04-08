@@ -14,7 +14,7 @@
         },
         {
           "id": "automatizacion_odoo",
-          "nombre": "Automatización Odoo", 
+          "nombre": "Automatización Odoo",
           "estado": "desarrollo",
           "responsable": "Ema",
           "proxima_accion": "Info contractual pendiente"
@@ -22,7 +22,7 @@
         {
           "id": "boyaca",
           "nombre": "Boyacá",
-          "estado": "operativo", 
+          "estado": "operativo",
           "responsable": "Cami, Andre",
           "proxima_accion": "Monitoreo P&G mensual"
         },
@@ -30,7 +30,7 @@
           "id": "bucaramanga",
           "nombre": "Bucaramanga",
           "estado": "operativo",
-          "responsable": "Andre", 
+          "responsable": "Andre",
           "proxima_accion": "Análisis comparativo vs OYMA"
         },
         {
@@ -45,10 +45,11 @@
           "nombre": "Jericó (Contrato)",
           "estado": "operativo",
           "responsable": null,
-          "proxima_accion": "Operación estable"
+          "proxima_accion": "Operación estable",
+          "estado_fecha": "2026-04-08"
         },
         {
-          "id": "om_z2", 
+          "id": "om_z2",
           "nombre": "O&M Z2",
           "estado": "monitoreo",
           "responsable": null,
@@ -56,7 +57,7 @@
         },
         {
           "id": "valle",
-          "nombre": "Valle", 
+          "nombre": "Valle",
           "estado": "operativo",
           "responsable": null,
           "proxima_accion": "Operación estable"
@@ -98,7 +99,7 @@
         {
           "id": "caso_andrea",
           "nombre": "Caso Andrea (Responsabilidad)",
-          "estado": "seguimiento", 
+          "estado": "seguimiento",
           "responsable": "Sebastián",
           "proxima_accion": "Tracking evolución vs Lina"
         },
@@ -126,7 +127,7 @@
       ]
     },
     "patrimonio": {
-      "nombre": "PATRIMONIO", 
+      "nombre": "PATRIMONIO",
       "total_proyectos": 3,
       "proyectos": [
         {
@@ -138,7 +139,7 @@
         },
         {
           "id": "montesereno",
-          "nombre": "Viabilidad Lote Montesereno", 
+          "nombre": "Viabilidad Lote Montesereno",
           "estado": "evaluacion",
           "responsable": "Sebastián",
           "proxima_accion": "Análisis viabilidad financiera"
@@ -147,7 +148,7 @@
           "id": "jerico_personal",
           "nombre": "Jericó Personal",
           "estado": "crisis",
-          "responsable": "Sebastián", 
+          "responsable": "Sebastián",
           "proxima_accion": "Clarificar alcance proyecto"
         }
       ]
@@ -167,7 +168,7 @@
     },
     "serjefe": {
       "nombre": "SERJEFE/ALLETAGIA",
-      "total_proyectos": 1, 
+      "total_proyectos": 1,
       "proyectos": [
         {
           "id": "producto_serjefe",
