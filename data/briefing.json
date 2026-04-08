@@ -2,56 +2,65 @@
   "fecha": "2026-04-08",
   "tareas_candidatas": [
     {
-      "tarea": "Obtener informe diario, acta de obra o correo desde febrero a abril que mencione lluvias, paradas o bajo rendimiento del proyecto",
-      "responsable": "Equipo de proyecto",
-      "prioridad": "alta"
+      "tarea": "Enviar archivo KMZ a Luis Guillermo con documentación completa del proyecto",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica"
     },
     {
-      "tarea": "Enviar documento a través de Diana Giraldo directamente a US",
-      "responsable": "Diana Giraldo",
-      "prioridad": "media"
+      "tarea": "Analizar detalle del borrador de estrategia legal contra multas retroactivas de Cataluña",
+      "responsable": "Camila (abogada)",
+      "prioridad": "critica"
     },
     {
-      "tarea": "Obtener nombre del contrato y número del contrato de Ayura",
-      "responsable": "Equipo administrativo",
-      "prioridad": "media"
+      "tarea": "Preparar documentación para abogados con Mario y Alex",
+      "responsable": "Equipo legal",
+      "prioridad": "critica"
     },
     {
-      "tarea": "Revisar situación de contratos compartidos que se ve comprometida",
+      "tarea": "Preparar reunión con socios para el jueves",
       "responsable": "Sebastian Sanchez",
       "prioridad": "alta"
     },
     {
-      "tarea": "Llamar a Juan Pablo para consultar sobre lanzamientos",
+      "tarea": "Contactar para asesoría sobre diseños estructurales del proyecto cabaña",
+      "responsable": "Andrés",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Revisar proyectos Montesereno y Punto Sánchez",
       "responsable": "Sebastian Sanchez",
       "prioridad": "media"
     },
     {
-      "tarea": "Reunión con Mario a las 5 de la tarde",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Pulir y finalizar organigrama de la empresa",
+      "responsable": "Juan/equipo administrativo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Solicitar revisión legal de contrato antes de exponerse a riesgos",
-      "responsable": "Abogados",
-      "prioridad": "crítica"
+      "tarea": "Centralizar y revisar todas las compras y contratos",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
     }
   ],
   "decisiones": [
-    "Se decidió que Diana Giraldo enviará el documento directamente a US",
-    "Se determinó que los contratos compartidos requieren atención inmediata por bajo rendimiento",
-    "Se confirmó no juntar esfuerzos con Inmel para mantener desarrollo independiente de Condugas"
+    "Se decidió automatizar proyectos con seguimiento claro para evitar intervenciones sin visibilidad de progreso",
+    "Se aprobó implementar herramienta de gestión digital para gerentes con vista consolidada de proyectos y métricas",
+    "Se definió que todas las compras y contratos deben ser centralizados para mayor control",
+    "Se determinó hacer un piloto antes de escalar otros contratos",
+    "Se decidió revisar y pulir el organigrama con énfasis en liderazgo transversal y ejecución correcta"
   ],
   "ideas_capturadas": [
-    "Automatizar recepción y digitalización de actas de obra con IA para mejorar trazabilidad de proyectos",
-    "Crear agentes virtuales especializados para roles de ingeniería que analicen datos sin necesidad de reuniones presenciales",
-    "Implementar sistema de cotización estandarizado para servicios nuevos como auditorías de calidad y planes de riesgo (referencia: propuesta de 25-30 millones)"
+    "Construir plataforma digital personalizada que permita a gerentes visualizar proyectos Condugas en tiempo real sin acceso manual a múltiples sistemas",
+    "Implementar seguimiento automático de proyectos para identificar desviaciones tempranas sin necesidad de intervención constante",
+    "Digitalizar y automatizar recepción de actas de obra con capacidad de análisis y generación de reportes",
+    "Crear sistema de inventario centralizado con visibilidad de información para evitar redundancia y sobrecarga de datos",
+    "Desarrollar mapeo digital integrado de propiedades con histórico en Google Earth para seguimiento topográfico y cambios de uso"
   ],
   "frases_poderosas": [
-    "Es que el problema no es que no sepamos, es que no decidimos a tiempo (reflexión sobre gestión de crisis en contratos)",
-    "El proceso de convertirse en esa mujer es lo que cuesta, no el haberlo resuelto (hablando del valor real de desarrollar capacidades operacionales nuevas)",
-    "Lo que hubiera valido en el contrato, por ejemplo, cuando todo está hecho es muy fácil negociar, pero cuando hay que montarlo desde cero es donde realmente cuesta (sobre valoración de servicios profesionales)"
+    "El problema no es que no sepamos, es que no decidimos a tiempo (refiriéndose a gestión de crisis y conflictos contractuales)",
+    "Uno de los riesgos más altos que estoy viendo en la empresa es que la gente no está haciendo las cosas como deben ser, sino como creen que está bien para ellos (criticando falta de ejecución correcta)",
+    "Me asusta el manejo de la información porque eso no da plazo, en ocho días hay que haber hecho cosas (expresando urgencia y presión en toma de decisiones)"
   ],
-  "total_lifelogs": 41,
+  "total_lifelogs": 37,
   "procesado_con": "haiku_compacto"
 }

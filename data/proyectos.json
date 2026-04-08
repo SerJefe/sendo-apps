@@ -10,7 +10,8 @@
           "nombre": "OYMA R1",
           "estado": "crisis",
           "responsable": "Cami, Juan",
-          "proxima_accion": "Datos febrero + respuesta EPM"
+          "proxima_accion": "Datos febrero + respuesta EPM",
+          "estado_fecha": "2026-04-08"
         },
         {
           "id": "automatizacion_odoo",
@@ -147,9 +148,10 @@
         {
           "id": "jerico_personal",
           "nombre": "Jericó Personal",
-          "estado": "crisis",
+          "estado": "desarrollo",
           "responsable": "Sebastián",
-          "proxima_accion": "Clarificar alcance proyecto"
+          "proxima_accion": "Clarificar alcance proyecto",
+          "estado_fecha": "2026-04-08"
         }
       ]
     },
