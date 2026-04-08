@@ -119,7 +119,77 @@
       "tipo": "pendiente",
       "estado": "pendiente",
       "fecha": "2026-04-07"
+    },
+    {
+      "id": "2026-04-08-001",
+      "tarea": "Compartir informes diarios, actas de obra o correos desde febrero-abril que mencionen lluvias, paradas o bajo rendimiento",
+      "responsable": "Unknown",
+      "prioridad": "alta",
+      "contexto": "Documentación de proyecto para anclar estadística de realidad del proyecto",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-08"
+    },
+    {
+      "id": "2026-04-08-002",
+      "tarea": "Enviar documento a través de Diana Giraldo directamente a Us",
+      "responsable": "Diana Giraldo",
+      "prioridad": "alta",
+      "contexto": "Documento conversado con Humberto Iglesias",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-08"
+    },
+    {
+      "id": "2026-04-08-003",
+      "tarea": "Llamar a Juan Pablo para consultar sobre lanzamientos",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "Próximos pasos y lanzamientos",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-08"
+    },
+    {
+      "id": "2026-04-08-004",
+      "tarea": "Enviar datos de ubicación por WhatsApp para reunión con Mario",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta",
+      "contexto": "Reunión a las 5 de la tarde con Mario - coordinar horario y lugar",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-08"
+    },
+    {
+      "id": "2026-04-08-005",
+      "tarea": "Pasar datos a Juanpa para análisis de consumo y contrato",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "Datos para revisión de facturación y cierre de contrato",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-08"
+    },
+    {
+      "id": "2026-04-08-006",
+      "tarea": "Hacer revisar contrato por abogados antes de proceder",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "crítica",
+      "contexto": "Contrato sin revisión legal que requiere aprobación antes de ejecutar",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-08"
+    },
+    {
+      "id": "2026-04-08-007",
+      "tarea": "Enviar muestras de Excel faltantes al cliente",
+      "responsable": "Unknown",
+      "prioridad": "alta",
+      "contexto": "Cliente requiere muestras en Excel que no fueron enviadas inicialmente",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-08"
     }
   ],
-  "ultima_actualizacion": "2026-04-07T12:00:04.719828"
+  "ultima_actualizacion": "2026-04-08T00:59:10.200621"
 }
