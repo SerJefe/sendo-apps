@@ -1,195 +1,95 @@
 {
   "candidatas": [
     {
-      "id": "2026-04-07-001",
-      "tarea": "Hacer acuerdo de pago por 2000 millones de pesos con PM o solicitar que firmen pagarés",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "critica",
-      "contexto": "Deuda pendiente con PM",
-      "tipo": "compromiso",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-002",
-      "tarea": "Reunirse el 9 de abril",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Reunión programada",
-      "tipo": "compromiso",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-003",
-      "tarea": "Revisar qué cuenta municipal fue utilizada, cómo se sacó el efectivo y a quién se le entregó",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Auditoría de pagos y manejo de efectivo municipal",
-      "tipo": "seguimiento",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-004",
-      "tarea": "Recopilar toda la información faltante sobre procesos y articular situaciones",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Levantamiento de información de procesos",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-005",
-      "tarea": "Crear nuevo proyecto de automatización: análisis, programación, recepción y digitalización",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Gestión de proyectos y automatización",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-006",
-      "tarea": "Evaluar matriz de scoring de procesos del centro de operaciones",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Evaluación y optimización de procesos",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-007",
-      "tarea": "Entregar cuestionario de conocimiento del proyecto de unificación del centro de operaciones día a día hasta cubrir todos los procesos",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "critica",
-      "contexto": "Proyecto de unificación del centro de operaciones",
-      "tipo": "compromiso",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-008",
-      "tarea": "Seguimiento de trazabilidad con William",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Trazabilidad de procesos",
-      "tipo": "seguimiento",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-009",
-      "tarea": "Comprar cinco computadores adicionales para enviar a Valle",
-      "responsable": "Andrea",
-      "prioridad": "media",
-      "contexto": "Adquisición de equipos informáticos",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-010",
-      "tarea": "Instalar y configurar servidor remoto/cloud para el proyecto",
-      "responsable": "Equipo técnico",
-      "prioridad": "alta",
-      "contexto": "Infraestructura de servidor y despliegue en la nube",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-011",
-      "tarea": "Organizar archivos de nómina y funciones según estructura 1.1, 1.2, 2.1 en carpeta correspondiente",
-      "responsable": "Equipo administrativo",
-      "prioridad": "media",
-      "contexto": "Organización de datos y auditoría de nómina",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
-      "id": "2026-04-07-012",
-      "tarea": "Instalar PostgreSQL con configuración por defecto",
-      "responsable": "Equipo técnico",
-      "prioridad": "media",
-      "contexto": "Configuración de base de datos",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-07"
-    },
-    {
       "id": "2026-04-08-001",
-      "tarea": "Compartir informes diarios, actas de obra o correos desde febrero-abril que mencionen lluvias, paradas o bajo rendimiento",
-      "responsable": "Unknown",
+      "tarea": "Compartir informes diarios, actas de obra o correos de febrero a abril que mencionen lluvias, paradas o bajo rendimiento del proyecto",
+      "responsable": "Sebastian",
       "prioridad": "alta",
-      "contexto": "Documentación de proyecto para anclar estadística de realidad del proyecto",
+      "contexto": "Fases PH - estadística de realidad del proyecto",
       "tipo": "pendiente",
       "estado": "pendiente",
       "fecha": "2026-04-08"
     },
     {
       "id": "2026-04-08-002",
-      "tarea": "Enviar documento a través de Diana Giraldo directamente a Us",
-      "responsable": "Diana Giraldo",
-      "prioridad": "alta",
-      "contexto": "Documento conversado con Humberto Iglesias",
-      "tipo": "pendiente",
+      "tarea": "Llamar a Juan Pablo para confirmar próximos lanzamientos",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Lanzamientos y próximas acciones",
+      "tipo": "compromiso",
       "estado": "pendiente",
       "fecha": "2026-04-08"
     },
     {
       "id": "2026-04-08-003",
-      "tarea": "Llamar a Juan Pablo para consultar sobre lanzamientos",
-      "responsable": "Unknown",
+      "tarea": "Obtener nombre del contrato de Ayura y su número",
+      "responsable": "Sebastian",
       "prioridad": "media",
-      "contexto": "Próximos pasos y lanzamientos",
-      "tipo": "seguimiento",
+      "contexto": "Documentación de contratos",
+      "tipo": "pendiente",
       "estado": "pendiente",
       "fecha": "2026-04-08"
     },
     {
       "id": "2026-04-08-004",
-      "tarea": "Enviar datos de ubicación por WhatsApp para reunión con Mario",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Enviar documento a través de Diana Giraldo para que lo remita a US",
+      "responsable": "Sebastian",
       "prioridad": "alta",
-      "contexto": "Reunión a las 5 de la tarde con Mario - coordinar horario y lugar",
+      "contexto": "Proceso de envío de documentos - conversación con Humberto Iglesias",
       "tipo": "pendiente",
       "estado": "pendiente",
       "fecha": "2026-04-08"
     },
     {
       "id": "2026-04-08-005",
-      "tarea": "Pasar datos a Juanpa para análisis de consumo y contrato",
-      "responsable": "Unknown",
-      "prioridad": "media",
-      "contexto": "Datos para revisión de facturación y cierre de contrato",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-08"
-    },
-    {
-      "id": "2026-04-08-006",
-      "tarea": "Hacer revisar contrato por abogados antes de proceder",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "crítica",
-      "contexto": "Contrato sin revisión legal que requiere aprobación antes de ejecutar",
+      "tarea": "Revisar rendimiento de contratos compartidos que se ven críticos",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Evaluación de desempeño de contratos",
       "tipo": "seguimiento",
       "estado": "pendiente",
       "fecha": "2026-04-08"
     },
     {
-      "id": "2026-04-08-007",
-      "tarea": "Enviar muestras de Excel faltantes al cliente",
-      "responsable": "Unknown",
+      "id": "2026-04-08-006",
+      "tarea": "Definir horario fijo de reunión con Mario y enviar datos de ubicación por WhatsApp",
+      "responsable": "Sebastian",
       "prioridad": "alta",
-      "contexto": "Cliente requiere muestras en Excel que no fueron enviadas inicialmente",
+      "contexto": "Reunión presencial con Mario",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-08"
+    },
+    {
+      "id": "2026-04-08-007",
+      "tarea": "Solicitar revisión legal del contrato a los abogados antes de proceder",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "contexto": "Revisión legal de contrato pendiente",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-08"
+    },
+    {
+      "id": "2026-04-08-008",
+      "tarea": "Cotizar costo de auditoría de procesos de calidad y propuesta de riesgos con Billy",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Procesos de calidad y auditoría",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-08"
+    },
+    {
+      "id": "2026-04-08-009",
+      "tarea": "Solicitar datos de consumo y cierre de contrato a Juanpa",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Datos para análisis de facturación",
       "tipo": "pendiente",
       "estado": "pendiente",
       "fecha": "2026-04-08"
     }
   ],
-  "ultima_actualizacion": "2026-04-08T00:59:10.200621"
+  "ultima_actualizacion": "2026-04-08T01:45:05.048326"
 }

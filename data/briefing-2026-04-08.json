@@ -2,39 +2,49 @@
   "fecha": "2026-04-08",
   "tareas_candidatas": [
     {
-      "tarea": "Compartir informes diarios, actas de obra o correos desde febrero-abril que mencionen lluvias, paradas o bajo rendimiento",
-      "responsable": "Unknown",
+      "tarea": "Compartir informes diarios, actas de obra o correos de febrero a abril que mencionen lluvias, paradas o bajo rendimiento del proyecto",
+      "responsable": "Sebastian",
       "prioridad": "alta"
     },
     {
-      "tarea": "Enviar documento a través de Diana Giraldo directamente a Us",
-      "responsable": "Diana Giraldo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Llamar a Juan Pablo para consultar sobre lanzamientos",
-      "responsable": "Unknown",
+      "tarea": "Llamar a Juan Pablo para confirmar próximos lanzamientos",
+      "responsable": "Sebastian",
       "prioridad": "media"
     },
     {
-      "tarea": "Enviar datos de ubicación por WhatsApp para reunión con Mario",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Pasar datos a Juanpa para análisis de consumo y contrato",
-      "responsable": "Unknown",
+      "tarea": "Obtener nombre del contrato de Ayura y su número",
+      "responsable": "Sebastian",
       "prioridad": "media"
     },
     {
-      "tarea": "Hacer revisar contrato por abogados antes de proceder",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "crítica"
+      "tarea": "Enviar documento a través de Diana Giraldo para que lo remita a US",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
     },
     {
-      "tarea": "Enviar muestras de Excel faltantes al cliente",
-      "responsable": "Unknown",
+      "tarea": "Revisar rendimiento de contratos compartidos que se ven críticos",
+      "responsable": "Sebastian",
       "prioridad": "alta"
+    },
+    {
+      "tarea": "Definir horario fijo de reunión con Mario y enviar datos de ubicación por WhatsApp",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Solicitar revisión legal del contrato a los abogados antes de proceder",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Cotizar costo de auditoría de procesos de calidad y propuesta de riesgos con Billy",
+      "responsable": "Sebastian",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Solicitar datos de consumo y cierre de contrato a Juanpa",
+      "responsable": "Sebastian",
+      "prioridad": "media"
     }
   ],
   "ideas_capturadas": [
