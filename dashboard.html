@@ -275,6 +275,7 @@ fetch('./data/briefing.json').then(r=>r.json()).then(b=>{
 
 // === TASK REVIEW & TRACKER ===
 const API='https://72.60.28.156.nip.io:8443/tasks';
+const DATA_BASE='https://serjefe.github.io/siendo-apps/data';
 
 function toast(msg, type='info') {
   const t = document.createElement('div');
@@ -287,9 +288,18 @@ function toast(msg, type='info') {
 
 async function loadPendientes() {
   try {
-    const r = await fetch(API+'/pendientes');
-    const data = await r.json();
-    const items = data.pendientes || data || [];
+    let items = [];
+    try {
+      const r = await fetch(API+'/pendientes');
+      items = await r.json();
+      if(items.pendientes) items = items.pendientes;
+      if(!Array.isArray(items)) items = [];
+    } catch(e1) {
+      // Fallback: read static JSON from GitHub Pages
+      const r2 = await fetch(DATA_BASE+'/tareas-pendientes.json?t='+Date.now());
+      const d2 = await r2.json();
+      items = (d2.candidatas||[]).filter(function(t){return t.estado==='pendiente'});
+    }
     document.getElementById('pendientes-badge').textContent = items.length || '';
     const el = document.getElementById('pendientes-list');
     if (!items.length) { el.innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Sin tareas pendientes de revisi\u00f3n</div>'; return; }
@@ -348,9 +358,19 @@ async function bulkAction(action) {
 let currentFilter = 'todas';
 async function loadMisTareas() {
   try {
-    const r = await fetch(API+'/tareas');
-    const data = await r.json();
-    const tareas = data.tareas || [];
+    let tareas = [];
+    try {
+      const r = await fetch(API+'/tareas');
+      const data = await r.json();
+      tareas = data.tareas || data || [];
+      if(!Array.isArray(tareas)) tareas = [];
+    } catch(e1) {
+      try {
+        const r2 = await fetch(DATA_BASE+'/tareas-tracker.json?t='+Date.now());
+        const d2 = await r2.json();
+        tareas = d2.tareas || [];
+      } catch(e2) { tareas = []; }
+    }
 
     let abiertas = tareas.filter(t => t.estado==='abierta');
     let cerradas = tareas.filter(t => t.estado==='cerrada');
@@ -422,8 +442,27 @@ const NIV_COLORS={P1:'var(--red)',P2:'var(--orange)',P3:'var(--yellow)',P4:'var(
 
 async function loadRadar() {
   try {
-    const r = await fetch(ALERT_API+'/alertas/activas');
-    const data = await r.json();
+    let data;
+    try {
+      const r = await fetch(ALERT_API+'/alertas/activas');
+      data = await r.json();
+    } catch(e1) {
+      // Fallback: read static JSON
+      const r2 = await fetch(DATA_BASE+'/alertas.json?t='+Date.now());
+      const d2 = await r2.json();
+      const activas = (d2.alertas||[]).filter(function(a){return ['nuevo','visto','asignado'].indexOf(a.estado)>=0});
+      data = {
+        alertas: activas,
+        stats: {
+          total: activas.length,
+          p1: activas.filter(function(a){return a.nivel==='P1'}).length,
+          p2: activas.filter(function(a){return a.nivel==='P2'}).length,
+          p3: activas.filter(function(a){return a.nivel==='P3'}).length,
+          p4: activas.filter(function(a){return a.nivel==='P4'}).length,
+          sla_vencido: activas.filter(function(a){return a.sla_deadline && a.sla_deadline < new Date().toISOString()}).length
+        }
+      };
+    }
     allAlertas = data.alertas || [];
     const s = data.stats || {};
 
@@ -435,13 +474,19 @@ async function loadRadar() {
 
     renderRadarList();
   } catch(e) {
-    document.getElementById('radar-list').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">API no disponible — asegurar que el servicio alertas-api corre en el VPS</div>';
+    document.getElementById('radar-list').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Error cargando alertas</div>';
   }
 
   // Also load resolved
   try {
-    const r2 = await fetch(ALERT_API+'/alertas');
-    const d2 = await r2.json();
+    let d2;
+    try {
+      const r2 = await fetch(ALERT_API+'/alertas');
+      d2 = await r2.json();
+    } catch(e1) {
+      const r3 = await fetch(DATA_BASE+'/alertas.json?t='+Date.now());
+      d2 = await r3.json();
+    }
     const resueltas = (d2.alertas||[]).filter(a=>a.estado==='resuelto');
     document.getElementById('radar-resueltas-count').textContent = resueltas.length;
     if(resueltas.length) {
