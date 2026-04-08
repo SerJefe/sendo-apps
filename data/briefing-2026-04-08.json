@@ -2,86 +2,55 @@
   "fecha": "2026-04-08",
   "tareas_candidatas": [
     {
-      "tarea": "Compartir informes diarios, actas de obra o correos de febrero a abril que mencionen lluvias, paradas o bajo rendimiento del proyecto",
-      "responsable": "Sebastian",
+      "tarea": "Obtener informe diario, acta de obra o correo desde febrero a abril que mencione lluvias, paradas o bajo rendimiento del proyecto",
+      "responsable": "Equipo de proyecto",
       "prioridad": "alta"
     },
     {
-      "tarea": "Llamar a Juan Pablo para confirmar próximos lanzamientos",
-      "responsable": "Sebastian",
+      "tarea": "Enviar documento a través de Diana Giraldo directamente a US",
+      "responsable": "Diana Giraldo",
       "prioridad": "media"
     },
     {
-      "tarea": "Obtener nombre del contrato de Ayura y su número",
-      "responsable": "Sebastian",
+      "tarea": "Obtener nombre del contrato y número del contrato de Ayura",
+      "responsable": "Equipo administrativo",
       "prioridad": "media"
     },
     {
-      "tarea": "Enviar documento a través de Diana Giraldo para que lo remita a US",
-      "responsable": "Sebastian",
+      "tarea": "Revisar situación de contratos compartidos que se ve comprometida",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "alta"
     },
     {
-      "tarea": "Revisar rendimiento de contratos compartidos que se ven críticos",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Definir horario fijo de reunión con Mario y enviar datos de ubicación por WhatsApp",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Solicitar revisión legal del contrato a los abogados antes de proceder",
-      "responsable": "Sebastian",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Cotizar costo de auditoría de procesos de calidad y propuesta de riesgos con Billy",
-      "responsable": "Sebastian",
+      "tarea": "Llamar a Juan Pablo para consultar sobre lanzamientos",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "media"
     },
     {
-      "tarea": "Solicitar datos de consumo y cierre de contrato a Juanpa",
-      "responsable": "Sebastian",
-      "prioridad": "media"
+      "tarea": "Reunión con Mario a las 5 de la tarde",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Solicitar revisión legal de contrato antes de exponerse a riesgos",
+      "responsable": "Abogados",
+      "prioridad": "crítica"
     }
   ],
+  "decisiones": [
+    "Se decidió que Diana Giraldo enviará el documento directamente a US",
+    "Se determinó que los contratos compartidos requieren atención inmediata por bajo rendimiento",
+    "Se confirmó no juntar esfuerzos con Inmel para mantener desarrollo independiente de Condugas"
+  ],
   "ideas_capturadas": [
-    "Reflexiones sobre situaciones y experiencias",
-    "Comentarios sobre una moto y planes futuros",
-    "Planes y comentarios finales",
-    "Planes inmediatos y logística personal",
-    "Gestión de un ítem ambiental pendiente de pago",
-    "Preparativos para una visita a un asesor de junta",
-    "Análisis de datos de precipitación y fases del proyecto",
-    "Propuesta innovadora para la automatización de roles de ingeniería",
-    "Solicitud de documentación y detalles sobre decisiones críticas del proyecto",
-    "Comentario informal sobre hábitos personales",
-    "Evaluación del rendimiento de contratos compartidos y estrategia legal",
-    "Reacciones a la información del proyecto y experiencias pasadas con EPM",
-    "Proceso de envío de documentos y sus implicaciones",
-    "Observación final y transición",
-    "Discusión sobre la película \"Una casa de dinamita\" y la toma de decisiones"
+    "Automatizar recepción y digitalización de actas de obra con IA para mejorar trazabilidad de proyectos",
+    "Crear agentes virtuales especializados para roles de ingeniería que analicen datos sin necesidad de reuniones presenciales",
+    "Implementar sistema de cotización estandarizado para servicios nuevos como auditorías de calidad y planes de riesgo (referencia: propuesta de 25-30 millones)"
   ],
   "frases_poderosas": [
-    "- You (4/6/26 11:47 PM): Camilo, ve, ella nunca pagó ningún ítem ambiental, es decir, ella desde octubre empezó a.",
-    "- You (4/6/26 11:52 PM): O sea, pueden decir, no, eso siempre, pero a mí me da susto, pero pero, marica, está muy bien.",
-    "- You (4/6/26 11:08 PM): Allá en dólares, no puedes decir nunca que en pesos, que me",
-    "- You (4/6/26 10:47 PM): Por eso, es que ahí es donde yo te digo, eso es lo que vos decís como y yo estoy de acuerdo, porque es una foto de hoy, nos j",
-    "- You (4/6/26 10:47 PM): Para qué putas el contrato de Valle, ah, pero sí se beneficiaron cuando nosotros nos lo cogimos y le cobramos la administraci"
-  ],
-  "decisiones": [
-    "- You (4/6/26 8:15 PM): Listo, Juan, para acá, hagamos entonces acá.",
-    "- You (4/6/26 9:00 PM): Pero de ese tenemos que pegarlo de donde estás viendo vos, que son horas extras y recargos y es cómo se demuestra que nosotros",
-    "- You (4/6/26 9:02 PM): listo, eso empezó a pasar, pero que pase tiene que ir primero un lugar que es decidido",
-    "- You (4/6/26 9:02 PM): Eso entonces lo que te decir es que aquí abajo la justificación más grande de este sobrecosto",
-    "- You (4/6/26 9:30 PM): No, el de las horas extras dijimos que lo separábamos. Uno, en cantidad de personal requerido, que pasamos de 8 a 24, eso trip",
-    "- You (4/6/26 9:32 PM): Por ejemplo, ellos nos decidieron en Tibado.",
-    "- You (4/6/26 6:40 PM): Entonces vos ahí no solamente no te resististe, sino que buscaste ese cambio. A con dolor, con maloquera, con incomodidad, sí,",
-    "- You (4/6/26 6:41 PM): Entonces en ese proceso está decidiendo con ganas y esas ganas cuando aparecen, te ponen cosas que para vos son relevantes, qu",
-    "- You (4/6/26 6:52 PM): Entonces ahí lo reconozco y lo suelto, o decido buscar ese punto de atención, que es que, por eso digo que es que marica, la g",
-    "- You (4/6/26 6:52 PM): Y ahí decidís, si te suelto un montón."
+    "Es que el problema no es que no sepamos, es que no decidimos a tiempo (reflexión sobre gestión de crisis en contratos)",
+    "El proceso de convertirse en esa mujer es lo que cuesta, no el haberlo resuelto (hablando del valor real de desarrollar capacidades operacionales nuevas)",
+    "Lo que hubiera valido en el contrato, por ejemplo, cuando todo está hecho es muy fácil negociar, pero cuando hay que montarlo desde cero es donde realmente cuesta (sobre valoración de servicios profesionales)"
   ],
   "total_lifelogs": 41,
   "procesado_con": "haiku_compacto"
