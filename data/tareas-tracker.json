@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-08T02:11:09",
+  "ultima_actualizacion": "2026-04-08T02:18:39",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -59,19 +59,6 @@
       "estado": "abierta",
       "origen": "limitless",
       "contexto": "tarea urgente del briefing",
-      "vencida": false
-    },
-    {
-      "id": "2026-04-08-001",
-      "tarea": "Compartir informes diarios, actas de obra o correos de febrero a abril que mencionen lluvias, paradas o bajo rendimiento del proyecto",
-      "responsable": "Sebastian",
-      "prioridad": "alta",
-      "fecha_creacion": "2026-04-08",
-      "fecha_cierre": null,
-      "estado": "abierta",
-      "origen": "limitless",
-      "contexto": "Fases PH - estadística de realidad del proyecto",
-      "tipo": "pendiente",
       "vencida": false
     },
     {
