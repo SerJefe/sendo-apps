@@ -166,8 +166,23 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 </section>
 
 <section id="proyectos">
-<h2>Todos los Proyectos</h2>
-<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px">Condugas · Siendo Consulting · SerJefe · Patrimonio · Familia</p>
+<h2>Centro de Operaciones</h2>
+<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px">Vista gerencial &mdash; click en "Estado" para cambiar</p>
+<div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+  <button onclick="filterProj('todos')" class="filter-btn active" data-pf="todos">Todos</button>
+  <button onclick="filterProj('crisis')" class="filter-btn" data-pf="crisis" style="color:var(--red)">Crisis</button>
+  <button onclick="filterProj('activo')" class="filter-btn" data-pf="activo">Activos</button>
+  <button onclick="filterProj('desarrollo')" class="filter-btn" data-pf="desarrollo">Desarrollo</button>
+  <button onclick="filterProj('suspendido')" class="filter-btn" data-pf="suspendido">Suspendidos</button>
+  <button onclick="filterProj('terminado')" class="filter-btn" data-pf="terminado">Terminados</button>
+  <button onclick="filterProj('cancelado')" class="filter-btn" data-pf="cancelado">Cancelados</button>
+</div>
+<div class="grid g4" id="proj-stats">
+  <div class="card crisis"><div class="radar-stat"><div class="num" id="ps-crisis" style="color:var(--red)">-</div><div class="lbl">Crisis</div></div></div>
+  <div class="card"><div class="radar-stat"><div class="num" id="ps-activo" style="color:var(--green)">-</div><div class="lbl">Activos</div></div></div>
+  <div class="card"><div class="radar-stat"><div class="num" id="ps-desarrollo" style="color:var(--cyan)">-</div><div class="lbl">Desarrollo</div></div></div>
+  <div class="card"><div class="radar-stat"><div class="num" id="ps-total" style="color:var(--text)">-</div><div class="lbl">Total</div></div></div>
+</div>
 <div id="plist"></div>
 </section>
 
@@ -203,7 +218,7 @@ function show(id){document.querySelectorAll('section').forEach(s=>s.classList.re
 document.getElementById('fdate').textContent='Hoy: '+new Date().toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 
 // KPIs
-fetch('./data/kpis.json').then(r=>r.json()).then(d=>{
+fetch('/data/kpis.json').then(r=>r.json()).then(d=>{
 if(d.caja_dias)document.getElementById('k-caja').textContent=d.caja_dias+' días';
 if(d.facturacion_pct)document.getElementById('k-fact').textContent=d.facturacion_pct+'%';
 if(d.ebitda)document.getElementById('k-ebitda').textContent='$'+d.ebitda+'M';
@@ -225,7 +240,7 @@ const contracts=[
 {n:'OYMA R1',c:'EPM · SILAR',m:-22,crisis:true},{n:'Normalización (Pérdidas)',c:'EPM',m:-15,crisis:true},{n:'Ayura',c:'EPM · SILAR',m:null,crisis:true},
 {n:'Valle',c:'GdO',m:7},{n:'Boyacá',c:'Vantí',m:8},{n:'Bucaramanga',c:'Vantí · SILAR',m:5},{n:'Floridablanca',c:'Metrogas',m:4},{n:'Jericó',c:'EPM',m:6}
 ];
-fetch('./data/contratos.json').then(r=>r.json()).then(d=>{renderC(d.contratos||d)}).catch(()=>{renderC(contracts)});
+fetch('/data/contratos.json').then(r=>r.json()).then(d=>{renderC(d.contratos||d)}).catch(()=>{renderC(contracts)});
 function renderC(arr){const l=document.getElementById('clist');l.innerHTML='';arr.forEach(c=>{const m=c.margen!==undefined?c.margen:c.m;const cr=c.crisis||c.status==='crisis';const col=m===null?'var(--muted)':m<0?'var(--red)':m<5?'var(--yellow)':'var(--green)';l.innerHTML+=`<div class="contrato${cr?' crisis':''}"><div><div class="cname">${c.nombre||c.n}</div><div class="cclient">${c.cliente||c.c||''}</div></div><div class="cmargen" style="color:${col}">${m!==null&&m!==undefined?m+'%':'Cierre'}</div></div>`})}
 
 // Proyectos
@@ -254,24 +269,92 @@ const P=[
 {nombre:'Viaje Mundial',linea:'familia',estado:'Planificación',responsable:'Amor',accion:'Boletas Col/Bra/Arg',desc:'Miami + NYC época mundial.'},
 {nombre:'Rutinas Familia',linea:'familia',estado:'Activo',responsable:'Amor',accion:'WHOOP integración',desc:'Keto, pádel, fisio Paulina, BLW Gordo.'},
 ];
-fetch('./data/proyectos.json').then(r=>r.json()).then(d=>{renderP(d.proyectos||d)}).catch(()=>{renderP(P)});
-function renderP(arr){const l=document.getElementById('plist');l.innerHTML='';arr.forEach(p=>{l.innerHTML+=`<div class="proj"><div><span class="pname">${p.nombre}</span><span class="pline line-${p.linea}">${p.linea}</span></div><div class="pdesc">${p.desc||''}</div><div class="ppeople">${p.responsable||'—'} · ${p.estado||''}</div><div class="paction">→ ${p.accion||''}</div></div>`})}
+// === PROYECTOS INTERACTIVOS ===
+var allProjects=[];var projFilter='todos';
+var EC={crisis:'var(--red)',operativo:'var(--green)',desarrollo:'var(--cyan)',seguimiento:'var(--purple)',evaluacion:'var(--yellow)',monitoreo:'var(--orange)',planificacion:'var(--cyan)',suspendido:'var(--muted)',terminado:'#334155',cancelado:'#1e293b'};
+var EL={crisis:'CRISIS',operativo:'Activo',desarrollo:'En desarrollo',seguimiento:'Seguimiento',evaluacion:'Evaluacion',monitoreo:'Monitoreo',planificacion:'Planificacion',suspendido:'Suspendido',terminado:'Terminado',cancelado:'Cancelado'};
+var LC={condugas:'var(--red)',sendo_consulting:'var(--cyan)',serjefe:'var(--purple)',patrimonio:'var(--green)',familia:'var(--pink)'};
+fetch('/data/proyectos.json').then(function(r){return r.json()}).then(function(d){
+  allProjects=[];var lineas=d.lineas||d;
+  Object.keys(lineas).forEach(function(key){var lin=lineas[key];(lin.proyectos||[]).forEach(function(p){p.linea=key;p.linea_nombre=lin.nombre||key;allProjects.push(p)})});
+  renderProjects();
+}).catch(function(){document.getElementById('plist').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Sin datos de proyectos</div>'});
+function renderProjects(){
+  var filtered=allProjects;
+  if(projFilter==='crisis')filtered=filtered.filter(function(p){return p.estado==='crisis'});
+  else if(projFilter==='activo')filtered=filtered.filter(function(p){return['operativo','seguimiento','monitoreo'].indexOf(p.estado)>=0});
+  else if(projFilter==='desarrollo')filtered=filtered.filter(function(p){return['desarrollo','evaluacion','planificacion'].indexOf(p.estado)>=0});
+  else if(projFilter!=='todos')filtered=filtered.filter(function(p){return p.estado===projFilter});
+  document.getElementById('ps-crisis').textContent=allProjects.filter(function(p){return p.estado==='crisis'}).length;
+  document.getElementById('ps-activo').textContent=allProjects.filter(function(p){return['operativo','seguimiento','monitoreo'].indexOf(p.estado)>=0}).length;
+  document.getElementById('ps-desarrollo').textContent=allProjects.filter(function(p){return['desarrollo','evaluacion','planificacion'].indexOf(p.estado)>=0}).length;
+  document.getElementById('ps-total').textContent=allProjects.length;
+  if(!filtered.length){document.getElementById('plist').innerHTML='<div style="text-align:center;padding:20px;color:var(--muted)">Sin proyectos</div>';return}
+  var byL={};filtered.forEach(function(p){(byL[p.linea]=byL[p.linea]||[]).push(p)});
+  var html='';Object.keys(byL).forEach(function(linea){
+    var color=LC[linea]||'var(--muted)';var nombre=byL[linea][0].linea_nombre||linea;
+    html+='<h3 style="color:'+color+';margin-top:16px;border-bottom:1px solid '+color+'22;padding-bottom:4px">'+nombre+' ('+byL[linea].length+')</h3>';
+    byL[linea].forEach(function(p){
+      var ec=EC[p.estado]||'var(--muted)';var el=EL[p.estado]||p.estado;var dead=['terminado','cancelado','suspendido'].indexOf(p.estado)>=0;
+      html+='<div class="card" style="margin-bottom:6px;'+(dead?'opacity:.4;':'')+'border-left:3px solid '+ec+'">';
+      html+='<div style="display:flex;justify-content:space-between;align-items:flex-start"><div style="flex:1">';
+      html+='<div style="font-size:14px;font-weight:600;'+(dead?'text-decoration:line-through':'')+'">'+p.nombre+'</div>';
+      html+='<div style="font-size:11px;color:var(--muted);margin-top:2px">'+(p.responsable||'Sin asignar')+' &middot; <span style="color:'+ec+'">'+el+'</span></div>';
+      if(p.proxima_accion)html+='<div style="font-size:12px;color:var(--cyan);margin-top:4px">&rarr; '+p.proxima_accion+'</div>';
+      html+='</div>';
+      html+='<select onchange="changePE(\''+p.id+'\',\''+p.linea+'\',this.value)" style="background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:3px 6px;border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit">';
+      ['operativo','desarrollo','crisis','suspendido','terminado','cancelado'].forEach(function(est){
+        html+='<option value="'+est+'"'+(p.estado===est?' selected':'')+'>'+EL[est]+'</option>';
+      });
+      html+='</select>';
+      html+='</div></div>';
+    });
+  });
+  document.getElementById('plist').innerHTML=html;
+}
+function filterProj(f){projFilter=f;document.querySelectorAll('[data-pf]').forEach(function(b){b.classList.remove('active')});var btn=document.querySelector('[data-pf="'+f+'"]');if(btn)btn.classList.add('active');renderProjects()}
+function changePE(id,linea,estado){allProjects.forEach(function(p){if(p.id===id)p.estado=estado});renderProjects();toast('Proyecto: '+estado,'ok');fetch(API+'/proyecto-estado',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:id,linea:linea,estado:estado})}).catch(function(){})}
 
 // BRIEFING FETCH
-fetch('./data/briefing.json').then(r=>r.json()).then(b=>{
+fetch('/data/briefing.json').then(function(r){return r.json()}).then(function(b){
   document.getElementById('bf-date').textContent='Briefing del '+b.fecha;
-  let h='';
-  if(b.agenda&&b.agenda.length){h+='<h3>Agenda</h3>';b.agenda.forEach(a=>{h+='<div style="padding:4px 0;font-size:13px;border-bottom:1px solid var(--border)">'+a+'</div>'})}
-  if(b.tareas_urgentes&&b.tareas_urgentes.length){h+='<h3>Tareas urgentes</h3>';b.tareas_urgentes.forEach(t=>{var pc=t.prioridad==="CRÍTICO"?"var(--red)":t.prioridad==="ALTO"?"var(--orange)":"var(--yellow)";h+='<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><div><div style="font-size:14px;font-weight:500">'+t.tarea+'</div><div style="font-size:11px;color:var(--muted)">'+t.responsable+'</div></div><span style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(239,68,68,.1);color:'+pc+';font-weight:600">'+t.prioridad+'</span></div>'})}
-  if(b.whoop){h+='<h3>WHOOP</h3><div class="grid g4"><div class="card"><div class="label">Recovery</div><div class="val" style="font-size:16px">'+(b.whoop.recovery||"—")+'</div></div><div class="card"><div class="label">Sleep</div><div class="val" style="font-size:16px">'+(b.whoop.sleep||"—")+'</div></div><div class="card"><div class="label">Deuda</div><div class="val" style="font-size:16px">'+(b.whoop.deuda||"—")+'</div></div><div class="card"><div class="label">Reco</div><div class="val" style="font-size:12px">'+(b.whoop.recomendacion||"—")+'</div></div></div>'}
-  if(b.limitless_ayer){var li=b.limitless_ayer;h+='<h3>Limitless — ayer</h3>';if(li.decisiones_criticas){li.decisiones_criticas.forEach(d=>{h+='<div style="font-size:13px;padding:4px 0;border-bottom:1px solid var(--border);color:var(--orange)">'+d+'</div>'})}if(li.estado_mental){h+='<div style="font-size:13px;color:var(--cyan);padding:8px 12px;background:var(--bg3);border-radius:8px;margin:8px 0;border-left:3px solid var(--cyan)">'+li.estado_mental+'</div>'}if(li.compromisos){li.compromisos.forEach(c=>{h+='<div style="font-size:13px;padding:3px 0;color:var(--muted)">→ '+c+'</div>'})}}
-  if(b.ideas_capturadas&&b.ideas_capturadas.length){h+='<h3>Ideas capturadas</h3>';b.ideas_capturadas.forEach(i=>{h+='<div style="font-size:13px;padding:4px 0;border-bottom:1px solid var(--border);color:var(--purple)">'+i+'</div>'})}
-  if(b.contenido_raw&&!b.agenda){h+='<div style="font-size:13px;white-space:pre-wrap;line-height:1.6;color:var(--text)">'+b.contenido_raw.replace(/^# .+$/gm,"").substring(0,3000)+'</div>'}
-  if(!h){h='<div style="text-align:center;padding:30px;color:var(--muted)">Sin briefing disponible</div>'}
+  var h='';
+  if(b.tareas_candidatas&&b.tareas_candidatas.length){
+    h+='<h3>Tareas del dia <span style="font-family:monospace;color:var(--cyan)">'+b.tareas_candidatas.length+'</span></h3>';
+    b.tareas_candidatas.forEach(function(t){
+      var pc=t.prioridad==='critica'?'var(--red)':t.prioridad==='alta'?'var(--orange)':'var(--yellow)';
+      h+='<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)"><div style="flex:1"><div style="font-size:13px;font-weight:500">'+t.tarea+'</div><div style="font-size:11px;color:var(--muted);margin-top:2px">'+(t.responsable||'')+'</div></div><span style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(239,68,68,.1);color:'+pc+';font-weight:600;white-space:nowrap">'+(t.prioridad||'media')+'</span></div>';
+    });
+  }
+  if(b.tareas_urgentes&&b.tareas_urgentes.length){
+    h+='<h3>Tareas urgentes</h3>';
+    b.tareas_urgentes.forEach(function(t){
+      var pc=t.prioridad==='CRITICO'?'var(--red)':'var(--orange)';
+      h+='<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><div><div style="font-size:14px;font-weight:500">'+t.tarea+'</div><div style="font-size:11px;color:var(--muted)">'+t.responsable+'</div></div><span style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(239,68,68,.1);color:'+pc+';font-weight:600">'+t.prioridad+'</span></div>';
+    });
+  }
+  if(b.decisiones&&b.decisiones.length){
+    h+='<h3>Decisiones</h3>';
+    b.decisiones.slice(0,5).forEach(function(d){var clean=d.replace(/^- You \([^)]+\): /,'');h+='<div style="font-size:13px;padding:6px 10px;margin:4px 0;background:var(--bg3);border-radius:6px;border-left:3px solid var(--orange);color:var(--orange)">'+clean+'</div>'});
+  }
+  if(b.whoop){
+    h+='<h3>WHOOP</h3><div class="grid g4"><div class="card"><div class="label">Recovery</div><div class="val" style="font-size:16px">'+(b.whoop.recovery||'--')+'</div></div><div class="card"><div class="label">Sleep</div><div class="val" style="font-size:16px">'+(b.whoop.sleep||'--')+'</div></div><div class="card"><div class="label">Deuda</div><div class="val" style="font-size:16px">'+(b.whoop.deuda||'--')+'</div></div><div class="card"><div class="label">Reco</div><div class="val" style="font-size:12px">'+(b.whoop.recomendacion||'--')+'</div></div></div>';
+  }
+  if(b.ideas_capturadas&&b.ideas_capturadas.length){
+    h+='<h3 style="cursor:pointer" onclick="document.getElementById(\'bfi\').style.display=document.getElementById(\'bfi\').style.display===\'none\'?\'block\':\'none\'">Ideas ('+b.ideas_capturadas.length+') &#9662;</h3><div id="bfi" style="display:none">';
+    b.ideas_capturadas.forEach(function(i){h+='<div style="font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);color:var(--purple)">'+i+'</div>'});
+    h+='</div>';
+  }
+  if(b.frases_poderosas&&b.frases_poderosas.length){
+    h+='<h3 style="cursor:pointer" onclick="document.getElementById(\'bff\').style.display=document.getElementById(\'bff\').style.display===\'none\'?\'block\':\'none\'">Frases ('+b.frases_poderosas.length+') &#9662;</h3><div id="bff" style="display:none">';
+    b.frases_poderosas.forEach(function(f){var clean=f.replace(/^- You \([^)]+\): /,'');h+='<div style="font-size:12px;padding:6px 10px;margin:4px 0;background:rgba(167,139,250,.05);border-left:2px solid var(--purple);font-style:italic">'+clean+'</div>'});
+    h+='</div>';
+  }
+  h+='<div style="margin-top:16px;padding:8px 12px;background:var(--bg3);border-radius:6px;font-size:11px;color:var(--muted)">'+(b.procesado_con||'')+' &middot; '+b.total_lifelogs+' conversaciones &middot; '+b.fecha+'</div>';
+  if(!h)h='<div style="text-align:center;padding:30px;color:var(--muted)">Sin briefing</div>';
   document.getElementById('bf-body').innerHTML=h;
-  if(b.whoop){if(b.whoop.recovery&&b.whoop.recovery!=="Sin datos")document.getElementById("w-rec").textContent=b.whoop.recovery;if(b.whoop.sleep)document.getElementById("w-slp").textContent=b.whoop.sleep}
-}).catch(function(){document.getElementById('bf-body').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Sin briefing disponible.<br><span style=font-size:12px>El Claw lo genera cada mañana</span></div>'});
-
+  if(b.whoop&&b.whoop.recovery)try{document.getElementById('w-rec').textContent=b.whoop.recovery}catch(e){}
+}).catch(function(){document.getElementById('bf-body').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Sin briefing. Se genera cada dia a las 7AM.</div>'});
 
 // === TASK REVIEW & TRACKER ===
 const API='https://72.60.28.156.nip.io/tasks';
