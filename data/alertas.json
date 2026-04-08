@@ -15,10 +15,10 @@
         "avance"
       ],
       "responsable_sugerido": "Sebastián",
-      "estado": "nuevo",
+      "estado": "resuelto",
       "sla_deadline": "2026-04-09T06:18:56.308783",
-      "fecha_atencion": null,
-      "comentario_cierre": null
+      "fecha_atencion": "2026-04-08T02:12:26.429378",
+      "comentario_cierre": ""
     },
     {
       "id": "e3e06928",
@@ -34,10 +34,10 @@
         "vencimiento"
       ],
       "responsable_sugerido": "Sebastián",
-      "estado": "nuevo",
+      "estado": "resuelto",
       "sla_deadline": "2026-04-07T06:48:56.298519",
-      "fecha_atencion": null,
-      "comentario_cierre": null
+      "fecha_atencion": "2026-04-08T02:12:11.200391",
+      "comentario_cierre": ""
     },
     {
       "id": "8e348b23",
