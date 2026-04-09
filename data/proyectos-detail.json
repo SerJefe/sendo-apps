@@ -1,0 +1,99 @@
+{
+  "eficiencia_digital": {
+    "titulo": "Eficiencia Digital — Roadmap Transformación",
+    "estado": "activo",
+    "objetivo_macro": "Herramientas digitales que reduzcan tiempos, eliminen reprocesos y permitan decisiones basadas en datos confiables.",
+    "dmla": {"empresa": 6.17, "experimentacion": 8.08, "colaboracion": 8.08, "foco_cliente": 3.50, "data": 4.62},
+    "inversion_total": "$55–100M",
+    "ahorro_estimado": "$150–200M/año",
+    "payback": "4–8 meses",
+    "programa": "ESIC & CCMA · Etapa 2→3 · 2025–2026",
+    "proyectos": [
+      {
+        "id": "P1",
+        "nombre": "Calculadora Valor Empleado (CVE)",
+        "prioridad": "QUICK WIN",
+        "fase": "Mes 1–4",
+        "inversion": "$8–15M",
+        "descripcion": "Mide ROI del ciclo de vida del empleado. Costo ingreso + productividad + costo salida + alertas rotación + reportes por regional. Dashboard Excel → Power BI.",
+        "responsables": ["Andrea (data costos)", "William (socializar HE)", "Natalia (datos rotación)"],
+        "habilitadores": [
+          {"nombre": "Mapeo costos contratación", "tipo": "O", "estado": "sin_resolver", "detalle": "No existe → construir desde cero"},
+          {"nombre": "Datos históricos rotación", "tipo": "T", "estado": "listo", "detalle": "Natalia Rojas los tiene"},
+          {"nombre": "Formación RRHH en datos", "tipo": "H", "estado": "sin_resolver", "detalle": "No saben dashboards · DMLA 4.62"},
+          {"nombre": "Integración nómina", "tipo": "T", "estado": "parcial", "detalle": "Nómina existe, no conectada"},
+          {"nombre": "Responsable del dato", "tipo": "O", "estado": "sin_resolver", "detalle": "William era responsable"},
+          {"nombre": "Cultura medir valor empleado", "tipo": "H", "estado": "sin_resolver", "detalle": "Concepto no existe · DMLA 3.5"}
+        ]
+      },
+      {
+        "id": "P2",
+        "nombre": "Zona E — Bot WhatsApp",
+        "prioridad": "PRIORITARIO",
+        "fase": "Mes 3–6",
+        "inversion": "$12–20M",
+        "descripcion": "Canal comunicación 500+ colaboradores. Trámites RRHH, turnos, comunicados, emergencias, gamificación, capacitación. WhatsApp API + Twilio/Make. Piloto 50 usuarios Medellín.",
+        "responsables": ["Equipo 3 (cotizar proveedores)", "Sebastián (diseñar flujos)"],
+        "habilitadores": [
+          {"nombre": "Proveedor WhatsApp API", "tipo": "T", "estado": "sin_resolver", "detalle": "Cotizar Twilio / Make"},
+          {"nombre": "Plataforma base", "tipo": "T", "estado": "sin_resolver", "detalle": "Good Boss NO existe"},
+          {"nombre": "Estandarizar procesos RRHH", "tipo": "O", "estado": "sin_resolver", "detalle": "Manuales · DMLA 3.50"},
+          {"nombre": "Confianza técnicos digital", "tipo": "H", "estado": "parcial", "detalle": "Variable por contrato"},
+          {"nombre": "Admin bot (RRHH + TI)", "tipo": "O", "estado": "sin_resolver", "detalle": "No asignado"},
+          {"nombre": "Flujos conversacionales", "tipo": "O", "estado": "sin_resolver", "detalle": "No diseñados"},
+          {"nombre": "Gestión del cambio", "tipo": "H", "estado": "sin_resolver", "detalle": "DMLA Cultura 3.5"}
+        ]
+      },
+      {
+        "id": "P3",
+        "nombre": "Condugas Play — Gamificación",
+        "prioridad": "PRIORITARIO",
+        "fase": "Mes 3–6",
+        "inversion": "$15–25M",
+        "descripcion": "XP por KPIs de 4 roles. Niveles Aprendiz→Maestro. Insignias. Tableros por brigada y regional. KPIs hay que construir casi desde cero.",
+        "responsables": ["Sebastián (concepto gamificación)", "Equipo 3 (cotizar plataformas)"],
+        "habilitadores": [
+          {"nombre": "KPIs por rol (×4)", "tipo": "O", "estado": "sin_resolver", "detalle": "Crear desde cero · DMLA 4.62"},
+          {"nombre": "Datos desempeño campo", "tipo": "T", "estado": "sin_resolver", "detalle": "Informales · DMLA Big Data 2.0"},
+          {"nombre": "Sistema niveles/insignias", "tipo": "O", "estado": "parcial", "detalle": "Conceptual (Sebastián)"},
+          {"nombre": "Plataforma gamificación", "tipo": "T", "estado": "sin_resolver", "detalle": "No seleccionada"},
+          {"nombre": "Liderazgo supervisores", "tipo": "H", "estado": "sin_resolver", "detalle": "No miden formalmente"},
+          {"nombre": "Integración nómina bonos", "tipo": "T", "estado": "sin_resolver", "detalle": "No conectado"}
+        ]
+      },
+      {
+        "id": "P4",
+        "nombre": "Programa Mérito Condugas",
+        "prioridad": "ESPERAR (P1+P3)",
+        "fase": "Mes 5–12",
+        "inversion": "$20–40M/año",
+        "descripcion": "Bonos, tiempo libre, capacitación, reconocimiento, beneficios flexibles. Existe parcialmente en campo. Concepto NO validado con gerencia.",
+        "responsables": ["Equipo 3 (validar con gerencia)"],
+        "habilitadores": [
+          {"nombre": "Validar concepto gerencia", "tipo": "H", "estado": "sin_resolver", "detalle": "Paso crítico → NO hecho"},
+          {"nombre": "Reglas mérito por área", "tipo": "O", "estado": "parcial", "detalle": "Solo campo parcial"},
+          {"nombre": "Demostrar ahorro = inversión", "tipo": "O", "estado": "sin_resolver", "detalle": "Requiere P1 primero"},
+          {"nombre": "Catálogo recompensas", "tipo": "O", "estado": "sin_resolver", "detalle": "No existe"},
+          {"nombre": "Integración gamificación", "tipo": "T", "estado": "sin_resolver", "detalle": "Depende de P3"},
+          {"nombre": "Comunicar 500+ personas", "tipo": "H", "estado": "sin_resolver", "detalle": "DMLA Cliente 3.50"}
+        ]
+      }
+    ],
+    "timeline": [
+      {"fase": "Mes 1–2", "titulo": "Fundación", "descripcion": "Mapeo procesos RRHH y costos. Modelo CVE en Excel. Selección proveedor WhatsApp. Definición reglas gamificación."},
+      {"fase": "Mes 3–4", "titulo": "Piloto", "descripcion": "CVE con datos reales 12 meses. Bot WhatsApp piloto 50 usuarios. Gamificación piloto 1 brigada."},
+      {"fase": "Mes 5–6", "titulo": "Expansión", "descripcion": "Bot en todas las regionales. Gamificación activa todos los roles. Catálogo incentivos operando."},
+      {"fase": "Mes 7–12", "titulo": "Escala", "descripcion": "Reducción rotación 18%→10%, NPS empleado, marca empleadora, universidad interna."}
+    ],
+    "brechas_criticas": [
+      {"dimension": "Foco en el Cliente", "score": 3.50, "nivel": "CRÍTICO"},
+      {"dimension": "Pensamiento Digital (Data)", "score": 4.62, "nivel": "BAJO"},
+      {"dimension": "Competencias Digitales", "score": 3.25, "nivel": "CRÍTICO"}
+    ],
+    "palancas": [
+      {"dimension": "Experimentación Emprendedora", "score": 8.08, "nivel": "ALTO"},
+      {"dimension": "Colaboración", "score": 8.08, "nivel": "ALTO"},
+      {"dimension": "Inteligencia Artificial", "score": 7.0, "nivel": "CONSOLIDADO"}
+    ]
+  }
+}

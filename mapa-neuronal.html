@@ -29,6 +29,18 @@ body{font-family:'DM Sans','Segoe UI',system-ui,sans-serif;background:#07090d;co
 #ip .act.warm{background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.2);color:#f97316}
 #ip .act.cold{background:rgba(100,116,139,0.1);border:1px solid rgba(100,116,139,0.2);color:#64748b}
 #ip .act.dead{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.15);color:#ef4444}
+#ip #pdetail{margin-top:8px}
+#ip .hab{font-size:10px;padding:4px 6px;margin-top:3px;border-radius:4px;display:flex;align-items:center;gap:4px;background:rgba(255,255,255,0.03);border-left:3px solid #475569}
+#ip .hab.H{border-left-color:#ec4899}#ip .hab.O{border-left-color:#eab308}#ip .hab.T{border-left-color:#06b6d4}
+#ip .hab .hbadge{font-family:monospace;font-size:8px;font-weight:700;padding:1px 4px;border-radius:2px}
+#ip .hab .hbadge.H{background:rgba(236,72,153,0.15);color:#ec4899}
+#ip .hab .hbadge.O{background:rgba(234,179,8,0.15);color:#eab308}
+#ip .hab .hbadge.T{background:rgba(6,182,212,0.15);color:#06b6d4}
+#ip .hab .hst{margin-left:auto;font-size:9px;font-family:monospace}
+#ip .proj-link{display:inline-block;margin-top:8px;font-size:11px;padding:4px 10px;background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.25);border-radius:6px;color:#f97316;cursor:pointer;text-decoration:none}
+#ip .proj-link:hover{background:rgba(249,115,22,0.2)}
+#ip .tl-mini{font-size:10px;margin-top:6px;padding:4px 6px;background:rgba(6,182,212,0.05);border-radius:4px;border:1px solid rgba(6,182,212,0.1)}
+#ip .tl-mini .phase{color:#06b6d4;font-family:monospace;font-size:9px;font-weight:600}
 #ip .tg{margin-top:8px;display:flex;flex-wrap:wrap;gap:4px}
 #ip .t{font-size:10px;background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.2);border-radius:4px;padding:2px 6px;color:#06b6d4;font-family:monospace}
 #cb{position:absolute;top:10px;right:12px;background:none;border:none;color:#475569;font-size:18px;cursor:pointer}
@@ -80,7 +92,7 @@ svg{width:100vw;height:100vh;display:block}
 <div class="lg" style="border-top:1px solid #1e293b;padding-top:4px;width:100%"><span class="ld" style="background:#22c55e;box-shadow:0 0 6px #22c55e"></span>Activo hoy</div>
 <div class="lg"><span class="ld" style="background:#475569;opacity:0.3"></span>Neurona muriendo</div>
 </div>
-<div id="ip"><button id="cb" onclick="cP()">×</button><h2 id="pn"></h2><div class="tp" id="pt"></div><div class="dt" id="pd"></div><div class="act" id="pa"></div><div class="tg" id="pg"></div></div>
+<div id="ip"><button id="cb" onclick="cP()">×</button><h2 id="pn"></h2><div class="tp" id="pt"></div><div class="dt" id="pd"></div><div class="act" id="pa"></div><div id="pdetail"></div><div class="tg" id="pg"></div></div>
 <svg id="graph"></svg>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script>
@@ -138,6 +150,14 @@ const N=[
 {id:"odoo",label:"Odoo",g:"condugas",tp:"proyecto",r:15,dt:"2/10 procedimientos. ROI $11-18 mil M. Talleres Odoo.",st:"hacer"},
 {id:"ugpp",label:"UGPP",g:"condugas",tp:"proyecto",r:12,dt:"Auditoría IBC. Desatrazo.",st:"hacer"},
 {id:"redes",label:"Redes",g:"condugas",tp:"proyecto",r:12,dt:"LinkedIn B2B · IG B2C · YouTube · TikTok. GPTs/Gems.",st:"hacer"},
+// TRANSFORMACIÓN DIGITAL (ESIC)
+{id:"efdigital",label:"Eficiencia Digital",g:"condugas",tp:"proyecto",r:18,dt:"Roadmap Transformación Digital ESIC. DMLA 6.17. Inversión $55-100M → Ahorro $150-200M/año. 4 proyectos.",st:"hacer",url:"/data/proyectos-detail.json#eficiencia_digital"},
+{id:"marcaemp",label:"Marca Empleadora",g:"condugas",tp:"proyecto",r:16,dt:"Posicionar Condugas como mejor lugar para trabajar. IA, IoT y automatización como diferencial.",st:"hacer"},
+{id:"dmla",label:"DMLA 6.17",g:"condugas",tp:"concepto",r:14,dt:"Índice Madurez Digital. Experimentación 8.08 (palanca). Foco Cliente 3.50 (brecha crítica). Competencias 3.25."},
+{id:"p1cve",label:"P1 CVE",g:"condugas",tp:"proyecto",r:15,dt:"Calculadora Valor Empleado. Quick Win. $8-15M. Mes 1-4. Mide ROI ciclo de vida: costo ingreso + productividad + costo salida.",st:"hacer"},
+{id:"p2bot",label:"P2 Bot WA",g:"condugas",tp:"proyecto",r:14,dt:"Zona E — Bot WhatsApp. Prioritario. $12-20M. Mes 3-6. Comunicación 500+ colaboradores. Piloto 50 usuarios Medellín.",st:"hacer"},
+{id:"p3play",label:"P3 Play",g:"condugas",tp:"proyecto",r:14,dt:"Condugas Play — Gamificación por rol. Prioritario. $15-25M. Mes 3-6. XP + niveles + insignias. KPIs desde cero.",st:"hacer"},
+{id:"p4merito",label:"P4 Mérito",g:"condugas",tp:"proyecto",r:13,dt:"Programa Mérito. Esperar P1+P3. $20-40M/año. Mes 5-12. Bonos, tiempo libre, reconocimiento. NO validado con gerencia.",st:"hacer"},
 // SIENDO
 {id:"siendo",label:"Siendo",g:"siendo",tp:"empresa",r:22,dt:"Consultoría jefatura. Alletagia validado."},
 {id:"mona",label:"Mona",g:"siendo",tp:"persona",r:13,dt:"Mónica González — Comercial."},
@@ -191,6 +211,14 @@ const L=[
 // Personas
 {s:"condugas",t:"cami"},{s:"condugas",t:"andre"},{s:"condugas",t:"willi"},{s:"condugas",t:"juang"},{s:"condugas",t:"carlosh"},{s:"condugas",t:"naty"},{s:"condugas",t:"nelson"},{s:"condugas",t:"clau"},{s:"condugas",t:"jp"},{s:"condugas",t:"hilda"},{s:"condugas",t:"adolfo"},{s:"condugas",t:"doctor"},
 {s:"carlosh",t:"nneg"},{s:"andre",t:"csv"},{s:"odoo",t:"ema"},{s:"ccaja",t:"epm"},{s:"cami",t:"fam"},{s:"adolfo",t:"siendo"},
+// Transformación Digital
+{s:"condugas",t:"efdigital"},{s:"condugas",t:"marcaemp"},{s:"condugas",t:"dmla"},
+{s:"efdigital",t:"p1cve"},{s:"efdigital",t:"p2bot"},{s:"efdigital",t:"p3play"},{s:"efdigital",t:"p4merito"},
+{s:"marcaemp",t:"p3play"},{s:"marcaemp",t:"p4merito"},
+{s:"p1cve",t:"p4merito"},{s:"p3play",t:"p4merito"},{s:"p2bot",t:"p3play"},
+{s:"p1cve",t:"andre"},{s:"p1cve",t:"naty"},{s:"p1cve",t:"willi"},
+{s:"p2bot",t:"naty"},{s:"p3play",t:"naty"},
+{s:"dmla",t:"efdigital"},
 // Siendo
 {s:"siendo",t:"mona"},{s:"siendo",t:"lina"},{s:"siendo",t:"ema"},{s:"siendo",t:"vendemos"},{s:"siendo",t:"dojo"},{s:"siendo",t:"implantech"},{s:"siendo",t:"codoo"},{s:"siendo",t:"stgo"},{s:"lina",t:"dojo"},{s:"lina",t:"implantech"},{s:"ema",t:"codoo"},{s:"mona",t:"condugas"},
 // SerJefe
@@ -298,6 +326,16 @@ async function init() {
         }
     } catch(e) {
         console.warn("No neural activity data yet, using defaults", e);
+    }
+    // Load project detail data
+    try {
+        const resp2 = await fetch('/data/proyectos-detail.json?t=' + Date.now());
+        if (resp2.ok) {
+            window._projDetail = await resp2.json();
+            console.log("Project detail loaded");
+        }
+    } catch(e) {
+        console.warn("No project detail data", e);
     }
     render();
     updateStats();
@@ -437,6 +475,40 @@ nd.on("click",(e,d)=>{
   const pa = document.getElementById("pa");
   pa.textContent = lifeLabel(d.id);
   pa.className = "act " + lifeClass(d.id);
+
+  // Project detail (for Eficiencia Digital sub-projects)
+  const pdetail = document.getElementById("pdetail");
+  pdetail.innerHTML = "";
+  const projIds = ["p1cve","p2bot","p3play","p4merito","efdigital"];
+  if (projIds.includes(d.id) && window._projDetail) {
+      const ed = window._projDetail.eficiencia_digital;
+      if (d.id === "efdigital") {
+          pdetail.innerHTML = `
+              <div style="font-size:10px;color:#f97316;font-family:monospace;margin-bottom:4px">${ed.programa}</div>
+              <div style="font-size:11px;margin-bottom:4px"><strong>Inversión:</strong> ${ed.inversion_total} → <strong style="color:#22c55e">Ahorro: ${ed.ahorro_estimado}</strong></div>
+              <div style="font-size:10px;color:#94a3b8">Payback: ${ed.payback}</div>
+              <div style="margin-top:6px;font-size:10px;font-weight:600">Brechas críticas:</div>
+              ${ed.brechas_criticas.map(b=>'<div style="font-size:10px;color:#ef4444">· '+b.dimension+': '+b.score+' ('+b.nivel+')</div>').join('')}
+              <div style="margin-top:4px;font-size:10px;font-weight:600">Palancas:</div>
+              ${ed.palancas.map(p=>'<div style="font-size:10px;color:#22c55e">· '+p.dimension+': '+p.score+'</div>').join('')}
+              <a class="proj-link" href="/data/Condugas_Roadmap_Etapa3.html" target="_blank">Ver Roadmap Completo →</a>`;
+      } else {
+          const pIdx = {"p1cve":0,"p2bot":1,"p3play":2,"p4merito":3}[d.id];
+          if (pIdx !== undefined) {
+              const proj = ed.proyectos[pIdx];
+              pdetail.innerHTML = `
+                  <div style="font-size:10px;color:#f97316;font-family:monospace;margin-bottom:4px">${proj.prioridad} · ${proj.fase} · ${proj.inversion}</div>
+                  <div style="font-size:10px;margin-bottom:6px">${proj.responsables.join(' · ')}</div>
+                  <div style="font-size:10px;font-weight:600;margin-bottom:3px">Habilitadores:</div>
+                  ${proj.habilitadores.map(h=>{
+                      const sc = h.estado==='sin_resolver'?'#ef4444':h.estado==='listo'?'#22c55e':'#eab308';
+                      const ic = h.estado==='sin_resolver'?'✗':h.estado==='listo'?'✓':'⚠';
+                      return '<div class="hab '+h.tipo+'"><span class="hbadge '+h.tipo+'">'+h.tipo+'</span>'+h.nombre+'<span class="hst" style="color:'+sc+'">'+ic+' '+h.detalle+'</span></div>';
+                  }).join('')}
+                  <a class="proj-link" href="/data/Condugas_Habilitadores_Final.html" target="_blank">Ver Habilitadores →</a>`;
+          }
+      }
+  }
 
   const cn=links.filter(l=>(l.source.id||l.source)===d.id||(l.target.id||l.target)===d.id);
   const cx=cn.map(l=>{const o=(l.source.id||l.source)===d.id?(l.target.id||l.target):(l.source.id||l.source);return N.find(n=>n.id===o)}).filter(Boolean);

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONDUGAS — Roadmap Transformación Digital · Etapa 3</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e17;--bg2:#111827;--card:#1a2235;--border:rgba(255,255,255,0.06);--text:#e2e8f0;--muted:#8892a4;--accent:#f97316;--accent2:#06b6d4;--green:#22c55e;--red:#ef4444;--yellow:#eab308;--purple:#a855f7;--blue:#3b82f6}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,14,23,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem}
+nav .inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .logo{font-weight:800;font-size:1.1rem;letter-spacing:-0.5px}nav .logo span{color:var(--accent)}
+nav ul{display:flex;gap:0.25rem;list-style:none}nav ul li a{color:var(--muted);text-decoration:none;font-size:0.72rem;font-weight:500;padding:0.4rem 0.7rem;border-radius:6px;transition:all .2s;letter-spacing:.3px;text-transform:uppercase}
+nav ul li a:hover,nav ul li a.active{color:var(--text);background:rgba(255,255,255,0.06)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6rem 2rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 30% 50%,rgba(249,115,22,.08) 0%,transparent 50%),radial-gradient(ellipse at 70% 50%,rgba(6,182,212,.06) 0%,transparent 50%);animation:hg 8s ease-in-out infinite alternate}
+@keyframes hg{0%{transform:scale(1)}100%{transform:scale(1.1) rotate(3deg)}}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.2);padding:.4rem 1rem;border-radius:50px;font-size:.8rem;color:var(--accent);margin-bottom:2rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:1rem;position:relative;z-index:1}
+.hero h1 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.sub{font-size:1.15rem;color:var(--muted);max-width:600px;margin-bottom:3rem;position:relative;z-index:1;font-weight:300}
+.hero-stats{display:flex;gap:3rem;position:relative;z-index:1;flex-wrap:wrap;justify-content:center}
+.hero-stat{text-align:center}.hero-stat .num{font-size:2.5rem;font-weight:800;font-family:'JetBrains Mono',monospace}
+.hero-stat .num.or{color:var(--accent)}.hero-stat .num.cy{color:var(--accent2)}.hero-stat .num.gr{color:var(--green)}.hero-stat .num.pu{color:var(--purple)}.hero-stat .num.rd{color:var(--red)}
+.hero-stat .label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:.25rem}
+section{padding:5rem 2rem;max-width:1400px;margin:0 auto}
+.section-tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:600;margin-bottom:1rem}
+.section-tag::before{content:'';width:24px;height:2px;background:var(--accent)}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-1px;margin-bottom:.5rem}h2 .hl{color:var(--accent)}
+.section-desc{color:var(--muted);font-size:1rem;max-width:700px;margin-bottom:3rem;font-weight:300}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:1.5rem}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all .3s;position:relative;overflow:hidden}
+.card:hover{border-color:rgba(249,115,22,.2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.card h3{font-size:1.15rem;font-weight:700;margin-bottom:.5rem;letter-spacing:-.3px}.card p{color:var(--muted);font-size:.88rem;line-height:1.7}
+.tag{display:inline-block;font-size:.65rem;text-transform:uppercase;letter-spacing:1px;padding:.2rem .6rem;border-radius:4px;font-weight:600;margin-top:.5rem}
+.tag.short{background:rgba(34,197,94,.15);color:var(--green)}.tag.mid{background:rgba(234,179,8,.15);color:var(--yellow)}.tag.long{background:rgba(239,68,68,.15);color:var(--red)}
+.tag.crit{background:rgba(239,68,68,.2);color:var(--red)}.tag.ok{background:rgba(34,197,94,.15);color:var(--green)}
+.macro-card{padding:2.5rem;border-left:4px solid var(--accent)}.macro-card.alt{border-left-color:var(--accent2)}
+.macro-card .macro-num{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:.75rem}
+.macro-card.alt .macro-num{color:var(--accent2)}.macro-card h3{font-size:1.5rem;margin-bottom:.75rem}
+.dmla-bar{display:flex;align-items:center;gap:1rem;margin-bottom:.5rem}
+.dmla-bar .label{min-width:200px;font-size:.82rem;font-weight:500}.dmla-bar .bar-track{flex:1;height:8px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden}
+.dmla-bar .bar-fill{height:100%;border-radius:4px;transition:width 1.5s cubic-bezier(.22,1,.36,1)}.dmla-bar .score{font-family:'JetBrains Mono',monospace;font-size:.85rem;font-weight:600;min-width:36px;text-align:right}
+.timeline{position:relative;padding-left:3rem}.timeline::before{content:'';position:absolute;left:15px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent2),var(--purple))}
+.tl-item{position:relative;margin-bottom:3rem}.tl-item::before{content:'';position:absolute;left:-3rem;top:6px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);background:var(--bg);z-index:1}
+.tl-item:nth-child(2)::before{border-color:var(--accent2)}.tl-item:nth-child(3)::before{border-color:var(--green)}.tl-item:nth-child(4)::before{border-color:var(--purple)}
+.tl-phase{font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:.4rem}
+.tl-item:nth-child(2) .tl-phase{color:var(--accent2)}.tl-item:nth-child(3) .tl-phase{color:var(--green)}.tl-item:nth-child(4) .tl-phase{color:var(--purple)}
+.tl-title{font-size:1.25rem;font-weight:700;margin-bottom:.5rem}.tl-desc{color:var(--muted);font-size:.88rem;line-height:1.7}
+.tl-tasks{margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.5rem}.tl-tasks span{font-size:.7rem;padding:.25rem .6rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:4px;color:var(--muted)}
+.inv-table{width:100%;border-collapse:collapse;margin-top:1rem}.inv-table th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);padding:.75rem 1rem;border-bottom:1px solid var(--border)}
+.inv-table td{padding:.85rem 1rem;border-bottom:1px solid var(--border);font-size:.9rem}.inv-table tr:last-child td{border-bottom:2px solid var(--accent);font-weight:700}
+.inv-table .cost{font-family:'JetBrains Mono',monospace;color:var(--accent);font-weight:600}
+.roi-box{background:linear-gradient(135deg,rgba(249,115,22,.08),rgba(6,182,212,.08));border:1px solid rgba(249,115,22,.15);border-radius:16px;padding:2.5rem;margin-top:2rem;text-align:center}
+.roi-box .big{font-size:2.5rem;font-weight:900;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.task-row{display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;border-bottom:1px solid var(--border)}.task-row:last-child{border-bottom:none}
+.task-avatar{min-width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.task-avatar.w{background:rgba(59,130,246,.15);color:var(--blue)}.task-avatar.a{background:rgba(34,197,94,.15);color:var(--green)}.task-avatar.s{background:rgba(249,115,22,.15);color:var(--accent)}.task-avatar.t{background:rgba(168,85,247,.15);color:var(--purple)}
+.task-content h4{font-size:.9rem;font-weight:600;margin-bottom:.2rem}.task-content p{font-size:.78rem;color:var(--muted)}
+.task-deadline{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--yellow);background:rgba(234,179,8,.1);padding:.25rem .6rem;border-radius:4px;white-space:nowrap;height:fit-content}
+.reveal{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.22,1,.36,1)}.reveal.visible{opacity:1;transform:none}
+@media(max-width:768px){nav ul{display:none}.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.hero-stats{gap:1.5rem}section{padding:3rem 1.25rem}}
+</style>
+</head>
+<body>
+<nav><div class="inner"><div class="logo">CONDUGAS<span>.digital</span></div><ul>
+<li><a href="#dmla-emp">DMLA</a></li>
+<li><a href="#macro">Objetivos</a></li>
+<li><a href="#proyectos">Proyectos</a></li>
+<li><a href="#timeline">Hoja de Ruta</a></li>
+<li><a href="#inversion">Inversión</a></li>
+<li><a href="#tareas">Tareas</a></li>
+</ul></div></nav>
+
+<div class="hero">
+  <div class="hero-badge">Programa ESIC & CCMA · Etapa 2→3 · 2025–2026</div>
+  <h1>Roadmap de<br><span class="grad">Transformación Digital</span></h1>
+  <p class="sub">Consolidación del roadmap con habilitadores organizacionales, priorización de proyectos y conexión DMLA empresarial.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num or">6.17</div><div class="label">DMLA Empresa</div></div>
+    <div class="hero-stat"><div class="num rd">3.50</div><div class="label">Foco Cliente (Crítico)</div></div>
+    <div class="hero-stat"><div class="num gr">8.08</div><div class="label">Experimentación</div></div>
+    <div class="hero-stat"><div class="num cy">+500</div><div class="label">Colaboradores</div></div>
+    <div class="hero-stat"><div class="num pu">4</div><div class="label">Proyectos</div></div>
+  </div>
+</div>
+
+<section id="dmla-emp">
+  <div class="section-tag">Diagnóstico Empresarial</div>
+  <h2>DMLA <span class="hl">Condugas S.A.</span></h2>
+  <p class="section-desc">Índice empresarial integrado (Natalia 6.2 + William 5.1). Madurez 6.17 MEDIO. Competencias digitales: 3.25 CRÍTICO. La experimentación (8.08) y la colaboración (8.08) son las palancas; foco en cliente (3.50) es la brecha que condiciona todo.</p>
+
+  <div class="grid-3 reveal">
+    <div class="card" style="border-top:3px solid var(--green)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:2rem;color:var(--green);font-weight:800">8.08</div>
+      <h3>Experimentación Emprendedora</h3>
+      <p>Activo #1. Cultura de innovación consolidada. Montar toda la estrategia sobre esta fortaleza.</p>
+      <span class="tag ok">ALTO · PALANCA</span>
+    </div>
+    <div class="card" style="border-top:3px solid var(--green)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:2rem;color:var(--green);font-weight:800">8.08</div>
+      <h3>Colaboración</h3>
+      <p>Principal activo organizacional. Motor de la transformación. Comunicación y trabajo en equipo sólidos.</p>
+      <span class="tag ok">ALTO · PALANCA</span>
+    </div>
+    <div class="card" style="border-top:3px solid var(--red)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:2rem;color:var(--red);font-weight:800">3.50</div>
+      <h3>Foco en el Cliente</h3>
+      <p>Brecha #1. Ausencia crítica de sistemas de orientación al cliente. Compromete todo el modelo.</p>
+      <span class="tag crit">CRÍTICO · INTERVENCIÓN URGENTE</span>
+    </div>
+  </div>
+
+  <div class="card reveal" style="padding:2rem;margin-top:2rem">
+    <h3 style="margin-bottom:1.5rem">Dimensiones por promedio empresa</h3>
+    <div id="dmla-emp-bars"></div>
+  </div>
+</section>
+
+<section id="macro">
+  <div class="section-tag">Dirección estratégica</div>
+  <h2>Objetivos <span class="hl">Macro</span></h2>
+  <div class="grid-2 reveal">
+    <div class="card macro-card"><div class="macro-num">Objetivo Macro 01</div><h3>Ser Marca Empleadora</h3><p>Posicionar a Condugas como el mejor lugar para trabajar en el sector, atrayendo y reteniendo talento con IA, IoT y automatización como diferencial.</p></div>
+    <div class="card macro-card alt"><div class="macro-num">Objetivo Macro 02</div><h3>Eficiencia Digital</h3><p>Herramientas digitales que reduzcan tiempos, eliminen reprocesos y permitan decisiones basadas en datos confiables.</p></div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="section-tag">Portafolio</div>
+  <h2>4 Proyectos <span class="hl">Centrales</span></h2>
+  <div class="grid-2 reveal" style="margin-bottom:1.5rem">
+    <div class="card" style="border-left:4px solid var(--accent)"><h3>P1 · Calculadora Valor Empleado</h3><p>Costo total ingreso + productividad + costo salida + alertas rotación + reportes por regional. Dashboard Excel → Power BI.</p><div style="margin-top:.75rem;display:flex;gap:.5rem"><span class="tag short">Mes 1–4</span><span class="tag" style="background:rgba(255,255,255,.04);color:var(--muted)">$8–15M</span></div></div>
+    <div class="card" style="border-left:4px solid var(--accent2)"><h3>P2 · Zona E — Bot WhatsApp</h3><p>Trámites RRHH, turnos, comunicados, emergencias, gamificación, capacitación. WhatsApp API + Twilio/Make. Piloto 50 usuarios Medellín.</p><div style="margin-top:.75rem;display:flex;gap:.5rem"><span class="tag mid">Mes 3–6</span><span class="tag" style="background:rgba(255,255,255,.04);color:var(--muted)">$12–20M</span></div></div>
+  </div>
+  <div class="grid-2 reveal">
+    <div class="card" style="border-left:4px solid var(--green)"><h3>P3 · Condugas Play — Gamificación</h3><p>XP por KPIs de rol (4 perfiles). Niveles Aprendiz→Maestro. Insignias. Tableros por brigada y regional.</p><div style="margin-top:.75rem;display:flex;gap:.5rem"><span class="tag mid">Mes 3–6</span><span class="tag" style="background:rgba(255,255,255,.04);color:var(--muted)">$15–25M</span></div></div>
+    <div class="card" style="border-left:4px solid var(--purple)"><h3>P4 · Programa Mérito Condugas</h3><p>Bonos, tiempo libre, capacitación, reconocimiento, beneficios flexibles. Concepto NO validado con gerencia.</p><div style="margin-top:.75rem;display:flex;gap:.5rem"><span class="tag long">Mes 5–12</span><span class="tag" style="background:rgba(255,255,255,.04);color:var(--muted)">$20–40M/año</span></div></div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="section-tag">Hoja de ruta</div>
+  <h2>Plan de <span class="hl">Implementación</span></h2>
+  <div class="timeline reveal">
+    <div class="tl-item"><div class="tl-phase">Mes 1–2 · Fundación</div><div class="tl-title">Construir el fundamento de datos</div><div class="tl-desc">Mapeo procesos RRHH y costos de contratación. Modelo CVE en Excel. Selección proveedor WhatsApp API. Definición reglas gamificación.</div><div class="tl-tasks"><span>Andrea: data costos</span><span>William: socializar</span><span>Sebastián: gamificación</span></div></div>
+    <div class="tl-item"><div class="tl-phase">Mes 3–4 · Piloto</div><div class="tl-title">Desarrollo y prueba en Medellín</div><div class="tl-desc">CVE con datos reales 12 meses. Bot WhatsApp piloto 50 usuarios. Gamificación piloto 1 brigada.</div><div class="tl-tasks"><span>Integración nómina</span><span>Testing bot</span><span>KPIs por rol</span></div></div>
+    <div class="tl-item"><div class="tl-phase">Mes 5–6 · Expansión</div><div class="tl-title">Despliegue a 5 regionales</div><div class="tl-desc">Bot en todas las regionales. Gamificación activa todos los roles. Catálogo incentivos operando.</div><div class="tl-tasks"><span>5 regionales</span><span>Todos los roles</span><span>Medir impacto</span></div></div>
+    <div class="tl-item"><div class="tl-phase">Mes 7–12 · Escala</div><div class="tl-title">Optimización y marca empleadora</div><div class="tl-desc">Reducción rotación 18%→10%, NPS empleado, eficiencia. Marca empleadora. Universidad interna.</div><div class="tl-tasks"><span>ROI validado</span><span>Marca empleadora</span><span>Universidad</span></div></div>
+  </div>
+</section>
+
+<section id="inversion">
+  <div class="section-tag">Viabilidad</div>
+  <h2>Inversión y <span class="hl">Retorno</span></h2>
+  <div class="grid-2 reveal">
+    <div class="card"><table class="inv-table"><thead><tr><th>Proyecto</th><th>Tipo</th><th>Inversión</th></tr></thead><tbody>
+      <tr><td>P1 CVE</td><td>Desarrollo interno</td><td class="cost">$8–15M</td></tr>
+      <tr><td>P2 Bot</td><td>SaaS + desarrollo</td><td class="cost">$12–20M</td></tr>
+      <tr><td>P3 Gamificación</td><td>Plataforma + config</td><td class="cost">$15–25M</td></tr>
+      <tr><td>P4 Incentivos</td><td>Fondo + sistema</td><td class="cost">$20–40M/año</td></tr>
+      <tr><td>TOTAL</td><td></td><td class="cost">~$55–100M</td></tr>
+    </tbody></table></div>
+    <div><div class="roi-box"><div class="big">$150–200M</div><div style="font-size:1rem;color:var(--text);margin-top:.25rem;font-weight:600">Ahorro anual estimado</div><p style="color:var(--muted);font-size:.85rem;margin-top:1rem">Reducir rotación 18%→10% en técnicos. Payback 4–8 meses.</p></div></div>
+  </div>
+</section>
+
+<section id="tareas">
+  <div class="section-tag">Próximos 30 días</div>
+  <h2>Tareas <span class="hl">Inmediatas</span></h2>
+  <div class="card reveal">
+    <div class="task-row"><div class="task-avatar w">WIL</div><div class="task-content"><h4>Socializar app liquidación HE con equipo</h4><p>Sesión + feedback documentado</p></div><div class="task-deadline">Esta semana</div></div>
+    <div class="task-row"><div class="task-avatar a">AND</div><div class="task-content"><h4>Conseguir data costos contratación/rotación</h4><p>Base datos: costo por persona. Natalia Rojas tiene rotación.</p></div><div class="task-deadline">2 semanas</div></div>
+    <div class="task-row"><div class="task-avatar s">SEB</div><div class="task-content"><h4>Diseñar concepto gamificación por roles</h4><p>Documento conceptual + wireframe Condugas Play</p></div><div class="task-deadline">2 semanas</div></div>
+    <div class="task-row"><div class="task-avatar t">E3</div><div class="task-content"><h4>Cotizar 2–3 proveedores WhatsApp API</h4><p>Tabla comparativa para decisión</p></div><div class="task-deadline">30 días</div></div>
+  </div>
+</section>
+
+<footer style="text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);color:var(--muted);font-size:.8rem">CONDUGAS S.A. B.I.C. · Roadmap de Transformación Digital · Etapa 2–3 · ESIC & CCMA 2025–2026<br><span style="color:var(--accent)">La transformación digital de Condugas comienza con las personas.</span></footer>
+
+<script>
+const empData=[
+  {label:"Experimentación Emprendedora",score:8.08,color:"var(--green)"},
+  {label:"Colaboración",score:8.08,color:"var(--green)"},
+  {label:"Toma de Decisiones",score:6.58,color:"var(--yellow)"},
+  {label:"Pensamiento Digital (Data)",score:4.62,color:"var(--red)"},
+  {label:"Foco en el Cliente",score:3.50,color:"var(--red)"},
+];
+const bc=document.getElementById('dmla-emp-bars');
+empData.forEach(d=>{
+  bc.innerHTML+=`<div class="dmla-bar"><div class="label">${d.label}</div><div class="bar-track"><div class="bar-fill" style="width:0%;background:${d.color}" data-width="${d.score*10}%"></div></div><div class="score" style="color:${d.color}">${d.score}</div></div>`;
+});
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');el.target.querySelectorAll('.bar-fill').forEach(b=>{setTimeout(()=>b.style.width=b.dataset.width,200)})}})},{threshold:.15});
+document.querySelectorAll('.reveal,#dmla-emp .card').forEach(el=>obs.observe(el));
+const secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(scrollY>=s.offsetTop-200)c=s.id});document.querySelectorAll('nav a').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+c)})});
+</script>
+</body>
+</html>

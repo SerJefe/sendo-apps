@@ -322,6 +322,50 @@
       "pádel",
       "padel",
       "fisio"
+    ],
+    "efdigital": [
+      "eficiencia digital",
+      "transformación digital",
+      "roadmap digital",
+      "dmla",
+      "esic"
+    ],
+    "marcaemp": [
+      "marca empleadora",
+      "employer branding",
+      "mejor lugar para trabajar"
+    ],
+    "dmla": [
+      "dmla",
+      "madurez digital",
+      "indice madurez"
+    ],
+    "p1cve": [
+      "calculadora valor",
+      "cve",
+      "valor empleado",
+      "costo rotación",
+      "rotacion"
+    ],
+    "p2bot": [
+      "bot whatsapp",
+      "zona e",
+      "whatsapp corporativo",
+      "twilio"
+    ],
+    "p3play": [
+      "condugas play",
+      "gamificación",
+      "gamificacion",
+      "insignias",
+      "xp por"
+    ],
+    "p4merito": [
+      "programa mérito",
+      "programa merito",
+      "incentivos",
+      "recompensas",
+      "bonos mérito"
     ]
   },
   "nodes": {
@@ -701,6 +745,41 @@
       "mentions_7d": 0
     },
     "rut": {
+      "last_seen": null,
+      "mentions_total": 0,
+      "mentions_7d": 0
+    },
+    "efdigital": {
+      "last_seen": null,
+      "mentions_total": 0,
+      "mentions_7d": 0
+    },
+    "marcaemp": {
+      "last_seen": null,
+      "mentions_total": 0,
+      "mentions_7d": 0
+    },
+    "dmla": {
+      "last_seen": null,
+      "mentions_total": 0,
+      "mentions_7d": 0
+    },
+    "p1cve": {
+      "last_seen": null,
+      "mentions_total": 0,
+      "mentions_7d": 0
+    },
+    "p2bot": {
+      "last_seen": null,
+      "mentions_total": 0,
+      "mentions_7d": 0
+    },
+    "p3play": {
+      "last_seen": null,
+      "mentions_total": 0,
+      "mentions_7d": 0
+    },
+    "p4merito": {
       "last_seen": null,
       "mentions_total": 0,
       "mentions_7d": 0

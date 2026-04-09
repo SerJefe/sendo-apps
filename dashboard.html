@@ -52,6 +52,35 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 .radar-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:2px}
 .sla-ok{color:var(--green)}.sla-warn{color:var(--orange)}.sla-expired{color:var(--red)}
 .cat-chip{font-size:10px;padding:2px 8px;border-radius:4px;display:inline-block;margin-right:4px}
+
+    .proj-detail-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);overflow-y:auto;padding:2rem}
+    .proj-detail-modal.open{display:block}
+    .proj-detail-inner{max-width:800px;margin:0 auto;background:#111827;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:2rem;position:relative}
+    .proj-detail-inner .close-btn{position:absolute;top:12px;right:16px;background:none;border:none;color:#64748b;font-size:24px;cursor:pointer}
+    .proj-detail-inner h2{font-size:1.4rem;font-weight:700;margin-bottom:4px}
+    .proj-detail-inner .proj-meta{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#f97316;letter-spacing:1px;margin-bottom:1rem}
+    .proj-detail-inner .proj-desc{color:#94a3b8;font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6}
+    .hab-section{margin-bottom:1.5rem}
+    .hab-section h3{font-size:0.95rem;font-weight:600;margin-bottom:0.75rem;color:#e2e8f0}
+    .hab-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;margin-bottom:4px;font-size:0.82rem;background:rgba(255,255,255,0.02);border-left:3px solid #475569}
+    .hab-item.H{border-left-color:#ec4899}.hab-item.O{border-left-color:#eab308}.hab-item.T{border-left-color:#06b6d4}
+    .hab-badge{font-family:monospace;font-size:0.65rem;font-weight:700;padding:2px 5px;border-radius:3px;min-width:18px;text-align:center}
+    .hab-badge.H{background:rgba(236,72,153,0.15);color:#ec4899}
+    .hab-badge.O{background:rgba(234,179,8,0.15);color:#eab308}
+    .hab-badge.T{background:rgba(6,182,212,0.15);color:#06b6d4}
+    .hab-status{margin-left:auto;font-family:monospace;font-size:0.72rem;white-space:nowrap}
+    .tl-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:1.5rem}
+    .tl-card{background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.1);border-radius:8px;padding:10px 12px}
+    .tl-card .phase{font-family:monospace;font-size:0.65rem;color:#06b6d4;font-weight:600;letter-spacing:1px;margin-bottom:4px}
+    .tl-card h4{font-size:0.85rem;font-weight:600;margin-bottom:3px}
+    .tl-card p{font-size:0.75rem;color:#64748b;line-height:1.4}
+    .proj-stats-row{display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+    .proj-stat-box{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:10px 14px;flex:1;min-width:120px;text-align:center}
+    .proj-stat-box .num{font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:800}
+    .proj-stat-box .lbl{font-size:0.65rem;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+    .full-doc-link{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.25);border-radius:8px;color:#f97316;font-size:0.85rem;font-weight:500;text-decoration:none;cursor:pointer;margin-right:8px;margin-top:8px}
+    .full-doc-link:hover{background:rgba(249,115,22,0.2)}
+
 </style>
 </head>
 <body>
@@ -681,6 +710,92 @@ async function assignAlert(id) {
 
 loadRadar();
 
+
+
+// === PROJECT DETAIL EXPANSION ===
+let _projDetailData = null;
+
+async function loadProjDetail() {
+    try {
+        const r = await fetch(DATA_BASE + '/proyectos-detail.json?t=' + Date.now());
+        if (r.ok) _projDetailData = await r.json();
+    } catch(e) { console.warn('No project detail data'); }
+}
+loadProjDetail();
+
+function showProjDetail(projKey) {
+    if (!_projDetailData || !_projDetailData[projKey]) return;
+    const ed = _projDetailData[projKey];
+    const modal = document.getElementById('projDetailModal');
+    const content = document.getElementById('projDetailContent');
+
+    let html = `<h2>${ed.titulo}</h2>
+        <div class="proj-meta">${ed.programa}</div>
+        <p class="proj-desc">${ed.objetivo_macro}</p>`;
+
+    // Stats row
+    html += `<div class="proj-stats-row">
+        <div class="proj-stat-box"><div class="num" style="color:#f97316">${ed.dmla.empresa}</div><div class="lbl">DMLA Empresa</div></div>
+        <div class="proj-stat-box"><div class="num" style="color:#ef4444">${ed.dmla.foco_cliente}</div><div class="lbl">Foco Cliente</div></div>
+        <div class="proj-stat-box"><div class="num" style="color:#22c55e">${ed.dmla.experimentacion}</div><div class="lbl">Experimentación</div></div>
+        <div class="proj-stat-box"><div class="num" style="color:#06b6d4">${ed.inversion_total}</div><div class="lbl">Inversión</div></div>
+        <div class="proj-stat-box"><div class="num" style="color:#22c55e">${ed.ahorro_estimado}</div><div class="lbl">Ahorro/año</div></div>
+    </div>`;
+
+    // Each sub-project
+    ed.proyectos.forEach(p => {
+        const priColor = p.prioridad.includes('QUICK')?'#22c55e':p.prioridad.includes('ESPERAR')?'#ef4444':'#f97316';
+        const counts = {sin_resolver:0, parcial:0, listo:0};
+        p.habilitadores.forEach(h => counts[h.estado]++);
+
+        html += `<div class="hab-section">
+            <h3 style="display:flex;align-items:center;gap:8px">
+                <span style="color:${priColor};font-family:monospace;font-size:0.7rem">${p.id}</span>
+                ${p.nombre}
+                <span style="margin-left:auto;font-family:monospace;font-size:0.65rem;color:${priColor};background:${priColor}15;padding:2px 8px;border-radius:4px">${p.prioridad} · ${p.fase} · ${p.inversion}</span>
+            </h3>
+            <p style="font-size:0.82rem;color:#94a3b8;margin-bottom:8px">${p.descripcion}</p>
+            <div style="font-size:0.75rem;margin-bottom:6px;color:#64748b">
+                <span style="color:#ef4444">${counts.sin_resolver} sin resolver</span> ·
+                <span style="color:#eab308">${counts.parcial} parcial</span> ·
+                <span style="color:#22c55e">${counts.listo} listo</span>
+            </div>`;
+
+        p.habilitadores.forEach(h => {
+            const sc = h.estado==='sin_resolver'?'#ef4444':h.estado==='listo'?'#22c55e':'#eab308';
+            const ic = h.estado==='sin_resolver'?'✗':h.estado==='listo'?'✓':'⚠';
+            html += `<div class="hab-item ${h.tipo}">
+                <span class="hab-badge ${h.tipo}">${h.tipo}</span>
+                ${h.nombre}
+                <span class="hab-status" style="color:${sc}">${ic} ${h.detalle}</span>
+            </div>`;
+        });
+        html += '</div>';
+    });
+
+    // Timeline
+    html += '<h3 style="margin-bottom:8px">Hoja de Ruta</h3><div class="tl-section">';
+    ed.timeline.forEach(t => {
+        html += `<div class="tl-card"><div class="phase">${t.fase}</div><h4>${t.titulo}</h4><p>${t.descripcion}</p></div>`;
+    });
+    html += '</div>';
+
+    // Links to full docs
+    html += `<a class="full-doc-link" href="${DATA_BASE}/Condugas_Roadmap_Etapa3.html" target="_blank">📊 Roadmap Completo</a>`;
+    html += `<a class="full-doc-link" href="${DATA_BASE}/Condugas_Habilitadores_Final.html" target="_blank">🔧 Habilitadores Interactivos</a>`;
+    html += `<a class="full-doc-link" href="/mapa-neuronal.html" target="_blank">🧠 Ver en Mapa Neuronal</a>`;
+
+    content.innerHTML = html;
+    modal.classList.add('open');
+}
+
+function closeProjDetail() {
+    document.getElementById('projDetailModal').classList.remove('open');
+}
+document.getElementById('projDetailModal').addEventListener('click', function(e) {
+    if (e.target === this) closeProjDetail();
+});
+
 </script>
 
 <section id="tareas" class="show">
@@ -877,6 +992,14 @@ loadRadar();
 </button>
 </div>
 </section>
+
+
+<div class="proj-detail-modal" id="projDetailModal">
+  <div class="proj-detail-inner">
+    <button class="close-btn" onclick="closeProjDetail()">×</button>
+    <div id="projDetailContent"></div>
+  </div>
+</div>
 
 </body>
 </html>
