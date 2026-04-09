@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-08",
+  "last_updated": "2026-04-09",
   "keywords": {
     "sebastian": [
       "sebastian",
@@ -11,11 +11,6 @@
       "ser siendo",
       "sersiendo",
       "ser.siendo"
-    ],
-    "aleteagogia": [
-      "aleteagog",
-      "alletagia",
-      "aletheia"
     ],
     "coherencia": [
       "coherencia",
@@ -36,12 +31,6 @@
     "jefatura": [
       "jefatura",
       "jefe"
-    ],
-    "alletagia": [
-      "alletagia",
-      "patrocinio",
-      "energía expansiva",
-      "energia expansiva"
     ],
     "sandbox": [
       "sandbox",
@@ -366,12 +355,19 @@
       "incentivos",
       "recompensas",
       "bonos mérito"
+    ],
+    "alletagogia": [
+      "alletagogía",
+      "alletagogia",
+      "aletheia",
+      "agōgós",
+      "conducción hacia la verdad"
     ]
   },
   "nodes": {
     "sebastian": {
-      "last_seen": "2026-04-08",
-      "mentions_total": 101,
+      "last_seen": "2026-04-09",
+      "mentions_total": 102,
       "mentions_7d": 0
     },
     "sersiendo": {
@@ -379,14 +375,9 @@
       "mentions_total": 0,
       "mentions_7d": 0
     },
-    "aleteagogia": {
-      "last_seen": null,
-      "mentions_total": 0,
-      "mentions_7d": 0
-    },
     "coherencia": {
-      "last_seen": "2026-04-08",
-      "mentions_total": 1,
+      "last_seen": "2026-04-09",
+      "mentions_total": 2,
       "mentions_7d": 0
     },
     "3dec": {
@@ -404,14 +395,9 @@
       "mentions_total": 1,
       "mentions_7d": 0
     },
-    "alletagia": {
-      "last_seen": null,
-      "mentions_total": 0,
-      "mentions_7d": 0
-    },
     "sandbox": {
-      "last_seen": null,
-      "mentions_total": 0,
+      "last_seen": "2026-04-09",
+      "mentions_total": 1,
       "mentions_7d": 0
     },
     "manual": {
@@ -440,8 +426,8 @@
       "mentions_7d": 0
     },
     "condugas": {
-      "last_seen": "2026-04-08",
-      "mentions_total": 1,
+      "last_seen": "2026-04-09",
+      "mentions_total": 2,
       "mentions_7d": 0
     },
     "csv": {
@@ -525,13 +511,13 @@
       "mentions_7d": 0
     },
     "cami": {
-      "last_seen": "2026-04-08",
-      "mentions_total": 1,
+      "last_seen": "2026-04-09",
+      "mentions_total": 2,
       "mentions_7d": 0
     },
     "andre": {
-      "last_seen": null,
-      "mentions_total": 0,
+      "last_seen": "2026-04-09",
+      "mentions_total": 1,
       "mentions_7d": 0
     },
     "willi": {
@@ -540,8 +526,8 @@
       "mentions_7d": 0
     },
     "juang": {
-      "last_seen": "2026-04-08",
-      "mentions_total": 1,
+      "last_seen": "2026-04-09",
+      "mentions_total": 2,
       "mentions_7d": 0
     },
     "carlosh": {
@@ -575,8 +561,8 @@
       "mentions_7d": 0
     },
     "adolfo": {
-      "last_seen": null,
-      "mentions_total": 0,
+      "last_seen": "2026-04-09",
+      "mentions_total": 1,
       "mentions_7d": 0
     },
     "doctor": {
@@ -595,8 +581,8 @@
       "mentions_7d": 0
     },
     "redes": {
-      "last_seen": null,
-      "mentions_total": 0,
+      "last_seen": "2026-04-09",
+      "mentions_total": 1,
       "mentions_7d": 0
     },
     "siendo": {
@@ -610,13 +596,13 @@
       "mentions_7d": 0
     },
     "lina": {
-      "last_seen": "2026-04-08",
-      "mentions_total": 1,
+      "last_seen": "2026-04-09",
+      "mentions_total": 2,
       "mentions_7d": 0
     },
     "ema": {
-      "last_seen": "2026-04-08",
-      "mentions_total": 1,
+      "last_seen": "2026-04-09",
+      "mentions_total": 2,
       "mentions_7d": 0
     },
     "vendemos": {
@@ -640,8 +626,8 @@
       "mentions_7d": 0
     },
     "stgo": {
-      "last_seen": null,
-      "mentions_total": 0,
+      "last_seen": "2026-04-09",
+      "mentions_total": 1,
       "mentions_7d": 0
     },
     "serjefe": {
@@ -710,8 +696,8 @@
       "mentions_7d": 0
     },
     "fam": {
-      "last_seen": null,
-      "mentions_total": 0,
+      "last_seen": "2026-04-09",
+      "mentions_total": 1,
       "mentions_7d": 0
     },
     "amor": {
@@ -725,8 +711,8 @@
       "mentions_7d": 0
     },
     "pa": {
-      "last_seen": null,
-      "mentions_total": 0,
+      "last_seen": "2026-04-09",
+      "mentions_total": 1,
       "mentions_7d": 0
     },
     "ma": {
@@ -750,8 +736,8 @@
       "mentions_7d": 0
     },
     "efdigital": {
-      "last_seen": null,
-      "mentions_total": 0,
+      "last_seen": "2026-04-09",
+      "mentions_total": 1,
       "mentions_7d": 0
     },
     "marcaemp": {
@@ -780,6 +766,11 @@
       "mentions_7d": 0
     },
     "p4merito": {
+      "last_seen": null,
+      "mentions_total": 0,
+      "mentions_7d": 0
+    },
+    "alletagogia": {
       "last_seen": null,
       "mentions_total": 0,
       "mentions_7d": 0

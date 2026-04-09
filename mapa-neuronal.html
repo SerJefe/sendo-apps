@@ -97,15 +97,15 @@ svg{width:100vw;height:100vh;display:block}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script>
 const N=[
-{id:"sebastian",label:"Sebastián",g:"center",tp:"persona",r:30,dt:"CEO Condugas · Siendo Consulting · SER.SIENDO · Alletagia",st:""},
+{id:"sebastian",label:"Sebastián",g:"center",tp:"persona",r:30,dt:"CEO Condugas · Siendo Consulting · SER.SIENDO · Alletagogía",st:""},
 // MODELO
 {id:"sersiendo",label:"SER.SIENDO",g:"modelo",tp:"concepto",r:24,dt:"El ser no es estático, es un proceso continuo. Solo se es siendo."},
-{id:"aleteagogia",label:"Aleteagogía",g:"modelo",tp:"concepto",r:17,dt:"Aletheia + Agōgós. Conducción hacia la verdad del otro. El arte de servirle al otro en su descubrimiento."},
+// alletagogia node already defined above — removed duplicate
 {id:"coherencia",label:"Coherencia (EPA)",g:"modelo",tp:"concepto",r:16,dt:"Emoción + Pensamiento + Acción alineados."},
 {id:"3dec",label:"S → RC → D",g:"modelo",tp:"concepto",r:17,dt:"Sobrevivir → Recuperar Control → Desarrollarse. Base del Comité SV."},
 {id:"3mot",label:"3 Motivadores",g:"modelo",tp:"concepto",r:14,dt:"Identidad · Autonomía · Disfrutar"},
 {id:"jefatura",label:"Jefatura",g:"modelo",tp:"concepto",r:17,dt:"NUNCA liderazgo. El jefe es el sistema nervioso de la organización."},
-{id:"alletagia",label:"Alletagia",g:"modelo",tp:"concepto",r:17,dt:"Framework jefatura. Energía expansiva (patrocinio) vs intensiva (responsabilidad)."},
+{id:"alletagogia",label:"Alletagogía",g:"modelo",tp:"concepto",r:17,dt:"Aletheia + Agōgós. Conducción hacia la verdad del otro. Postura de acompañamiento — no técnica. Neologismo de Sebastián."},
 {id:"sandbox",label:"Sandbox Decisiones",g:"modelo",tp:"concepto",r:14,dt:"Experimentar decisiones, medir impacto. Persona explica emoción. Boosting + Nudge."},
 {id:"manual",label:"Manual Intervención",g:"modelo",tp:"concepto",r:14,dt:"Escucho completo → me pregunto → dudas/riesgo/aporte → emoción → lógica."},
 {id:"10el",label:"10 Elementos",g:"modelo",tp:"concepto",r:13,dt:"Toma decisiones · Promesas · Pensamiento sistémico · Equipo logre · Teleología · Objetivos · Confiable · Solucionador · Madurez · Conversaciones francas"},
@@ -134,8 +134,8 @@ const N=[
 // SOCIO
 {id:"silar",label:"SILAR",g:"condugas",tp:"socio",r:16,dt:"Socio: Ayura (cierre) + Bucaramanga (Vantí) + OYMA (EPM). Problemas dic 2025: equipos alquilados sin consultar."},
 // PERSONAS CONDUGAS
-{id:"cami",label:"Cami",g:"condugas",tp:"persona",r:13,dt:"Juan Camilo Berrio — Ger Proyectos. Sobrino. Expansiva.",st:"delegar"},
-{id:"andre",label:"Andre",g:"condugas",tp:"persona",r:13,dt:"Andrea Bernal — Dir Financiera. Intensiva.",st:"delegar"},
+{id:"cami",label:"Cami",g:"condugas",tp:"persona",r:13,dt:"Juan Camilo Berrio — Ger Proyectos. Sobrino.",st:"delegar"},
+{id:"andre",label:"Andre",g:"condugas",tp:"persona",r:13,dt:"Andrea Bernal — Dir Financiera.",st:"delegar"},
 {id:"willi",label:"Willi",g:"condugas",tp:"persona",r:12,dt:"William López — Dir Admin. 3 puntos feedback.",st:"hacer"},
 {id:"juang",label:"Juan G",g:"condugas",tp:"persona",r:12,dt:"Juan Guillermo — Ger Estrategia."},
 {id:"carlosh",label:"Carlos H",g:"condugas",tp:"persona",r:12,dt:"Carlos Hernán López — Ger Nuevos Negocios. Camacol 27 mar."},
@@ -159,9 +159,9 @@ const N=[
 {id:"p3play",label:"P3 Play",g:"condugas",tp:"proyecto",r:14,dt:"Condugas Play — Gamificación por rol. Prioritario. $15-25M. Mes 3-6. XP + niveles + insignias. KPIs desde cero.",st:"hacer"},
 {id:"p4merito",label:"P4 Mérito",g:"condugas",tp:"proyecto",r:13,dt:"Programa Mérito. Esperar P1+P3. $20-40M/año. Mes 5-12. Bonos, tiempo libre, reconocimiento. NO validado con gerencia.",st:"hacer"},
 // SIENDO
-{id:"siendo",label:"Siendo",g:"siendo",tp:"empresa",r:22,dt:"Consultoría jefatura. Alletagia validado."},
+{id:"siendo",label:"Siendo",g:"siendo",tp:"empresa",r:22,dt:"Consultoría jefatura. Alletagogía como postura central."},
 {id:"mona",label:"Mona",g:"siendo",tp:"persona",r:13,dt:"Mónica González — Comercial."},
-{id:"lina",label:"Lina",g:"siendo",tp:"persona",r:14,dt:"Lina Russi — Gestora. Expansiva. 20%, $1M/mes.",st:"delegar"},
+{id:"lina",label:"Lina",g:"siendo",tp:"persona",r:14,dt:"Lina Russi — Gestora. 20%, $1M/mes.",st:"delegar"},
 {id:"ema",label:"Ema",g:"siendo",tp:"persona",r:14,dt:"Emanuel — Dev. Odoo, apps.",st:"delegar"},
 {id:"vendemos",label:"Vendemos",g:"siendo",tp:"cliente",r:14,dt:"Cliente activo. 4 sesiones jefatura."},
 {id:"dojo",label:"DOJO",g:"siendo",tp:"prospecto",r:11,dt:"Prospecto con Lina.",st:"hacer"},
@@ -196,7 +196,7 @@ const N=[
 const L=[
 {s:"sebastian",t:"condugas"},{s:"sebastian",t:"siendo"},{s:"sebastian",t:"serjefe"},{s:"sebastian",t:"pat"},{s:"sebastian",t:"fam"},{s:"sebastian",t:"sersiendo"},
 // Modelo
-{s:"sersiendo",t:"aleteagogia"},{s:"sersiendo",t:"coherencia"},{s:"sersiendo",t:"3dec"},{s:"sersiendo",t:"3mot"},{s:"sersiendo",t:"jefatura"},{s:"sersiendo",t:"hb"},{s:"sersiendo",t:"rlunes"},{s:"jefatura",t:"alletagia"},{s:"alletagia",t:"sandbox"},{s:"alletagia",t:"manual"},{s:"alletagia",t:"10el"},{s:"alletagia",t:"9comp"},{s:"alletagia",t:"serjefe"},{s:"alletagia",t:"siendo"},{s:"3dec",t:"csv"},
+{s:"sersiendo",t:"alletagogia"},{s:"sersiendo",t:"coherencia"},{s:"sersiendo",t:"3dec"},{s:"sersiendo",t:"3mot"},{s:"sersiendo",t:"jefatura"},{s:"sersiendo",t:"hb"},{s:"sersiendo",t:"rlunes"},{s:"jefatura",t:"alletagogia"},{s:"alletagogia",t:"sandbox"},{s:"alletagogia",t:"manual"},{s:"alletagogia",t:"10el"},{s:"alletagogia",t:"9comp"},{s:"alletagogia",t:"serjefe"},{s:"alletagogia",t:"siendo"},{s:"3dec",t:"csv"},
 // Condugas
 {s:"condugas",t:"csv"},{s:"condugas",t:"ccaja"},{s:"condugas",t:"odoo"},{s:"condugas",t:"ugpp"},{s:"condugas",t:"redes"},{s:"condugas",t:"nneg"},{s:"csv",t:"ccaja"},{s:"csv",t:"oyma"},
 // Contratos → Clientes → Socio
@@ -222,7 +222,7 @@ const L=[
 // Siendo
 {s:"siendo",t:"mona"},{s:"siendo",t:"lina"},{s:"siendo",t:"ema"},{s:"siendo",t:"vendemos"},{s:"siendo",t:"dojo"},{s:"siendo",t:"implantech"},{s:"siendo",t:"codoo"},{s:"siendo",t:"stgo"},{s:"lina",t:"dojo"},{s:"lina",t:"implantech"},{s:"ema",t:"codoo"},{s:"mona",t:"condugas"},
 // SerJefe
-{s:"serjefe",t:"guias"},{s:"serjefe",t:"ig"},{s:"serjefe",t:"app"},{s:"serjefe",t:"web"},{s:"serjefe",t:"aleteagogia"},
+{s:"serjefe",t:"guias"},{s:"serjefe",t:"ig"},{s:"serjefe",t:"app"},{s:"serjefe",t:"web"},{s:"serjefe",t:"alletagogia"},
 // Patrimonio
 {s:"pat",t:"casa"},{s:"pat",t:"monte"},{s:"pat",t:"jpersonal"},{s:"pat",t:"inv"},{s:"pat",t:"gobcorp"},{s:"pat",t:"ozzlo"},{s:"pat",t:"maq"},{s:"gobcorp",t:"fam"},
 // Familia
