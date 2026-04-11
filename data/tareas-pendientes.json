@@ -89,7 +89,57 @@
       "tipo": "pendiente",
       "estado": "aceptada",
       "fecha": "2026-04-08"
+    },
+    {
+      "id": "2026-04-11-001",
+      "tarea": "Preparar borrador sobre Condugas para presentación en primera junta directiva",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta",
+      "contexto": "Primera junta directiva - presentación de 15 minutos de la empresa",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-11"
+    },
+    {
+      "id": "2026-04-11-002",
+      "tarea": "Hablar con Alejandro para hacerle oferta de participación en junta directiva",
+      "responsable": "Gilberto",
+      "prioridad": "alta",
+      "contexto": "Conformación de junta directiva - protocolo previo",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-11"
+    },
+    {
+      "id": "2026-04-11-003",
+      "tarea": "Coordinar fechas tentativas para primera junta directiva (20, 21, 22 del mes)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta",
+      "contexto": "Primera junta directiva con desayuno",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-11"
+    },
+    {
+      "id": "2026-04-11-004",
+      "tarea": "Llamar a Olga para informar sobre estado de Condugas y solicitar movimiento estratégico",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media",
+      "contexto": "Junta directiva - Olga participará como miembro",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-11"
+    },
+    {
+      "id": "2026-04-11-005",
+      "tarea": "Enviar contrato en cuestión para revisión",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media",
+      "contexto": "Análisis de abuso de poder de Catalina Betancourt en proceso contractual",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-11"
     }
   ],
-  "ultima_actualizacion": "2026-04-10T12:00:13.684494"
+  "ultima_actualizacion": "2026-04-11T23:44:50.298694"
 }

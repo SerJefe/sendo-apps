@@ -97,6 +97,7 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 <button onclick="show('equipo')">Equipo</button>
 <button onclick="show('briefing')">Briefing</button>
 <button onclick="window.open('mapa-neuronal.html','_blank')">Mapa</button>
+<button onclick="window.location.href='priorizador.html'" style="background:rgba(168,85,247,.15);color:#c4b5fd;border:1px solid rgba(168,85,247,.3)">⚡ Priorizar</button>
 </nav>
 <main>
 <section id="inicio" class="show">
@@ -722,6 +723,27 @@ async function loadProjDetail() {
     } catch(e) { console.warn('No project detail data'); }
 }
 loadProjDetail();
+
+// === AUTO-REFRESH cada 5 minutos ===
+// Refresca tareas, pendientes, radar, kpis sin recargar la página.
+// Resuelve: el dashboard mostraba datos viejos hasta hacer F5 manual.
+const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
+setInterval(function(){
+  try { loadPendientes(); } catch(e){}
+  try { loadMisTareas(); } catch(e){}
+  try { loadRadar(); } catch(e){}
+  try { loadProjDetail(); } catch(e){}
+  // Si hay un loader de KPIs, descomenta:
+  // try { loadKpis(); } catch(e){}
+}, REFRESH_INTERVAL_MS);
+
+// Refresca también al volver el foco a la pestaña (común con TDAH: cambias de tab y vuelves)
+document.addEventListener('visibilitychange', function(){
+  if (document.visibilityState === 'visible') {
+    try { loadPendientes(); } catch(e){}
+    try { loadMisTareas(); } catch(e){}
+  }
+});
 
 function showProjDetail(projKey) {
     if (!_projDetailData || !_projDetailData[projKey]) return;

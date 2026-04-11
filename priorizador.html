@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Priorizador · Sebastián</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+  :root { color-scheme: dark; }
+  html,body { background:#0b0d10; }
+  input[type=range]{-webkit-appearance:none;height:4px;background:#2a2f37;border-radius:9999px;}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:18px;width:18px;border-radius:9999px;background:#fff;cursor:pointer;border:2px solid #0b0d10;box-shadow:0 0 0 1px #fff;}
+  .glass{background:rgba(255,255,255,0.03);backdrop-filter:blur(6px);}
+</style>
+</head>
+<body class="text-neutral-100 font-sans antialiased">
+<div id="root"></div>
+
+<script type="text/babel" data-presets="env,react">
+/* =========================================================
+   PRIORIZADOR — opera contra tareas-tracker.json (estado real)
+   Backend: /tasks/* (task-toggle-api.py puerto 8099)
+   ========================================================= */
+
+const API = "/tasks";
+const DATA_TRACKER = "/data/tareas-tracker.json";
+const REFRESH_MS = 30 * 1000;
+
+// ---------- LÓGICA PURA ----------
+const PESOS = { impacto:3, urgencia:2, consecuencia:3, arrastre:2, facilidad:1 };
+
+function calcularPuntaje(t){
+  return (t.impacto||3)*PESOS.impacto + (t.urgencia||3)*PESOS.urgencia +
+         (t.consecuencia||3)*PESOS.consecuencia + (t.arrastre||3)*PESOS.arrastre +
+         (t.facilidad||3)*PESOS.facilidad;
+}
+function clasificarNivel(p){
+  if (p>=45) return "maxima";
+  if (p>=35) return "alta";
+  if (p>=25) return "media";
+  return "baja";
+}
+function recomendar(t){
+  const p = calcularPuntaje(t);
+  if (p>=35 && (t.facilidad||3)<=2)
+    return { accion:"Dividir", motivo:"Importante pero difusa. Conviértela en una acción concreta de 10–15 min." };
+  if (p>=45) return { accion:"Hacer hoy", motivo:"Puntaje máximo. Próxima ventana de foco." };
+  if (p>=35) return { accion:"Programar pronto", motivo:"Bloquea tiempo esta semana." };
+  if (p>=25){
+    if ((t.arrastre||3)>=4 && (t.facilidad||3)>=3)
+      return { accion:"Delegar", motivo:"Destraba a otros y es ejecutable. Buen candidato a soltar." };
+    return { accion:"Programar", motivo:"Prioridad media. Agéndala sin urgencia." };
+  }
+  return { accion:"Backlog", motivo:"Baja prioridad real. No compita con lo importante." };
+}
+function generarAlertas(t){
+  const out = [];
+  const p = calcularPuntaje(t);
+  if ((t.urgencia||3)>=4 && (t.impacto||3)<=2 && (t.consecuencia||3)<=2)
+    out.push({ tipo:"falso urgente", texto:"Esto puede ser ruido urgente más que prioridad real." });
+  if ((t.impacto||3)>=4 && (t.arrastre||3)>=4 && (t.urgencia||3)<=2)
+    out.push({ tipo:"joya importante", texto:"Importante aunque no urgente. Protege espacio para moverlo." });
+  if (p>=35 && (t.facilidad||3)<=2)
+    out.push({ tipo:"bloqueo", texto:"Importante pero difusa. Divídela en una acción de 10–15 min." });
+  return out;
+}
+function ordenarPorPrioridad(tareas){
+  return [...tareas].sort((a,b)=>{
+    const ac = a.estado==="cerrada", bc = b.estado==="cerrada";
+    if (ac && !bc) return 1;
+    if (bc && !ac) return -1;
+    const ae = !!a.evaluada, be = !!b.evaluada;
+    if (ae && !be) return -1;
+    if (be && !ae) return 1;
+    return calcularPuntaje(b)-calcularPuntaje(a);
+  });
+}
+
+const NIVELES = {
+  maxima: { label:"Máxima", color:"bg-rose-500", text:"text-rose-300", ring:"ring-rose-500/40", soft:"bg-rose-500/10" },
+  alta:   { label:"Alta",   color:"bg-amber-500",text:"text-amber-300",ring:"ring-amber-500/40",soft:"bg-amber-500/10" },
+  media:  { label:"Media",  color:"bg-sky-500",  text:"text-sky-300",  ring:"ring-sky-500/40",  soft:"bg-sky-500/10" },
+  baja:   { label:"Baja",   color:"bg-neutral-500",text:"text-neutral-300",ring:"ring-neutral-500/40",soft:"bg-neutral-500/10" },
+};
+const CATEGORIAS = ["trabajo","personal","salud","finanzas","ideas","riesgos","familia","otros"];
+const CRITERIOS = [
+  { key:"impacto",      label:"Impacto real",        hint:"¿Qué tanto cambia algo importante si se ejecuta?" },
+  { key:"urgencia",     label:"Urgencia verdadera",  hint:"¿Qué tan pronto genera problema no atenderla?" },
+  { key:"consecuencia", label:"Consecuencia",        hint:"¿Qué pasa si se aplaza o ignora?" },
+  { key:"arrastre",     label:"Efecto arrastre",     hint:"¿Cuántas cosas/personas destraba?" },
+  { key:"facilidad",    label:"Facilidad de arranque",hint:"¿Qué tan fácil es empezar YA?" },
+];
+
+// ---------- API ----------
+async function apiGet(){
+  const r = await fetch(DATA_TRACKER + "?t=" + Date.now(), { cache:"no-store" });
+  if (!r.ok) throw new Error("No pude leer tareas-tracker.json");
+  return r.json();
+}
+async function apiPost(path, body){
+  const r = await fetch(API + path, {
+    method:"POST",
+    headers:{ "Content-Type":"application/json" },
+    body: JSON.stringify(body)
+  });
+  if (!r.ok) {
+    const e = await r.json().catch(()=>({error:r.statusText}));
+    throw new Error(e.error || "API error");
+  }
+  return r.json();
+}
+
+const { useState, useEffect, useMemo, useRef, useCallback } = React;
+
+// ---------- COMPONENTES ----------
+function PriorityBadge({ nivel, puntaje }){
+  const n = NIVELES[nivel] || NIVELES.baja;
+  return (
+    <div className={`inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-medium ${n.soft} ${n.text} ring-1 ${n.ring}`}>
+      <span className={`w-1.5 h-1.5 rounded-full ${n.color}`}></span>
+      {n.label} · {puntaje}
+    </div>
+  );
+}
+
+function Slider({ value, onChange, label, hint }){
+  return (
+    <div className="space-y-1.5">
+      <div className="flex items-baseline justify-between">
+        <div>
+          <div className="text-sm font-medium text-neutral-100">{label}</div>
+          <div className="text-xs text-neutral-500">{hint}</div>
+        </div>
+        <div className="text-2xl font-light tabular-nums w-8 text-right">{value}</div>
+      </div>
+      <input type="range" min="1" max="5" step="1" value={value}
+        onChange={e=>onChange(parseInt(e.target.value))} className="w-full" />
+      <div className="flex justify-between text-[10px] text-neutral-600 px-0.5">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+      </div>
+    </div>
+  );
+}
+
+function QuickCapture({ onAdd, busy }){
+  const [v,setV] = useState("");
+  const [cat,setCat] = useState("trabajo");
+  const ref = useRef();
+  useEffect(()=>{ ref.current?.focus(); },[]);
+  return (
+    <form onSubmit={async e=>{
+        e.preventDefault();
+        if(!v.trim() || busy) return;
+        const txt = v; setV("");
+        await onAdd(txt, cat);
+      }} className="flex flex-col sm:flex-row gap-2">
+      <input ref={ref} value={v} onChange={e=>setV(e.target.value)}
+        placeholder="Captura rápida — escribe la tarea y Enter"
+        className="flex-1 bg-neutral-900/60 border border-neutral-800 focus:border-neutral-600 outline-none rounded-xl px-4 py-3 text-base placeholder:text-neutral-600" />
+      <select value={cat} onChange={e=>setCat(e.target.value)}
+        className="bg-neutral-900/60 border border-neutral-800 rounded-xl px-3 py-3 text-sm">
+        {CATEGORIAS.map(c=><option key={c}>{c}</option>)}
+      </select>
+      <button disabled={busy}
+        className="px-5 py-3 rounded-xl bg-white text-black font-medium hover:bg-neutral-200 transition disabled:opacity-50">
+        Añadir
+      </button>
+    </form>
+  );
+}
+
+function TaskRow({ t, onClick, onToggle }){
+  const evaluada = !!t.evaluada;
+  const p = evaluada ? (t.puntaje ?? calcularPuntaje(t)) : null;
+  const nivel = evaluada ? (t.nivel ?? clasificarNivel(p)) : null;
+  const r = evaluada ? recomendar(t) : null;
+  const alertas = evaluada ? generarAlertas(t) : [];
+  const cerrada = t.estado === "cerrada";
+  return (
+    <div className={`glass border ${cerrada?"border-neutral-900 opacity-50":"border-neutral-800/80"} hover:border-neutral-700 rounded-2xl p-4 transition group`}>
+      <div className="flex items-start gap-3">
+        <button onClick={e=>{e.stopPropagation(); onToggle(t);}}
+          title={cerrada?"reabrir":"marcar como hecha"}
+          className={`mt-1 w-5 h-5 rounded-full border-2 ${cerrada?"bg-emerald-500 border-emerald-500":"border-neutral-600 hover:border-neutral-300"} shrink-0 flex items-center justify-center transition`}>
+          {cerrada && <span className="text-[10px] text-black">✓</span>}
+        </button>
+        <button onClick={()=>onClick(t)} className="flex-1 min-w-0 text-left">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-[10px] uppercase tracking-wider text-neutral-500">{t.categoria || "trabajo"}</span>
+            {t.origen==="limitless" && <span className="text-[10px] uppercase tracking-wider text-neutral-600">· limitless</span>}
+            {!evaluada && <span className="text-[10px] uppercase tracking-wider text-amber-500/70">· sin evaluar</span>}
+          </div>
+          <div className={`text-base font-medium ${cerrada?"line-through text-neutral-500":"text-neutral-100"}`}>{t.tarea}</div>
+          {t.proxima_accion && (
+            <div className="text-xs text-neutral-400 mt-1">→ {t.proxima_accion}</div>
+          )}
+          {t.contexto && !t.proxima_accion && (
+            <div className="text-xs text-neutral-600 mt-1 italic">{t.contexto}</div>
+          )}
+        </button>
+        <div className="flex flex-col items-end gap-2 shrink-0">
+          {evaluada && <PriorityBadge nivel={nivel} puntaje={p} />}
+          {evaluada && <span className="text-[11px] text-neutral-400">{r.accion}</span>}
+        </div>
+      </div>
+      {alertas.length>0 && (
+        <div className="mt-3 flex flex-wrap gap-1.5 pl-8">
+          {alertas.map((a,i)=>(
+            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-300 ring-1 ring-amber-500/30">
+              ⚠ {a.tipo}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function EvalModal({ tarea, onClose, onSave, onDelete, onUpdateMeta }){
+  const [t,setT] = useState({
+    impacto:3, urgencia:3, consecuencia:3, arrastre:3, facilidad:3,
+    ...tarea
+  });
+  const p = calcularPuntaje(t);
+  const nivel = clasificarNivel(p);
+  const rec = recomendar(t);
+  const alertas = generarAlertas(t);
+
+  function set(k,v){ setT(prev=>({...prev,[k]:v})); }
+
+  async function save(){
+    // 1. score
+    await onSave(t.id, {
+      impacto:t.impacto, urgencia:t.urgencia, consecuencia:t.consecuencia,
+      arrastre:t.arrastre, facilidad:t.facilidad
+    });
+    // 2. meta (solo si cambió algo editable)
+    await onUpdateMeta(t.id, {
+      tarea: t.tarea,
+      categoria: t.categoria || "trabajo",
+      proxima_accion: t.proxima_accion || "",
+      descripcion: t.descripcion || "",
+      contexto: t.contexto || ""
+    });
+    onClose();
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 overflow-y-auto">
+      <div className="w-full max-w-3xl bg-neutral-950 border border-neutral-800 rounded-2xl shadow-2xl my-4">
+        <div className="p-5 border-b border-neutral-900 flex items-start gap-3">
+          <input value={t.tarea||""} onChange={e=>set("tarea",e.target.value)}
+            className="flex-1 bg-transparent text-xl font-medium outline-none placeholder:text-neutral-700" />
+          <button onClick={onClose} className="text-neutral-500 hover:text-neutral-100 text-2xl leading-none px-2">×</button>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-6 p-5">
+          <div className="space-y-5">
+            {CRITERIOS.map(c=>(
+              <Slider key={c.key} label={c.label} hint={c.hint}
+                value={t[c.key]} onChange={v=>set(c.key,v)} />
+            ))}
+          </div>
+
+          <div className="space-y-4">
+            <div className={`rounded-2xl p-5 ${NIVELES[nivel].soft} ring-1 ${NIVELES[nivel].ring}`}>
+              <div className="text-xs uppercase tracking-wider text-neutral-400">Puntaje</div>
+              <div className="flex items-baseline gap-2">
+                <div className="text-5xl font-light tabular-nums">{p}</div>
+                <div className="text-sm text-neutral-500">/ 55</div>
+              </div>
+              <div className="mt-2"><PriorityBadge nivel={nivel} puntaje={p} /></div>
+              <div className="mt-4">
+                <div className="text-xs uppercase tracking-wider text-neutral-400">Recomendación</div>
+                <div className="text-lg font-medium">{rec.accion}</div>
+                <div className="text-xs text-neutral-400 mt-1 leading-relaxed">{rec.motivo}</div>
+              </div>
+            </div>
+
+            {alertas.length>0 && (
+              <div className="space-y-2">
+                {alertas.map((a,i)=>(
+                  <div key={i} className="text-xs p-3 rounded-xl bg-amber-500/10 text-amber-200 ring-1 ring-amber-500/30 leading-relaxed">
+                    ⚠ {a.texto}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <div>
+              <label className="text-xs text-neutral-400">Categoría</label>
+              <select value={t.categoria||"trabajo"} onChange={e=>set("categoria",e.target.value)}
+                className="w-full mt-1 bg-neutral-900 border border-neutral-800 rounded-lg px-3 py-2 text-sm">
+                {CATEGORIAS.map(c=><option key={c}>{c}</option>)}
+              </select>
+            </div>
+
+            <div>
+              <label className="text-xs text-neutral-400">Próxima acción concreta (10–15 min)</label>
+              <input value={t.proxima_accion||""} onChange={e=>set("proxima_accion",e.target.value)}
+                placeholder="¿Cuál es el primer paso ejecutable?"
+                className="w-full mt-1 bg-neutral-900 border border-neutral-800 rounded-lg px-3 py-2 text-sm outline-none focus:border-neutral-600" />
+            </div>
+
+            {t.contexto && (
+              <div>
+                <label className="text-xs text-neutral-400">Contexto (de origen)</label>
+                <textarea value={t.contexto||""} onChange={e=>set("contexto",e.target.value)}
+                  rows="2"
+                  className="w-full mt-1 bg-neutral-900 border border-neutral-800 rounded-lg px-3 py-2 text-xs text-neutral-400 outline-none focus:border-neutral-600 resize-none" />
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="p-5 border-t border-neutral-900 flex items-center justify-between">
+          <button onClick={()=>{ if(confirm("¿Eliminar tarea del tracker?")) onDelete(t.id); }}
+            className="text-xs text-neutral-500 hover:text-rose-400">Eliminar</button>
+          <div className="flex gap-2">
+            <button onClick={onClose} className="px-4 py-2 rounded-lg text-sm text-neutral-300 hover:bg-neutral-900">Cancelar</button>
+            <button onClick={save} className="px-5 py-2 rounded-lg bg-white text-black text-sm font-medium hover:bg-neutral-200">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Summary({ tareas }){
+  const counts = useMemo(()=>{
+    const c = { maxima:0, alta:0, media:0, baja:0, sin:0 };
+    tareas.forEach(t=>{
+      if (t.estado==="cerrada") return;
+      if (!t.evaluada) c.sin++;
+      else c[t.nivel || clasificarNivel(calcularPuntaje(t))]++;
+    });
+    return c;
+  },[tareas]);
+  const items = [["Máxima","maxima"],["Alta","alta"],["Media","media"],["Baja","baja"]];
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+      {items.map(([label,key])=>{
+        const n = NIVELES[key];
+        return (
+          <div key={key} className={`rounded-xl p-3 ${n.soft} ring-1 ${n.ring}`}>
+            <div className="text-[10px] uppercase tracking-wider text-neutral-400">{label}</div>
+            <div className={`text-2xl font-light ${n.text}`}>{counts[key]}</div>
+          </div>
+        );
+      })}
+      <div className="rounded-xl p-3 bg-neutral-900/60 ring-1 ring-neutral-800">
+        <div className="text-[10px] uppercase tracking-wider text-neutral-400">Sin evaluar</div>
+        <div className="text-2xl font-light text-neutral-300">{counts.sin}</div>
+      </div>
+    </div>
+  );
+}
+
+function Filters({ filtros, setFiltros }){
+  return (
+    <div className="flex flex-wrap gap-2 text-xs">
+      <select value={filtros.categoria} onChange={e=>setFiltros({...filtros,categoria:e.target.value})}
+        className="bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5">
+        <option value="">Todas las categorías</option>
+        {CATEGORIAS.map(c=><option key={c}>{c}</option>)}
+      </select>
+      <select value={filtros.nivel} onChange={e=>setFiltros({...filtros,nivel:e.target.value})}
+        className="bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5">
+        <option value="">Todos los niveles</option>
+        {Object.keys(NIVELES).map(k=><option key={k} value={k}>{NIVELES[k].label}</option>)}
+      </select>
+      <select value={filtros.estado} onChange={e=>setFiltros({...filtros,estado:e.target.value})}
+        className="bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5">
+        <option value="">Abiertas y cerradas</option>
+        <option value="abierta">Solo abiertas</option>
+        <option value="cerrada">Solo cerradas</option>
+      </select>
+      <select value={filtros.origen} onChange={e=>setFiltros({...filtros,origen:e.target.value})}
+        className="bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5">
+        <option value="">Todos los orígenes</option>
+        <option value="limitless">Limitless</option>
+        <option value="manual">Manual</option>
+      </select>
+    </div>
+  );
+}
+
+function App(){
+  const [tareas,setTareas] = useState([]);
+  const [meta,setMeta] = useState({ ultima_actualizacion: null });
+  const [editando,setEditando] = useState(null);
+  const [tab,setTab] = useState("dashboard");
+  const [filtros,setFiltros] = useState({ categoria:"", nivel:"", estado:"abierta", origen:"" });
+  const [busy,setBusy] = useState(false);
+  const [error,setError] = useState("");
+  const [lastFetch,setLastFetch] = useState(null);
+
+  const load = useCallback(async ()=>{
+    try {
+      const data = await apiGet();
+      setTareas(data.tareas || []);
+      setMeta({ ultima_actualizacion: data.ultima_actualizacion });
+      setLastFetch(new Date());
+      setError("");
+    } catch(e){ setError(e.message); }
+  },[]);
+
+  useEffect(()=>{
+    load();
+    const id = setInterval(load, REFRESH_MS);
+    return ()=>clearInterval(id);
+  },[load]);
+
+  async function add(titulo, categoria){
+    setBusy(true);
+    try {
+      await apiPost("/create", { tarea:titulo, categoria });
+      await load();
+    } catch(e){ setError(e.message); }
+    finally { setBusy(false); }
+  }
+
+  async function score(id, body){
+    try {
+      await apiPost("/score", { id, ...body });
+      await load();
+    } catch(e){ setError(e.message); }
+  }
+
+  async function updateMeta(id, body){
+    try {
+      await apiPost("/update", { id, ...body });
+    } catch(e){ setError(e.message); }
+  }
+
+  async function toggle(t){
+    try {
+      await apiPost("/toggle", { id:t.id });
+      await load();
+    } catch(e){ setError(e.message); }
+  }
+
+  async function remove(id){
+    try {
+      await apiPost("/delete", { id });
+      setEditando(null);
+      await load();
+    } catch(e){ setError(e.message); }
+  }
+
+  const abiertas = tareas.filter(t=>t.estado!=="cerrada");
+  const sinEvaluar = abiertas.filter(t=>!t.evaluada);
+  const evaluadas  = ordenarPorPrioridad(abiertas.filter(t=>t.evaluada));
+  const top = evaluadas.slice(0,5);
+
+  const filtradas = useMemo(()=>{
+    return ordenarPorPrioridad(tareas).filter(t=>{
+      if (filtros.categoria && (t.categoria||"trabajo")!==filtros.categoria) return false;
+      if (filtros.estado && t.estado!==filtros.estado) return false;
+      if (filtros.origen && t.origen!==filtros.origen) return false;
+      if (filtros.nivel){
+        if (!t.evaluada) return false;
+        const niv = t.nivel || clasificarNivel(calcularPuntaje(t));
+        if (niv!==filtros.nivel) return false;
+      }
+      return true;
+    });
+  },[tareas,filtros]);
+
+  return (
+    <div className="min-h-screen max-w-5xl mx-auto px-4 sm:px-6 py-8">
+      <header className="flex items-center justify-between mb-8">
+        <div>
+          <div className="text-[11px] uppercase tracking-[0.2em] text-neutral-500">Priorizador · operando sobre tracker real</div>
+          <h1 className="text-2xl font-light text-neutral-100">¿Qué hago primero?</h1>
+        </div>
+        <nav className="flex gap-1 text-sm items-center">
+          {[["dashboard","Dashboard"],["lista","Todas"]].map(([k,l])=>(
+            <button key={k} onClick={()=>setTab(k)}
+              className={`px-3 py-1.5 rounded-lg transition ${tab===k?"bg-neutral-800 text-white":"text-neutral-500 hover:text-neutral-200"}`}>
+              {l}
+            </button>
+          ))}
+          <a href="/" className="px-3 py-1.5 rounded-lg text-neutral-500 hover:text-neutral-200 transition">← Dashboard</a>
+        </nav>
+      </header>
+
+      {error && (
+        <div className="mb-4 text-xs p-3 rounded-lg bg-rose-500/10 text-rose-300 ring-1 ring-rose-500/30">
+          ⚠ {error}
+        </div>
+      )}
+
+      <section className="mb-6">
+        <QuickCapture onAdd={add} busy={busy} />
+      </section>
+
+      {tab==="dashboard" && (
+        <>
+          <section className="mb-6">
+            <Summary tareas={abiertas} />
+          </section>
+
+          {sinEvaluar.length>0 && (
+            <section className="mb-8">
+              <div className="flex items-center justify-between mb-3">
+                <h2 className="text-sm uppercase tracking-wider text-neutral-400">Sin evaluar · {sinEvaluar.length}</h2>
+                <span className="text-xs text-neutral-600">Click para priorizar</span>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {sinEvaluar.map(t=>(
+                  <TaskRow key={t.id} t={t} onClick={setEditando} onToggle={toggle} />
+                ))}
+              </div>
+            </section>
+          )}
+
+          <section className="mb-8">
+            <h2 className="text-sm uppercase tracking-wider text-neutral-400 mb-3">Top prioridades</h2>
+            {top.length===0 ? (
+              <div className="text-center py-12 text-neutral-600 text-sm border border-dashed border-neutral-800 rounded-2xl">
+                {tareas.length===0
+                  ? "No hay tareas en el tracker. Captura una arriba."
+                  : "Aún no hay tareas evaluadas. Click sobre una sin evaluar para priorizarla."}
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {top.map(t=><TaskRow key={t.id} t={t} onClick={setEditando} onToggle={toggle} />)}
+              </div>
+            )}
+          </section>
+        </>
+      )}
+
+      {tab==="lista" && (
+        <>
+          <section className="mb-4">
+            <Filters filtros={filtros} setFiltros={setFiltros} />
+          </section>
+          <section className="space-y-3">
+            {filtradas.length===0 ? (
+              <div className="text-center py-12 text-neutral-600 text-sm border border-dashed border-neutral-800 rounded-2xl">
+                Sin tareas que coincidan con los filtros.
+              </div>
+            ) : filtradas.map(t=><TaskRow key={t.id} t={t} onClick={setEditando} onToggle={toggle} />)}
+          </section>
+        </>
+      )}
+
+      {editando && (
+        <EvalModal tarea={editando}
+          onClose={()=>setEditando(null)}
+          onSave={score}
+          onUpdateMeta={updateMeta}
+          onDelete={remove} />
+      )}
+
+      <footer className="mt-16 text-center text-[10px] text-neutral-700">
+        {tareas.length} tareas en tracker · refresh cada {REFRESH_MS/1000}s ·
+        {lastFetch && ` última: ${lastFetch.toLocaleTimeString()}`}
+      </footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
