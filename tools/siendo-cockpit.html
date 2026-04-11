@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siendo Cockpit — Briefing · Cotizador · Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .tab-active { background-color: #1e293b; color: white; }
+  .tab-inactive { background-color: #f1f5f9; color: #475569; }
+  .tab-inactive:hover { background-color: #e2e8f0; }
+  input, select, textarea { font-family: inherit; }
+  textarea { min-height: 80px; }
+  .field-label { font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 0.25rem; display: block; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e2e8f0; }
+  .card { background: white; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 1.25rem; margin-bottom: 1rem; }
+  .btn { padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; }
+  .btn-primary { background: #1e293b; color: white; }
+  .btn-primary:hover { background: #0f172a; }
+  .btn-secondary { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; }
+  .btn-secondary:hover { background: #e2e8f0; }
+  .btn-danger { background: #dc2626; color: white; }
+  .btn-danger:hover { background: #b91c1c; }
+  .btn-success { background: #059669; color: white; }
+  .btn-success:hover { background: #047857; }
+  .badge { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+  .badge-prospecto { background: #fef3c7; color: #92400e; }
+  .badge-briefing { background: #dbeafe; color: #1e40af; }
+  .badge-diagnostico { background: #e0e7ff; color: #3730a3; }
+  .badge-propuesta { background: #fae8ff; color: #86198f; }
+  .badge-contrato { background: #dcfce7; color: #166534; }
+  .badge-intervencion { background: #d1fae5; color: #065f46; }
+  .badge-seguimiento { background: #cffafe; color: #155e75; }
+  .badge-cerrado { background: #f1f5f9; color: #475569; }
+  .cop { font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body class="bg-slate-100 min-h-screen">
+
+<!-- HEADER -->
+<header class="bg-slate-900 text-white p-4 shadow-lg">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+    <div>
+      <h1 class="text-xl font-bold">Siendo Cockpit</h1>
+      <p class="text-xs text-slate-400">Briefing · Cotizador · Dashboard — v1.0</p>
+    </div>
+    <div class="flex gap-2 flex-wrap">
+      <button class="btn btn-secondary text-xs" onclick="exportAll()">⬇ Exportar todo</button>
+      <button class="btn btn-secondary text-xs" onclick="document.getElementById('import-file').click()">⬆ Importar</button>
+      <input type="file" id="import-file" accept=".json" class="hidden" onchange="importAll(event)">
+      <button class="btn btn-danger text-xs" onclick="clearAll()">🗑 Limpiar</button>
+    </div>
+  </div>
+</header>
+
+<!-- NAV TABS -->
+<nav class="max-w-6xl mx-auto px-4 pt-4">
+  <div class="flex gap-2 flex-wrap">
+    <button class="btn tab-active" id="tab-dashboard" onclick="showTab('dashboard')">📊 Dashboard</button>
+    <button class="btn tab-inactive" id="tab-briefing" onclick="showTab('briefing')">📋 Briefing</button>
+    <button class="btn tab-inactive" id="tab-cotizador" onclick="showTab('cotizador')">💰 Cotizador</button>
+    <button class="btn tab-inactive" id="tab-config" onclick="showTab('config')">⚙️ Configuración</button>
+  </div>
+</nav>
+
+<main class="max-w-6xl mx-auto p-4">
+
+<!-- ============ DASHBOARD ============ -->
+<section id="section-dashboard">
+  <div class="card">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="section-title mb-0">Clientes activos</h2>
+      <button class="btn btn-primary text-sm" onclick="nuevoCliente()">+ Nuevo cliente</button>
+    </div>
+    <div id="dashboard-stats" class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4"></div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b-2 border-slate-300 text-left">
+            <th class="py-2 px-2">Cliente</th>
+            <th class="py-2 px-2">Sub-marca</th>
+            <th class="py-2 px-2">Fase</th>
+            <th class="py-2 px-2">Valor estimado</th>
+            <th class="py-2 px-2">Próximo hito</th>
+            <th class="py-2 px-2">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="dashboard-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRIEFING UNIVERSAL ============ -->
+<section id="section-briefing" class="hidden">
+  <div class="card">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="section-title mb-0">Briefing Universal</h2>
+      <div class="flex gap-2">
+        <select id="briefing-cliente-select" class="border rounded px-2 py-1 text-sm" onchange="cargarClienteEnBriefing(this.value)">
+          <option value="">-- Nuevo cliente --</option>
+        </select>
+      </div>
+    </div>
+    <form id="briefing-form" onsubmit="guardarBriefing(event)" class="space-y-6">
+
+      <!-- 1. Identificación -->
+      <div>
+        <h3 class="section-title">1. Identificación</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div><label class="field-label">Razón social *</label><input name="razon_social" class="w-full border rounded px-2 py-1" required></div>
+          <div><label class="field-label">Nombre comercial</label><input name="nombre_comercial" class="w-full border rounded px-2 py-1"></div>
+          <div><label class="field-label">NIT</label><input name="nit" class="w-full border rounded px-2 py-1"></div>
+          <div><label class="field-label">Sector</label><input name="sector" class="w-full border rounded px-2 py-1" placeholder="Ej: Construcción, Retail, Servicios"></div>
+          <div><label class="field-label">Ciudad / Ubicación</label><input name="ubicacion" class="w-full border rounded px-2 py-1"></div>
+          <div><label class="field-label">Empleados (aprox)</label><input name="empleados" type="number" class="w-full border rounded px-2 py-1"></div>
+          <div class="sm:col-span-2"><label class="field-label">Facturación anual estimada (COP)</label><input name="facturacion_anual" type="number" class="w-full border rounded px-2 py-1" placeholder="3000000000"></div>
+          <div class="sm:col-span-2"><label class="field-label">Modelo de negocio (3-5 líneas)</label><textarea name="modelo_negocio" class="w-full border rounded px-2 py-1"></textarea></div>
+        </div>
+      </div>
+
+      <!-- 2. Contacto -->
+      <div>
+        <h3 class="section-title">2. Contacto</h3>
+        <div class="space-y-3">
+          <div class="border rounded p-3 bg-slate-50">
+            <p class="text-xs font-bold text-slate-600 mb-2">SPONSOR / DECISOR *</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <input name="sponsor_nombre" placeholder="Nombre" class="border rounded px-2 py-1" required>
+              <input name="sponsor_cargo" placeholder="Cargo" class="border rounded px-2 py-1">
+              <input name="sponsor_email" type="email" placeholder="Email" class="border rounded px-2 py-1">
+              <input name="sponsor_telefono" placeholder="Teléfono" class="border rounded px-2 py-1">
+            </div>
+          </div>
+          <div class="border rounded p-3 bg-slate-50">
+            <p class="text-xs font-bold text-slate-600 mb-2">CONTRAPARTE OPERATIVA (opcional)</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <input name="op_nombre" placeholder="Nombre" class="border rounded px-2 py-1">
+              <input name="op_cargo" placeholder="Cargo" class="border rounded px-2 py-1">
+              <input name="op_email" type="email" placeholder="Email" class="border rounded px-2 py-1">
+              <input name="op_telefono" placeholder="Teléfono" class="border rounded px-2 py-1">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Origen -->
+      <div>
+        <h3 class="section-title">3. Origen y asignación</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="field-label">Fuente de entrada</label>
+            <select name="fuente" class="w-full border rounded px-2 py-1">
+              <option value="">--</option>
+              <option>Referido</option>
+              <option>Web / Redes</option>
+              <option>Evento / Networking</option>
+              <option>Contacto directo Sebas</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label">Sub-marca Siendo</label>
+            <select name="submarca" class="w-full border rounded px-2 py-1">
+              <option value="">--</option>
+              <option>Siendo Consulting</option>
+              <option>Siendo Resulting</option>
+              <option>Ambas</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label">Responsable principal</label>
+            <select name="responsable" class="w-full border rounded px-2 py-1">
+              <option value="">--</option>
+              <option>Sebastián</option>
+              <option>Mona</option>
+              <option>Lina</option>
+              <option>Emanuel</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label">Fecha entrada al pipeline</label>
+            <input type="date" name="fecha_entrada" class="w-full border rounded px-2 py-1">
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Dolor / Contexto -->
+      <div>
+        <h3 class="section-title">4. Dolor y contexto (las 6 preguntas de apertura)</h3>
+        <div class="space-y-3">
+          <div><label class="field-label">C1 · Intención: ¿para qué quieren transformar?</label><textarea name="intencion" class="w-full border rounded px-2 py-1" placeholder="No es lo mismo ordenar para sobrevivir que ordenar para crecer"></textarea></div>
+          <div><label class="field-label">C2 · Dolor: ¿qué problema duele más hoy?</label><textarea name="dolor" class="w-full border rounded px-2 py-1"></textarea></div>
+          <div><label class="field-label">C3 · Horizonte: ¿qué quieren que sea distinto en 1 y 3 años?</label><textarea name="horizonte" class="w-full border rounded px-2 py-1"></textarea></div>
+          <div><label class="field-label">C4 · Riesgo: ¿peor escenario si no tocan nada en 18 meses?</label><textarea name="riesgo" class="w-full border rounded px-2 py-1"></textarea></div>
+          <div><label class="field-label">C5 · Lo que no se toca: ¿qué NO es negociable?</label><textarea name="no_negociable" class="w-full border rounded px-2 py-1"></textarea></div>
+          <div><label class="field-label">C6 · Criterio de éxito: ¿cómo sabrían que funcionó?</label><textarea name="criterio_exito" class="w-full border rounded px-2 py-1"></textarea></div>
+        </div>
+      </div>
+
+      <!-- 5. Estado técnico -->
+      <div>
+        <h3 class="section-title">5. Estado técnico (si aplica)</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="field-label">¿Usa ERP?</label>
+            <select name="usa_erp" class="w-full border rounded px-2 py-1">
+              <option value="">--</option>
+              <option>No usa</option>
+              <option>Odoo</option>
+              <option>SAP</option>
+              <option>Siigo</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div><label class="field-label">Versión</label><input name="erp_version" class="w-full border rounded px-2 py-1" placeholder="Ej: Odoo 19 Enterprise"></div>
+          <div class="sm:col-span-2"><label class="field-label">Módulos activos / estado actual</label><textarea name="erp_estado" class="w-full border rounded px-2 py-1"></textarea></div>
+          <div class="sm:col-span-2"><label class="field-label">Integraciones existentes</label><textarea name="integraciones" class="w-full border rounded px-2 py-1" placeholder="Shopify, bancos, nómina externa..."></textarea></div>
+        </div>
+      </div>
+
+      <!-- 6. Mapa de Éxito preliminar -->
+      <div>
+        <h3 class="section-title">6. Mapa de Éxito preliminar (hipótesis del alletagogo)</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="field-label">Madurez Persona (0-5): <span id="persona-val" class="font-mono font-bold">2.5</span></label>
+            <input type="range" name="persona" min="0" max="5" step="0.1" value="2.5" oninput="document.getElementById('persona-val').textContent=this.value; calcularMapa()" class="w-full">
+          </div>
+          <div>
+            <label class="field-label">Madurez Proceso (0-5): <span id="proceso-val" class="font-mono font-bold">1.0</span></label>
+            <input type="range" name="proceso" min="0" max="5" step="0.1" value="1.0" oninput="document.getElementById('proceso-val').textContent=this.value; calcularMapa()" class="w-full">
+          </div>
+        </div>
+        <div class="mt-3 p-3 bg-slate-50 rounded text-sm">
+          <p><strong>Zona:</strong> <span id="zona-val" class="font-semibold">Riesgo alto</span></p>
+          <p><strong>Forma de intervención recomendada:</strong> <span id="forma-val">Experto + Modelo</span></p>
+          <p class="text-xs text-slate-600 mt-1" id="regla-val">Persona baja + Proceso bajo → construir base antes de acelerar</p>
+        </div>
+      </div>
+
+      <!-- 7. Decisión -->
+      <div>
+        <h3 class="section-title">7. Decisión y seguimiento</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="field-label">Decisión Go / No-Go</label>
+            <select name="decision" class="w-full border rounded px-2 py-1">
+              <option>Pendiente</option>
+              <option>Go</option>
+              <option>No-Go</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label">Fase actual</label>
+            <select name="fase" class="w-full border rounded px-2 py-1">
+              <option>prospecto</option>
+              <option>briefing</option>
+              <option>diagnostico</option>
+              <option>propuesta</option>
+              <option>contrato</option>
+              <option>intervencion</option>
+              <option>seguimiento</option>
+              <option>cerrado</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2"><label class="field-label">Próximo hito / acción</label><input name="proximo_hito" class="w-full border rounded px-2 py-1"></div>
+          <div class="sm:col-span-2"><label class="field-label">Notas internas del alletagogo (privadas)</label><textarea name="notas_privadas" class="w-full border rounded px-2 py-1"></textarea></div>
+        </div>
+      </div>
+
+      <div class="flex gap-2 pt-4 border-t">
+        <button type="submit" class="btn btn-primary">💾 Guardar cliente</button>
+        <button type="button" class="btn btn-secondary" onclick="exportarBriefingMD()">📄 Exportar como Markdown</button>
+        <button type="button" class="btn btn-secondary" onclick="limpiarBriefing()">↻ Limpiar formulario</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ COTIZADOR UNIVERSAL ============ -->
+<section id="section-cotizador" class="hidden">
+  <div class="card">
+    <h2 class="section-title">Cotizador Universal</h2>
+    <p class="text-sm text-slate-600 mb-4">Aplica metodología Siendo: bottom-up (piso) + top-down (techo) → precio recomendado.</p>
+
+    <div class="mb-4">
+      <label class="field-label">Cliente</label>
+      <select id="cot-cliente" class="w-full border rounded px-2 py-1" onchange="cargarClienteEnCotizador()">
+        <option value="">-- Elegir cliente --</option>
+      </select>
+    </div>
+
+    <div id="cot-panel" class="hidden space-y-6">
+
+      <!-- Horas por socio -->
+      <div>
+        <h3 class="section-title">Bottom-up: horas por socio</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b text-left">
+                <th class="py-2">Socio</th>
+                <th class="py-2">Tarifa hora (COP)</th>
+                <th class="py-2">Horas</th>
+                <th class="py-2 text-right">Costo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b"><td class="py-1">Sebastián</td><td><input type="number" id="tar-sebas" class="border rounded px-1 py-1 w-32" oninput="calcularCotizacion()"></td><td><input type="number" id="hrs-sebas" class="border rounded px-1 py-1 w-24" value="0" oninput="calcularCotizacion()"></td><td class="text-right cop" id="cost-sebas">$0</td></tr>
+              <tr class="border-b"><td class="py-1">Mona</td><td><input type="number" id="tar-mona" class="border rounded px-1 py-1 w-32" oninput="calcularCotizacion()"></td><td><input type="number" id="hrs-mona" class="border rounded px-1 py-1 w-24" value="0" oninput="calcularCotizacion()"></td><td class="text-right cop" id="cost-mona">$0</td></tr>
+              <tr class="border-b"><td class="py-1">Lina</td><td><input type="number" id="tar-lina" class="border rounded px-1 py-1 w-32" oninput="calcularCotizacion()"></td><td><input type="number" id="hrs-lina" class="border rounded px-1 py-1 w-24" value="0" oninput="calcularCotizacion()"></td><td class="text-right cop" id="cost-lina">$0</td></tr>
+              <tr class="border-b"><td class="py-1">Emanuel</td><td><input type="number" id="tar-ema" class="border rounded px-1 py-1 w-32" oninput="calcularCotizacion()"></td><td><input type="number" id="hrs-ema" class="border rounded px-1 py-1 w-24" value="0" oninput="calcularCotizacion()"></td><td class="text-right cop" id="cost-ema">$0</td></tr>
+              <tr class="font-bold bg-slate-50"><td class="py-2">TOTAL HORAS</td><td></td><td id="hrs-total">0</td><td class="text-right cop" id="cost-directo">$0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+          <div><label class="field-label">Overhead %</label><input type="number" id="overhead-pct" value="20" class="w-full border rounded px-2 py-1" oninput="calcularCotizacion()"></div>
+          <div><label class="field-label">Margen mínimo %</label><input type="number" id="margen-pct" value="30" class="w-full border rounded px-2 py-1" oninput="calcularCotizacion()"></div>
+        </div>
+      </div>
+
+      <!-- Top-down -->
+      <div>
+        <h3 class="section-title">Top-down: valor económico del problema</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div><label class="field-label">Volumen anual cliente (COP)</label><input type="number" id="vol-anual" class="w-full border rounded px-2 py-1" oninput="calcularCotizacion()"></div>
+          <div><label class="field-label">Margen bruto estimado %</label><input type="number" id="margen-bruto" value="15" class="w-full border rounded px-2 py-1" oninput="calcularCotizacion()"></div>
+          <div><label class="field-label">% pérdidas por procesos rotos</label><input type="number" id="perdidas-pct" value="10" class="w-full border rounded px-2 py-1" oninput="calcularCotizacion()"></div>
+          <div><label class="field-label">Años a proyectar</label><input type="number" id="anos" value="3" class="w-full border rounded px-2 py-1" oninput="calcularCotizacion()"></div>
+          <div class="sm:col-span-2"><label class="field-label">% apropiación del valor (15% cliente nuevo / 10% recurrente)</label><input type="number" id="apropiacion" value="18" class="w-full border rounded px-2 py-1" oninput="calcularCotizacion()"></div>
+        </div>
+      </div>
+
+      <!-- Output calculado -->
+      <div>
+        <h3 class="section-title">Resultado calculado</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="p-3 bg-slate-50 rounded">
+            <p class="text-xs text-slate-500 uppercase">Piso bottom-up</p>
+            <p class="text-2xl font-bold cop" id="res-piso">$0</p>
+            <p class="text-xs text-slate-500 mt-1">Costo directo + overhead + margen mínimo</p>
+          </div>
+          <div class="p-3 bg-slate-50 rounded">
+            <p class="text-xs text-slate-500 uppercase">Techo top-down</p>
+            <p class="text-2xl font-bold cop" id="res-techo">$0</p>
+            <p class="text-xs text-slate-500 mt-1">Valor económico proyectado × % apropiación</p>
+          </div>
+          <div class="p-3 bg-emerald-50 border border-emerald-200 rounded sm:col-span-2">
+            <p class="text-xs text-emerald-700 uppercase font-bold">Rango recomendado</p>
+            <p class="text-3xl font-bold cop text-emerald-700" id="res-rango">—</p>
+            <p class="text-xs text-emerald-600 mt-1" id="res-comentario">Ingresa horas y volumen para calcular</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paquetes -->
+      <div>
+        <h3 class="section-title">Paquetes de la propuesta</h3>
+        <p class="text-xs text-slate-500 mb-2">Define 1 a 3 paquetes (Básico / Avanzado / Integral). Editables manualmente.</p>
+        <div id="paquetes-container" class="space-y-3"></div>
+        <button type="button" class="btn btn-secondary mt-2 text-sm" onclick="agregarPaquete()">+ Agregar paquete</button>
+      </div>
+
+      <!-- Modelo recurrente -->
+      <div>
+        <h3 class="section-title">Modelo recurrente (post-implementación)</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div><label class="field-label">Licencias ERP (partner)</label><input id="rec-licencias" class="w-full border rounded px-2 py-1" placeholder="$8-16M/año"></div>
+          <div><label class="field-label">Mensualidad acompañamiento</label><input id="rec-mensualidad" class="w-full border rounded px-2 py-1" placeholder="$2M/mes"></div>
+          <div><label class="field-label">% sobre ahorros probados</label><input id="rec-ahorros" class="w-full border rounded px-2 py-1" placeholder="15%"></div>
+        </div>
+      </div>
+
+      <div class="flex gap-2 pt-4 border-t flex-wrap">
+        <button class="btn btn-primary" onclick="guardarCotizacion()">💾 Guardar cotización</button>
+        <button class="btn btn-secondary" onclick="exportarPropuestaMD()">📄 Exportar propuesta (Markdown)</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIGURACIÓN ============ -->
+<section id="section-config" class="hidden">
+  <div class="card">
+    <h2 class="section-title">Tarifas hora internas (editable)</h2>
+    <p class="text-sm text-slate-600 mb-4">Estas tarifas se usan como prellenado en el cotizador. Se guardan en localStorage.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div><label class="field-label">Sebastián (COP/h)</label><input type="number" id="cfg-sebas" class="w-full border rounded px-2 py-1"></div>
+      <div><label class="field-label">Mona (COP/h)</label><input type="number" id="cfg-mona" class="w-full border rounded px-2 py-1"></div>
+      <div><label class="field-label">Lina (COP/h)</label><input type="number" id="cfg-lina" class="w-full border rounded px-2 py-1"></div>
+      <div><label class="field-label">Emanuel (COP/h)</label><input type="number" id="cfg-ema" class="w-full border rounded px-2 py-1"></div>
+    </div>
+    <div class="mt-4 flex gap-2">
+      <button class="btn btn-primary" onclick="guardarConfig()">💾 Guardar</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">Acerca de</h2>
+    <p class="text-sm text-slate-600">Siendo Cockpit v1.0 — herramienta interna para Siendo Consulting / Siendo Resulting.</p>
+    <p class="text-sm text-slate-600 mt-2">Los datos se guardan en <code>localStorage</code> del navegador. Para sincronizar entre máquinas usa <strong>Exportar todo</strong> → guardar el JSON en el repo → <strong>Importar</strong> en la otra máquina.</p>
+    <p class="text-sm text-slate-600 mt-2">Esta herramienta es temporal: cuando Emanuel construya el módulo equivalente en Odoo, esta capa se jubila o queda como respaldo.</p>
+  </div>
+</section>
+
+</main>
+
+<script>
+// ============ ESTADO GLOBAL ============
+const STORAGE_KEY = 'siendo-cockpit-v1';
+
+const defaultState = {
+  version: '1.0',
+  ultima_actualizacion: new Date().toISOString(),
+  tarifas_hora: {
+    sebas: 500000,
+    mona: 250000,
+    lina: 250000,
+    ema: 325000
+  },
+  overhead_pct: 20,
+  margen_minimo_pct: 30,
+  clientes: [],
+  cliente_activo: null
+};
+
+let state = cargarState();
+
+function cargarState() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) return structuredClone(defaultState);
+  try {
+    const parsed = JSON.parse(raw);
+    return { ...structuredClone(defaultState), ...parsed };
+  } catch (e) {
+    console.error('Error parsing state', e);
+    return structuredClone(defaultState);
+  }
+}
+
+function guardarState() {
+  state.ultima_actualizacion = new Date().toISOString();
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+// ============ NAVEGACIÓN ============
+function showTab(tab) {
+  ['dashboard', 'briefing', 'cotizador', 'config'].forEach(t => {
+    document.getElementById('section-' + t).classList.toggle('hidden', t !== tab);
+    const btn = document.getElementById('tab-' + t);
+    btn.classList.toggle('tab-active', t === tab);
+    btn.classList.toggle('tab-inactive', t !== tab);
+  });
+  if (tab === 'dashboard') renderDashboard();
+  if (tab === 'briefing') { actualizarSelectClientes('briefing-cliente-select'); calcularMapa(); }
+  if (tab === 'cotizador') { actualizarSelectClientes('cot-cliente'); }
+  if (tab === 'config') { cargarConfig(); }
+}
+
+// ============ DASHBOARD ============
+function renderDashboard() {
+  const tbody = document.getElementById('dashboard-tbody');
+  const stats = document.getElementById('dashboard-stats');
+
+  if (!state.clientes.length) {
+    tbody.innerHTML = `<tr><td colspan="6" class="py-6 text-center text-slate-400">Sin clientes todavía. Crea el primero desde <strong>Briefing</strong>.</td></tr>`;
+    stats.innerHTML = '';
+    return;
+  }
+
+  const porFase = {};
+  state.clientes.forEach(c => { porFase[c.fase || 'prospecto'] = (porFase[c.fase || 'prospecto'] || 0) + 1; });
+
+  stats.innerHTML = `
+    <div class="bg-blue-50 p-3 rounded border border-blue-200"><p class="text-xs text-blue-700 uppercase">Total clientes</p><p class="text-2xl font-bold text-blue-900">${state.clientes.length}</p></div>
+    <div class="bg-amber-50 p-3 rounded border border-amber-200"><p class="text-xs text-amber-700 uppercase">En diagnóstico</p><p class="text-2xl font-bold text-amber-900">${porFase.diagnostico || 0}</p></div>
+    <div class="bg-purple-50 p-3 rounded border border-purple-200"><p class="text-xs text-purple-700 uppercase">En propuesta</p><p class="text-2xl font-bold text-purple-900">${porFase.propuesta || 0}</p></div>
+    <div class="bg-emerald-50 p-3 rounded border border-emerald-200"><p class="text-xs text-emerald-700 uppercase">Activos (int+seg)</p><p class="text-2xl font-bold text-emerald-900">${(porFase.intervencion || 0) + (porFase.seguimiento || 0)}</p></div>
+  `;
+
+  tbody.innerHTML = state.clientes.map(c => `
+    <tr class="border-b hover:bg-slate-50">
+      <td class="py-2 px-2 font-semibold">${escapeHtml(c.razon_social || 'Sin nombre')}</td>
+      <td class="py-2 px-2 text-xs">${escapeHtml(c.submarca || '—')}</td>
+      <td class="py-2 px-2"><span class="badge badge-${c.fase || 'prospecto'}">${c.fase || 'prospecto'}</span></td>
+      <td class="py-2 px-2 cop text-xs">${c.valor_estimado || '—'}</td>
+      <td class="py-2 px-2 text-xs">${escapeHtml(c.proximo_hito || '—')}</td>
+      <td class="py-2 px-2">
+        <button class="btn btn-secondary text-xs" onclick="editarCliente('${c.id}')">Editar</button>
+        <button class="btn btn-danger text-xs" onclick="eliminarCliente('${c.id}')">Borrar</button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function nuevoCliente() {
+  state.cliente_activo = null;
+  limpiarBriefing();
+  showTab('briefing');
+}
+
+function editarCliente(id) {
+  state.cliente_activo = id;
+  showTab('briefing');
+  setTimeout(() => cargarClienteEnBriefing(id), 50);
+}
+
+function eliminarCliente(id) {
+  const c = state.clientes.find(x => x.id === id);
+  if (!c) return;
+  if (!confirm(`¿Eliminar definitivamente a "${c.razon_social}"? Esta acción no se puede deshacer.`)) return;
+  state.clientes = state.clientes.filter(x => x.id !== id);
+  guardarState();
+  renderDashboard();
+}
+
+// ============ BRIEFING ============
+function actualizarSelectClientes(selectId) {
+  const sel = document.getElementById(selectId);
+  const valor = sel.value;
+  sel.innerHTML = '<option value="">-- ' + (selectId === 'cot-cliente' ? 'Elegir cliente' : 'Nuevo cliente') + ' --</option>';
+  state.clientes.forEach(c => {
+    sel.innerHTML += `<option value="${c.id}">${escapeHtml(c.razon_social)}</option>`;
+  });
+  if (state.cliente_activo) sel.value = state.cliente_activo;
+}
+
+function cargarClienteEnBriefing(id) {
+  if (!id) { limpiarBriefing(); return; }
+  const c = state.clientes.find(x => x.id === id);
+  if (!c) return;
+  state.cliente_activo = id;
+  const form = document.getElementById('briefing-form');
+  Object.keys(c).forEach(k => {
+    if (form.elements[k]) form.elements[k].value = c[k] || '';
+  });
+  // Sliders
+  if (c.persona !== undefined) {
+    form.elements.persona.value = c.persona;
+    document.getElementById('persona-val').textContent = c.persona;
+  }
+  if (c.proceso !== undefined) {
+    form.elements.proceso.value = c.proceso;
+    document.getElementById('proceso-val').textContent = c.proceso;
+  }
+  calcularMapa();
+}
+
+function limpiarBriefing() {
+  document.getElementById('briefing-form').reset();
+  document.getElementById('persona-val').textContent = '2.5';
+  document.getElementById('proceso-val').textContent = '1.0';
+  state.cliente_activo = null;
+  calcularMapa();
+}
+
+function guardarBriefing(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = {};
+  new FormData(form).forEach((v, k) => { data[k] = v; });
+  data.persona = parseFloat(form.elements.persona.value);
+  data.proceso = parseFloat(form.elements.proceso.value);
+
+  if (state.cliente_activo) {
+    const idx = state.clientes.findIndex(c => c.id === state.cliente_activo);
+    if (idx >= 0) {
+      state.clientes[idx] = { ...state.clientes[idx], ...data, actualizado: new Date().toISOString() };
+    }
+  } else {
+    const id = 'c-' + Date.now().toString(36);
+    state.clientes.push({ id, ...data, creado: new Date().toISOString() });
+    state.cliente_activo = id;
+  }
+  guardarState();
+  alert('✓ Cliente guardado');
+  renderDashboard();
+  showTab('dashboard');
+}
+
+function calcularMapa() {
+  const p = parseFloat(document.querySelector('[name="persona"]')?.value || 2.5);
+  const q = parseFloat(document.querySelector('[name="proceso"]')?.value || 1.0);
+  let zona, forma, regla;
+  if (p >= 3.5 && q >= 3.5) { zona = 'Zona estable'; forma = 'Coach + Compañero'; regla = 'Alta madurez en ambos ejes → acompañar evolución'; }
+  else if (p >= 3.5 && q < 3.5) { zona = 'Transición (persona tira)'; forma = 'Experto + Modelo'; regla = 'Persona alta + proceso bajo → construir proceso rápido, persona arrastra'; }
+  else if (p < 3.5 && q >= 3.5) { zona = 'Transición (proceso sostiene)'; forma = 'Profesor + Coach'; regla = 'Proceso alto + persona baja → enseñar a operar el sistema que ya existe'; }
+  else if (p >= 2 && q >= 2) { zona = 'Riesgo medio'; forma = 'Experto + Profesor'; regla = 'Ambos ejes medios → intervención balanceada'; }
+  else { zona = 'Riesgo alto'; forma = 'Experto + Profesor + Modelo'; regla = 'Ambos ejes bajos → construir base sólida antes de acelerar'; }
+  document.getElementById('zona-val').textContent = zona;
+  document.getElementById('forma-val').textContent = forma;
+  document.getElementById('regla-val').textContent = regla;
+}
+
+// ============ COTIZADOR ============
+function cargarClienteEnCotizador() {
+  const id = document.getElementById('cot-cliente').value;
+  if (!id) { document.getElementById('cot-panel').classList.add('hidden'); return; }
+  const c = state.clientes.find(x => x.id === id);
+  if (!c) return;
+
+  // Prellenar tarifas desde config
+  document.getElementById('tar-sebas').value = state.tarifas_hora.sebas;
+  document.getElementById('tar-mona').value = state.tarifas_hora.mona;
+  document.getElementById('tar-lina').value = state.tarifas_hora.lina;
+  document.getElementById('tar-ema').value = state.tarifas_hora.ema;
+  document.getElementById('overhead-pct').value = state.overhead_pct;
+  document.getElementById('margen-pct').value = state.margen_minimo_pct;
+
+  // Volumen anual desde briefing si existe
+  if (c.facturacion_anual) document.getElementById('vol-anual').value = c.facturacion_anual;
+
+  // Cargar última cotización si existe
+  if (c.cotizacion_actual) {
+    Object.keys(c.cotizacion_actual).forEach(k => {
+      const el = document.getElementById(k);
+      if (el) el.value = c.cotizacion_actual[k];
+    });
+  }
+
+  // Cargar paquetes
+  document.getElementById('paquetes-container').innerHTML = '';
+  if (c.paquetes && c.paquetes.length) {
+    c.paquetes.forEach(p => renderPaquete(p));
+  } else {
+    agregarPaquete('Básico');
+  }
+
+  document.getElementById('cot-panel').classList.remove('hidden');
+  calcularCotizacion();
+}
+
+function calcularCotizacion() {
+  const tSebas = +document.getElementById('tar-sebas').value || 0;
+  const tMona = +document.getElementById('tar-mona').value || 0;
+  const tLina = +document.getElementById('tar-lina').value || 0;
+  const tEma = +document.getElementById('tar-ema').value || 0;
+  const hSebas = +document.getElementById('hrs-sebas').value || 0;
+  const hMona = +document.getElementById('hrs-mona').value || 0;
+  const hLina = +document.getElementById('hrs-lina').value || 0;
+  const hEma = +document.getElementById('hrs-ema').value || 0;
+
+  const cSebas = tSebas * hSebas;
+  const cMona = tMona * hMona;
+  const cLina = tLina * hLina;
+  const cEma = tEma * hEma;
+  const costoDirecto = cSebas + cMona + cLina + cEma;
+  const totalHoras = hSebas + hMona + hLina + hEma;
+
+  document.getElementById('cost-sebas').textContent = fmt(cSebas);
+  document.getElementById('cost-mona').textContent = fmt(cMona);
+  document.getElementById('cost-lina').textContent = fmt(cLina);
+  document.getElementById('cost-ema').textContent = fmt(cEma);
+  document.getElementById('cost-directo').textContent = fmt(costoDirecto);
+  document.getElementById('hrs-total').textContent = totalHoras;
+
+  const overhead = +document.getElementById('overhead-pct').value / 100;
+  const margen = +document.getElementById('margen-pct').value / 100;
+  const costoTotal = costoDirecto * (1 + overhead);
+  const piso = margen < 1 ? costoTotal / (1 - margen) : costoTotal;
+
+  document.getElementById('res-piso').textContent = fmt(piso);
+
+  // Top-down
+  const volAnual = +document.getElementById('vol-anual').value || 0;
+  const margenBruto = +document.getElementById('margen-bruto').value / 100;
+  const perdidasPct = +document.getElementById('perdidas-pct').value / 100;
+  const anos = +document.getElementById('anos').value || 3;
+  const apropiacion = +document.getElementById('apropiacion').value / 100;
+
+  // Valor económico anual: pérdidas directas + factor de multiplicación por riesgos/oportunidades
+  const valorAnual = volAnual * perdidasPct * (1 + margenBruto); // aproximación conservadora
+  // Crecimiento simple 15%/año en el valor del problema
+  let valorProyectado = 0;
+  for (let i = 0; i < anos; i++) { valorProyectado += valorAnual * Math.pow(1.15, i); }
+  const techo = valorProyectado * apropiacion * 0.75; // 75% del techo asignado a implementación
+
+  document.getElementById('res-techo').textContent = fmt(techo);
+
+  // Rango recomendado
+  const objetivo = Math.max(piso, techo * 0.9);
+  const topeNeg = Math.max(piso * 1.15, techo);
+  const rango = document.getElementById('res-rango');
+  const com = document.getElementById('res-comentario');
+  if (piso > 0 && (volAnual > 0 || costoDirecto > 0)) {
+    rango.textContent = fmt(Math.round(objetivo / 1000000) * 1000000) + ' — ' + fmt(Math.round(topeNeg / 1000000) * 1000000);
+    if (piso > techo) com.textContent = '⚠ Piso > techo: proyecto pierde plata como proyecto → exigir modelo recurrente para recuperar';
+    else com.textContent = '✓ Piso cubierto por el techo → rango sano. Objetivo comercial = ' + fmt(objetivo);
+  } else {
+    rango.textContent = '—';
+    com.textContent = 'Ingresa horas y volumen para calcular';
+  }
+}
+
+function agregarPaquete(nombre) {
+  const container = document.getElementById('paquetes-container');
+  const idx = container.children.length;
+  const div = document.createElement('div');
+  div.className = 'border rounded p-3 bg-slate-50';
+  div.innerHTML = `
+    <div class="flex justify-between items-start mb-2">
+      <input placeholder="Nombre del paquete" value="${escapeHtml(nombre || '')}" class="pkg-nombre border rounded px-2 py-1 font-bold flex-1 mr-2">
+      <button class="btn btn-danger text-xs" onclick="this.closest('div.border').remove()">✕</button>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-2">
+      <div><label class="field-label">Precio (COP)</label><input type="number" class="pkg-precio w-full border rounded px-2 py-1"></div>
+      <div><label class="field-label">Duración</label><input class="pkg-duracion w-full border rounded px-2 py-1" placeholder="6 meses"></div>
+      <div><label class="field-label">Color</label><select class="pkg-color w-full border rounded px-2 py-1"><option>slate</option><option>emerald</option><option>amber</option></select></div>
+    </div>
+    <div><label class="field-label">Alcance (qué incluye / no incluye)</label><textarea class="pkg-alcance w-full border rounded px-2 py-1"></textarea></div>
+  `;
+  container.appendChild(div);
+}
+
+function renderPaquete(p) {
+  agregarPaquete(p.nombre);
+  const container = document.getElementById('paquetes-container');
+  const last = container.lastElementChild;
+  last.querySelector('.pkg-precio').value = p.precio || '';
+  last.querySelector('.pkg-duracion').value = p.duracion || '';
+  last.querySelector('.pkg-alcance').value = p.alcance || '';
+  if (p.color) last.querySelector('.pkg-color').value = p.color;
+}
+
+function recolectarPaquetes() {
+  return Array.from(document.querySelectorAll('#paquetes-container > div')).map(d => ({
+    nombre: d.querySelector('.pkg-nombre').value,
+    precio: +d.querySelector('.pkg-precio').value || 0,
+    duracion: d.querySelector('.pkg-duracion').value,
+    alcance: d.querySelector('.pkg-alcance').value,
+    color: d.querySelector('.pkg-color').value
+  }));
+}
+
+function guardarCotizacion() {
+  const id = document.getElementById('cot-cliente').value;
+  if (!id) { alert('Elige un cliente primero'); return; }
+  const idx = state.clientes.findIndex(c => c.id === id);
+  if (idx < 0) return;
+
+  const cot = {};
+  ['tar-sebas','tar-mona','tar-lina','tar-ema','hrs-sebas','hrs-mona','hrs-lina','hrs-ema','overhead-pct','margen-pct','vol-anual','margen-bruto','perdidas-pct','anos','apropiacion','rec-licencias','rec-mensualidad','rec-ahorros'].forEach(k => {
+    cot[k] = document.getElementById(k).value;
+  });
+
+  state.clientes[idx].cotizacion_actual = cot;
+  state.clientes[idx].paquetes = recolectarPaquetes();
+  state.clientes[idx].valor_estimado = state.clientes[idx].paquetes.map(p => fmt(p.precio)).join(' / ');
+  state.clientes[idx].actualizado = new Date().toISOString();
+  guardarState();
+  alert('✓ Cotización guardada');
+  renderDashboard();
+}
+
+// ============ EXPORT / IMPORT ============
+function exportAll() {
+  const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `siendo-cockpit-${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importAll(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    try {
+      const imported = JSON.parse(ev.target.result);
+      if (!confirm(`Importar ${imported.clientes?.length || 0} clientes. ¿Reemplazar datos actuales?`)) return;
+      state = { ...structuredClone(defaultState), ...imported };
+      guardarState();
+      renderDashboard();
+      alert('✓ Importación completa');
+    } catch (err) { alert('Error al importar: ' + err.message); }
+  };
+  reader.readAsText(file);
+}
+
+function clearAll() {
+  if (!confirm('⚠ Esto borra TODOS los datos locales. ¿Continuar?')) return;
+  if (!confirm('Última confirmación: ¿borrar todo?')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  state = structuredClone(defaultState);
+  renderDashboard();
+  alert('Todos los datos borrados');
+}
+
+// ============ EXPORTAR MARKDOWN ============
+function exportarBriefingMD() {
+  const form = document.getElementById('briefing-form');
+  const d = {};
+  new FormData(form).forEach((v, k) => { d[k] = v; });
+  const md = `# BRIEFING — ${d.razon_social || '[cliente]'}
+
+**Fecha:** ${new Date().toISOString().slice(0,10)}
+**Sub-marca:** ${d.submarca || '—'}
+**Responsable:** ${d.responsable || '—'}
+
+## 1. Identificación
+- **Razón social:** ${d.razon_social || '—'}
+- **Nombre comercial:** ${d.nombre_comercial || '—'}
+- **NIT:** ${d.nit || '—'}
+- **Sector:** ${d.sector || '—'}
+- **Ubicación:** ${d.ubicacion || '—'}
+- **Empleados:** ${d.empleados || '—'}
+- **Facturación anual estimada:** ${d.facturacion_anual ? fmt(+d.facturacion_anual) : '—'}
+
+**Modelo de negocio:** ${d.modelo_negocio || '—'}
+
+## 2. Contacto
+- **Sponsor:** ${d.sponsor_nombre || '—'} (${d.sponsor_cargo || '—'}) · ${d.sponsor_email || '—'} · ${d.sponsor_telefono || '—'}
+- **Operativo:** ${d.op_nombre || '—'}
+
+## 3. Origen
+- **Fuente:** ${d.fuente || '—'}
+- **Fecha entrada:** ${d.fecha_entrada || '—'}
+
+## 4. Dolor y contexto
+- **Intención:** ${d.intencion || '—'}
+- **Dolor principal:** ${d.dolor || '—'}
+- **Horizonte:** ${d.horizonte || '—'}
+- **Riesgo de no hacer nada:** ${d.riesgo || '—'}
+- **No negociable:** ${d.no_negociable || '—'}
+- **Criterio de éxito:** ${d.criterio_exito || '—'}
+
+## 5. Estado técnico
+- **ERP:** ${d.usa_erp || '—'} ${d.erp_version ? '(' + d.erp_version + ')' : ''}
+- **Estado actual:** ${d.erp_estado || '—'}
+- **Integraciones:** ${d.integraciones || '—'}
+
+## 6. Mapa de Éxito preliminar
+- **Persona:** ${d.persona} / 5
+- **Proceso:** ${d.proceso} / 5
+- **Zona:** ${document.getElementById('zona-val').textContent}
+- **Forma recomendada:** ${document.getElementById('forma-val').textContent}
+
+## 7. Decisión
+- **Go/No-Go:** ${d.decision || 'Pendiente'}
+- **Fase:** ${d.fase || 'prospecto'}
+- **Próximo hito:** ${d.proximo_hito || '—'}
+
+---
+*Notas privadas del alletagogo:* ${d.notas_privadas || '—'}
+`;
+  descargarTxt(md, `briefing-${slug(d.razon_social || 'cliente')}.md`);
+}
+
+function exportarPropuestaMD() {
+  const id = document.getElementById('cot-cliente').value;
+  if (!id) { alert('Elige un cliente primero'); return; }
+  const c = state.clientes.find(x => x.id === id);
+  if (!c) return;
+  const paquetes = recolectarPaquetes();
+  const piso = document.getElementById('res-piso').textContent;
+  const techo = document.getElementById('res-techo').textContent;
+  const rango = document.getElementById('res-rango').textContent;
+
+  const md = `# PROPUESTA — ${c.razon_social}
+
+**Fecha:** ${new Date().toISOString().slice(0,10)}
+**Versión:** 1.0 (generada desde Siendo Cockpit)
+**Dirigida a:** ${c.sponsor_nombre || '[sponsor]'} — ${c.sponsor_cargo || ''}
+
+## 1. Entendimiento
+${c.intencion ? '**Intención del cliente:** ' + c.intencion + '\n\n' : ''}
+${c.dolor ? '**Dolor principal:** ' + c.dolor + '\n\n' : ''}
+${c.horizonte ? '**Horizonte:** ' + c.horizonte + '\n\n' : ''}
+
+## 2. Mapa de Éxito actual
+- Madurez Persona: ${c.persona} / 5
+- Madurez Proceso: ${c.proceso} / 5
+
+## 3. Paquetes disponibles
+
+${paquetes.map(p => `### ${p.nombre} · ${fmt(p.precio)} COP · ${p.duracion || ''}
+
+${p.alcance || ''}
+`).join('\n')}
+
+## 4. Modelo recurrente (post-implementación)
+- **Licencias ERP (vía Siendo partner):** ${document.getElementById('rec-licencias').value || '—'}
+- **Mensualidad de acompañamiento:** ${document.getElementById('rec-mensualidad').value || '—'}
+- **% sobre ahorros probados:** ${document.getElementById('rec-ahorros').value || '—'}
+
+## 5. Inversión — resultado del cotizador
+
+| Concepto | Valor |
+|----------|-------|
+| Piso bottom-up | ${piso} |
+| Techo top-down | ${techo} |
+| **Rango recomendado** | **${rango}** |
+
+## 6. Próximos pasos
+1. Sesión de cierre para definir paquete y firmar
+2. Kick-off
+3. Arranque de sprint 1
+
+---
+*Propuesta generada desde Siendo Cockpit v1.0 — ${new Date().toISOString()}*
+`;
+  descargarTxt(md, `propuesta-${slug(c.razon_social)}.md`);
+}
+
+// ============ CONFIG ============
+function cargarConfig() {
+  document.getElementById('cfg-sebas').value = state.tarifas_hora.sebas;
+  document.getElementById('cfg-mona').value = state.tarifas_hora.mona;
+  document.getElementById('cfg-lina').value = state.tarifas_hora.lina;
+  document.getElementById('cfg-ema').value = state.tarifas_hora.ema;
+}
+
+function guardarConfig() {
+  state.tarifas_hora.sebas = +document.getElementById('cfg-sebas').value || 500000;
+  state.tarifas_hora.mona = +document.getElementById('cfg-mona').value || 250000;
+  state.tarifas_hora.lina = +document.getElementById('cfg-lina').value || 250000;
+  state.tarifas_hora.ema = +document.getElementById('cfg-ema').value || 325000;
+  guardarState();
+  alert('✓ Configuración guardada');
+}
+
+// ============ UTILIDADES ============
+function fmt(n) {
+  if (!n && n !== 0) return '$0';
+  return '$' + Math.round(n).toLocaleString('es-CO');
+}
+function slug(s) {
+  return (s || 'cliente').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+function descargarTxt(content, filename) {
+  const blob = new Blob([content], { type: 'text/markdown' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function escapeHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+}
+
+// ============ INIT ============
+renderDashboard();
+cargarConfig();
+</script>
+
+</body>
+</html>
