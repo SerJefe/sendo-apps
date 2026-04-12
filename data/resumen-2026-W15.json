@@ -1,25 +1,25 @@
 {
   "semana": "2026-W15",
-  "fecha_generacion": "2026-04-06",
+  "fecha_generacion": "2026-04-12",
   "aprendizajes": [
-    "Los pagarés como herramienta de responsabilización: Sebastian implementa acuerdos de pago con pagarés para presionar al equipo directivo ante la crisis de 2000 millones",
-    "Shift tecnológico crítico: Cambio estratégico de aplicaciones web a escritorio con base local para resolver problemas de conectividad en operaciones",
-    "Separación de líneas de negocio: Estructuración de consulting como línea independiente de Condugas para diversificar ingresos",
-    "Automatización como prioridad: Desarrollo de centro de operaciones unificado y auditoría automática de nómina para optimizar procesos",
-    "Coherencia en crisis: Sebastian mantiene alineación emoción-pensamiento-acción, ejerciendo jefatura auténtica bajo presión extrema"
+    "Los unicornios generan tracción primero y cobran después - aplicable al modelo de escalabilidad de Condugas",
+    "La falta de decisión oportuna es más crítica que la falta de conocimiento en gestión de crisis",
+    "Los sistemas de triaje personalizados por área son más efectivos que KPIs genéricos",
+    "La coherencia entre emoción, pensamiento y acción es fundamental para ejercer jefatura auténtica",
+    "Los acuerdos de pago con pagarés responsabilizan efectivamente al equipo ejecutivo"
   ],
   "decisiones_clave": [
-    "Implementar sistema de pagarés con gerentes y directores como mecanismo de presión financiera ante inacción del equipo",
-    "Pivotear arquitectura tecnológica de web a escritorio para garantizar operatividad sin dependencia de conectividad",
-    "Crear línea de consulting separada de Condugas para diversificar fuentes de ingreso y reducir riesgo operacional"
+    "Implementar acuerdos de pago con pagarés para gerentes y directores ante crisis de $2.000 millones",
+    "Conectar modelo de KPIs con briefing y publicar documentación en repositorio público",
+    "Centralizar todas las compras y contratos para mayor control organizacional"
   ],
   "patterns": [
-    "Aleteagogia bajo presión: Sebastian mantiene su filosofía SER.SIENDO incluso en crisis, demostrando coherencia entre frustración, estrategia y acción directa",
-    "Escalamiento de presión: Uso progresivo de herramientas financieras (pagarés) para forzar responsabilidad cuando métodos tradicionales fallan"
+    "Sebastian ejerce jefatura directa bajo presión, confrontando la inacción del equipo con responsabilización financiera",
+    "Enfoque sistemático: automatización de procesos, digitalización de seguimientos y centralización de información"
   ],
-  "prediccion_proxima": "Implementación agresiva de pagarés y confrontación directa con equipo directivo para resolver crisis de 2000 millones",
-  "resumen_ejecutivo": "Semana de crisis financiera crítica con Sebastian implementando medidas extremas de presión (pagarés) ante inacción del equipo. Decisiones estratégicas incluyen cambio de arquitectura tecnológica y separación de líneas de negocio. Su coherencia SER.SIENDO se mantiene firme bajo presión extrema, ejerciendo jefatura auténtica con determinación total.",
-  "tareas_cerradas_semana": 0,
-  "tareas_abiertas_acumuladas": 5,
-  "ideas_totales": 7
+  "prediccion_proxima": "Resolución urgente del conflicto de Cartagena y aclaración de los 20 temas pendientes será prioritaria",
+  "resumen_ejecutivo": "Semana crítica marcada por la gestión de una crisis financiera de $2.000 millones. Sebastian demostró coherencia SER.SIENDO al responsabilizar al equipo con pagarés mientras avanzaba en la sistematización de procesos. Se consolidó la visión de automatización y se tomaron decisiones estructurales para centralizar control. La aleteagogia se manifestó en el balance entre presión ejecutiva y desarrollo de capacidades organizacionales.",
+  "tareas_cerradas_semana": 6,
+  "tareas_abiertas_acumuladas": 10,
+  "ideas_totales": 12
 }
