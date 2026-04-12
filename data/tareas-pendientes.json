@@ -139,7 +139,57 @@
       "tipo": "pendiente",
       "estado": "pendiente",
       "fecha": "2026-04-11"
+    },
+    {
+      "id": "2026-04-12-001",
+      "tarea": "Resolver urgentemente el viaje a Cartagena que es demanda pendiente",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "contexto": "Litigio/demanda",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-12"
+    },
+    {
+      "id": "2026-04-12-002",
+      "tarea": "Aclarar y definir los 20 temas pendientes en listado",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta",
+      "contexto": "Gestión general de proyectos",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-12"
+    },
+    {
+      "id": "2026-04-12-003",
+      "tarea": "Conectar modelo de KPIs con el briefing para mayor claridad",
+      "responsable": "Equipo de Proyectos",
+      "prioridad": "alta",
+      "contexto": "Herramienta de diagnóstico y KPIs",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-12"
+    },
+    {
+      "id": "2026-04-12-004",
+      "tarea": "Publicar documentación de KPIs en repositorio público",
+      "responsable": "Equipo Técnico",
+      "prioridad": "media",
+      "contexto": "Sistema de KPIs y triaje",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-12"
+    },
+    {
+      "id": "2026-04-12-005",
+      "tarea": "Resolver conflicto de pago que Eduardo menciona como no pagable",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta",
+      "contexto": "Cuestión financiera sin especificar",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-12"
     }
   ],
-  "ultima_actualizacion": "2026-04-11T23:44:50.298694"
+  "ultima_actualizacion": "2026-04-12T12:00:18.347315"
 }
