@@ -2,65 +2,79 @@
   "fecha": "2026-04-08",
   "tareas_candidatas": [
     {
-      "tarea": "Enviar archivo KMZ a Luis Guillermo con documentación completa del proyecto",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Analizar detalle del borrador de estrategia legal contra multas retroactivas de Cataluña",
-      "responsable": "Camila (abogada)",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Preparar documentación para abogados con Mario y Alex",
-      "responsable": "Equipo legal",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Preparar reunión con socios para el jueves",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Enviar documento a Santiago Wilches antes de presentarlo a reunión con Carlos Marín",
+      "responsable": "Sebastian",
       "prioridad": "alta"
     },
     {
-      "tarea": "Contactar para asesoría sobre diseños estructurales del proyecto cabaña",
-      "responsable": "Andrés",
+      "tarea": "Coordinar con Gilberto para hacer oferta a Alejandro como miembro de junta directiva",
+      "responsable": "Gilberto",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Hacer oferta a candidatos para junta directiva (Eduardo, Mario, tercera persona) con remuneración de dos salarios mínimos mensuales",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Estructurar negociación de centro de abastecimiento y macro negociaciones (oferta pública)",
+      "responsable": "Sebastian",
       "prioridad": "media"
     },
     {
-      "tarea": "Revisar proyectos Montesereno y Punto Sánchez",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Revisar APUs con Manuel y Colina para montar directamente en ODU",
+      "responsable": "Sebastian",
       "prioridad": "media"
     },
     {
-      "tarea": "Pulir y finalizar organigrama de la empresa",
-      "responsable": "Juan/equipo administrativo",
-      "prioridad": "alta"
+      "tarea": "Revisar contrato con Catalina Betancourt para identificar abuso de poder en proceso",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
     },
     {
-      "tarea": "Centralizar y revisar todas las compras y contratos",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta"
+      "tarea": "",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Resolver tema pendiente de 1.2-1.4 millones en caja para entregar a junta directiva",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Se decidió automatizar proyectos con seguimiento claro para evitar intervenciones sin visibilidad de progreso",
-    "Se aprobó implementar herramienta de gestión digital para gerentes con vista consolidada de proyectos y métricas",
-    "Se definió que todas las compras y contratos deben ser centralizados para mayor control",
-    "Se determinó hacer un piloto antes de escalar otros contratos",
-    "Se decidió revisar y pulir el organigrama con énfasis en liderazgo transversal y ejecución correcta"
+    "Se conforma junta asesora/consultiva para Condugas y otras empresas principales con reuniones mensuales",
+    "Remuneración de dos salarios mínimos por encuentro mensual para miembros de junta directiva, pagado entre las dos empresas",
+    "Primera junta directiva se realizará en fechas tentativas 20-22 de abril con desayuno incluido",
+    "Estructura de junta con enfoque en estrategia mediano-largo plazo, supervisión de alianzas, riesgos operacionales y coherencia familiar-empresarial",
+    "Se requiere miembro de junta con perfil en estructuración de proyectos/marketing para desligar operación de contrato EPM",
+    "Candidatos iniciales: Alejandro (perfil financiero-administrativo), Eduardo, Mario, y posible tercero",
+    "Olga será responsable de explicar problemas familiares y empresariales en presentación de Condugas",
+    "Junta asesora iniciará con análisis escalonado de empresas, no simultáneamente"
   ],
   "ideas_capturadas": [
-    "Construir plataforma digital personalizada que permita a gerentes visualizar proyectos Condugas en tiempo real sin acceso manual a múltiples sistemas",
-    "Implementar seguimiento automático de proyectos para identificar desviaciones tempranas sin necesidad de intervención constante",
-    "Digitalizar y automatizar recepción de actas de obra con capacidad de análisis y generación de reportes",
-    "Crear sistema de inventario centralizado con visibilidad de información para evitar redundancia y sobrecarga de datos",
-    "Desarrollar mapeo digital integrado de propiedades con histórico en Google Earth para seguimiento topográfico y cambios de uso"
+    "Centro de abastecimiento como estrategia para macro negociaciones y ofretas públicas, separando operación recurrente de contrato EPM",
+    "Usar miembros de junta directiva como consultores especializados en tareas específicas entre reuniones, no solo como órgano consultivo pasivo",
+    "Implementar protocolo de tareas previas a junta directiva para asegurar que candidatos confirmen disponibilidad antes de hacer oferta formal",
+    "Diversificación en dos empresas principales (Gilberto y Sebastian) como fortaleza para atraer expertise externo a junta directiva",
+    "Junta directiva como herramienta de tranquilidad para accionistas familiares, generando coherencia en deseos gerenciales vs. estrategia empresarial",
+    "Monetizar experiencia de junta directiva en análisis de competitividad de mercado y formulación de proyectos de expansión"
   ],
   "frases_poderosas": [
-    "El problema no es que no sepamos, es que no decidimos a tiempo (refiriéndose a gestión de crisis y conflictos contractuales)",
-    "Uno de los riesgos más altos que estoy viendo en la empresa es que la gente no está haciendo las cosas como deben ser, sino como creen que está bien para ellos (criticando falta de ejecución correcta)",
-    "Me asusta el manejo de la información porque eso no da plazo, en ocho días hay que haber hecho cosas (expresando urgencia y presión en toma de decisiones)"
+    "Hay plata que no se da, solo tiene celo, porque no existe malla, que vales más tres pesos en mano que seis que tengas para cobrar (sobre gestión de flujo de caja)",
+    "Si nos vamos a reunir la primera que concuerde con la siguiente para que dure el mes (sobre continuidad de junta directiva)",
+    "Yo más de 190 millones de pesos he metido yo en la empresa (sobre inversión propia en Condugas)",
+    "Marica, que yo lo necesito es para que me haga el favor de comunicar (sobre función real de miembro de junta directiva)",
+    "Cuando al médico y ya cree que sabe cuál es la enfermedad, pues usted para qué putas va (sobre necesidad de expertos con pensamiento diferente)"
   ],
-  "total_lifelogs": 37,
-  "procesado_con": "haiku_compacto"
+  "alertas_supervivencia": [
+    "CRITICA: Condugas en crisis de caja simultánea con crisis de transformación digital - necesita urgencia máxima en resolución de 1.2-1.4M pendientes",
+    "CRITICA: Contrato EPM como único insumo operativo genera dependencia alta - requiere aceleración en estructura de centro de abastecimiento",
+    "CRITICA: Hallazgo de abuso de poder de Catalina Betancourt en contrato - riesgo legal requiere escalación inmediata a Santiago Wilches",
+    "ALTO: Condugas requiere junta directiva operativa inmediatamente (semanas, no meses) - retrasos en conformación pueden afectar credibilidad con accionistas",
+    "ALTO: Inversión propia de 190M+ en Condugas está en riesgo si crisis de caja no se resuelve en próximas semanas"
+  ],
+  "total_lifelogs": 43,
+  "procesado_con": "haiku_v2",
+  "procesado_at": "2026-04-12T17:31:22"
 }

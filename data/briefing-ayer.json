@@ -1,0 +1,45 @@
+{
+  "fecha": "2026-04-12",
+  "tareas_extraidas": [
+    {
+      "tarea": "Resolver urgentemente el viaje a Cartagena que es demanda pendiente",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Aclarar y definir los 20 temas pendientes en listado",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Conectar modelo de KPIs con el briefing para mayor claridad",
+      "responsable": "Equipo de Proyectos",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Publicar documentación de KPIs en repositorio público",
+      "responsable": "Equipo Técnico",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Resolver conflicto de pago que Eduardo menciona como no pagable",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    }
+  ],
+  "decisiones": [
+    "Se decidió conectar el modelo de KPIs con el briefing para mejorar la comprensión del sistema",
+    "Se definió que la documentación de KPIs debe publicarse en un repositorio público"
+  ],
+  "ideas": [
+    "Implementar un sistema de triaje personalizado donde cada área genere sus propios KPIs de sobrevivencia en lugar de KPIs genéricos, con estados reales específicos por procesos, sistemas y proyectos",
+    "Desarrollar un modelo de negocio tipo unicornio que primero genere tracción y luego escale cobranzas, con énfasis en la estructura de sistemas detrás del producto"
+  ],
+  "frases": [
+    "Los unicornios te ponen las posibilidades de generar tracción, una generada la tracción, te cobra todo (hablando de modelos de negocio escalables)",
+    "El problema no es la capacidad técnica, es que cuando se llena de contenido el sistema se va enloqueciendo (refiriéndose a complejidad en herramientas)"
+  ],
+  "alertas_supervivencia": [],
+  "total_lifelogs": 10,
+  "procesado_con": "haiku_compacto"
+}

@@ -1,0 +1,54 @@
+{
+  "saludo": "Buenos días Sebastián — martes 14 Apr",
+  "supervivencia": [
+    "Crédito Bancolombia vence HOY 15 Apr (P1) — revisar estado y próximos pasos",
+    "Caja en rojo: -950 EBITDA, solo 8 días de runway — reunión con Andrea URGENTE"
+  ],
+  "top_3": [
+    {
+      "tarea": "Llamar Andrea: deudas Condugas + viabilidad flujo abril",
+      "categoria": "SUPERVIVENCIA",
+      "porque": "Caja crítica, vencimiento crediticio mañana",
+      "tarea_id": "resolver-deudas-condugas"
+    },
+    {
+      "tarea": "Reunión Lina + Ema: Odoo (parámetros reales) + ERP IA (arquitectura visual)",
+      "categoria": "SUPERVIVENCIA",
+      "porque": "Sin sistemas integrados no hay trazabilidad de ingresos/costos",
+      "tarea_id": "implementar-odoo"
+    },
+    {
+      "tarea": "Coordinar junta directiva: confirmar 20, 21 o 22 + presentación Condugas",
+      "categoria": "ESTRATEGIA",
+      "porque": "Inversores esperan claridad, define financiamiento próx trimestre",
+      "tarea_id": "primera-junta-directiva"
+    }
+  ],
+  "mega_dia": "Cerrar: estado caja HOY (inversiones + deudas + flujo real) — es tu cuello de botella",
+  "contactar_hoy": [
+    {
+      "persona": "Andrea",
+      "motivo": "Deudas claras, tiquetes Cartagena, flujo mes"
+    },
+    {
+      "persona": "Lina",
+      "motivo": "Pagos pendientes + reunión Odoo + visualizador calendario"
+    }
+  ],
+  "ojo_con": [
+    "Vencimiento Bancolombia 15 Apr (mañana) — no dejar pasar",
+    "EPM reportó no conformidad — revisar alcance real del daño",
+    "6 críticas abiertas, solo 3 en proceso — triaje ahora"
+  ],
+  "vencidas": [],
+  "frase_dia": "Sin caja clara no hay estrategia. Hoy: números reales, mañana: decisiones.",
+  "generado_at": "2026-04-14T11:00:09",
+  "fecha": "2026-04-14",
+  "stats": {
+    "abiertas": 29,
+    "criticas": 6,
+    "vencidas": 0,
+    "estancadas": 2,
+    "sin_evaluar": 6
+  }
+}

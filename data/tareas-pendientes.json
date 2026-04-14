@@ -1,153 +1,13 @@
 {
   "candidatas": [
     {
-      "id": "2026-04-08-001",
-      "tarea": "Compartir informes diarios, actas de obra o correos de febrero a abril que mencionen lluvias, paradas o bajo rendimiento del proyecto",
-      "responsable": "Sebastian",
-      "prioridad": "alta",
-      "contexto": "Fases PH - estadística de realidad del proyecto",
-      "tipo": "pendiente",
-      "estado": "aceptada",
-      "fecha": "2026-04-08"
-    },
-    {
-      "id": "2026-04-08-002",
-      "tarea": "Llamar a Juan Pablo para confirmar próximos lanzamientos",
-      "responsable": "Sebastian",
-      "prioridad": "media",
-      "contexto": "Lanzamientos y próximas acciones",
-      "tipo": "compromiso",
-      "estado": "rechazada",
-      "fecha": "2026-04-08"
-    },
-    {
-      "id": "2026-04-08-003",
-      "tarea": "Obtener nombre del contrato de Ayura y su número",
-      "responsable": "Sebastian",
-      "prioridad": "media",
-      "contexto": "Documentación de contratos",
-      "tipo": "pendiente",
-      "estado": "rechazada",
-      "fecha": "2026-04-08"
-    },
-    {
-      "id": "2026-04-08-004",
-      "tarea": "Enviar documento a través de Diana Giraldo para que lo remita a US",
-      "responsable": "Sebastian",
-      "prioridad": "alta",
-      "contexto": "Proceso de envío de documentos - conversación con Humberto Iglesias",
-      "tipo": "pendiente",
-      "estado": "aceptada",
-      "fecha": "2026-04-08"
-    },
-    {
-      "id": "2026-04-08-005",
-      "tarea": "Revisar rendimiento de contratos compartidos que se ven críticos",
-      "responsable": "Sebastian",
-      "prioridad": "alta",
-      "contexto": "Evaluación de desempeño de contratos",
-      "tipo": "seguimiento",
-      "estado": "aceptada",
-      "fecha": "2026-04-08"
-    },
-    {
-      "id": "2026-04-08-006",
-      "tarea": "Definir horario fijo de reunión con Mario y enviar datos de ubicación por WhatsApp",
-      "responsable": "Sebastian",
-      "prioridad": "alta",
-      "contexto": "Reunión presencial con Mario",
-      "tipo": "compromiso",
-      "estado": "aceptada",
-      "fecha": "2026-04-08"
-    },
-    {
-      "id": "2026-04-08-007",
-      "tarea": "Solicitar revisión legal del contrato a los abogados antes de proceder",
-      "responsable": "Sebastian",
-      "prioridad": "critica",
-      "contexto": "Revisión legal de contrato pendiente",
-      "tipo": "pendiente",
-      "estado": "aceptada",
-      "fecha": "2026-04-08"
-    },
-    {
-      "id": "2026-04-08-008",
-      "tarea": "Cotizar costo de auditoría de procesos de calidad y propuesta de riesgos con Billy",
-      "responsable": "Sebastian",
-      "prioridad": "media",
-      "contexto": "Procesos de calidad y auditoría",
-      "tipo": "pendiente",
-      "estado": "aceptada",
-      "fecha": "2026-04-08"
-    },
-    {
-      "id": "2026-04-08-009",
-      "tarea": "Solicitar datos de consumo y cierre de contrato a Juanpa",
-      "responsable": "Sebastian",
-      "prioridad": "media",
-      "contexto": "Datos para análisis de facturación",
-      "tipo": "pendiente",
-      "estado": "aceptada",
-      "fecha": "2026-04-08"
-    },
-    {
-      "id": "2026-04-11-001",
-      "tarea": "Preparar borrador sobre Condugas para presentación en primera junta directiva",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Primera junta directiva - presentación de 15 minutos de la empresa",
-      "tipo": "compromiso",
-      "estado": "pendiente",
-      "fecha": "2026-04-11"
-    },
-    {
-      "id": "2026-04-11-002",
-      "tarea": "Hablar con Alejandro para hacerle oferta de participación en junta directiva",
-      "responsable": "Gilberto",
-      "prioridad": "alta",
-      "contexto": "Conformación de junta directiva - protocolo previo",
-      "tipo": "compromiso",
-      "estado": "pendiente",
-      "fecha": "2026-04-11"
-    },
-    {
-      "id": "2026-04-11-003",
-      "tarea": "Coordinar fechas tentativas para primera junta directiva (20, 21, 22 del mes)",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Primera junta directiva con desayuno",
-      "tipo": "compromiso",
-      "estado": "pendiente",
-      "fecha": "2026-04-11"
-    },
-    {
-      "id": "2026-04-11-004",
-      "tarea": "Llamar a Olga para informar sobre estado de Condugas y solicitar movimiento estratégico",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Junta directiva - Olga participará como miembro",
-      "tipo": "seguimiento",
-      "estado": "pendiente",
-      "fecha": "2026-04-11"
-    },
-    {
-      "id": "2026-04-11-005",
-      "tarea": "Enviar contrato en cuestión para revisión",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Análisis de abuso de poder de Catalina Betancourt en proceso contractual",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-11"
-    },
-    {
       "id": "2026-04-12-001",
       "tarea": "Resolver urgentemente el viaje a Cartagena que es demanda pendiente",
       "responsable": "Sebastian Sanchez",
       "prioridad": "critica",
       "contexto": "Litigio/demanda",
       "tipo": "pendiente",
-      "estado": "pendiente",
+      "estado": "aceptada",
       "fecha": "2026-04-12"
     },
     {
@@ -157,7 +17,7 @@
       "prioridad": "alta",
       "contexto": "Gestión general de proyectos",
       "tipo": "seguimiento",
-      "estado": "pendiente",
+      "estado": "aceptada",
       "fecha": "2026-04-12"
     },
     {
@@ -167,7 +27,7 @@
       "prioridad": "alta",
       "contexto": "Herramienta de diagnóstico y KPIs",
       "tipo": "pendiente",
-      "estado": "pendiente",
+      "estado": "aceptada",
       "fecha": "2026-04-12"
     },
     {
@@ -177,7 +37,7 @@
       "prioridad": "media",
       "contexto": "Sistema de KPIs y triaje",
       "tipo": "pendiente",
-      "estado": "pendiente",
+      "estado": "aceptada",
       "fecha": "2026-04-12"
     },
     {
@@ -187,9 +47,283 @@
       "prioridad": "alta",
       "contexto": "Cuestión financiera sin especificar",
       "tipo": "pendiente",
-      "estado": "pendiente",
+      "estado": "rechazada",
       "fecha": "2026-04-12"
+    },
+    {
+      "id": "2026-04-08-001",
+      "tarea": "Enviar documento a Santiago Wilches antes de presentarlo a reunión con Carlos Marín",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Comunicación interna y protocolo de revisión",
+      "tipo": "compromiso",
+      "estado": "aceptada",
+      "fecha": "2026-04-08",
+      "fecha_limite": "2026-04-09",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Santiago Wilches",
+        "Carlos Marín"
+      ]
+    },
+    {
+      "id": "2026-04-08-003",
+      "tarea": "Coordinar con Gilberto para hacer oferta a Alejandro como miembro de junta directiva",
+      "responsable": "Gilberto",
+      "prioridad": "alta",
+      "contexto": "Conformación de junta directiva - perfil financiero/administrativo",
+      "tipo": "compromiso",
+      "estado": "rechazada",
+      "fecha": "2026-04-08",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Alejandro",
+        "Gilberto"
+      ]
+    },
+    {
+      "id": "2026-04-08-004",
+      "tarea": "Hacer oferta a candidatos para junta directiva (Eduardo, Mario, tercera persona) con remuneración de dos salarios mínimos mensuales",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Estructura de junta asesora para Condugas y otras empresas",
+      "tipo": "compromiso",
+      "estado": "aceptada",
+      "fecha": "2026-04-08",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Eduardo",
+        "Mario",
+        "Alejandro"
+      ]
+    },
+    {
+      "id": "2026-04-08-006",
+      "tarea": "Estructurar negociación de centro de abastecimiento y macro negociaciones (oferta pública)",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Reestructuración de negocio - separar operación de contrato EPM",
+      "tipo": "pendiente",
+      "estado": "rechazada",
+      "fecha": "2026-04-08",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Manuel",
+        "Colina"
+      ]
+    },
+    {
+      "id": "2026-04-08-007",
+      "tarea": "Revisar APUs con Manuel y Colina para montar directamente en ODU",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Optimización operativa y costos en Condugas",
+      "tipo": "pendiente",
+      "estado": "aceptada",
+      "fecha": "2026-04-08",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Manuel",
+        "Colina"
+      ]
+    },
+    {
+      "id": "2026-04-09-002",
+      "tarea": "Implementar aisladores de energía estática en oficina",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media",
+      "contexto": "Oficina presenta problemas de energía estática, requiere presupuesto",
+      "tipo": "pendiente",
+      "estado": "rechazada",
+      "fecha": "2026-04-09"
+    },
+    {
+      "id": "2026-04-09-003",
+      "tarea": "Coordinar fotografía de tarde",
+      "responsable": "Adolfo",
+      "prioridad": "media",
+      "contexto": "Fotografía programada para la tarde",
+      "tipo": "compromiso",
+      "estado": "rechazada",
+      "fecha": "2026-04-09"
+    },
+    {
+      "id": "2026-04-09-004",
+      "tarea": "Desarrollar ERP basado en IA",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta",
+      "contexto": "Proyecto de crear ERP que integre mejores metodologías de otros sistemas con framework de jefatura",
+      "tipo": "pendiente",
+      "estado": "aceptada",
+      "fecha": "2026-04-09"
+    },
+    {
+      "id": "2026-04-14-001",
+      "tarea": "Reunirse con Andrea para resolver deuda Condugas",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Deudas internas Condugas",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-14",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Andrea"
+      ]
+    },
+    {
+      "id": "2026-04-14-002",
+      "tarea": "Hacer seguimiento piloto Claudio Camilo Berrío",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Operaciones Condugas",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-14",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Claudio Camilo Berrío"
+      ]
+    },
+    {
+      "id": "2026-04-14-003",
+      "tarea": "Consultar con William sobre estructura de cobros y montos para Terret",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Estructura fiscal y contable múltiples clientes",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-14",
+      "fecha_limite": "2026-04-15",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "William"
+      ]
+    },
+    {
+      "id": "2026-04-14-004",
+      "tarea": "Preparar documentación legal para contrato problemático",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Asesoría legal contractual",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-14",
+      "fecha_limite": "2026-04-15",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-14-006",
+      "tarea": "Coordinar reunión con leads/clientes para definición estratégica",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Prospección Siendo Consulting",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-14",
+      "fecha_limite": "2026-04-16",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-14-007",
+      "tarea": "Reunirse con Terre para propuesta de colaboración antes del 20 de abril",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Oportunidad comercial Siendo Consulting",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-14",
+      "fecha_limite": "2026-04-20",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Terre"
+      ]
+    },
+    {
+      "id": "2026-04-14-008",
+      "tarea": "Atender reunión DPM a las 14:30 sobre comunicado de Catalina",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Asuntos legales/administrativos",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-14",
+      "fecha_limite": "2026-04-15",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Catalina",
+        "Jorge William"
+      ]
+    },
+    {
+      "id": "2026-04-14-009",
+      "tarea": "Definir estructura contable para pagos en dólares y cuentas de cobro Terret",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Estructura fiscal múltiples monedas",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-14",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "William"
+      ]
+    },
+    {
+      "id": "2026-04-14-010",
+      "tarea": "Crear información visual ERP con Emanuel y Lina para comprensión integral del proyecto",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Proyecto ERP integración metodologías y sistemas",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-14",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Emanuel",
+        "Lina"
+      ]
+    },
+    {
+      "id": "2026-04-14-011",
+      "tarea": "{'taja': 'Diseñar visualizador de tareas en calendario por orden de prioridad', 'responsable': 'Sebastian', 'prioridad': 'media', 'tipo': 'pendiente', 'contexto': 'Gestión sistema de tareas y dashboar",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Gestión sistema de tareas y dashboard",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-14",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Ariel"
+      ]
     }
   ],
-  "ultima_actualizacion": "2026-04-12T12:00:18.347315"
+  "ultima_actualizacion": "2026-04-14T12:00:31.171016"
 }
