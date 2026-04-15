@@ -495,7 +495,25 @@ function showBfTab(panelId, btn) {
 }
 
 function loadBriefing() {
-  fetch('/data/briefing.json?t='+Date.now()).then(function(r){return r.json()}).then(function(b){
+  // Fetch paralelo a los 4 archivos separados (briefing.json ya no trae los sub-objetos nested)
+  var t = Date.now();
+  Promise.all([
+    fetch('/data/briefing.json?t='+t).then(function(r){return r.json()}).catch(function(){return {}}),
+    fetch('/data/briefing-hoy.json?t='+t).then(function(r){return r.json()}).catch(function(){return null}),
+    fetch('/data/briefing-semana.json?t='+t).then(function(r){return r.json()}).catch(function(){return null}),
+    fetch('/data/briefing-historial.json?t='+t).then(function(r){return r.json()}).catch(function(){return null}),
+    fetch('/data/briefing-ayer.json?t='+t).then(function(r){return r.json()}).catch(function(){return null}),
+  ]).then(function(results){
+    var b = results[0] || {};
+    var hoy = results[1];
+    var semana = results[2];
+    var historial = results[3];
+    var ayer = results[4];
+    // Los archivos separados tienen prioridad sobre campos nested legacy
+    if (hoy) b.briefing_hoy = hoy;
+    if (semana) b.semana = semana;
+    if (ayer) b.briefing_ayer = ayer;
+    b._historial = historial;
     // === PANEL HOY ===
     var bh = b.briefing_hoy || {};
     var h = '';
@@ -722,11 +740,11 @@ function loadBriefing() {
 
 function buildHistorial(b) {
   // Construir historial consolidado por semanas
-  // Usa briefing_hoy.stats + semana como W actual
-  // Futuro: se puede alimentar de un endpoint /data/briefing-historial.json
+  // Lee /data/briefing-historial.json (guardado en b._historial por loadBriefing)
   var hh = '';
   var sem = b.semana || {};
   var bh = b.briefing_hoy || {};
+  var historial = b._historial || null;
 
   hh += '<div style="font-family:\'Instrument Serif\',serif;font-size:20px;margin-bottom:12px">Historial de trazabilidad</div>';
   hh += '<p style="font-size:12px;color:var(--muted);margin-bottom:16px">Vision consolidada para detectar patrones, olvidos y temas recurrentes</p>';
@@ -787,12 +805,64 @@ function buildHistorial(b) {
     }
   }
 
-  // Placeholder para semanas anteriores
-  hh += '<h3>Semanas anteriores</h3>';
-  hh += '<div style="text-align:center;padding:20px;color:var(--muted);background:var(--bg2);border:1px dashed var(--border);border-radius:8px">';
-  hh += 'Para activar historial completo, el agente debe guardar <code>/data/briefing-historial.json</code> con un array de resumenes semanales.<br>';
-  hh += 'Cada semana se agrega automaticamente al cierre del domingo.';
-  hh += '</div>';
+  // Semanas anteriores (desde briefing-historial.json)
+  if (historial && historial.semanas && historial.semanas.length) {
+    hh += '<h3>Semanas anteriores</h3>';
+    // Ordenar de mas reciente a mas antigua, excluyendo la semana actual si ya se renderizo arriba
+    var semanasHist = historial.semanas.slice().sort(function(a,b){
+      return (b.semana||'').localeCompare(a.semana||'');
+    });
+    // Si la semana actual (sem.semana) ya se renderizo arriba, no la dupliques aqui
+    var currentSemKey = sem.semana || '';
+    semanasHist = semanasHist.filter(function(s){ return s.semana !== currentSemKey });
+
+    if (!semanasHist.length) {
+      hh += '<div style="text-align:center;padding:16px;color:var(--muted);font-size:12px">Solo hay datos de la semana actual. El historial crece con cada cierre semanal (domingo).</div>';
+    } else {
+      // Mini-grafico de tendencia (creadas/cerradas) - texto simple
+      hh += '<div style="display:flex;gap:8px;margin-bottom:12px;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:600">';
+      hh += '<span style="width:60px">Semana</span>';
+      hh += '<span style="width:90px">Periodo</span>';
+      hh += '<span style="width:60px;text-align:center">Creadas</span>';
+      hh += '<span style="width:60px;text-align:center">Cerradas</span>';
+      hh += '<span style="width:50px;text-align:center">Ratio</span>';
+      hh += '<span style="flex:1;text-align:center">Totales (T/D/I/A)</span>';
+      hh += '</div>';
+
+      semanasHist.forEach(function(s) {
+        var mt = s.metricas || {};
+        var tot = s.totales || {};
+        var ratio = mt.ratio_cierre || 0;
+        var ratioColor = ratio >= 50 ? 'var(--green)' : (ratio >= 30 ? 'var(--yellow)' : 'var(--red)');
+        hh += '<div class="week-summary-card" style="display:flex;gap:8px;align-items:center;font-size:12px;padding:10px 12px">';
+        hh += '<span style="width:60px;font-weight:600">' + (s.semana||'--') + '</span>';
+        hh += '<span style="width:90px;color:var(--muted);font-size:10px">' + (s.periodo||'') + '</span>';
+        hh += '<span style="width:60px;text-align:center;font-family:monospace;color:var(--orange)">' + (mt.creadas_semana||0) + '</span>';
+        hh += '<span style="width:60px;text-align:center;font-family:monospace;color:var(--green)">' + (mt.cerradas_semana||0) + '</span>';
+        hh += '<span style="width:50px;text-align:center;font-family:monospace;color:' + ratioColor + '">' + ratio + '%</span>';
+        hh += '<span style="flex:1;text-align:center;font-size:11px;color:var(--muted)">' + (tot.tareas_detectadas||0) + ' / ' + (tot.decisiones||0) + ' / ' + (tot.ideas||0) + ' / ' + (tot.alertas||0) + '</span>';
+        hh += '</div>';
+      });
+
+      // Detectar tendencia: ratio de cierre sube o baja?
+      if (semanasHist.length >= 1 && sem.metricas_tracker) {
+        var ratioActual = sem.metricas_tracker.ratio_cierre || 0;
+        var ratioPrev = (semanasHist[0].metricas || {}).ratio_cierre || 0;
+        var delta = ratioActual - ratioPrev;
+        if (Math.abs(delta) >= 5) {
+          var tendClass = delta > 0 ? 'info' : 'warning';
+          var tendIcon = delta > 0 ? '&uarr;' : '&darr;';
+          var tendColor = delta > 0 ? 'var(--green)' : 'var(--red)';
+          hh += '<div class="bf-alert ' + tendClass + '" style="margin-top:12px">Tendencia ratio de cierre: <strong style="color:' + tendColor + '">' + tendIcon + ' ' + Math.abs(delta) + ' puntos</strong> vs ' + semanasHist[0].semana + ' (' + ratioPrev + '% &rarr; ' + ratioActual + '%)</div>';
+        }
+      }
+    }
+  } else {
+    hh += '<h3>Semanas anteriores</h3>';
+    hh += '<div style="text-align:center;padding:20px;color:var(--muted);background:var(--bg2);border:1px dashed var(--border);border-radius:8px">';
+    hh += 'Sin historial disponible todavia. El archivo <code>/data/briefing-historial.json</code> se actualiza automaticamente cada domingo al cierre de semana.';
+    hh += '</div>';
+  }
 
   document.getElementById('bf-historial-content').innerHTML = hh;
 }
