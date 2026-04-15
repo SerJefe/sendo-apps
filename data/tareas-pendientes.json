@@ -323,7 +323,235 @@
       "personas": [
         "Ariel"
       ]
+    },
+    {
+      "id": "2026-04-15-001",
+      "tarea": "Revisar informe de gestión para Supersociedades",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Informe de gestión abril 2026 - vencimiento próximo",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": "2026-04-16",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Supersociedades"
+      ]
+    },
+    {
+      "id": "2026-04-15-002",
+      "tarea": "{'taja': 'Enviar estados financieros y anexos a Supersociedades', 'responsable': 'Sebastian', 'prioridad': 'alta', 'tipo': 'compromiso', 'contexto': 'Estados financieros listos - pendiente envío con i",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Estados financieros listos - pendiente envío con informe",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": "2026-04-17",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Supersociedades"
+      ]
+    },
+    {
+      "id": "2026-04-15-003",
+      "tarea": "Obtener respuesta contable de Manuel sobre configuración nómina UGP-DIAN",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Negociación EPM - requiere definición contable para firma",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Manuel",
+        "UGP",
+        "DIAN"
+      ]
+    },
+    {
+      "id": "2026-04-15-004",
+      "tarea": "Cobrar ICA pendiente a municipios (~55 millones Medellín)",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "ICA municipios Antioquia - pagos grandes pendientes antes de facturación",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": 55000000,
+      "personas": [
+        "Medellín",
+        "municipios"
+      ]
+    },
+    {
+      "id": "2026-04-15-005",
+      "tarea": "Responder requerimiento SENA pendiente",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "SENA - requerimiento activo contestación urgente",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": "2026-04-16",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "SENA"
+      ]
+    },
+    {
+      "id": "2026-04-15-006",
+      "tarea": "Escanear Acta 87 de Asamblea",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Acta física en poder de William - requiere escaneo",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "William"
+      ]
+    },
+    {
+      "id": "2026-04-15-007",
+      "tarea": "Firmar declaración de renta con ayuda de Diana y Alejandro",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Declaración de renta pendiente",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Diana",
+        "Alejandro"
+      ]
+    },
+    {
+      "id": "2026-04-15-008",
+      "tarea": "Integrar informes inversión extranjera en sistema Odoo",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Sistemas - generar reportes automáticos desde Odoo",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": null,
+      "categoria_sugerida": "finanzas",
+      "monto_cop": null,
+      "personas": [
+        "Dani",
+        "Odoo"
+      ]
+    },
+    {
+      "id": "2026-04-15-009",
+      "tarea": "Definir auditoría de balances en Odoo con revisor fiscal",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Migración de proceso mensual a auditoría en Odoo",
+      "tipo": "decisión",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Odoo",
+        "revisor fiscal"
+      ]
+    },
+    {
+      "id": "2026-04-15-010",
+      "tarea": "Enviar certificados retención mensual a consorciados (Óscar, Zilar)",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Certificados retención 2025-2026 - envío urgente a Zilar",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": "2026-04-17",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Óscar",
+        "Zilar"
+      ]
+    },
+    {
+      "id": "2026-04-15-011",
+      "tarea": "Ajustar débito deuda NC (retenciones no cobradas)",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "NC - retenciones pendientes de cobro",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "NC"
+      ]
+    },
+    {
+      "id": "2026-04-15-012",
+      "tarea": "Aclarar uso y condiciones de contenedores charcutería",
+      "responsable": "Sebastian",
+      "prioridad": "baja",
+      "contexto": "Infraestructura - daños y gastos no autorizados",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-15-013",
+      "tarea": "Cuadrar deuda empresa a Condugas y plan de pago",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Caja - empresa debe dinero a Condugas, debe documentarse cuánto",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-15-014",
+      "tarea": "Contactar Catalina (EPM) para seguimiento post-negociación",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Negociación EPM - Catalina afectada, requiere seguimiento",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-15",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Catalina",
+        "EPM"
+      ]
     }
   ],
-  "ultima_actualizacion": "2026-04-15T12:00:38.457598"
+  "ultima_actualizacion": "2026-04-15T16:57:47.136046"
 }

@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT15M
 X-PUBLISHED-TTL:PT15M
 BEGIN:VEVENT
 UID:tarea-2026-04-08-005@serjefe
-DTSTAMP:20260415T120001Z
+DTSTAMP:20260415T164501Z
 DTSTART;VALUE=DATE:20260420
 DTEND;VALUE=DATE:20260421
 SUMMARY:[CRITICA] Revisar rendimiento de contratos compartidos que se ven críticos
@@ -22,7 +22,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-13-m5b3b40@serjefe
-DTSTAMP:20260415T120001Z
+DTSTAMP:20260415T164501Z
 DTSTART;VALUE=DATE:20260416
 DTEND;VALUE=DATE:20260417
 SUMMARY:[CRITICA] Implementar Odoo\, revisión \, parámetros\, reglas 
@@ -34,23 +34,11 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-14-c001@serjefe
-DTSTAMP:20260415T120001Z
+DTSTAMP:20260415T164501Z
 DTSTART;VALUE=DATE:20260415
 DTEND;VALUE=DATE:20260416
 SUMMARY:[CRITICA] Revisar no conformidad EPM contrato 2401 y responder formalmente
 DESCRIPTION:Contexto: Contrato EPM\, cumplimiento normativo\nResponsable: Sebastian\n\nDashboard: https://72.60.28.156.nip.io/
-CATEGORIES:TRABAJO
-PRIORITY:1
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:tarea-2026-04-14-c004@serjefe
-DTSTAMP:20260415T120001Z
-DTSTART;VALUE=DATE:20260414
-DTEND;VALUE=DATE:20260415
-SUMMARY:[CRITICA] Revisar contrato con Catalina identificando riesgos legales y posible abuso de poder
-DESCRIPTION:Contexto: Riesgos legales contractuales | Análisis de abuso de poder de Catalina Betancourt en proceso contractual | Asuntos legales/administrativos\nResponsable: Sebastian\n\nDashboard: https://72.60.28.156.nip.io/
 CATEGORIES:TRABAJO
 PRIORITY:1
 STATUS:CONFIRMED

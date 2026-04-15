@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-15T07:33:22",
+  "ultima_actualizacion": "2026-04-15T16:57:47",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -667,8 +667,8 @@
       "responsable": "Sebastian",
       "prioridad": "media",
       "fecha_creacion": "2026-04-13",
-      "fecha_cierre": null,
-      "estado": "abierta",
+      "fecha_cierre": "2026-04-15",
+      "estado": "cerrada",
       "origen": "manual",
       "contexto": "",
       "tipo": "pendiente",
@@ -724,7 +724,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "finanzas",
+      "categoria": "familia",
       "descripcion": "",
       "proxima_accion": "Revisar caja a hoy y movimiento y estado de inversiones",
       "impacto": 5,
@@ -954,9 +954,9 @@
       "responsable": "Sebastian",
       "prioridad": "critica",
       "fecha_creacion": "2026-04-14",
-      "fecha_cierre": null,
+      "fecha_cierre": "2026-04-15",
       "fecha_limite": "2026-04-14",
-      "estado": "abierta",
+      "estado": "cerrada",
       "origen": "limitless_auto",
       "contexto": "Riesgos legales contractuales | Análisis de abuso de poder de Catalina Betancourt en proceso contractual | Asuntos legales/administrativos",
       "tipo": "seguimiento",
@@ -1210,6 +1210,70 @@
       "puntaje": 38,
       "nivel": "alta",
       "recomendacion": "Programar pronto"
+    },
+    {
+      "id": "2026-04-15-c001",
+      "tarea": "Cobrar reajustes pendientes a EPM del contrato Río Negro (~180 millones COP)",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-15",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Contrato EPM Río Negro - 5 meses sin pago de reajustes",
+      "tipo": "seguimiento",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "trabajo",
+      "monto_cop": 180000000,
+      "personas": [
+        "Jorge William",
+        "EPM"
+      ]
+    },
+    {
+      "id": "2026-04-15-c002",
+      "tarea": "Estructurar defensa legal y documentación contra EPM por incumplimiento contractual",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-15",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Reunión con EPM - Sebastian debe defenderse solo y estructurar documentación con Meniza",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Meniza",
+        "EPM",
+        "Jorge William"
+      ]
+    },
+    {
+      "id": "2026-04-15-c003",
+      "tarea": "Preparar propuesta contundente de reajuste de contrato EPM Río Negro con alternativas viables",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-15",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Negociación EPM - incluir mínimos de asignación y viabilidad operativa",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "EPM",
+        "Catalina"
+      ]
     }
   ]
 }
