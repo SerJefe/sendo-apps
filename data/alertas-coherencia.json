@@ -1,44 +1,109 @@
 {
-  "generado_at": "2026-04-14T11:30:01",
+  "generado_at": "2026-04-15T11:30:01",
   "resumen": {
-    "duplicados": 0,
-    "alta_prioridad_sin_accion": 4,
+    "grupos_fusion": 0,
+    "tareas_en_grupos": 0,
+    "alta_prioridad_sin_accion": 2,
     "sobrecarga": 1,
-    "sin_categoria": 0
+    "sin_categoria": 1,
+    "estancadas": 1,
+    "sin_evaluar": 9,
+    "total_abiertas": 33
   },
-  "duplicados": [],
+  "grupos_fusion": [],
   "alta_prioridad_sin_accion": [
-    {
-      "id": "2026-04-12-002",
-      "tarea": "Aclarar y definir los 20 temas pendientes en listado",
-      "puntaje": 55,
-      "recomendacion": "Hacer hoy"
-    },
-    {
-      "id": "2026-04-11-003",
-      "tarea": "Coordinar fechas tentativas para primera junta directiva (20, 21, 22 del mes)",
-      "puntaje": 48,
-      "recomendacion": "Hacer hoy"
-    },
     {
       "id": "2026-04-13-me871ed",
       "tarea": "Carros, créditos, proyecciones",
       "puntaje": 43,
-      "recomendacion": "Programar pronto"
+      "recomendacion": "Programar pronto",
+      "responsable": "Sebastian"
     },
     {
       "id": "2026-04-13-mb61536",
       "tarea": "Reunión Vendemos",
       "puntaje": 41,
-      "recomendacion": "Programar pronto"
+      "recomendacion": "Programar pronto",
+      "responsable": "Sebastian"
     }
   ],
   "sobrecarga": [
     {
       "responsable": "Sebastian",
-      "abiertas": 19,
-      "sugerencia": "Delegar o repriorizar. Sebastian tiene 19 tareas abiertas."
+      "abiertas": 29,
+      "criticas": 6,
+      "sugerencia": "Sebastian tiene 29 tareas abiertas (6 criticas). Delegar o repriorizar."
     }
   ],
-  "sin_categoria": []
+  "sin_categoria": [
+    {
+      "id": "2026-04-14-m061ce8",
+      "tarea": "Preparar 3 modulos calse Adolfo"
+    }
+  ],
+  "estancadas": [
+    {
+      "id": "2026-04-06-002",
+      "tarea": "Recopilar información del proceso centro de operaciones",
+      "responsable": "Andrés Avendaño",
+      "dias": 9,
+      "puntaje": 44
+    }
+  ],
+  "sin_evaluar": [
+    {
+      "id": "2026-04-12-004",
+      "tarea": "Publicar documentación de KPIs en repositorio público",
+      "responsable": "Equipo Técnico",
+      "fecha_creacion": "2026-04-12"
+    },
+    {
+      "id": "2026-04-13-mc2abc0",
+      "tarea": "Casa (Construcción)",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-13"
+    },
+    {
+      "id": "2026-04-13-m3515e9",
+      "tarea": "Ejecutar y pagar Jericó para empalme en abril 16 de abril",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-13"
+    },
+    {
+      "id": "2026-04-14-c001",
+      "tarea": "Revisar no conformidad EPM contrato 2401 y responder formalmente",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-14"
+    },
+    {
+      "id": "2026-04-14-c004",
+      "tarea": "Revisar contrato con Catalina identificando riesgos legales y posible abuso de poder",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-14"
+    },
+    {
+      "id": "2026-04-14-001",
+      "tarea": "Reunirse con Andrea para resolver deuda Condugas",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-14"
+    },
+    {
+      "id": "2026-04-14-006",
+      "tarea": "Coordinar reunión con leads/clientes para definición estratégica",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-14"
+    },
+    {
+      "id": "2026-04-14-010",
+      "tarea": "Crear información visual ERP con Emanuel y Lina para comprensión integral del proyecto",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-14"
+    },
+    {
+      "id": "2026-04-14-011",
+      "tarea": "{'taja': 'Diseñar visualizador de tareas en calendario por orden de prioridad', 'responsable': 'Seba",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-14"
+    }
+  ]
 }

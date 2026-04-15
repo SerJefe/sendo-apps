@@ -20,21 +20,21 @@
     },
     {
       "semana": "W16",
-      "periodo": "2026-04-08 a 2026-04-14",
+      "periodo": "2026-04-09 a 2026-04-15",
       "metricas": {
-        "creadas_semana": 36,
-        "cerradas_semana": 12,
-        "evaluadas_semana": 24,
-        "abiertas_total": 29,
-        "ratio_cierre": 33
+        "creadas_semana": 51,
+        "cerradas_semana": 23,
+        "evaluadas_semana": 30,
+        "abiertas_total": 33,
+        "ratio_cierre": 45
       },
       "totales": {
-        "tareas_detectadas": 16,
-        "decisiones": 10,
-        "ideas": 11,
+        "tareas_detectadas": 25,
+        "decisiones": 7,
+        "ideas": 10,
         "alertas": 5
       },
-      "generado_at": "2026-04-14T11:00:09"
+      "generado_at": "2026-04-15T11:00:10"
     }
   ]
 }

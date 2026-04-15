@@ -1,54 +1,165 @@
 {
-  "saludo": "Buenos días Sebastián — martes 14 Apr",
+  "saludo": "Buenos días Sebastián — miércoles 15 Apr",
   "supervivencia": [
-    "Crédito Bancolombia vence HOY 15 Apr (P1) — revisar estado y próximos pasos",
-    "Caja en rojo: -950 EBITDA, solo 8 días de runway — reunión con Andrea URGENTE"
+    "EPM 2401: no conformidad sin respuesta formal (vencida hoy) → riesgo legal inmediato con cliente ~80 empleados",
+    "Caja: 8 días de runway, -950 EBITDA, solo 20% efectivo disponible → decisión urgente: cobros Terret o crédito",
+    "Odoo: deadline ayer (16/4) → reunión hoy con Lina/Ema para definir qué hay/qué falta"
   ],
   "top_3": [
     {
-      "tarea": "Llamar Andrea: deudas Condugas + viabilidad flujo abril",
+      "tarea": "Responder formalmente a EPM no conformidad 2401 + plan de acción",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Caja crítica, vencimiento crediticio mañana",
-      "tarea_id": "resolver-deudas-condugas"
+      "porque": "Vencida hoy, riesgo legal con cliente clave",
+      "tarea_id": "revisar_no_conformidad_EPM"
     },
     {
-      "tarea": "Reunión Lina + Ema: Odoo (parámetros reales) + ERP IA (arquitectura visual)",
+      "tarea": "Revisar caja familiar + inversiones hoy, definir si cobrar Terret o activar crédito",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Sin sistemas integrados no hay trazabilidad de ingresos/costos",
-      "tarea_id": "implementar-odoo"
+      "porque": "8 días runway, decisión estratégica antes de junta 20/4",
+      "tarea_id": "situacion_caja_familiar"
     },
     {
-      "tarea": "Coordinar junta directiva: confirmar 20, 21 o 22 + presentación Condugas",
-      "categoria": "ESTRATEGIA",
-      "porque": "Inversores esperan claridad, define financiamiento próx trimestre",
-      "tarea_id": "primera-junta-directiva"
+      "tarea": "Reunión Lina + Ema: status Odoo, qué falta para go-live",
+      "categoria": "OPERATIVO",
+      "porque": "Deadline vencido, bloquea clientes actuales en sistema",
+      "tarea_id": "implementar_odoo"
     }
   ],
-  "mega_dia": "Cerrar: estado caja HOY (inversiones + deudas + flujo real) — es tu cuello de botella",
+  "mega_dia": "EPM respondida + caja resuelta = 2 de 6 críticas cerradas antes de junta",
   "contactar_hoy": [
     {
-      "persona": "Andrea",
-      "motivo": "Deudas claras, tiquetes Cartagena, flujo mes"
+      "persona": "Lina + Ema",
+      "motivo": "Status Odoo, 30 min máximo"
     },
     {
-      "persona": "Lina",
-      "motivo": "Pagos pendientes + reunión Odoo + visualizador calendario"
+      "persona": "Andrea",
+      "motivo": "Deuda Condugas + tiquetes Cartagena (aplazado)"
     }
   ],
   "ojo_con": [
-    "Vencimiento Bancolombia 15 Apr (mañana) — no dejar pasar",
-    "EPM reportó no conformidad — revisar alcance real del daño",
-    "6 críticas abiertas, solo 3 en proceso — triaje ahora"
+    "21 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+    "Contrato Catalina (deadline ayer 14/4) → no aparece resuelto en alertas",
+    "Jericó empalme 16/4 → ¿está pagado/ejecutado?",
+    "Dashboard briefing aún sin actualizar KPIs (99 días sin refresh)"
   ],
-  "vencidas": [],
-  "frase_dia": "Sin caja clara no hay estrategia. Hoy: números reales, mañana: decisiones.",
-  "generado_at": "2026-04-14T11:00:09",
-  "fecha": "2026-04-14",
+  "vencidas": [
+    "Revisar contrato Catalina (14/4)",
+    "No conformidad EPM (15/4 = hoy)"
+  ],
+  "frase_dia": "Supervivencia primero: EPM + caja hoy, luego escalas. Junta 20/4 sin sorpresas.",
+  "generado_at": "2026-04-15T11:00:10",
+  "fecha": "2026-04-15",
   "stats": {
-    "abiertas": 29,
+    "abiertas": 33,
     "criticas": 6,
-    "vencidas": 0,
-    "estancadas": 2,
-    "sin_evaluar": 6
-  }
+    "vencidas": 1,
+    "estancadas": 1,
+    "sin_evaluar": 9
+  },
+  "criticas_sin_fecha": [
+    {
+      "id": "2026-04-06-002",
+      "tarea": "Recopilar información del proceso centro de operaciones",
+      "prioridad": "alta",
+      "responsable": "Andrés Avendaño"
+    },
+    {
+      "id": "2026-04-08-001",
+      "tarea": "Compartir informes diarios, actas de obra o correos de febrero a abril que mencionen lluvias, parada",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-12-003",
+      "tarea": "Conectar modelo de KPIs con el briefing para mayor claridad",
+      "prioridad": "alta",
+      "responsable": "Equipo de Proyectos"
+    },
+    {
+      "id": "2026-04-09-004",
+      "tarea": "Desarrollar ERP basado en IA",
+      "prioridad": "alta",
+      "responsable": "Sebastian Sanchez"
+    },
+    {
+      "id": "2026-04-13-mc8a7e3",
+      "tarea": "Conversar con basa, pilar y averiguar que propuestas hay en el POT para casa de aguactala",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-13-m20be25",
+      "tarea": "Resolver deudas con Condugas",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-13-mcd50a4",
+      "tarea": "Viaje Cartagena",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-13-m5960dc",
+      "tarea": "Situación de caja familiar , inversiones",
+      "prioridad": "critica",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-13-m35598a",
+      "tarea": "Proyecto automatizaciones (App para cobra, diagnostico actual, Aleteagogia)",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-13-me871ed",
+      "tarea": "Carros, créditos, proyecciones",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-13-m3137b0",
+      "tarea": "Clientes base, iniciar por propuestas claras",
+      "prioridad": "critica",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-13-m5c9509",
+      "tarea": "Presentación empresa junta 20 de abril",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-13-mb61536",
+      "tarea": "Reunión Vendemos",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-13-mc17d26",
+      "tarea": "Unificar base de datos y fuentes Siendo Consulting",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-14-001",
+      "tarea": "Reunirse con Andrea para resolver deuda Condugas",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
+    }
+  ],
+  "vence_pronto": [
+    {
+      "id": "2026-04-14-c001",
+      "tarea": "Revisar no conformidad EPM contrato 2401 y responder formalmente",
+      "dias": 0,
+      "fecha_limite": "2026-04-15"
+    },
+    {
+      "id": "2026-04-13-m5b3b40",
+      "tarea": "Implementar Odoo, revisión , parámetros, reglas ",
+      "dias": 1,
+      "fecha_limite": "2026-04-16"
+    }
+  ]
 }

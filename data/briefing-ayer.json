@@ -1,45 +1,120 @@
 {
-  "fecha": "2026-04-12",
+  "fecha": "2026-04-14",
   "tareas_extraidas": [
     {
-      "tarea": "Resolver urgentemente el viaje a Cartagena que es demanda pendiente",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Aclarar y definir los 20 temas pendientes en listado",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Reunirse con Andrea para resolver deuda Condugas",
+      "responsable": "Sebastian",
       "prioridad": "alta"
     },
     {
-      "tarea": "Conectar modelo de KPIs con el briefing para mayor claridad",
-      "responsable": "Equipo de Proyectos",
+      "tarea": "Hacer seguimiento piloto Claudio Camilo Berrío",
+      "responsable": "Sebastian",
       "prioridad": "alta"
     },
     {
-      "tarea": "Publicar documentación de KPIs en repositorio público",
-      "responsable": "Equipo Técnico",
+      "tarea": "Consultar con William sobre estructura de cobros y montos para Terret",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Preparar documentación legal para contrato problemático",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Coordinar reunión con leads/clientes para definición estratégica",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Reunirse con Terre para propuesta de colaboración antes del 20 de abril",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Atender reunión DPM a las 14:30 sobre comunicado de Catalina",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Definir estructura contable para pagos en dólares y cuentas de cobro Terret",
+      "responsable": "Sebastian",
       "prioridad": "media"
     },
     {
-      "tarea": "Resolver conflicto de pago que Eduardo menciona como no pagable",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta"
+      "tarea": "Crear información visual ERP con Emanuel y Lina para comprensión integral del proyecto",
+      "responsable": "Sebastian",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "{'taja': 'Diseñar visualizador de tareas en calendario por orden de prioridad', 'responsable': 'Sebastian', 'prioridad': 'media', 'tipo': 'pendiente', 'contexto': 'Gestión sistema de tareas y dashboar",
+      "responsable": "Sebastian",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Revisar no conformidad EPM contrato 2401 y responder formalmente",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Resolver 20 temas pendientes y listarlos para junta directiva",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Coordinar fechas para primera junta directiva (20, 21, 22 de abril)",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Revisar contrato con Catalina identificando riesgos legales y posible abuso de poder",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Resolver temas financieros pendientes de 1.200-1.400 millones para junta directiva",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Preparar borrador Condugas para presentación en primera junta directiva",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "",
+      "responsable": "Sebastian",
+      "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Se decidió conectar el modelo de KPIs con el briefing para mejorar la comprensión del sistema",
-    "Se definió que la documentación de KPIs debe publicarse en un repositorio público"
+    "Aplazar viaje a Cartagena (fin de semana) por demanda pendiente de mayor urgencia",
+    "Estructurar cobros Terret con mezcla de facturas y cuentas digitales según monto y fuente",
+    "Priorizar resolución de 20 temas pendientes antes de junta directiva del 20 de abril para evitar caos",
+    "Crear visualizador de tareas en calendario para bloqueo secuencial por prioridad máxima",
+    "Usar figura de comodato (no APP) para corredor férreo de 100 km por 30 años con seguridad jurídica probada"
   ],
   "ideas": [
-    "Implementar un sistema de triaje personalizado donde cada área genere sus propios KPIs de sobrevivencia en lugar de KPIs genéricos, con estados reales específicos por procesos, sistemas y proyectos",
-    "Desarrollar un modelo de negocio tipo unicornio que primero genere tracción y luego escale cobranzas, con énfasis en la estructura de sistemas detrás del producto"
+    "Mecanismo de valorización para vía Jericó-Andes aprovechando capacidad de pago local en corredores viales",
+    "Traer puente existente desde otro lugar (Bolombolo) para solucionar cruces Mar 1, Pacífico 1-2 en lugar de nueva licitación de 12 meses",
+    "Explorar energía solar y eólica en Colombia mediante estudio Daffin para identificar 5 mejores ubicaciones (oportunidad Siendo Consulting)",
+    "Integrar framework Depatura en ERP para mejorar metodologías sin necesidad de nuevas licitaciones APP",
+    "Dashboard/briefing unificado que conecte KPIs, tareas y proyectos con categorización automática (tarea vs idea vs compromiso)"
   ],
   "frases": [
-    "Los unicornios te ponen las posibilidades de generar tracción, una generada la tracción, te cobra todo (hablando de modelos de negocio escalables)",
-    "El problema no es la capacidad técnica, es que cuando se llena de contenido el sistema se va enloqueciendo (refiriéndose a complejidad en herramientas)"
+    "De montar la base y empezar a construir, salió un nuevo conector, no, gracias, un nuevo conector, que es que no habían hablado con el dios del viento (sobre impacto de variables externas en proyectos viales)",
+    "Este país está quebrado, por una APP no va a haber contrato de 100 (reflexión sobre viabilidad de APPs vs comodatos en infraestructura)",
+    "Más importante que el conocimiento es la creatividad, logramos ubicar que ese corredor ya estaba hecho (sobre solución jurídica innovadora para proyecto férreo)",
+    "Yo tengo nada más el 20% del ingreso en caja, el 66% del salario, y lo otro me lo deben, pero además hay unas platas que me debe el consorcio de retención (crisis de flujo de caja personal Sebastian)",
+    "Mira, el briefing que yo tengo es todo el tema del dashboard que tiene que conectarse con tareas, ideas y urgencias máximas (visión de sistema integrado de gestión)"
   ],
-  "alertas_supervivencia": [],
-  "total_lifelogs": 10,
-  "procesado_con": "haiku_compacto"
+  "alertas_supervivencia": [
+    "CRITICA: Deuda EPM contrato 2401 sin respuesta formal - riesgo legal inmediato con cliente principal (~80 empleados dependen de EPM)",
+    "CRITICA: Crisis de caja personal Sebastian: solo 20% ingreso disponible en efectivo, 66% retenido en salario, dinero adeudado por consorcio - impacta capacidad operativa jefatura",
+    "CRITICA: 20 temas pendientes sin resolución previa a junta directiva 20/4 - riesgo de colapso operativo y falta de transparencia ante accionistas",
+    "CRITICA: Posible abuso de poder en contrato principal (Catalina) - riesgo legal/contractual no mitigado",
+    "ALTA: Deuda Condugas con Andrea sin fecha de resolución - conflicto interno estructural sin fecha límite"
+  ],
+  "total_lifelogs": 22,
+  "procesado_con": "haiku_v2"
 }
