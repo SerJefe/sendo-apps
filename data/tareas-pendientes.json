@@ -8,7 +8,9 @@
       "contexto": "Litigio/demanda",
       "tipo": "pendiente",
       "estado": "aceptada",
-      "fecha": "2026-04-12"
+      "fecha": "2026-04-12",
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-12-002",
@@ -18,7 +20,9 @@
       "contexto": "Gestión general de proyectos",
       "tipo": "seguimiento",
       "estado": "aceptada",
-      "fecha": "2026-04-12"
+      "fecha": "2026-04-12",
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-12-003",
@@ -28,7 +32,9 @@
       "contexto": "Herramienta de diagnóstico y KPIs",
       "tipo": "pendiente",
       "estado": "aceptada",
-      "fecha": "2026-04-12"
+      "fecha": "2026-04-12",
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-12-004",
@@ -38,7 +44,9 @@
       "contexto": "Sistema de KPIs y triaje",
       "tipo": "pendiente",
       "estado": "aceptada",
-      "fecha": "2026-04-12"
+      "fecha": "2026-04-12",
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-12-005",
@@ -48,7 +56,9 @@
       "contexto": "Cuestión financiera sin especificar",
       "tipo": "pendiente",
       "estado": "rechazada",
-      "fecha": "2026-04-12"
+      "fecha": "2026-04-12",
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-08-001",
@@ -65,7 +75,9 @@
       "personas": [
         "Santiago Wilches",
         "Carlos Marín"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-08-003",
@@ -82,7 +94,9 @@
       "personas": [
         "Alejandro",
         "Gilberto"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-08-004",
@@ -100,7 +114,9 @@
         "Eduardo",
         "Mario",
         "Alejandro"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-08-006",
@@ -117,7 +133,9 @@
       "personas": [
         "Manuel",
         "Colina"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-08-007",
@@ -134,7 +152,9 @@
       "personas": [
         "Manuel",
         "Colina"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-09-002",
@@ -144,7 +164,9 @@
       "contexto": "Oficina presenta problemas de energía estática, requiere presupuesto",
       "tipo": "pendiente",
       "estado": "rechazada",
-      "fecha": "2026-04-09"
+      "fecha": "2026-04-09",
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-09-003",
@@ -154,7 +176,9 @@
       "contexto": "Fotografía programada para la tarde",
       "tipo": "compromiso",
       "estado": "rechazada",
-      "fecha": "2026-04-09"
+      "fecha": "2026-04-09",
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-09-004",
@@ -164,7 +188,9 @@
       "contexto": "Proyecto de crear ERP que integre mejores metodologías de otros sistemas con framework de jefatura",
       "tipo": "pendiente",
       "estado": "aceptada",
-      "fecha": "2026-04-09"
+      "fecha": "2026-04-09",
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-14-001",
@@ -180,7 +206,9 @@
       "monto_cop": null,
       "personas": [
         "Andrea"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-14-002",
@@ -196,7 +224,9 @@
       "monto_cop": null,
       "personas": [
         "Claudio Camilo Berrío"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-14-003",
@@ -212,7 +242,9 @@
       "monto_cop": null,
       "personas": [
         "William"
-      ]
+      ],
+      "categoria": "being-core",
+      "eje": "being-core"
     },
     {
       "id": "2026-04-14-004",
@@ -226,7 +258,9 @@
       "fecha_limite": "2026-04-15",
       "categoria_sugerida": "trabajo",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-14-006",
@@ -240,7 +274,9 @@
       "fecha_limite": "2026-04-16",
       "categoria_sugerida": "trabajo",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "categoria": "being-core",
+      "eje": "being-core"
     },
     {
       "id": "2026-04-14-007",
@@ -256,7 +292,9 @@
       "monto_cop": null,
       "personas": [
         "Terre"
-      ]
+      ],
+      "categoria": "being-core",
+      "eje": "being-core"
     },
     {
       "id": "2026-04-14-008",
@@ -273,7 +311,9 @@
       "personas": [
         "Catalina",
         "Jorge William"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-14-009",
@@ -289,7 +329,9 @@
       "monto_cop": null,
       "personas": [
         "William"
-      ]
+      ],
+      "categoria": "being-core",
+      "eje": "being-core"
     },
     {
       "id": "2026-04-14-010",
@@ -306,7 +348,9 @@
       "personas": [
         "Emanuel",
         "Lina"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-14-011",
@@ -322,7 +366,9 @@
       "monto_cop": null,
       "personas": [
         "Ariel"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-001",
@@ -338,7 +384,9 @@
       "monto_cop": null,
       "personas": [
         "Supersociedades"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-002",
@@ -354,7 +402,9 @@
       "monto_cop": null,
       "personas": [
         "Supersociedades"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-003",
@@ -372,7 +422,9 @@
         "Manuel",
         "UGP",
         "DIAN"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-004",
@@ -389,7 +441,9 @@
       "personas": [
         "Medellín",
         "municipios"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-005",
@@ -405,7 +459,9 @@
       "monto_cop": null,
       "personas": [
         "SENA"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-006",
@@ -421,7 +477,9 @@
       "monto_cop": null,
       "personas": [
         "William"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-007",
@@ -438,7 +496,9 @@
       "personas": [
         "Diana",
         "Alejandro"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-008",
@@ -455,7 +515,9 @@
       "personas": [
         "Dani",
         "Odoo"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-009",
@@ -472,7 +534,9 @@
       "personas": [
         "Odoo",
         "revisor fiscal"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-010",
@@ -489,7 +553,9 @@
       "personas": [
         "Óscar",
         "Zilar"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-011",
@@ -505,7 +571,9 @@
       "monto_cop": null,
       "personas": [
         "NC"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-012",
@@ -519,7 +587,9 @@
       "fecha_limite": null,
       "categoria_sugerida": "trabajo",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-013",
@@ -533,7 +603,9 @@
       "fecha_limite": null,
       "categoria_sugerida": "trabajo",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "categoria": "condugas",
+      "eje": "condugas"
     },
     {
       "id": "2026-04-15-014",
@@ -550,8 +622,10 @@
       "personas": [
         "Catalina",
         "EPM"
-      ]
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
     }
   ],
-  "ultima_actualizacion": "2026-04-15T16:57:47.136046"
+  "ultima_actualizacion": "2026-04-15T18:38:28"
 }
