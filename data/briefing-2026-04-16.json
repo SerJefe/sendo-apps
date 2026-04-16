@@ -1,98 +1,823 @@
 {
   "fecha": "2026-04-16",
+  "total_lifelogs": 11,
+  "total_reuniones": 11,
+  "procesado_con": "haiku_v3_structured",
+  "procesado_at": "2026-04-16T14:53:23",
+  "reuniones": [
+    {
+      "idx": 0,
+      "resumen": "Monólogo reflexivo de Sebastian sobre errores de comunicación con Santiago y Humberto, confusión sobre roles y responsabilidades, y frustración por interrupciones en una reunión sobre abuso de poder.",
+      "impacto": "medio",
+      "personas": [
+        "Santiago",
+        "Humberto",
+        "Humberto Iglesias",
+        "abogada"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "Ustedes no pueden quedar en, se tiene que quedar es con, con la ciudad y no puede con el financiamiento ese",
+        "Yo estoy al lado de una abogada que no estaba en el protocolo de la citación",
+        "Esta es la cuarta interrupción que usted me hace, cuando usted habla, yo lo escucho"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál es el rol exacto de Santiago en el proceso de agua?",
+        "¿Qué protocolos se violaron en la citación?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Narrativa sobre comunicaciones con Santiago y Humberto, y reflexiones personales.",
+      "startTime": "2026-04-14T23:28:18Z",
+      "endTime": "2026-04-14T23:36:34Z",
+      "duracion_min": 8
+    },
+    {
+      "idx": 1,
+      "resumen": "Breve intervención sobre reclamos y defensa de la postura empresarial; interlocutor desconocido argumenta sobre sanciones y acuerdos incompletos.",
+      "impacto": "bajo",
+      "personas": [],
+      "tareas": [],
+      "decisiones": [
+        "Se reconoce que no hay acuerdo completo pese a defensa de la empresa"
+      ],
+      "ideas": [
+        "Se valora la contribución del equipo en defensa de la empresa"
+      ],
+      "frases": [
+        "A pesar de todo que no estamos en un acuerdo"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "medio",
+      "titulo_limitless": "Discusión sobre reclamos, acuerdos y defensa de una empresa.",
+      "startTime": "2026-04-14T23:27:04Z",
+      "endTime": "2026-04-14T23:28:08Z",
+      "duracion_min": 1
+    },
+    {
+      "idx": 2,
+      "resumen": "Conversación confusa sobre reunión con secretario de Gobernación de Antioquia; discussión sobre cartas formales, abuso de poder, y aclaraciones sobre procesos administrativos con alto nivel de ruido comunicativo.",
+      "impacto": "bajo",
+      "personas": [
+        "secretario de Gobernación de Antioquia"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Se busca aclarar temas de competencia en reunión futura"
+      ],
+      "ideas": [],
+      "frases": [],
+      "preguntas_abiertas": [
+        "¿Cuáles son los temas exactos a tratar con Gobernación?",
+        "¿Dónde se formaliza la carta de protesta?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Conversación sobre una reunión y sus implicaciones",
+      "startTime": "2026-04-14T23:10:05Z",
+      "endTime": "2026-04-14T23:20:37Z",
+      "duracion_min": 10
+    },
+    {
+      "idx": 3,
+      "resumen": "Reflexión profunda de Sebastian sobre autenticidad profesional, renuncia a oportunidades desalineadas con propósito, lecciones sobre ambición y estabilidad financiera como base para el desarrollo humano.",
+      "impacto": "alto",
+      "personas": [],
+      "tareas": [],
+      "decisiones": [
+        "Priorizar estabilidad financiera antes de expandir propósito de desarrollo humano"
+      ],
+      "ideas": [
+        "La autenticidad requiere renunciar a ingresos fáciles desalineados",
+        "El potencial humano es el verdadero valor a perseguir",
+        "Mirar hacia adentro es doloroso pero necesario para el crecimiento"
+      ],
+      "frases": [
+        "Porque lo que yo me sueño profundamente, ese es el potencial humano y eso no se puede dar acá",
+        "Hay que aventarlo porque no imaginas tú todos los presentes",
+        "La vida vista de cerca es una tragedia, pero vista de lejos es una comedia"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo lograr estabilidad sin esclavizarse a Condugas?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Reflexiones sobre decisiones profesionales y conversaciones recientes",
+      "startTime": "2026-04-14T23:00:47Z",
+      "endTime": "2026-04-14T23:09:57Z",
+      "duracion_min": 9
+    },
+    {
+      "idx": 4,
+      "resumen": "Confrontación intensa sobre incumplimientos contractuales, reajustes económicos y propuesta audaz de terminación bilateral; Sebastian expone detalles de pérdidas acumuladas, interrupciones repetidas, y estrategia de presión negociadora.",
+      "impacto": "critico",
+      "personas": [
+        "Catalina",
+        "Jorge William",
+        "PM",
+        "abogada",
+        "Leon",
+        "Uberney"
+      ],
+      "tareas": [
+        {
+          "tarea": "Preparar documentación de debido proceso ejecutivo con focus en ambiental y reajustes",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "critica",
+          "tipo": "compromiso",
+          "contexto": "Contrato EPM bloqueado por incumplimientos económicos",
+          "fecha_limite": "2026-04-18",
+          "monto_cop": 1900000000,
+          "personas_mencionadas": [
+            "abogados",
+            "dueños"
+          ]
+        },
+        {
+          "tarea": "Evaluar viabilidad de terminación contractual vs. renegociación de fórmula",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "critica",
+          "tipo": "decision",
+          "contexto": "Contrato quebrado en 3 meses si no hay reajustes",
+          "fecha_limite": "2026-04-20",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Jorge William",
+            "Catalina",
+            "bancos",
+            "socios"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Contrato está quebrado sin reajuste; opciones: renegociar o terminar",
+        "Mano de obra pesa 52% vs. 22-27% de Camacol (desequilibrio crítico)",
+        "Estrategia: alejarse en negociación para presionar acercamiento"
+      ],
+      "ideas": [
+        "Usar silencio estratégico como herramienta de negociación (modelo Catalina)",
+        "Comunicar consistencia numérica en todas reuniones para generar confianza",
+        "Priorizar relacionamiento sobre números para mantener viabilidad"
+      ],
+      "frases": [
+        "Este contrato está quebrado, no me digan de hablar de contratos",
+        "La negociación iba a ser presionarlos para que ustedes hayan actuado todo el contrato",
+        "Si esa es la postura, entonces lo más próximo sería una terminación"
+      ],
+      "preguntas_abiertas": [
+        "¿Qué reajustes mínimos acepta EPM?",
+        "¿Hay espacio para terminación amistosa o será litigio?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Estrategias profesionales y discusiones contractuales",
+      "startTime": "2026-04-14T21:38:49Z",
+      "endTime": "2026-04-14T23:00:47Z",
+      "duracion_min": 81
+    },
+    {
+      "idx": 5,
+      "resumen": "Breve información logística sobre ubicación de CCI y saludos casuales; mención de viaje a Cartagena y conversación pendiente con Pilar.",
+      "impacto": "bajo",
+      "personas": [
+        "Pilar"
+      ],
+      "tareas": [
+        {
+          "tarea": "Llamar a Pilar en ~30 minutos para conversación pendiente",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "media",
+          "tipo": "seguimiento",
+          "contexto": "Conversación que no debe quedar pendiente",
+          "fecha_limite": "2026-04-14",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Pilar"
+          ]
+        }
+      ],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "Yo viajo mañana a Cartagena"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre la CCI y otros temas",
+      "startTime": "2026-04-14T21:36:06Z",
+      "endTime": "2026-04-14T21:38:47Z",
+      "duracion_min": 2
+    },
+    {
+      "idx": 6,
+      "resumen": "Exposición técnica de 110 min sobre impacto del aumento salarial mínimo en ecuación económica del contrato; análisis post-negociación de posición de abogada y argumentos estratégicos; preparación táctica para confrontación con EPM.",
+      "impacto": "critico",
+      "personas": [
+        "Catalina",
+        "Leon",
+        "Unerney",
+        "Juan Carlos Gómez",
+        "Diana",
+        "Camilo"
+      ],
+      "tareas": [
+        {
+          "tarea": "Validar con Camacol data de escalada salarial (22-27% vs. 52% actual)",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "critica",
+          "tipo": "investigacion",
+          "contexto": "Prueba de desequilibrio económico en fórmula",
+          "fecha_limite": "2026-04-17",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Camacol",
+            "agremiacion"
+          ]
+        },
+        {
+          "tarea": "Coordinar con equipo (Uner, Leon, Diana) estrategia de confrontación con Catalina",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "critica",
+          "tipo": "compromiso",
+          "contexto": "No aparecer a Catalina para presionar desde otros flancos",
+          "fecha_limite": "2026-04-18",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Uner",
+            "Leon",
+            "Diana",
+            "William"
+          ]
+        },
+        {
+          "tarea": "Preparar documento con 3 pilares: Confiabilidad numérica, Relacionamiento, Adaptabilidad",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "Herramienta para negociación final",
+          "fecha_limite": "2026-04-18",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "abogada"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Subida recargo nocturno + cambio Camacol descomponen figura económica",
+        "Abogada está de acuerdo (lenguaje no-verbal confirmó) con posición de Sebastian",
+        "Estrategia es reconocer riesgos ambientales como prioritarios + reajustes secundarios"
+      ],
+      "ideas": [
+        "Entre más se aleja, más se acerca el otro (validado en caso Catalina)",
+        "Números consistentes en 6 reuniones = credibilidad de alerta",
+        "Riesgos ambientales > riesgo administrativo para EPM"
+      ],
+      "frases": [
+        "Este contrato está quebrado",
+        "Yo como voy a decirles que este contrato va a quebrar a los socios y a los bancos, no hay forma",
+        "La negociación iba a ser presionarlos para que ustedes hayan actuado todo el contrato"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "alto",
+      "titulo_limitless": "Explicación detallada sobre la situación contractual y financiera de Condugas",
+      "startTime": "2026-04-14T19:45:13Z",
+      "endTime": "2026-04-14T21:35:41Z",
+      "duracion_min": 110
+    },
+    {
+      "idx": 7,
+      "resumen": "Reflexión existencial sobre propósito en Condugas, disposición a renunciar por valores, gestión emocional de conflictos (tristeza, rabia) como herramienta; defensa contra acusaciones de abuso/acoso en comunicaciones contractuales.",
+      "impacto": "alto",
+      "personas": [
+        "Jorge William",
+        "Catalina",
+        "abogados",
+        "dueños"
+      ],
+      "tareas": [
+        {
+          "tarea": "Aclarar con abogados que comunicaciones fueron por contrato, no acoso",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "alta",
+          "tipo": "seguimiento",
+          "contexto": "Defensa legal contra acusación de Catalina",
+          "fecha_limite": "2026-04-17",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "abogados",
+            "Catalina",
+            "PM"
+          ]
+        },
+        {
+          "tarea": "Documentar que 4 comunicaciones fueron coordinadas lunes-miércoles, enviadas jueves",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "media",
+          "tipo": "evidencia",
+          "contexto": "Demostrar falta de intención maliciosa en timing",
+          "fecha_limite": "2026-04-16",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Catalina"
+          ]
+        },
+        {
+          "tarea": "Reafirmar con PM y abogados compromiso con buenas relaciones pese a conflicto",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "media",
+          "tipo": "comunicacion",
+          "contexto": "Mantener credibilidad ante PM",
+          "fecha_limite": "2026-04-17",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "PM",
+            "abogados"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Capaz de renunciar a Condugas si estructura no alineada con propósito",
+        "Uso de emociones difíciles (tristeza, rabia) como combustible para acción, no escapatoria",
+        "Mantener confidencialidad selectiva: info compartida solo a quien respete rol"
+      ],
+      "ideas": [
+        "El desarrollo del otro es el feedback verdadero",
+        "Reconocer miedo y dolor = condición para seguir encontrándose",
+        "No salir corriendo de conflictos; aprovecha momentum"
+      ],
+      "frases": [
+        "Si yo amo Condugas, soy capaz de renunciar a ella",
+        "Yo sé que contribuí y esa contribución no tiene pago para mí",
+        "Hay que aprovechar las emociones y no salir corriendo"
+      ],
+      "preguntas_abiertas": [
+        "¿Hasta dónde está dispuesto a renunciar a ingresos por valores?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Conversaciones diversas y asuntos personales",
+      "startTime": "2026-04-14T18:24:22Z",
+      "endTime": "2026-04-14T19:45:13Z",
+      "duracion_min": 80
+    },
+    {
+      "idx": 8,
+      "resumen": "Argumentación técnica sobre reajustes salariales desproporcionados, estrategia de resolución (suspensión vs. terminación), búsqueda de precedentes en comités y registros de febrero para negociación.",
+      "impacto": "critico",
+      "personas": [
+        "Camilo",
+        "Z2",
+        "normalización",
+        "contratistas",
+        "Juan Carlos Gómez"
+      ],
+      "tareas": [
+        {
+          "tarea": "Localizar registro de comité proveedores 12 de febrero donde todos dijeron reajuste no daba",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "critica",
+          "tipo": "evidencia",
+          "contexto": "Prueba de que todos contratistas reconocen desequilibrio",
+          "fecha_limite": "2026-04-16",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "contratistas",
+            "Z2"
+          ]
+        },
+        {
+          "tarea": "Evaluar en Z2 y normalización oportunidad de renegociar por debajo en otras líneas",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "alta",
+          "tipo": "investigacion",
+          "contexto": "Mostrar disposición bilateral a sacrificar en otras líneas",
+          "fecha_limite": "2026-04-18",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Z2",
+            "normalización"
+          ]
+        },
+        {
+          "tarea": "Preparar argumento: suspensión no conviene a Condugas (pagaría bonificaciones igual)",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "alta",
+          "tipo": "estrategia",
+          "contexto": "Contrarrestar propuesta de suspensión como presión",
+          "fecha_limite": "2026-04-18",
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Suspensión contractual = costo equivalente (bonificaciones + retención personal)",
+        "Alternativas reales: renegociar o cerrar",
+        "Jugar en Z2, normalización y línea actual para presión bilateral"
+      ],
+      "ideas": [
+        "Ser visible desde el principio genera más repercusión que quejarse después",
+        "Mostrar cumplimiento previo (otros 23 años sin litigio) = credibilidad"
+      ],
+      "frases": [
+        "Es que no tenemos 50% pones al aluminio y 50%"
+      ],
+      "preguntas_abiertas": [
+        "¿Qué proporción de renegociación ofrece Z2?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Conversación sobre Condugas y asuntos legales",
+      "startTime": "2026-04-14T18:16:45Z",
+      "endTime": "2026-04-14T18:24:16Z",
+      "duracion_min": 7
+    },
+    {
+      "idx": 9,
+      "resumen": "Discusión sobre visita presidencial a Condugas, estrategia de comunicación política (involucrar Humberto/Gobernación), y aclaraciones legales sobre cartas de suspensión y confidencialidad en comunicaciones con PM.",
+      "impacto": "medio",
+      "personas": [
+        "Humberto",
+        "Jorge William",
+        "Catalina",
+        "abogados",
+        "PM",
+        "dueños"
+      ],
+      "tareas": [
+        {
+          "tarea": "Coordinar con Humberto/Gobernación narrativa sobre trayectoria y valor de Condugas",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "media",
+          "tipo": "comunicacion",
+          "contexto": "Facilitar apoyo político a resolución",
+          "fecha_limite": "2026-04-18",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Humberto",
+            "Gobernacion"
+          ]
+        },
+        {
+          "tarea": "Formalizar carta de suspensión solo tras autorización de PM (no unilateral)",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "Mantener legalidad y buenas relaciones",
+          "fecha_limite": "2026-04-20",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "abogados",
+            "PM",
+            "Jorge William"
+          ]
+        },
+        {
+          "tarea": "Establecer límites de confidencialidad con Jorge William (compartir prospectos, no análisis)",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "media",
+          "tipo": "comunicacion",
+          "contexto": "Evitar que información se desvíe a Catalina",
+          "fecha_limite": "2026-04-16",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Jorge William",
+            "Catalina"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Pérdida acumulada de ~1.900 millones pesos justifica escalada",
+        "Prioridad: ambiental + reajustes (no administrativo)",
+        "Mantener relaciones buenas pero estar preparado para litigio"
+      ],
+      "ideas": [
+        "Involucrar Gobernación como aliado político para presión"
+      ],
+      "frases": [
+        "Vamos perdiendo 1900 millones de pesos"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál es el timeline máximo para cierre antes de colapso?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Anécdota personal sobre una propuesta de empresa y un conflicto",
+      "startTime": "2026-04-14T16:26:22Z",
+      "endTime": "2026-04-14T18:16:45Z",
+      "duracion_min": 110
+    },
+    {
+      "idx": 10,
+      "resumen": "Análisis organizacional sobre estructura de jefatura en Condugas; identificación de sobrecarga de Sebastian y propuesta de empoderamiento de Carlos Acevedo y Diana para alcance hasta operaciones (Santiago, Humberto); revisión de roles de Gustavo, Juan Carlos Gómez, otros.",
+      "impacto": "alto",
+      "personas": [
+        "Santiago Wilches",
+        "Humberto Iglesias",
+        "Jorge William",
+        "Carlos Acevedo",
+        "Diana",
+        "Juan Carlos Gómez",
+        "Gustavo",
+        "Edwin",
+        "Juan Pablo",
+        "Pacho",
+        "Edgar",
+        "Guillermo Villada",
+        "Darío Sánchez"
+      ],
+      "tareas": [
+        {
+          "tarea": "Empoderamiento: que Carlos Acevedo comience a manejar hasta Uber (operaciones)",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "alta",
+          "tipo": "decision",
+          "contexto": "Descarga de Sebastian; preparar liderazgo futuro",
+          "fecha_limite": "2026-04-25",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Carlos Acevedo",
+            "Edwin",
+            "Juan Carlos Gómez",
+            "Uber"
+          ]
+        },
+        {
+          "tarea": "Empoderar Diana para alcance similar a Carlos Acevedo",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "alta",
+          "tipo": "decision",
+          "contexto": "Duplicar capacidad de jefatura sin expandir",
+          "fecha_limite": "2026-04-25",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Diana"
+          ]
+        },
+        {
+          "tarea": "Aclarar roles de Gustavo en compras vs. negociación contractual",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "media",
+          "tipo": "clarificacion",
+          "contexto": "Evitar duplicación en temas de Bucaramanga, equipos",
+          "fecha_limite": "2026-04-20",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Gustavo",
+            "Don Gustavo"
+          ]
+        },
+        {
+          "tarea": "Documentar cadena de mando clara: Sebastian->Carlos/Diana->Santiago/Humberto",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "media",
+          "tipo": "organizacion",
+          "contexto": "Eliminar ruido en comunicación",
+          "fecha_limite": "2026-04-22",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Carlos Acevedo",
+            "Diana",
+            "Santiago Wilches",
+            "Humberto Iglesias"
+          ]
+        },
+        {
+          "tarea": "Incluir Juan Pablo en decisiones de asesoría (aunque no sea director formal aún)",
+          "responsable": "Sebastian Sanchez",
+          "prioridad": "baja",
+          "tipo": "transicion",
+          "contexto": "Preparar capacidad futura",
+          "fecha_limite": "2026-05-15",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Juan Pablo"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Sebastian no debería alcanzar directamente a Santiago/Humberto (genera ruido)",
+        "Estructura antigua: Sebastian->Juan Carlos Gómez->directores(Pacho,Edgar) NO APLICA HOY",
+        "Carlos y Diana son el puente para llegar a operaciones sin que Sebastian se sobrecargue"
+      ],
+      "ideas": [
+        "Usar 'Uber' (Darío Sánchez) como patrón: maneja nivel operativo",
+        "Transición gradual: Carlos/Diana manejan hasta operaciones, liberan a Sebastian para estrategia"
+      ],
+      "frases": [],
+      "preguntas_abiertas": [
+        "¿Cuánto tiempo de acompañamiento necesita Carlos antes de asumir alcance completo?",
+        "¿Juan Carlos Gómez sigue siendo consultores o pasa a otro rol?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Conversación sobre el contrato y la organización del equipo",
+      "startTime": "2026-04-14T16:11:36Z",
+      "endTime": "2026-04-14T16:26:19Z",
+      "duracion_min": 14
+    }
+  ],
+  "arcos_dia": [
+    {
+      "tema": "Crisis contractual EPM: Desequilibrio económico e insolvencia inminente",
+      "reuniones_idx": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "peso_pct": 55,
+      "personas": [
+        "Sebastian Sanchez",
+        "Jorge William",
+        "Catalina",
+        "abogados",
+        "PM",
+        "EPM"
+      ],
+      "descripcion": "Contrato quebrado por aumento salarial desproporcionado (52% vs. 22-27%); pérdida 1.900M COP; opciones: renegociar fórmula o terminar; estrategia: presión + propuesta audaz"
+    },
+    {
+      "tema": "Escalada de conflicto con Catalina y posible litigio",
+      "reuniones_idx": [
+        0,
+        4,
+        7,
+        8,
+        9
+      ],
+      "peso_pct": 35,
+      "personas": [
+        "Sebastian Sanchez",
+        "Catalina",
+        "Jorge William",
+        "abogados",
+        "PM"
+      ],
+      "descripcion": "Acusaciones de abuso/acoso; comunicaciones contractuales malinterpretadas; defensa legal + estrategia de distancia para presionar"
+    },
+    {
+      "tema": "Reorganización de estructura de jefatura y delegación",
+      "reuniones_idx": [
+        10,
+        11
+      ],
+      "peso_pct": 25,
+      "personas": [
+        "Sebastian Sanchez",
+        "Carlos Acevedo",
+        "Diana",
+        "Santiago Wilches",
+        "Humberto Iglesias"
+      ],
+      "descripcion": "Sobrecarga de Sebastian; empoderar Carlos y Diana para alcanzar operaciones; clarificar roles de Gustavo y otros para reducir ruido comunicativo"
+    }
+  ],
+  "preguntas_abiertas_dia": [
+    "¿Acepta EPM renegociar fórmula o forzará terminación/litigio?",
+    "¿Cuánto tiempo resta antes del colapso financiero de Condugas?",
+    "¿Será el apoyo de Gobernación (Humberto) decisivo en resolución?",
+    "¿Cómo lograr estabilidad en Condugas sin esclavizarse a ella (tensión propósito vs. supervivencia)?"
+  ],
+  "tensiones_dia": [
+    "Supervivencia financiera (1.900M COP pérdida) vs. propósito de desarrollo humano en Being CoRe",
+    "Mantener relaciones buenas con EPM/PM vs. escalada legal por abuso de condiciones",
+    "Ser transparente (confidencialidad) vs. proteger información de flujos a Catalina",
+    "Autoridad de Sebastian vs. sobrecarga: descarga urgente a Carlos/Diana requiere confianza + tiempo",
+    "TDAH + crisis de caja = presión cognitiva extrema en 11 reuniones de alto impacto en 1 día"
+  ],
   "tareas_candidatas": [
     {
-      "tarea": "Generar informe de ventilación de nómina para tranquilidad operacional",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Revisar rendimiento de contratos y comportamiento de cada proyecto",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Resolver conflicto contractual con Catalina por mala ejecución",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Recuperar información de estructuración de naming del proyecto",
-      "responsable": "Sebastian",
+      "tarea": "Llamar a Pilar en ~30 minutos para conversación pendiente",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "media"
     },
     {
-      "tarea": "Configurar código temporal de acceso hasta viernes 9am",
-      "responsable": "Sebastian",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Crear dashboard de tareas prioritarias (máxima, alta, media, baja, sin evaluar)",
-      "responsable": "Sebastian",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Contratar digital support/persona de negocio para automatización",
-      "responsable": "Sebastian",
+      "tarea": "Preparar documento con 3 pilares: Confiabilidad numérica, Relacionamiento, Adaptabilidad",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "alta"
     },
     {
-      "tarea": "Finalizar prototipo de herramienta de automatización de procesos empresariales",
-      "responsable": "Sebastian",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Resolver pérdida de 20 millones en contrato por capricho del cliente",
-      "responsable": "Sebastian",
+      "tarea": "Aclarar con abogados que comunicaciones fueron por contrato, no acoso",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "alta"
     },
     {
-      "tarea": "Cobrar pago pendiente de Hamilton según lo prometido",
-      "responsable": "Sebastian",
+      "tarea": "Documentar que 4 comunicaciones fueron coordinadas lunes-miércoles, enviadas jueves",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Reafirmar con PM y abogados compromiso con buenas relaciones pese a conflicto",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Evaluar en Z2 y normalización oportunidad de renegociar por debajo en otras líneas",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Preparar argumento: suspensión no conviene a Condugas (pagaría bonificaciones igual)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Coordinar con Humberto/Gobernación narrativa sobre trayectoria y valor de Condugas",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Formalizar carta de suspensión solo tras autorización de PM (no unilateral)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Establecer límites de confidencialidad con Jorge William (compartir prospectos, no análisis)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Empoderamiento: que Carlos Acevedo comience a manejar hasta Uber (operaciones)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Empoderar Diana para alcance similar a Carlos Acevedo",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Aclarar roles de Gustavo en compras vs. negociación contractual",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Documentar cadena de mando clara: Sebastian->Carlos/Diana->Santiago/Humberto",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Incluir Juan Pablo en decisiones de asesoría (aunque no sea director formal aún)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "baja"
+    },
+    {
+      "tarea": "Preparar documentación de debido proceso ejecutivo con focus en ambiental y reajustes",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "critica"
     },
     {
-      "tarea": "Procesar nómina y resolver descuento de Valle con menor valor",
-      "responsable": "William",
+      "tarea": "Evaluar viabilidad de terminación contractual vs. renegociación de fórmula",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "critica"
     },
     {
-      "tarea": "Resolver no conformidad del contrato 24 y responder formalmente",
-      "responsable": "Sebastian",
+      "tarea": "Validar con Camacol data de escalada salarial (22-27% vs. 52% actual)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Coordinar con equipo (Uner, Leon, Diana) estrategia de confrontación con Catalina",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Localizar registro de comité proveedores 12 de febrero donde todos dijeron reajuste no daba",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Se decidió esperar entrada de pagos para mañana (17 de abril) y proceder con pagos operacionales",
-    "Se priorizó resolver conflicto contractual con Catalina por mala ejecución de contrato",
-    "Se decidió implementar herramienta de automatización con agente IA para dejar de depender de notas/iPad",
-    "Se eligió contratar persona de negocio especializada en digital support para escalar automatización",
-    "Se definió que solo quienes se monten en transformación digital se quedarán en equipo",
-    "Se decidió prototipizar herramienta de automatización para empresas, procesos e individuos"
+    "Se reconoce que no hay acuerdo completo pese a defensa de la empresa",
+    "Se busca aclarar temas de competencia en reunión futura",
+    "Priorizar estabilidad financiera antes de expandir propósito de desarrollo humano",
+    "Contrato está quebrado sin reajuste; opciones: renegociar o terminar",
+    "Mano de obra pesa 52% vs. 22-27% de Camacol (desequilibrio crítico)",
+    "Estrategia: alejarse en negociación para presionar acercamiento",
+    "Subida recargo nocturno + cambio Camacol descomponen figura económica",
+    "Abogada está de acuerdo (lenguaje no-verbal confirmó) con posición de Sebastian",
+    "Estrategia es reconocer riesgos ambientales como prioritarios + reajustes secundarios",
+    "Capaz de renunciar a Condugas si estructura no alineada con propósito"
   ],
   "ideas_capturadas": [
-    "Desarrollar agente IA (Duna) que genere reportes automáticos (ej: OIM) con skills de análisis de proyectos sin intervención humana",
-    "Implementar sistema de priorización automática que identifique tareas criticas, las destaque y apague las que envejecen sin tocarse",
-    "Crear herramienta que integre información, sistemas y elementos de movimiento para que impulsen a ejecutivos sin tener que perseguir datos",
-    "Explorar oportunidades en GLP (Gas Licuado de Petróleo) como negocio alternativo de energía",
-    "Automatizar flujo de documentos: recepción, transformación, digitalización y protocolo conectado a nube y agente IA",
-    "Establecer fast-track en trámites y regulación clara para proyectos energéticos de impacto nacional"
+    "Se valora la contribución del equipo en defensa de la empresa",
+    "La autenticidad requiere renunciar a ingresos fáciles desalineados",
+    "El potencial humano es el verdadero valor a perseguir",
+    "Mirar hacia adentro es doloroso pero necesario para el crecimiento",
+    "Usar silencio estratégico como herramienta de negociación (modelo Catalina)",
+    "Comunicar consistencia numérica en todas reuniones para generar confianza",
+    "Priorizar relacionamiento sobre números para mantener viabilidad",
+    "Entre más se aleja, más se acerca el otro (validado en caso Catalina)",
+    "Números consistentes en 6 reuniones = credibilidad de alerta",
+    "Riesgos ambientales > riesgo administrativo para EPM"
   ],
   "frases_poderosas": [
-    "Facturando 60.000 millones al mes tienes que tirarle a lo que haya (contexto: estrategia agresiva de Condugas)",
-    "Hay que ver quiénes se montan en esto y quiénes no fueron capaces de montarse, esto ya es una realidad (contexto: transformación digital como filtro de equipo)",
-    "Lo natural en la vida es equivocarse. El problema es creer que no se está equivocando (contexto: manejo de conflicto con Catalina)",
-    "Yo no necesito que todo esto, él trabaja solo (contexto: eficiencia del agente IA en automatización)",
-    "La demanda de energía y agua es absurda y hay gran oportunidad en GLP (contexto: análisis de mercado energético)"
+    "Ustedes no pueden quedar en, se tiene que quedar es con, con la ciudad y no puede con el financiamiento ese",
+    "Yo estoy al lado de una abogada que no estaba en el protocolo de la citación",
+    "Esta es la cuarta interrupción que usted me hace, cuando usted habla, yo lo escucho",
+    "A pesar de todo que no estamos en un acuerdo",
+    "Porque lo que yo me sueño profundamente, ese es el potencial humano y eso no se puede dar acá"
   ],
   "alertas_supervivencia": [
-    "Crisis de caja: pago de Hamilton era 'hoy' y se aplazó a 'mañana', generando incertidumbre en flujo operacional de Condugas",
-    "Pérdida de 20 millones en contrato activo por 'capricho del cliente' sin resolución clara",
-    "Conflicto contractual grave con Catalina: amenaza de retiro de contrato si no hay cumplimiento, con riesgo de ingresos",
-    "Problema de nómina: descuento de Valle montado con menor valor genera potencial contingencia laboral y reputacional",
-    "Dependencia crítica de personas (ej: Juan Guillermo hacía ODU sin intervención Sebastian) pone en riesgo continuidad si se van"
-  ],
-  "total_lifelogs": 12,
-  "procesado_con": "haiku_v2",
-  "procesado_at": "2026-04-16T12:00:28"
+    "CRITICA: Condugas en insolvencia inminente (~1.900M COP pérdida acumulada); contrato colapsará en 3 meses sin reajuste",
+    "CRITICA: Propuesta de terminación bilateral EPM es escalada legal; requiere abogados + documentación probatoria inmediata",
+    "ALTA: Acusación de Catalina (abuso/acoso) puede escalar a queja formal ante PM; necesita defensa legal coordinada",
+    "ALTA: Fuga de empleados (ofrecen 30-40M COP más); riesgo operativo si pierden Santiago/Humberto",
+    "MEDIA: Estructura de jefatura quebrada; si no delega Carlos/Diana rápido, Sebastian colapsará en toma de decisiones"
+  ]
 }

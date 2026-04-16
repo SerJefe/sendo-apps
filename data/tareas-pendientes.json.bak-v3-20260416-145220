@@ -193,6 +193,184 @@
       "eje": "condugas"
     },
     {
+      "id": "2026-04-14-001",
+      "tarea": "Reunirse con Andrea para resolver deuda Condugas",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Deudas internas Condugas",
+      "tipo": "pendiente",
+      "estado": "aceptada",
+      "fecha": "2026-04-14",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Andrea"
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
+    },
+    {
+      "id": "2026-04-14-002",
+      "tarea": "Hacer seguimiento piloto Claudio Camilo Berrío",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Operaciones Condugas",
+      "tipo": "seguimiento",
+      "estado": "aceptada",
+      "fecha": "2026-04-14",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Claudio Camilo Berrío"
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
+    },
+    {
+      "id": "2026-04-14-003",
+      "tarea": "Consultar con William sobre estructura de cobros y montos para Terret",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Estructura fiscal y contable múltiples clientes",
+      "tipo": "pendiente",
+      "estado": "rechazada",
+      "fecha": "2026-04-14",
+      "fecha_limite": "2026-04-15",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "William"
+      ],
+      "categoria": "being-core",
+      "eje": "being-core"
+    },
+    {
+      "id": "2026-04-14-004",
+      "tarea": "Preparar documentación legal para contrato problemático",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Asesoría legal contractual",
+      "tipo": "pendiente",
+      "estado": "rechazada",
+      "fecha": "2026-04-14",
+      "fecha_limite": "2026-04-15",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [],
+      "categoria": "condugas",
+      "eje": "condugas"
+    },
+    {
+      "id": "2026-04-14-006",
+      "tarea": "Coordinar reunión con leads/clientes para definición estratégica",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Prospección Siendo Consulting",
+      "tipo": "compromiso",
+      "estado": "aceptada",
+      "fecha": "2026-04-14",
+      "fecha_limite": "2026-04-16",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [],
+      "categoria": "being-core",
+      "eje": "being-core"
+    },
+    {
+      "id": "2026-04-14-007",
+      "tarea": "Reunirse con Terre para propuesta de colaboración antes del 20 de abril",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Oportunidad comercial Siendo Consulting",
+      "tipo": "compromiso",
+      "estado": "rechazada",
+      "fecha": "2026-04-14",
+      "fecha_limite": "2026-04-20",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Terre"
+      ],
+      "categoria": "being-core",
+      "eje": "being-core"
+    },
+    {
+      "id": "2026-04-14-008",
+      "tarea": "Atender reunión DPM a las 14:30 sobre comunicado de Catalina",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Asuntos legales/administrativos",
+      "tipo": "compromiso",
+      "estado": "aceptada",
+      "fecha": "2026-04-14",
+      "fecha_limite": "2026-04-15",
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Catalina",
+        "Jorge William"
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
+    },
+    {
+      "id": "2026-04-14-009",
+      "tarea": "Definir estructura contable para pagos en dólares y cuentas de cobro Terret",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Estructura fiscal múltiples monedas",
+      "tipo": "decision",
+      "estado": "rechazada",
+      "fecha": "2026-04-14",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "William"
+      ],
+      "categoria": "being-core",
+      "eje": "being-core"
+    },
+    {
+      "id": "2026-04-14-010",
+      "tarea": "Crear información visual ERP con Emanuel y Lina para comprensión integral del proyecto",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Proyecto ERP integración metodologías y sistemas",
+      "tipo": "pendiente",
+      "estado": "aceptada",
+      "fecha": "2026-04-14",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Emanuel",
+        "Lina"
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
+    },
+    {
+      "id": "2026-04-14-011",
+      "tarea": "{'taja': 'Diseñar visualizador de tareas en calendario por orden de prioridad', 'responsable': 'Sebastian', 'prioridad': 'media', 'tipo': 'pendiente', 'contexto': 'Gestión sistema de tareas y dashboar",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Gestión sistema de tareas y dashboard",
+      "tipo": "pendiente",
+      "estado": "aceptada",
+      "fecha": "2026-04-14",
+      "fecha_limite": null,
+      "categoria_sugerida": "trabajo",
+      "monto_cop": null,
+      "personas": [
+        "Ariel"
+      ],
+      "categoria": "condugas",
+      "eje": "condugas"
+    },
+    {
       "id": "2026-04-15-001",
       "tarea": "Revisar informe de gestión para Supersociedades",
       "responsable": "Sebastian",
@@ -576,477 +754,7 @@
       "categoria_sugerida": "condugas",
       "monto_cop": 20000000,
       "personas": []
-    },
-    {
-      "id": "2026-04-16-r5-001",
-      "tarea": "Llamar a Pilar en ~30 minutos para conversación pendiente",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Conversación que no debe quedar pendiente",
-      "tipo": "seguimiento",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-14",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Pilar"
-      ],
-      "segmento_idx": 5,
-      "segmento_titulo": "Conversación sobre la CCI y otros temas",
-      "segmento_inicio": "2026-04-14T21:36:06Z",
-      "segmento_fin": "2026-04-14T21:38:47Z",
-      "segmento_personas": [
-        "Pilar"
-      ],
-      "segmento_impacto": "bajo"
-    },
-    {
-      "id": "2026-04-16-r6-002",
-      "tarea": "Preparar documento con 3 pilares: Confiabilidad numérica, Relacionamiento, Adaptabilidad",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Herramienta para negociación final",
-      "tipo": "compromiso",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-18",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "abogada"
-      ],
-      "segmento_idx": 6,
-      "segmento_titulo": "Explicación detallada sobre la situación contractual y financiera de Condugas",
-      "segmento_inicio": "2026-04-14T19:45:13Z",
-      "segmento_fin": "2026-04-14T21:35:41Z",
-      "segmento_personas": [
-        "Catalina",
-        "Leon",
-        "Unerney",
-        "Juan Carlos Gómez",
-        "Diana",
-        "Camilo"
-      ],
-      "segmento_impacto": "critico"
-    },
-    {
-      "id": "2026-04-16-r7-003",
-      "tarea": "Aclarar con abogados que comunicaciones fueron por contrato, no acoso",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Defensa legal contra acusación de Catalina",
-      "tipo": "seguimiento",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-17",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "abogados",
-        "Catalina",
-        "PM"
-      ],
-      "segmento_idx": 7,
-      "segmento_titulo": "Conversaciones diversas y asuntos personales",
-      "segmento_inicio": "2026-04-14T18:24:22Z",
-      "segmento_fin": "2026-04-14T19:45:13Z",
-      "segmento_personas": [
-        "Jorge William",
-        "Catalina",
-        "abogados",
-        "dueños"
-      ],
-      "segmento_impacto": "alto"
-    },
-    {
-      "id": "2026-04-16-r7-004",
-      "tarea": "Documentar que 4 comunicaciones fueron coordinadas lunes-miércoles, enviadas jueves",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Demostrar falta de intención maliciosa en timing",
-      "tipo": "evidencia",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-16",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Catalina"
-      ],
-      "segmento_idx": 7,
-      "segmento_titulo": "Conversaciones diversas y asuntos personales",
-      "segmento_inicio": "2026-04-14T18:24:22Z",
-      "segmento_fin": "2026-04-14T19:45:13Z",
-      "segmento_personas": [
-        "Jorge William",
-        "Catalina",
-        "abogados",
-        "dueños"
-      ],
-      "segmento_impacto": "alto"
-    },
-    {
-      "id": "2026-04-16-r7-005",
-      "tarea": "Reafirmar con PM y abogados compromiso con buenas relaciones pese a conflicto",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Mantener credibilidad ante PM",
-      "tipo": "comunicacion",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-17",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "PM",
-        "abogados"
-      ],
-      "segmento_idx": 7,
-      "segmento_titulo": "Conversaciones diversas y asuntos personales",
-      "segmento_inicio": "2026-04-14T18:24:22Z",
-      "segmento_fin": "2026-04-14T19:45:13Z",
-      "segmento_personas": [
-        "Jorge William",
-        "Catalina",
-        "abogados",
-        "dueños"
-      ],
-      "segmento_impacto": "alto"
-    },
-    {
-      "id": "2026-04-16-r8-006",
-      "tarea": "Evaluar en Z2 y normalización oportunidad de renegociar por debajo en otras líneas",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Mostrar disposición bilateral a sacrificar en otras líneas",
-      "tipo": "investigacion",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-18",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Z2",
-        "normalización"
-      ],
-      "segmento_idx": 8,
-      "segmento_titulo": "Conversación sobre Condugas y asuntos legales",
-      "segmento_inicio": "2026-04-14T18:16:45Z",
-      "segmento_fin": "2026-04-14T18:24:16Z",
-      "segmento_personas": [
-        "Camilo",
-        "Z2",
-        "normalización",
-        "contratistas",
-        "Juan Carlos Gómez"
-      ],
-      "segmento_impacto": "critico"
-    },
-    {
-      "id": "2026-04-16-r8-007",
-      "tarea": "Preparar argumento: suspensión no conviene a Condugas (pagaría bonificaciones igual)",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Contrarrestar propuesta de suspensión como presión",
-      "tipo": "estrategia",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-18",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [],
-      "segmento_idx": 8,
-      "segmento_titulo": "Conversación sobre Condugas y asuntos legales",
-      "segmento_inicio": "2026-04-14T18:16:45Z",
-      "segmento_fin": "2026-04-14T18:24:16Z",
-      "segmento_personas": [
-        "Camilo",
-        "Z2",
-        "normalización",
-        "contratistas",
-        "Juan Carlos Gómez"
-      ],
-      "segmento_impacto": "critico"
-    },
-    {
-      "id": "2026-04-16-r9-008",
-      "tarea": "Coordinar con Humberto/Gobernación narrativa sobre trayectoria y valor de Condugas",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Facilitar apoyo político a resolución",
-      "tipo": "comunicacion",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-18",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Humberto",
-        "Gobernacion"
-      ],
-      "segmento_idx": 9,
-      "segmento_titulo": "Anécdota personal sobre una propuesta de empresa y un conflicto",
-      "segmento_inicio": "2026-04-14T16:26:22Z",
-      "segmento_fin": "2026-04-14T18:16:45Z",
-      "segmento_personas": [
-        "Humberto",
-        "Jorge William",
-        "Catalina",
-        "abogados",
-        "PM",
-        "dueños"
-      ],
-      "segmento_impacto": "medio"
-    },
-    {
-      "id": "2026-04-16-r9-009",
-      "tarea": "Formalizar carta de suspensión solo tras autorización de PM (no unilateral)",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Mantener legalidad y buenas relaciones",
-      "tipo": "compromiso",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-20",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "abogados",
-        "PM",
-        "Jorge William"
-      ],
-      "segmento_idx": 9,
-      "segmento_titulo": "Anécdota personal sobre una propuesta de empresa y un conflicto",
-      "segmento_inicio": "2026-04-14T16:26:22Z",
-      "segmento_fin": "2026-04-14T18:16:45Z",
-      "segmento_personas": [
-        "Humberto",
-        "Jorge William",
-        "Catalina",
-        "abogados",
-        "PM",
-        "dueños"
-      ],
-      "segmento_impacto": "medio"
-    },
-    {
-      "id": "2026-04-16-r9-010",
-      "tarea": "Establecer límites de confidencialidad con Jorge William (compartir prospectos, no análisis)",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Evitar que información se desvíe a Catalina",
-      "tipo": "comunicacion",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-16",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Jorge William",
-        "Catalina"
-      ],
-      "segmento_idx": 9,
-      "segmento_titulo": "Anécdota personal sobre una propuesta de empresa y un conflicto",
-      "segmento_inicio": "2026-04-14T16:26:22Z",
-      "segmento_fin": "2026-04-14T18:16:45Z",
-      "segmento_personas": [
-        "Humberto",
-        "Jorge William",
-        "Catalina",
-        "abogados",
-        "PM",
-        "dueños"
-      ],
-      "segmento_impacto": "medio"
-    },
-    {
-      "id": "2026-04-16-r10-011",
-      "tarea": "Empoderamiento: que Carlos Acevedo comience a manejar hasta Uber (operaciones)",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Descarga de Sebastian; preparar liderazgo futuro",
-      "tipo": "decision",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-25",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Carlos Acevedo",
-        "Edwin",
-        "Juan Carlos Gómez",
-        "Uber"
-      ],
-      "segmento_idx": 10,
-      "segmento_titulo": "Conversación sobre el contrato y la organización del equipo",
-      "segmento_inicio": "2026-04-14T16:11:36Z",
-      "segmento_fin": "2026-04-14T16:26:19Z",
-      "segmento_personas": [
-        "Santiago Wilches",
-        "Humberto Iglesias",
-        "Jorge William",
-        "Carlos Acevedo",
-        "Diana",
-        "Juan Carlos Gómez",
-        "Gustavo",
-        "Edwin",
-        "Juan Pablo",
-        "Pacho",
-        "Edgar",
-        "Guillermo Villada",
-        "Darío Sánchez"
-      ],
-      "segmento_impacto": "alto"
-    },
-    {
-      "id": "2026-04-16-r10-012",
-      "tarea": "Empoderar Diana para alcance similar a Carlos Acevedo",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta",
-      "contexto": "Duplicar capacidad de jefatura sin expandir",
-      "tipo": "decision",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-25",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Diana"
-      ],
-      "segmento_idx": 10,
-      "segmento_titulo": "Conversación sobre el contrato y la organización del equipo",
-      "segmento_inicio": "2026-04-14T16:11:36Z",
-      "segmento_fin": "2026-04-14T16:26:19Z",
-      "segmento_personas": [
-        "Santiago Wilches",
-        "Humberto Iglesias",
-        "Jorge William",
-        "Carlos Acevedo",
-        "Diana",
-        "Juan Carlos Gómez",
-        "Gustavo",
-        "Edwin",
-        "Juan Pablo",
-        "Pacho",
-        "Edgar",
-        "Guillermo Villada",
-        "Darío Sánchez"
-      ],
-      "segmento_impacto": "alto"
-    },
-    {
-      "id": "2026-04-16-r10-013",
-      "tarea": "Aclarar roles de Gustavo en compras vs. negociación contractual",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Evitar duplicación en temas de Bucaramanga, equipos",
-      "tipo": "clarificacion",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-20",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Gustavo",
-        "Don Gustavo"
-      ],
-      "segmento_idx": 10,
-      "segmento_titulo": "Conversación sobre el contrato y la organización del equipo",
-      "segmento_inicio": "2026-04-14T16:11:36Z",
-      "segmento_fin": "2026-04-14T16:26:19Z",
-      "segmento_personas": [
-        "Santiago Wilches",
-        "Humberto Iglesias",
-        "Jorge William",
-        "Carlos Acevedo",
-        "Diana",
-        "Juan Carlos Gómez",
-        "Gustavo",
-        "Edwin",
-        "Juan Pablo",
-        "Pacho",
-        "Edgar",
-        "Guillermo Villada",
-        "Darío Sánchez"
-      ],
-      "segmento_impacto": "alto"
-    },
-    {
-      "id": "2026-04-16-r10-014",
-      "tarea": "Documentar cadena de mando clara: Sebastian->Carlos/Diana->Santiago/Humberto",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "media",
-      "contexto": "Eliminar ruido en comunicación",
-      "tipo": "organizacion",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-04-22",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Carlos Acevedo",
-        "Diana",
-        "Santiago Wilches",
-        "Humberto Iglesias"
-      ],
-      "segmento_idx": 10,
-      "segmento_titulo": "Conversación sobre el contrato y la organización del equipo",
-      "segmento_inicio": "2026-04-14T16:11:36Z",
-      "segmento_fin": "2026-04-14T16:26:19Z",
-      "segmento_personas": [
-        "Santiago Wilches",
-        "Humberto Iglesias",
-        "Jorge William",
-        "Carlos Acevedo",
-        "Diana",
-        "Juan Carlos Gómez",
-        "Gustavo",
-        "Edwin",
-        "Juan Pablo",
-        "Pacho",
-        "Edgar",
-        "Guillermo Villada",
-        "Darío Sánchez"
-      ],
-      "segmento_impacto": "alto"
-    },
-    {
-      "id": "2026-04-16-r10-015",
-      "tarea": "Incluir Juan Pablo en decisiones de asesoría (aunque no sea director formal aún)",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "baja",
-      "contexto": "Preparar capacidad futura",
-      "tipo": "transicion",
-      "estado": "pendiente",
-      "fecha": "2026-04-16",
-      "fecha_limite": "2026-05-15",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Juan Pablo"
-      ],
-      "segmento_idx": 10,
-      "segmento_titulo": "Conversación sobre el contrato y la organización del equipo",
-      "segmento_inicio": "2026-04-14T16:11:36Z",
-      "segmento_fin": "2026-04-14T16:26:19Z",
-      "segmento_personas": [
-        "Santiago Wilches",
-        "Humberto Iglesias",
-        "Jorge William",
-        "Carlos Acevedo",
-        "Diana",
-        "Juan Carlos Gómez",
-        "Gustavo",
-        "Edwin",
-        "Juan Pablo",
-        "Pacho",
-        "Edgar",
-        "Guillermo Villada",
-        "Darío Sánchez"
-      ],
-      "segmento_impacto": "alto"
     }
   ],
-  "ultima_actualizacion": "2026-04-16T14:53:23.717821"
+  "ultima_actualizacion": "2026-04-16T12:00:28.923083"
 }

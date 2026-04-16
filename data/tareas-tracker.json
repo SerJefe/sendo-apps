@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-16T12:00:28",
+  "ultima_actualizacion": "2026-04-16T14:53:23",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -1400,6 +1400,115 @@
       "categoria": "condugas",
       "monto_cop": null,
       "personas": []
+    },
+    {
+      "id": "2026-04-16-c001x",
+      "tarea": "Preparar documentación de debido proceso ejecutivo con focus en ambiental y reajustes",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-16",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-18",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Contrato EPM bloqueado por incumplimientos económicos",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": 1900000000,
+      "personas": [
+        "abogados",
+        "dueños"
+      ]
+    },
+    {
+      "id": "2026-04-16-c002x",
+      "tarea": "Evaluar viabilidad de terminación contractual vs. renegociación de fórmula",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-16",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-20",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Contrato quebrado en 3 meses si no hay reajustes",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Jorge William",
+        "Catalina",
+        "bancos",
+        "socios"
+      ]
+    },
+    {
+      "id": "2026-04-16-c003x",
+      "tarea": "Validar con Camacol data de escalada salarial (22-27% vs. 52% actual)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-16",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-17",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Prueba de desequilibrio económico en fórmula",
+      "tipo": "investigacion",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Camacol",
+        "agremiacion"
+      ]
+    },
+    {
+      "id": "2026-04-16-c004",
+      "tarea": "Coordinar con equipo (Uner, Leon, Diana) estrategia de confrontación con Catalina",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-16",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-18",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "No aparecer a Catalina para presionar desde otros flancos",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Uner",
+        "Leon",
+        "Diana",
+        "William"
+      ]
+    },
+    {
+      "id": "2026-04-16-c005",
+      "tarea": "Localizar registro de comité proveedores 12 de febrero donde todos dijeron reajuste no daba",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-16",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-16",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Prueba de que todos contratistas reconocen desequilibrio",
+      "tipo": "evidencia",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "contratistas",
+        "Z2"
+      ]
     }
   ]
 }
