@@ -955,34 +955,112 @@ async function loadPendientes() {
     var el = document.getElementById('pendientes-list');
     if (!items.length) { el.innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Sin tareas pendientes de revision</div>'; return; }
 
+    // Agrupar: primero por fecha (desc), dentro por segmento_titulo (reunion)
     var byDate = {};
-    items.forEach(function(t) { (byDate[t.fecha] = byDate[t.fecha]||[]).push(t); });
+    items.forEach(function(t) { (byDate[t.fecha||'--'] = byDate[t.fecha||'--']||[]).push(t); });
 
     var html = '';
     Object.keys(byDate).sort().reverse().forEach(function(fecha) {
-      html += '<h3 style="margin-top:16px">' + fecha + '</h3>';
-      byDate[fecha].forEach(function(t) {
-        var priColor = t.prioridad==='critica'?'var(--red)':t.prioridad==='alta'?'var(--orange)':'var(--yellow)';
-        var tipoColor = t.tipo==='compromiso'?'var(--cyan)':t.tipo==='seguimiento'?'var(--purple)':'var(--muted)';
-        html += '<div id="p-'+t.id+'" class="card" style="margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;transition:opacity .3s,transform .3s">' +
-          '<div style="flex:1">' +
-            '<div style="font-size:14px;font-weight:500">' + t.tarea + '</div>' +
-            '<div style="font-size:11px;color:var(--muted);margin-top:4px">' + (t.responsable||'') +
-              ' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(6,182,212,.1);color:'+tipoColor+'">' + (t.tipo||'') + '</span>' +
-              ' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(239,68,68,.1);color:'+priColor+'">' + (t.prioridad||'') + '</span>' +
+      html += '<h3 style="margin-top:20px;margin-bottom:12px">' + fecha + '</h3>';
+      var dateItems = byDate[fecha];
+
+      // Sub-agrupar por reunion (segmento_titulo). Items sin segmento van a "(sin reunion)"
+      var byReunion = {};
+      dateItems.forEach(function(t) {
+        var key = t.segmento_titulo || '(sin reunion)';
+        (byReunion[key] = byReunion[key] || {items:[], meta:{}}).items.push(t);
+        if (t.segmento_titulo) byReunion[key].meta = {
+          titulo: t.segmento_titulo,
+          inicio: t.segmento_inicio || '',
+          fin: t.segmento_fin || '',
+          personas: t.segmento_personas || [],
+          impacto: t.segmento_impacto || 'medio',
+        };
+      });
+
+      Object.keys(byReunion).forEach(function(reunionKey) {
+        var group = byReunion[reunionKey];
+        var meta = group.meta;
+        var gItems = group.items;
+        var gIds = gItems.map(function(t){return t.id});
+        var gIdStr = JSON.stringify(gIds);
+
+        // Header de la reunion
+        var impColor = meta.impacto==='critico'||meta.impacto==='alto'?'var(--red)':meta.impacto==='medio'?'var(--orange)':'var(--muted)';
+        var timeStr = '';
+        if (meta.inicio) {
+          var s = meta.inicio.substring(11,16);
+          var e = (meta.fin||'').substring(11,16);
+          timeStr = s + (e ? ' → '+e : '');
+        }
+        var persStr = (meta.personas||[]).join(', ');
+
+        html += '<div style="margin-bottom:16px;border:1px solid var(--border);border-radius:10px;overflow:hidden">';
+        // Barra de reunion
+        html += '<div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--bg3);cursor:pointer" onclick="var b=this.nextElementSibling;b.style.display=b.style.display===\'none\'?\'block\':\'none\'">';
+        if (meta.impacto) {
+          html += '<span style="font-size:9px;padding:2px 7px;border-radius:3px;background:'+impColor+'22;color:'+impColor+';text-transform:uppercase;font-weight:600;letter-spacing:.04em">'+meta.impacto+'</span>';
+        }
+        html += '<div style="flex:1">';
+        html += '<div style="font-size:13px;font-weight:500">' + (meta.titulo||reunionKey) + '</div>';
+        if (timeStr || persStr) {
+          html += '<div style="font-size:10px;color:var(--muted);margin-top:2px">';
+          if (timeStr) html += timeStr;
+          if (timeStr && persStr) html += ' · ';
+          if (persStr) html += persStr;
+          html += '</div>';
+        }
+        html += '</div>';
+        html += '<span style="font-size:12px;color:var(--muted);font-family:monospace">' + gItems.length + '</span>';
+        html += '<span style="font-size:14px;color:var(--muted)">▾</span>';
+        html += '</div>';
+
+        // Body colapsable (abierto por default)
+        html += '<div style="padding:8px 10px">';
+
+        gItems.forEach(function(t) {
+          var priColor = t.prioridad==='critica'?'var(--red)':t.prioridad==='alta'?'var(--orange)':'var(--yellow)';
+          var tipoColor = t.tipo==='compromiso'?'var(--cyan)':t.tipo==='seguimiento'?'var(--purple)':'var(--muted)';
+          html += '<div id="p-'+t.id+'" class="card" style="margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;transition:opacity .3s,transform .3s;padding:8px 12px">' +
+            '<div style="flex:1">' +
+              '<div style="font-size:13px;font-weight:500">' + t.tarea + '</div>' +
+              '<div style="font-size:10px;color:var(--muted);margin-top:3px">' + (t.responsable||'') +
+                ' <span style="padding:1px 6px;border-radius:3px;background:rgba(6,182,212,.1);color:'+tipoColor+'">' + (t.tipo||'') + '</span>' +
+                ' <span style="padding:1px 6px;border-radius:3px;background:rgba(239,68,68,.1);color:'+priColor+'">' + (t.prioridad||'') + '</span>' +
+              '</div>' +
             '</div>' +
-          '</div>' +
-          '<div style="display:flex;gap:6px;margin-left:12px">' +
-            '<button onclick="reviewTask(\''+t.id+'\',\'reject\')" style="background:rgba(239,68,68,.1);color:#f87171;border:1px solid rgba(239,68,68,.2);padding:5px 12px;border-radius:5px;font-size:11px;cursor:pointer">Reject</button>' +
-            '<button onclick="reviewTask(\''+t.id+'\',\'accept\')" style="background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.3);padding:5px 12px;border-radius:5px;font-size:11px;cursor:pointer">Accept</button>' +
-          '</div>' +
-        '</div>';
+            '<div style="display:flex;gap:4px;margin-left:8px">' +
+              '<button onclick="reviewTask(\''+t.id+'\',\'reject\')" style="background:rgba(239,68,68,.1);color:#f87171;border:1px solid rgba(239,68,68,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✗</button>' +
+              '<button onclick="reviewTask(\''+t.id+'\',\'accept\')" style="background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✓</button>' +
+            '</div>' +
+          '</div>';
+        });
+
+        // Bulk actions para esta reunion
+        html += '<div style="display:flex;gap:6px;justify-content:flex-end;padding:6px 4px 4px">';
+        html += '<button onclick="bulkReunionAction('+gIdStr.replace(/"/g,'&quot;')+',\'reject\')" style="background:rgba(239,68,68,.06);color:#f87171;border:1px solid rgba(239,68,68,.15);padding:4px 12px;border-radius:5px;font-size:10px;cursor:pointer">Rechazar reunion</button>';
+        html += '<button onclick="bulkReunionAction('+gIdStr.replace(/"/g,'&quot;')+',\'accept\')" style="background:rgba(34,197,94,.08);color:#4ade80;border:1px solid rgba(34,197,94,.2);padding:4px 12px;border-radius:5px;font-size:10px;cursor:pointer">Aceptar reunion</button>';
+        html += '</div>';
+
+        html += '</div>'; // body
+        html += '</div>'; // container
       });
     });
     el.innerHTML = html;
   } catch(e) {
     document.getElementById('pendientes-list').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">API no disponible</div>';
   }
+}
+
+async function bulkReunionAction(ids, action) {
+  for (var i=0; i<ids.length; i++) {
+    var el = document.getElementById('p-'+ids[i]);
+    if(el) { el.style.opacity='0.3'; }
+    try { await fetch(API+'/'+action, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({id:ids[i]})}); } catch(e) {}
+  }
+  toast(action==='accept' ? ids.length+' tareas aceptadas' : ids.length+' tareas rechazadas', 'ok');
+  loadPendientes();
+  if(action==='accept') loadMisTareas();
 }
 
 async function reviewTask(id, action) {
