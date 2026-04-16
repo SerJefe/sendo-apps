@@ -1,14 +1,14 @@
 {
-  "generado_at": "2026-04-15T11:30:01",
+  "generado_at": "2026-04-16T11:30:02",
   "resumen": {
     "grupos_fusion": 0,
     "tareas_en_grupos": 0,
     "alta_prioridad_sin_accion": 2,
     "sobrecarga": 1,
-    "sin_categoria": 1,
+    "sin_categoria": 0,
     "estancadas": 1,
-    "sin_evaluar": 9,
-    "total_abiertas": 33
+    "sin_evaluar": 11,
+    "total_abiertas": 34
   },
   "grupos_fusion": [],
   "alta_prioridad_sin_accion": [
@@ -30,23 +30,18 @@
   "sobrecarga": [
     {
       "responsable": "Sebastian",
-      "abiertas": 29,
-      "criticas": 6,
-      "sugerencia": "Sebastian tiene 29 tareas abiertas (6 criticas). Delegar o repriorizar."
+      "abiertas": 30,
+      "criticas": 8,
+      "sugerencia": "Sebastian tiene 30 tareas abiertas (8 criticas). Delegar o repriorizar."
     }
   ],
-  "sin_categoria": [
-    {
-      "id": "2026-04-14-m061ce8",
-      "tarea": "Preparar 3 modulos calse Adolfo"
-    }
-  ],
+  "sin_categoria": [],
   "estancadas": [
     {
       "id": "2026-04-06-002",
       "tarea": "Recopilar información del proceso centro de operaciones",
       "responsable": "Andrés Avendaño",
-      "dias": 9,
+      "dias": 10,
       "puntaje": 44
     }
   ],
@@ -76,12 +71,6 @@
       "fecha_creacion": "2026-04-14"
     },
     {
-      "id": "2026-04-14-c004",
-      "tarea": "Revisar contrato con Catalina identificando riesgos legales y posible abuso de poder",
-      "responsable": "Sebastian",
-      "fecha_creacion": "2026-04-14"
-    },
-    {
       "id": "2026-04-14-001",
       "tarea": "Reunirse con Andrea para resolver deuda Condugas",
       "responsable": "Sebastian",
@@ -104,6 +93,24 @@
       "tarea": "{'taja': 'Diseñar visualizador de tareas en calendario por orden de prioridad', 'responsable': 'Seba",
       "responsable": "Sebastian",
       "fecha_creacion": "2026-04-14"
+    },
+    {
+      "id": "2026-04-15-c001",
+      "tarea": "Cobrar reajustes pendientes a EPM del contrato Río Negro (~180 millones COP)",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-c002",
+      "tarea": "Estructurar defensa legal y documentación contra EPM por incumplimiento contractual",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-c003",
+      "tarea": "Preparar propuesta contundente de reajuste de contrato EPM Río Negro con alternativas viables",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
     }
   ]
 }

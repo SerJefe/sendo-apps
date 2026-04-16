@@ -1,14 +1,14 @@
 {
-  "fecha": "2026-04-15",
-  "ultima_actualizacion": "2026-04-15T11:45:07",
+  "fecha": "2026-04-16",
+  "ultima_actualizacion": "2026-04-16T11:45:06",
   "comite_sv": {
     "caja_dias": 8,
     "facturacion_pct": 45,
     "produccion_deficit_pct": 73,
-    "ebitda": -950,
+    "ebitda": -2300,
     "whoop_recovery": null,
     "whoop_sleep": "4h 02m (37%)",
-    "tareas_criticas": 6,
+    "tareas_criticas": 8,
     "proyectos_crisis": 2
   },
   "frescura": {
@@ -31,10 +31,10 @@
       "fuente": "manual"
     },
     "ebitda": {
-      "valor": -950,
-      "fecha": null,
-      "dias_sin_actualizar": 99,
-      "fuente": "manual"
+      "valor": -2300,
+      "fecha": "2026-04-16",
+      "dias_sin_actualizar": 0,
+      "fuente": "limitless"
     },
     "whoop_recovery": {
       "valor": null,
@@ -49,34 +49,33 @@
       "fuente": "manual"
     },
     "tareas_criticas": {
-      "valor": 6,
-      "fecha": "2026-04-15",
+      "valor": 8,
+      "fecha": "2026-04-16",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     },
     "proyectos_crisis": {
       "valor": 2,
-      "fecha": "2026-04-15",
+      "fecha": "2026-04-16",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     }
   },
   "alertas": [
-    "Odoo: deadline ayer (16/4) → reunión hoy con Lina/Ema para definir qué hay/qué falta",
-    "Caja: 8 días de runway, -950 EBITDA, solo 20% efectivo disponible → decisión urgente: cobros Terret o crédito",
-    "Incumplimiento EPM contrato 24-01: no pago de sitios ni reajustes",
-    "Disputa contractual con EPM sobre 1.2 a 1.4 billones pendientes",
-    "Crédito Bancolombia vence 15 abril (2 días)",
-    "Tension interna: contadora renunció, falta liquidez en todos lados",
-    "EPM 2401: no conformidad sin respuesta formal (vencida hoy) → riesgo legal inmediato con cliente ~80 empleados",
-    "Deuda EPM: 1200 millones no pagados, contratos bloqueados"
+    "Caja: 8 días de runway con -950M EBITDA = crisis inminente",
+    "Si contrato EPM se muere, se muere Catalina (empresa)",
+    "Contrato EPM estructuralmente no viable según análisis",
+    "Socio del consorcio (NC) con embargo que impide aportes",
+    "Odoo vencía hoy (16 Apr) → reunión Lina/Ema URGENTE para definir qué hay/qué no",
+    "Pérdida acumulada de 2300 millones de pesos en contrato",
+    "EPM: 180M COP sin pagar + no conformidad vencida (15 Apr) = riesgo legal inmediato",
+    "Bloqueo de caja por reajustes no pagados desde noviembre"
   ],
   "oportunidades": [
-    "Negociación pago 700 millones de ítems con EPM",
-    "Resolver deuda Condugas con plan estructurado",
-    "Adicionar concesiones hasta 50% según iniciativa gobernador",
-    "Contrato comodato de 8 años ya firmado (300 km recuperados)",
-    "2.6 millones aprobados por asamblea para ferrocarril Bello-Barbosa"
+    "Negociación bilateral para terminación del contrato con EPM",
+    "Revisión de obligaciones incumplidas por EPM (180 millones en recorte de asignación)",
+    "Propuesta de reajuste administrativo y costos directos del contrato",
+    "Cambio de socio del consorcio de NC a SIlar"
   ],
   "whoop": {
     "recovery": 29,
@@ -110,15 +109,6 @@
       "ultimo_valor": 73,
       "ultima_fecha": null,
       "mensaje": "'produccion_deficit_pct' lleva 99 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
-    },
-    {
-      "campo": "ebitda",
-      "dias_sin_dato": 99,
-      "umbral": 14,
-      "severidad": "alta",
-      "ultimo_valor": -950,
-      "ultima_fecha": null,
-      "mensaje": "'ebitda' lleva 99 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
     },
     {
       "campo": "whoop_recovery",

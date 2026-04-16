@@ -1,120 +1,123 @@
 {
-  "fecha": "2026-04-14",
+  "fecha": "2026-04-15",
   "tareas_extraidas": [
     {
-      "tarea": "Reunirse con Andrea para resolver deuda Condugas",
+      "tarea": "Revisar informe de gestión para Supersociedades",
       "responsable": "Sebastian",
       "prioridad": "alta"
     },
     {
-      "tarea": "Hacer seguimiento piloto Claudio Camilo Berrío",
+      "tarea": "{'taja': 'Enviar estados financieros y anexos a Supersociedades', 'responsable': 'Sebastian', 'prioridad': 'alta', 'tipo': 'compromiso', 'contexto': 'Estados financieros listos - pendiente envío con i",
       "responsable": "Sebastian",
       "prioridad": "alta"
     },
     {
-      "tarea": "Consultar con William sobre estructura de cobros y montos para Terret",
+      "tarea": "Obtener respuesta contable de Manuel sobre configuración nómina UGP-DIAN",
       "responsable": "Sebastian",
       "prioridad": "alta"
     },
     {
-      "tarea": "Preparar documentación legal para contrato problemático",
+      "tarea": "Cobrar ICA pendiente a municipios (~55 millones Medellín)",
       "responsable": "Sebastian",
       "prioridad": "alta"
     },
     {
-      "tarea": "Coordinar reunión con leads/clientes para definición estratégica",
+      "tarea": "Responder requerimiento SENA pendiente",
       "responsable": "Sebastian",
       "prioridad": "alta"
     },
     {
-      "tarea": "Reunirse con Terre para propuesta de colaboración antes del 20 de abril",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Atender reunión DPM a las 14:30 sobre comunicado de Catalina",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Definir estructura contable para pagos en dólares y cuentas de cobro Terret",
+      "tarea": "Escanear Acta 87 de Asamblea",
       "responsable": "Sebastian",
       "prioridad": "media"
     },
     {
-      "tarea": "Crear información visual ERP con Emanuel y Lina para comprensión integral del proyecto",
+      "tarea": "Firmar declaración de renta con ayuda de Diana y Alejandro",
       "responsable": "Sebastian",
       "prioridad": "media"
     },
     {
-      "tarea": "{'taja': 'Diseñar visualizador de tareas en calendario por orden de prioridad', 'responsable': 'Sebastian', 'prioridad': 'media', 'tipo': 'pendiente', 'contexto': 'Gestión sistema de tareas y dashboar",
+      "tarea": "Integrar informes inversión extranjera en sistema Odoo",
       "responsable": "Sebastian",
       "prioridad": "media"
     },
     {
-      "tarea": "Revisar no conformidad EPM contrato 2401 y responder formalmente",
+      "tarea": "Definir auditoría de balances en Odoo con revisor fiscal",
+      "responsable": "Sebastian",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Enviar certificados retención mensual a consorciados (Óscar, Zilar)",
+      "responsable": "Sebastian",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Ajustar débito deuda NC (retenciones no cobradas)",
+      "responsable": "Sebastian",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Aclarar uso y condiciones de contenedores charcutería",
+      "responsable": "Sebastian",
+      "prioridad": "baja"
+    },
+    {
+      "tarea": "Cuadrar deuda empresa a Condugas y plan de pago",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Contactar Catalina (EPM) para seguimiento post-negociación",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Cobrar reajustes pendientes a EPM del contrato Río Negro (~180 millones COP)",
       "responsable": "Sebastian",
       "prioridad": "critica"
     },
     {
-      "tarea": "Resolver 20 temas pendientes y listarlos para junta directiva",
+      "tarea": "Estructurar defensa legal y documentación contra EPM por incumplimiento contractual",
       "responsable": "Sebastian",
       "prioridad": "critica"
     },
     {
-      "tarea": "Coordinar fechas para primera junta directiva (20, 21, 22 de abril)",
-      "responsable": "Sebastian",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Revisar contrato con Catalina identificando riesgos legales y posible abuso de poder",
-      "responsable": "Sebastian",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Resolver temas financieros pendientes de 1.200-1.400 millones para junta directiva",
-      "responsable": "Sebastian",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Preparar borrador Condugas para presentación en primera junta directiva",
-      "responsable": "Sebastian",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "",
+      "tarea": "Preparar propuesta contundente de reajuste de contrato EPM Río Negro con alternativas viables",
       "responsable": "Sebastian",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Aplazar viaje a Cartagena (fin de semana) por demanda pendiente de mayor urgencia",
-    "Estructurar cobros Terret con mezcla de facturas y cuentas digitales según monto y fuente",
-    "Priorizar resolución de 20 temas pendientes antes de junta directiva del 20 de abril para evitar caos",
-    "Crear visualizador de tareas en calendario para bloqueo secuencial por prioridad máxima",
-    "Usar figura de comodato (no APP) para corredor férreo de 100 km por 30 años con seguridad jurídica probada"
+    "No cerrar cláusulas ambientales del contrato EPM hasta cerrar reajuste integral - estrategia de presión",
+    "Preparar propuesta no viable como táctica para forzar renegociación o salida del contrato Río Negro",
+    "Defensa legal agresiva contra EPM - señalar incumplimiento contractual recíproco y abuso de poder",
+    "Si contrato EPM se muere, implica cierre de Condugas - máxima criticidad",
+    "Mantener continuidad en negociación EPM con propuestas contundentes en próxima reunión",
+    "Bajarse sueldo de gerencia para mantener nómina (123M con abogada y subgerente)",
+    "Priorizar respuesta a SENA y Supersociedades antes de viaje a Cartagena el 16/04"
   ],
   "ideas": [
-    "Mecanismo de valorización para vía Jericó-Andes aprovechando capacidad de pago local en corredores viales",
-    "Traer puente existente desde otro lugar (Bolombolo) para solucionar cruces Mar 1, Pacífico 1-2 en lugar de nueva licitación de 12 meses",
-    "Explorar energía solar y eólica en Colombia mediante estudio Daffin para identificar 5 mejores ubicaciones (oportunidad Siendo Consulting)",
-    "Integrar framework Depatura en ERP para mejorar metodologías sin necesidad de nuevas licitaciones APP",
-    "Dashboard/briefing unificado que conecte KPIs, tareas y proyectos con categorización automática (tarea vs idea vs compromiso)"
+    "Usar problemas actuales EPM (actas de hallazgos, comunicados de ANES) como respaldo para renegociación - 'no me obligue a sacar la carta'",
+    "Integrar en Odoo todos los informes de inversión extranjera para automatizar reportes y auditoría mensual",
+    "Estrategia de defensa: contextualizar cada acción contractual con historia completa del contrato para neutralizar acusaciones de abuso",
+    "Cobro de ICA municipios pequeños requiere pagar primero (declaración) antes de que municipios facturen - ciclo de caja comprometido",
+    "Certificados de retención 2025-2026 a Zilar urgente como evidencia de relación comercial activa",
+    "Validar capacidad operativa: Condugas creció a 2 contratos sin perder eficiencia - ejemplo: cuadrillas compartidas entre proyectos"
   ],
   "frases": [
-    "De montar la base y empezar a construir, salió un nuevo conector, no, gracias, un nuevo conector, que es que no habían hablado con el dios del viento (sobre impacto de variables externas en proyectos viales)",
-    "Este país está quebrado, por una APP no va a haber contrato de 100 (reflexión sobre viabilidad de APPs vs comodatos en infraestructura)",
-    "Más importante que el conocimiento es la creatividad, logramos ubicar que ese corredor ya estaba hecho (sobre solución jurídica innovadora para proyecto férreo)",
-    "Yo tengo nada más el 20% del ingreso en caja, el 66% del salario, y lo otro me lo deben, pero además hay unas platas que me debe el consorcio de retención (crisis de flujo de caja personal Sebastian)",
-    "Mira, el briefing que yo tengo es todo el tema del dashboard que tiene que conectarse con tareas, ideas y urgencias máximas (visión de sistema integrado de gestión)"
+    "A mí el mejor lugar que me pueden pagar en estos momentos es Condugas. Porque lo que yo me sueño profundamente, ese es el potencial humano y eso no se puede dar acá. (Reflexión sobre por qué no migra pese a crisis)",
+    "Yo estoy arriesgando la empresa. Ustedes están buscando una negociación protocolar. Eso sí es un irrespeto. (Confrontación emocional en reunión EPM sobre deuda de 2.300M-3.300M)",
+    "No cierro los ambientales hasta que no cerremos lo otro. ¿Cuándo cierro los ambientales? (Tácticade presión - condicionar avances)",
+    "Si ese contrato se muere, se muere Catalina. (Máxima criticidad - viabilidad EPM = viabilidad empresa)",
+    "Nosotros sí crecimos, tenemos dos contratos, pero no significa que hemos perdido la capacidad operativa. (Defensa ante crítica de incumplimiento por asignación de recursos)"
   ],
   "alertas_supervivencia": [
-    "CRITICA: Deuda EPM contrato 2401 sin respuesta formal - riesgo legal inmediato con cliente principal (~80 empleados dependen de EPM)",
-    "CRITICA: Crisis de caja personal Sebastian: solo 20% ingreso disponible en efectivo, 66% retenido en salario, dinero adeudado por consorcio - impacta capacidad operativa jefatura",
-    "CRITICA: 20 temas pendientes sin resolución previa a junta directiva 20/4 - riesgo de colapso operativo y falta de transparencia ante accionistas",
-    "CRITICA: Posible abuso de poder en contrato principal (Catalina) - riesgo legal/contractual no mitigado",
-    "ALTA: Deuda Condugas con Andrea sin fecha de resolución - conflicto interno estructural sin fecha límite"
+    "CRITICA: Pérdida acumulada 2.300M-3.300M en contrato EPM Río Negro en 5 años - empresa en sobrevivencia",
+    "CRITICA: 180M COP sin pagar por EPM en reajustes (5 meses vencidos) - crisis de caja inmediata",
+    "CRITICA: Si contrato EPM se muere, se muere Catalina/Condugas - viabilidad corporativa depende de esta negociación",
+    "ALTA: Acusaciones EPM de incumplimiento contractual y abuso de poder - riesgo legal/reputacional",
+    "ALTA: ICA municipios ~55M Medellín pendiente - impedimento para facturación futura"
   ],
-  "total_lifelogs": 22,
+  "total_lifelogs": 11,
   "procesado_con": "haiku_v2"
 }

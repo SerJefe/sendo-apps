@@ -1,60 +1,64 @@
 {
-  "saludo": "Buenos días Sebastián — miércoles 15 Apr",
+  "saludo": "Buenos días Sebastián — jueves 16 Apr",
   "supervivencia": [
-    "EPM 2401: no conformidad sin respuesta formal (vencida hoy) → riesgo legal inmediato con cliente ~80 empleados",
-    "Caja: 8 días de runway, -950 EBITDA, solo 20% efectivo disponible → decisión urgente: cobros Terret o crédito",
-    "Odoo: deadline ayer (16/4) → reunión hoy con Lina/Ema para definir qué hay/qué falta"
+    "EPM: 180M COP sin pagar + no conformidad vencida (15 Apr) = riesgo legal inmediato",
+    "Caja: 8 días de runway con -950M EBITDA = crisis inminente",
+    "Odoo vencía hoy (16 Apr) → reunión Lina/Ema URGENTE para definir qué hay/qué no"
   ],
   "top_3": [
     {
-      "tarea": "Responder formalmente a EPM no conformidad 2401 + plan de acción",
+      "tarea": "Responder formalmente no conformidad EPM 2401 + adjuntar actas de lluvias/paradas (feb-abr) como evidencia de incumplimiento recíproco",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Vencida hoy, riesgo legal con cliente clave",
-      "tarea_id": "revisar_no_conformidad_EPM"
+      "porque": "Vencida desde 15 Apr, cierra puerta legal antes de renegociar 180M",
+      "tarea_id": "no_conformidad_EPM"
     },
     {
-      "tarea": "Revisar caja familiar + inversiones hoy, definir si cobrar Terret o activar crédito",
+      "tarea": "Reunión 30min Lina + Ema: definir estado real Odoo (parámetros, reglas, qué falta) + roadmap implementación",
       "categoria": "SUPERVIVENCIA",
-      "porque": "8 días runway, decisión estratégica antes de junta 20/4",
-      "tarea_id": "situacion_caja_familiar"
+      "porque": "Vencía hoy, necesario antes de propuesta reajuste EPM",
+      "tarea_id": "odoo_implementacion"
     },
     {
-      "tarea": "Reunión Lina + Ema: status Odoo, qué falta para go-live",
-      "categoria": "OPERATIVO",
-      "porque": "Deadline vencido, bloquea clientes actuales en sistema",
-      "tarea_id": "implementar_odoo"
+      "tarea": "Cita con Andrea (Condugas): revisar caja real, deudas pendientes, y autorizar compra tiquetes Cartagena",
+      "categoria": "SUPERVIVENCIA",
+      "porque": "8 días caja + viaje crítico = decisión de flujo ahora",
+      "tarea_id": "caja_familiar"
     }
   ],
-  "mega_dia": "EPM respondida + caja resuelta = 2 de 6 críticas cerradas antes de junta",
+  "mega_dia": "Despachar no conformidad EPM hoy = cierra vencimiento legal y desbloquea negociación de 180M",
   "contactar_hoy": [
     {
       "persona": "Lina + Ema",
-      "motivo": "Status Odoo, 30 min máximo"
+      "motivo": "Reunión Odoo 30min antes de mediodía"
     },
     {
-      "persona": "Andrea",
-      "motivo": "Deuda Condugas + tiquetes Cartagena (aplazado)"
+      "persona": "Andrea (Condugas)",
+      "motivo": "Estado caja + autorizar tiquetes"
+    },
+    {
+      "persona": "Pilar (POT Aguacatala)",
+      "motivo": "Citar para semana próxima"
     }
   ],
   "ojo_con": [
-    "21 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "Contrato Catalina (deadline ayer 14/4) → no aparece resuelto en alertas",
-    "Jericó empalme 16/4 → ¿está pagado/ejecutado?",
-    "Dashboard briefing aún sin actualizar KPIs (99 días sin refresh)"
+    "24 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+    "No cerrar defensa EPM hasta tener propuesta reajuste contundente (próxima reunión)",
+    "Si EPM se muere → Condugas cierra. Máxima presión pero sin salida apresurada",
+    "Sueño 4h 02m (37%) → rendimiento cognitivo comprometido para negociaciones críticas"
   ],
   "vencidas": [
-    "Revisar contrato Catalina (14/4)",
-    "No conformidad EPM (15/4 = hoy)"
+    "No conformidad EPM 2401 (15 Apr) — RESPONDER HOY",
+    "Implementar Odoo (16 Apr) — REUNIÓN HOY"
   ],
-  "frase_dia": "Supervivencia primero: EPM + caja hoy, luego escalas. Junta 20/4 sin sorpresas.",
-  "generado_at": "2026-04-15T11:00:10",
-  "fecha": "2026-04-15",
+  "frase_dia": "180M sobre la mesa, 8 días de caja, una respuesta legal: hoy decides si negocias desde fuerza o desde pánico.",
+  "generado_at": "2026-04-16T11:00:11",
+  "fecha": "2026-04-16",
   "stats": {
-    "abiertas": 33,
-    "criticas": 6,
+    "abiertas": 34,
+    "criticas": 8,
     "vencidas": 1,
     "estancadas": 1,
-    "sin_evaluar": 9
+    "sin_evaluar": 11
   },
   "criticas_sin_fecha": [
     {
@@ -150,15 +154,9 @@
   ],
   "vence_pronto": [
     {
-      "id": "2026-04-14-c001",
-      "tarea": "Revisar no conformidad EPM contrato 2401 y responder formalmente",
-      "dias": 0,
-      "fecha_limite": "2026-04-15"
-    },
-    {
       "id": "2026-04-13-m5b3b40",
       "tarea": "Implementar Odoo, revisión , parámetros, reglas ",
-      "dias": 1,
+      "dias": 0,
       "fecha_limite": "2026-04-16"
     }
   ]

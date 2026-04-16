@@ -1,18 +1,18 @@
 {
-  "generado_at": "2026-04-15T12:00:01",
+  "generado_at": "2026-04-16T12:00:01",
   "resumen": {
-    "total_abiertas": 33,
+    "total_abiertas": 34,
     "vencidas": 1,
-    "por_vencer_48h": 2,
+    "por_vencer_48h": 1,
     "estancadas_5d": 0,
-    "sin_evaluar": 9,
+    "sin_evaluar": 11,
     "criticas_sin_accion": 0
   },
   "vencidas": [
     {
-      "id": "2026-04-14-c004",
-      "tarea": "Revisar contrato con Catalina identificando riesgos legales y posible abuso de poder",
-      "deadline": "2026-04-14",
+      "id": "2026-04-14-c001",
+      "tarea": "Revisar no conformidad EPM contrato 2401 y responder formalmente",
+      "deadline": "2026-04-15",
       "dias_vencida": 1
     }
   ],
@@ -21,12 +21,6 @@
       "id": "2026-04-13-m5b3b40",
       "tarea": "Implementar Odoo, revisión , parámetros, reglas ",
       "deadline": "2026-04-16",
-      "dias_restantes": 1
-    },
-    {
-      "id": "2026-04-14-c001",
-      "tarea": "Revisar no conformidad EPM contrato 2401 y responder formalmente",
-      "deadline": "2026-04-15",
       "dias_restantes": 0
     }
   ],

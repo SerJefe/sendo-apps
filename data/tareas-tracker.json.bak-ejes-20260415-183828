@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-16T12:00:28",
+  "ultima_actualizacion": "2026-04-15T16:57:47",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -11,9 +11,7 @@
       "estado": "cerrada",
       "origen": "limitless",
       "contexto": "tarea urgente del briefing",
-      "vencida": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "vencida": false
     },
     {
       "id": "2026-04-06-002",
@@ -37,12 +35,11 @@
       "recomendacion": "Dividir",
       "evaluada": true,
       "descripcion": "",
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "proxima_accion": "Pedir todo el proceso y procedimiendo de este proyecto para el lunes en emergencia",
       "fusiono": [
         "2026-04-06-004"
-      ],
-      "eje": "condugas"
+      ]
     },
     {
       "id": "2026-04-06-003",
@@ -54,9 +51,7 @@
       "estado": "cerrada",
       "origen": "limitless",
       "contexto": "tarea urgente del briefing",
-      "vencida": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "vencida": false
     },
     {
       "id": "2026-04-06-004",
@@ -80,11 +75,10 @@
       "recomendacion": "Backlog",
       "evaluada": true,
       "descripcion": "",
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "proxima_accion": "",
       "motivo_cierre": "fusionada en 2026-04-06-002",
-      "fusionada_en": "2026-04-06-002",
-      "eje": "condugas"
+      "fusionada_en": "2026-04-06-002"
     },
     {
       "id": "2026-04-06-005",
@@ -96,9 +90,7 @@
       "estado": "cerrada",
       "origen": "limitless",
       "contexto": "tarea urgente del briefing",
-      "vencida": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "vencida": false
     },
     {
       "id": "2026-04-08-001",
@@ -122,9 +114,8 @@
       "recomendacion": "Programar pronto",
       "evaluada": true,
       "descripcion": "",
-      "categoria": "patrimonio",
-      "proxima_accion": "Crear informe para EPM",
-      "eje": "patrimonio"
+      "categoria": "trabajo",
+      "proxima_accion": "Crear informe para EPM"
     },
     {
       "id": "2026-04-08-004",
@@ -137,9 +128,7 @@
       "origen": "limitless",
       "contexto": "Proceso de envío de documentos - conversación con Humberto Iglesias",
       "tipo": "pendiente",
-      "vencida": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "vencida": false
     },
     {
       "id": "2026-04-08-005",
@@ -163,14 +152,13 @@
       "recomendacion": "Hacer hoy",
       "evaluada": true,
       "descripcion": "",
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "proxima_accion": "Sacar info real, prestamos, aportes, deudas y relacionamiento",
       "fusiono": [
         "2026-04-13-m2165c0",
         "2026-04-14-002"
       ],
-      "fecha_limite": "2026-04-20",
-      "eje": "condugas"
+      "fecha_limite": "2026-04-20"
     },
     {
       "id": "2026-04-08-006",
@@ -183,9 +171,7 @@
       "origen": "limitless",
       "contexto": "Reunión presencial con Mario",
       "tipo": "compromiso",
-      "vencida": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "vencida": false
     },
     {
       "id": "2026-04-08-007",
@@ -198,9 +184,7 @@
       "origen": "limitless",
       "contexto": "Revisión legal de contrato pendiente",
       "tipo": "pendiente",
-      "vencida": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "vencida": false
     },
     {
       "id": "2026-04-08-008",
@@ -224,9 +208,8 @@
       "recomendacion": "Programar",
       "evaluada": true,
       "descripcion": "",
-      "categoria": "condugas",
-      "proxima_accion": "",
-      "eje": "condugas"
+      "categoria": "trabajo",
+      "proxima_accion": ""
     },
     {
       "id": "2026-04-08-009",
@@ -239,9 +222,7 @@
       "origen": "limitless",
       "contexto": "Datos para análisis de facturación",
       "tipo": "pendiente",
-      "vencida": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "vencida": false
     },
     {
       "id": "2026-04-12-001",
@@ -256,7 +237,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "impacto": 4,
       "urgencia": 5,
       "consecuencia": 5,
@@ -266,8 +247,7 @@
       "nivel": "maxima",
       "recomendacion": "Hacer hoy",
       "descripcion": "",
-      "proxima_accion": "",
-      "eje": "condugas"
+      "proxima_accion": ""
     },
     {
       "id": "2026-04-12-002",
@@ -282,7 +262,7 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "impacto": 5,
       "urgencia": 5,
       "consecuencia": 5,
@@ -292,8 +272,7 @@
       "nivel": "maxima",
       "recomendacion": "Hacer hoy",
       "descripcion": "",
-      "proxima_accion": "",
-      "eje": "condugas"
+      "proxima_accion": ""
     },
     {
       "id": "2026-04-12-003",
@@ -308,7 +287,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "impacto": 4,
       "urgencia": 4,
       "consecuencia": 3,
@@ -318,8 +297,7 @@
       "nivel": "alta",
       "recomendacion": "Dividir",
       "descripcion": "",
-      "proxima_accion": "pedir a william fuente de datos",
-      "eje": "condugas"
+      "proxima_accion": "pedir a william fuente de datos"
     },
     {
       "id": "2026-04-12-004",
@@ -334,8 +312,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "categoria": "trabajo"
     },
     {
       "id": "2026-04-11-001",
@@ -350,10 +327,9 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "motivo_cierre": "fusionada en 2026-04-13-m5c9509",
-      "fusionada_en": "2026-04-13-m5c9509",
-      "eje": "condugas"
+      "fusionada_en": "2026-04-13-m5c9509"
     },
     {
       "id": "2026-04-11-003",
@@ -368,7 +344,7 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "impacto": 4,
       "urgencia": 4,
       "consecuencia": 5,
@@ -378,8 +354,7 @@
       "nivel": "maxima",
       "recomendacion": "Hacer hoy",
       "descripcion": "",
-      "proxima_accion": "",
-      "eje": "condugas"
+      "proxima_accion": ""
     },
     {
       "id": "2026-04-11-004",
@@ -394,7 +369,7 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "impacto": 4,
       "urgencia": 4,
       "consecuencia": 4,
@@ -406,8 +381,7 @@
       "descripcion": "",
       "proxima_accion": "preparar documentación",
       "motivo_cierre": "fusionada en 2026-04-13-m5c9509",
-      "fusionada_en": "2026-04-13-m5c9509",
-      "eje": "condugas"
+      "fusionada_en": "2026-04-13-m5c9509"
     },
     {
       "id": "2026-04-11-005",
@@ -422,10 +396,9 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "motivo_cierre": "fusionada en 2026-04-14-c004",
-      "fusionada_en": "2026-04-14-c004",
-      "eje": "condugas"
+      "fusionada_en": "2026-04-14-c004"
     },
     {
       "id": "2026-04-08-c001",
@@ -441,7 +414,7 @@
       "tipo": "decision",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "monto_cop": null,
       "personas": [
         "Catalina Betancourt",
@@ -457,8 +430,7 @@
       "nivel": "maxima",
       "recomendacion": "Hacer hoy",
       "descripcion": "",
-      "proxima_accion": "Entrenar a William y Camilo para esa reunión ",
-      "eje": "condugas"
+      "proxima_accion": "Entrenar a William y Camilo para esa reunión "
     },
     {
       "id": "2026-04-08-c003",
@@ -474,11 +446,10 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "monto_cop": 1200000,
       "personas": [],
-      "estancada": true,
-      "eje": "condugas"
+      "estancada": true
     },
     {
       "id": "2026-04-09-c000",
@@ -493,7 +464,7 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "impacto": 4,
       "urgencia": 4,
       "consecuencia": 4,
@@ -503,8 +474,7 @@
       "nivel": "alta",
       "recomendacion": "Programar pronto",
       "descripcion": "",
-      "proxima_accion": "Analizar documento",
-      "eje": "condugas"
+      "proxima_accion": "Analizar documento"
     },
     {
       "id": "2026-04-09-c001",
@@ -519,8 +489,7 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "categoria": "trabajo"
     },
     {
       "id": "2026-04-09-004",
@@ -535,7 +504,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "ideas",
       "impacto": 5,
       "urgencia": 2,
       "consecuencia": 2,
@@ -545,8 +514,7 @@
       "nivel": "alta",
       "recomendacion": "Dividir",
       "descripcion": "",
-      "proxima_accion": "Hacer una informacion visual con Ema y Lina para comprender el proyecto completo",
-      "eje": "condugas"
+      "proxima_accion": "Hacer una informacion visual con Ema y Lina para comprender el proyecto completo"
     },
     {
       "id": "2026-04-13-mc8a7e3",
@@ -561,7 +529,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "finanzas",
       "descripcion": "",
       "proxima_accion": "Citar a Pilar ",
       "impacto": 4,
@@ -571,8 +539,7 @@
       "facilidad": 5,
       "puntaje": 37,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-13-m2165c0",
@@ -587,7 +554,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Contactar a Camilo",
       "impacto": 2,
@@ -599,8 +566,7 @@
       "nivel": "media",
       "recomendacion": "Delegar",
       "motivo_cierre": "fusionada en 2026-04-08-005",
-      "fusionada_en": "2026-04-08-005",
-      "eje": "condugas"
+      "fusionada_en": "2026-04-08-005"
     },
     {
       "id": "2026-04-13-mc2abc0",
@@ -615,10 +581,9 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "finanzas",
       "descripcion": "",
-      "proxima_accion": "",
-      "eje": "condugas"
+      "proxima_accion": ""
     },
     {
       "id": "2026-04-13-m555a3b",
@@ -633,7 +598,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "ideas",
       "descripcion": "",
       "proxima_accion": "Lina hacer pilotos con la infromacion que se tiene",
       "impacto": 4,
@@ -643,8 +608,7 @@
       "facilidad": 4,
       "puntaje": 34,
       "nivel": "media",
-      "recomendacion": "Delegar",
-      "eje": "condugas"
+      "recomendacion": "Delegar"
     },
     {
       "id": "2026-04-13-m20be25",
@@ -659,7 +623,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Reunirse con Andrea y dejar claro deudas pendientes ",
       "impacto": 4,
@@ -669,8 +633,7 @@
       "facilidad": 4,
       "puntaje": 42,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-13-m5b3b40",
@@ -685,7 +648,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Reunion con Lina y Ema para definir que hay y que no hay",
       "impacto": 5,
@@ -696,8 +659,7 @@
       "puntaje": 47,
       "nivel": "maxima",
       "recomendacion": "Hacer hoy",
-      "fecha_limite": "2026-04-16",
-      "eje": "condugas"
+      "fecha_limite": "2026-04-16"
     },
     {
       "id": "2026-04-13-m904c40",
@@ -712,7 +674,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Definir con Lina monto por este tiempo y hacer corte",
       "impacto": 4,
@@ -722,8 +684,7 @@
       "facilidad": 4,
       "puntaje": 31,
       "nivel": "media",
-      "recomendacion": "Programar",
-      "eje": "condugas"
+      "recomendacion": "Programar"
     },
     {
       "id": "2026-04-13-mcd50a4",
@@ -738,7 +699,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Definir con Andrea compra de tiquetes",
       "impacto": 4,
@@ -748,8 +709,7 @@
       "facilidad": 5,
       "puntaje": 41,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-13-m5960dc",
@@ -764,7 +724,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "familia",
       "descripcion": "",
       "proxima_accion": "Revisar caja a hoy y movimiento y estado de inversiones",
       "impacto": 5,
@@ -774,8 +734,7 @@
       "facilidad": 4,
       "puntaje": 45,
       "nivel": "maxima",
-      "recomendacion": "Hacer hoy",
-      "eje": "condugas"
+      "recomendacion": "Hacer hoy"
     },
     {
       "id": "2026-04-13-m35598a",
@@ -790,7 +749,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "finanzas",
       "descripcion": "",
       "proxima_accion": "Reunión con Ema",
       "impacto": 4,
@@ -800,8 +759,7 @@
       "facilidad": 3,
       "puntaje": 42,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-13-me871ed",
@@ -816,7 +774,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "finanzas",
       "descripcion": "",
       "proxima_accion": "",
       "impacto": 5,
@@ -826,8 +784,7 @@
       "facilidad": 4,
       "puntaje": 43,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-13-m3137b0",
@@ -842,7 +799,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Tener base de datos de clientes en un solo lugar con necesidades vs propuestas por cliente",
       "impacto": 5,
@@ -852,8 +809,7 @@
       "facilidad": 4,
       "puntaje": 47,
       "nivel": "maxima",
-      "recomendacion": "Hacer hoy",
-      "eje": "condugas"
+      "recomendacion": "Hacer hoy"
     },
     {
       "id": "2026-04-13-m5c9509",
@@ -868,7 +824,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Realizar informe para junta",
       "impacto": 4,
@@ -883,8 +839,7 @@
         "2026-04-11-001",
         "2026-04-11-004",
         "2026-04-14-c005"
-      ],
-      "eje": "condugas"
+      ]
     },
     {
       "id": "2026-04-13-mb61536",
@@ -899,7 +854,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "",
       "impacto": 4,
@@ -909,8 +864,7 @@
       "facilidad": 5,
       "puntaje": 41,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-13-mc17d26",
@@ -925,7 +879,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "being-core",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Actualizar y parametrizar mas detallado Claude",
       "impacto": 5,
@@ -935,8 +889,7 @@
       "facilidad": 4,
       "puntaje": 43,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "being-core"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-13-m3515e9",
@@ -951,10 +904,9 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "finanzas",
       "descripcion": "",
-      "proxima_accion": "",
-      "eje": "condugas"
+      "proxima_accion": ""
     },
     {
       "id": "2026-04-14-c001",
@@ -968,14 +920,13 @@
       "origen": "limitless_auto",
       "contexto": "Contrato EPM, cumplimiento normativo",
       "tipo": "seguimiento",
-      "vencida": true,
+      "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "monto_cop": null,
       "personas": [
         "EPM"
-      ],
-      "eje": "condugas"
+      ]
     },
     {
       "id": "2026-04-14-c002",
@@ -991,12 +942,11 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "monto_cop": null,
       "personas": [
         "Pablo"
-      ],
-      "eje": "condugas"
+      ]
     },
     {
       "id": "2026-04-14-c004",
@@ -1012,7 +962,7 @@
       "tipo": "seguimiento",
       "vencida": true,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "monto_cop": null,
       "personas": [
         "Catalina"
@@ -1020,8 +970,7 @@
       "fusiono": [
         "2026-04-11-005",
         "2026-04-14-008"
-      ],
-      "eje": "condugas"
+      ]
     },
     {
       "id": "2026-04-14-c005",
@@ -1037,12 +986,11 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "monto_cop": 1300000000,
       "personas": [],
       "motivo_cierre": "fusionada en 2026-04-13-m5c9509",
-      "fusionada_en": "2026-04-13-m5c9509",
-      "eje": "condugas"
+      "fusionada_en": "2026-04-13-m5c9509"
     },
     {
       "id": "2026-04-14-001",
@@ -1057,8 +1005,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "categoria": "trabajo"
     },
     {
       "id": "2026-04-14-002",
@@ -1073,10 +1020,9 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "motivo_cierre": "fusionada en 2026-04-08-005",
-      "fusionada_en": "2026-04-08-005",
-      "eje": "condugas"
+      "fusionada_en": "2026-04-08-005"
     },
     {
       "id": "2026-04-14-006",
@@ -1091,8 +1037,7 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "being-core",
-      "eje": "being-core"
+      "categoria": "trabajo"
     },
     {
       "id": "2026-04-14-008",
@@ -1107,10 +1052,9 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "motivo_cierre": "fusionada en 2026-04-14-c004",
-      "fusionada_en": "2026-04-14-c004",
-      "eje": "condugas"
+      "fusionada_en": "2026-04-14-c004"
     },
     {
       "id": "2026-04-14-010",
@@ -1125,8 +1069,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "categoria": "trabajo"
     },
     {
       "id": "2026-04-14-011",
@@ -1141,8 +1084,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
-      "eje": "condugas"
+      "categoria": "trabajo"
     },
     {
       "id": "2026-04-14-meaf4fd",
@@ -1157,7 +1099,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Actualizar y revisar que cargue bien el breafing y toda la data",
       "impacto": 4,
@@ -1167,8 +1109,7 @@
       "facilidad": 4,
       "puntaje": 44,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-14-m995aab",
@@ -1183,7 +1124,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Reunion con Ema y Lina",
       "impacto": 4,
@@ -1193,8 +1134,7 @@
       "facilidad": 4,
       "puntaje": 39,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-14-m734020",
@@ -1209,7 +1149,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "descripcion": "",
       "proxima_accion": "Definir etapa en la que se encuentran estos clientes ",
       "impacto": 4,
@@ -1219,8 +1159,7 @@
       "facilidad": 4,
       "puntaje": 42,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-14-ma26b0c",
@@ -1235,7 +1174,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "ideas",
       "descripcion": "",
       "proxima_accion": "organizar todas las fuentes de datos donde guardar que carpetas etc",
       "impacto": 3,
@@ -1245,8 +1184,7 @@
       "facilidad": 4,
       "puntaje": 37,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-14-m061ce8",
@@ -1261,7 +1199,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "condugas",
+      "categoria": "otros",
       "descripcion": "",
       "proxima_accion": "preparar 3 modulos de comprensión de las emociones y 2 de comportamiento humano.",
       "impacto": 4,
@@ -1271,8 +1209,7 @@
       "facilidad": 4,
       "puntaje": 38,
       "nivel": "alta",
-      "recomendacion": "Programar pronto",
-      "eje": "condugas"
+      "recomendacion": "Programar pronto"
     },
     {
       "id": "2026-04-15-c001",
@@ -1288,13 +1225,12 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "monto_cop": 180000000,
       "personas": [
         "Jorge William",
         "EPM"
-      ],
-      "eje": "condugas"
+      ]
     },
     {
       "id": "2026-04-15-c002",
@@ -1310,14 +1246,13 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "monto_cop": null,
       "personas": [
         "Meniza",
         "EPM",
         "Jorge William"
-      ],
-      "eje": "condugas"
+      ]
     },
     {
       "id": "2026-04-15-c003",
@@ -1333,73 +1268,12 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "condugas",
+      "categoria": "trabajo",
       "monto_cop": null,
       "personas": [
         "EPM",
         "Catalina"
-      ],
-      "eje": "condugas"
-    },
-    {
-      "id": "2026-04-16-c001",
-      "tarea": "Cobrar pago pendiente de Hamilton según lo prometido",
-      "responsable": "Sebastian",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-16",
-      "fecha_cierre": null,
-      "fecha_limite": "2026-04-17",
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "Condugas - pagos operacionales",
-      "tipo": "seguimiento",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Hamilton"
       ]
-    },
-    {
-      "id": "2026-04-16-c002",
-      "tarea": "Procesar nómina y resolver descuento de Valle con menor valor",
-      "responsable": "William",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-16",
-      "fecha_cierre": null,
-      "fecha_limite": "2026-04-16",
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "Condugas - nómina y recursos humanos",
-      "tipo": "pendiente",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "William",
-        "Manuel",
-        "Valle"
-      ]
-    },
-    {
-      "id": "2026-04-16-c003",
-      "tarea": "Resolver no conformidad del contrato 24 y responder formalmente",
-      "responsable": "Sebastian",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-16",
-      "fecha_cierre": null,
-      "fecha_limite": null,
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "Condugas - cumplimiento normativo",
-      "tipo": "compromiso",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": null,
-      "personas": []
     }
   ]
 }
