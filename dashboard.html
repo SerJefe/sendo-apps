@@ -243,22 +243,10 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 
 <section id="equipo">
 <h2>Equipo</h2>
-<div class="grid g3">
-<div class="card"><div class="label">Condugas - Proyectos</div><div class="val" style="font-size:16px">Cami</div><div class="sub">Juan Camilo Berrio - Expansiva</div></div>
-<div class="card"><div class="label">Condugas - Finanzas</div><div class="val" style="font-size:16px">Andre</div><div class="sub">Andrea Bernal - Intensiva</div></div>
-<div class="card"><div class="label">Condugas - Admin</div><div class="val" style="font-size:16px">Willi</div><div class="sub">William Lopez</div></div>
-<div class="card"><div class="label">Condugas - RRHH</div><div class="val" style="font-size:16px">Naty</div><div class="sub">Natalia Rojas</div></div>
-<div class="card"><div class="label">Condugas - Logistica</div><div class="val" style="font-size:16px">Nelson</div><div class="sub">Favio Nelson Escobar</div></div>
-<div class="card"><div class="label">Condugas - Contable</div><div class="val" style="font-size:16px">Clau</div><div class="sub">Claudia Quintero</div></div>
-<div class="card"><div class="label">Condugas - Estrategia</div><div class="val" style="font-size:16px">Juan G</div><div class="sub">Juan Guillermo</div></div>
-<div class="card"><div class="label">Condugas - Nuevos Neg.</div><div class="val" style="font-size:16px">Carlos H</div><div class="sub">Carlos Hernan Lopez</div></div>
-<div class="card"><div class="label">Condugas - Productividad</div><div class="val" style="font-size:16px">JuanPa</div><div class="sub">Ex-dir Ayura</div></div>
-<div class="card"><div class="label">Mentor - Junta</div><div class="val" style="font-size:16px">Adolfo</div><div class="sub">Gilberto, Mario, Marisol</div></div>
-<div class="card"><div class="label">Siendo - Gestora</div><div class="val" style="font-size:16px">Lina</div><div class="sub">Lina Russi - Expansiva</div></div>
-<div class="card"><div class="label">Siendo - Comercial</div><div class="val" style="font-size:16px">Mona</div><div class="sub">Monica Gonzalez</div></div>
-<div class="card"><div class="label">Siendo - Dev</div><div class="val" style="font-size:16px">Ema</div><div class="sub">Emanuel - Odoo, apps</div></div>
-<div class="card"><div class="label">Abogado</div><div class="val" style="font-size:16px">Doctor</div><div class="sub">Camilo Marin - 5 contratos</div></div>
-</div>
+<p style="font-size:12px;color:var(--muted);margin:-10px 0 12px">Click en persona para ver sus tareas abiertas. Usa "Delegar" en Revisar/Mis Tareas para reasignar.</p>
+<div id="equipo-stats" style="font-size:11px;color:var(--muted);margin-bottom:12px"></div>
+<div class="grid g3" id="equipo-grid"></div>
+<div id="equipo-drilldown" style="margin-top:16px"></div>
 </section>
 
 <!-- ============================================ -->
@@ -1030,6 +1018,7 @@ async function loadPendientes() {
               '</div>' +
             '</div>' +
             '<div style="display:flex;gap:4px;margin-left:8px">' +
+              '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Delegar" style="background:rgba(6,182,212,.1);color:#06b6d4;border:1px solid rgba(6,182,212,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">→</button>' +
               '<button onclick="reviewTask(\''+t.id+'\',\'reject\')" style="background:rgba(239,68,68,.1);color:#f87171;border:1px solid rgba(239,68,68,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✗</button>' +
               '<button onclick="reviewTask(\''+t.id+'\',\'accept\')" style="background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✓</button>' +
             '</div>' +
@@ -1136,6 +1125,7 @@ async function loadMisTareas() {
         deadlineBadge = ' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:'+dCol+'22;color:'+dCol+';font-weight:600">'+dText+'</span>';
       }
       var dateBtn = isCerrada ? '' : '<button onclick="setDeadline(\''+t.id+'\',\''+(t.fecha_limite||'')+'\')" title="Asignar fecha limite" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">'+(t.fecha_limite?'editar fecha':'asignar fecha')+'</button>';
+      var delegarBtn = isCerrada ? '' : '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Delegar a miembro del equipo" style="background:rgba(6,182,212,.1);color:var(--cyan);border:1px solid rgba(6,182,212,.25);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">→ delegar</button>';
       return '<div class="card" style="margin-bottom:6px;display:flex;align-items:center;gap:12px;'+(isCerrada?'opacity:.5':'')+'">' +
         '<input type="checkbox" '+(isCerrada?'checked':'')+' onchange="toggleTarea(\''+t.id+'\')" style="width:18px;height:18px;cursor:pointer;accent-color:var(--cyan)">' +
         '<div style="flex:1">' +
@@ -1149,6 +1139,7 @@ async function loadMisTareas() {
             (t.motivo_cierre?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(167,139,250,.15);color:var(--purple)">'+t.motivo_cierre+'</span>':'') +
           '</div>' +
         '</div>' +
+        delegarBtn +
         dateBtn +
       '</div>';
     };
@@ -1187,6 +1178,208 @@ function filterTareas(f) {
 
 loadPendientes();
 loadMisTareas();
+
+
+// ==========================================
+// TEAM / DELEGACION
+// ==========================================
+// Miembros del equipo con alias -> nombre completo + rol + empresa + keywords para matching
+var TEAM_MEMBERS = [
+  {alias:"Cami",    full:"Juan Camilo Berrio",   rol:"Proyectos",       empresa:"Condugas", kws:["cami","camilo berrio","juan camilo"]},
+  {alias:"Andre",   full:"Andrea Bernal",        rol:"Finanzas",        empresa:"Condugas", kws:["andre","andrea","bernal"]},
+  {alias:"Willi",   full:"William Lopez",        rol:"Admin",           empresa:"Condugas", kws:["willi","william","lopez"]},
+  {alias:"Naty",    full:"Natalia Rojas",        rol:"RRHH",            empresa:"Condugas", kws:["naty","natalia","rojas"]},
+  {alias:"Nelson",  full:"Favio Nelson Escobar", rol:"Logistica",       empresa:"Condugas", kws:["nelson","favio","escobar"]},
+  {alias:"Clau",    full:"Claudia Quintero",     rol:"Contable",        empresa:"Condugas", kws:["clau","claudia","quintero"]},
+  {alias:"Juan G",  full:"Juan Guillermo",       rol:"Estrategia",      empresa:"Condugas", kws:["juan g","juan guillermo","juang"]},
+  {alias:"Carlos H",full:"Carlos Hernan Lopez",  rol:"Nuevos Negocios", empresa:"Condugas", kws:["carlos h","carlos hernan"]},
+  {alias:"JuanPa",  full:"Ex-dir Ayura",         rol:"Productividad",   empresa:"Condugas", kws:["juanpa","juan pa"]},
+  {alias:"Adolfo",  full:"Adolfo",               rol:"Mentor Junta",    empresa:"Junta",    kws:["adolfo","gilberto","mario","marisol"]},
+  {alias:"Lina",    full:"Lina Russi",           rol:"Gestora",         empresa:"Being CoRe", kws:["lina","russi"]},
+  {alias:"Mona",    full:"Monica Gonzalez",      rol:"Comercial",       empresa:"Being CoRe", kws:["mona","monica","gonzalez"]},
+  {alias:"Ema",     full:"Emanuel",              rol:"Dev (Odoo)",      empresa:"Being CoRe", kws:["ema","emanuel"]},
+  {alias:"Doctor",  full:"Camilo Marin",         rol:"Abogado",         empresa:"Condugas", kws:["doctor","camilo marin","abogado"]},
+  {alias:"Sebastian", full:"Sebastian Sanchez",  rol:"Gerente",         empresa:"Condugas", kws:["sebastian","seba","sanchez"]},
+];
+
+function matchMember(responsableText) {
+  var low = (responsableText || "").toLowerCase();
+  for (var i=0; i<TEAM_MEMBERS.length; i++) {
+    var m = TEAM_MEMBERS[i];
+    for (var j=0; j<m.kws.length; j++) {
+      if (low.indexOf(m.kws[j]) >= 0) return m;
+    }
+  }
+  return null;
+}
+
+var _equipoCache = {tareas:[], expanded:null};
+
+async function loadEquipo() {
+  try {
+    // Cargar tracker
+    var tareas = [];
+    try {
+      var r = await fetch(API+'/tareas');
+      var d = await r.json();
+      tareas = d.tareas || d || [];
+      if (!Array.isArray(tareas)) tareas = [];
+    } catch(e1) {
+      try {
+        var r2 = await fetch(DATA_BASE+'/tareas-tracker.json?t='+Date.now());
+        var d2 = await r2.json();
+        tareas = d2.tareas || [];
+      } catch(e2) { tareas = []; }
+    }
+    _equipoCache.tareas = tareas;
+
+    var abiertas = tareas.filter(function(t){return t.estado==='abierta'});
+
+    // Agrupar por miembro
+    var byMember = {};
+    var unmatched = [];
+    abiertas.forEach(function(t) {
+      var m = matchMember(t.responsable || "");
+      if (m) {
+        if (!byMember[m.alias]) byMember[m.alias] = {member:m, tareas:[]};
+        byMember[m.alias].tareas.push(t);
+      } else if (t.responsable) {
+        unmatched.push(t);
+      }
+    });
+
+    // Stats
+    var totalAsignadas = 0;
+    var sebastianCount = (byMember["Sebastian"]||{tareas:[]}).tareas.length;
+    Object.keys(byMember).forEach(function(a){ if(a!=="Sebastian") totalAsignadas += byMember[a].tareas.length });
+    document.getElementById('equipo-stats').innerHTML =
+      '<strong style="color:var(--cyan)">' + totalAsignadas + '</strong> tareas delegadas al equipo · ' +
+      '<strong style="color:var(--orange)">' + sebastianCount + '</strong> tuyas · ' +
+      abiertas.length + ' totales abiertas' +
+      (unmatched.length ? ' · <span style="color:var(--muted)">' + unmatched.length + ' responsable no matcheado</span>' : '');
+
+    // Render grid
+    var grid = document.getElementById('equipo-grid');
+    var html = '';
+    TEAM_MEMBERS.forEach(function(m) {
+      if (m.alias === "Sebastian") return; // Sebastian no es parte del equipo de delegacion
+      var bucket = byMember[m.alias];
+      var count = bucket ? bucket.tareas.length : 0;
+      var criticas = bucket ? bucket.tareas.filter(function(t){return t.prioridad==='critica'}).length : 0;
+      var isExpanded = _equipoCache.expanded === m.alias;
+      var bgColor = count === 0 ? 'var(--bg2)' : (criticas > 0 ? 'rgba(239,68,68,0.05)' : (count > 5 ? 'rgba(249,115,22,0.05)' : 'var(--bg2)'));
+      var border = isExpanded ? 'border-color:var(--cyan)' : '';
+      html += '<div class="card" style="cursor:pointer;background:' + bgColor + ';' + border + '" onclick="toggleEquipoMember(\'' + m.alias + '\')">';
+      html += '<div style="display:flex;justify-content:space-between;align-items:baseline">';
+      html += '<div class="label">' + m.empresa + ' - ' + m.rol + '</div>';
+      if (count > 0) {
+        var badgeColor = criticas > 0 ? 'var(--red)' : (count > 5 ? 'var(--orange)' : 'var(--cyan)');
+        html += '<span style="font-size:14px;font-family:monospace;color:' + badgeColor + ';font-weight:600">' + count + (criticas ? '/' + criticas + '!' : '') + '</span>';
+      }
+      html += '</div>';
+      html += '<div class="val" style="font-size:16px">' + m.alias + '</div>';
+      html += '<div class="sub">' + m.full + '</div>';
+      html += '</div>';
+    });
+    grid.innerHTML = html;
+
+    // Render drilldown si hay expansión
+    renderEquipoDrilldown();
+  } catch(e) {
+    document.getElementById('equipo-grid').innerHTML = '<div style="text-align:center;padding:30px;color:var(--muted);grid-column:1/-1">Error cargando equipo</div>';
+  }
+}
+
+function toggleEquipoMember(alias) {
+  _equipoCache.expanded = _equipoCache.expanded === alias ? null : alias;
+  loadEquipo();
+}
+
+function renderEquipoDrilldown() {
+  var el = document.getElementById('equipo-drilldown');
+  if (!_equipoCache.expanded) { el.innerHTML = ''; return; }
+  var alias = _equipoCache.expanded;
+  var member = TEAM_MEMBERS.find(function(m){return m.alias===alias});
+  if (!member) { el.innerHTML = ''; return; }
+  var abiertas = _equipoCache.tareas.filter(function(t){return t.estado==='abierta' && matchMember(t.responsable||'') && matchMember(t.responsable||'').alias===alias});
+
+  var html = '<div style="padding:16px;background:var(--bg2);border:1px solid var(--cyan);border-radius:10px">';
+  html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">';
+  html += '<h3 style="margin:0">' + member.full + ' <span style="color:var(--muted);font-size:12px;font-weight:400">(' + member.rol + ' · ' + member.empresa + ')</span></h3>';
+  html += '<button onclick="_equipoCache.expanded=null;loadEquipo();" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 12px;border-radius:5px;font-size:11px;cursor:pointer">Cerrar ✕</button>';
+  html += '</div>';
+  if (!abiertas.length) {
+    html += '<div style="color:var(--muted);font-size:13px;text-align:center;padding:16px">Sin tareas abiertas</div>';
+  } else {
+    // Sort: criticas primero, luego vencidas, luego por fecha_limite
+    abiertas.sort(function(a,b){
+      var aP = a.prioridad==='critica'?0:a.prioridad==='alta'?1:2;
+      var bP = b.prioridad==='critica'?0:b.prioridad==='alta'?1:2;
+      if (aP !== bP) return aP - bP;
+      return (a.fecha_limite||'z') < (b.fecha_limite||'z') ? -1 : 1;
+    });
+    abiertas.forEach(function(t){
+      var priColor = t.prioridad==='critica'?'var(--red)':t.prioridad==='alta'?'var(--orange)':'var(--yellow)';
+      var fl = t.fecha_limite ? ' · 📅 ' + t.fecha_limite : '';
+      html += '<div style="padding:8px 10px;margin-bottom:6px;background:var(--bg);border:1px solid var(--border);border-left:3px solid ' + priColor + ';border-radius:6px;font-size:13px">';
+      html += t.tarea;
+      html += '<div style="font-size:10px;color:var(--muted);margin-top:2px">' + (t.categoria||'condugas') + ' · ' + t.prioridad + fl + '</div>';
+      html += '</div>';
+    });
+  }
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+// Delegar: cambiar responsable de una tarea
+async function delegarTarea(taskId, nuevoResponsable) {
+  try {
+    await fetch(API+'/update', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({id:taskId, responsable:nuevoResponsable})});
+    toast('Delegado a ' + nuevoResponsable, 'ok');
+    try { loadPendientes(); } catch(e){}
+    try { loadMisTareas(); } catch(e){}
+    try { loadEquipo(); } catch(e){}
+  } catch(e) { toast('Error al delegar', 'err'); }
+}
+
+// Menú popup de delegación (reutilizable)
+function showDelegarMenu(taskId, anchorEl) {
+  // Remover menú previo si existe
+  var existing = document.getElementById('delegar-menu');
+  if (existing) existing.remove();
+
+  var menu = document.createElement('div');
+  menu.id = 'delegar-menu';
+  menu.style.cssText = 'position:fixed;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:6px;z-index:999;box-shadow:0 8px 20px rgba(0,0,0,0.4);min-width:160px;max-height:400px;overflow-y:auto';
+  var rect = anchorEl.getBoundingClientRect();
+  menu.style.top = (rect.bottom + 4) + 'px';
+  menu.style.left = Math.max(8, rect.right - 160) + 'px';
+
+  var html = '<div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;padding:4px 8px 6px">Delegar a</div>';
+  TEAM_MEMBERS.filter(function(m){return m.alias!=='Sebastian'}).forEach(function(m){
+    html += '<div style="padding:6px 8px;cursor:pointer;border-radius:4px;font-size:12px" onmouseover="this.style.background=\'rgba(6,182,212,0.1)\'" onmouseout="this.style.background=\'transparent\'" onclick="delegarTarea(\'' + taskId + '\',\'' + m.full + '\');document.getElementById(\'delegar-menu\').remove();">' + m.alias + ' <span style="color:var(--muted);font-size:10px">· ' + m.rol + '</span></div>';
+  });
+  menu.innerHTML = html;
+  document.body.appendChild(menu);
+
+  // Cerrar al clickear fuera
+  setTimeout(function(){
+    document.addEventListener('click', function closer(ev){
+      if (!menu.contains(ev.target)) { menu.remove(); document.removeEventListener('click', closer); }
+    });
+  }, 50);
+}
+
+// Carga inicial + refresh cuando se abre la pestaña
+loadEquipo();
+// Hook en el show() existente para recargar al entrar a la pestaña
+(function(){
+  var origShow = window.show;
+  window.show = function(id) {
+    if (typeof origShow === 'function') origShow(id);
+    if (id === 'equipo') loadEquipo();
+  };
+})();
 
 
 // ==========================================
