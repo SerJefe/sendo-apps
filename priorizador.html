@@ -209,9 +209,63 @@ function BriefingHoy({briefing}){
     {briefing.frase_dia&&<div className="text-xs text-neutral-500 italic border-t border-neutral-900 pt-3">"{briefing.frase_dia}"</div>}
   </div>);}
 
+function DeadlineStrip({tareas, onDateClick}){
+  const hoy = new Date(); hoy.setHours(0,0,0,0);
+  const abiertas = tareas.filter(t => t.estado === 'abierta');
+  const DIAS_LABEL = ['D','L','M','X','J','V','S'];
+  const MESES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+
+  // Contar vencidas (todas las anteriores a hoy)
+  const hoyISO = hoy.toISOString().slice(0,10);
+  const vencidas = abiertas.filter(t => t.fecha_limite && t.fecha_limite < hoyISO);
+
+  // 14 dias desde hoy
+  const dias = [];
+  for (let i = 0; i <= 13; i++) {
+    const d = new Date(hoy.getTime() + i * 86400000);
+    const iso = d.toISOString().slice(0,10);
+    const count = abiertas.filter(t => t.fecha_limite === iso).length;
+    dias.push({date:d, iso, count, dow:d.getDay(), isToday:i===0, day:d.getDate(), showMonth:i===0||d.getDate()===1});
+  }
+
+  return(
+  <div className="mb-5">
+    <div className="flex items-center justify-between mb-2">
+      <span className="text-[10px] uppercase tracking-wider text-neutral-500">Agenda de vencimientos</span>
+      {vencidas.length > 0 && (
+        <button onClick={() => onDateClick('__vencidas__')}
+          className="text-[10px] px-2 py-0.5 rounded bg-rose-500/15 text-rose-300 ring-1 ring-rose-500/30 hover:bg-rose-500/25 transition">
+          {vencidas.length} vencida{vencidas.length!==1?'s':''}
+        </button>
+      )}
+    </div>
+    <div className="flex gap-[3px] overflow-x-auto pb-1">
+      {dias.map(d => (
+        <button key={d.iso} onClick={() => d.count > 0 && onDateClick(d.iso)}
+          className={[
+            "flex-shrink-0 w-10 h-14 rounded-lg flex flex-col items-center justify-center transition",
+            d.isToday ? "ring-1 ring-cyan-500/60 bg-cyan-500/8" : "",
+            d.count > 0 ? "cursor-pointer hover:bg-neutral-800" : "opacity-35 cursor-default",
+          ].join(" ")}>
+          {d.showMonth && <span className="text-[7px] text-neutral-600 uppercase -mb-0.5">{MESES[d.date.getMonth()]}</span>}
+          <span className="text-[9px] text-neutral-600">{DIAS_LABEL[d.dow]}</span>
+          <span className={`text-sm ${d.isToday ? "text-cyan-300 font-medium" : "text-neutral-400"}`}>{d.day}</span>
+          {d.count > 0 && <span className={`text-[9px] font-mono ${d.isToday ? "text-cyan-400" : "text-amber-400"}`}>{d.count}</span>}
+        </button>
+      ))}
+    </div>
+  </div>);
+}
+
 function Filters({filtros,setFiltros}){return(
   <div className="flex flex-wrap gap-2 text-xs">
-    <select value={filtros.categoria} onChange={e=>setFiltros({...filtros,categoria:e.target.value})} className="bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5"><option value="">Categorías</option>{CATS.map(c=><option key={c}>{c}</option>)}</select>
+    {filtros.fechaLimite && (
+      <button onClick={() => setFiltros({...filtros, fechaLimite: ""})}
+        className="px-2 py-1.5 rounded-lg bg-cyan-500/15 text-cyan-300 ring-1 ring-cyan-500/30 hover:bg-cyan-500/25 transition">
+        {filtros.fechaLimite === '__vencidas__' ? 'Vencidas' : filtros.fechaLimite} ✕
+      </button>
+    )}
+    <select value={filtros.categoria} onChange={e=>setFiltros({...filtros,categoria:e.target.value})} className="bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5"><option value="">Ejes</option>{CATS.map(c=><option key={c}>{c}</option>)}</select>
     <select value={filtros.nivel} onChange={e=>setFiltros({...filtros,nivel:e.target.value})} className="bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5"><option value="">Niveles</option>{Object.keys(NV).map(k=><option key={k} value={k}>{NV[k].l}</option>)}</select>
     <select value={filtros.estado} onChange={e=>setFiltros({...filtros,estado:e.target.value})} className="bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5"><option value="">Estados</option><option value="abierta">Abiertas</option><option value="cerrada">Cerradas</option></select>
     <select value={filtros.origen} onChange={e=>setFiltros({...filtros,origen:e.target.value})} className="bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5"><option value="">Orígenes</option><option value="limitless">Limitless</option><option value="limitless_auto">Auto-promote</option><option value="manual">Manual</option><option value="capturador">Captura</option></select>
@@ -294,7 +348,7 @@ function App(){
   const[editando,setEditando]=useState(null);
   const[focusMode,setFocusMode]=useState(false);
   const[tab,setTab]=useState("hoy");
-  const[filtros,setFiltros]=useState({categoria:"",nivel:"",estado:"abierta",origen:"",extra:""});
+  const[filtros,setFiltros]=useState({categoria:"",nivel:"",estado:"abierta",origen:"",extra:"",fechaLimite:""});
   const[busy,setBusy]=useState(false);
   const[error,setError]=useState("");
 
@@ -326,6 +380,14 @@ function App(){
 
   const filtradas=useMemo(()=>{
     return sortPri(tareas).filter(t=>{
+      if(filtros.fechaLimite){
+        if(filtros.fechaLimite==='__vencidas__'){
+          var hoyF=new Date();hoyF.setHours(0,0,0,0);var hoyISO=hoyF.toISOString().slice(0,10);
+          if(!t.fecha_limite||t.fecha_limite>=hoyISO)return false;
+        } else {
+          if(t.fecha_limite!==filtros.fechaLimite)return false;
+        }
+      }
       if(filtros.categoria&&(t.categoria||"condugas")!==filtros.categoria)return false;
       if(filtros.estado&&t.estado!==filtros.estado)return false;
       if(filtros.origen&&t.origen!==filtros.origen)return false;
@@ -356,7 +418,8 @@ function App(){
     {tab==="hoy"&&(
       <>
         <BriefingHoy briefing={briefing}/>
-        <div className="mt-6"><Summary tareas={abiertas}/></div>
+        <div className="mt-6"><DeadlineStrip tareas={tareas} onDateClick={(d)=>{setFiltros({...filtros,fechaLimite:d,estado:"abierta"});setTab("lista");}}/></div>
+        <div className="mt-2"><Summary tareas={abiertas}/></div>
         {sinEval.length>0&&(
           <section className="mt-6">
             <div className="flex items-center justify-between mb-3"><h2 className="text-sm uppercase tracking-wider text-neutral-400">Sin evaluar · {sinEval.length}</h2><span className="text-xs text-neutral-600">Click para priorizar</span></div>
@@ -371,6 +434,7 @@ function App(){
 
     {tab==="dashboard"&&(
       <>
+        <DeadlineStrip tareas={tareas} onDateClick={(d)=>{setFiltros({...filtros,fechaLimite:d,estado:"abierta"});setTab("lista");}}/>
         <Summary tareas={abiertas}/>
         <section className="mt-6"><h2 className="text-sm uppercase tracking-wider text-neutral-400 mb-3">Top prioridades</h2>
           {top5.length===0?<div className="text-center py-12 text-neutral-600 text-sm border border-dashed border-neutral-800 rounded-2xl">{tareas.length===0?"Sin tareas.":"Evalúa tareas para ver prioridades."}</div>
