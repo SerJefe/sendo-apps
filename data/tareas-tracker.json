@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-18T17:21:33",
+  "ultima_actualizacion": "2026-04-18T17:25:40",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -2065,6 +2065,141 @@
         "Catalina",
         "Hilda",
         "PM"
+      ]
+    },
+    {
+      "id": "2026-04-17-c001",
+      "tarea": "Presentar propuesta de restructuración a don Darío",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-17",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-21",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Crisis financiera y de relación laboral en Condugas",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "don Darío"
+      ]
+    },
+    {
+      "id": "2026-04-17-c002",
+      "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en PM e incorporando Banti, gas de occidente, infraestructura",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-17",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-25",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Narrativa corporativa Condugas",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Unknown"
+      ]
+    },
+    {
+      "id": "2026-04-17-c003",
+      "tarea": "Auditar estructura de deuda y cuentas por cobrar entre Condugas, socios e IC (excisión no pagada)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-17",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-24",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Riesgo financiero Condugas - crisis de caja",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-17-c004",
+      "tarea": "Definir arquitectura de datos (origen, flujo, seguridad) antes de implementar IA para registros",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-17",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "IA_registros_inspeccion",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-17-c005",
+      "tarea": "Resolver deuda pendiente con Oscar (2 años de incumplimiento)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-17",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Relación comercial deteriorada, falta de aporte al capital",
+      "tipo": "pendiente",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Oscar"
+      ]
+    },
+    {
+      "id": "2026-04-17-c006",
+      "tarea": "Resolver crisis de tarjeta/caja (prioridad inmediata antes que empresa)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-17",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Crisis financiera personal, 7 meses de salario al 60%",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-17-c007",
+      "tarea": "Preparar documento para Mario (entrega viernes para lunes, ajuste proporciones mano de obra ~15%)",
+      "responsable": "Alberto",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-17",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-18",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Análisis técnico, normalización, lógica de costos",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Mario",
+        "Sebastian Sanchez Acevedo"
       ]
     }
   ]

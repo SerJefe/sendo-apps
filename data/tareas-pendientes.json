@@ -1534,7 +1534,592 @@
         "Mari"
       ],
       "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-17-r8-001",
+      "tarea": "Educar al equipo en doctrina empresarial y administración financiera",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Crisis de comunicación financiera en Condugas",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Juan Carlos Gómez"
+      ],
+      "segmento_idx": 8,
+      "segmento_titulo": "Reflexiones sobre la comunicación y la negociación",
+      "segmento_inicio": "2026-04-17T02:38:06Z",
+      "segmento_fin": "2026-04-17T02:44:52Z",
+      "segmento_personas": [
+        "Juan Carlos Gómez"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r14-002",
+      "tarea": "Asegurar que todos los que vayan como IC entreguen informe de gestión",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "Responsabilidad IC",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 14,
+      "segmento_titulo": "Historias y anécdotas personales variadas",
+      "segmento_inicio": "2026-04-17T03:26:34Z",
+      "segmento_fin": "2026-04-17T03:30:58Z",
+      "segmento_personas": [
+        "Unknown"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-17-r15-003",
+      "tarea": "Validar sistema de 'orejas de levante' como mecanismo real de escucha a empleados vs percepción de artificio",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Cultura y retención Condugas",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 15,
+      "segmento_titulo": "Conversación sobre dinero y trabajo",
+      "segmento_inicio": "2026-04-17T03:33:08Z",
+      "segmento_fin": "2026-04-17T03:35:16Z",
+      "segmento_personas": [
+        "Unknown"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-17-r18-004",
+      "tarea": "Evaluar oportunidad de venta de propiedad ('coco') en contexto de nuevo POT sin restricción de 5 predios",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Oportunidad inmobiliaria Condugas/IC",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": "2026-04-30",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 18,
+      "segmento_titulo": "Planes sociales y cambio de tema",
+      "segmento_inicio": "2026-04-17T03:55:18Z",
+      "segmento_fin": "2026-04-17T03:58:38Z",
+      "segmento_personas": [
+        "You",
+        "Unknown"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-17-r28-005",
+      "tarea": "Completar cursos de análisis fundamental con Sebastián Toro",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "educacion_financiera_empresas",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": 140000,
+      "personas": [
+        "Sebastián Toro"
+      ],
+      "segmento_idx": 28,
+      "segmento_titulo": "Discusión sobre educación financiera y análisis de mercado",
+      "segmento_inicio": "2026-04-17T17:02:30Z",
+      "segmento_fin": "2026-04-17T17:06:17Z",
+      "segmento_personas": [
+        "Sebastián Toro",
+        "Arena Alfa"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-17-r30-006",
+      "tarea": "Gestionar distribución de medidores rotativos y turbina desde inventario Bogotá",
+      "responsable": "equipo_comercial_Condugas",
+      "prioridad": "media",
+      "contexto": "expansion_productos_gas_natural",
+      "tipo": "operacional",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 30,
+      "segmento_titulo": "Conversación sobre productos de gas y distribución",
+      "segmento_inicio": "2026-04-17T17:09:44Z",
+      "segmento_fin": "2026-04-17T17:17:25Z",
+      "segmento_personas": [
+        "Cabaña",
+        "Mesurac"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-17-r31-007",
+      "tarea": "Capacitar equipo en comunicación/prompt engineering para uso avanzado de IA (no solo consultivo)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "digital_transformation",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 31,
+      "segmento_titulo": "Conversaciones informales y anécdotas varias",
+      "segmento_inicio": "2026-04-17T17:17:35Z",
+      "segmento_fin": "2026-04-17T17:34:07Z",
+      "segmento_personas": [
+        "You = Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r33-008",
+      "tarea": "Seguimiento a desempeño y desarrollo de equipo en contratos (referencias a Fabián, Jorge William, Vanti)",
+      "responsable": "Humberto",
+      "prioridad": "alta",
+      "contexto": "gestion_equipo_operacional",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Fabián",
+        "Jorge William",
+        "Vanti"
+      ],
+      "segmento_idx": 33,
+      "segmento_titulo": "Conversaciones sobre anécdotas personales, situaciones laborales y personajes",
+      "segmento_inicio": "2026-04-17T17:37:50Z",
+      "segmento_fin": "2026-04-17T17:48:37Z",
+      "segmento_personas": [
+        "You = Sebastian Sanchez Acevedo",
+        "Fabián",
+        "Jorge William",
+        "Humberto",
+        "Vanti"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r75-009",
+      "tarea": "Evaluar término de relación comercial con Oscar y Fabio o convertirlos mediante estrategia de inclusión",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Socios que no aportan capital ni ayudan, trabajan en proporción desigual",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Oscar",
+        "Fabio"
+      ],
+      "segmento_idx": 75,
+      "segmento_titulo": "Análisis crítico de dinámicas laborales internas: discrepancias salariales con Fabio y Oscar, deuda pendiente de 2 años,",
+      "segmento_inicio": "",
+      "segmento_fin": "",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Oscar",
+        "Fabio",
+        "Natalia"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r81-010",
+      "tarea": "Establecer protocolo de comunicación de retrasos (avisar 10 días antes)",
+      "responsable": "Equipo Condugas",
+      "prioridad": "media",
+      "contexto": "Operaciones de emergencia, coordinación logística",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 81,
+      "segmento_titulo": "Coordinación operacional: necesidad de avisar con tiempo sobre retrasos (10 días), referencia a fraudes en salarios Cond",
+      "segmento_inicio": "",
+      "segmento_fin": "",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Carlos",
+        "Alexander"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-17-r82-011",
+      "tarea": "Redactar y enviar carta estratégica (presentarse frágiles, defensiva)",
+      "responsable": "Cami",
+      "prioridad": "alta",
+      "contexto": "Negociación con EPM/autoridades, posicionamiento defensivo para futuro ataque",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 82,
+      "segmento_titulo": "Estrategia defensiva sobre carta a EPM/entidades. Decisión de presentarse como frágiles para evitar que adversarios 'se ",
+      "segmento_inicio": "",
+      "segmento_fin": "",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Cami"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r83-012",
+      "tarea": "Salir a las 5pm para llegar 2h antes al aeropuerto (logística vuelo)",
+      "responsable": "Jaime",
+      "prioridad": "alta",
+      "contexto": "Viaje coordinado",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": "2026-04-17",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 83,
+      "segmento_titulo": "Coordinación compleja: logística de viaje (salida 5pm, llegada aeropuerto 2h antes), decisión de comunicar asunto delica",
+      "segmento_inicio": "",
+      "segmento_fin": "",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Jaime",
+        "Camilo",
+        "Mario",
+        "Alberto"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r83-013",
+      "tarea": "Comunicar asunto delicado a Camilo (no a través de mensaje, cara a cara)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Congreso, propuesta de venta de propiedad, decisión familiar sin involucrar a todos",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Camilo"
+      ],
+      "segmento_idx": 83,
+      "segmento_titulo": "Coordinación compleja: logística de viaje (salida 5pm, llegada aeropuerto 2h antes), decisión de comunicar asunto delica",
+      "segmento_inicio": "",
+      "segmento_fin": "",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Jaime",
+        "Camilo",
+        "Mario",
+        "Alberto"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r83-014",
+      "tarea": "Redactar documento que explique intencionalidad de consejo (no junta directiva) para proteger carrera",
+      "responsable": "Alberto",
+      "prioridad": "media",
+      "contexto": "Estructura legal/organizacional Being CoRe / Condugas",
+      "tipo": "commitment",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 83,
+      "segmento_titulo": "Coordinación compleja: logística de viaje (salida 5pm, llegada aeropuerto 2h antes), decisión de comunicar asunto delica",
+      "segmento_inicio": "",
+      "segmento_fin": "",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Jaime",
+        "Camilo",
+        "Mario",
+        "Alberto"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r48-015",
+      "tarea": "Imprimir QR por separado y coordinar pegado en regulador",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "proyecto regulador",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 48,
+      "segmento_titulo": "Instrucciones sobre un proyecto",
+      "segmento_inicio": "2026-04-17T20:54:54Z",
+      "segmento_fin": "2026-04-17T20:56:28Z",
+      "segmento_personas": [
+        "Unknown"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-17-r48-016",
+      "tarea": "Delegar tareas a otros colaboradores para no sobrecargar responsable actual",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "distribucion de carga",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 48,
+      "segmento_titulo": "Instrucciones sobre un proyecto",
+      "segmento_inicio": "2026-04-17T20:54:54Z",
+      "segmento_fin": "2026-04-17T20:56:28Z",
+      "segmento_personas": [
+        "Unknown"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-17-r50-017",
+      "tarea": "Enviar documento conceptual a Mario",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "comunicacion con Mario",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": "2026-04-17",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Mario"
+      ],
+      "segmento_idx": 50,
+      "segmento_titulo": "Conversación con Mario desde el aeropuerto",
+      "segmento_inicio": "2026-04-17T21:08:40Z",
+      "segmento_fin": "2026-04-17T21:12:56Z",
+      "segmento_personas": [
+        "Mario",
+        "Unknown (Sebastian)"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-17-r50-018",
+      "tarea": "Enviar foto a Mario",
+      "responsable": "Unknown",
+      "prioridad": "baja",
+      "contexto": "solicitud Mario",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": "2026-04-17",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Mario"
+      ],
+      "segmento_idx": 50,
+      "segmento_titulo": "Conversación con Mario desde el aeropuerto",
+      "segmento_inicio": "2026-04-17T21:08:40Z",
+      "segmento_fin": "2026-04-17T21:12:56Z",
+      "segmento_personas": [
+        "Mario",
+        "Unknown (Sebastian)"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-17-r53-019",
+      "tarea": "Seguimiento pendiente sobre situacion discutida",
+      "responsable": "Unknown",
+      "prioridad": "baja",
+      "contexto": "situacion conveniente",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Cami",
+        "Mario"
+      ],
+      "segmento_idx": 53,
+      "segmento_titulo": "Conversación sobre una situación conveniente",
+      "segmento_inicio": "2026-04-17T21:23:18Z",
+      "segmento_fin": "2026-04-17T21:24:12Z",
+      "segmento_personas": [
+        "Cami",
+        "Mario"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-17-r54-020",
+      "tarea": "Implementar bot de auditoría automática para procesos",
+      "responsable": "Unknown",
+      "prioridad": "alta",
+      "contexto": "automatizacion",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 54,
+      "segmento_titulo": "Conversación sobre automatización y actualizaciones",
+      "segmento_inicio": "2026-04-17T21:24:27Z",
+      "segmento_fin": "2026-04-17T21:31:14Z",
+      "segmento_personas": [
+        "Unknown"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r54-021",
+      "tarea": "Configurar alertas y auditorías en sistema para seguimiento de entradas y actualizaciones",
+      "responsable": "Unknown",
+      "prioridad": "alta",
+      "contexto": "automatizacion procesos",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 54,
+      "segmento_titulo": "Conversación sobre automatización y actualizaciones",
+      "segmento_inicio": "2026-04-17T21:24:27Z",
+      "segmento_fin": "2026-04-17T21:31:14Z",
+      "segmento_personas": [
+        "Unknown"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r55-022",
+      "tarea": "Refinar prototipo de herramienta IA para detectar reuniones y generar presentaciones automáticas",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "automatizacion metodologia Ser Siendo",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "being-core",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 55,
+      "segmento_titulo": "Demostración y descripción de una herramienta de procesamiento de información",
+      "segmento_inicio": "2026-04-17T21:46:19Z",
+      "segmento_fin": "2026-04-17T21:47:17Z",
+      "segmento_personas": [
+        "Unknown (audiencia)",
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-17-r56-023",
+      "tarea": "Diseñar y lanzar sandbox de debate para entrenar reacción inmediata",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "desarrollo de habilidades",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 56,
+      "segmento_titulo": "Conversación diversa",
+      "segmento_inicio": "2026-04-17T21:48:12Z",
+      "segmento_fin": "2026-04-17T22:09:54Z",
+      "segmento_personas": [
+        "Julián",
+        "Unknown"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-17-r56-024",
+      "tarea": "Preparar competencias/ejercicios de debate para equipo",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "capacitacion",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-17",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 56,
+      "segmento_titulo": "Conversación diversa",
+      "segmento_inicio": "2026-04-17T21:48:12Z",
+      "segmento_fin": "2026-04-17T22:09:54Z",
+      "segmento_personas": [
+        "Julián",
+        "Unknown"
+      ],
+      "segmento_impacto": "medio"
     }
   ],
-  "ultima_actualizacion": "2026-04-18T17:21:33.552188"
+  "ultima_actualizacion": "2026-04-18T17:25:41.064521"
 }

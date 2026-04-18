@@ -1,436 +1,41 @@
 {
-  "fecha": "2026-04-16",
-  "total_lifelogs": 33,
-  "total_reuniones": 32,
+  "fecha": "2026-04-17",
+  "total_lifelogs": 61,
+  "total_reuniones": 58,
   "procesado_con": "haiku_v3_structured",
-  "procesado_at": "2026-04-18T17:21:33",
+  "procesado_at": "2026-04-18T17:25:41",
   "reuniones": [
     {
       "idx": 0,
-      "resumen": "Sebastian reflexiona sobre sus aspiraciones personales de buceo, fotografía submarina y viajes largos. Monólogo introspectivo sobre experiencias pasadas en San Andrés y sueños de expansión geográfica.",
-      "impacto": "bajo",
+      "resumen": "Debate sobre soberanía energética y minería en Colombia. Se plantea la dicotomía entre minería ilegal (con mercurio, evasión fiscal) vs minería regulada. Propuesta central: involucrar a comunidades como socios en proyectos, internalizando licenciamiento social y distribuyendo utilidades, no dependiendo de regalías robadas por políticos corruptos.",
+      "impacto": "alto",
       "personas": [
-        "Sebastian Sanchez Acevedo"
+        "Unknown"
       ],
       "tareas": [],
       "decisiones": [],
       "ideas": [
-        "Combinar pasión por fotografía con buceo profesional"
+        "Involucrar comunidades como socios diretos en proyectos de minería/energía, no solo como receptores de regalías",
+        "Internacionalizar licenciamiento social: comunidades reciben utilidades e invierten en su territorio",
+        "Minería regulada con impuestos + obras públicas es modelo vs minería ilegal con mercurio"
       ],
       "frases": [
-        "Algún día voy a tomarle fotos como fotógrafo principal en un bote"
+        "¿Por qué no involucramos a las comunidades en los proyectos en los que va la inversión pública y privada como socios de esos proyectos?",
+        "La diferencia es si vamos a hacer minería o no. Es si la vamos a hacer con criminales, sometiendo a la gente con mercurio, o si la vamos a hacer con licencia ambiental"
       ],
       "preguntas_abiertas": [
-        "¿Cuándo retomar el buceo de forma seria?"
+        "¿Cómo estructurar legalmente a las comunidades como socios sin crear corrupción paralela?",
+        "¿Cuál es el mecanismo fiscal para que utilidades lleguen a territorios sin intermediarios políticos?"
       ],
-      "tension_signal": "bajo",
-      "titulo_limitless": "Conversación sobre buceo y experiencias relacionadas",
-      "startTime": "2026-04-16T00:06:15Z",
-      "endTime": "2026-04-16T00:12:47Z",
-      "duracion_min": 6
+      "tension_signal": "alto",
+      "titulo_limitless": "Discusión sobre la soberanía energética y la minería en Colombia",
+      "startTime": "2026-04-17T00:32:41Z",
+      "endTime": "2026-04-17T00:46:34Z",
+      "duracion_min": 13
     },
     {
       "idx": 1,
-      "resumen": "Conversación sobre crianza de hijos, fútbol, jugadores como Luis Díaz, análisis deportivo y reflexiones sobre inteligencia artificial. Tono casual y reflexivo.",
-      "impacto": "bajo",
-      "personas": [
-        "Sebastian Sanchez Acevedo"
-      ],
-      "tareas": [],
-      "decisiones": [],
-      "ideas": [
-        "Reflexión sobre cómo la IA está transformando el pensamiento"
-      ],
-      "frases": [
-        "Uno está acabado de los 25 para él, yo de los 32 que me empecé a lesionar"
-      ],
-      "preguntas_abiertas": [],
-      "tension_signal": "bajo",
-      "titulo_limitless": "Conversación sobre un niño, fútbol y otros temas",
-      "startTime": "2026-04-16T00:12:49Z",
-      "endTime": "2026-04-16T00:20:26Z",
-      "duracion_min": 7
-    },
-    {
-      "idx": 2,
-      "resumen": "Monólogo largo de Sebastian sobre conflictos familiares en Condugas, estrategia de transición de gas a agua, tensiones con socios (Camilo, Carlos López, doña Claudia), reflexión sobre podcasts de emprendimiento y frustración sobre cambios organizacionales.",
-      "impacto": "alto",
-      "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Camilo",
-        "Carlos López",
-        "Doña Claudia",
-        "Gustavo",
-        "Paola",
-        "mamá de Sebastian"
-      ],
-      "tareas": [
-        {
-          "tarea": "Definir estrategia de comunicación interna sobre transición gas→agua",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "alta",
-          "tipo": "decision",
-          "contexto": "Condugas busca pivotar de gas a agua/aguas; conflicto con modelo de trabajo de socios",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": [
-            "Camilo",
-            "Carlos López"
-          ]
-        },
-        {
-          "tarea": "Resolver fricción familiar con doña Claudia y Paola sobre estructura de aportes",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "alta",
-          "tipo": "compromiso",
-          "contexto": "Conflicto entre modelo de trabajo de Sebastian vs socios; historia de pelea con doña Claudia",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": [
-            "doña Claudia",
-            "Paola",
-            "mamá"
-          ]
-        }
-      ],
-      "decisiones": [
-        "Condugas quiere pivotar: soltar gas y migrar a aguas",
-        "Retomar perforación como entrada a negocio de agua (ya pagado)"
-      ],
-      "ideas": [
-        "Hacer podcast sobre realidad del emprendimiento (desmitificar narrativa romántica)",
-        "Analizar diferencia entre modelos de trabajo: Sebastian vs socios"
-      ],
-      "frases": [
-        "Nosotros queremos ser aguas. Nosotros queremos ir soltando el gas",
-        "Yo tenía ganas de decir qué es con ser empresario y levantarse y decir voy a renunciar"
-      ],
-      "preguntas_abiertas": [
-        "¿Cómo reconciliar modelo de trabajo de Sebastian con estructura de socios?",
-        "¿Qué tan viable es la transición gas→agua financieramente?"
-      ],
-      "tension_signal": "alto",
-      "titulo_limitless": "Conversaciones sobre asuntos cotidianos y personales",
-      "startTime": "2026-04-16T00:20:40Z",
-      "endTime": "2026-04-16T00:59:03Z",
-      "duracion_min": 38
-    },
-    {
-      "idx": 3,
-      "resumen": "Panel técnico sobre mercado de hidrocarburos en Colombia. Speakers de empresa 9 y gobierno discuten rol del gas como energético esencial, retos de ejecución, atracción de capital y mitigación de riesgos en transición energética.",
-      "impacto": "medio",
-      "personas": [
-        "Speaker empresa 9",
-        "Pablo (experto en entorno)"
-      ],
-      "tareas": [],
-      "decisiones": [
-        "Gas se reconoce como hidrocarburo energético esencial para coyuntura y transición"
-      ],
-      "ideas": [
-        "Gobierno nacional debe apalancar procesos con incentivos y responsabilidad institucional",
-        "Riesgo tecnológico y ejecución son titánicos en proyectos de perforación e infraestructura"
-      ],
-      "frases": [
-        "El gas es un hidrocarburo energético esencial para la coyuntura y transición energética",
-        "El equilibrio entre interés de comunidades vs interés nacional es un equilibrio complejo"
-      ],
-      "preguntas_abiertas": [
-        "¿Cómo atraer capital en contexto de entorno hostil a hidrocarburos?"
-      ],
-      "tension_signal": "medio",
-      "titulo_limitless": "Discusión sobre el mercado de hidrocarburos en Colombia",
-      "startTime": "2026-04-16T14:31:10Z",
-      "endTime": "2026-04-16T14:46:15Z",
-      "duracion_min": 15
-    },
-    {
-      "idx": 4,
-      "resumen": "Exposición sobre proyecto de gas en Colombia: desafíos de comercialización resueltos en 2024, licenciamiento como ruta crítica actual, proceso con 120 comunidades desde mayo 2024, avance a 2 años, necesidad de balance entre demandas territoriales y prioridad de 50M colombianos.",
-      "impacto": "alto",
-      "personas": [
-        "Speaker proyecto"
-      ],
-      "tareas": [
-        {
-          "tarea": "Avanzar proceso de licenciamiento ambiental y social (ruta crítica)",
-          "responsable": "Speaker proyecto",
-          "prioridad": "critica",
-          "tipo": "seguimiento",
-          "contexto": "120 comunidades, meta de producción 2030",
-          "fecha_limite": "2030-12-31",
-          "monto_cop": null,
-          "personas_mencionadas": []
-        }
-      ],
-      "decisiones": [
-        "Comercialización de gas lograda nov-dic 2024 con Ecopetrol",
-        "Licenciamiento es ahora la ruta crítica (no técnica ni comercial)"
-      ],
-      "ideas": [
-        "Cambio de estructuración del proceso de consulta a fines 2025 / inicio 2026",
-        "Balance necesario: atender comunidades vs prioridad nacional (50M ciudadanos)"
-      ],
-      "frases": [
-        "La parte técnica estamos tranquilos, la comercial avanzamos, pero el gran desafío ahora es licenciamiento",
-        "Tenemos que balancear con la prioridad de 50 millones de colombianos"
-      ],
-      "preguntas_abiertas": [
-        "¿Cómo acelerar licenciamiento sin alienar 120 comunidades?"
-      ],
-      "tension_signal": "alto",
-      "titulo_limitless": "Discusión sobre un proyecto de energía en Colombia",
-      "startTime": "2026-04-16T14:46:15Z",
-      "endTime": "2026-04-16T14:52:00Z",
-      "duracion_min": 5
-    },
-    {
-      "idx": 5,
-      "resumen": "Comparación estratégica entre Vaca Muerta (Argentina) y potencial gasífero en Colombia. Speaker argentino destaca récords de producción (850k bbl/d, 5.6 Bcfd gas), rol de incentivos de precio, federalismo (provincias), y lecciones sobre integración regulatoria ambiental.",
-      "impacto": "alto",
-      "personas": [
-        "Speaker argentino (Vaca Muerta)"
-      ],
-      "tareas": [],
-      "decisiones": [
-        "Vaca Muerta pasó de promesa a realidad: productor récord"
-      ],
-      "ideas": [
-        "Incentivos de precio en origen fue disparador clave para inversión (3-4B USD)",
-        "Modelo federal argentino (provincias como propietarias) fue factor habilitante",
-        "Colombia podría replicar: incentivos de precio + claridad regulatoria ambiental"
-      ],
-      "frases": [
-        "Argentina pasó de importar gas (8B USD/año déficit) a ser productor récord",
-        "Los incentivos en el precio del origen permitieron que las empresas invirtieran en serio"
-      ],
-      "preguntas_abiertas": [
-        "¿Qué incentivos de precio necesita Colombia para atraer inversión tipo Vaca Muerta?"
-      ],
-      "tension_signal": "medio",
-      "titulo_limitless": "Discusión sobre el potencial de gas en Colombia y la experiencia de Vaca Muerta",
-      "startTime": "2026-04-16T14:52:00Z",
-      "endTime": "2026-04-16T15:16:09Z",
-      "duracion_min": 24
-    },
-    {
-      "idx": 6,
-      "resumen": "Conversación informal sobre gas natural, política, evento con EPM (cancelado por acusación de campaña política), discusión sobre consultoría familiar/conyugal, decisión de no cubrir más pagos de servicios. Tono de frustración y abandono.",
-      "impacto": "medio",
-      "personas": [
-        "Speaker",
-        "EPM",
-        "Socios/dueños",
-        "Grupo familiar"
-      ],
-      "tareas": [
-        {
-          "tarea": "Comunicar decisión de no cubrir más pagos de servicio de consultoría",
-          "responsable": "Speaker",
-          "prioridad": "media",
-          "tipo": "decision",
-          "contexto": "Servicio centrado en grupo, poco en temas conyugales; se retira como referente integral",
-          "fecha_limite": "2026-04-16",
-          "monto_cop": null,
-          "personas_mencionadas": [
-            "Dueños/socios"
-          ]
-        }
-      ],
-      "decisiones": [
-        "No continuar cubriendo pago de servicio de consultoría",
-        "Retirarse como referente integral"
-      ],
-      "ideas": [
-        "Beneficios de gas natural transforman calidad de vida (cocina, calefacción)",
-        "Evento EPM fue cancelado por acusación de campaña política (riesgo reputacional)"
-      ],
-      "frases": [
-        "El gas natural no solo transforma forma de cocinar, también calidad de vida",
-        "Nos sentimos huérfanos"
-      ],
-      "preguntas_abiertas": [
-        "¿Por qué el servicio de consultoría derivó a temas solo de grupo?"
-      ],
-      "tension_signal": "medio",
-      "titulo_limitless": "Conversación sobre varios temas",
-      "startTime": "2026-04-16T15:16:13Z",
-      "endTime": "2026-04-16T15:27:31Z",
-      "duracion_min": 11
-    },
-    {
-      "idx": 7,
-      "resumen": "50 minutos de monólogo de Sebastian: elogio a Olga (transformación personal), reconocimiento a Natalia por gestión de agendas, descripción de servicios de Condugas (gasoductos, conducción gas alta presión occidente/Buenaventura), análisis de oportunidades EPM-Urabá, problemas Promigas (bypass trasmetano, equipos en China sin pagar), obra civil Tasajera.",
-      "impacto": "alto",
-      "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Olga",
-        "Natalia",
-        "EPM",
-        "Promigas",
-        "Multipetrol"
-      ],
-      "tareas": [
-        {
-          "tarea": "Explorar convenios con EPM para regasificadoras Antioquia/Urabá",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "alta",
-          "tipo": "compromiso",
-          "contexto": "EPM tiene regasificadoras en Antioquia; Promigas es competencia (problemas previos)",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": [
-            "EPM",
-            "Promigas",
-            "Multipetrol"
-          ]
-        },
-        {
-          "tarea": "Seguimiento obra civil ampliación Tasajera (infraestructura, no equipos)",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "alta",
-          "tipo": "seguimiento",
-          "contexto": "Condugas hace obra civil; otro contrato maneja equipos/logística",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
-        },
-        {
-          "tarea": "Monitorear situación Promigas: equipos en China, falta de pago, bypass trasmetano",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "media",
-          "tipo": "seguimiento",
-          "contexto": "Riesgo de que Promigas traverse el negocio; bloqueo de montaje por falta de pago",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": [
-            "Promigas"
-          ]
-        }
-      ],
-      "decisiones": [
-        "Reconocer trabajo de Natalia en gestión de agendas"
-      ],
-      "ideas": [
-        "Olga ha evolucionado: mantiene estructura pero con mayor pausa, análisis y humanidad",
-        "Oportunidad EPM en Urabá sin explorar (tiene regasificadoras)",
-        "Condugas maneja gasoductos municipios, conducción alta presión occidente/Buenaventura"
-      ],
-      "frases": [
-        "Esa mujer es un roble: estructura se mantiene pero más pausada, analítica, tranquila, humana",
-        "Natalia hizo un trabajo tremendo en agendas"
-      ],
-      "preguntas_abiertas": [
-        "¿Por qué Condugas no tiene convenios con EPM si hay regasificadoras en territorio?",
-        "¿Cuándo resolverá Promigas su deuda de equipos en China?"
-      ],
-      "tension_signal": "alto",
-      "titulo_limitless": "Conversaciones informales, anécdotas y reflexiones",
-      "startTime": "2026-04-16T15:27:31Z",
-      "endTime": "2026-04-16T16:18:00Z",
-      "duracion_min": 50
-    },
-    {
-      "idx": 8,
-      "resumen": "Panel sobre GNL en Colombia: speaker Granfan explica desafíos financieros del sector térmico (distribuidores Costa Caribe sin liquidez), necesidad de visibilidad de ventas. Granfan es propietario ~1 GW térmica, consumidor gas, trader corto plazo, desarrollador infraestructura, accionista GNL Texas Energy/Alaska (30M ton/año). Propone rol como aliado multi-eslabón cadena GNL.",
-      "impacto": "alto",
-      "personas": [
-        "Speaker Granfan"
-      ],
-      "tareas": [],
-      "decisiones": [
-        "Granfan se posiciona como aliado integral en cadena GNL (productor, trader, desarrollador, inversionista)"
-      ],
-      "ideas": [
-        "Interconexión sector eléctrico-gas es clave",
-        "Dificultad financiera distribuidores Costa Caribe requiere claridad en visibilidad de ventas",
-        "Granfan puede participar en cualquier eslabón: producción (30M ton/año), transmisión, distribución, comercialización"
-      ],
-      "frases": [
-        "Granfan tenemos muchos diferentes sombreros en Colombia",
-        "Debería pensarnos como aliado en cualquiera de las partes de la cadena"
-      ],
-      "preguntas_abiertas": [
-        "¿Cómo resolver crisis de liquidez de distribuidores Costa Caribe?"
-      ],
-      "tension_signal": "medio",
-      "titulo_limitless": "Discusión sobre la situación del GNL en Colombia",
-      "startTime": "2026-04-16T16:18:07Z",
-      "endTime": "2026-04-16T16:39:39Z",
-      "duracion_min": 21
-    },
-    {
-      "idx": 9,
-      "resumen": "Panel 55 min: Jorge Henao (moderador) sobre integración regional gas en Sudamérica. Analiza yacimientos Bolivia/Argentina (Vaca Muerta)/Surinam/Guyana/Perú (Camisea). Enfatiza importancia de centros de acopio regional ante riesgos climáticos (Niño). Propone diversificación de fuentes energéticas (gas, renovables) para resiliencia frente a sequía/fenómeno del Niño.",
-      "impacto": "alto",
-      "personas": [
-        "Jorge Henao",
-        "Adriano (mención)"
-      ],
-      "tareas": [],
-      "decisiones": [
-        "Integración regional debe construir centros de acopio por países"
-      ],
-      "ideas": [
-        "Venezuela, Surinam, Guyana, Perú (Camisea) son fuentes potenciales para Colombia",
-        "Gas Camisea: $6/MMBtu es más económico de región; accesible por gasoductos o puertos",
-        "Fenómeno del Niño requiere diversificación: gas + renovables + múltiples fuentes",
-        "Centros de acopio regional permiten suplir déficits de países vecinos"
-      ],
-      "frases": [
-        "Esos centros de integración regional también los debemos tener en el norte del continente",
-        "La única manera de prepararnos es tener diferentes fuentes de suministro"
-      ],
-      "preguntas_abiertas": [
-        "¿Cómo convencer a Venezuela a participar en integración energética regional?"
-      ],
-      "tension_signal": "bajo",
-      "titulo_limitless": "Panel: Moléculas en movimiento - El rol estratégico del transporte de gas natural",
-      "startTime": "2026-04-16T16:39:48Z",
-      "endTime": "2026-04-16T17:35:37Z",
-      "duracion_min": 55
-    },
-    {
-      "idx": 10,
-      "resumen": "Monólogo casual de Sebastian: comentarios sobre entrenamiento/desayuno. Luego discurso de oficial/project manager sobre importancia de proyecto infraestructura para seguridad energética, transición energética, aprovechamiento descubrimientos costa afuera y recursos interior. Enfoque ambiental y territorial.",
-      "impacto": "medio",
-      "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Project manager/oficial"
-      ],
-      "tareas": [
-        {
-          "tarea": "Mejorar diagramación y diseño de documentación de proyecto (cuadernillo)",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "media",
-          "tipo": "compromiso",
-          "contexto": "Documento tiene base teórica válida pero pobre presentación gráfica; necesita diseño moderno/atractivo",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
-        }
-      ],
-      "decisiones": [
-        "Proyecto será paso gigante para seguridad energética y transición energética"
-      ],
-      "ideas": [
-        "Documentación debe ser cuadernillo horizontal con respuestas y esquemas diagramados",
-        "Valor agregado en diseño gráfico moderno puede mejorar adopción/conexión con usuario"
-      ],
-      "frases": [
-        "Un paso gigante para fortalecer la seguridad energética y un paso seguro hacia la transición energética",
-        "No agregas valor porque los gráficos se empeoran"
-      ],
-      "preguntas_abiertas": [],
-      "tension_signal": "bajo",
-      "titulo_limitless": "Conversación casual sobre planes personales y comida",
-      "startTime": "2026-04-16T17:37:15Z",
-      "endTime": "2026-04-16T17:51:48Z",
-      "duracion_min": 14
-    },
-    {
-      "idx": 11,
-      "resumen": "Interacción brevísima (5 segundos): pregunta sobre colocación física de un objeto. Sin contexto ni importancia estratégica.",
+      "resumen": "Conversación fragmentaria sobre escaneos, tablets, preparativos técnicos de transmisión (cámaras, audio) y anécdotas sobre objetos perdidos y batería. No hay decisiones de negocio. Parece ser trasfondo de un evento en vivo.",
       "impacto": "bajo",
       "personas": [
         "Unknown"
@@ -441,403 +46,438 @@
       "frases": [],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
-      "titulo_limitless": "Una breve interacción sobre la ubicación de un objeto",
-      "startTime": "2026-04-16T18:01:12Z",
-      "endTime": "2026-04-16T18:01:17Z",
-      "duracion_min": 0
+      "titulo_limitless": "Conversación sobre varios temas",
+      "startTime": "2026-04-17T00:47:37Z",
+      "endTime": "2026-04-17T00:54:35Z",
+      "duracion_min": 6
     },
     {
-      "idx": 12,
-      "resumen": "Conversación reflexiva sobre el proyecto ODU, su implementación y oportunidades de crecimiento. Sebastian reflexiona sobre necesidad de personas que hayan 'guerreado' el negocio y conocimiento integral de la operación. Menciona estudios en logística como señal de interés en asumir responsabilidades mayores.",
+      "idx": 2,
+      "resumen": "Cierre de debate sobre energía en Colombia. Se anuncia fin de transmisión en pantalla abierta. Mención de minería ilegal (80% de exportaciones) como crimen ambiental y social. Referencia a candidatos (Juan Roberto) para mensajes de cierre de ~30 seg.",
       "impacto": "medio",
       "personas": [
-        "Sebastian Sanchez Acevedo"
+        "Juan Roberto",
+        "Unknown"
       ],
       "tareas": [],
       "decisiones": [
-        "Buscar personas con experiencia operativa real para roles clave en ODU"
+        "Cierre de transmisión en pantalla abierta, continuar en plataformas digitales"
       ],
       "ideas": [
-        "Integrar talento que conoce gremio, operaciones y cultura interna",
-        "Asumir responsabilidades en logística requiere conocimiento previo + disposición"
+        "Minería ilegal (80% de exportaciones) es crimen sistemático que afecta medio ambiente y comunidades"
       ],
       "frases": [
-        "cuatro días van a resumirse a media hora, una hora de cuatro personas",
-        "ustedes conocen el negocio, ustedes conocen la gente, ustedes conocen el gremio"
+        "El 80% que se exporta hoy es proveniente de la minería ilegal, es un crimen de enormes dimensiones"
       ],
-      "preguntas_abiertas": [
-        "¿Quién asumirá responsabilidad completa de logística con todas las implicaciones?"
-      ],
-      "tension_signal": "medio",
-      "titulo_limitless": "Conversaciones personales y políticas, incluyendo un caso legal complejo",
-      "startTime": "2026-04-16T18:04:06Z",
-      "endTime": "2026-04-16T18:34:50Z",
-      "duracion_min": 30
+      "preguntas_abiertas": [],
+      "tension_signal": "alto",
+      "titulo_limitless": "Debate sobre energía en Colombia",
+      "startTime": "2026-04-17T00:55:03Z",
+      "endTime": "2026-04-17T01:00:12Z",
+      "duracion_min": 5
     },
     {
-      "idx": 13,
-      "resumen": "Mención fragmentaria sobre cambio de documental sin completar explicación. Reunión incompleta, sin contenido sustantivo.",
+      "idx": 3,
+      "resumen": "Debate sobre futuro económico-energético de Colombia. Énfasis en seguridad jurídica, tributaria y exploración (gas, petróleo, fracking). Rechazo a teoría 'petróleo/gas como enemigos'. Propuesta de alianzas público-privadas-comunitarias para destrabar proyectos sociales vs técnico-legales.",
+      "impacto": "alto",
+      "personas": [
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Seguridad jurídica y tributaria son prioridad, no reducción de impuestos",
+        "Energías renovables y petróleo/gas NO son antagónicos; 46% territorio protegido, 54% abierto a exploración",
+        "Alianzas público-privadas-comunitarias: industria construye relaciones directas con comunidades para destrabar proyectos",
+        "Combatir criminalidad: empresarios legales vs criminales corruptos"
+      ],
+      "frases": [
+        "El tema no es bajar impuestos sino darle seguridad jurídica, seguridad tributaria",
+        "Energías renovables y petróleo no son enemigos",
+        "Lo que permite energía barata, industrializarlo, generar empleo, impuestos para inversión social"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo estructurar alianzas público-privadas-comunitarias sin que se conviertan en captura?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Debate sobre el futuro de Colombia",
+      "startTime": "2026-04-17T01:00:25Z",
+      "endTime": "2026-04-17T01:14:21Z",
+      "duracion_min": 13
+    },
+    {
+      "idx": 4,
+      "resumen": "Propuesta de Plan Colombia-Venezuela a 20 años con ejes: energía (gasoducto), agroindustria (llanuras) y bioeconomía. Oportunidad con retorno democracia en Venezuela. Objetivo: duplicar ingreso económico, estabilidad democrática, seguridad energética y justicia social.",
+      "impacto": "alto",
+      "personas": [
+        "Trump (mención)",
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Presentar Plan Colombia-Venezuela a 20 años al Presidente Trump y candidato ganador desde 7 de agosto"
+      ],
+      "ideas": [
+        "Plan binacional Colombia-Venezuela con reglas comunes de inversión/impuestos/seguridad jurídica",
+        "3 ejes: energía (recuperar gasoducto), agroindustria (llanuras compartidas), bioeconomía-Amazonía",
+        "Estabilidad democrática como base para desarrollo económico e inversión"
+      ],
+      "frases": [
+        "Un plan Colombia Venezuela de inversión público-privada a 20 años con reglas comunes nos puede duplicar el ingreso económico en Colombia y Venezuela"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo asegurar continuidad de plan si Venezuela vuelve a inestabilidad?",
+        "¿Cuál es el timeline y monto de inversión inicial estimado?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Debate sobre la energía en Colombia y la situación política",
+      "startTime": "2026-04-17T01:14:21Z",
+      "endTime": "2026-04-17T01:30:19Z",
+      "duracion_min": 15
+    },
+    {
+      "idx": 5,
+      "resumen": "Conversación fragmentaria sobre política post-debate. Roy Barreras identificado como candidato del locutor. Críticas a Petro, debate sobre fracking (posición: piloto + evidencia, no fracking por fracking). Mención de posverdad y discrepancias en lo que candidatos dijeron vs interpretación.",
       "impacto": "bajo",
       "personas": [
-        "Sebastian Sanchez Acevedo"
+        "Roy Barreras",
+        "Petro",
+        "Paloma",
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Fracking debe ser piloto con evidencia, no ideológico"
+      ],
+      "frases": [
+        "Roy Barreras es mi candidato",
+        "No es fracking por fracking, es fracking aquí y fracking aquí, hagamos el piloto y hagamos la evidencia"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre política y otros temas",
+      "startTime": "2026-04-17T01:30:54Z",
+      "endTime": "2026-04-17T01:48:43Z",
+      "duracion_min": 17
+    },
+    {
+      "idx": 6,
+      "resumen": "Monólogo reflexivo de Sebastian (44 min) sobre identidad, herencia familiar y relación con padres. Discute no querer ser 'como ellos' pero reconoce similitudes. Historias familiares contadas por tío inspiran. Experiencias laborales tempranas (trabajar en USA). Crítica paterna a los 22 años: 'si no sabe qué hacer siendo dueño, no sirve'. Recuerdos traumáticos: sacar padre borracho del carro. Tácticas agresivas de negocio del padre (cobradores, efectivo, caja fuerte).",
+      "impacto": "alto",
+      "personas": [
+        "Gilberto",
+        "Natalia",
+        "padre (Jairo)",
+        "tío"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Reconciliación con herencia familiar es proceso de vida, no negación inmediata",
+        "Historia familiar transmitida por tío genera sentido de continuidad y orgullo"
+      ],
+      "frases": [
+        "Usted es igualito a ella",
+        "Pa, yo qué debo hacer... si usted a sus 22 años en una empresa donde usted es posiblemente dueño, no sabe qué hacer, usted no sirve para nada",
+        "Me tocaba ir al carro a sacar a mi papá borracho"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo se reconcilia Sebastian con el legado paterno agresivo en su modelo de gestion?",
+        "¿La crítica paterna a los 22 años fue motivación o trauma persistente?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Observaciones sobre el entorno y la vida cotidiana",
+      "startTime": "2026-04-17T01:50:15Z",
+      "endTime": "2026-04-17T02:35:07Z",
+      "duracion_min": 44
+    },
+    {
+      "idx": 7,
+      "resumen": "Breve conversación (2 min) entre Sebastian y otra persona. Desacuerdo sobre narrativa política: Sebastian cuestiona si 'esa vieja' comparó Petro con Uribe. Critica a Paloma por meter a Uribe. Mención de estrategia ('le va esta estrategia'). Alerta económica: 'lo duro nos está tocando a nosotros', 'no tengo dinero', 'cada vez me reduzco más el salario'. Crisis de caja visible.",
+      "impacto": "alto",
+      "personas": [
+        "Paloma",
+        "Petro",
+        "Uribe"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "Es que lo duro nos está tocando a nosotros",
+        "Yo no tengo y no trabajo. La plata... cada vez me reduzco más el salario"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "alto",
+      "titulo_limitless": "Sebastian Sanchez Acevedo's thoughts on political and economic issues",
+      "startTime": "2026-04-17T02:35:14Z",
+      "endTime": "2026-04-17T02:37:27Z",
+      "duracion_min": 2
+    },
+    {
+      "idx": 8,
+      "resumen": "Sebastian reflexiona sobre educación financiera en equipos. Problema: personal no entiende administración de negocio ni finanzas. Ejemplo con Juan Carlos Gómez: explicó PPM (4 billones margen bruto, 28 billones de vida) pero 'ese maricán no entendía'. Lenguaje diferente entre sector financiero vs gasto. Estrategias de negociación: reconocer al otro o exponerlo. Tácticas: 'si digo que soy muy bruto, no tiene qué responder'. Control de agenda: 'a mí me llaman, consulto mi agenda, después nunca más citado'.",
+      "impacto": "alto",
+      "personas": [
+        "Juan Carlos Gómez"
+      ],
+      "tareas": [
+        {
+          "tarea": "Educar al equipo en doctrina empresarial y administración financiera",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "pendiente",
+          "contexto": "Crisis de comunicación financiera en Condugas",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Juan Carlos Gómez"
+          ]
+        }
+      ],
+      "decisiones": [],
+      "ideas": [
+        "Personal solo entiende si están en lado de decisiones financieras",
+        "Debe enseñarse análisis de margen, valor y destrucción de valor",
+        "Lenguaje de 'gasto' vs 'inversión' son incompatibles en negociación"
+      ],
+      "frases": [
+        "Usted no sabe qué PPM genera 4 billones de margen bruto, usted no sabe qué genera 28 billones de vida",
+        "Yo destruyo valor, Juan Carlos, ustedes me están pidiendo descuento seguir construyendo valor",
+        "Si yo le digo, yo soy muy bruto, yo la sé cagando, él no tiene qué decir"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo transmitir educación financiera a equipo de gasto sin confrontación?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Reflexiones sobre la comunicación y la negociación",
+      "startTime": "2026-04-17T02:38:06Z",
+      "endTime": "2026-04-17T02:44:52Z",
+      "duracion_min": 6
+    },
+    {
+      "idx": 9,
+      "resumen": "Conversación casual sobre fútbol (Junior, Didier, volantes). Anécdota sobre fiesta en Puerto Antioquia: señora reconoce a madre de Sebastian, se emborracha con grupo. Recall de memoria: Puerto Antioquia era zona de Condugas (pantanero, tubulonas para gas). Reflexión final: 'donde tuviéramos plata, pero no tenemos sino trabajo'.",
+      "impacto": "bajo",
+      "personas": [
+        "madre",
+        "Didier"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "Donde tuviéramos plata, pero no tenemos sino trabajo"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre fútbol y anécdotas",
+      "startTime": "2026-04-17T02:44:53Z",
+      "endTime": "2026-04-17T02:50:05Z",
+      "duracion_min": 5
+    },
+    {
+      "idx": 10,
+      "resumen": "Conversación sobre pérdidas históricas en operaciones: Perú (agua, 4 años, 16 trabajos perdidos), Cali. Reflexión amarga: 'gente se va acostumbrando'. Anécdota sobre conflicto con doña Claudia que 'dañó negocio'. Relato de injusticia salarial: padre pagaba $600k a Sebastian (recién graduado) vs $1M a ingenieros recién graduados en Ciudad Bolívar. Desde entonces: 'austeridad, nada plata'. Conclusión exhausto: 'ya estoy cansado de aprender'. Amenaza a don Darío: 'lunes le tengo propuesta', 'arreglamos esto o me echan'.",
+      "impacto": "crítico",
+      "personas": [
+        "doña Claudia",
+        "don Darío",
+        "padre"
+      ],
+      "tareas": [
+        {
+          "tarea": "Presentar propuesta de restructuración a don Darío",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "critica",
+          "tipo": "compromiso",
+          "contexto": "Crisis financiera y de relación laboral en Condugas",
+          "fecha_limite": "2026-04-21",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "don Darío"
+          ]
+        }
+      ],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "En cuestión de 4 años, se perdió el trabajo de 16",
+        "Yo llegué cuando Ciudad Bolívar estaba terminando. Mi papá, mientras le pagaba a los ingenieros recién graduados 1000000, a mí me pagaba 600000",
+        "Y, desde ahí hasta hoy, yo no trabajo, trabajo como un hijo de puta",
+        "Tienes 1 en la vida gana o gana o aprende, y yo aprendo como un hijo de puta, pues yo ya estoy cansado de aprender"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál es la propuesta concreta que llevará a don Darío el lunes?"
+      ],
+      "tension_signal": "crítico",
+      "titulo_limitless": "Conversación sobre pérdidas y trabajo",
+      "startTime": "2026-04-17T02:50:14Z",
+      "endTime": "2026-04-17T02:57:38Z",
+      "duracion_min": 7
+    },
+    {
+      "idx": 11,
+      "resumen": "Sebastian reflexiona sobre padre: controlaba todo mediante agendas (no escribía ni leía correos). Madre hacía trabajos escolares de padre, profesor le puso 0 a ella ('le copió a Jairo'). Madre dejó universidad por esto. Padre pensaba pero no ejecutaba; madre cargaba todo. Anécdota: padre ya tenía sede en Caracas (Venezuela) antes de cierto momento. Reflexión final sobre trabajo actual: '2 pantallas, iPad, computador, celular. Yo soy un esclavo... trabajo hasta vender'.",
+      "impacto": "alto",
+      "personas": [
+        "padre (Jairo)",
+        "madre",
+        "profesor"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Patrón familiar: padre piensa/delega, madre ejecuta—resultado: sacrificio de madre"
+      ],
+      "frases": [
+        "Mi papá solo sabía pensar, él no preparado",
+        "Mi mamá renunció al college porque el profesor dijo 'a usted le voy poner 0, y a Jairo 5'",
+        "Yo soy un esclavo, y yo, por eso yo le digo, a mi trabajo, no, a mi a a mi trabajo me llega como un hijo de puta plata, no, pero trabajo"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo rompe Sebastian el ciclo de sobreexigencia laboral vs falta de reconocimiento financiero?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Reflexiones de Sebastian Sanchez Acevedo",
+      "startTime": "2026-04-17T02:58:37Z",
+      "endTime": "2026-04-17T03:06:59Z",
+      "duracion_min": 8
+    },
+    {
+      "idx": 12,
+      "resumen": "Conversación personal desstructurada sobre política (Uribe vs Petro), vida personal, comida y reflexiones sobre empresa. No hay agenda ni decisiones de negocio.",
+      "impacto": "bajo",
+      "personas": [
+        "You",
+        "Gilberto",
+        "Rita",
+        "doña Olga"
       ],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [],
-      "preguntas_abiertas": [
-        "¿Por qué cambiar el documental? ¿Qué se necesita?"
-      ],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
-      "titulo_limitless": "Cambio de Documental",
-      "startTime": "2026-04-16T18:35:04Z",
-      "endTime": "2026-04-16T18:35:09Z",
+      "titulo_limitless": "Conversación sobre varios temas",
+      "startTime": "2026-04-17T03:07:38Z",
+      "endTime": "2026-04-17T03:25:22Z",
+      "duracion_min": 17
+    },
+    {
+      "idx": 13,
+      "resumen": "Crítica severa sobre presentaciones actuales centradas solo en PM. Exigencia de cambiar lenguaje y narrativa hacia Banti, gas de occidente y temas estructurales.",
+      "impacto": "alto",
+      "personas": [
+        "Unknown"
+      ],
+      "tareas": [
+        {
+          "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en PM e incorporando Banti, gas de occidente, infraestructura",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "critica",
+          "tipo": "decision",
+          "contexto": "Narrativa corporativa Condugas",
+          "fecha_limite": "2026-04-25",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Unknown"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Cambiar lenguaje corporativo: no solo PM, incluir Banti y gas de occidente"
+      ],
+      "ideas": [
+        "El poder está en lo que se dice y en lo que NO se dice"
+      ],
+      "frases": [
+        "Usted no puede hablar tanto ya solo de PM",
+        "hay que empezar a cambiar el lenguaje"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál es el nuevo posicionamiento estratégico de Condugas más allá de PM?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Crítica a la presentación actual",
+      "startTime": "2026-04-17T03:25:40Z",
+      "endTime": "2026-04-17T03:26:17Z",
       "duracion_min": 0
     },
     {
       "idx": 14,
-      "resumen": "Sesión de revisión de diseño gráfico para presentación Being CoRe. Sebastian crítica cambios en estructura (círculo → lineal) y proporciona especificaciones detalladas para etiquetado de canastillas, impresión y optimización de costos. Enfoque en pulido estético y funcionalidad.",
-      "impacto": "alto",
+      "resumen": "Anécdotas personales sobre El Peñol, negocios locales, responsabilidad de informes de IC y reflexiones sobre cómo las personas hablan de sí mismas vs del otro.",
+      "impacto": "bajo",
       "personas": [
-        "Sebastian Sanchez Acevedo"
+        "Unknown"
       ],
       "tareas": [
         {
-          "tarea": "Corregir estructura gráfica original (círculo/distancia/cuadrante) - revertir cambio a lineal",
-          "responsable": "Diseñador gráfico",
-          "prioridad": "alta",
-          "tipo": "compromiso",
-          "contexto": "Presentación Being CoRe",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
-        },
-        {
-          "tarea": "Diseñar e imprimir etiquetas canastillas: 100 unidades plastificadas, optimizadas a 90.000 COP, con hueco adaptado",
-          "responsable": "Área de producción/diseño",
-          "prioridad": "alta",
-          "tipo": "compromiso",
-          "contexto": "Canastillas operativas Condugas",
-          "fecha_limite": null,
-          "monto_cop": 90000,
-          "personas_mencionadas": []
-        },
-        {
-          "tarea": "Incluir correo de Adolfo en toda la presentación y diseñar gráfico 'camino que voy a recorrer' como carretera",
-          "responsable": "Diseñador gráfico",
+          "tarea": "Asegurar que todos los que vayan como IC entreguen informe de gestión",
+          "responsable": "Unknown",
           "prioridad": "media",
-          "tipo": "compromiso",
-          "contexto": "Presentación Being CoRe",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": [
-            "Adolfo"
-          ]
-        },
-        {
-          "tarea": "Optimizar layout etiquetas canastillas: zona L4 arriba (color), nombre abajo (blanco/negro), logo grande con hueco, adhesivo contact",
-          "responsable": "Diseñador gráfico",
-          "prioridad": "alta",
-          "tipo": "compromiso",
-          "contexto": "Etiquetado canastillas",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
-        },
-        {
-          "tarea": "Diseñar segundo cuadernillo considerando impresión digital y física, sofisticación visual",
-          "responsable": "Diseñador gráfico",
-          "prioridad": "media",
-          "tipo": "compromiso",
-          "contexto": "Documentos Being CoRe",
+          "tipo": "pendiente",
+          "contexto": "Responsabilidad IC",
           "fecha_limite": null,
           "monto_cop": null,
           "personas_mencionadas": []
         }
       ],
-      "decisiones": [
-        "Revertir cambio de estructura gráfica a formato original (circular)",
-        "Reducir cantidad de etiquetas de 400 a 100 para optimizar costo",
-        "Implementar doble impresión (color + blanco/negro) en etiquetas"
-      ],
+      "decisiones": [],
       "ideas": [
-        "Plastificar etiquetas para durabilidad y ajuste perfecto en huecos canastilla",
-        "Técnica de adhesivo contact para fijación sin deterioro visual"
+        "Insight sobre El Peñol como zona de negocios activos",
+        "Personas hablan más de dolores que del otro"
       ],
       "frases": [
-        "tienes que pulirlo estéticamente, que es todo lo que se quiere acá",
-        "la original tiene un círculo, un yo, una distancia hasta el entorno y al lado hay un cuadrante"
+        "Lo que sí más es que hay una responsabilidad muy grande porque todo el que va de IC tiene que entregar un informe"
       ],
-      "preguntas_abiertas": [
-        "¿Cuáles son las técnicas de impresión adicionales para mejorar presentación de etiquetas?"
-      ],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
-      "titulo_limitless": "Discusión sobre la marcación de canastillas y la revisión de elementos gráficos y de presentación.",
-      "startTime": "2026-04-16T18:45:21Z",
-      "endTime": "2026-04-16T18:56:44Z",
-      "duracion_min": 11
+      "titulo_limitless": "Historias y anécdotas personales variadas",
+      "startTime": "2026-04-17T03:26:34Z",
+      "endTime": "2026-04-17T03:30:58Z",
+      "duracion_min": 4
     },
     {
       "idx": 15,
-      "resumen": "Conversación fragmentaria sobre caso legal de Catalina, PM (Project Manager) y situación de incumplimiento. Sebastian menciona haber contactado a Hilda para obtener información sobre justificación de descarados/incumplimientos. Tono de investigación táctica.",
-      "impacto": "alto",
+      "resumen": "Discusión fragmentada sobre finanzas, salarios, beneficios de empleados (tarjetas, orejas de levante) y retención de talento.",
+      "impacto": "medio",
       "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Catalina",
-        "Hilda",
-        "Carlos",
-        "PM"
+        "Unknown"
       ],
       "tareas": [
         {
-          "tarea": "Dar seguimiento a caso legal Catalina y PM - obtener información de justificación de incumplimientos",
+          "tarea": "Validar sistema de 'orejas de levante' como mecanismo real de escucha a empleados vs percepción de artificio",
           "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "critica",
+          "prioridad": "media",
           "tipo": "seguimiento",
-          "contexto": "Caso legal complejo",
+          "contexto": "Cultura y retención Condugas",
           "fecha_limite": null,
           "monto_cop": null,
-          "personas_mencionadas": [
-            "Catalina",
-            "Hilda",
-            "PM"
-          ]
+          "personas_mencionadas": []
         }
       ],
       "decisiones": [
-        "Contactar a Hilda como intermediaria para obtener información sobre caso"
+        "Los muchachos se quedan si se les trata bien y tienen beneficios"
       ],
       "ideas": [
-        "Usar tácticas de pesca de información (lanzar preguntas abiertas) para obtener datos relevantes"
+        "Necesidad de clarificar qué es 'orejas de levante' y su efectividad real"
       ],
-      "frases": [
-        "el desespero",
-        "yo tiro las cosas así para pescar"
-      ],
+      "frases": [],
       "preguntas_abiertas": [
-        "¿Cuál es el estado exacto del caso legal Catalina?",
-        "¿Qué justificación están presentando desde PM sobre el incumplimiento?",
-        "¿Cuál es el impacto financiero/operativo de este incumplimiento?"
+        "¿Funcionan realmente los mecanismos de escucha a empleados en Condugas?"
       ],
-      "tension_signal": "alto",
-      "titulo_limitless": "Conversación sobre un caso y otros temas",
-      "startTime": "2026-04-16T18:57:49Z",
-      "endTime": "2026-04-16T18:59:42Z",
-      "duracion_min": 1
+      "tension_signal": "medio",
+      "titulo_limitless": "Conversación sobre dinero y trabajo",
+      "startTime": "2026-04-17T03:33:08Z",
+      "endTime": "2026-04-17T03:35:16Z",
+      "duracion_min": 2
     },
     {
       "idx": 16,
-      "resumen": "Conversación educativa sobre beneficios del gas natural para calidad de vida, con reflexiones analogía sobre energía/nutrición y conceptos técnicos (Git, caché, RAM). Sin decisiones ejecutivas concretas.",
-      "impacto": "bajo",
-      "personas": [],
-      "tareas": [],
-      "decisiones": [],
-      "ideas": [
-        "Posicionamiento: gas natural transforma no solo cocina sino calidad de vida completa",
-        "Educación del sector: necesidad de 'introducción' antes de contenido técnico complejo"
-      ],
-      "frases": [
-        "cuando el gas natural llega, no solo transforma la forma de cocinar, también mejora la calidad de vida",
-        "un libro sin leer la introducción, usted lo empieza a leer y usted no entiende"
-      ],
-      "preguntas_abiertas": [],
-      "tension_signal": "bajo",
-      "titulo_limitless": "Conversación sobre varios temas",
-      "startTime": "2026-04-16T18:59:42Z",
-      "endTime": "2026-04-16T19:08:03Z",
-      "duracion_min": 8
-    },
-    {
-      "idx": 17,
-      "resumen": "Panel sobre transición energética Colombia-Brasil. Análisis de inversiones 2015-2024 (4:1 combustibles fósiles vs renovables), oportunidades en gas asociado brasileño (190M m3/día feb 2026), rol del gas como molécula de transición. Discusión sobre geopolítica, resiliencia y seguridad de suministro energético.",
-      "impacto": "alto",
-      "personas": [],
-      "tareas": [],
-      "decisiones": [
-        "Reconocer gas como molécula de transición energética, no solo combustible fósil"
-      ],
-      "ideas": [
-        "Oportunidad Brasil: gas asociado no aprovechado (190M m3/día)",
-        "Geopolítica energética como nuevo paradigma (seguridad suministro > emisiones)",
-        "Resiliencia sectorial requiere abordaje holístico (ciberseguridad, riesgos maliciosos, desastres naturales)"
-      ],
-      "frases": [
-        "la base ya no es solo las emisiones, sino la geopolítica",
-        "seguridad del suministro"
-      ],
-      "preguntas_abiertas": [
-        "¿Cómo balancear subsidios, precios y señales de mercado sin distorsionar mercados que funcionan?"
-      ],
-      "tension_signal": "medio",
-      "titulo_limitless": "Discusión sobre la transición energética y el sector energético en Colombia y Brasil",
-      "startTime": "2026-04-16T19:08:04Z",
-      "endTime": "2026-04-16T19:42:34Z",
-      "duracion_min": 34
-    },
-    {
-      "idx": 18,
-      "resumen": "Panel Naturagás (30 años): productores-distribuidores dialogando sobre garantizar moléculas lleguen con propósito (hogares, industria, comercio, transporte). Comparativa Brasil-Colombia: 12M residenciales COL vs 5M BRA. Enfoque confiabilidad, inversión largo plazo, valor social.",
-      "impacto": "alto",
-      "personas": [
-        "Luz Estela",
-        "Carlos",
-        "Rodolfo",
-        "Orlando",
-        "Juan",
-        "Nicolás"
-      ],
-      "tareas": [],
-      "decisiones": [
-        "Posicionar moléculas con propósito como valor central (confiabilidad + inversión LT + valor social)"
-      ],
-      "ideas": [
-        "Mercado Brasil 50% tamaño Colombia pero con menor penetración residencial - oportunidad crecimiento",
-        "Necesidad diálogo productor-distribuidor para alineación estratégica"
-      ],
-      "frases": [
-        "garantizar que las moléculas sigan llegando con propósito a los hogares, a la industria, al comercio, al transporte"
-      ],
-      "preguntas_abiertas": [],
-      "tension_signal": "bajo",
-      "titulo_limitless": "Discusión sobre la transición energética y el gas natural",
-      "startTime": "2026-04-16T19:47:31Z",
-      "endTime": "2026-04-16T20:30:31Z",
-      "duracion_min": 43
-    },
-    {
-      "idx": 19,
-      "resumen": "Análisis experiencia brasileña biometano: 100K m3/día en Ceará (2018, residuos urbanos = 20% consumo estatal). Plan Goiás 500 buses biometano/GNB. Biometano menos volátil geopolíticamente que diesel/combustibles fósiles. Regulación: ley gas 2021, combustibles futuro, equivalencia biometano-gas natural, certificado Segove en reglamentación.",
-      "impacto": "alto",
-      "personas": [
-        "Clarisa"
-      ],
-      "tareas": [],
-      "decisiones": [
-        "Reconocer biometano como alternativa menos volátil que diesel en contexto geopolítico",
-        "Establecer equivalencia regulatoria biometano-gas natural"
-      ],
-      "ideas": [
-        "Captar biometano desde residuos urbanos/industriales - modelo Ceará replicable",
-        "Transporte flota pesada: biometano más estable que diesel en volatilidad geopolítica",
-        "Marcos regulatorios (leyes 2021, combustibles futuro, Segove) como facilitadores"
-      ],
-      "frases": [
-        "biometano, diferentemente del diesel, diferentemente de otros combustibles fósiles, tiene mucha volatilidad, es afectado por los factores geopolíticos"
-      ],
-      "preguntas_abiertas": [
-        "¿Cómo conectar plantas de biometano alejadas de redes de distribución existentes?"
-      ],
-      "tension_signal": "medio",
-      "titulo_limitless": "Debate Presidencial sobre Energía en Colombia",
-      "startTime": "2026-04-16T20:30:41Z",
-      "endTime": "2026-04-16T20:56:40Z",
-      "duracion_min": 25
-    },
-    {
-      "idx": 20,
-      "resumen": "Debate inversiones sector energético Colombia. Herramientas: obras por impuestos, fondo especial, cuota fomento - masificación cobertura (gasistas Caribe, Gases Guajira). Preocupación: voluntad política como factor crítico. Regulación buena pero requiere certidumbre y adaptación continua.",
-      "impacto": "alto",
-      "personas": [
-        "Pastor"
-      ],
-      "tareas": [],
-      "decisiones": [
-        "Priorizar competitividad del sector sobre mantención de subsidios para cobertura"
-      ],
-      "ideas": [
-        "Mecanismos subsidio conexiones (obras por impuestos, cuota fomento) han masificado cobertura en zonas sin capacidad pago",
-        "Voluntad política como variable crítica - capacidad/ingeniería/recursos son factibles pero decisión política es otra"
-      ],
-      "frases": [
-        "la voluntad política es la otra"
-      ],
-      "preguntas_abiertas": [
-        "¿Cómo mantener crecimiento cobertura sin sacrificar competitividad del sector?",
-        "¿Cuál es la voluntad política real para transición energética?"
-      ],
-      "tension_signal": "alto",
-      "titulo_limitless": "Discusión sobre el biometano en Brasil",
-      "startTime": "2026-04-16T20:56:40Z",
-      "endTime": "2026-04-16T21:03:50Z",
-      "duracion_min": 7
-    },
-    {
-      "idx": 21,
-      "resumen": "Análisis regulatorio Brasil biometano: patrones calidad, equivalencia legal con gas natural, certificado Segove, políticas largo plazo. Desafío: plantas biometano alejadas de red (45K km distribución + 9.5K transporte). Inconsistencia política: subsidios diesel aunque existan políticas correctas biometano.",
-      "impacto": "alto",
-      "personas": [
-        "Clarisa"
-      ],
-      "tareas": [],
-      "decisiones": [
-        "Establecer patrones de calidad y equivalencia biometano-gas natural en regulación"
-      ],
-      "ideas": [
-        "Seguridad jurídica de largo plazo es necesaria para confianza empresarial en biometano",
-        "Infraestructura red existente (45K km) es insuficiente para ubicación plantas biometano"
-      ],
-      "frases": [
-        "el gobierno tiene que ser consistente y coherente con sus políticas de largo plazo, para dar seguranza jurídica"
-      ],
-      "preguntas_abiertas": [
-        "¿Cómo conectar plantas de biometano a red distribuida existente?",
-        "¿Por qué gobierno subsidia transporte diesel si existen políticas correctas para biometano?"
-      ],
-      "tension_signal": "alto",
-      "titulo_limitless": "Discusión sobre Inversiones y el Sector Energético en Colombia",
-      "startTime": "2026-04-16T21:03:50Z",
-      "endTime": "2026-04-16T21:24:14Z",
-      "duracion_min": 20
-    },
-    {
-      "idx": 22,
-      "resumen": "Fragmento logístico de participante intentando conectarse a sesión, buscando espacio físico para sentarse en evento/congreso. Sin contenido sustantivo.",
-      "impacto": "bajo",
-      "personas": [],
-      "tareas": [],
-      "decisiones": [],
-      "ideas": [],
-      "frases": [],
-      "preguntas_abiertas": [],
-      "tension_signal": "bajo",
-      "titulo_limitless": "Discusión sobre la experiencia brasileña en la generación de gases renovables",
-      "startTime": "2026-04-16T21:24:15Z",
-      "endTime": "2026-04-16T21:33:10Z",
-      "duracion_min": 8
-    },
-    {
-      "idx": 24,
-      "resumen": "Sebastian reflexiona sobre su salida de Jefe Coach tras malentendidos en comunicación y falta de disfrute en la relación grupal. Analiza contextualmente qué pasó, menciona conversaciones con Mari y Carolina sobre dinámicas similares, y concluye que había un 'rompimiento' que lo llevó a irse.",
-      "impacto": "medio",
-      "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Mari",
-        "Carolina",
-        "Carla"
-      ],
-      "tareas": [],
-      "decisiones": [
-        "Salida de Jefe Coach"
-      ],
-      "ideas": [
-        "Hay patrones de dinamica grupal que se repiten entre proyectos"
-      ],
-      "frases": [
-        "no me disfruto ya pues como pertenecer a al jefe coach, entonces yo dije, me voy"
-      ],
-      "preguntas_abiertas": [
-        "¿Qué específicamente generó el 'rompimiento' en la relación con el grupo de Jefe Coach?",
-        "¿Cómo evitar estos patrones en Being CoRe?"
-      ],
-      "tension_signal": "medio",
-      "titulo_limitless": "Conversación sobre Jefe Coach y temas relacionados",
-      "startTime": "2026-04-16T21:37:54Z",
-      "endTime": "2026-04-16T22:08:32Z",
-      "duracion_min": 30
-    },
-    {
-      "idx": 25,
-      "resumen": "Conversación breve y casual sobre la pérdida de un lápiz blanco. Alguien pregunta dónde se cayó, se especula si fue pateado o recogido, se decide hacer una búsqueda posterior.",
+      "resumen": "Descripción poética y fragmentada de montaña La Princesa Inhiri, reflexiones sobre terreno, planificación de obra en Antioquia y búsqueda de propiedad.",
       "impacto": "bajo",
       "personas": [
         "Unknown"
@@ -845,267 +485,1102 @@
       "tareas": [],
       "decisiones": [],
       "ideas": [],
-      "frases": [],
-      "preguntas_abiertas": [],
-      "tension_signal": "bajo",
-      "titulo_limitless": "Conversación sobre un lápiz perdido",
-      "startTime": "2026-04-16T22:15:08Z",
-      "endTime": "2026-04-16T22:19:02Z",
-      "duracion_min": 3
-    },
-    {
-      "idx": 26,
-      "resumen": "Mención muy breve de evaluar una venta de cartera y búsqueda de ubicación de alguien llamado Marce. Continúan especulando sobre el Apple Pencil perdido, valorizándolo en ~800 pesos.",
-      "impacto": "bajo",
-      "personas": [
-        "Marce"
-      ],
-      "tareas": [
-        {
-          "tarea": "Evaluar venta de cartera",
-          "responsable": "Unknown",
-          "prioridad": "media",
-          "tipo": "pendiente",
-          "contexto": "negocios Condugas",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
-        }
-      ],
-      "decisiones": [],
-      "ideas": [],
       "frases": [
-        "Ah, sí, 800 y pico, vale"
+        "La princesa Inhiri, es una montaña que cuando llueve parece que llorara"
       ],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
-      "titulo_limitless": "Discusiones sobre Negocios y Gestión.",
-      "startTime": "2026-04-16T22:19:11Z",
-      "endTime": "2026-04-16T22:24:44Z",
-      "duracion_min": 5
+      "titulo_limitless": "Descripción de un paisaje natural: La Princesa Inhiri",
+      "startTime": "2026-04-17T03:35:16Z",
+      "endTime": "2026-04-17T03:37:29Z",
+      "duracion_min": 2
     },
     {
-      "idx": 27,
-      "resumen": "Sebastian describe su situación personal: restricción horaria de salida (5:30 en adelante en el lugar donde está), obligación de ver un debate a las 7, discute cambios en un proyecto, reflexiona sobre el ciclo de vida empresarial y la valentía de emprender de nuevo. Menciona incomodidad física y que no ha preparado la reunión del 24.",
-      "impacto": "medio",
+      "idx": 17,
+      "resumen": "Discusión complexa sobre negocios inmobiliarios, estructura financiera de bloques, diferencia entre Condugas e IC, deuda entre socios y utilidades. Alto detalle financiero oscuro.",
+      "impacto": "alto",
       "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Mari",
-        "papá de Sebastian"
+        "You"
       ],
       "tareas": [
         {
-          "tarea": "Preparar reunión del 24 de abril",
+          "tarea": "Auditar estructura de deuda y cuentas por cobrar entre Condugas, socios e IC (excisión no pagada)",
           "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "alta",
-          "tipo": "pendiente",
-          "contexto": "Being CoRe o evento corporativo",
+          "prioridad": "critica",
+          "tipo": "compromiso",
+          "contexto": "Riesgo financiero Condugas - crisis de caja",
           "fecha_limite": "2026-04-24",
           "monto_cop": null,
           "personas_mencionadas": []
         }
       ],
-      "decisiones": [],
-      "ideas": [
-        "El ciclo de vida empresarial requiere valentía para reiniciar; los inversionistas buscan que empresas ejecuten tareas duras pero sin exponerse",
-        "Hay un proceso de formación que se genera de manera orgánica en Being CoRe"
-      ],
-      "frases": [
-        "al menos a cuanto, porque es que eso no es fácil ya uno en ese ciclo de vida, en ese ciclo de empresario y decir otra vez voy a arrancar",
-        "mi papá sí me lo dijo muy claro, mi hijo, yo ya no voy a estudiar más"
-      ],
-      "preguntas_abiertas": [
-        "¿Qué cambios específicos se están haciendo en el proyecto que frustra a Sebastian?",
-        "¿Cómo optimizar los procesos de formación en Being CoRe para que no se conviertan en 'chicharrones'?"
-      ],
-      "tension_signal": "medio",
-      "titulo_limitless": "Situación personal y restricciones de tiempo.",
-      "startTime": "2026-04-16T22:24:50Z",
-      "endTime": "2026-04-16T22:48:11Z",
-      "duracion_min": 23
-    },
-    {
-      "idx": 28,
-      "resumen": "Sebastian detalla la estructura de diseño de módulos en Being CoRe: cómo los objetivos llevan al reconocimiento, luego a dificultades y alternativas basadas en fortalezas. Explica que cada empresa y módulo tiene objetivos específicos que se vuelven complejos ('chicharrones'). Propone una guía mental para estructurar el proceso.",
-      "impacto": "alto",
-      "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Mari"
-      ],
-      "tareas": [
-        {
-          "tarea": "Estructurar guía de objetivos de módulos para Being CoRe",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "alta",
-          "tipo": "compromiso",
-          "contexto": "metodología Being CoRe, diseño de programas",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": [
-            "Mari"
-          ]
-        }
-      ],
       "decisiones": [
-        "Cada módulo debe tener objetivos específicos basados en fortalezas de la empresa"
+        "Sebastian se hizo 'cero a la izquierda' en el cargo eliminando su posición"
       ],
       "ideas": [
-        "El proceso de diseño debe incluir: objetivo → reconocimiento → dificultades → alternativas → plan de acción desde fortalezas",
-        "La estructura debe ser reutilizable y escalable para no reinventar en cada caso"
+        "Hay estructura de utilidades/deudas que ciclada que mantiene plata atrapada entre Condugas e IC"
       ],
       "frases": [
-        "cada empresa es un objetivo, cada empresa y cada módulo es especialmente en cada en esa dinámica, es un objetivo y eso se vuelve un chicharrón"
+        "Ya la casa no es de Condugas, es de IC",
+        "los socios se la venden a Ice que es otra empresa de Condugas creada, que no le pagaron un peso a Condugas por ella"
       ],
       "preguntas_abiertas": [
-        "¿Cómo protocolizar y documentar estos objetivos módulo por módulo para no perder información?"
+        "¿Cuánto dinero está atrapado en esta estructura de deuda Condugas-IC?",
+        "¿Quién creó Ice y por qué sin pago formal?"
       ],
-      "tension_signal": "medio",
-      "titulo_limitless": "Discusión de conceptos teóricos y su aplicación práctica.",
-      "startTime": "2026-04-16T22:48:48Z",
-      "endTime": "2026-04-16T23:20:33Z",
-      "duracion_min": 31
-    },
-    {
-      "idx": 29,
-      "resumen": "Sebastian expresa alegría por llegar al final de un proyecto, propone socialización con el grupo en esquema presencial para protocolizar entregas. Menciona que el contenido será más personalizado y diferente al anterior. Propone crear una guía de diseño reutilizable para futuros diseñadores.",
-      "impacto": "alto",
-      "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Mari",
-        "Adolfo"
-      ],
-      "tareas": [
-        {
-          "tarea": "Crear guía de diseño para ser entregada a diseñadores externos",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "alta",
-          "tipo": "compromiso",
-          "contexto": "Being CoRe, sistematización de metodología",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": [
-            "Adolfo"
-          ]
-        },
-        {
-          "tarea": "Organizar sesión de socialización grupal presencial (no virtual)",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "alta",
-          "tipo": "compromiso",
-          "contexto": "Being CoRe, cierre de proyecto",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": [
-            "Mari",
-            "Adolfo"
-          ]
-        }
-      ],
-      "decisiones": [
-        "Cambiar de formato virtual a presencial para socialización",
-        "Crear documentación de entrega (acta de entrega) antes de continuar"
-      ],
-      "ideas": [
-        "Una guía de diseño básica permitiría que un diseñador junior pueda trabajar sin dependencia permanente",
-        "El contenido personalizado requiere más tiempo en tiempo real que los procesos estructurados previos"
-      ],
-      "frases": [
-        "lo que hay que definir es que siempre la acción de la hora te permita en el futuro poder tenerlo, por eso yo lo que estoy haciendo es una guía de diseño que permita entregárselo a un prom y pueda diseñar los elementos básicos"
-      ],
-      "preguntas_abiertas": [
-        "¿Dónde y cuándo hacer la sesión presencial?"
-      ],
-      "tension_signal": "bajo",
-      "titulo_limitless": "Conversación sobre varios temas",
-      "startTime": "2026-04-16T23:20:47Z",
-      "endTime": "2026-04-16T23:38:31Z",
+      "tension_signal": "alto",
+      "titulo_limitless": "Conversación sobre negocios y finanzas",
+      "startTime": "2026-04-17T03:37:44Z",
+      "endTime": "2026-04-17T03:55:17Z",
       "duracion_min": 17
     },
     {
-      "idx": 30,
-      "resumen": "Reflexión muy breve (1 min) de Sebastian sobre la importancia de 'impecabilidad y elegancia' en el contenido y presentación. Menciona que esto es 'high ticket' y que él y otros han comentado esto con Mari y Carla. Reflexiona sobre cómo llevar esto sin comprometerse públicamente de más.",
+      "idx": 18,
+      "resumen": "Mezcla de planes sociales (dónde está la fiesta, taxi/Uber), debate sobre valores de propiedades y cambios regulatorios (POT), y oportunidad de venta.",
+      "impacto": "medio",
+      "personas": [
+        "You",
+        "Unknown"
+      ],
+      "tareas": [
+        {
+          "tarea": "Evaluar oportunidad de venta de propiedad ('coco') en contexto de nuevo POT sin restricción de 5 predios",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "decision",
+          "contexto": "Oportunidad inmobiliaria Condugas/IC",
+          "fecha_limite": "2026-04-30",
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "POT nuevo elimina restricción de 5 predios para construir"
+      ],
+      "ideas": [
+        "Cambio regulatorio genera oportunidad de venta inmediata",
+        "Propiedades duales con 2700-2800 vs 20000-18000 según ubicación"
+      ],
+      "frases": [
+        "Este es el momento para vender el coco"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál es el timeline real de aprobación del POT?",
+        "¿Qué propiedades de Condugas pueden beneficiarse?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Planes sociales y cambio de tema",
+      "startTime": "2026-04-17T03:55:18Z",
+      "endTime": "2026-04-17T03:58:38Z",
+      "duracion_min": 3
+    },
+    {
+      "idx": 19,
+      "resumen": "Descripción de lugar lujoso en Cartagena (hotel colonial de lujo), costos de habitación (1-1.5M COP/noche), estatus y ambiente 5-6 estrellas.",
       "impacto": "bajo",
       "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Mari",
-        "Carla",
-        "Adolfo",
-        "Marisol"
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "Es puro millonario",
+        "Una noche sencilla, están con el 800 un millón"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre un lugar lujoso",
+      "startTime": "2026-04-17T03:59:04Z",
+      "endTime": "2026-04-17T04:01:56Z",
+      "duracion_min": 2
+    },
+    {
+      "idx": 20,
+      "resumen": "Crítica política sobre líderes sin personalidad ni acción (referencias a Fajardo, Cepeda). Debate sobre necesidad de liderazgo activo vs pasividad.",
+      "impacto": "bajo",
+      "personas": [
+        "You",
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "En la vida no se decide por quién, se decide por quién no"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Discusión política sobre liderazgo y una breve interacción social",
+      "startTime": "2026-04-17T04:02:55Z",
+      "endTime": "2026-04-17T04:04:17Z",
+      "duracion_min": 1
+    },
+    {
+      "idx": 21,
+      "resumen": "Conversación fragmentada sobre lugares (descripción de sitio con problemas de mantenimiento), tarjeta bloqueada, ropa, zapatos y problemas de salud (hombro/radiografía).",
+      "impacto": "bajo",
+      "personas": [
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre varios temas",
+      "startTime": "2026-04-17T04:04:28Z",
+      "endTime": "2026-04-17T04:17:23Z",
+      "duracion_min": 12
+    },
+    {
+      "idx": 22,
+      "resumen": "Mezcla de contenido publicitario (Grupo de Éxito), deportes (maratón olímpico), emociones en hombres, ciberseguridad de gobiernos y diversas preferencias personales.",
+      "impacto": "bajo",
+      "personas": [
+        "Unknown"
       ],
       "tareas": [],
       "decisiones": [],
       "ideas": [
-        "La 'impecabilidad y elegancia' es un atributo de valor high ticket que debe permear la marca Being CoRe",
-        "El contenido + presentación (vestimenta, imagen) = percepción de valor"
+        "Reflexión sobre que hombres no aprenden a reconocer emociones desde crianza",
+        "Importancia de nominar emociones para relacionarse con el mundo"
       ],
       "frases": [
-        "a mí me parecen las dos que son mujeres impecables y elegantes. Y eso además tiene un contenido por dentro"
+        "Estamos acostumbrados a vivir preocupados, y no es gratis que la enfermedad del siglo veintiuno sea la ansiedad y la depresión"
       ],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
-      "titulo_limitless": "Reflexiones sobre el valor, la presentación y las cualidades personales",
-      "startTime": "2026-04-16T23:39:14Z",
-      "endTime": "2026-04-16T23:40:51Z",
-      "duracion_min": 1
+      "titulo_limitless": "Conversación Miscelánea",
+      "startTime": "2026-04-17T04:17:47Z",
+      "endTime": "2026-04-17T04:53:10Z",
+      "duracion_min": 35
     },
     {
-      "idx": 31,
-      "resumen": "Sebastian discute logística de fechas y eventos. Menciona que Carla llene un 'librito' de fechas, que él las ejecutará. Comenta sobre partidos de Medellín en Libertadores, restricciones de salida en Cartagena, y que modifiquen fechas según disponibilidad deportiva si es necesario.",
+      "idx": 23,
+      "resumen": "Conversación breve sobre manifestación, disfraces, reflexión sobre amor/fama/dinero y anuncio sobre servicio a domicilio.",
       "impacto": "bajo",
       "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Carla",
-        "Mari"
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "Amor es pasajero, la fama y el dinero"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre manifestación y disfraces",
+      "startTime": "2026-04-17T04:55:31Z",
+      "endTime": "2026-04-17T04:57:32Z",
+      "duracion_min": 2
+    },
+    {
+      "idx": 24,
+      "resumen": "Debate académico sobre riesgos y beneficios de una Asamblea Constituyente versus defensa de la Constitución de 1991. Énfasis en seguridad jurídica, estabilidad regulatoria y riesgo de constituyente permanente.",
+      "impacto": "medio",
+      "personas": [
+        "José Manuel",
+        "Magistrado",
+        "Consejo de Estado"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "La autonomía de la voluntad (art. 333) atrae inversión extranjera",
+        "Una constituyente permanente genera incertidumbre contractual para inversores",
+        "Romper el consenso del 91 sería retroceso centenario en estabilidad jurídica"
+      ],
+      "frases": [
+        "la autonomía de la voluntad, pónganse de acuerdo, es que eso está en el 333",
+        "vamos a vivir en una constituyente permanente",
+        "eso sería un retroceso centenario en Colombia"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo se garantiza seguridad jurídica si hay riesgo de cambios constitucionales permanentes?",
+        "¿Qué mensaje debe enviar la rama judicial ante cuestionamientos políticos a su existencia?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Debate sobre la Asamblea Constituyente y la Constitución de 1991",
+      "startTime": "2026-04-17T14:36:49Z",
+      "endTime": "2026-04-17T14:51:20Z",
+      "duracion_min": 14
+    },
+    {
+      "idx": 25,
+      "resumen": "Panel sobre financiación de desarrollo sostenible. Bancos multilaterales (OLA, CAF) presentan rol en integración energética regional, interconexiones eléctricas y transición energética.",
+      "impacto": "medio",
+      "personas": [
+        "OLA",
+        "CAF"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Integración regional gasífera y eléctrica en Cono Sur como oportunidad de valor",
+        "Proyectos binacionales requieren marcos regulatorios y seguridad jurídica robusta",
+        "Nivelar información asimétrica entre gobiernos y sector privado para tomar mejores decisiones"
+      ],
+      "frases": [
+        "aportar información y nivelar el campo de juego en materia de conocimiento",
+        "son proyectos que son más difíciles de financiar, ya tienen que tener un marco regulatorio",
+        "ahí hay mucho valor para capturar"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuáles son los marcos regulatorios específicos que falta en proyectos binacionales?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Financiación estratégica para el desarrollo sostenible",
+      "startTime": "2026-04-17T14:51:40Z",
+      "endTime": "2026-04-17T15:34:14Z",
+      "duracion_min": 42
+    },
+    {
+      "idx": 26,
+      "resumen": "Conferencia sobre imparcialidad en funciones de inspección, vigilancia y control. Análisis constitucional y jurisprudencial sobre separación de funciones (instructor vs. juzgador) como garantía de imparcialidad.",
+      "impacto": "alto",
+      "personas": [
+        "María Teresa",
+        "Alberto",
+        "Nicolás",
+        "Corte Constitucional",
+        "Consejo de Estado"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Separación funcional de roles es requisito mínimo de imparcialidad en inspección y vigilancia"
+      ],
+      "ideas": [
+        "Paso de monopolio estatal a mercado (art. 333, 365) requiere vigilancia imparcial",
+        "Principios de recusación y conflicto de interés deben impedir que inspector sea juez",
+        "La jurisprudencia de CIDH refuerza necesidad de separación de funciones"
+      ],
+      "frases": [
+        "la separación de funciones es una norma de derecho de carácter especial",
+        "el disciplinado investigado y luego juzgado por un funcionario competente, independiente e imparcial"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo se implementa esta separación funcional en reguladores sectoriales colombianos?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Conferencia sobre la imparcialidad en las funciones de inspección, vigilancia y control",
+      "startTime": "2026-04-17T15:34:29Z",
+      "endTime": "2026-04-17T15:51:28Z",
+      "duracion_min": 16
+    },
+    {
+      "idx": 27,
+      "resumen": "Conversación informal sobre un evento y admiración por Gilberto. Anécdota sobre empresa en buen nivel, dinero limitado, cancelación de planes, y apoyo de Gilberto con gestión de peajes.",
+      "impacto": "bajo",
+      "personas": [
+        "Gilberto",
+        "Elsa",
+        "Pablo",
+        "mamá"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "tiene la empresa en un nivel que uno dice marica",
+        "es de puta, increíble"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre un evento y el trabajo",
+      "startTime": "2026-04-17T15:57:15Z",
+      "endTime": "2026-04-17T16:00:43Z",
+      "duracion_min": 3
+    },
+    {
+      "idx": 28,
+      "resumen": "Conversación corta sobre educación financiera y análisis de mercado. Recomendación de educador financiero (Sebastián Toro, Arena Alfa) por análisis fundamental y casos de estudio. Inversión en suscripciones compartidas.",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastián Toro",
+        "Arena Alfa"
       ],
       "tareas": [
         {
-          "tarea": "Carla: llenar librito de fechas y eventos",
-          "responsable": "Carla",
+          "tarea": "Completar cursos de análisis fundamental con Sebastián Toro",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "media",
+          "tipo": "pendiente",
+          "contexto": "educacion_financiera_empresas",
+          "fecha_limite": null,
+          "monto_cop": 140000,
+          "personas_mencionadas": [
+            "Sebastián Toro"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Suscribirse a casos de estudio de Sebastián Toro, costo compartido entre 3-4 personas"
+      ],
+      "ideas": [
+        "Diversificación de Condugas últimos 2 años replica análisis fundamentales de Sebastián Toro",
+        "Análisis fundamental relevante para inversión a largo plazo vs corto plazo"
+      ],
+      "frases": [
+        "ese man estructura como si fuera un inversionista de empresas",
+        "con este man aprendí más de empresas que administrando"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Discusión sobre educación financiera y análisis de mercado",
+      "startTime": "2026-04-17T17:02:30Z",
+      "endTime": "2026-04-17T17:06:17Z",
+      "duracion_min": 3
+    },
+    {
+      "idx": 29,
+      "resumen": "Conversación fragmentada sobre logística de evento (ubicación cerca de centro de convenciones), compra de tiquetes aéreos, regalo de ropa. Anécdota de taxi con taxista petrista.",
+      "impacto": "bajo",
+      "personas": [
+        "Elsa",
+        "taxi driver"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "qué golo, te van a poner los ricos de Cartagena",
+        "la empresa que en dos días ya tenía todo cuadrado"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversaciones informales y logística de eventos",
+      "startTime": "2026-04-17T17:06:17Z",
+      "endTime": "2026-04-17T17:09:38Z",
+      "duracion_min": 3
+    },
+    {
+      "idx": 30,
+      "resumen": "Presentación de línea de productos de gas (medidores, reguladores, valvulería) en feria. Productos: medidores rotativos, turbina, ultrasónicos para instalaciones industriales. Distribución con inventario en Bogotá.",
+      "impacto": "medio",
+      "personas": [
+        "Cabaña",
+        "Mesurac"
+      ],
+      "tareas": [
+        {
+          "tarea": "Gestionar distribución de medidores rotativos y turbina desde inventario Bogotá",
+          "responsable": "equipo_comercial_Condugas",
+          "prioridad": "media",
+          "tipo": "operacional",
+          "contexto": "expansion_productos_gas_natural",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Traer a feria medidores tipo turbina, rotativos y ultrasónicos como diferencial en gas natural"
+      ],
+      "ideas": [
+        "Medidores modulares (G16, G25, G4) reducen transición operativa para clientes",
+        "Inventario en Bogotá (G25, G40, G50, G70) reduce tiempos de entrega",
+        "Marcas propias (Mesurac, equivalentes) competitivas en valvulería e instrumentación"
+      ],
+      "frases": [
+        "45 años en el mercado con tecnología de 6 m3/h",
+        "no le implica a ellos una transición operativa"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál es la estrategia de distribución para industriales vs. locales comerciales?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre productos de gas y distribución",
+      "startTime": "2026-04-17T17:09:44Z",
+      "endTime": "2026-04-17T17:17:25Z",
+      "duracion_min": 7
+    },
+    {
+      "idx": 31,
+      "resumen": "Discusión técnica sobre IA para análisis de registros de inspección (Gemini). Sebastian advierte sobre captura, estructura y flujo de datos antes de automatizar. Reflexión sobre prompt engineering y uso consultivo de IA. Anécdota hospitalaria en Toluca.",
+      "impacto": "alto",
+      "personas": [
+        "You = Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [
+        {
+          "tarea": "Definir arquitectura de datos (origen, flujo, seguridad) antes de implementar IA para registros",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "critica",
+          "tipo": "decision",
+          "contexto": "IA_registros_inspeccion",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Capacitar equipo en comunicación/prompt engineering para uso avanzado de IA (no solo consultivo)",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "pendiente",
+          "contexto": "digital_transformation",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "No automatizar sin antes mapear: origen del dato, captura, destino, seguridad"
+      ],
+      "ideas": [
+        "IA puede usarse como Google (consultivo), como analista (análisis pequenos), o como coordinador (conectar datos)",
+        "Mayoría usa IA muy superficial; 93% de comunicación es no-verbal/contextual",
+        "Reestructuración ODU busca extraer dato crudo y tocarlo donde/como se requiera",
+        "Datos de servicios pagos (privados) tienen mayor aseguramiento que gratuitos"
+      ],
+      "frases": [
+        "¿cómo hago una cosa que que no me imagino?",
+        "aprendan de comunicación, porque ustedes, normalmente, en el lenguaje, nada más el 7 por 100 de lo hablado"
+      ],
+      "preguntas_abiertas": [
+        "¿Qué metodología usar para estructurar datos de inspección antes de IA?",
+        "¿Cómo garantizar privacidad en repositorios de datos de inspectores?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Conversaciones informales y anécdotas varias",
+      "startTime": "2026-04-17T17:17:35Z",
+      "endTime": "2026-04-17T17:34:07Z",
+      "duracion_min": 16
+    },
+    {
+      "idx": 32,
+      "resumen": "Conversación fragmentada (1 min) sobre pobreza, gas, matriz energética. Reflexión sobre rol del gas en transiciones energéticas, escala de Brasil (260M habitantes), tanques estacionarios como agregación.",
+      "impacto": "bajo",
+      "personas": [
+        "You = Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Gas es actor parcial en transiciones energéticas, nunca desaparece completamente",
+        "Transición energética comienza por industria, no hogar",
+        "Escalas poblacionales (Brasil 260M) impactan viabilidad de soluciones energéticas"
+      ],
+      "frases": [
+        "va a ser siempre un actor parcial",
+        "la transición casi siempre está al principio en la industria"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Discusión sobre temas económicos, demográficos y de infraestructura",
+      "startTime": "2026-04-17T17:36:17Z",
+      "endTime": "2026-04-17T17:37:47Z",
+      "duracion_min": 1
+    },
+    {
+      "idx": 33,
+      "resumen": "Anécdotas personales sobre robo de información en Google, conflictos laborales (Fabián, Jorge William), responsabilidades en contratos, dinámicas de renovación y desempeño. Reflexión sobre necesidad de mejora continua.",
+      "impacto": "alto",
+      "personas": [
+        "You = Sebastian Sanchez Acevedo",
+        "Fabián",
+        "Jorge William",
+        "Humberto",
+        "Vanti"
+      ],
+      "tareas": [
+        {
+          "tarea": "Seguimiento a desempeño y desarrollo de equipo en contratos (referencias a Fabián, Jorge William, Vanti)",
+          "responsable": "Humberto",
+          "prioridad": "alta",
+          "tipo": "seguimiento",
+          "contexto": "gestion_equipo_operacional",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Fabián",
+            "Jorge William",
+            "Vanti"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Mejora continua diaria es requisito, no opción"
+      ],
+      "ideas": [
+        "Personas necesitan retroalimentación clara sobre desempeño (comparativa con otros)",
+        "Cambios de actitud después de 'salida del closet' afectan productividad",
+        "Renovaciones en procesos de gas requieren reconocimiento de tareas realizadas"
+      ],
+      "frases": [
+        "todos los días hay que ser mejor",
+        "me incomoda que en charlas así"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo comunicar comparativas de desempeño sin desmotivar?",
+        "¿Qué procesos de renovación están en curso en gas?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Conversaciones sobre anécdotas personales, situaciones laborales y personajes",
+      "startTime": "2026-04-17T17:37:50Z",
+      "endTime": "2026-04-17T17:48:37Z",
+      "duracion_min": 10
+    },
+    {
+      "idx": 34,
+      "resumen": "Conversación casual sobre fútbol, jugadores (Gutiérrez, Moreno, Cachorón), anécdota con Maradona y Messi, torneos en Belén. Reflexión sobre estilo de juego (tiki-taka vs. individual).",
+      "impacto": "bajo",
+      "personas": [
+        "You = Sebastian Sanchez Acevedo",
+        "Gutiérrez",
+        "Moreno",
+        "Cachorón",
+        "taño",
+        "Maradona",
+        "Messi"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "yo jugué con Maradona, ustedes no tienen nada para mostrar",
+        "es puro tiki, tiki, rote bien, muévase, organizado"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre fútbol y otros temas",
+      "startTime": "2026-04-17T17:48:44Z",
+      "endTime": "2026-04-17T17:52:58Z",
+      "duracion_min": 4
+    },
+    {
+      "idx": 35,
+      "resumen": "Reflexión breve sobre desarrollo personal, incomodidad como motor de aprendizaje, empatía vs. peripatía (comprender al otro en su proceso). Anécdota sobre árbol que da buenos frutos recibe más castigo.",
+      "impacto": "medio",
+      "personas": [
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Incomodidad forma más que comodidad",
+        "Peripatía (comprender otro en su proceso sin imponer) > empatía/simpatía",
+        "Mejores ejecutores reciben más presión (retroalimentación negativa paradójica)"
+      ],
+      "frases": [
+        "la incomodidad forma demasiado",
+        "comprender al otro en su proceso y dejar que él logre",
+        "a los árboles que dan mejores frutos les tiran más pies"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo aplicar peripatía sin perder rigor en gestión de equipo?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Reflexiones sobre el desarrollo personal y la comprensión humana",
+      "startTime": "2026-04-17T17:53:05Z",
+      "endTime": "2026-04-17T17:55:21Z",
+      "duracion_min": 2
+    },
+    {
+      "idx": 73,
+      "resumen": "Conversación informal sobre política colombiana, zona cafetera, trabajo y vida personal. Sebastian reflexiona sobre desconexión laboral, vacaciones y dinámicas familiares (vestimenta para congresos, rutina matutina con pareja).",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Paul"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "La desconexión laboral no resuelve trabajo, solo lo comprime antes/después"
+      ],
+      "frases": [
+        "Pero si usted se desconecta, el trabajo usted lo que hace es comprimirlo antes y después, el trabajo no se resuelve"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo"
+    },
+    {
+      "idx": 74,
+      "resumen": "Conversación sobre dinámicas familiares (favoritismos) y referencias a negocios oscuros con EPM. Se menciona a Roy Barreras, venta irregular de redes, riesgo legal histórico con socio asesinado (Naranjo).",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Jorge Jiménez",
+        "Benjamín",
+        "Roy Barreras",
+        "Naranjo (asesinado)",
+        "EPM"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "Vendía redes donde no se podía vender, por allá, en los Extramuros, y le hacía a EPM llevar el gas",
+        "Si no puedes con el enemigo, júntate con él"
+      ],
+      "preguntas_abiertas": [
+        "¿Qué riesgos legales persisten de esos negocios pasados?"
+      ],
+      "tension_signal": "alto"
+    },
+    {
+      "idx": 75,
+      "resumen": "Análisis crítico de dinámicas laborales internas: discrepancias salariales con Fabio y Oscar, deuda pendiente de 2 años, recomendación de terminar relación comercial. Sebastian propone convertir a socios problemáticos en lugar de expulsarlos.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Oscar",
+        "Fabio",
+        "Natalia"
+      ],
+      "tareas": [
+        {
+          "tarea": "Resolver deuda pendiente con Oscar (2 años de incumplimiento)",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "critica",
+          "tipo": "pendiente",
+          "contexto": "Relación comercial deteriorada, falta de aporte al capital",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Oscar"
+          ]
+        },
+        {
+          "tarea": "Evaluar término de relación comercial con Oscar y Fabio o convertirlos mediante estrategia de inclusión",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "decision",
+          "contexto": "Socios que no aportan capital ni ayudan, trabajan en proporción desigual",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Oscar",
+            "Fabio"
+          ]
+        }
+      ],
+      "decisiones": [
+        "La tarea no es echar socios, es convertirlos mediante conversación"
+      ],
+      "ideas": [
+        "Identificar valor oculto/intangible en relaciones comerciales",
+        "Estrategia de inclusión > expulsión"
+      ],
+      "frases": [
+        "La tarea no es echarlos, es convertirlos",
+        "No sé amenazar, yo solamente sé proponer y yo ya le he propuesto a usted cinco veces y lleva dos años en pagarme"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo convertir a socios improductivos en aliados estratégicos?",
+        "¿Qué valor oculto no está siendo reconocido en Condugas?"
+      ],
+      "tension_signal": "alto"
+    },
+    {
+      "idx": 76,
+      "resumen": "Crítica a sistema de jurados electorales colombianos. Sebastian señala que zonas de votación están concentradas en áreas de derecha, dejando zonas rojas sin representación. Frustración con ineficiencia institucional.",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "estos no sirven un culo",
+        "Hay que estar en las zonas donde donde, las zonas rojas del país, y ahí no hay forma"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo"
+    },
+    {
+      "idx": 77,
+      "resumen": "Crisis de frustración laboral: Sebastian expresa rabia por salario diferido (7 meses al 60%), amenaza abandonar empresa. Propone priorizar crisis de caja sobre operaciones. Reflexiona sobre estrategia de conversión vs expulsión de problemas.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [
+        {
+          "tarea": "Resolver crisis de tarjeta/caja (prioridad inmediata antes que empresa)",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "critica",
+          "tipo": "compromiso",
+          "contexto": "Crisis financiera personal, 7 meses de salario al 60%",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Convertir problemas en soluciones mediante conversación es mejor que echarlos"
+      ],
+      "ideas": [
+        "Estrategia de inclusión activa para problemas operacionales"
+      ],
+      "frases": [
+        "Yo 7 meses pagándome el 60% del salario por eso",
+        "yo resuelvo primero su hijo de puta tarjeta y ya después veo qué hago con la empresa",
+        "la tarea no es echarlos, es convertirlos"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál es la línea de tiempo real para resolver crisis de caja?"
+      ],
+      "tension_signal": "alto"
+    },
+    {
+      "idx": 78,
+      "resumen": "Análisis de riesgos políticos y económicos: polarización, zonas rojas controladas por violencia, riesgo de gobierno intervención en Condugas. Operaciones de emergencia sin cierre claro. Menciona amenazas de grupos armados (Antonio García).",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Antonio García"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Operaciones de emergencia requieren modelo de cierre programado"
+      ],
+      "frases": [
+        "nosotros sabemos a qué hora arrancamos, pero no a qué hora terminamos, porque depende de la emergencia",
+        "Lo primero que me da susto son las zonas rojas de Colombia, que están controladas no por la intención, sino por la violencia"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo normalizar cierres operacionales en modelo de emergencia?",
+        "¿Cuál es el riesgo real de intervención estatal en Condugas?"
+      ],
+      "tension_signal": "alto"
+    },
+    {
+      "idx": 79,
+      "resumen": "Reflexión estratégica sobre IA, física cuántica y futuros hipotéticos. Sebastian conecta Black Mirror (simulación de caminos) con Being CoRe (conciencia de lo conocido/desconocido) y relatividad de decisiones. Prospectiva: IA hará trabajo operacional, volveremos a pensadores como Nietzsche/Sócrates.",
+      "impacto": "medio",
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "IA simulará múltiples caminos hipotéticos para decisiones futuras",
+        "Física cuántica explica imposibilidad de predecir cambio de velocidad hacia el mañana",
+        "Futuro: IA operativa + humanos como pensadores/hipotecadores",
+        "Conexión entre simulación de pares (Black Mirror) y medición de conciencia (Being CoRe)"
+      ],
+      "frases": [
+        "cómo está cambiando esto y que no hay nada que pueda predecir la velocidad de movimiento de hacia dónde va",
+        "Esto nos va a llevar a un lugar que la inteligencia artificial va a hacer todo el trabajo, van a crear los pensadores"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo aplicar física cuántica a decisiones empresariales en entorno incierto?"
+      ],
+      "tension_signal": "bajo"
+    },
+    {
+      "idx": 80,
+      "resumen": "Conversación informal sobre viaje a Cartagena/zona turística. Descripción de hotel, centro histórico amurallado, preguntas sobre personas y ubicación de madre. Logística de movilización en dos carros.",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Olguita"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo"
+    },
+    {
+      "idx": 81,
+      "resumen": "Coordinación operacional: necesidad de avisar con tiempo sobre retrasos (10 días), referencia a fraudes en salarios Condugas, mención de Gematur (empresa que convirtió oficina en hoteles). Planes de viaje a Cali con Alexander.",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Carlos",
+        "Alexander"
+      ],
+      "tareas": [
+        {
+          "tarea": "Establecer protocolo de comunicación de retrasos (avisar 10 días antes)",
+          "responsable": "Equipo Condugas",
           "prioridad": "media",
           "tipo": "compromiso",
-          "contexto": "logística Being CoRe",
+          "contexto": "Operaciones de emergencia, coordinación logística",
           "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Prácticas sin fraude en salarios Condugas (mención crítica)"
+      ],
+      "ideas": [
+        "Modelo de Gematur: conversión de oficina en hotel (diversificación)"
+      ],
+      "frases": [
+        "Sin sin sin fraudes"
+      ],
+      "preguntas_abiertas": [
+        "¿Hay auditoría sobre fraudes históricos en nómina?"
+      ],
+      "tension_signal": "medio"
+    },
+    {
+      "idx": 82,
+      "resumen": "Estrategia defensiva sobre carta a EPM/entidades. Decisión de presentarse como frágiles para evitar que adversarios 'se monten encima'. Carta será usada para defenderse en futuro y atacar con Condugas. Perspectiva ambiental/reajuste bloqueada.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Cami"
+      ],
+      "tareas": [
+        {
+          "tarea": "Redactar y enviar carta estratégica (presentarse frágiles, defensiva)",
+          "responsable": "Cami",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "Negociación con EPM/autoridades, posicionamiento defensivo para futuro ataque",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Sebastian Sanchez Acevedo"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Carta debe presentar vulnerabilidad (estrategia de debilidad aparente)"
+      ],
+      "ideas": [
+        "Vulnerabilidad táctica: parecer frágiles para no ser atacados"
+      ],
+      "frases": [
+        "Hay que parecer lo más frágiles posibles, Cami, porque, si no, estos manes se nos montan encima"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál es la perspectiva ambiental/reajuste que quedó bloqueada?"
+      ],
+      "tension_signal": "alto"
+    },
+    {
+      "idx": 83,
+      "resumen": "Coordinación compleja: logística de viaje (salida 5pm, llegada aeropuerto 2h antes), decisión de comunicar asunto delicado a Camilo, propuesta de venta de propiedad, documento urgente para Mario (lunes), análisis técnico de proporciones/mano de obra (ajuste 15%), definición de consejo vs junta directiva, carga de equipaje.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Jaime",
+        "Camilo",
+        "Mario",
+        "Alberto"
+      ],
+      "tareas": [
+        {
+          "tarea": "Salir a las 5pm para llegar 2h antes al aeropuerto (logística vuelo)",
+          "responsable": "Jaime",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "Viaje coordinado",
+          "fecha_limite": "2026-04-17",
           "monto_cop": null,
           "personas_mencionadas": [
             "Sebastian Sanchez Acevedo"
           ]
         },
         {
-          "tarea": "Sebastian: ejecutar logística de eventos una vez Carla confirme fechas",
+          "tarea": "Comunicar asunto delicado a Camilo (no a través de mensaje, cara a cara)",
           "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "media",
+          "prioridad": "alta",
           "tipo": "compromiso",
-          "contexto": "logística Being CoRe",
+          "contexto": "Congreso, propuesta de venta de propiedad, decisión familiar sin involucrar a todos",
           "fecha_limite": null,
           "monto_cop": null,
           "personas_mencionadas": [
-            "Carla"
+            "Camilo"
+          ]
+        },
+        {
+          "tarea": "Preparar documento para Mario (entrega viernes para lunes, ajuste proporciones mano de obra ~15%)",
+          "responsable": "Alberto",
+          "prioridad": "critica",
+          "tipo": "compromiso",
+          "contexto": "Análisis técnico, normalización, lógica de costos",
+          "fecha_limite": "2026-04-18",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Mario",
+            "Sebastian Sanchez Acevedo"
+          ]
+        },
+        {
+          "tarea": "Redactar documento que explique intencionalidad de consejo (no junta directiva) para proteger carrera",
+          "responsable": "Alberto",
+          "prioridad": "media",
+          "tipo": "commitment",
+          "contexto": "Estructura legal/organizacional Being CoRe / Condugas",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Sebastian Sanchez Acevedo"
           ]
         }
       ],
       "decisiones": [
-        "Posible cambio de fecha del evento si Medellín juega en Libertadores en esa fecha"
+        "Involucrar solo a cuarteto (Alberto, Sebastián, Jaime, Camilo) en decisión de venta",
+        "No involucrar a familia extendida en estrategia",
+        "Proporciones de mano de obra requieren ajuste ~15% para cerrar modelo"
       ],
-      "ideas": [],
+      "ideas": [
+        "Limitar círculo de decisión a cuatro personas genera agilidad",
+        "Documento de intencionalidad clarifica naturaleza legal (consejo ≠ junta)"
+      ],
       "frases": [
-        "Aquí uno cosando en estas hijo de putas cuatro paredes todo el día en Cartagena, no, esto es una tortura"
+        "El documento para Mario, ya el lunes, yo cómo le va a llegar hoy viernes",
+        "porque o el dice, yo no quiero involucrar a todo el mundo porque esto yo voy a hacer lo que hacía Jairo"
       ],
-      "preguntas_abiertas": [],
-      "tension_signal": "bajo",
-      "titulo_limitless": "Conversación sobre planes y logística",
-      "startTime": "2026-04-16T23:41:19Z",
-      "endTime": "2026-04-16T23:55:17Z",
-      "duracion_min": 13
+      "preguntas_abiertas": [
+        "¿Cuál es el asunto delicado que Camilo debe conocer?",
+        "¿Camilo acepta el modelo de cuarteto sin familia extendida?"
+      ],
+      "tension_signal": "alto"
     },
     {
-      "idx": 32,
-      "resumen": "Sebastian participa en debate presidencial sobre energía transmitido por Noticias Caracol. Se presenta context sobre candidatos ausentes (Iván Cepeda, Alianza Verde) y sus propuestas. Claudia López responde pregunta sobre reconstrucción de confianza en democracia, proponiendo modelo económico sin minerales ni hidrocarburos.",
+      "idx": 84,
+      "resumen": "Saludo inicial sin contenido. Conversación de cierre o transición.",
+      "impacto": "bajo",
+      "personas": [],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo"
+    },
+    {
+      "idx": 48,
+      "resumen": "Instrucciones técnicas sobre colocación de QR junto a regulador en foto, impresión separada y delegación de tareas futuras para evitar errores por desconocimiento.",
+      "impacto": "medio",
+      "personas": [
+        "Unknown"
+      ],
+      "tareas": [
+        {
+          "tarea": "Imprimir QR por separado y coordinar pegado en regulador",
+          "responsable": "Unknown",
+          "prioridad": "media",
+          "tipo": "compromiso",
+          "contexto": "proyecto regulador",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Delegar tareas a otros colaboradores para no sobrecargar responsable actual",
+          "responsable": "Unknown",
+          "prioridad": "media",
+          "tipo": "decision",
+          "contexto": "distribucion de carga",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Imprimir QR separado del regulador",
+        "Delegar tareas a otros para liberar capacidad"
+      ],
+      "ideas": [
+        "Prevenir errores futuros por falta de conocimiento del procedimiento mediante documentación clara"
+      ],
+      "frases": [
+        "Cuando ya no esté usted y no lo reconozca y no lo haga a conciencia, se lo ponen trocado, y después sea todo mal"
+      ],
+      "preguntas_abiertas": [
+        "¿Quién específicamente asumirá esta tarea delegada?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Instrucciones sobre un proyecto",
+      "startTime": "2026-04-17T20:54:54Z",
+      "endTime": "2026-04-17T20:56:28Z",
+      "duracion_min": 1
+    },
+    {
+      "idx": 49,
+      "resumen": "Conversación fragmentada sobre un proyecto que está 'guagao' (avanzado), referencias a facturación por millón, reflexiones sobre experiencias de grupo y situaciones personales complejas sin contexto claro.",
       "impacto": "bajo",
       "personas": [
-        "Sebastian Sanchez Acevedo",
-        "Claudia López",
-        "Iván Cepeda",
-        "Alianza Verde"
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "facturarse un milloncito",
+        "Yo no peleo ya, no es que nos acostumbramos ya"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál es el proyecto específico que está 'guagao'?",
+        "¿Qué situación personal se está resolviendo?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Conversación sobre varios temas",
+      "startTime": "2026-04-17T21:00:45Z",
+      "endTime": "2026-04-17T21:08:09Z",
+      "duracion_min": 7
+    },
+    {
+      "idx": 50,
+      "resumen": "Llamada con Mario desde aeropuerto: envío de documento conceptual, solicitud de foto, confirmación de tiempo de 15-20 minutos antes de partir, reflexión sobre aprovechar experiencias.",
+      "impacto": "bajo",
+      "personas": [
+        "Mario",
+        "Unknown (Sebastian)"
+      ],
+      "tareas": [
+        {
+          "tarea": "Enviar documento conceptual a Mario",
+          "responsable": "Unknown",
+          "prioridad": "media",
+          "tipo": "compromiso",
+          "contexto": "comunicacion con Mario",
+          "fecha_limite": "2026-04-17",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Mario"
+          ]
+        },
+        {
+          "tarea": "Enviar foto a Mario",
+          "responsable": "Unknown",
+          "prioridad": "baja",
+          "tipo": "pendiente",
+          "contexto": "solicitud Mario",
+          "fecha_limite": "2026-04-17",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Mario"
+          ]
+        }
+      ],
+      "decisiones": [],
+      "ideas": [
+        "Aprovechar experiencias y aprendizajes durante viajes/transiciones"
+      ],
+      "frases": [
+        "cuando yo salí, para aprovechar la experiencia"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál era el contenido específico del documento?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación con Mario desde el aeropuerto",
+      "startTime": "2026-04-17T21:08:40Z",
+      "endTime": "2026-04-17T21:12:56Z",
+      "duracion_min": 4
+    },
+    {
+      "idx": 51,
+      "resumen": "Mención breve sobre preparación de crispetas y solicitud de sal.",
+      "impacto": "bajo",
+      "personas": [
+        "Unknown"
       ],
       "tareas": [],
       "decisiones": [],
@@ -1113,232 +1588,515 @@
       "frases": [],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
-      "titulo_limitless": "Análisis político y contexto socio-político regional",
-      "startTime": "2026-04-16T23:56:31Z",
-      "endTime": "2026-04-17T00:32:40Z",
-      "duracion_min": 36
+      "titulo_limitless": "Conversación sobre crispetas",
+      "startTime": "2026-04-17T21:15:08Z",
+      "endTime": "2026-04-17T21:15:15Z",
+      "duracion_min": 0
+    },
+    {
+      "idx": 52,
+      "resumen": "Interacciones breves y amables, expresiones de afecto y agradecimiento entre personas.",
+      "impacto": "bajo",
+      "personas": [
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "Venga, pajarito, está bueno"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Interacciones y comentarios diversos",
+      "startTime": "2026-04-17T21:17:10Z",
+      "endTime": "2026-04-17T21:21:15Z",
+      "duracion_min": 4
+    },
+    {
+      "idx": 53,
+      "resumen": "Diálogo con Cami/Mario sobre una situación que suena 'conveniente', reflexión sobre resolver futuro y pasado, cierre con despedida amable.",
+      "impacto": "bajo",
+      "personas": [
+        "Cami",
+        "Mario"
+      ],
+      "tareas": [
+        {
+          "tarea": "Seguimiento pendiente sobre situacion discutida",
+          "responsable": "Unknown",
+          "prioridad": "baja",
+          "tipo": "seguimiento",
+          "contexto": "situacion conveniente",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Cami",
+            "Mario"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Evaluar si la situación conveniente resuelve futuro sin afectar por cambios de comportamiento"
+      ],
+      "ideas": [],
+      "frases": [
+        "eso suena muy conveniente, ¿no?"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál era la situación conveniente que genera alerta?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Conversación sobre una situación conveniente",
+      "startTime": "2026-04-17T21:23:18Z",
+      "endTime": "2026-04-17T21:24:12Z",
+      "duracion_min": 0
+    },
+    {
+      "idx": 54,
+      "resumen": "Decisión de usar sistema automatizado para auditorías en lugar de técnicas manuales con personas; programación de bot para auditar procesos, ingresos, actualizaciones; confirmación de horario 7:25.",
+      "impacto": "alto",
+      "personas": [
+        "Unknown"
+      ],
+      "tareas": [
+        {
+          "tarea": "Implementar bot de auditoría automática para procesos",
+          "responsable": "Unknown",
+          "prioridad": "alta",
+          "tipo": "decision",
+          "contexto": "automatizacion",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Configurar alertas y auditorías en sistema para seguimiento de entradas y actualizaciones",
+          "responsable": "Unknown",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "automatizacion procesos",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Automatizar auditorías mediante bot en lugar de gestión manual",
+        "Confirmar horario de reunión 7:25"
+      ],
+      "ideas": [
+        "Sistema automático genera alertas y audita procesos de forma continua sin intervención humana"
+      ],
+      "frases": [
+        "Es que me cansé de esas técnicas con personas"
+      ],
+      "preguntas_abiertas": [
+        "¿Quién desarrollará e implementará el bot?",
+        "¿Cuál es el timeline para tener operativo?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Conversación sobre automatización y actualizaciones",
+      "startTime": "2026-04-17T21:24:27Z",
+      "endTime": "2026-04-17T21:31:14Z",
+      "duracion_min": 6
+    },
+    {
+      "idx": 55,
+      "resumen": "Sebastian demuestra herramienta IA que en 2 horas procesó conversaciones, notas y creó modelo Ser Siendo, diagnóstico y presentaciones en Gamma; prototipo en desarrollo para estructurar conversaciones automáticamente.",
+      "impacto": "alto",
+      "personas": [
+        "Unknown (audiencia)",
+        "Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [
+        {
+          "tarea": "Refinar prototipo de herramienta IA para detectar reuniones y generar presentaciones automáticas",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "automatizacion metodologia Ser Siendo",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Usar herramienta IA para procesar conversaciones y generar diagnósticos automáticos"
+      ],
+      "ideas": [
+        "Automatizar creación de presentaciones de diagnóstico a partir de conversaciones",
+        "Integrar modelo Ser Siendo en herramienta para escalar Being CoRe"
+      ],
+      "frases": [
+        "Llevo 2 horas, y este hijo de puta ya cogió todas las conversaciones",
+        "cómo la calidad de la presentación"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuándo estará operativo para uso en reuniones?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Demostración y descripción de una herramienta de procesamiento de información",
+      "startTime": "2026-04-17T21:46:19Z",
+      "endTime": "2026-04-17T21:47:17Z",
+      "duracion_min": 0
+    },
+    {
+      "idx": 56,
+      "resumen": "Propuesta de crear sandbox de debate para entrenar habilidades de comunicación e improvisación; idea de competencias de debate; mención de integración futura de productos (agua/gas) en Condugas; reflexiones sobre composición de equipos capacitados.",
+      "impacto": "medio",
+      "personas": [
+        "Julián",
+        "Unknown"
+      ],
+      "tareas": [
+        {
+          "tarea": "Diseñar y lanzar sandbox de debate para entrenar reacción inmediata",
+          "responsable": "Unknown",
+          "prioridad": "media",
+          "tipo": "decision",
+          "contexto": "desarrollo de habilidades",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Preparar competencias/ejercicios de debate para equipo",
+          "responsable": "Unknown",
+          "prioridad": "media",
+          "tipo": "compromiso",
+          "contexto": "capacitacion",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Crear sandbox de debate para entrenar habilidades de comunicación",
+        "Plantear integración de servicios agua+gas en Condugas con instaladores multidisciplinarios"
+      ],
+      "ideas": [
+        "Entrenar reacción inmediata en temas no experticia mediante debate práctico",
+        "Crear modelo integrado de servicios en Condugas con técnicos formados en ambas disciplinas",
+        "Proponer servicios integrales a clientes PM desde modelo combinado"
+      ],
+      "frases": [
+        "Yo quiero hacer un sandbox del debate, que la gente vamos a llevar un caso"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuándo comienza el sandbox de debate?",
+        "¿Cómo se evaluará la competencia adquirida?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación diversa",
+      "startTime": "2026-04-17T21:48:12Z",
+      "endTime": "2026-04-17T22:09:54Z",
+      "duracion_min": 21
+    },
+    {
+      "idx": 57,
+      "resumen": "Sebastian reflexiona sobre 14 años en Condugas comprendiendo humanos + 10 años investigación sin lograr transferir conocimiento, conecta con ley de actuar con valentía en ideas propias; cierre reflexivo sin tareas concretas.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "El mayor desafío no es aprender sino transferir conocimiento y permitir que otros logren frutos propios",
+        "La valentía en la acción propia es clave para la transformación"
+      ],
+      "frases": [
+        "Tengo una frase importantísima. Haber transcurrido mis últimos 14 años en comprender el humano en Condugas, y 10 de estudio e investigación sin lograr exactamente transferir todo",
+        "Actúa con valentía en una de tus ideas de hoy, que fue mi idea del pasado"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo se puede lograr real transferencia de conocimiento en Being CoRe?",
+        "¿Qué modelos de escalabilidad funcionan para la metodología Ser Siendo?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Reflexión sobre la experiencia de un orador en la comprensión humana y la transferencia de conocimiento",
+      "startTime": "2026-04-17T23:29:17Z",
+      "endTime": "2026-04-17T23:30:06Z",
+      "duracion_min": 0
     }
   ],
   "arcos_dia": [
     {
-      "tema": "Estrategia energética Colombia: gas natural, transición y desafíos de implementación",
+      "tema": "Crisis financiera y laboral en Condugas",
       "reuniones_idx": [
+        11,
+        18,
+        75,
+        76,
+        78,
+        79,
+        82,
+        83,
+        84
+      ],
+      "peso_pct": 35,
+      "personas": [
+        "Sebastian",
+        "Fabio",
+        "Oscar",
+        "Roy Barreras",
+        "EPM",
+        "Camilo",
+        "Mario"
+      ],
+      "descripcion": "Tensión creciente sobre salarios diferidos (7 meses al 60%), deuda pendiente de 2 años con socios, operaciones sin cierre claro, riesgo político con EPM e intervención estatal. Propuesta de terminar relaciones comerciales y convertir a socios. Estrategia defensiva mediante carta a entidades."
+    },
+    {
+      "tema": "Reflexion identitaria y legado familiar",
+      "reuniones_idx": [
+        7,
+        12,
+        34,
+        36,
+        58
+      ],
+      "peso_pct": 25,
+      "personas": [
+        "Sebastian",
+        "padre",
+        "madre",
+        "tio"
+      ],
+      "descripcion": "Monólogo de 44 minutos sobre identidad, herencia de padre controlador y madre sacrificada. Conflictos laborales internos reflejan dinámicas familiares. Conexión entre frustración empresarial y patrones heredados. Reflexión final sobre 24 años en investigación sin lograr transferir conocimiento."
+    },
+    {
+      "tema": "Oportunidad energética regional Colombia-Venezuela",
+      "reuniones_idx": [
+        1,
+        3,
         4,
         5,
         6,
         9,
-        10,
-        18,
-        19,
-        20,
-        21,
-        22
+        14,
+        25,
+        26,
+        31,
+        33,
+        57
       ],
-      "peso_pct": 45,
+      "peso_pct": 40,
       "personas": [
         "Sebastian",
-        "Jorge Henao",
-        "Speaker Granfan",
-        "Speaker argentino",
-        "Naturagás panel"
+        "Roy Barreras",
+        "Paloma"
       ],
-      "descripcion": "Análisis integral del sector gasífero colombiano: comparativas con Vaca Muerta (Argentina), desafíos de comercialización y licenciamiento con 120 comunidades, integración regional sudamericana, transición energética Brasil-Colombia, experiencias biometano brasileño, herramientas de inversión (obras por impuestos, fondos especiales) y regulación. Énfasis en moléculas llegando a hogares, industria y transporte."
-    },
-    {
-      "tema": "Proyecto Being CoRe: diseño modular, estructura y entrega final",
-      "reuniones_idx": [
-        15,
-        29,
-        30
-      ],
-      "peso_pct": 20,
-      "personas": [
-        "Sebastian",
-        "PM",
-        "Equipo Being CoRe"
-      ],
-      "descripcion": "Evolución del proyecto Being CoRe desde revisión de diseño gráfico (cambio círculo a lineal), especificaciones de canastillas, hasta estructura de módulos basada en objetivos-reconocimiento-dificultades-alternativas. Cierre del proyecto con propuesta de socialización presencial para protocolizar entregas con contenido personalizado por empresa."
-    },
-    {
-      "tema": "Conflictos internos: Condugas, socios y transiciones personales",
-      "reuniones_idx": [
-        3,
-        8,
-        13,
-        16,
-        25
-      ],
-      "peso_pct": 18,
-      "personas": [
-        "Sebastian",
-        "Olga",
-        "Natalia",
-        "Camilo",
-        "Carlos López",
-        "doña Claudia",
-        "Catalina",
-        "Hilda"
-      ],
-      "descripcion": "Tensiones familiares y empresariales en Condugas (conflictos con socios Camilo y Carlos López, doña Claudia), estrategia de transición gas a agua, reconocimiento a Olga y Natalia, salida de Sebastian de Jefe Coach por malentendidos comunicacionales, caso legal de Catalina con PM, búsqueda de personas que hayan 'guerreado' el negocio."
+      "descripcion": "Plan a 20 años: gasoducto, agroindustria, bioeconomía. Debate sobre minería ilegal, soberanía energética, fracking. Propuesta de línea de productos (medidores, reguladores). Crisis educativa interna: equipo no entiende finanzas ni administración. Integración futura de agua/gas en Condugas como respuesta a falta de transferencia de conocimiento."
     }
   ],
   "preguntas_abiertas_dia": [
-    "¿Cuál es el estado actual del licenciamiento con las 120 comunidades en el proyecto de gas colombiano y qué obstáculos falta resolver para 2027?",
-    "¿Cómo se resuelven los problemas de liquidez de distribuidores de GNL en Costa Caribe según propuesta de Granfan?",
-    "¿Cuál es la viabilidad real de masificación de cobertura de gas en Caribe y Guajira con herramientas actuales de inversión?",
-    "¿Qué lecciones del biometano brasileño (100K m3/día en Ceará) son replicables en contexto colombiano?",
-    "¿Cómo se materializa la transición gas natural con propósito (hogares, industria, comercio, transporte) en estructura Being CoRe y proyectos Condugas?"
+    "¿Cómo resuelve Sebastian la crisis de caja y salarios diferidos sin abandonar Condugas?",
+    "¿Cuál es el estado real de la deuda entre socios (2 años pendiente) y las utilidades oscuras mencionadas?",
+    "¿Se materializa el Plan Colombia-Venezuela o sigue siendo reflexión sin ejecución?",
+    "¿Por qué 24 años de investigación sobre humanos no se transfieren como conocimiento operativo?",
+    "¿Qué significa estratégicamente presentarse como frágiles ante EPM y adversarios?"
   ],
   "tensiones_dia": [
-    "Conflicto latente en Condugas entre Sebastian, socios (Camilo, Carlos López) y doña Claudia sobre estrategia de transición gas-agua sin resolución clara",
-    "Desalineamiento en comunicación en Jefe Coach que llevó a salida de Sebastian, indicando vulnerabilidad en dinámicas grupales replicables",
-    "Brecha entre ambición de proyecto de gas colombiano (120 comunidades, licenciamiento) y capacidad real de ejecución con restricciones políticas y financieras",
-    "Disparidad Brasil-Colombia: Brasil con 12M residencias, biometano consolidado; Colombia sin estrategia integrada de biometano ni plantas regionales",
-    "Caso legal pendiente de Catalina con PM sin claridad sobre justificación y resolución, implicando reputación de Condugas"
+    "Brecha brutal entre visión estratégica (energía regional, IA, educación) y realidad operativa (salarios atrasados, personal sin educación financiera, deudas pendientes)",
+    "Identidad de Sebastian dividida entre padre controlador y madre sacrificada, reflejada en dinámicas laborales donde exige control pero culpa a otros por no aprender",
+    "Posicionamiento político ambiguo: crítica a Petro, asociación con Roy Barreras, pero riesgo de intervención estatal en Condugas que requeriría defensa legal",
+    "Automatización IA avanzada (Gemini, Gamma, bot auditor) contrasta con incapacidad de transferir conocimiento humano básico en equipos",
+    "Amenaza de abandono personal vs. dependencia de estructura empresarial para identidad y supervivencia económica"
   ],
   "tareas_candidatas": [
     {
-      "tarea": "Definir estrategia de comunicación interna sobre transición gas→agua",
+      "tarea": "Educar al equipo en doctrina empresarial y administración financiera",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Resolver fricción familiar con doña Claudia y Paola sobre estructura de aportes",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Comunicar decisión de no cubrir más pagos de servicio de consultoría",
-      "responsable": "Speaker",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Explorar convenios con EPM para regasificadoras Antioquia/Urabá",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Seguimiento obra civil ampliación Tasajera (infraestructura, no equipos)",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Monitorear situación Promigas: equipos en China, falta de pago, bypass trasmetano",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Mejorar diagramación y diseño de documentación de proyecto (cuadernillo)",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Corregir estructura gráfica original (círculo/distancia/cuadrante) - revertir cambio a lineal",
-      "responsable": "Diseñador gráfico",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Diseñar e imprimir etiquetas canastillas: 100 unidades plastificadas, optimizadas a 90.000 COP, con hueco adaptado",
-      "responsable": "Área de producción/diseño",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Incluir correo de Adolfo en toda la presentación y diseñar gráfico 'camino que voy a recorrer' como carretera",
-      "responsable": "Diseñador gráfico",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Optimizar layout etiquetas canastillas: zona L4 arriba (color), nombre abajo (blanco/negro), logo grande con hueco, adhesivo contact",
-      "responsable": "Diseñador gráfico",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Diseñar segundo cuadernillo considerando impresión digital y física, sofisticación visual",
-      "responsable": "Diseñador gráfico",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Evaluar venta de cartera",
+      "tarea": "Asegurar que todos los que vayan como IC entreguen informe de gestión",
       "responsable": "Unknown",
       "prioridad": "media"
     },
     {
-      "tarea": "Preparar reunión del 24 de abril",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Estructurar guía de objetivos de módulos para Being CoRe",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Crear guía de diseño para ser entregada a diseñadores externos",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Organizar sesión de socialización grupal presencial (no virtual)",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Carla: llenar librito de fechas y eventos",
-      "responsable": "Carla",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Sebastian: ejecutar logística de eventos una vez Carla confirme fechas",
+      "tarea": "Validar sistema de 'orejas de levante' como mecanismo real de escucha a empleados vs percepción de artificio",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "media"
     },
     {
-      "tarea": "Avanzar proceso de licenciamiento ambiental y social (ruta crítica)",
-      "responsable": "Speaker proyecto",
+      "tarea": "Evaluar oportunidad de venta de propiedad ('coco') en contexto de nuevo POT sin restricción de 5 predios",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Completar cursos de análisis fundamental con Sebastián Toro",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Gestionar distribución de medidores rotativos y turbina desde inventario Bogotá",
+      "responsable": "equipo_comercial_Condugas",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Capacitar equipo en comunicación/prompt engineering para uso avanzado de IA (no solo consultivo)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Seguimiento a desempeño y desarrollo de equipo en contratos (referencias a Fabián, Jorge William, Vanti)",
+      "responsable": "Humberto",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Evaluar término de relación comercial con Oscar y Fabio o convertirlos mediante estrategia de inclusión",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Establecer protocolo de comunicación de retrasos (avisar 10 días antes)",
+      "responsable": "Equipo Condugas",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Redactar y enviar carta estratégica (presentarse frágiles, defensiva)",
+      "responsable": "Cami",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Salir a las 5pm para llegar 2h antes al aeropuerto (logística vuelo)",
+      "responsable": "Jaime",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Comunicar asunto delicado a Camilo (no a través de mensaje, cara a cara)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Redactar documento que explique intencionalidad de consejo (no junta directiva) para proteger carrera",
+      "responsable": "Alberto",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Imprimir QR por separado y coordinar pegado en regulador",
+      "responsable": "Unknown",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Delegar tareas a otros colaboradores para no sobrecargar responsable actual",
+      "responsable": "Unknown",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Enviar documento conceptual a Mario",
+      "responsable": "Unknown",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Enviar foto a Mario",
+      "responsable": "Unknown",
+      "prioridad": "baja"
+    },
+    {
+      "tarea": "Seguimiento pendiente sobre situacion discutida",
+      "responsable": "Unknown",
+      "prioridad": "baja"
+    },
+    {
+      "tarea": "Implementar bot de auditoría automática para procesos",
+      "responsable": "Unknown",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Configurar alertas y auditorías en sistema para seguimiento de entradas y actualizaciones",
+      "responsable": "Unknown",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Refinar prototipo de herramienta IA para detectar reuniones y generar presentaciones automáticas",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Diseñar y lanzar sandbox de debate para entrenar reacción inmediata",
+      "responsable": "Unknown",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Preparar competencias/ejercicios de debate para equipo",
+      "responsable": "Unknown",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Presentar propuesta de restructuración a don Darío",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Dar seguimiento a caso legal Catalina y PM - obtener información de justificación de incumplimientos",
+      "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en PM e incorporando Banti, gas de occidente, infraestructura",
       "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Auditar estructura de deuda y cuentas por cobrar entre Condugas, socios e IC (excisión no pagada)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Definir arquitectura de datos (origen, flujo, seguridad) antes de implementar IA para registros",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Resolver deuda pendiente con Oscar (2 años de incumplimiento)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Resolver crisis de tarjeta/caja (prioridad inmediata antes que empresa)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Preparar documento para Mario (entrega viernes para lunes, ajuste proporciones mano de obra ~15%)",
+      "responsable": "Alberto",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Condugas quiere pivotar: soltar gas y migrar a aguas",
-    "Retomar perforación como entrada a negocio de agua (ya pagado)",
-    "Gas se reconoce como hidrocarburo energético esencial para coyuntura y transición",
-    "Comercialización de gas lograda nov-dic 2024 con Ecopetrol",
-    "Licenciamiento es ahora la ruta crítica (no técnica ni comercial)",
-    "Vaca Muerta pasó de promesa a realidad: productor récord",
-    "No continuar cubriendo pago de servicio de consultoría",
-    "Retirarse como referente integral",
-    "Reconocer trabajo de Natalia en gestión de agendas",
-    "Granfan se posiciona como aliado integral en cadena GNL (productor, trader, desarrollador, inversionista)"
+    "Cierre de transmisión en pantalla abierta, continuar en plataformas digitales",
+    "Presentar Plan Colombia-Venezuela a 20 años al Presidente Trump y candidato ganador desde 7 de agosto",
+    "Cambiar lenguaje corporativo: no solo PM, incluir Banti y gas de occidente",
+    "Los muchachos se quedan si se les trata bien y tienen beneficios",
+    "Sebastian se hizo 'cero a la izquierda' en el cargo eliminando su posición",
+    "POT nuevo elimina restricción de 5 predios para construir",
+    "Separación funcional de roles es requisito mínimo de imparcialidad en inspección y vigilancia",
+    "Suscribirse a casos de estudio de Sebastián Toro, costo compartido entre 3-4 personas",
+    "Traer a feria medidores tipo turbina, rotativos y ultrasónicos como diferencial en gas natural",
+    "No automatizar sin antes mapear: origen del dato, captura, destino, seguridad"
   ],
   "ideas_capturadas": [
-    "Combinar pasión por fotografía con buceo profesional",
-    "Reflexión sobre cómo la IA está transformando el pensamiento",
-    "Hacer podcast sobre realidad del emprendimiento (desmitificar narrativa romántica)",
-    "Analizar diferencia entre modelos de trabajo: Sebastian vs socios",
-    "Gobierno nacional debe apalancar procesos con incentivos y responsabilidad institucional",
-    "Riesgo tecnológico y ejecución son titánicos en proyectos de perforación e infraestructura",
-    "Cambio de estructuración del proceso de consulta a fines 2025 / inicio 2026",
-    "Balance necesario: atender comunidades vs prioridad nacional (50M ciudadanos)",
-    "Incentivos de precio en origen fue disparador clave para inversión (3-4B USD)",
-    "Modelo federal argentino (provincias como propietarias) fue factor habilitante"
+    "Involucrar comunidades como socios diretos en proyectos de minería/energía, no solo como receptores de regalías",
+    "Internacionalizar licenciamiento social: comunidades reciben utilidades e invierten en su territorio",
+    "Minería regulada con impuestos + obras públicas es modelo vs minería ilegal con mercurio",
+    "Minería ilegal (80% de exportaciones) es crimen sistemático que afecta medio ambiente y comunidades",
+    "Seguridad jurídica y tributaria son prioridad, no reducción de impuestos",
+    "Energías renovables y petróleo/gas NO son antagónicos; 46% territorio protegido, 54% abierto a exploración",
+    "Alianzas público-privadas-comunitarias: industria construye relaciones directas con comunidades para destrabar proyectos",
+    "Combatir criminalidad: empresarios legales vs criminales corruptos",
+    "Plan binacional Colombia-Venezuela con reglas comunes de inversión/impuestos/seguridad jurídica",
+    "3 ejes: energía (recuperar gasoducto), agroindustria (llanuras compartidas), bioeconomía-Amazonía"
   ],
   "frases_poderosas": [
-    "Algún día voy a tomarle fotos como fotógrafo principal en un bote",
-    "Uno está acabado de los 25 para él, yo de los 32 que me empecé a lesionar",
-    "Nosotros queremos ser aguas. Nosotros queremos ir soltando el gas",
-    "Yo tenía ganas de decir qué es con ser empresario y levantarse y decir voy a renunciar",
-    "El gas es un hidrocarburo energético esencial para la coyuntura y transición energética"
+    "¿Por qué no involucramos a las comunidades en los proyectos en los que va la inversión pública y privada como socios de esos proyectos?",
+    "La diferencia es si vamos a hacer minería o no. Es si la vamos a hacer con criminales, sometiendo a la gente con mercurio, o si la vamos a hacer con licencia ambiental",
+    "El 80% que se exporta hoy es proveniente de la minería ilegal, es un crimen de enormes dimensiones",
+    "El tema no es bajar impuestos sino darle seguridad jurídica, seguridad tributaria",
+    "Energías renovables y petróleo no son enemigos"
   ],
   "alertas_supervivencia": [
-    "Falta de voluntad política para inversiones energéticas en Colombia: obras por impuestos y fondos especiales no garantizan masificación de cobertura gasista",
-    "Distribuidores Costa Caribe sin liquidez y sector térmico bajo presión financiera: viabilidad de GNL en riesgo sin restructuración de modelo de ventas",
-    "Salida de Sebastian de Jefe Coach y conflictos en Condugas sugieren degradación de cohesión interna en ecosistema empresarial de Sebastian",
-    "Proyectos energéticos dependen de decisiones regulatorias brasileñas y argentinas: capacidad de Colombia de integración regional limitada por dependencias geopolíticas",
-    "Being CoRe cierra sin claridad de escalabilidad: modelo personalizado por empresa puede ser insostenible si demanda crece"
+    "CRITICA: Salario diferido 7 meses al 60% genera riesgo inminente de salida de Sebastian o colapso operacional",
+    "POLITICA: Riesgo de intervención estatal en Condugas por dinámicas oscuras con EPM y socios asesinados históricos",
+    "FINANCIERA: Deuda entre socios de 2 años sin resolución, estructura financiera de bloques no clara, dinámicas de utilidades oscuras",
+    "OPERACIONAL: Personal sin educación financiera + falta de transferencia de conocimiento = empresa vulnerable a errores sistémicos",
+    "PERSONAL: Rabia y frustración creciente de Sebastian sobre 24 años sin resultados tangibles en transferencia de conocimiento"
   ]
 }
