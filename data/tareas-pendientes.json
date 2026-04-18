@@ -1046,7 +1046,495 @@
         "Darío Sánchez"
       ],
       "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r2-001",
+      "tarea": "Definir estrategia de comunicación interna sobre transición gas→agua",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Condugas busca pivotar de gas a agua/aguas; conflicto con modelo de trabajo de socios",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Camilo",
+        "Carlos López"
+      ],
+      "segmento_idx": 2,
+      "segmento_titulo": "Conversaciones sobre asuntos cotidianos y personales",
+      "segmento_inicio": "2026-04-16T00:20:40Z",
+      "segmento_fin": "2026-04-16T00:59:03Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Camilo",
+        "Carlos López",
+        "Doña Claudia",
+        "Gustavo",
+        "Paola",
+        "mamá de Sebastian"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r2-002",
+      "tarea": "Resolver fricción familiar con doña Claudia y Paola sobre estructura de aportes",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Conflicto entre modelo de trabajo de Sebastian vs socios; historia de pelea con doña Claudia",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "doña Claudia",
+        "Paola",
+        "mamá"
+      ],
+      "segmento_idx": 2,
+      "segmento_titulo": "Conversaciones sobre asuntos cotidianos y personales",
+      "segmento_inicio": "2026-04-16T00:20:40Z",
+      "segmento_fin": "2026-04-16T00:59:03Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Camilo",
+        "Carlos López",
+        "Doña Claudia",
+        "Gustavo",
+        "Paola",
+        "mamá de Sebastian"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r6-003",
+      "tarea": "Comunicar decisión de no cubrir más pagos de servicio de consultoría",
+      "responsable": "Speaker",
+      "prioridad": "media",
+      "contexto": "Servicio centrado en grupo, poco en temas conyugales; se retira como referente integral",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": "2026-04-16",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Dueños/socios"
+      ],
+      "segmento_idx": 6,
+      "segmento_titulo": "Conversación sobre varios temas",
+      "segmento_inicio": "2026-04-16T15:16:13Z",
+      "segmento_fin": "2026-04-16T15:27:31Z",
+      "segmento_personas": [
+        "Speaker",
+        "EPM",
+        "Socios/dueños",
+        "Grupo familiar"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-16-r7-004x",
+      "tarea": "Explorar convenios con EPM para regasificadoras Antioquia/Urabá",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "EPM tiene regasificadoras en Antioquia; Promigas es competencia (problemas previos)",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "EPM",
+        "Promigas",
+        "Multipetrol"
+      ],
+      "segmento_idx": 7,
+      "segmento_titulo": "Conversaciones informales, anécdotas y reflexiones",
+      "segmento_inicio": "2026-04-16T15:27:31Z",
+      "segmento_fin": "2026-04-16T16:18:00Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Olga",
+        "Natalia",
+        "EPM",
+        "Promigas",
+        "Multipetrol"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r7-005x",
+      "tarea": "Seguimiento obra civil ampliación Tasajera (infraestructura, no equipos)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Condugas hace obra civil; otro contrato maneja equipos/logística",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 7,
+      "segmento_titulo": "Conversaciones informales, anécdotas y reflexiones",
+      "segmento_inicio": "2026-04-16T15:27:31Z",
+      "segmento_fin": "2026-04-16T16:18:00Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Olga",
+        "Natalia",
+        "EPM",
+        "Promigas",
+        "Multipetrol"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r7-006",
+      "tarea": "Monitorear situación Promigas: equipos en China, falta de pago, bypass trasmetano",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Riesgo de que Promigas traverse el negocio; bloqueo de montaje por falta de pago",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Promigas"
+      ],
+      "segmento_idx": 7,
+      "segmento_titulo": "Conversaciones informales, anécdotas y reflexiones",
+      "segmento_inicio": "2026-04-16T15:27:31Z",
+      "segmento_fin": "2026-04-16T16:18:00Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Olga",
+        "Natalia",
+        "EPM",
+        "Promigas",
+        "Multipetrol"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r10-007",
+      "tarea": "Mejorar diagramación y diseño de documentación de proyecto (cuadernillo)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Documento tiene base teórica válida pero pobre presentación gráfica; necesita diseño moderno/atractivo",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 10,
+      "segmento_titulo": "Conversación casual sobre planes personales y comida",
+      "segmento_inicio": "2026-04-16T17:37:15Z",
+      "segmento_fin": "2026-04-16T17:51:48Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Project manager/oficial"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-16-r14-008",
+      "tarea": "Corregir estructura gráfica original (círculo/distancia/cuadrante) - revertir cambio a lineal",
+      "responsable": "Diseñador gráfico",
+      "prioridad": "alta",
+      "contexto": "Presentación Being CoRe",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "being-core",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 14,
+      "segmento_titulo": "Discusión sobre la marcación de canastillas y la revisión de elementos gráficos y de presentación.",
+      "segmento_inicio": "2026-04-16T18:45:21Z",
+      "segmento_fin": "2026-04-16T18:56:44Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r14-009",
+      "tarea": "Diseñar e imprimir etiquetas canastillas: 100 unidades plastificadas, optimizadas a 90.000 COP, con hueco adaptado",
+      "responsable": "Área de producción/diseño",
+      "prioridad": "alta",
+      "contexto": "Canastillas operativas Condugas",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": 90000,
+      "personas": [],
+      "segmento_idx": 14,
+      "segmento_titulo": "Discusión sobre la marcación de canastillas y la revisión de elementos gráficos y de presentación.",
+      "segmento_inicio": "2026-04-16T18:45:21Z",
+      "segmento_fin": "2026-04-16T18:56:44Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r14-010",
+      "tarea": "Incluir correo de Adolfo en toda la presentación y diseñar gráfico 'camino que voy a recorrer' como carretera",
+      "responsable": "Diseñador gráfico",
+      "prioridad": "media",
+      "contexto": "Presentación Being CoRe",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "being-core",
+      "monto_cop": null,
+      "personas": [
+        "Adolfo"
+      ],
+      "segmento_idx": 14,
+      "segmento_titulo": "Discusión sobre la marcación de canastillas y la revisión de elementos gráficos y de presentación.",
+      "segmento_inicio": "2026-04-16T18:45:21Z",
+      "segmento_fin": "2026-04-16T18:56:44Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r14-011",
+      "tarea": "Optimizar layout etiquetas canastillas: zona L4 arriba (color), nombre abajo (blanco/negro), logo grande con hueco, adhesivo contact",
+      "responsable": "Diseñador gráfico",
+      "prioridad": "alta",
+      "contexto": "Etiquetado canastillas",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 14,
+      "segmento_titulo": "Discusión sobre la marcación de canastillas y la revisión de elementos gráficos y de presentación.",
+      "segmento_inicio": "2026-04-16T18:45:21Z",
+      "segmento_fin": "2026-04-16T18:56:44Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r14-012",
+      "tarea": "Diseñar segundo cuadernillo considerando impresión digital y física, sofisticación visual",
+      "responsable": "Diseñador gráfico",
+      "prioridad": "media",
+      "contexto": "Documentos Being CoRe",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "being-core",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 14,
+      "segmento_titulo": "Discusión sobre la marcación de canastillas y la revisión de elementos gráficos y de presentación.",
+      "segmento_inicio": "2026-04-16T18:45:21Z",
+      "segmento_fin": "2026-04-16T18:56:44Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r26-013",
+      "tarea": "Evaluar venta de cartera",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "negocios Condugas",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 26,
+      "segmento_titulo": "Discusiones sobre Negocios y Gestión.",
+      "segmento_inicio": "2026-04-16T22:19:11Z",
+      "segmento_fin": "2026-04-16T22:24:44Z",
+      "segmento_personas": [
+        "Marce"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-16-r27-014",
+      "tarea": "Preparar reunión del 24 de abril",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Being CoRe o evento corporativo",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "being-core",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 27,
+      "segmento_titulo": "Situación personal y restricciones de tiempo.",
+      "segmento_inicio": "2026-04-16T22:24:50Z",
+      "segmento_fin": "2026-04-16T22:48:11Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Mari",
+        "papá de Sebastian"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-16-r28-015",
+      "tarea": "Estructurar guía de objetivos de módulos para Being CoRe",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "metodología Being CoRe, diseño de programas",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "being-core",
+      "monto_cop": null,
+      "personas": [
+        "Mari"
+      ],
+      "segmento_idx": 28,
+      "segmento_titulo": "Discusión de conceptos teóricos y su aplicación práctica.",
+      "segmento_inicio": "2026-04-16T22:48:48Z",
+      "segmento_fin": "2026-04-16T23:20:33Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Mari"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r29-016",
+      "tarea": "Crear guía de diseño para ser entregada a diseñadores externos",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Being CoRe, sistematización de metodología",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "being-core",
+      "monto_cop": null,
+      "personas": [
+        "Adolfo"
+      ],
+      "segmento_idx": 29,
+      "segmento_titulo": "Conversación sobre varios temas",
+      "segmento_inicio": "2026-04-16T23:20:47Z",
+      "segmento_fin": "2026-04-16T23:38:31Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Mari",
+        "Adolfo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r29-017",
+      "tarea": "Organizar sesión de socialización grupal presencial (no virtual)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Being CoRe, cierre de proyecto",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "being-core",
+      "monto_cop": null,
+      "personas": [
+        "Mari",
+        "Adolfo"
+      ],
+      "segmento_idx": 29,
+      "segmento_titulo": "Conversación sobre varios temas",
+      "segmento_inicio": "2026-04-16T23:20:47Z",
+      "segmento_fin": "2026-04-16T23:38:31Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Mari",
+        "Adolfo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-16-r31-018",
+      "tarea": "Carla: llenar librito de fechas y eventos",
+      "responsable": "Carla",
+      "prioridad": "media",
+      "contexto": "logística Being CoRe",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "being-core",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 31,
+      "segmento_titulo": "Conversación sobre planes y logística",
+      "segmento_inicio": "2026-04-16T23:41:19Z",
+      "segmento_fin": "2026-04-16T23:55:17Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Carla",
+        "Mari"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-16-r31-019",
+      "tarea": "Sebastian: ejecutar logística de eventos una vez Carla confirme fechas",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "logística Being CoRe",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-16",
+      "fecha_limite": null,
+      "categoria_sugerida": "being-core",
+      "monto_cop": null,
+      "personas": [
+        "Carla"
+      ],
+      "segmento_idx": 31,
+      "segmento_titulo": "Conversación sobre planes y logística",
+      "segmento_inicio": "2026-04-16T23:41:19Z",
+      "segmento_fin": "2026-04-16T23:55:17Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Carla",
+        "Mari"
+      ],
+      "segmento_impacto": "bajo"
     }
   ],
-  "ultima_actualizacion": "2026-04-18T17:08:08.898111"
+  "ultima_actualizacion": "2026-04-18T17:21:33.552188"
 }

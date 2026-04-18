@@ -1,16 +1,1344 @@
 {
   "fecha": "2026-04-16",
   "total_lifelogs": 33,
-  "total_reuniones": 0,
+  "total_reuniones": 32,
   "procesado_con": "haiku_v3_structured",
-  "procesado_at": "2026-04-18T17:08:08",
-  "reuniones": [],
-  "arcos_dia": [],
-  "preguntas_abiertas_dia": [],
-  "tensiones_dia": [],
-  "tareas_candidatas": [],
-  "decisiones": [],
-  "ideas_capturadas": [],
-  "frases_poderosas": [],
-  "alertas_supervivencia": []
+  "procesado_at": "2026-04-18T17:21:33",
+  "reuniones": [
+    {
+      "idx": 0,
+      "resumen": "Sebastian reflexiona sobre sus aspiraciones personales de buceo, fotografía submarina y viajes largos. Monólogo introspectivo sobre experiencias pasadas en San Andrés y sueños de expansión geográfica.",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Combinar pasión por fotografía con buceo profesional"
+      ],
+      "frases": [
+        "Algún día voy a tomarle fotos como fotógrafo principal en un bote"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuándo retomar el buceo de forma seria?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre buceo y experiencias relacionadas",
+      "startTime": "2026-04-16T00:06:15Z",
+      "endTime": "2026-04-16T00:12:47Z",
+      "duracion_min": 6
+    },
+    {
+      "idx": 1,
+      "resumen": "Conversación sobre crianza de hijos, fútbol, jugadores como Luis Díaz, análisis deportivo y reflexiones sobre inteligencia artificial. Tono casual y reflexivo.",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Reflexión sobre cómo la IA está transformando el pensamiento"
+      ],
+      "frases": [
+        "Uno está acabado de los 25 para él, yo de los 32 que me empecé a lesionar"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre un niño, fútbol y otros temas",
+      "startTime": "2026-04-16T00:12:49Z",
+      "endTime": "2026-04-16T00:20:26Z",
+      "duracion_min": 7
+    },
+    {
+      "idx": 2,
+      "resumen": "Monólogo largo de Sebastian sobre conflictos familiares en Condugas, estrategia de transición de gas a agua, tensiones con socios (Camilo, Carlos López, doña Claudia), reflexión sobre podcasts de emprendimiento y frustración sobre cambios organizacionales.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Camilo",
+        "Carlos López",
+        "Doña Claudia",
+        "Gustavo",
+        "Paola",
+        "mamá de Sebastian"
+      ],
+      "tareas": [
+        {
+          "tarea": "Definir estrategia de comunicación interna sobre transición gas→agua",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "decision",
+          "contexto": "Condugas busca pivotar de gas a agua/aguas; conflicto con modelo de trabajo de socios",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Camilo",
+            "Carlos López"
+          ]
+        },
+        {
+          "tarea": "Resolver fricción familiar con doña Claudia y Paola sobre estructura de aportes",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "Conflicto entre modelo de trabajo de Sebastian vs socios; historia de pelea con doña Claudia",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "doña Claudia",
+            "Paola",
+            "mamá"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Condugas quiere pivotar: soltar gas y migrar a aguas",
+        "Retomar perforación como entrada a negocio de agua (ya pagado)"
+      ],
+      "ideas": [
+        "Hacer podcast sobre realidad del emprendimiento (desmitificar narrativa romántica)",
+        "Analizar diferencia entre modelos de trabajo: Sebastian vs socios"
+      ],
+      "frases": [
+        "Nosotros queremos ser aguas. Nosotros queremos ir soltando el gas",
+        "Yo tenía ganas de decir qué es con ser empresario y levantarse y decir voy a renunciar"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo reconciliar modelo de trabajo de Sebastian con estructura de socios?",
+        "¿Qué tan viable es la transición gas→agua financieramente?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Conversaciones sobre asuntos cotidianos y personales",
+      "startTime": "2026-04-16T00:20:40Z",
+      "endTime": "2026-04-16T00:59:03Z",
+      "duracion_min": 38
+    },
+    {
+      "idx": 3,
+      "resumen": "Panel técnico sobre mercado de hidrocarburos en Colombia. Speakers de empresa 9 y gobierno discuten rol del gas como energético esencial, retos de ejecución, atracción de capital y mitigación de riesgos en transición energética.",
+      "impacto": "medio",
+      "personas": [
+        "Speaker empresa 9",
+        "Pablo (experto en entorno)"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Gas se reconoce como hidrocarburo energético esencial para coyuntura y transición"
+      ],
+      "ideas": [
+        "Gobierno nacional debe apalancar procesos con incentivos y responsabilidad institucional",
+        "Riesgo tecnológico y ejecución son titánicos en proyectos de perforación e infraestructura"
+      ],
+      "frases": [
+        "El gas es un hidrocarburo energético esencial para la coyuntura y transición energética",
+        "El equilibrio entre interés de comunidades vs interés nacional es un equilibrio complejo"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo atraer capital en contexto de entorno hostil a hidrocarburos?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Discusión sobre el mercado de hidrocarburos en Colombia",
+      "startTime": "2026-04-16T14:31:10Z",
+      "endTime": "2026-04-16T14:46:15Z",
+      "duracion_min": 15
+    },
+    {
+      "idx": 4,
+      "resumen": "Exposición sobre proyecto de gas en Colombia: desafíos de comercialización resueltos en 2024, licenciamiento como ruta crítica actual, proceso con 120 comunidades desde mayo 2024, avance a 2 años, necesidad de balance entre demandas territoriales y prioridad de 50M colombianos.",
+      "impacto": "alto",
+      "personas": [
+        "Speaker proyecto"
+      ],
+      "tareas": [
+        {
+          "tarea": "Avanzar proceso de licenciamiento ambiental y social (ruta crítica)",
+          "responsable": "Speaker proyecto",
+          "prioridad": "critica",
+          "tipo": "seguimiento",
+          "contexto": "120 comunidades, meta de producción 2030",
+          "fecha_limite": "2030-12-31",
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Comercialización de gas lograda nov-dic 2024 con Ecopetrol",
+        "Licenciamiento es ahora la ruta crítica (no técnica ni comercial)"
+      ],
+      "ideas": [
+        "Cambio de estructuración del proceso de consulta a fines 2025 / inicio 2026",
+        "Balance necesario: atender comunidades vs prioridad nacional (50M ciudadanos)"
+      ],
+      "frases": [
+        "La parte técnica estamos tranquilos, la comercial avanzamos, pero el gran desafío ahora es licenciamiento",
+        "Tenemos que balancear con la prioridad de 50 millones de colombianos"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo acelerar licenciamiento sin alienar 120 comunidades?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Discusión sobre un proyecto de energía en Colombia",
+      "startTime": "2026-04-16T14:46:15Z",
+      "endTime": "2026-04-16T14:52:00Z",
+      "duracion_min": 5
+    },
+    {
+      "idx": 5,
+      "resumen": "Comparación estratégica entre Vaca Muerta (Argentina) y potencial gasífero en Colombia. Speaker argentino destaca récords de producción (850k bbl/d, 5.6 Bcfd gas), rol de incentivos de precio, federalismo (provincias), y lecciones sobre integración regulatoria ambiental.",
+      "impacto": "alto",
+      "personas": [
+        "Speaker argentino (Vaca Muerta)"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Vaca Muerta pasó de promesa a realidad: productor récord"
+      ],
+      "ideas": [
+        "Incentivos de precio en origen fue disparador clave para inversión (3-4B USD)",
+        "Modelo federal argentino (provincias como propietarias) fue factor habilitante",
+        "Colombia podría replicar: incentivos de precio + claridad regulatoria ambiental"
+      ],
+      "frases": [
+        "Argentina pasó de importar gas (8B USD/año déficit) a ser productor récord",
+        "Los incentivos en el precio del origen permitieron que las empresas invirtieran en serio"
+      ],
+      "preguntas_abiertas": [
+        "¿Qué incentivos de precio necesita Colombia para atraer inversión tipo Vaca Muerta?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Discusión sobre el potencial de gas en Colombia y la experiencia de Vaca Muerta",
+      "startTime": "2026-04-16T14:52:00Z",
+      "endTime": "2026-04-16T15:16:09Z",
+      "duracion_min": 24
+    },
+    {
+      "idx": 6,
+      "resumen": "Conversación informal sobre gas natural, política, evento con EPM (cancelado por acusación de campaña política), discusión sobre consultoría familiar/conyugal, decisión de no cubrir más pagos de servicios. Tono de frustración y abandono.",
+      "impacto": "medio",
+      "personas": [
+        "Speaker",
+        "EPM",
+        "Socios/dueños",
+        "Grupo familiar"
+      ],
+      "tareas": [
+        {
+          "tarea": "Comunicar decisión de no cubrir más pagos de servicio de consultoría",
+          "responsable": "Speaker",
+          "prioridad": "media",
+          "tipo": "decision",
+          "contexto": "Servicio centrado en grupo, poco en temas conyugales; se retira como referente integral",
+          "fecha_limite": "2026-04-16",
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Dueños/socios"
+          ]
+        }
+      ],
+      "decisiones": [
+        "No continuar cubriendo pago de servicio de consultoría",
+        "Retirarse como referente integral"
+      ],
+      "ideas": [
+        "Beneficios de gas natural transforman calidad de vida (cocina, calefacción)",
+        "Evento EPM fue cancelado por acusación de campaña política (riesgo reputacional)"
+      ],
+      "frases": [
+        "El gas natural no solo transforma forma de cocinar, también calidad de vida",
+        "Nos sentimos huérfanos"
+      ],
+      "preguntas_abiertas": [
+        "¿Por qué el servicio de consultoría derivó a temas solo de grupo?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Conversación sobre varios temas",
+      "startTime": "2026-04-16T15:16:13Z",
+      "endTime": "2026-04-16T15:27:31Z",
+      "duracion_min": 11
+    },
+    {
+      "idx": 7,
+      "resumen": "50 minutos de monólogo de Sebastian: elogio a Olga (transformación personal), reconocimiento a Natalia por gestión de agendas, descripción de servicios de Condugas (gasoductos, conducción gas alta presión occidente/Buenaventura), análisis de oportunidades EPM-Urabá, problemas Promigas (bypass trasmetano, equipos en China sin pagar), obra civil Tasajera.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Olga",
+        "Natalia",
+        "EPM",
+        "Promigas",
+        "Multipetrol"
+      ],
+      "tareas": [
+        {
+          "tarea": "Explorar convenios con EPM para regasificadoras Antioquia/Urabá",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "EPM tiene regasificadoras en Antioquia; Promigas es competencia (problemas previos)",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "EPM",
+            "Promigas",
+            "Multipetrol"
+          ]
+        },
+        {
+          "tarea": "Seguimiento obra civil ampliación Tasajera (infraestructura, no equipos)",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "seguimiento",
+          "contexto": "Condugas hace obra civil; otro contrato maneja equipos/logística",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Monitorear situación Promigas: equipos en China, falta de pago, bypass trasmetano",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "media",
+          "tipo": "seguimiento",
+          "contexto": "Riesgo de que Promigas traverse el negocio; bloqueo de montaje por falta de pago",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Promigas"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Reconocer trabajo de Natalia en gestión de agendas"
+      ],
+      "ideas": [
+        "Olga ha evolucionado: mantiene estructura pero con mayor pausa, análisis y humanidad",
+        "Oportunidad EPM en Urabá sin explorar (tiene regasificadoras)",
+        "Condugas maneja gasoductos municipios, conducción alta presión occidente/Buenaventura"
+      ],
+      "frases": [
+        "Esa mujer es un roble: estructura se mantiene pero más pausada, analítica, tranquila, humana",
+        "Natalia hizo un trabajo tremendo en agendas"
+      ],
+      "preguntas_abiertas": [
+        "¿Por qué Condugas no tiene convenios con EPM si hay regasificadoras en territorio?",
+        "¿Cuándo resolverá Promigas su deuda de equipos en China?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Conversaciones informales, anécdotas y reflexiones",
+      "startTime": "2026-04-16T15:27:31Z",
+      "endTime": "2026-04-16T16:18:00Z",
+      "duracion_min": 50
+    },
+    {
+      "idx": 8,
+      "resumen": "Panel sobre GNL en Colombia: speaker Granfan explica desafíos financieros del sector térmico (distribuidores Costa Caribe sin liquidez), necesidad de visibilidad de ventas. Granfan es propietario ~1 GW térmica, consumidor gas, trader corto plazo, desarrollador infraestructura, accionista GNL Texas Energy/Alaska (30M ton/año). Propone rol como aliado multi-eslabón cadena GNL.",
+      "impacto": "alto",
+      "personas": [
+        "Speaker Granfan"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Granfan se posiciona como aliado integral en cadena GNL (productor, trader, desarrollador, inversionista)"
+      ],
+      "ideas": [
+        "Interconexión sector eléctrico-gas es clave",
+        "Dificultad financiera distribuidores Costa Caribe requiere claridad en visibilidad de ventas",
+        "Granfan puede participar en cualquier eslabón: producción (30M ton/año), transmisión, distribución, comercialización"
+      ],
+      "frases": [
+        "Granfan tenemos muchos diferentes sombreros en Colombia",
+        "Debería pensarnos como aliado en cualquiera de las partes de la cadena"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo resolver crisis de liquidez de distribuidores Costa Caribe?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Discusión sobre la situación del GNL en Colombia",
+      "startTime": "2026-04-16T16:18:07Z",
+      "endTime": "2026-04-16T16:39:39Z",
+      "duracion_min": 21
+    },
+    {
+      "idx": 9,
+      "resumen": "Panel 55 min: Jorge Henao (moderador) sobre integración regional gas en Sudamérica. Analiza yacimientos Bolivia/Argentina (Vaca Muerta)/Surinam/Guyana/Perú (Camisea). Enfatiza importancia de centros de acopio regional ante riesgos climáticos (Niño). Propone diversificación de fuentes energéticas (gas, renovables) para resiliencia frente a sequía/fenómeno del Niño.",
+      "impacto": "alto",
+      "personas": [
+        "Jorge Henao",
+        "Adriano (mención)"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Integración regional debe construir centros de acopio por países"
+      ],
+      "ideas": [
+        "Venezuela, Surinam, Guyana, Perú (Camisea) son fuentes potenciales para Colombia",
+        "Gas Camisea: $6/MMBtu es más económico de región; accesible por gasoductos o puertos",
+        "Fenómeno del Niño requiere diversificación: gas + renovables + múltiples fuentes",
+        "Centros de acopio regional permiten suplir déficits de países vecinos"
+      ],
+      "frases": [
+        "Esos centros de integración regional también los debemos tener en el norte del continente",
+        "La única manera de prepararnos es tener diferentes fuentes de suministro"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo convencer a Venezuela a participar en integración energética regional?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Panel: Moléculas en movimiento - El rol estratégico del transporte de gas natural",
+      "startTime": "2026-04-16T16:39:48Z",
+      "endTime": "2026-04-16T17:35:37Z",
+      "duracion_min": 55
+    },
+    {
+      "idx": 10,
+      "resumen": "Monólogo casual de Sebastian: comentarios sobre entrenamiento/desayuno. Luego discurso de oficial/project manager sobre importancia de proyecto infraestructura para seguridad energética, transición energética, aprovechamiento descubrimientos costa afuera y recursos interior. Enfoque ambiental y territorial.",
+      "impacto": "medio",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Project manager/oficial"
+      ],
+      "tareas": [
+        {
+          "tarea": "Mejorar diagramación y diseño de documentación de proyecto (cuadernillo)",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "media",
+          "tipo": "compromiso",
+          "contexto": "Documento tiene base teórica válida pero pobre presentación gráfica; necesita diseño moderno/atractivo",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Proyecto será paso gigante para seguridad energética y transición energética"
+      ],
+      "ideas": [
+        "Documentación debe ser cuadernillo horizontal con respuestas y esquemas diagramados",
+        "Valor agregado en diseño gráfico moderno puede mejorar adopción/conexión con usuario"
+      ],
+      "frases": [
+        "Un paso gigante para fortalecer la seguridad energética y un paso seguro hacia la transición energética",
+        "No agregas valor porque los gráficos se empeoran"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación casual sobre planes personales y comida",
+      "startTime": "2026-04-16T17:37:15Z",
+      "endTime": "2026-04-16T17:51:48Z",
+      "duracion_min": 14
+    },
+    {
+      "idx": 11,
+      "resumen": "Interacción brevísima (5 segundos): pregunta sobre colocación física de un objeto. Sin contexto ni importancia estratégica.",
+      "impacto": "bajo",
+      "personas": [
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Una breve interacción sobre la ubicación de un objeto",
+      "startTime": "2026-04-16T18:01:12Z",
+      "endTime": "2026-04-16T18:01:17Z",
+      "duracion_min": 0
+    },
+    {
+      "idx": 12,
+      "resumen": "Conversación reflexiva sobre el proyecto ODU, su implementación y oportunidades de crecimiento. Sebastian reflexiona sobre necesidad de personas que hayan 'guerreado' el negocio y conocimiento integral de la operación. Menciona estudios en logística como señal de interés en asumir responsabilidades mayores.",
+      "impacto": "medio",
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Buscar personas con experiencia operativa real para roles clave en ODU"
+      ],
+      "ideas": [
+        "Integrar talento que conoce gremio, operaciones y cultura interna",
+        "Asumir responsabilidades en logística requiere conocimiento previo + disposición"
+      ],
+      "frases": [
+        "cuatro días van a resumirse a media hora, una hora de cuatro personas",
+        "ustedes conocen el negocio, ustedes conocen la gente, ustedes conocen el gremio"
+      ],
+      "preguntas_abiertas": [
+        "¿Quién asumirá responsabilidad completa de logística con todas las implicaciones?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Conversaciones personales y políticas, incluyendo un caso legal complejo",
+      "startTime": "2026-04-16T18:04:06Z",
+      "endTime": "2026-04-16T18:34:50Z",
+      "duracion_min": 30
+    },
+    {
+      "idx": 13,
+      "resumen": "Mención fragmentaria sobre cambio de documental sin completar explicación. Reunión incompleta, sin contenido sustantivo.",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [],
+      "preguntas_abiertas": [
+        "¿Por qué cambiar el documental? ¿Qué se necesita?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Cambio de Documental",
+      "startTime": "2026-04-16T18:35:04Z",
+      "endTime": "2026-04-16T18:35:09Z",
+      "duracion_min": 0
+    },
+    {
+      "idx": 14,
+      "resumen": "Sesión de revisión de diseño gráfico para presentación Being CoRe. Sebastian crítica cambios en estructura (círculo → lineal) y proporciona especificaciones detalladas para etiquetado de canastillas, impresión y optimización de costos. Enfoque en pulido estético y funcionalidad.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "tareas": [
+        {
+          "tarea": "Corregir estructura gráfica original (círculo/distancia/cuadrante) - revertir cambio a lineal",
+          "responsable": "Diseñador gráfico",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "Presentación Being CoRe",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Diseñar e imprimir etiquetas canastillas: 100 unidades plastificadas, optimizadas a 90.000 COP, con hueco adaptado",
+          "responsable": "Área de producción/diseño",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "Canastillas operativas Condugas",
+          "fecha_limite": null,
+          "monto_cop": 90000,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Incluir correo de Adolfo en toda la presentación y diseñar gráfico 'camino que voy a recorrer' como carretera",
+          "responsable": "Diseñador gráfico",
+          "prioridad": "media",
+          "tipo": "compromiso",
+          "contexto": "Presentación Being CoRe",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Adolfo"
+          ]
+        },
+        {
+          "tarea": "Optimizar layout etiquetas canastillas: zona L4 arriba (color), nombre abajo (blanco/negro), logo grande con hueco, adhesivo contact",
+          "responsable": "Diseñador gráfico",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "Etiquetado canastillas",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Diseñar segundo cuadernillo considerando impresión digital y física, sofisticación visual",
+          "responsable": "Diseñador gráfico",
+          "prioridad": "media",
+          "tipo": "compromiso",
+          "contexto": "Documentos Being CoRe",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [
+        "Revertir cambio de estructura gráfica a formato original (circular)",
+        "Reducir cantidad de etiquetas de 400 a 100 para optimizar costo",
+        "Implementar doble impresión (color + blanco/negro) en etiquetas"
+      ],
+      "ideas": [
+        "Plastificar etiquetas para durabilidad y ajuste perfecto en huecos canastilla",
+        "Técnica de adhesivo contact para fijación sin deterioro visual"
+      ],
+      "frases": [
+        "tienes que pulirlo estéticamente, que es todo lo que se quiere acá",
+        "la original tiene un círculo, un yo, una distancia hasta el entorno y al lado hay un cuadrante"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuáles son las técnicas de impresión adicionales para mejorar presentación de etiquetas?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Discusión sobre la marcación de canastillas y la revisión de elementos gráficos y de presentación.",
+      "startTime": "2026-04-16T18:45:21Z",
+      "endTime": "2026-04-16T18:56:44Z",
+      "duracion_min": 11
+    },
+    {
+      "idx": 15,
+      "resumen": "Conversación fragmentaria sobre caso legal de Catalina, PM (Project Manager) y situación de incumplimiento. Sebastian menciona haber contactado a Hilda para obtener información sobre justificación de descarados/incumplimientos. Tono de investigación táctica.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Catalina",
+        "Hilda",
+        "Carlos",
+        "PM"
+      ],
+      "tareas": [
+        {
+          "tarea": "Dar seguimiento a caso legal Catalina y PM - obtener información de justificación de incumplimientos",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "critica",
+          "tipo": "seguimiento",
+          "contexto": "Caso legal complejo",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Catalina",
+            "Hilda",
+            "PM"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Contactar a Hilda como intermediaria para obtener información sobre caso"
+      ],
+      "ideas": [
+        "Usar tácticas de pesca de información (lanzar preguntas abiertas) para obtener datos relevantes"
+      ],
+      "frases": [
+        "el desespero",
+        "yo tiro las cosas así para pescar"
+      ],
+      "preguntas_abiertas": [
+        "¿Cuál es el estado exacto del caso legal Catalina?",
+        "¿Qué justificación están presentando desde PM sobre el incumplimiento?",
+        "¿Cuál es el impacto financiero/operativo de este incumplimiento?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Conversación sobre un caso y otros temas",
+      "startTime": "2026-04-16T18:57:49Z",
+      "endTime": "2026-04-16T18:59:42Z",
+      "duracion_min": 1
+    },
+    {
+      "idx": 16,
+      "resumen": "Conversación educativa sobre beneficios del gas natural para calidad de vida, con reflexiones analogía sobre energía/nutrición y conceptos técnicos (Git, caché, RAM). Sin decisiones ejecutivas concretas.",
+      "impacto": "bajo",
+      "personas": [],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "Posicionamiento: gas natural transforma no solo cocina sino calidad de vida completa",
+        "Educación del sector: necesidad de 'introducción' antes de contenido técnico complejo"
+      ],
+      "frases": [
+        "cuando el gas natural llega, no solo transforma la forma de cocinar, también mejora la calidad de vida",
+        "un libro sin leer la introducción, usted lo empieza a leer y usted no entiende"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre varios temas",
+      "startTime": "2026-04-16T18:59:42Z",
+      "endTime": "2026-04-16T19:08:03Z",
+      "duracion_min": 8
+    },
+    {
+      "idx": 17,
+      "resumen": "Panel sobre transición energética Colombia-Brasil. Análisis de inversiones 2015-2024 (4:1 combustibles fósiles vs renovables), oportunidades en gas asociado brasileño (190M m3/día feb 2026), rol del gas como molécula de transición. Discusión sobre geopolítica, resiliencia y seguridad de suministro energético.",
+      "impacto": "alto",
+      "personas": [],
+      "tareas": [],
+      "decisiones": [
+        "Reconocer gas como molécula de transición energética, no solo combustible fósil"
+      ],
+      "ideas": [
+        "Oportunidad Brasil: gas asociado no aprovechado (190M m3/día)",
+        "Geopolítica energética como nuevo paradigma (seguridad suministro > emisiones)",
+        "Resiliencia sectorial requiere abordaje holístico (ciberseguridad, riesgos maliciosos, desastres naturales)"
+      ],
+      "frases": [
+        "la base ya no es solo las emisiones, sino la geopolítica",
+        "seguridad del suministro"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo balancear subsidios, precios y señales de mercado sin distorsionar mercados que funcionan?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Discusión sobre la transición energética y el sector energético en Colombia y Brasil",
+      "startTime": "2026-04-16T19:08:04Z",
+      "endTime": "2026-04-16T19:42:34Z",
+      "duracion_min": 34
+    },
+    {
+      "idx": 18,
+      "resumen": "Panel Naturagás (30 años): productores-distribuidores dialogando sobre garantizar moléculas lleguen con propósito (hogares, industria, comercio, transporte). Comparativa Brasil-Colombia: 12M residenciales COL vs 5M BRA. Enfoque confiabilidad, inversión largo plazo, valor social.",
+      "impacto": "alto",
+      "personas": [
+        "Luz Estela",
+        "Carlos",
+        "Rodolfo",
+        "Orlando",
+        "Juan",
+        "Nicolás"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Posicionar moléculas con propósito como valor central (confiabilidad + inversión LT + valor social)"
+      ],
+      "ideas": [
+        "Mercado Brasil 50% tamaño Colombia pero con menor penetración residencial - oportunidad crecimiento",
+        "Necesidad diálogo productor-distribuidor para alineación estratégica"
+      ],
+      "frases": [
+        "garantizar que las moléculas sigan llegando con propósito a los hogares, a la industria, al comercio, al transporte"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Discusión sobre la transición energética y el gas natural",
+      "startTime": "2026-04-16T19:47:31Z",
+      "endTime": "2026-04-16T20:30:31Z",
+      "duracion_min": 43
+    },
+    {
+      "idx": 19,
+      "resumen": "Análisis experiencia brasileña biometano: 100K m3/día en Ceará (2018, residuos urbanos = 20% consumo estatal). Plan Goiás 500 buses biometano/GNB. Biometano menos volátil geopolíticamente que diesel/combustibles fósiles. Regulación: ley gas 2021, combustibles futuro, equivalencia biometano-gas natural, certificado Segove en reglamentación.",
+      "impacto": "alto",
+      "personas": [
+        "Clarisa"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Reconocer biometano como alternativa menos volátil que diesel en contexto geopolítico",
+        "Establecer equivalencia regulatoria biometano-gas natural"
+      ],
+      "ideas": [
+        "Captar biometano desde residuos urbanos/industriales - modelo Ceará replicable",
+        "Transporte flota pesada: biometano más estable que diesel en volatilidad geopolítica",
+        "Marcos regulatorios (leyes 2021, combustibles futuro, Segove) como facilitadores"
+      ],
+      "frases": [
+        "biometano, diferentemente del diesel, diferentemente de otros combustibles fósiles, tiene mucha volatilidad, es afectado por los factores geopolíticos"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo conectar plantas de biometano alejadas de redes de distribución existentes?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Debate Presidencial sobre Energía en Colombia",
+      "startTime": "2026-04-16T20:30:41Z",
+      "endTime": "2026-04-16T20:56:40Z",
+      "duracion_min": 25
+    },
+    {
+      "idx": 20,
+      "resumen": "Debate inversiones sector energético Colombia. Herramientas: obras por impuestos, fondo especial, cuota fomento - masificación cobertura (gasistas Caribe, Gases Guajira). Preocupación: voluntad política como factor crítico. Regulación buena pero requiere certidumbre y adaptación continua.",
+      "impacto": "alto",
+      "personas": [
+        "Pastor"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Priorizar competitividad del sector sobre mantención de subsidios para cobertura"
+      ],
+      "ideas": [
+        "Mecanismos subsidio conexiones (obras por impuestos, cuota fomento) han masificado cobertura en zonas sin capacidad pago",
+        "Voluntad política como variable crítica - capacidad/ingeniería/recursos son factibles pero decisión política es otra"
+      ],
+      "frases": [
+        "la voluntad política es la otra"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo mantener crecimiento cobertura sin sacrificar competitividad del sector?",
+        "¿Cuál es la voluntad política real para transición energética?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Discusión sobre el biometano en Brasil",
+      "startTime": "2026-04-16T20:56:40Z",
+      "endTime": "2026-04-16T21:03:50Z",
+      "duracion_min": 7
+    },
+    {
+      "idx": 21,
+      "resumen": "Análisis regulatorio Brasil biometano: patrones calidad, equivalencia legal con gas natural, certificado Segove, políticas largo plazo. Desafío: plantas biometano alejadas de red (45K km distribución + 9.5K transporte). Inconsistencia política: subsidios diesel aunque existan políticas correctas biometano.",
+      "impacto": "alto",
+      "personas": [
+        "Clarisa"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Establecer patrones de calidad y equivalencia biometano-gas natural en regulación"
+      ],
+      "ideas": [
+        "Seguridad jurídica de largo plazo es necesaria para confianza empresarial en biometano",
+        "Infraestructura red existente (45K km) es insuficiente para ubicación plantas biometano"
+      ],
+      "frases": [
+        "el gobierno tiene que ser consistente y coherente con sus políticas de largo plazo, para dar seguranza jurídica"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo conectar plantas de biometano a red distribuida existente?",
+        "¿Por qué gobierno subsidia transporte diesel si existen políticas correctas para biometano?"
+      ],
+      "tension_signal": "alto",
+      "titulo_limitless": "Discusión sobre Inversiones y el Sector Energético en Colombia",
+      "startTime": "2026-04-16T21:03:50Z",
+      "endTime": "2026-04-16T21:24:14Z",
+      "duracion_min": 20
+    },
+    {
+      "idx": 22,
+      "resumen": "Fragmento logístico de participante intentando conectarse a sesión, buscando espacio físico para sentarse en evento/congreso. Sin contenido sustantivo.",
+      "impacto": "bajo",
+      "personas": [],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Discusión sobre la experiencia brasileña en la generación de gases renovables",
+      "startTime": "2026-04-16T21:24:15Z",
+      "endTime": "2026-04-16T21:33:10Z",
+      "duracion_min": 8
+    },
+    {
+      "idx": 24,
+      "resumen": "Sebastian reflexiona sobre su salida de Jefe Coach tras malentendidos en comunicación y falta de disfrute en la relación grupal. Analiza contextualmente qué pasó, menciona conversaciones con Mari y Carolina sobre dinámicas similares, y concluye que había un 'rompimiento' que lo llevó a irse.",
+      "impacto": "medio",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Mari",
+        "Carolina",
+        "Carla"
+      ],
+      "tareas": [],
+      "decisiones": [
+        "Salida de Jefe Coach"
+      ],
+      "ideas": [
+        "Hay patrones de dinamica grupal que se repiten entre proyectos"
+      ],
+      "frases": [
+        "no me disfruto ya pues como pertenecer a al jefe coach, entonces yo dije, me voy"
+      ],
+      "preguntas_abiertas": [
+        "¿Qué específicamente generó el 'rompimiento' en la relación con el grupo de Jefe Coach?",
+        "¿Cómo evitar estos patrones en Being CoRe?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Conversación sobre Jefe Coach y temas relacionados",
+      "startTime": "2026-04-16T21:37:54Z",
+      "endTime": "2026-04-16T22:08:32Z",
+      "duracion_min": 30
+    },
+    {
+      "idx": 25,
+      "resumen": "Conversación breve y casual sobre la pérdida de un lápiz blanco. Alguien pregunta dónde se cayó, se especula si fue pateado o recogido, se decide hacer una búsqueda posterior.",
+      "impacto": "bajo",
+      "personas": [
+        "Unknown"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre un lápiz perdido",
+      "startTime": "2026-04-16T22:15:08Z",
+      "endTime": "2026-04-16T22:19:02Z",
+      "duracion_min": 3
+    },
+    {
+      "idx": 26,
+      "resumen": "Mención muy breve de evaluar una venta de cartera y búsqueda de ubicación de alguien llamado Marce. Continúan especulando sobre el Apple Pencil perdido, valorizándolo en ~800 pesos.",
+      "impacto": "bajo",
+      "personas": [
+        "Marce"
+      ],
+      "tareas": [
+        {
+          "tarea": "Evaluar venta de cartera",
+          "responsable": "Unknown",
+          "prioridad": "media",
+          "tipo": "pendiente",
+          "contexto": "negocios Condugas",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [
+        "Ah, sí, 800 y pico, vale"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Discusiones sobre Negocios y Gestión.",
+      "startTime": "2026-04-16T22:19:11Z",
+      "endTime": "2026-04-16T22:24:44Z",
+      "duracion_min": 5
+    },
+    {
+      "idx": 27,
+      "resumen": "Sebastian describe su situación personal: restricción horaria de salida (5:30 en adelante en el lugar donde está), obligación de ver un debate a las 7, discute cambios en un proyecto, reflexiona sobre el ciclo de vida empresarial y la valentía de emprender de nuevo. Menciona incomodidad física y que no ha preparado la reunión del 24.",
+      "impacto": "medio",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Mari",
+        "papá de Sebastian"
+      ],
+      "tareas": [
+        {
+          "tarea": "Preparar reunión del 24 de abril",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "pendiente",
+          "contexto": "Being CoRe o evento corporativo",
+          "fecha_limite": "2026-04-24",
+          "monto_cop": null,
+          "personas_mencionadas": []
+        }
+      ],
+      "decisiones": [],
+      "ideas": [
+        "El ciclo de vida empresarial requiere valentía para reiniciar; los inversionistas buscan que empresas ejecuten tareas duras pero sin exponerse",
+        "Hay un proceso de formación que se genera de manera orgánica en Being CoRe"
+      ],
+      "frases": [
+        "al menos a cuanto, porque es que eso no es fácil ya uno en ese ciclo de vida, en ese ciclo de empresario y decir otra vez voy a arrancar",
+        "mi papá sí me lo dijo muy claro, mi hijo, yo ya no voy a estudiar más"
+      ],
+      "preguntas_abiertas": [
+        "¿Qué cambios específicos se están haciendo en el proyecto que frustra a Sebastian?",
+        "¿Cómo optimizar los procesos de formación en Being CoRe para que no se conviertan en 'chicharrones'?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Situación personal y restricciones de tiempo.",
+      "startTime": "2026-04-16T22:24:50Z",
+      "endTime": "2026-04-16T22:48:11Z",
+      "duracion_min": 23
+    },
+    {
+      "idx": 28,
+      "resumen": "Sebastian detalla la estructura de diseño de módulos en Being CoRe: cómo los objetivos llevan al reconocimiento, luego a dificultades y alternativas basadas en fortalezas. Explica que cada empresa y módulo tiene objetivos específicos que se vuelven complejos ('chicharrones'). Propone una guía mental para estructurar el proceso.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Mari"
+      ],
+      "tareas": [
+        {
+          "tarea": "Estructurar guía de objetivos de módulos para Being CoRe",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "metodología Being CoRe, diseño de programas",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Mari"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Cada módulo debe tener objetivos específicos basados en fortalezas de la empresa"
+      ],
+      "ideas": [
+        "El proceso de diseño debe incluir: objetivo → reconocimiento → dificultades → alternativas → plan de acción desde fortalezas",
+        "La estructura debe ser reutilizable y escalable para no reinventar en cada caso"
+      ],
+      "frases": [
+        "cada empresa es un objetivo, cada empresa y cada módulo es especialmente en cada en esa dinámica, es un objetivo y eso se vuelve un chicharrón"
+      ],
+      "preguntas_abiertas": [
+        "¿Cómo protocolizar y documentar estos objetivos módulo por módulo para no perder información?"
+      ],
+      "tension_signal": "medio",
+      "titulo_limitless": "Discusión de conceptos teóricos y su aplicación práctica.",
+      "startTime": "2026-04-16T22:48:48Z",
+      "endTime": "2026-04-16T23:20:33Z",
+      "duracion_min": 31
+    },
+    {
+      "idx": 29,
+      "resumen": "Sebastian expresa alegría por llegar al final de un proyecto, propone socialización con el grupo en esquema presencial para protocolizar entregas. Menciona que el contenido será más personalizado y diferente al anterior. Propone crear una guía de diseño reutilizable para futuros diseñadores.",
+      "impacto": "alto",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Mari",
+        "Adolfo"
+      ],
+      "tareas": [
+        {
+          "tarea": "Crear guía de diseño para ser entregada a diseñadores externos",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "Being CoRe, sistematización de metodología",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Adolfo"
+          ]
+        },
+        {
+          "tarea": "Organizar sesión de socialización grupal presencial (no virtual)",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "Being CoRe, cierre de proyecto",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Mari",
+            "Adolfo"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Cambiar de formato virtual a presencial para socialización",
+        "Crear documentación de entrega (acta de entrega) antes de continuar"
+      ],
+      "ideas": [
+        "Una guía de diseño básica permitiría que un diseñador junior pueda trabajar sin dependencia permanente",
+        "El contenido personalizado requiere más tiempo en tiempo real que los procesos estructurados previos"
+      ],
+      "frases": [
+        "lo que hay que definir es que siempre la acción de la hora te permita en el futuro poder tenerlo, por eso yo lo que estoy haciendo es una guía de diseño que permita entregárselo a un prom y pueda diseñar los elementos básicos"
+      ],
+      "preguntas_abiertas": [
+        "¿Dónde y cuándo hacer la sesión presencial?"
+      ],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre varios temas",
+      "startTime": "2026-04-16T23:20:47Z",
+      "endTime": "2026-04-16T23:38:31Z",
+      "duracion_min": 17
+    },
+    {
+      "idx": 30,
+      "resumen": "Reflexión muy breve (1 min) de Sebastian sobre la importancia de 'impecabilidad y elegancia' en el contenido y presentación. Menciona que esto es 'high ticket' y que él y otros han comentado esto con Mari y Carla. Reflexiona sobre cómo llevar esto sin comprometerse públicamente de más.",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Mari",
+        "Carla",
+        "Adolfo",
+        "Marisol"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [
+        "La 'impecabilidad y elegancia' es un atributo de valor high ticket que debe permear la marca Being CoRe",
+        "El contenido + presentación (vestimenta, imagen) = percepción de valor"
+      ],
+      "frases": [
+        "a mí me parecen las dos que son mujeres impecables y elegantes. Y eso además tiene un contenido por dentro"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Reflexiones sobre el valor, la presentación y las cualidades personales",
+      "startTime": "2026-04-16T23:39:14Z",
+      "endTime": "2026-04-16T23:40:51Z",
+      "duracion_min": 1
+    },
+    {
+      "idx": 31,
+      "resumen": "Sebastian discute logística de fechas y eventos. Menciona que Carla llene un 'librito' de fechas, que él las ejecutará. Comenta sobre partidos de Medellín en Libertadores, restricciones de salida en Cartagena, y que modifiquen fechas según disponibilidad deportiva si es necesario.",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Carla",
+        "Mari"
+      ],
+      "tareas": [
+        {
+          "tarea": "Carla: llenar librito de fechas y eventos",
+          "responsable": "Carla",
+          "prioridad": "media",
+          "tipo": "compromiso",
+          "contexto": "logística Being CoRe",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Sebastian Sanchez Acevedo"
+          ]
+        },
+        {
+          "tarea": "Sebastian: ejecutar logística de eventos una vez Carla confirme fechas",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "media",
+          "tipo": "compromiso",
+          "contexto": "logística Being CoRe",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Carla"
+          ]
+        }
+      ],
+      "decisiones": [
+        "Posible cambio de fecha del evento si Medellín juega en Libertadores en esa fecha"
+      ],
+      "ideas": [],
+      "frases": [
+        "Aquí uno cosando en estas hijo de putas cuatro paredes todo el día en Cartagena, no, esto es una tortura"
+      ],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Conversación sobre planes y logística",
+      "startTime": "2026-04-16T23:41:19Z",
+      "endTime": "2026-04-16T23:55:17Z",
+      "duracion_min": 13
+    },
+    {
+      "idx": 32,
+      "resumen": "Sebastian participa en debate presidencial sobre energía transmitido por Noticias Caracol. Se presenta context sobre candidatos ausentes (Iván Cepeda, Alianza Verde) y sus propuestas. Claudia López responde pregunta sobre reconstrucción de confianza en democracia, proponiendo modelo económico sin minerales ni hidrocarburos.",
+      "impacto": "bajo",
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Claudia López",
+        "Iván Cepeda",
+        "Alianza Verde"
+      ],
+      "tareas": [],
+      "decisiones": [],
+      "ideas": [],
+      "frases": [],
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
+      "titulo_limitless": "Análisis político y contexto socio-político regional",
+      "startTime": "2026-04-16T23:56:31Z",
+      "endTime": "2026-04-17T00:32:40Z",
+      "duracion_min": 36
+    }
+  ],
+  "arcos_dia": [
+    {
+      "tema": "Estrategia energética Colombia: gas natural, transición y desafíos de implementación",
+      "reuniones_idx": [
+        4,
+        5,
+        6,
+        9,
+        10,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "peso_pct": 45,
+      "personas": [
+        "Sebastian",
+        "Jorge Henao",
+        "Speaker Granfan",
+        "Speaker argentino",
+        "Naturagás panel"
+      ],
+      "descripcion": "Análisis integral del sector gasífero colombiano: comparativas con Vaca Muerta (Argentina), desafíos de comercialización y licenciamiento con 120 comunidades, integración regional sudamericana, transición energética Brasil-Colombia, experiencias biometano brasileño, herramientas de inversión (obras por impuestos, fondos especiales) y regulación. Énfasis en moléculas llegando a hogares, industria y transporte."
+    },
+    {
+      "tema": "Proyecto Being CoRe: diseño modular, estructura y entrega final",
+      "reuniones_idx": [
+        15,
+        29,
+        30
+      ],
+      "peso_pct": 20,
+      "personas": [
+        "Sebastian",
+        "PM",
+        "Equipo Being CoRe"
+      ],
+      "descripcion": "Evolución del proyecto Being CoRe desde revisión de diseño gráfico (cambio círculo a lineal), especificaciones de canastillas, hasta estructura de módulos basada en objetivos-reconocimiento-dificultades-alternativas. Cierre del proyecto con propuesta de socialización presencial para protocolizar entregas con contenido personalizado por empresa."
+    },
+    {
+      "tema": "Conflictos internos: Condugas, socios y transiciones personales",
+      "reuniones_idx": [
+        3,
+        8,
+        13,
+        16,
+        25
+      ],
+      "peso_pct": 18,
+      "personas": [
+        "Sebastian",
+        "Olga",
+        "Natalia",
+        "Camilo",
+        "Carlos López",
+        "doña Claudia",
+        "Catalina",
+        "Hilda"
+      ],
+      "descripcion": "Tensiones familiares y empresariales en Condugas (conflictos con socios Camilo y Carlos López, doña Claudia), estrategia de transición gas a agua, reconocimiento a Olga y Natalia, salida de Sebastian de Jefe Coach por malentendidos comunicacionales, caso legal de Catalina con PM, búsqueda de personas que hayan 'guerreado' el negocio."
+    }
+  ],
+  "preguntas_abiertas_dia": [
+    "¿Cuál es el estado actual del licenciamiento con las 120 comunidades en el proyecto de gas colombiano y qué obstáculos falta resolver para 2027?",
+    "¿Cómo se resuelven los problemas de liquidez de distribuidores de GNL en Costa Caribe según propuesta de Granfan?",
+    "¿Cuál es la viabilidad real de masificación de cobertura de gas en Caribe y Guajira con herramientas actuales de inversión?",
+    "¿Qué lecciones del biometano brasileño (100K m3/día en Ceará) son replicables en contexto colombiano?",
+    "¿Cómo se materializa la transición gas natural con propósito (hogares, industria, comercio, transporte) en estructura Being CoRe y proyectos Condugas?"
+  ],
+  "tensiones_dia": [
+    "Conflicto latente en Condugas entre Sebastian, socios (Camilo, Carlos López) y doña Claudia sobre estrategia de transición gas-agua sin resolución clara",
+    "Desalineamiento en comunicación en Jefe Coach que llevó a salida de Sebastian, indicando vulnerabilidad en dinámicas grupales replicables",
+    "Brecha entre ambición de proyecto de gas colombiano (120 comunidades, licenciamiento) y capacidad real de ejecución con restricciones políticas y financieras",
+    "Disparidad Brasil-Colombia: Brasil con 12M residencias, biometano consolidado; Colombia sin estrategia integrada de biometano ni plantas regionales",
+    "Caso legal pendiente de Catalina con PM sin claridad sobre justificación y resolución, implicando reputación de Condugas"
+  ],
+  "tareas_candidatas": [
+    {
+      "tarea": "Definir estrategia de comunicación interna sobre transición gas→agua",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Resolver fricción familiar con doña Claudia y Paola sobre estructura de aportes",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Comunicar decisión de no cubrir más pagos de servicio de consultoría",
+      "responsable": "Speaker",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Explorar convenios con EPM para regasificadoras Antioquia/Urabá",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Seguimiento obra civil ampliación Tasajera (infraestructura, no equipos)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Monitorear situación Promigas: equipos en China, falta de pago, bypass trasmetano",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Mejorar diagramación y diseño de documentación de proyecto (cuadernillo)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Corregir estructura gráfica original (círculo/distancia/cuadrante) - revertir cambio a lineal",
+      "responsable": "Diseñador gráfico",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Diseñar e imprimir etiquetas canastillas: 100 unidades plastificadas, optimizadas a 90.000 COP, con hueco adaptado",
+      "responsable": "Área de producción/diseño",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Incluir correo de Adolfo en toda la presentación y diseñar gráfico 'camino que voy a recorrer' como carretera",
+      "responsable": "Diseñador gráfico",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Optimizar layout etiquetas canastillas: zona L4 arriba (color), nombre abajo (blanco/negro), logo grande con hueco, adhesivo contact",
+      "responsable": "Diseñador gráfico",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Diseñar segundo cuadernillo considerando impresión digital y física, sofisticación visual",
+      "responsable": "Diseñador gráfico",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Evaluar venta de cartera",
+      "responsable": "Unknown",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Preparar reunión del 24 de abril",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Estructurar guía de objetivos de módulos para Being CoRe",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Crear guía de diseño para ser entregada a diseñadores externos",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Organizar sesión de socialización grupal presencial (no virtual)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Carla: llenar librito de fechas y eventos",
+      "responsable": "Carla",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Sebastian: ejecutar logística de eventos una vez Carla confirme fechas",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Avanzar proceso de licenciamiento ambiental y social (ruta crítica)",
+      "responsable": "Speaker proyecto",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Dar seguimiento a caso legal Catalina y PM - obtener información de justificación de incumplimientos",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica"
+    }
+  ],
+  "decisiones": [
+    "Condugas quiere pivotar: soltar gas y migrar a aguas",
+    "Retomar perforación como entrada a negocio de agua (ya pagado)",
+    "Gas se reconoce como hidrocarburo energético esencial para coyuntura y transición",
+    "Comercialización de gas lograda nov-dic 2024 con Ecopetrol",
+    "Licenciamiento es ahora la ruta crítica (no técnica ni comercial)",
+    "Vaca Muerta pasó de promesa a realidad: productor récord",
+    "No continuar cubriendo pago de servicio de consultoría",
+    "Retirarse como referente integral",
+    "Reconocer trabajo de Natalia en gestión de agendas",
+    "Granfan se posiciona como aliado integral en cadena GNL (productor, trader, desarrollador, inversionista)"
+  ],
+  "ideas_capturadas": [
+    "Combinar pasión por fotografía con buceo profesional",
+    "Reflexión sobre cómo la IA está transformando el pensamiento",
+    "Hacer podcast sobre realidad del emprendimiento (desmitificar narrativa romántica)",
+    "Analizar diferencia entre modelos de trabajo: Sebastian vs socios",
+    "Gobierno nacional debe apalancar procesos con incentivos y responsabilidad institucional",
+    "Riesgo tecnológico y ejecución son titánicos en proyectos de perforación e infraestructura",
+    "Cambio de estructuración del proceso de consulta a fines 2025 / inicio 2026",
+    "Balance necesario: atender comunidades vs prioridad nacional (50M ciudadanos)",
+    "Incentivos de precio en origen fue disparador clave para inversión (3-4B USD)",
+    "Modelo federal argentino (provincias como propietarias) fue factor habilitante"
+  ],
+  "frases_poderosas": [
+    "Algún día voy a tomarle fotos como fotógrafo principal en un bote",
+    "Uno está acabado de los 25 para él, yo de los 32 que me empecé a lesionar",
+    "Nosotros queremos ser aguas. Nosotros queremos ir soltando el gas",
+    "Yo tenía ganas de decir qué es con ser empresario y levantarse y decir voy a renunciar",
+    "El gas es un hidrocarburo energético esencial para la coyuntura y transición energética"
+  ],
+  "alertas_supervivencia": [
+    "Falta de voluntad política para inversiones energéticas en Colombia: obras por impuestos y fondos especiales no garantizan masificación de cobertura gasista",
+    "Distribuidores Costa Caribe sin liquidez y sector térmico bajo presión financiera: viabilidad de GNL en riesgo sin restructuración de modelo de ventas",
+    "Salida de Sebastian de Jefe Coach y conflictos en Condugas sugieren degradación de cohesión interna en ecosistema empresarial de Sebastian",
+    "Proyectos energéticos dependen de decisiones regulatorias brasileñas y argentinas: capacidad de Colombia de integración regional limitada por dependencias geopolíticas",
+    "Being CoRe cierra sin claridad de escalabilidad: modelo personalizado por empresa puede ser insostenible si demanda crece"
+  ]
 }
