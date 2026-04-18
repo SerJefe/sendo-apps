@@ -3,11 +3,11 @@
   "total_lifelogs": 50,
   "total_reuniones": 47,
   "procesado_con": "haiku_v3_structured",
-  "procesado_at": "2026-04-18T16:06:26",
+  "procesado_at": "2026-04-18T16:33:26",
   "reuniones": [
     {
       "idx": 0,
-      "resumen": "Reflexión sobre experiencia de orador en comprensión humana y transferencia de conocimiento. Sesión sin contenido capturado.",
+      "resumen": "Reflexión sobre orador, comprensión humana y transferencia de conocimiento. Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -23,7 +23,7 @@
     },
     {
       "idx": 1,
-      "resumen": "Conversación diversa sin contenido específico capturado. Duración 21 minutos.",
+      "resumen": "Conversación diversa sin contenido capturado (21 min).",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -39,7 +39,7 @@
     },
     {
       "idx": 2,
-      "resumen": "Demostración y descripción de herramienta de procesamiento de información. Sin contenido capturado.",
+      "resumen": "Demostración y descripción de herramienta de procesamiento de información. Sin contenido.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -55,7 +55,7 @@
     },
     {
       "idx": 3,
-      "resumen": "Conversación sobre automatización y actualizaciones. 6 minutos sin contenido detallado.",
+      "resumen": "Conversación sobre automatización y actualizaciones (6 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -71,7 +71,7 @@
     },
     {
       "idx": 4,
-      "resumen": "Conversación sobre situación conveniente. Sesión muy breve sin contenido capturado.",
+      "resumen": "Conversación sobre situación conveniente. Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -87,7 +87,7 @@
     },
     {
       "idx": 5,
-      "resumen": "Interacciones y comentarios diversos. 4 minutos sin contenido detallado.",
+      "resumen": "Interacciones y comentarios diversos (4 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -103,7 +103,7 @@
     },
     {
       "idx": 6,
-      "resumen": "Conversación sobre crispetas. Sesión muy breve sin contenido significativo.",
+      "resumen": "Conversación sobre crispetas. Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -119,7 +119,7 @@
     },
     {
       "idx": 7,
-      "resumen": "Conversación con Mario desde el aeropuerto. 4 minutos sin detalle de contenido.",
+      "resumen": "Conversación con Mario desde aeropuerto (4 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [
         "Mario"
@@ -137,7 +137,7 @@
     },
     {
       "idx": 8,
-      "resumen": "Conversación sobre varios temas. 7 minutos sin contenido capturado.",
+      "resumen": "Conversación sobre varios temas (7 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -153,7 +153,7 @@
     },
     {
       "idx": 9,
-      "resumen": "Instrucciones sobre un proyecto. 1 minuto sin detalle capturado.",
+      "resumen": "Instrucciones sobre proyecto (1 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -169,7 +169,7 @@
     },
     {
       "idx": 10,
-      "resumen": "Conversación en español muy breve sin contenido.",
+      "resumen": "Conversación en Español. Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -185,16 +185,14 @@
     },
     {
       "idx": 11,
-      "resumen": "Conversaciones diversas y coordinación de viaje. 58 minutos sin contenido detallado capturado.",
+      "resumen": "Conversaciones diversas y coordinación de viaje (58 min). Sin contenido capturado.",
       "impacto": "medio",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [],
-      "preguntas_abiertas": [
-        "¿Cuáles son los detalles específicos de la coordinación de viaje?"
-      ],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversaciones diversas y coordinación de viaje",
       "startTime": "2026-04-17T19:36:27Z",
@@ -203,7 +201,7 @@
     },
     {
       "idx": 12,
-      "resumen": "Conversación sobre carta y estrategia. 1 minuto sin contenido detallado.",
+      "resumen": "Conversación sobre carta y estrategia (1 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -219,7 +217,7 @@
     },
     {
       "idx": 13,
-      "resumen": "Discusiones sobre situaciones personales y laborales. 3 minutos sin detalle.",
+      "resumen": "Discusiones sobre situaciones personales y laborales (3 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -235,7 +233,7 @@
     },
     {
       "idx": 14,
-      "resumen": "Conversación sobre viaje y ubicación. 1 minuto sin contenido significativo.",
+      "resumen": "Conversación sobre viaje y ubicación (1 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -251,16 +249,14 @@
     },
     {
       "idx": 15,
-      "resumen": "Discusión sobre personalidad jurídica, IA y física cuántica. 13 minutos sin contenido capturado.",
-      "impacto": "medio",
+      "resumen": "Discusión sobre personalidad jurídica, IA y física cuántica (13 min). Sin contenido capturado.",
+      "impacto": "bajo",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [],
-      "preguntas_abiertas": [
-        "¿Cuál es la relevancia de estos temas para Being CoRe o Condugas?"
-      ],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Discusión sobre la personalidad jurídica, la inteligencia artificial y la física cuántica",
       "startTime": "2026-04-17T19:14:38Z",
@@ -269,7 +265,7 @@
     },
     {
       "idx": 16,
-      "resumen": "Conversación sobre política, trabajo y otros temas. 12 minutos sin detalle capturado.",
+      "resumen": "Conversación sobre política, trabajo y otros temas (12 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -285,7 +281,7 @@
     },
     {
       "idx": 17,
-      "resumen": "Discusión sobre empresa y salario. 1 minuto sin contenido detallado.",
+      "resumen": "Discusión sobre empresa y salario (1 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -301,7 +297,7 @@
     },
     {
       "idx": 18,
-      "resumen": "Sebastian Sanchez habla sobre política y servicio de jurado. 4 minutos sin detalle.",
+      "resumen": "Sebastian Sanchez Acevedo habla sobre política y servicio de jurado (4 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [
         "Sebastian Sanchez Acevedo"
@@ -319,7 +315,7 @@
     },
     {
       "idx": 19,
-      "resumen": "Conversaciones informales y observaciones del entorno. 34 minutos sin contenido capturado.",
+      "resumen": "Conversaciones informales y observaciones del entorno (34 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -335,17 +331,15 @@
     },
     {
       "idx": 20,
-      "resumen": "Conversación sobre favoritismos y negocios turbios. 10 minutos sin contenido detallado.",
+      "resumen": "Conversación sobre favoritismos y negocios turbios (10 min). Sin contenido capturado.",
       "impacto": "medio",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [],
-      "preguntas_abiertas": [
-        "¿Cuál es el contexto específico de negocios turbios mencionados?"
-      ],
-      "tension_signal": "medio",
+      "preguntas_abiertas": [],
+      "tension_signal": "alto",
       "titulo_limitless": "Conversación sobre favoritismos y negocios turbios",
       "startTime": "2026-04-17T18:06:26Z",
       "endTime": "2026-04-17T18:17:09Z",
@@ -353,7 +347,7 @@
     },
     {
       "idx": 21,
-      "resumen": "Conversación sobre política, comida y experiencias personales. 10 minutos sin contenido.",
+      "resumen": "Conversación sobre política, comida y experiencias personales (10 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -369,7 +363,7 @@
     },
     {
       "idx": 22,
-      "resumen": "Reflexiones sobre desarrollo personal y comprensión humana. 2 minutos sin detalle.",
+      "resumen": "Reflexiones sobre desarrollo personal y comprensión humana (2 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -385,7 +379,7 @@
     },
     {
       "idx": 23,
-      "resumen": "Conversación sobre fútbol y otros temas. 4 minutos sin contenido capturado.",
+      "resumen": "Conversación sobre fútbol y otros temas (4 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -401,7 +395,7 @@
     },
     {
       "idx": 24,
-      "resumen": "Conversaciones sobre anécdotas personales y situaciones laborales. 10 minutos sin detalle.",
+      "resumen": "Conversaciones sobre anécdotas personales, situaciones laborales y personajes (10 min). Sin contenido.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -417,7 +411,7 @@
     },
     {
       "idx": 25,
-      "resumen": "Discusión sobre temas económicos, demográficos e infraestructura. 1 minuto sin detalle.",
+      "resumen": "Discusión sobre temas económicos, demográficos e infraestructura (1 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -433,7 +427,7 @@
     },
     {
       "idx": 26,
-      "resumen": "Conversaciones informales y anécdotas varias. 16 minutos sin contenido capturado.",
+      "resumen": "Conversaciones informales y anécdotas varias (16 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -449,16 +443,14 @@
     },
     {
       "idx": 27,
-      "resumen": "Conversación sobre productos de gas y distribución. 7 minutos sin contenido detallado.",
+      "resumen": "Conversación sobre productos de gas y distribución (7 min). Sin contenido capturado.",
       "impacto": "medio",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [],
-      "preguntas_abiertas": [
-        "¿Cuáles son los productos y estrategia de distribución discutida?"
-      ],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversación sobre productos de gas y distribución",
       "startTime": "2026-04-17T17:09:44Z",
@@ -467,7 +459,7 @@
     },
     {
       "idx": 28,
-      "resumen": "Conversaciones informales y logística de eventos. 3 minutos sin contenido.",
+      "resumen": "Conversaciones informales y logística de eventos (3 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -483,16 +475,14 @@
     },
     {
       "idx": 29,
-      "resumen": "Discusión sobre educación financiera y análisis de mercado. 3 minutos sin detalle.",
-      "impacto": "medio",
+      "resumen": "Discusión sobre educación financiera y análisis de mercado (3 min). Sin contenido capturado.",
+      "impacto": "bajo",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [],
-      "preguntas_abiertas": [
-        "¿Cuál es el análisis de mercado relevante para Condugas?"
-      ],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Discusión sobre educación financiera y análisis de mercado",
       "startTime": "2026-04-17T17:02:30Z",
@@ -501,16 +491,14 @@
     },
     {
       "idx": 30,
-      "resumen": "Discurso sobre sector hidrocarburos y gas natural en Colombia. 10 minutos sin contenido.",
-      "impacto": "alto",
+      "resumen": "Discurso sobre sector hidrocarburos y gas natural en Colombia (10 min). Sin contenido capturado.",
+      "impacto": "medio",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [],
-      "preguntas_abiertas": [
-        "¿Cuál es el posicionamiento de Condugas en el sector de hidrocarburos?"
-      ],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Discurso sobre el sector de hidrocarburos y el gas natural en Colombia",
       "startTime": "2026-04-17T16:51:44Z",
@@ -519,7 +507,7 @@
     },
     {
       "idx": 31,
-      "resumen": "Análisis sobre elecciones presidenciales en Colombia. 24 minutos sin contenido.",
+      "resumen": "Análisis sobre elecciones presidenciales en Colombia (24 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -535,7 +523,7 @@
     },
     {
       "idx": 32,
-      "resumen": "Análisis de situación política y papel de Estados Unidos. 26 minutos sin detalle.",
+      "resumen": "Análisis situación política en Colombia y papel de EEUU (26 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -551,7 +539,7 @@
     },
     {
       "idx": 33,
-      "resumen": "Conversación sobre evento y trabajo. 3 minutos sin contenido capturado.",
+      "resumen": "Conversación sobre evento y trabajo (3 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -567,17 +555,15 @@
     },
     {
       "idx": 34,
-      "resumen": "Conferencia sobre imparcialidad en funciones de inspección, vigilancia y control. 16 minutos sin detalle.",
-      "impacto": "alto",
+      "resumen": "Conferencia sobre imparcialidad en funciones inspección, vigilancia y control (16 min). Sin contenido.",
+      "impacto": "medio",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [],
-      "preguntas_abiertas": [
-        "¿Cómo aplica Condugas los principios de imparcialidad e inspección?"
-      ],
-      "tension_signal": "medio",
+      "preguntas_abiertas": [],
+      "tension_signal": "bajo",
       "titulo_limitless": "Conferencia sobre la imparcialidad en las funciones de inspección, vigilancia y control",
       "startTime": "2026-04-17T15:34:29Z",
       "endTime": "2026-04-17T15:51:28Z",
@@ -585,16 +571,14 @@
     },
     {
       "idx": 35,
-      "resumen": "Financiación estratégica para desarrollo sostenible. 42 minutos sin contenido capturado.",
+      "resumen": "Financiación estratégica para desarrollo sostenible (42 min). Sin contenido capturado.",
       "impacto": "alto",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [],
-      "preguntas_abiertas": [
-        "¿Hay oportunidades de financiación para Condugas o Being CoRe?"
-      ],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Financiación estratégica para el desarrollo sostenible",
       "startTime": "2026-04-17T14:51:40Z",
@@ -603,7 +587,7 @@
     },
     {
       "idx": 36,
-      "resumen": "Debate sobre Asamblea Constituyente y Constitución de 1991. 14 minutos sin detalle.",
+      "resumen": "Debate sobre Asamblea Constituyente y Constitución 1991 (14 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -619,7 +603,7 @@
     },
     {
       "idx": 37,
-      "resumen": "Conversación sobre manifestación y disfraces. 2 minutos sin contenido significativo.",
+      "resumen": "Conversación sobre manifestación y disfraces (2 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -635,7 +619,7 @@
     },
     {
       "idx": 38,
-      "resumen": "Conversación miscelánea. 35 minutos sin contenido capturado.",
+      "resumen": "Conversación miscelánea (35 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -651,7 +635,7 @@
     },
     {
       "idx": 39,
-      "resumen": "Conversación sobre varios temas. 12 minutos sin contenido detallado.",
+      "resumen": "Conversación sobre varios temas (12 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -667,7 +651,7 @@
     },
     {
       "idx": 40,
-      "resumen": "Discusión política sobre jefatura y breve interacción social. 1 minuto sin detalle.",
+      "resumen": "Discusión política sobre jefatura y breve interacción social (1 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -683,7 +667,7 @@
     },
     {
       "idx": 41,
-      "resumen": "Conversación sobre lugar lujoso. 2 minutos sin contenido significativo.",
+      "resumen": "Conversación sobre lugar lujoso (2 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -699,7 +683,7 @@
     },
     {
       "idx": 42,
-      "resumen": "Planes sociales y cambio de tema. 3 minutos sin contenido capturado.",
+      "resumen": "Planes sociales y cambio de tema (3 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -715,16 +699,14 @@
     },
     {
       "idx": 43,
-      "resumen": "Conversación sobre negocios y finanzas. 17 minutos sin contenido detallado.",
+      "resumen": "Conversación sobre negocios y finanzas (17 min). Sin contenido capturado.",
       "impacto": "medio",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [],
-      "preguntas_abiertas": [
-        "¿Cuáles son los temas específicos de negocios y finanzas discutidos?"
-      ],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversación sobre negocios y finanzas",
       "startTime": "2026-04-17T03:37:44Z",
@@ -733,7 +715,7 @@
     },
     {
       "idx": 44,
-      "resumen": "Descripción de paisaje natural: La Princesa Inhiri. 2 minutos sin contenido.",
+      "resumen": "Descripción paisaje natural: La Princesa Inhiri (2 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -749,7 +731,7 @@
     },
     {
       "idx": 45,
-      "resumen": "Conversación sobre dinero y trabajo. 2 minutos sin contenido significativo.",
+      "resumen": "Conversación sobre dinero y trabajo (2 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -765,7 +747,7 @@
     },
     {
       "idx": 46,
-      "resumen": "Historias y anécdotas personales variadas. 4 minutos sin contenido capturado.",
+      "resumen": "Historias y anécdotas personales variadas (4 min). Sin contenido capturado.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -782,26 +764,26 @@
   ],
   "arcos_dia": [],
   "preguntas_abiertas_dia": [
-    "¿Cuáles son los detalles operacionales de la coordinación de viaje mencionada en reunión 11?",
-    "¿Cómo aplica Condugas los principios de imparcialidad e inspección en su gestión?",
-    "¿Existen oportunidades de financiación estratégica disponibles para Condugas o Being CoRe?",
-    "¿Cuál es el posicionamiento competitivo de Condugas en el sector de hidrocarburos y gas natural?",
-    "¿Cuál es el estado crítico de caja y qué acciones se requieren para estabilizar finanzas?"
+    "¿Cuál es el estado real de caja de Condugas y Being CoRe?",
+    "¿Hay riesgos pendientes con EPM o contratos en ejecución?",
+    "¿Qué se decidió en la reunión sobre financiación estratégica (idx 35)?",
+    "¿Cuál es el impacto de los temas de 'negocios turbios' mencionados en conversación (idx 20)?",
+    "¿Hay coordinaciones de viaje pendientes que afecten operaciones?"
   ],
   "tensiones_dia": [
-    "Falta crítica de contenido capturado en 47 reuniones impide análisis de decisiones y compromisos reales",
-    "Menciones de negocios turbios (reunión 20) sugieren ambiente de riesgo reputacional o legal",
-    "Patrón de TDAH evidente: 47 fragmentos muy cortos en un día, muchos sin conclusiones registradas"
+    "Conversación sobre 'favoritismos y negocios turbios' (idx 20) señala posible riesgo reputacional o legal",
+    "Fragmentación extrema de reuniones (47 segmentos) sugiere contexto de dispersión mental o caos operativo consistente con TDAH reportado",
+    "Falta total de contenido capturado en todas reuniones impide análisis de decisiones y tareas reales"
   ],
   "tareas_candidatas": [],
   "decisiones": [],
   "ideas_capturadas": [],
   "frases_poderosas": [],
   "alertas_supervivencia": [
-    "CRITICA: Crisis de caja no está documentada en ninguna reunión - requiere diagnóstico inmediato de flujo Condugas/Being CoRe",
-    "CRITICA: 0 tareas, decisiones o compromisos registrados en 47 reuniones - pérdida total de trazabilidad de acciones",
-    "CRITICA: Ausencia completa de documentación de compromisos EPM pese a ser cliente estratégico (~80 empleados dependientes)",
-    "ALTA: Patrón fragmentario sugiere falta de método de captura - implementar sistema de grabación/transcripción automático",
-    "ALTA: No hay evidencia de reuniones de gestion operativa de Condugas - riesgo de operaciones desatendidas"
+    "CRITICA: Sin contenido capturado en 47 reuniones del 2026-04-17. Imposible validar si hay decisiones sobre crisis de caja reportada.",
+    "CRITICA: Mención de 'negocios turbios' y 'favoritismos' (idx 20) requiere inmediata clarificación legal/compliance.",
+    "ALTA: Coordinación de viaje documentada (idx 11) sin tareas explícitas - validar si afecta operaciones Condugas.",
+    "ALTA: Tema de 'financiación estratégica para desarrollo sostenible' (idx 35, 42 min) sin outcomes registrados - puede ser crítico para EPM.",
+    "MEDIA: Patrón de 47 micro-reuniones en un día sugiere gestión caótica. Recomendar consolidación de agendas para TDAH."
   ]
 }
