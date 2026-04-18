@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT15M
 X-PUBLISHED-TTL:PT15M
 BEGIN:VEVENT
 UID:tarea-2026-04-08-005@serjefe
-DTSTAMP:20260416T144501Z
+DTSTAMP:20260418T160002Z
 DTSTART;VALUE=DATE:20260420
 DTEND;VALUE=DATE:20260421
 SUMMARY:[CRITICA] Revisar rendimiento de contratos compartidos que se ven críticos
@@ -22,7 +22,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-13-m5b3b40@serjefe
-DTSTAMP:20260416T144501Z
+DTSTAMP:20260418T160002Z
 DTSTART;VALUE=DATE:20260416
 DTEND;VALUE=DATE:20260417
 SUMMARY:[CRITICA] Implementar Odoo\, revisión \, parámetros\, reglas 
@@ -33,20 +33,8 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:tarea-2026-04-14-c001@serjefe
-DTSTAMP:20260416T144501Z
-DTSTART;VALUE=DATE:20260415
-DTEND;VALUE=DATE:20260416
-SUMMARY:[CRITICA] Revisar no conformidad EPM contrato 2401 y responder formalmente
-DESCRIPTION:Contexto: Contrato EPM\, cumplimiento normativo\nResponsable: Sebastian\n\nDashboard: https://72.60.28.156.nip.io/
-CATEGORIES:CONDUGAS
-PRIORITY:1
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:tarea-2026-04-16-c001@serjefe
-DTSTAMP:20260416T144501Z
+DTSTAMP:20260418T160002Z
 DTSTART;VALUE=DATE:20260417
 DTEND;VALUE=DATE:20260418
 SUMMARY:[CRITICA] Cobrar pago pendiente de Hamilton según lo prometido
@@ -58,11 +46,71 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-16-c002@serjefe
-DTSTAMP:20260416T144501Z
+DTSTAMP:20260418T160002Z
 DTSTART;VALUE=DATE:20260416
 DTEND;VALUE=DATE:20260417
-SUMMARY:[CRITICA] Procesar nómina y resolver descuento de Valle con menor valor
-DESCRIPTION:Contexto: Condugas - nómina y recursos humanos\nResponsable: William\n\nDashboard: https://72.60.28.156.nip.io/
+SUMMARY:[ALTA] Procesar nómina y resolver descuento de Valle con menor valor
+DESCRIPTION:Contexto: Condugas - nómina y recursos humanos\nResponsable: William Lopez\nPuntaje: 37 (alta)\n\nDashboard: https://72.60.28.156.nip.io/
+CATEGORIES:CONDUGAS
+PRIORITY:3
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:tarea-2026-04-16-c001x@serjefe
+DTSTAMP:20260418T160002Z
+DTSTART;VALUE=DATE:20260418
+DTEND;VALUE=DATE:20260419
+SUMMARY:[CRITICA] Preparar documentación de debido proceso ejecutivo con focus en ambiental y reajustes
+DESCRIPTION:Contexto: Contrato EPM bloqueado por incumplimientos económicos\nResponsable: Sebastian Sanchez\n\nDashboard: https://72.60.28.156.nip.io/
+CATEGORIES:CONDUGAS
+PRIORITY:1
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:tarea-2026-04-16-c002x@serjefe
+DTSTAMP:20260418T160002Z
+DTSTART;VALUE=DATE:20260420
+DTEND;VALUE=DATE:20260421
+SUMMARY:[CRITICA] Evaluar viabilidad de terminación contractual vs. renegociación de fórmula
+DESCRIPTION:Contexto: Contrato quebrado en 3 meses si no hay reajustes\nResponsable: Sebastian Sanchez\n\nDashboard: https://72.60.28.156.nip.io/
+CATEGORIES:CONDUGAS
+PRIORITY:1
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:tarea-2026-04-16-c003x@serjefe
+DTSTAMP:20260418T160002Z
+DTSTART;VALUE=DATE:20260417
+DTEND;VALUE=DATE:20260418
+SUMMARY:[CRITICA] Validar con Camacol data de escalada salarial (22-27% vs. 52% actual)
+DESCRIPTION:Contexto: Prueba de desequilibrio económico en fórmula\nResponsable: Sebastian Sanchez\n\nDashboard: https://72.60.28.156.nip.io/
+CATEGORIES:CONDUGAS
+PRIORITY:1
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:tarea-2026-04-16-c004@serjefe
+DTSTAMP:20260418T160002Z
+DTSTART;VALUE=DATE:20260418
+DTEND;VALUE=DATE:20260419
+SUMMARY:[CRITICA] Coordinar con equipo (Uner\, Leon\, Diana) estrategia de confrontación con Catalina
+DESCRIPTION:Contexto: No aparecer a Catalina para presionar desde otros flancos\nResponsable: Sebastian Sanchez\n\nDashboard: https://72.60.28.156.nip.io/
+CATEGORIES:CONDUGAS
+PRIORITY:1
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:tarea-2026-04-16-c005@serjefe
+DTSTAMP:20260418T160002Z
+DTSTART;VALUE=DATE:20260416
+DTEND;VALUE=DATE:20260417
+SUMMARY:[CRITICA] Localizar registro de comité proveedores 12 de febrero donde todos dijeron reajuste no daba
+DESCRIPTION:Contexto: Prueba de que todos contratistas reconocen desequilibrio con esta formula de camacol '\nResponsable: Sebastian Sanchez\nPuntaje: 48 (maxima)\nProxima accion: llamar a sanear\, llamar a proing\, enviar documento  de reajustes  a epm \n\nDashboard: https://72.60.28.156.nip.io/
 CATEGORIES:CONDUGAS
 PRIORITY:1
 STATUS:CONFIRMED

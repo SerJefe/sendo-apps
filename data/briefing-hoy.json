@@ -1,64 +1,67 @@
 {
-  "saludo": "Buenos días Sebastián — jueves 16 Apr",
+  "saludo": "Buenos días Sebastián — sábado 18 Apr",
   "supervivencia": [
-    "EPM: 180M COP sin pagar + no conformidad vencida (15 Apr) = riesgo legal inmediato",
-    "Caja: 8 días de runway con -950M EBITDA = crisis inminente",
-    "Odoo vencía hoy (16 Apr) → reunión Lina/Ema URGENTE para definir qué hay/qué no"
+    "EPM: ~180M COP pendientes + no conformidad sin respuesta formal (VENCE HOY)",
+    "Condugas insolvencia en 3 meses sin reajuste; caja = 8 días",
+    "Hamilton: cobro vencido (promesa no cumplida)",
+    "Defensa legal vs. Catalina: escalada inminente a PM"
   ],
   "top_3": [
     {
-      "tarea": "Responder formalmente no conformidad EPM 2401 + adjuntar actas de lluvias/paradas (feb-abr) como evidencia de incumplimiento recíproco",
+      "tarea": "RESPONDER FORMAL no conformidad EPM + enviar comunicado cobro 180M",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Vencida desde 15 Apr, cierra puerta legal antes de renegociar 180M",
-      "tarea_id": "no_conformidad_EPM"
+      "porque": "P1 vencida hoy; bloquea relación contractual",
+      "tarea_id": "resolver-no-conformidad-epm"
     },
     {
-      "tarea": "Reunión 30min Lina + Ema: definir estado real Odoo (parámetros, reglas, qué falta) + roadmap implementación",
+      "tarea": "Llamar Sanear + Proing: localizar acta comité 12-feb (reajuste no daba)",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Vencía hoy, necesario antes de propuesta reajuste EPM",
-      "tarea_id": "odoo_implementacion"
+      "porque": "Prueba clave defensa legal EPM; score 48",
+      "tarea_id": "localizar-acta-feb"
     },
     {
-      "tarea": "Cita con Andrea (Condugas): revisar caja real, deudas pendientes, y autorizar compra tiquetes Cartagena",
+      "tarea": "Reunión 30min con abogado: estrategia confrontación Catalina + documentación debido proceso",
       "categoria": "SUPERVIVENCIA",
-      "porque": "8 días caja + viaje crítico = decisión de flujo ahora",
-      "tarea_id": "caja_familiar"
+      "porque": "Riesgo queja formal PM; vence mañana 19-Apr",
+      "tarea_id": "defensa-legal-catalina"
     }
   ],
-  "mega_dia": "Despachar no conformidad EPM hoy = cierra vencimiento legal y desbloquea negociación de 180M",
+  "mega_dia": "Cerrar respuesta formal EPM (no conformidad + cobro). El día valió si eso sale.",
   "contactar_hoy": [
     {
-      "persona": "Lina + Ema",
-      "motivo": "Reunión Odoo 30min antes de mediodía"
+      "persona": "Sanear/Proing",
+      "motivo": "Acta comité 12-feb sobre reajuste"
     },
     {
-      "persona": "Andrea (Condugas)",
-      "motivo": "Estado caja + autorizar tiquetes"
+      "persona": "Abogado",
+      "motivo": "Defensa Catalina + documentación EPM"
     },
     {
-      "persona": "Pilar (POT Aguacatala)",
-      "motivo": "Citar para semana próxima"
+      "persona": "Hamilton",
+      "motivo": "Cobro directo (vencido 17-Apr)"
     }
   ],
   "ojo_con": [
-    "24 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "No cerrar defensa EPM hasta tener propuesta reajuste contundente (próxima reunión)",
-    "Si EPM se muere → Condugas cierra. Máxima presión pero sin salida apresurada",
-    "Sueño 4h 02m (37%) → rendimiento cognitivo comprometido para negociaciones críticas"
+    "41 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+    "EBITDA -2.3M; sleep 4h (37%) — decisiones con fatiga TDAH = riesgo",
+    "16 críticas abiertas; no puedes atender todas hoy",
+    "EPM + Catalina son 2 frentes legales simultáneos"
   ],
   "vencidas": [
-    "No conformidad EPM 2401 (15 Apr) — RESPONDER HOY",
-    "Implementar Odoo (16 Apr) — REUNIÓN HOY"
+    "Cobro Hamilton (17-Apr)",
+    "Odoo review (16-Apr)",
+    "Nómina Valle (16-Apr)",
+    "Acta comité (deadline implícita)"
   ],
-  "frase_dia": "180M sobre la mesa, 8 días de caja, una respuesta legal: hoy decides si negocias desde fuerza o desde pánico.",
-  "generado_at": "2026-04-16T11:00:11",
-  "fecha": "2026-04-16",
+  "frase_dia": "Hoy no es día de estrategia. Es día de apagar incendios legales. Enfócate en EPM + Catalina. El resto espera.",
+  "generado_at": "2026-04-18T11:00:10",
+  "fecha": "2026-04-18",
   "stats": {
-    "abiertas": 34,
-    "criticas": 8,
-    "vencidas": 1,
-    "estancadas": 1,
-    "sin_evaluar": 11
+    "abiertas": 71,
+    "criticas": 13,
+    "vencidas": 5,
+    "estancadas": 3,
+    "sin_evaluar": 44
   },
   "criticas_sin_fecha": [
     {
@@ -80,10 +83,16 @@
       "responsable": "Equipo de Proyectos"
     },
     {
+      "id": "2026-04-12-004",
+      "tarea": "Publicar documentación de KPIs en repositorio público",
+      "prioridad": "alta",
+      "responsable": "Equipo Técnico"
+    },
+    {
       "id": "2026-04-09-004",
       "tarea": "Desarrollar ERP basado en IA",
       "prioridad": "alta",
-      "responsable": "Sebastian Sanchez"
+      "responsable": "Emanuel"
     },
     {
       "id": "2026-04-13-mc8a7e3",
@@ -144,20 +153,32 @@
       "tarea": "Unificar base de datos y fuentes Siendo Consulting",
       "prioridad": "alta",
       "responsable": "Sebastian"
-    },
-    {
-      "id": "2026-04-14-001",
-      "tarea": "Reunirse con Andrea para resolver deuda Condugas",
-      "prioridad": "alta",
-      "responsable": "Sebastian"
     }
   ],
   "vence_pronto": [
     {
-      "id": "2026-04-13-m5b3b40",
-      "tarea": "Implementar Odoo, revisión , parámetros, reglas ",
+      "id": "2026-04-16-c001x",
+      "tarea": "Preparar documentación de debido proceso ejecutivo con focus en ambiental y reajustes",
       "dias": 0,
-      "fecha_limite": "2026-04-16"
+      "fecha_limite": "2026-04-18"
+    },
+    {
+      "id": "2026-04-16-c004",
+      "tarea": "Coordinar con equipo (Uner, Leon, Diana) estrategia de confrontación con Catalina",
+      "dias": 0,
+      "fecha_limite": "2026-04-18"
+    },
+    {
+      "id": "2026-04-08-005",
+      "tarea": "Revisar rendimiento de contratos compartidos que se ven críticos",
+      "dias": 2,
+      "fecha_limite": "2026-04-20"
+    },
+    {
+      "id": "2026-04-16-c002x",
+      "tarea": "Evaluar viabilidad de terminación contractual vs. renegociación de fórmula",
+      "dias": 2,
+      "fecha_limite": "2026-04-20"
     }
   ]
 }

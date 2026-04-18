@@ -1,123 +1,145 @@
 {
-  "fecha": "2026-04-15",
+  "fecha": "2026-04-16",
   "tareas_extraidas": [
     {
-      "tarea": "Revisar informe de gestión para Supersociedades",
-      "responsable": "Sebastian",
+      "tarea": "Llamar a Pilar en ~30 minutos para conversación pendiente",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Preparar documento con 3 pilares: Confiabilidad numérica, Relacionamiento, Adaptabilidad",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "alta"
     },
     {
-      "tarea": "{'taja': 'Enviar estados financieros y anexos a Supersociedades', 'responsable': 'Sebastian', 'prioridad': 'alta', 'tipo': 'compromiso', 'contexto': 'Estados financieros listos - pendiente envío con i",
-      "responsable": "Sebastian",
+      "tarea": "Aclarar con abogados que comunicaciones fueron por contrato, no acoso",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "alta"
     },
     {
-      "tarea": "Obtener respuesta contable de Manuel sobre configuración nómina UGP-DIAN",
-      "responsable": "Sebastian",
+      "tarea": "Documentar que 4 comunicaciones fueron coordinadas lunes-miércoles, enviadas jueves",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Reafirmar con PM y abogados compromiso con buenas relaciones pese a conflicto",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Evaluar en Z2 y normalización oportunidad de renegociar por debajo en otras líneas",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "alta"
     },
     {
-      "tarea": "Cobrar ICA pendiente a municipios (~55 millones Medellín)",
-      "responsable": "Sebastian",
+      "tarea": "Preparar argumento: suspensión no conviene a Condugas (pagaría bonificaciones igual)",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "alta"
     },
     {
-      "tarea": "Responder requerimiento SENA pendiente",
-      "responsable": "Sebastian",
+      "tarea": "Coordinar con Humberto/Gobernación narrativa sobre trayectoria y valor de Condugas",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Formalizar carta de suspensión solo tras autorización de PM (no unilateral)",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "alta"
     },
     {
-      "tarea": "Escanear Acta 87 de Asamblea",
-      "responsable": "Sebastian",
+      "tarea": "Establecer límites de confidencialidad con Jorge William (compartir prospectos, no análisis)",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "media"
     },
     {
-      "tarea": "Firmar declaración de renta con ayuda de Diana y Alejandro",
-      "responsable": "Sebastian",
+      "tarea": "Empoderamiento: que Carlos Acevedo comience a manejar hasta Uber (operaciones)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Empoderar Diana para alcance similar a Carlos Acevedo",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Aclarar roles de Gustavo en compras vs. negociación contractual",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "media"
     },
     {
-      "tarea": "Integrar informes inversión extranjera en sistema Odoo",
-      "responsable": "Sebastian",
+      "tarea": "Documentar cadena de mando clara: Sebastian->Carlos/Diana->Santiago/Humberto",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "media"
     },
     {
-      "tarea": "Definir auditoría de balances en Odoo con revisor fiscal",
-      "responsable": "Sebastian",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Enviar certificados retención mensual a consorciados (Óscar, Zilar)",
-      "responsable": "Sebastian",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Ajustar débito deuda NC (retenciones no cobradas)",
-      "responsable": "Sebastian",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Aclarar uso y condiciones de contenedores charcutería",
-      "responsable": "Sebastian",
+      "tarea": "Incluir Juan Pablo en decisiones de asesoría (aunque no sea director formal aún)",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "baja"
     },
     {
-      "tarea": "Cuadrar deuda empresa a Condugas y plan de pago",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Contactar Catalina (EPM) para seguimiento post-negociación",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Cobrar reajustes pendientes a EPM del contrato Río Negro (~180 millones COP)",
-      "responsable": "Sebastian",
+      "tarea": "Preparar documentación de debido proceso ejecutivo con focus en ambiental y reajustes",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "critica"
     },
     {
-      "tarea": "Estructurar defensa legal y documentación contra EPM por incumplimiento contractual",
-      "responsable": "Sebastian",
+      "tarea": "Evaluar viabilidad de terminación contractual vs. renegociación de fórmula",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "critica"
     },
     {
-      "tarea": "Preparar propuesta contundente de reajuste de contrato EPM Río Negro con alternativas viables",
-      "responsable": "Sebastian",
+      "tarea": "Validar con Camacol data de escalada salarial (22-27% vs. 52% actual)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Coordinar con equipo (Uner, Leon, Diana) estrategia de confrontación con Catalina",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Localizar registro de comité proveedores 12 de febrero donde todos dijeron reajuste no daba",
+      "responsable": "Sebastian Sanchez",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "No cerrar cláusulas ambientales del contrato EPM hasta cerrar reajuste integral - estrategia de presión",
-    "Preparar propuesta no viable como táctica para forzar renegociación o salida del contrato Río Negro",
-    "Defensa legal agresiva contra EPM - señalar incumplimiento contractual recíproco y abuso de poder",
-    "Si contrato EPM se muere, implica cierre de Condugas - máxima criticidad",
-    "Mantener continuidad en negociación EPM con propuestas contundentes en próxima reunión",
-    "Bajarse sueldo de gerencia para mantener nómina (123M con abogada y subgerente)",
-    "Priorizar respuesta a SENA y Supersociedades antes de viaje a Cartagena el 16/04"
+    "Se reconoce que no hay acuerdo completo pese a defensa de la empresa",
+    "Se busca aclarar temas de competencia en reunión futura",
+    "Priorizar estabilidad financiera antes de expandir propósito de desarrollo humano",
+    "Contrato está quebrado sin reajuste; opciones: renegociar o terminar",
+    "Mano de obra pesa 52% vs. 22-27% de Camacol (desequilibrio crítico)",
+    "Estrategia: alejarse en negociación para presionar acercamiento",
+    "Subida recargo nocturno + cambio Camacol descomponen figura económica",
+    "Abogada está de acuerdo (lenguaje no-verbal confirmó) con posición de Sebastian",
+    "Estrategia es reconocer riesgos ambientales como prioritarios + reajustes secundarios",
+    "Capaz de renunciar a Condugas si estructura no alineada con propósito"
   ],
   "ideas": [
-    "Usar problemas actuales EPM (actas de hallazgos, comunicados de ANES) como respaldo para renegociación - 'no me obligue a sacar la carta'",
-    "Integrar en Odoo todos los informes de inversión extranjera para automatizar reportes y auditoría mensual",
-    "Estrategia de defensa: contextualizar cada acción contractual con historia completa del contrato para neutralizar acusaciones de abuso",
-    "Cobro de ICA municipios pequeños requiere pagar primero (declaración) antes de que municipios facturen - ciclo de caja comprometido",
-    "Certificados de retención 2025-2026 a Zilar urgente como evidencia de relación comercial activa",
-    "Validar capacidad operativa: Condugas creció a 2 contratos sin perder eficiencia - ejemplo: cuadrillas compartidas entre proyectos"
+    "Se valora la contribución del equipo en defensa de la empresa",
+    "La autenticidad requiere renunciar a ingresos fáciles desalineados",
+    "El potencial humano es el verdadero valor a perseguir",
+    "Mirar hacia adentro es doloroso pero necesario para el crecimiento",
+    "Usar silencio estratégico como herramienta de negociación (modelo Catalina)",
+    "Comunicar consistencia numérica en todas reuniones para generar confianza",
+    "Priorizar relacionamiento sobre números para mantener viabilidad",
+    "Entre más se aleja, más se acerca el otro (validado en caso Catalina)",
+    "Números consistentes en 6 reuniones = credibilidad de alerta",
+    "Riesgos ambientales > riesgo administrativo para EPM"
   ],
   "frases": [
-    "A mí el mejor lugar que me pueden pagar en estos momentos es Condugas. Porque lo que yo me sueño profundamente, ese es el potencial humano y eso no se puede dar acá. (Reflexión sobre por qué no migra pese a crisis)",
-    "Yo estoy arriesgando la empresa. Ustedes están buscando una negociación protocolar. Eso sí es un irrespeto. (Confrontación emocional en reunión EPM sobre deuda de 2.300M-3.300M)",
-    "No cierro los ambientales hasta que no cerremos lo otro. ¿Cuándo cierro los ambientales? (Tácticade presión - condicionar avances)",
-    "Si ese contrato se muere, se muere Catalina. (Máxima criticidad - viabilidad EPM = viabilidad empresa)",
-    "Nosotros sí crecimos, tenemos dos contratos, pero no significa que hemos perdido la capacidad operativa. (Defensa ante crítica de incumplimiento por asignación de recursos)"
+    "Ustedes no pueden quedar en, se tiene que quedar es con, con la ciudad y no puede con el financiamiento ese",
+    "Yo estoy al lado de una abogada que no estaba en el protocolo de la citación",
+    "Esta es la cuarta interrupción que usted me hace, cuando usted habla, yo lo escucho",
+    "A pesar de todo que no estamos en un acuerdo",
+    "Porque lo que yo me sueño profundamente, ese es el potencial humano y eso no se puede dar acá"
   ],
   "alertas_supervivencia": [
-    "CRITICA: Pérdida acumulada 2.300M-3.300M en contrato EPM Río Negro en 5 años - empresa en sobrevivencia",
-    "CRITICA: 180M COP sin pagar por EPM en reajustes (5 meses vencidos) - crisis de caja inmediata",
-    "CRITICA: Si contrato EPM se muere, se muere Catalina/Condugas - viabilidad corporativa depende de esta negociación",
-    "ALTA: Acusaciones EPM de incumplimiento contractual y abuso de poder - riesgo legal/reputacional",
-    "ALTA: ICA municipios ~55M Medellín pendiente - impedimento para facturación futura"
+    "CRITICA: Condugas en insolvencia inminente (~1.900M COP pérdida acumulada); contrato colapsará en 3 meses sin reajuste",
+    "CRITICA: Propuesta de terminación bilateral EPM es escalada legal; requiere abogados + documentación probatoria inmediata",
+    "ALTA: Acusación de Catalina (abuso/acoso) puede escalar a queja formal ante PM; necesita defensa legal coordinada",
+    "ALTA: Fuga de empleados (ofrecen 30-40M COP más); riesgo operativo si pierden Santiago/Humberto",
+    "MEDIA: Estructura de jefatura quebrada; si no delega Carlos/Diana rápido, Sebastian colapsará en toma de decisiones"
   ],
   "total_lifelogs": 11,
-  "procesado_con": "haiku_v2"
+  "procesado_con": "haiku_v3_structured"
 }

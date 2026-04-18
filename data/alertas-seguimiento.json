@@ -1,29 +1,77 @@
 {
-  "generado_at": "2026-04-16T12:00:01",
+  "generado_at": "2026-04-18T16:00:02",
   "resumen": {
-    "total_abiertas": 34,
-    "vencidas": 1,
-    "por_vencer_48h": 1,
-    "estancadas_5d": 0,
-    "sin_evaluar": 11,
+    "total_abiertas": 71,
+    "vencidas": 5,
+    "por_vencer_48h": 4,
+    "estancadas_5d": 1,
+    "sin_evaluar": 44,
     "criticas_sin_accion": 0
   },
   "vencidas": [
     {
-      "id": "2026-04-14-c001",
-      "tarea": "Revisar no conformidad EPM contrato 2401 y responder formalmente",
-      "deadline": "2026-04-15",
+      "id": "2026-04-13-m5b3b40",
+      "tarea": "Implementar Odoo, revisión , parámetros, reglas ",
+      "deadline": "2026-04-16",
+      "dias_vencida": 2
+    },
+    {
+      "id": "2026-04-16-c001",
+      "tarea": "Cobrar pago pendiente de Hamilton según lo prometido",
+      "deadline": "2026-04-17",
       "dias_vencida": 1
+    },
+    {
+      "id": "2026-04-16-c002",
+      "tarea": "Procesar nómina y resolver descuento de Valle con menor valor",
+      "deadline": "2026-04-16",
+      "dias_vencida": 2
+    },
+    {
+      "id": "2026-04-16-c003x",
+      "tarea": "Validar con Camacol data de escalada salarial (22-27% vs. 52% actual)",
+      "deadline": "2026-04-17",
+      "dias_vencida": 1
+    },
+    {
+      "id": "2026-04-16-c005",
+      "tarea": "Localizar registro de comité proveedores 12 de febrero donde todos dijeron reajuste no daba",
+      "deadline": "2026-04-16",
+      "dias_vencida": 2
     }
   ],
   "por_vencer": [
     {
-      "id": "2026-04-13-m5b3b40",
-      "tarea": "Implementar Odoo, revisión , parámetros, reglas ",
-      "deadline": "2026-04-16",
+      "id": "2026-04-08-005",
+      "tarea": "Revisar rendimiento de contratos compartidos que se ven críticos",
+      "deadline": "2026-04-20",
+      "dias_restantes": 2
+    },
+    {
+      "id": "2026-04-16-c001x",
+      "tarea": "Preparar documentación de debido proceso ejecutivo con focus en ambiental y reajustes",
+      "deadline": "2026-04-18",
+      "dias_restantes": 0
+    },
+    {
+      "id": "2026-04-16-c002x",
+      "tarea": "Evaluar viabilidad de terminación contractual vs. renegociación de fórmula",
+      "deadline": "2026-04-20",
+      "dias_restantes": 2
+    },
+    {
+      "id": "2026-04-16-c004",
+      "tarea": "Coordinar con equipo (Uner, Leon, Diana) estrategia de confrontación con Catalina",
+      "deadline": "2026-04-18",
       "dias_restantes": 0
     }
   ],
-  "estancadas": [],
+  "estancadas": [
+    {
+      "id": "2026-04-13-mc2abc0",
+      "tarea": "Casa (Construcción)",
+      "dias_sin_evaluar": 5
+    }
+  ],
   "criticas_sin_accion": []
 }

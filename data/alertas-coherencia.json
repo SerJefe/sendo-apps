@@ -1,16 +1,77 @@
 {
-  "generado_at": "2026-04-16T11:30:02",
+  "generado_at": "2026-04-18T11:30:01",
   "resumen": {
-    "grupos_fusion": 0,
-    "tareas_en_grupos": 0,
+    "grupos_fusion": 2,
+    "tareas_en_grupos": 4,
     "alta_prioridad_sin_accion": 2,
-    "sobrecarga": 1,
+    "sobrecarga": 2,
     "sin_categoria": 0,
-    "estancadas": 1,
-    "sin_evaluar": 11,
-    "total_abiertas": 34
+    "estancadas": 3,
+    "sin_evaluar": 44,
+    "total_abiertas": 71
   },
-  "grupos_fusion": [],
+  "grupos_fusion": [
+    {
+      "tema": "catalina, epm, lina",
+      "tareas": [
+        {
+          "id": "2026-04-15-c003",
+          "tarea": "Preparar propuesta contundente de reajuste de contrato EPM Río Negro con alternativas viables",
+          "responsable": "Sebastian",
+          "puntaje": null,
+          "evaluada": false,
+          "estado": "abierta",
+          "fecha_creacion": "2026-04-15",
+          "is_keeper": true
+        },
+        {
+          "id": "2026-04-15-014",
+          "tarea": "Contactar Catalina (EPM) para seguimiento post-negociación",
+          "responsable": "Sebastian",
+          "puntaje": null,
+          "evaluada": false,
+          "estado": "abierta",
+          "fecha_creacion": "2026-04-15",
+          "is_keeper": false
+        }
+      ],
+      "keep_id": "2026-04-15-c003",
+      "merge_ids": [
+        "2026-04-15-014"
+      ],
+      "sugerencia": "Fusionar en: Preparar propuesta contundente de reajuste de contrato EPM Río Negro con alterna"
+    },
+    {
+      "tema": "catalina, lina, william",
+      "tareas": [
+        {
+          "id": "2026-04-16-c002x",
+          "tarea": "Evaluar viabilidad de terminación contractual vs. renegociación de fórmula",
+          "responsable": "Sebastian Sanchez",
+          "puntaje": null,
+          "evaluada": false,
+          "estado": "abierta",
+          "fecha_creacion": "2026-04-16",
+          "is_keeper": true
+        },
+        {
+          "id": "2026-04-16-c004",
+          "tarea": "Coordinar con equipo (Uner, Leon, Diana) estrategia de confrontación con Catalina",
+          "responsable": "Sebastian Sanchez",
+          "puntaje": null,
+          "evaluada": false,
+          "estado": "abierta",
+          "fecha_creacion": "2026-04-16",
+          "is_keeper": false
+        }
+      ],
+      "keep_id": "2026-04-16-c002x",
+      "merge_ids": [
+        "2026-04-16-c004"
+      ],
+      "sugerencia": "Fusionar en: Evaluar viabilidad de terminación contractual vs. renegociación de fórmula"
+    }
+  ],
   "alta_prioridad_sin_accion": [
     {
       "id": "2026-04-13-me871ed",
@@ -20,19 +81,25 @@
       "responsable": "Sebastian"
     },
     {
-      "id": "2026-04-13-mb61536",
-      "tarea": "Reunión Vendemos",
-      "puntaje": 41,
+      "id": "2026-04-16-c002",
+      "tarea": "Procesar nómina y resolver descuento de Valle con menor valor",
+      "puntaje": 37,
       "recomendacion": "Programar pronto",
-      "responsable": "Sebastian"
+      "responsable": "William Lopez"
     }
   ],
   "sobrecarga": [
     {
       "responsable": "Sebastian",
-      "abiertas": 30,
+      "abiertas": 52,
       "criticas": 8,
-      "sugerencia": "Sebastian tiene 30 tareas abiertas (8 criticas). Delegar o repriorizar."
+      "sugerencia": "Sebastian tiene 52 tareas abiertas (8 criticas). Delegar o repriorizar."
+    },
+    {
+      "responsable": "Sebastian Sanchez",
+      "abiertas": 14,
+      "criticas": 5,
+      "sugerencia": "Sebastian Sanchez tiene 14 tareas abiertas (5 criticas). Delegar o repriorizar."
     }
   ],
   "sin_categoria": [],
@@ -41,34 +108,30 @@
       "id": "2026-04-06-002",
       "tarea": "Recopilar información del proceso centro de operaciones",
       "responsable": "Andrés Avendaño",
-      "dias": 10,
+      "dias": 12,
       "puntaje": 44
-    }
-  ],
-  "sin_evaluar": [
+    },
     {
       "id": "2026-04-12-004",
       "tarea": "Publicar documentación de KPIs en repositorio público",
       "responsable": "Equipo Técnico",
-      "fecha_creacion": "2026-04-12"
+      "dias": 6,
+      "puntaje": 37
     },
     {
       "id": "2026-04-13-mc2abc0",
       "tarea": "Casa (Construcción)",
       "responsable": "Sebastian",
-      "fecha_creacion": "2026-04-13"
-    },
+      "dias": 5,
+      "puntaje": null
+    }
+  ],
+  "sin_evaluar": [
     {
-      "id": "2026-04-13-m3515e9",
-      "tarea": "Ejecutar y pagar Jericó para empalme en abril 16 de abril",
+      "id": "2026-04-13-mc2abc0",
+      "tarea": "Casa (Construcción)",
       "responsable": "Sebastian",
       "fecha_creacion": "2026-04-13"
-    },
-    {
-      "id": "2026-04-14-c001",
-      "tarea": "Revisar no conformidad EPM contrato 2401 y responder formalmente",
-      "responsable": "Sebastian",
-      "fecha_creacion": "2026-04-14"
     },
     {
       "id": "2026-04-14-001",
@@ -95,12 +158,6 @@
       "fecha_creacion": "2026-04-14"
     },
     {
-      "id": "2026-04-15-c001",
-      "tarea": "Cobrar reajustes pendientes a EPM del contrato Río Negro (~180 millones COP)",
-      "responsable": "Sebastian",
-      "fecha_creacion": "2026-04-15"
-    },
-    {
       "id": "2026-04-15-c002",
       "tarea": "Estructurar defensa legal y documentación contra EPM por incumplimiento contractual",
       "responsable": "Sebastian",
@@ -111,6 +168,144 @@
       "tarea": "Preparar propuesta contundente de reajuste de contrato EPM Río Negro con alternativas viables",
       "responsable": "Sebastian",
       "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-16-c001",
+      "tarea": "Cobrar pago pendiente de Hamilton según lo prometido",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-16"
+    },
+    {
+      "id": "2026-04-16-c003",
+      "tarea": "Resolver no conformidad del contrato 24 y responder formalmente",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-16"
+    },
+    {
+      "id": "2026-04-16-c001x",
+      "tarea": "Preparar documentación de debido proceso ejecutivo con focus en ambiental y reajustes",
+      "responsable": "Sebastian Sanchez",
+      "fecha_creacion": "2026-04-16"
+    },
+    {
+      "id": "2026-04-16-c002x",
+      "tarea": "Evaluar viabilidad de terminación contractual vs. renegociación de fórmula",
+      "responsable": "Sebastian Sanchez",
+      "fecha_creacion": "2026-04-16"
+    },
+    {
+      "id": "2026-04-16-c003x",
+      "tarea": "Validar con Camacol data de escalada salarial (22-27% vs. 52% actual)",
+      "responsable": "Sebastian Sanchez",
+      "fecha_creacion": "2026-04-16"
+    },
+    {
+      "id": "2026-04-16-c004",
+      "tarea": "Coordinar con equipo (Uner, Leon, Diana) estrategia de confrontación con Catalina",
+      "responsable": "Sebastian Sanchez",
+      "fecha_creacion": "2026-04-16"
+    },
+    {
+      "id": "2026-04-17-m25f898",
+      "tarea": "comprar vehiculos y maquinas para el proyecto de vanti,valle y vehiculos z2",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-17"
+    },
+    {
+      "id": "2026-04-15-001",
+      "tarea": "Revisar informe de gestión para Supersociedades",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-002",
+      "tarea": "{'taja': 'Enviar estados financieros y anexos a Supersociedades', 'responsable': 'Sebastian', 'prior",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-003",
+      "tarea": "Obtener respuesta contable de Manuel sobre configuración nómina UGP-DIAN",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-004",
+      "tarea": "Cobrar ICA pendiente a municipios (~55 millones Medellín)",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-005",
+      "tarea": "Responder requerimiento SENA pendiente",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-006",
+      "tarea": "Escanear Acta 87 de Asamblea",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-007",
+      "tarea": "Firmar declaración de renta con ayuda de Diana y Alejandro",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-008",
+      "tarea": "Integrar informes inversión extranjera en sistema Odoo",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-009",
+      "tarea": "Definir auditoría de balances en Odoo con revisor fiscal",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-010",
+      "tarea": "Enviar certificados retención mensual a consorciados (Óscar, Zilar)",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-011",
+      "tarea": "Ajustar débito deuda NC (retenciones no cobradas)",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-012",
+      "tarea": "Aclarar uso y condiciones de contenedores charcutería",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-013",
+      "tarea": "Cuadrar deuda empresa a Condugas y plan de pago",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-15-014",
+      "tarea": "Contactar Catalina (EPM) para seguimiento post-negociación",
+      "responsable": "Sebastian",
+      "fecha_creacion": "2026-04-15"
+    },
+    {
+      "id": "2026-04-16-r5-001",
+      "tarea": "Llamar a Pilar en ~30 minutos para conversación pendiente",
+      "responsable": "Sebastian Sanchez",
+      "fecha_creacion": "2026-04-14"
+    },
+    {
+      "id": "2026-04-16-r6-002",
+      "tarea": "Preparar documento con 3 pilares: Confiabilidad numérica, Relacionamiento, Adaptabilidad",
+      "responsable": "Sebastian Sanchez",
+      "fecha_creacion": "2026-04-14"
     }
   ]
 }
