@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-18T17:25:40",
+  "ultima_actualizacion": "2026-04-19T00:00:01",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -1078,7 +1078,8 @@
       "vencida": false,
       "evaluada": false,
       "categoria": "condugas",
-      "eje": "condugas"
+      "eje": "condugas",
+      "estancada": true
     },
     {
       "id": "2026-04-14-002",
@@ -1112,7 +1113,8 @@
       "vencida": false,
       "evaluada": false,
       "categoria": "being-core",
-      "eje": "being-core"
+      "eje": "being-core",
+      "estancada": true
     },
     {
       "id": "2026-04-14-008",
@@ -1146,7 +1148,8 @@
       "vencida": false,
       "evaluada": false,
       "categoria": "condugas",
-      "eje": "condugas"
+      "eje": "condugas",
+      "estancada": true
     },
     {
       "id": "2026-04-14-011",
@@ -1162,7 +1165,8 @@
       "vencida": false,
       "evaluada": false,
       "categoria": "condugas",
-      "eje": "condugas"
+      "eje": "condugas",
+      "estancada": true
     },
     {
       "id": "2026-04-14-meaf4fd",
@@ -1453,7 +1457,7 @@
       "origen": "limitless_auto",
       "contexto": "Contrato EPM bloqueado por incumplimientos económicos",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": 1900000000,
@@ -1518,7 +1522,7 @@
       "origen": "limitless_auto",
       "contexto": "No aparecer a Catalina para presionar desde otros flancos",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -1800,7 +1804,8 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-r6-002",
@@ -1815,7 +1820,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-r7-003",
@@ -1830,7 +1836,8 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-r7-004",
@@ -1845,7 +1852,8 @@
       "tipo": "evidencia",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-r7-005",
@@ -1860,7 +1868,8 @@
       "tipo": "comunicacion",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-r9-008",
@@ -1875,7 +1884,8 @@
       "tipo": "comunicacion",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-r9-009",
@@ -1890,7 +1900,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-001",
@@ -2010,7 +2021,8 @@
       "tipo": "decision",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-r10-014",
@@ -2025,7 +2037,8 @@
       "tipo": "organizacion",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-c001xx",
@@ -2193,7 +2206,7 @@
       "origen": "limitless_auto",
       "contexto": "Análisis técnico, normalización, lógica de costos",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
