@@ -4,92 +4,92 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dashboard Sebastian — SER.SIENDO</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#07090d;--bg2:#0c1017;--bg3:#111827;--cyan:#06b6d4;--orange:#f97316;--red:#ef4444;--green:#22c55e;--yellow:#eab308;--purple:#a78bfa;--pink:#f472b6;--text:#e2e8f0;--muted:#64748b;--border:#1e293b}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+:root{--bg:#faf7ee;--bg2:#f5eed5;--bg3:#091f2e;--cyan:#b89949;--orange:#c9a84a;--red:#a62e2e;--green:#5a7a4a;--yellow:#d4a052;--purple:#6e5f99;--pink:#a66f7e;--text:#091f2e;--muted:#6b7580;--border:#c9a84a}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 a{color:var(--cyan);text-decoration:none}
-nav{position:sticky;top:0;z-index:50;background:rgba(7,9,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:6px;padding:10px 16px;overflow-x:auto}
-nav .logo{font-family:'Instrument Serif',serif;font-size:18px;color:var(--cyan);margin-right:auto;white-space:nowrap}
+nav{position:sticky;top:0;z-index:50;background:rgba(250,247,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:6px;padding:10px 16px;overflow-x:auto}
+nav .logo{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--cyan);margin-right:auto;white-space:nowrap}
 nav button{background:transparent;border:1px solid var(--border);color:var(--muted);padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap;font-family:inherit;transition:.2s}
-nav button:hover,nav button.on{border-color:var(--cyan);color:var(--cyan);background:rgba(6,182,212,.08)}
+nav button:hover,nav button.on{border-color:var(--cyan);color:var(--cyan);background:rgba(184,153,73,.08)}
 main{max-width:1200px;margin:0 auto;padding:16px}
 section{display:none}section.show{display:block}
-h2{font-family:'Instrument Serif',serif;font-size:24px;font-weight:400;margin-bottom:16px}
+h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;margin-bottom:16px}
 h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:20px 0 10px}
 .grid{display:grid;gap:12px}.g2{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.g4{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
 .card .label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
 .card .val{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:500;margin:4px 0}
 .card .sub{font-size:12px;color:var(--muted)}
-.card.crisis{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.05)}
+.card.crisis{border-color:rgba(166,46,46,.4);background:rgba(166,46,46,.05)}
 .kpi-row{display:grid;grid-template-columns:1fr 100px 80px;gap:0;font-size:13px;padding:7px 0;border-bottom:1px solid var(--border);align-items:center}
 .kpi-row.head{font-weight:600;color:var(--muted);font-size:11px;text-transform:uppercase}
 .kpi-val{font-family:'JetBrains Mono',monospace;text-align:right}
 .st{font-size:10px;padding:2px 8px;border-radius:4px;text-align:center;display:inline-block}
-.st-r{background:rgba(239,68,68,.15);color:#f87171}.st-y{background:rgba(234,179,8,.15);color:#fbbf24}.st-g{background:rgba(34,197,94,.15);color:#4ade80}
+.st-r{background:rgba(166,46,46,.15);color:#8a2828}.st-y{background:rgba(212,160,82,.15);color:#8a6f2e}.st-g{background:rgba(90,122,74,.15);color:#3e5a30}
 .contrato{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:6px}
-.contrato.crisis{border-color:rgba(239,68,68,.35)}
+.contrato.crisis{border-color:rgba(166,46,46,.35)}
 .cname{font-weight:500;font-size:14px}.cclient{font-size:11px;color:var(--muted)}.cmargen{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:500}
 .proj{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:8px}
 .pname{font-weight:600;font-size:14px}.pline{font-size:10px;padding:2px 8px;border-radius:4px;margin-left:6px}
 .pdesc{font-size:12px;color:var(--muted);margin:4px 0}.ppeople{font-size:11px;color:var(--muted)}.paction{font-size:12px;color:var(--cyan);margin-top:4px}
-.line-condugas{background:rgba(239,68,68,.12);color:#f87171}.line-siendo{background:rgba(6,182,212,.12);color:#22d3ee}.line-serjefe{background:rgba(167,139,250,.12);color:#c4b5fd}.line-patrimonio{background:rgba(34,197,94,.12);color:#4ade80}.line-familia{background:rgba(244,114,182,.12);color:#f9a8d4}
+.line-condugas{background:rgba(166,46,46,.12);color:#8a2828}.line-siendo{background:rgba(184,153,73,.12);color:#091f2e}.line-serjefe{background:rgba(110,95,153,.12);color:#5a4d88}.line-patrimonio{background:rgba(90,122,74,.12);color:#3e5a30}.line-familia{background:rgba(166,111,126,.12);color:#8a5466}
 .link-row{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
 .link-btn{background:var(--bg3);border:1px solid var(--border);padding:8px 16px;border-radius:8px;color:var(--cyan);font-size:13px;transition:.2s}
 .link-btn:hover{border-color:var(--cyan)}
 footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);margin-top:32px}
 .filter-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;transition:.2s}
-.filter-btn:hover,.filter-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(6,182,212,.08)}
+.filter-btn:hover,.filter-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(184,153,73,.08)}
 
-.radar-p1{border-left:3px solid var(--red);background:rgba(239,68,68,.04)}
-.radar-p2{border-left:3px solid var(--orange);background:rgba(249,115,22,.04)}
-.radar-p3{border-left:3px solid var(--yellow);background:rgba(234,179,8,.04)}
-.radar-p4{border-left:3px solid var(--muted);background:rgba(100,116,139,.04)}
+.radar-p1{border-left:3px solid var(--red);background:rgba(166,46,46,.04)}
+.radar-p2{border-left:3px solid var(--orange);background:rgba(201,168,74,.04)}
+.radar-p3{border-left:3px solid var(--yellow);background:rgba(212,160,82,.04)}
+.radar-p4{border-left:3px solid var(--muted);background:rgba(107,117,128,.04)}
 .radar-stat{text-align:center;padding:12px}
 .radar-stat .num{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600}
 .radar-stat .lbl{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:2px}
 .sla-ok{color:var(--green)}.sla-warn{color:var(--orange)}.sla-expired{color:var(--red)}
 .cat-chip{font-size:10px;padding:2px 8px;border-radius:4px;display:inline-block;margin-right:4px}
 
-.proj-detail-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);overflow-y:auto;padding:2rem}
+.proj-detail-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000;background:rgba(9,31,46,0.82);backdrop-filter:blur(8px);overflow-y:auto;padding:2rem}
 .proj-detail-modal.open{display:block}
-.proj-detail-inner{max-width:800px;margin:0 auto;background:#111827;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:2rem;position:relative}
-.proj-detail-inner .close-btn{position:absolute;top:12px;right:16px;background:none;border:none;color:#64748b;font-size:24px;cursor:pointer}
+.proj-detail-inner{max-width:800px;margin:0 auto;background:#091f2e;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:2rem;position:relative}
+.proj-detail-inner .close-btn{position:absolute;top:12px;right:16px;background:none;border:none;color:#6b7580;font-size:24px;cursor:pointer}
 .proj-detail-inner h2{font-size:1.4rem;font-weight:700;margin-bottom:4px}
-.proj-detail-inner .proj-meta{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#f97316;letter-spacing:1px;margin-bottom:1rem}
-.proj-detail-inner .proj-desc{color:#94a3b8;font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6}
+.proj-detail-inner .proj-meta{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#c9a84a;letter-spacing:1px;margin-bottom:1rem}
+.proj-detail-inner .proj-desc{color:#6b7580;font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6}
 .hab-section{margin-bottom:1.5rem}
-.hab-section h3{font-size:0.95rem;font-weight:600;margin-bottom:0.75rem;color:#e2e8f0}
-.hab-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;margin-bottom:4px;font-size:0.82rem;background:rgba(255,255,255,0.02);border-left:3px solid #475569}
-.hab-item.H{border-left-color:#ec4899}.hab-item.O{border-left-color:#eab308}.hab-item.T{border-left-color:#06b6d4}
+.hab-section h3{font-size:0.95rem;font-weight:600;margin-bottom:0.75rem;color:#091f2e}
+.hab-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;margin-bottom:4px;font-size:0.82rem;background:rgba(255,255,255,0.02);border-left:3px solid #d8d0b8}
+.hab-item.H{border-left-color:#a66f7e}.hab-item.O{border-left-color:#d4a052}.hab-item.T{border-left-color:#b89949}
 .hab-badge{font-family:monospace;font-size:0.65rem;font-weight:700;padding:2px 5px;border-radius:3px;min-width:18px;text-align:center}
-.hab-badge.H{background:rgba(236,72,153,0.15);color:#ec4899}
-.hab-badge.O{background:rgba(234,179,8,0.15);color:#eab308}
-.hab-badge.T{background:rgba(6,182,212,0.15);color:#06b6d4}
+.hab-badge.H{background:rgba(166,111,126,0.15);color:#a66f7e}
+.hab-badge.O{background:rgba(212,160,82,0.15);color:#d4a052}
+.hab-badge.T{background:rgba(184,153,73,0.15);color:#b89949}
 .hab-status{margin-left:auto;font-family:monospace;font-size:0.72rem;white-space:nowrap}
 .tl-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:1.5rem}
-.tl-card{background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.1);border-radius:8px;padding:10px 12px}
-.tl-card .phase{font-family:monospace;font-size:0.65rem;color:#06b6d4;font-weight:600;letter-spacing:1px;margin-bottom:4px}
+.tl-card{background:rgba(184,153,73,0.04);border:1px solid rgba(184,153,73,0.1);border-radius:8px;padding:10px 12px}
+.tl-card .phase{font-family:monospace;font-size:0.65rem;color:#b89949;font-weight:600;letter-spacing:1px;margin-bottom:4px}
 .tl-card h4{font-size:0.85rem;font-weight:600;margin-bottom:3px}
-.tl-card p{font-size:0.75rem;color:#64748b;line-height:1.4}
+.tl-card p{font-size:0.75rem;color:#6b7580;line-height:1.4}
 .proj-stats-row{display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
 .proj-stat-box{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:10px 14px;flex:1;min-width:120px;text-align:center}
 .proj-stat-box .num{font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:800}
-.proj-stat-box .lbl{font-size:0.65rem;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
-.full-doc-link{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.25);border-radius:8px;color:#f97316;font-size:0.85rem;font-weight:500;text-decoration:none;cursor:pointer;margin-right:8px;margin-top:8px}
-.full-doc-link:hover{background:rgba(249,115,22,0.2)}
+.proj-stat-box .lbl{font-size:0.65rem;color:#6b7580;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.full-doc-link{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(201,168,74,0.1);border:1px solid rgba(201,168,74,0.25);border-radius:8px;color:#c9a84a;font-size:0.85rem;font-weight:500;text-decoration:none;cursor:pointer;margin-right:8px;margin-top:8px}
+.full-doc-link:hover{background:rgba(201,168,74,0.2)}
 
 /* === BRIEFING TABS === */
 .bf-tabs{display:flex;gap:6px;margin-bottom:16px}
 .bf-tab{background:transparent;border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;transition:.2s}
-.bf-tab:hover,.bf-tab.active{border-color:var(--cyan);color:var(--cyan);background:rgba(6,182,212,.08)}
+.bf-tab:hover,.bf-tab.active{border-color:var(--cyan);color:var(--cyan);background:rgba(184,153,73,.08)}
 .bf-panel{display:none}.bf-panel.active{display:block}
 .bf-alert{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:13px;border-left:3px solid}
-.bf-alert.survival{border-color:var(--red);background:rgba(239,68,68,.06);color:#fca5a5}
-.bf-alert.warning{border-color:var(--orange);background:rgba(249,115,22,.06);color:#fdba74}
-.bf-alert.info{border-color:var(--cyan);background:rgba(6,182,212,.06);color:#67e8f9}
+.bf-alert.survival{border-color:var(--red);background:rgba(166,46,46,.06);color:#8a2828}
+.bf-alert.warning{border-color:var(--orange);background:rgba(201,168,74,.06);color:#a68844}
+.bf-alert.info{border-color:var(--cyan);background:rgba(184,153,73,.06);color:#123b58}
 .bf-task-card{padding:12px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:8px}
 .bf-task-card .bf-cat{font-size:10px;padding:2px 8px;border-radius:4px;font-weight:600;display:inline-block;margin-bottom:4px}
 .bf-task-card .bf-title{font-size:14px;font-weight:500}
@@ -101,8 +101,139 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 .week-day-row .wval{font-family:'JetBrains Mono',monospace;text-align:center}
 .week-summary-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px}
 .kpi-update-badge{font-size:10px;padding:2px 8px;border-radius:10px;margin-left:8px}
-.kpi-fresh{background:rgba(34,197,94,.15);color:#4ade80}
-.kpi-stale{background:rgba(239,68,68,.15);color:#f87171}
+.kpi-fresh{background:rgba(90,122,74,.15);color:#3e5a30}
+.kpi-stale{background:rgba(166,46,46,.15);color:#8a2828}
+
+/* ═══════════════════════════════════════════════════════
+   HIGH-TICKET EDITORIAL — overrides 2026-04-19
+   Paleta invertida: papel base + cards con sombra editorial
+   Cards .crisis + modals en navy dramático
+═══════════════════════════════════════════════════════ */
+
+:root{
+  --text-inv:#F5F1E4;
+  --gold:#b89949;
+  --gold-soft:#d4a052;
+  --gold-line:#c9a84a;
+  --paper-shadow: 0 1px 2px rgba(40,30,20,.04), 0 8px 24px rgba(40,30,20,.06);
+  --paper-shadow-lg: 0 2px 8px rgba(40,30,20,.06), 0 24px 48px rgba(40,30,20,.10);
+  --navy: #091f2e;
+  --navy-soft: #123b58;
+}
+
+body{
+  background: radial-gradient(ellipse at top left, #f2ecd9 0%, #faf7ee 45%), #faf7ee;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+h2{
+  font-family:'Cormorant Garamond', serif !important;
+  font-weight: 500 !important;
+  font-size: 28px !important;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+h3{
+  font-family:'Inter', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  color: var(--gold) !important;
+  text-transform: uppercase;
+}
+
+/* Nav elegante */
+nav{
+  background: rgba(250,247,238,.92) !important;
+  border-bottom: 1px solid var(--gold-line) !important;
+}
+nav .logo{
+  font-family:'Cormorant Garamond', serif !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em;
+  color: var(--navy) !important;
+}
+nav button{ border: 1px solid transparent !important; color: #6b7580 !important; font-size: 12px; letter-spacing: 0.03em; }
+nav button:hover, nav button.on{ border-color: var(--gold) !important; color: var(--navy) !important; background: rgba(184,153,73,.08) !important; }
+
+/* Cards base — papel con sombra editorial + borde dorado sutil */
+.card{
+  background: #fdfbf2 !important;
+  border: 1px solid #e8e1c8 !important;
+  border-left: 3px solid var(--gold) !important;
+  box-shadow: var(--paper-shadow);
+  padding: 18px 20px !important;
+}
+.card .label{ color: var(--gold) !important; font-size: 10px; letter-spacing: 0.12em; }
+.card .val{ font-family:'Cormorant Garamond', serif !important; font-size: 28px !important; color: var(--navy) !important; font-weight: 500; }
+.card .sub{ color: #6b7580 !important; font-size: 12px; }
+
+/* Card.crisis — DRAMA: navy inverso */
+.card.crisis{
+  background: linear-gradient(135deg, #091f2e 0%, #123b58 100%) !important;
+  border: 1px solid var(--gold) !important;
+  border-left: 3px solid var(--gold-soft) !important;
+  color: var(--text-inv) !important;
+  box-shadow: var(--paper-shadow-lg);
+}
+.card.crisis .label{ color: var(--gold-soft) !important; }
+.card.crisis .val{ color: var(--text-inv) !important; }
+.card.crisis .sub{ color: rgba(245,241,228,.75) !important; }
+
+/* Contratos y proyectos */
+.contrato{ background: #fdfbf2 !important; border: 1px solid #e8e1c8 !important; box-shadow: var(--paper-shadow); }
+.contrato.crisis{ border-color: var(--gold) !important; border-left: 3px solid #a62e2e !important; }
+.cname{ color: var(--navy) !important; font-weight: 500; }
+.cmargen{ color: var(--navy) !important; }
+.proj{ background: #fdfbf2 !important; border: 1px solid #e8e1c8 !important; border-left: 3px solid var(--gold) !important; box-shadow: var(--paper-shadow); padding: 16px !important; }
+.pname{ color: var(--navy) !important; }
+.pdesc{ color: #3d4f5e !important; }
+.paction{ color: var(--gold) !important; }
+
+/* Buttons */
+.filter-btn, .bf-tab, .link-btn{ background: transparent !important; border: 1px solid var(--gold-line) !important; color: var(--navy) !important; }
+.filter-btn:hover, .filter-btn.active, .bf-tab:hover, .bf-tab.active, .link-btn:hover{
+  background: rgba(184,153,73,.1) !important; border-color: var(--gold) !important;
+}
+
+/* Modal — navy dramático (inverso) */
+.proj-detail-modal{ background: rgba(9,31,46,0.82) !important; backdrop-filter: blur(12px); }
+.proj-detail-inner{ background: linear-gradient(135deg, #091f2e 0%, #0f2844 100%) !important; border: 1px solid var(--gold) !important; color: var(--text-inv) !important; box-shadow: 0 40px 80px rgba(0,0,0,.4) !important; }
+.proj-detail-inner h2{ color: var(--text-inv) !important; }
+.proj-detail-inner h3{ color: var(--gold-soft) !important; }
+.proj-detail-inner .proj-desc{ color: rgba(245,241,228,.8) !important; }
+.proj-detail-inner .close-btn{ color: rgba(245,241,228,.6) !important; }
+.hab-item{ background: rgba(245,241,228,.05) !important; border-left-color: rgba(245,241,228,.2) !important; }
+.tl-card{ background: rgba(212,160,82,.08) !important; border: 1px solid rgba(212,160,82,.25) !important; }
+.tl-card .phase{ color: var(--gold-soft) !important; }
+.tl-card h4{ color: var(--text-inv) !important; }
+.tl-card p{ color: rgba(245,241,228,.7) !important; }
+.proj-stat-box{ background: rgba(245,241,228,.04) !important; border: 1px solid rgba(245,241,228,.08) !important; }
+.proj-stat-box .num{ color: var(--text-inv) !important; }
+
+/* Status chips — más finos, editorial */
+.st{ font-weight: 500; letter-spacing: 0.06em; border: 1px solid transparent; }
+.st-r{ background: rgba(166,46,46,.08) !important; color: #a62e2e !important; border-color: rgba(166,46,46,.25) !important; }
+.st-y{ background: rgba(212,160,82,.12) !important; color: #8a6f2e !important; border-color: rgba(212,160,82,.3) !important; }
+.st-g{ background: rgba(90,122,74,.1) !important; color: #3e5a30 !important; border-color: rgba(90,122,74,.25) !important; }
+
+/* Radar priorities */
+.radar-p1{ background: rgba(166,46,46,.05) !important; border-left: 3px solid #a62e2e !important; }
+.radar-p2{ background: rgba(201,168,74,.06) !important; border-left: 3px solid var(--gold) !important; }
+.radar-p3{ background: rgba(212,160,82,.06) !important; border-left: 3px solid var(--gold-soft) !important; }
+.radar-p4{ background: rgba(107,117,128,.04) !important; border-left: 3px solid #6b7580 !important; }
+
+/* Footer sutil */
+footer{ border-top: 1px solid var(--gold-line) !important; color: #6b7580 !important; }
+
+/* Scrollbar elegante */
+::-webkit-scrollbar{ width: 10px; height: 10px; }
+::-webkit-scrollbar-track{ background: transparent; }
+::-webkit-scrollbar-thumb{ background: rgba(184,153,73,.25); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover{ background: rgba(184,153,73,.45); }
+
 </style>
 </head>
 <body>
@@ -121,7 +252,7 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 <button onclick="show('coherencia')">Coherencia <span id="coherencia-badge" style="background:var(--orange);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
 <button onclick="show('calendario')">Calendario <span id="calendario-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
 <button onclick="window.open('mapa-neuronal.html','_blank')">Mapa</button>
-<button onclick="window.location.href='priorizador.html'" style="background:rgba(168,85,247,.15);color:#c4b5fd;border:1px solid rgba(168,85,247,.3)">Priorizar</button>
+<button onclick="window.location.href='priorizador.html'" style="background:rgba(168,85,247,.15);color:#5a4d88;border:1px solid rgba(168,85,247,.3)">Priorizar</button>
 </nav>
 <main>
 <section id="inicio" class="show">
@@ -130,7 +261,7 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 <div class="grid g4">
 <div class="card crisis" id="card-caja"><div class="label">Caja</div><div class="val" id="k-caja">--</div><div class="sub">objetivo: >30 dias</div></div>
 <div class="card crisis" id="card-oyma"><div class="label">OYMA R1</div><div class="val" style="color:var(--red)" id="k-oyma">--</div><div class="sub" id="k-oyma-sub">--</div></div>
-<div class="card" style="border-color:rgba(234,179,8,.3)"><div class="label">Facturacion</div><div class="val" id="k-fact">--</div><div class="sub">del target mensual</div></div>
+<div class="card" style="border-color:rgba(212,160,82,.3)"><div class="label">Facturacion</div><div class="val" id="k-fact">--</div><div class="sub">del target mensual</div></div>
 <div class="card"><div class="label">EBITDA</div><div class="val" id="k-ebitda">--</div><div class="sub">consolidado</div></div>
 </div>
 <h3>WHOOP</h3>
@@ -164,8 +295,8 @@ footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-t
 <h2>Revisar Tareas</h2>
 <p style="font-size:12px;color:var(--muted);margin:-10px 0 16px">Tareas extraidas de Limitless — acepta las reales, rechaza las que no son</p>
 <div style="display:flex;gap:8px;margin-bottom:16px;">
-  <button onclick="bulkAction('accept')" style="background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.3);padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;">Aceptar todas</button>
-  <button onclick="bulkAction('reject')" style="background:rgba(239,68,68,.1);color:var(--red);border:1px solid rgba(239,68,68,.2);padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;">Rechazar todas</button>
+  <button onclick="bulkAction('accept')" style="background:rgba(90,122,74,.15);color:var(--green);border:1px solid rgba(90,122,74,.3);padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;">Aceptar todas</button>
+  <button onclick="bulkAction('reject')" style="background:rgba(166,46,46,.1);color:var(--red);border:1px solid rgba(166,46,46,.2);padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;">Rechazar todas</button>
 </div>
 <div id="pendientes-list"><div style="text-align:center;padding:30px;color:var(--muted)">Cargando...</div></div>
 </section>
@@ -427,7 +558,7 @@ function renderC(arr){var l=document.getElementById('clist');l.innerHTML='';arr.
 // Proyectos
 // ==========================================
 var allProjects=[];var projFilter='todos';
-var EC={crisis:'var(--red)',operativo:'var(--green)',desarrollo:'var(--cyan)',seguimiento:'var(--purple)',evaluacion:'var(--yellow)',monitoreo:'var(--orange)',planificacion:'var(--cyan)',suspendido:'var(--muted)',terminado:'#334155',cancelado:'#1e293b'};
+var EC={crisis:'var(--red)',operativo:'var(--green)',desarrollo:'var(--cyan)',seguimiento:'var(--purple)',evaluacion:'var(--yellow)',monitoreo:'var(--orange)',planificacion:'var(--cyan)',suspendido:'var(--muted)',terminado:'#334155',cancelado:'#c9a84a'};
 var EL={crisis:'CRISIS',operativo:'Activo',desarrollo:'En desarrollo',seguimiento:'Seguimiento',evaluacion:'Evaluacion',monitoreo:'Monitoreo',planificacion:'Planificacion',suspendido:'Suspendido',terminado:'Terminado',cancelado:'Cancelado'};
 var LC={condugas:'var(--red)',sendo_consulting:'var(--cyan)',serjefe:'var(--purple)',patrimonio:'var(--green)',familia:'var(--pink)'};
 fetch('/data/proyectos.json').then(function(r){return r.json()}).then(function(d){
@@ -511,7 +642,7 @@ function loadBriefing() {
 
     // Saludo
     if (bh.saludo) {
-      h += '<div style="font-family:\'Instrument Serif\',serif;font-size:20px;margin-bottom:16px;color:var(--cyan)">' + bh.saludo + '</div>';
+      h += '<div style="font-family:\'Cormorant Garamond\',serif;font-size:20px;margin-bottom:16px;color:var(--cyan)">' + bh.saludo + '</div>';
     }
 
     // Supervivencia alerts
@@ -537,7 +668,7 @@ function loadBriefing() {
 
     // Mega tarea del dia
     if (bh.mega_dia) {
-      h += '<div style="margin:16px 0;padding:14px 16px;background:linear-gradient(135deg,rgba(6,182,212,.1),rgba(167,139,250,.1));border:1px solid rgba(6,182,212,.2);border-radius:10px">';
+      h += '<div style="margin:16px 0;padding:14px 16px;background:linear-gradient(135deg,rgba(184,153,73,.1),rgba(110,95,153,.1));border:1px solid rgba(184,153,73,.2);border-radius:10px">';
       h += '<div style="font-size:11px;color:var(--cyan);text-transform:uppercase;font-weight:600;margin-bottom:4px">Mega tarea del dia</div>';
       h += '<div style="font-size:15px;font-weight:500">' + bh.mega_dia + '</div>';
       h += '</div>';
@@ -586,7 +717,7 @@ function loadBriefing() {
       bh.criticas_sin_fecha.forEach(function(c) {
         h += '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:6px;margin-bottom:4px;gap:8px">';
         h += '<div style="flex:1"><div style="font-size:12px">'+c.tarea+'</div><div style="font-size:10px;color:var(--muted);margin-top:2px">'+(c.responsable||'')+' - '+c.prioridad+'</div></div>';
-        h += '<button onclick="setDeadline(\''+c.id+'\',\'\')" style="background:rgba(249,115,22,.15);color:var(--orange);border:1px solid rgba(249,115,22,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">Asignar fecha</button>';
+        h += '<button onclick="setDeadline(\''+c.id+'\',\'\')" style="background:rgba(201,168,74,.15);color:var(--orange);border:1px solid rgba(201,168,74,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">Asignar fecha</button>';
         h += '</div>';
       });
       h += '</div>';
@@ -605,7 +736,7 @@ function loadBriefing() {
 
     // Frase del dia
     if (bh.frase_dia) {
-      h += '<div style="margin-top:16px;padding:14px 16px;background:rgba(167,139,250,.06);border-left:3px solid var(--purple);border-radius:0 8px 8px 0;font-style:italic;color:var(--purple)">"' + bh.frase_dia + '"</div>';
+      h += '<div style="margin-top:16px;padding:14px 16px;background:rgba(110,95,153,.06);border-left:3px solid var(--purple);border-radius:0 8px 8px 0;font-style:italic;color:var(--purple)">"' + bh.frase_dia + '"</div>';
     }
 
     // Fallback: si no hay briefing_hoy, intenta campos raiz legacy
@@ -643,7 +774,7 @@ function loadBriefing() {
     var sw = '';
 
     if (sem.semana) {
-      sw += '<div style="font-family:\'Instrument Serif\',serif;font-size:20px;margin-bottom:4px">' + sem.semana + ' <span style="font-size:14px;color:var(--muted)">' + (sem.periodo||'') + '</span></div>';
+      sw += '<div style="font-family:\'Cormorant Garamond\',serif;font-size:20px;margin-bottom:4px">' + sem.semana + ' <span style="font-size:14px;color:var(--muted)">' + (sem.periodo||'') + '</span></div>';
     }
 
     // Metricas semanales
@@ -734,7 +865,7 @@ function buildHistorial(b) {
   var bh = b.briefing_hoy || {};
   var historial = b._historial || null;
 
-  hh += '<div style="font-family:\'Instrument Serif\',serif;font-size:20px;margin-bottom:12px">Historial de trazabilidad</div>';
+  hh += '<div style="font-family:\'Cormorant Garamond\',serif;font-size:20px;margin-bottom:12px">Historial de trazabilidad</div>';
   hh += '<p style="font-size:12px;color:var(--muted);margin-bottom:16px">Vision consolidada para detectar patrones, olvidos y temas recurrentes</p>';
 
   // Semana actual
@@ -867,7 +998,7 @@ function buildTareasHoy(bh) {
     h += '<div class="card crisis" style="margin-bottom:16px">';
     h += '<div class="label" style="color:var(--red)">ALERTAS DE SUPERVIVENCIA</div>';
     bh.supervivencia.forEach(function(s) {
-      h += '<div style="font-size:13px;padding:4px 0;border-bottom:1px solid rgba(239,68,68,.1)">' + s + '</div>';
+      h += '<div style="font-size:13px;padding:4px 0;border-bottom:1px solid rgba(166,46,46,.1)">' + s + '</div>';
     });
     h += '</div>';
   }
@@ -888,7 +1019,7 @@ function buildTareasHoy(bh) {
 
   // Mega tarea
   if (bh.mega_dia) {
-    h += '<div style="margin:16px 0;padding:14px 16px;background:linear-gradient(135deg,rgba(239,68,68,.1),rgba(249,115,22,.1));border:2px solid rgba(239,68,68,.3);border-radius:10px">';
+    h += '<div style="margin:16px 0;padding:14px 16px;background:linear-gradient(135deg,rgba(166,46,46,.1),rgba(201,168,74,.1));border:2px solid rgba(166,46,46,.3);border-radius:10px">';
     h += '<div style="font-size:11px;color:var(--red);text-transform:uppercase;font-weight:600;margin-bottom:4px">MEGA TAREA</div>';
     h += '<div style="font-size:16px;font-weight:600">' + bh.mega_dia + '</div>';
     h += '</div>';
@@ -921,7 +1052,7 @@ function toast(msg, type) {
   var t = document.createElement('div');
   t.textContent = msg;
   t.style.cssText = 'position:fixed;bottom:20px;right:20px;padding:10px 20px;border-radius:8px;font-size:13px;z-index:999;transition:opacity .3s;' +
-    (type==='ok'?'background:#065f46;color:#34d399':'background:#7f1d1d;color:#fca5a5');
+    (type==='ok'?'background:#065f46;color:#34d399':'background:#7f1d1d;color:#8a2828');
   document.body.appendChild(t);
   setTimeout(function(){t.style.opacity='0';setTimeout(function(){t.remove()},300)},2500);
 }
@@ -1013,22 +1144,22 @@ async function loadPendientes() {
             '<div style="flex:1">' +
               '<div style="font-size:13px;font-weight:500">' + t.tarea + '</div>' +
               '<div style="font-size:10px;color:var(--muted);margin-top:3px">' + (t.responsable||'') +
-                ' <span style="padding:1px 6px;border-radius:3px;background:rgba(6,182,212,.1);color:'+tipoColor+'">' + (t.tipo||'') + '</span>' +
-                ' <span style="padding:1px 6px;border-radius:3px;background:rgba(239,68,68,.1);color:'+priColor+'">' + (t.prioridad||'') + '</span>' +
+                ' <span style="padding:1px 6px;border-radius:3px;background:rgba(184,153,73,.1);color:'+tipoColor+'">' + (t.tipo||'') + '</span>' +
+                ' <span style="padding:1px 6px;border-radius:3px;background:rgba(166,46,46,.1);color:'+priColor+'">' + (t.prioridad||'') + '</span>' +
               '</div>' +
             '</div>' +
             '<div style="display:flex;gap:4px;margin-left:8px">' +
-              '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Delegar" style="background:rgba(6,182,212,.1);color:#06b6d4;border:1px solid rgba(6,182,212,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">→</button>' +
-              '<button onclick="reviewTask(\''+t.id+'\',\'reject\')" style="background:rgba(239,68,68,.1);color:#f87171;border:1px solid rgba(239,68,68,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✗</button>' +
-              '<button onclick="reviewTask(\''+t.id+'\',\'accept\')" style="background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✓</button>' +
+              '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Delegar" style="background:rgba(184,153,73,.1);color:#b89949;border:1px solid rgba(184,153,73,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">→</button>' +
+              '<button onclick="reviewTask(\''+t.id+'\',\'reject\')" style="background:rgba(166,46,46,.1);color:#8a2828;border:1px solid rgba(166,46,46,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✗</button>' +
+              '<button onclick="reviewTask(\''+t.id+'\',\'accept\')" style="background:rgba(90,122,74,.15);color:#3e5a30;border:1px solid rgba(90,122,74,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✓</button>' +
             '</div>' +
           '</div>';
         });
 
         // Bulk actions para esta reunion
         html += '<div style="display:flex;gap:6px;justify-content:flex-end;padding:6px 4px 4px">';
-        html += '<button onclick="bulkReunionAction('+gIdStr.replace(/"/g,'&quot;')+',\'reject\')" style="background:rgba(239,68,68,.06);color:#f87171;border:1px solid rgba(239,68,68,.15);padding:4px 12px;border-radius:5px;font-size:10px;cursor:pointer">Rechazar reunion</button>';
-        html += '<button onclick="bulkReunionAction('+gIdStr.replace(/"/g,'&quot;')+',\'accept\')" style="background:rgba(34,197,94,.08);color:#4ade80;border:1px solid rgba(34,197,94,.2);padding:4px 12px;border-radius:5px;font-size:10px;cursor:pointer">Aceptar reunion</button>';
+        html += '<button onclick="bulkReunionAction('+gIdStr.replace(/"/g,'&quot;')+',\'reject\')" style="background:rgba(166,46,46,.06);color:#8a2828;border:1px solid rgba(166,46,46,.15);padding:4px 12px;border-radius:5px;font-size:10px;cursor:pointer">Rechazar reunion</button>';
+        html += '<button onclick="bulkReunionAction('+gIdStr.replace(/"/g,'&quot;')+',\'accept\')" style="background:rgba(90,122,74,.08);color:#3e5a30;border:1px solid rgba(90,122,74,.2);padding:4px 12px;border-radius:5px;font-size:10px;cursor:pointer">Aceptar reunion</button>';
         html += '</div>';
 
         html += '</div>'; // body
@@ -1125,18 +1256,18 @@ async function loadMisTareas() {
         deadlineBadge = ' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:'+dCol+'22;color:'+dCol+';font-weight:600">'+dText+'</span>';
       }
       var dateBtn = isCerrada ? '' : '<button onclick="setDeadline(\''+t.id+'\',\''+(t.fecha_limite||'')+'\')" title="Asignar fecha limite" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">'+(t.fecha_limite?'editar fecha':'asignar fecha')+'</button>';
-      var delegarBtn = isCerrada ? '' : '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Delegar a miembro del equipo" style="background:rgba(6,182,212,.1);color:var(--cyan);border:1px solid rgba(6,182,212,.25);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">→ delegar</button>';
+      var delegarBtn = isCerrada ? '' : '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Delegar a miembro del equipo" style="background:rgba(184,153,73,.1);color:var(--cyan);border:1px solid rgba(184,153,73,.25);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">→ delegar</button>';
       return '<div class="card" style="margin-bottom:6px;display:flex;align-items:center;gap:12px;'+(isCerrada?'opacity:.5':'')+'">' +
         '<input type="checkbox" '+(isCerrada?'checked':'')+' onchange="toggleTarea(\''+t.id+'\')" style="width:18px;height:18px;cursor:pointer;accent-color:var(--cyan)">' +
         '<div style="flex:1">' +
           '<div style="font-size:13px;'+(isCerrada?'text-decoration:line-through':'')+'">' + t.tarea + '</div>' +
           '<div style="font-size:11px;color:var(--muted)">' + (t.responsable||'') + ' - ' + (t.fecha_creacion||t.fecha||'') +
-            ' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(239,68,68,.1);color:'+priColor+'">' + (t.prioridad||'') + '</span>' +
+            ' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(166,46,46,.1);color:'+priColor+'">' + (t.prioridad||'') + '</span>' +
             deadlineBadge +
-            (t.vencida?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(239,68,68,.2);color:var(--red)">vencida</span>':'') +
-            (t.estancada?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(234,179,8,.15);color:var(--yellow)">estancada</span>':'') +
-            (!t.evaluada?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(100,116,139,.15);color:var(--muted)">sin evaluar</span>':'') +
-            (t.motivo_cierre?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(167,139,250,.15);color:var(--purple)">'+t.motivo_cierre+'</span>':'') +
+            (t.vencida?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(166,46,46,.2);color:var(--red)">vencida</span>':'') +
+            (t.estancada?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(212,160,82,.15);color:var(--yellow)">estancada</span>':'') +
+            (!t.evaluada?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(107,117,128,.15);color:var(--muted)">sin evaluar</span>':'') +
+            (t.motivo_cierre?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(110,95,153,.15);color:var(--purple)">'+t.motivo_cierre+'</span>':'') +
           '</div>' +
         '</div>' +
         delegarBtn +
@@ -1267,7 +1398,7 @@ async function loadEquipo() {
       var count = bucket ? bucket.tareas.length : 0;
       var criticas = bucket ? bucket.tareas.filter(function(t){return t.prioridad==='critica'}).length : 0;
       var isExpanded = _equipoCache.expanded === m.alias;
-      var bgColor = count === 0 ? 'var(--bg2)' : (criticas > 0 ? 'rgba(239,68,68,0.05)' : (count > 5 ? 'rgba(249,115,22,0.05)' : 'var(--bg2)'));
+      var bgColor = count === 0 ? 'var(--bg2)' : (criticas > 0 ? 'rgba(166,46,46,0.05)' : (count > 5 ? 'rgba(201,168,74,0.05)' : 'var(--bg2)'));
       var border = isExpanded ? 'border-color:var(--cyan)' : '';
       html += '<div class="card" style="cursor:pointer;background:' + bgColor + ';' + border + '" onclick="toggleEquipoMember(\'' + m.alias + '\')">';
       html += '<div style="display:flex;justify-content:space-between;align-items:baseline">';
@@ -1357,7 +1488,7 @@ function showDelegarMenu(taskId, anchorEl) {
 
   var html = '<div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;padding:4px 8px 6px">Delegar a</div>';
   TEAM_MEMBERS.filter(function(m){return m.alias!=='Sebastian'}).forEach(function(m){
-    html += '<div style="padding:6px 8px;cursor:pointer;border-radius:4px;font-size:12px" onmouseover="this.style.background=\'rgba(6,182,212,0.1)\'" onmouseout="this.style.background=\'transparent\'" onclick="delegarTarea(\'' + taskId + '\',\'' + m.full + '\');document.getElementById(\'delegar-menu\').remove();">' + m.alias + ' <span style="color:var(--muted);font-size:10px">· ' + m.rol + '</span></div>';
+    html += '<div style="padding:6px 8px;cursor:pointer;border-radius:4px;font-size:12px" onmouseover="this.style.background=\'rgba(184,153,73,0.1)\'" onmouseout="this.style.background=\'transparent\'" onclick="delegarTarea(\'' + taskId + '\',\'' + m.full + '\');document.getElementById(\'delegar-menu\').remove();">' + m.alias + ' <span style="color:var(--muted);font-size:10px">· ' + m.rol + '</span></div>';
   });
   menu.innerHTML = html;
   document.body.appendChild(menu);
@@ -1484,22 +1615,22 @@ function renderAlertCard(a, isResolved) {
       '<div style="flex:1">' +
         '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">' +
           '<span style="font-size:11px;font-weight:600;color:'+nivColor+'">'+a.nivel+'</span>' +
-          '<span class="cat-chip" style="background:rgba(6,182,212,.1);color:'+catColor+'">'+catLabel+'</span>' +
+          '<span class="cat-chip" style="background:rgba(184,153,73,.1);color:'+catColor+'">'+catLabel+'</span>' +
           (slaText?'<span style="font-size:10px" class="'+slaClass+'">'+slaText+'</span>':'') +
         '</div>' +
         '<div style="font-size:14px;font-weight:500">'+a.asunto+'</div>' +
         '<div style="font-size:12px;color:var(--muted);margin-top:2px">'+a.remitente+'</div>' +
         (a.snippet?'<div style="font-size:11px;color:var(--muted);margin-top:4px;opacity:.7">'+a.snippet.slice(0,120)+'...</div>':'') +
         '<div style="font-size:10px;color:var(--muted);margin-top:4px">' +
-          (a.palabras_detectadas||[]).map(function(w){return '<span style="background:rgba(239,68,68,.1);color:var(--red);padding:1px 5px;border-radius:3px;margin-right:3px">'+w+'</span>'}).join('') +
+          (a.palabras_detectadas||[]).map(function(w){return '<span style="background:rgba(166,46,46,.1);color:var(--red);padding:1px 5px;border-radius:3px;margin-right:3px">'+w+'</span>'}).join('') +
           ' &middot; '+a.responsable_sugerido+' &middot; '+(a.fecha_recibido||'').slice(0,16).replace('T',' ') +
-          ' &middot; <span style="font-size:10px;padding:1px 5px;border-radius:3px;background:rgba(6,182,212,.1);color:var(--cyan)">'+a.fuente+'</span>' +
+          ' &middot; <span style="font-size:10px;padding:1px 5px;border-radius:3px;background:rgba(184,153,73,.1);color:var(--cyan)">'+a.fuente+'</span>' +
         '</div>' +
       '</div>' +
       (!isResolved ?
         '<div style="display:flex;flex-direction:column;gap:4px;margin-left:12px">' +
-          '<button onclick="resolveAlert(\''+a.id+'\')" style="background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer" title="Marcar resuelta">Resolver</button>' +
-          '<button onclick="assignAlert(\''+a.id+'\')" style="background:rgba(6,182,212,.1);color:var(--cyan);border:1px solid rgba(6,182,212,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer" title="Marcar como asignada">Asignar</button>' +
+          '<button onclick="resolveAlert(\''+a.id+'\')" style="background:rgba(90,122,74,.15);color:#3e5a30;border:1px solid rgba(90,122,74,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer" title="Marcar resuelta">Resolver</button>' +
+          '<button onclick="assignAlert(\''+a.id+'\')" style="background:rgba(184,153,73,.1);color:var(--cyan);border:1px solid rgba(184,153,73,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer" title="Marcar como asignada">Asignar</button>' +
         '</div>'
       : '') +
     '</div>' +
@@ -1572,15 +1703,15 @@ function showProjDetail(projKey) {
         '<p class="proj-desc">'+ed.objetivo_macro+'</p>';
 
     html += '<div class="proj-stats-row">' +
-        '<div class="proj-stat-box"><div class="num" style="color:#f97316">'+ed.dmla.empresa+'</div><div class="lbl">DMLA Empresa</div></div>' +
-        '<div class="proj-stat-box"><div class="num" style="color:#ef4444">'+ed.dmla.foco_cliente+'</div><div class="lbl">Foco Cliente</div></div>' +
-        '<div class="proj-stat-box"><div class="num" style="color:#22c55e">'+ed.dmla.experimentacion+'</div><div class="lbl">Experimentacion</div></div>' +
-        '<div class="proj-stat-box"><div class="num" style="color:#06b6d4">'+ed.inversion_total+'</div><div class="lbl">Inversion</div></div>' +
-        '<div class="proj-stat-box"><div class="num" style="color:#22c55e">'+ed.ahorro_estimado+'</div><div class="lbl">Ahorro/ano</div></div>' +
+        '<div class="proj-stat-box"><div class="num" style="color:#c9a84a">'+ed.dmla.empresa+'</div><div class="lbl">DMLA Empresa</div></div>' +
+        '<div class="proj-stat-box"><div class="num" style="color:#a62e2e">'+ed.dmla.foco_cliente+'</div><div class="lbl">Foco Cliente</div></div>' +
+        '<div class="proj-stat-box"><div class="num" style="color:#5a7a4a">'+ed.dmla.experimentacion+'</div><div class="lbl">Experimentacion</div></div>' +
+        '<div class="proj-stat-box"><div class="num" style="color:#b89949">'+ed.inversion_total+'</div><div class="lbl">Inversion</div></div>' +
+        '<div class="proj-stat-box"><div class="num" style="color:#5a7a4a">'+ed.ahorro_estimado+'</div><div class="lbl">Ahorro/ano</div></div>' +
     '</div>';
 
     ed.proyectos.forEach(function(p) {
-        var priColor = p.prioridad.indexOf('QUICK')>=0?'#22c55e':p.prioridad.indexOf('ESPERAR')>=0?'#ef4444':'#f97316';
+        var priColor = p.prioridad.indexOf('QUICK')>=0?'#5a7a4a':p.prioridad.indexOf('ESPERAR')>=0?'#a62e2e':'#c9a84a';
         var counts = {sin_resolver:0, parcial:0, listo:0};
         p.habilitadores.forEach(function(hb) { counts[hb.estado]++; });
 
@@ -1590,15 +1721,15 @@ function showProjDetail(projKey) {
                 p.nombre +
                 '<span style="margin-left:auto;font-family:monospace;font-size:0.65rem;color:'+priColor+';background:'+priColor+'15;padding:2px 8px;border-radius:4px">'+p.prioridad+' - '+p.fase+' - '+p.inversion+'</span>' +
             '</h3>' +
-            '<p style="font-size:0.82rem;color:#94a3b8;margin-bottom:8px">'+p.descripcion+'</p>' +
-            '<div style="font-size:0.75rem;margin-bottom:6px;color:#64748b">' +
-                '<span style="color:#ef4444">'+counts.sin_resolver+' sin resolver</span> - ' +
-                '<span style="color:#eab308">'+counts.parcial+' parcial</span> - ' +
-                '<span style="color:#22c55e">'+counts.listo+' listo</span>' +
+            '<p style="font-size:0.82rem;color:#6b7580;margin-bottom:8px">'+p.descripcion+'</p>' +
+            '<div style="font-size:0.75rem;margin-bottom:6px;color:#6b7580">' +
+                '<span style="color:#a62e2e">'+counts.sin_resolver+' sin resolver</span> - ' +
+                '<span style="color:#d4a052">'+counts.parcial+' parcial</span> - ' +
+                '<span style="color:#5a7a4a">'+counts.listo+' listo</span>' +
             '</div>';
 
         p.habilitadores.forEach(function(hb) {
-            var sc = hb.estado==='sin_resolver'?'#ef4444':hb.estado==='listo'?'#22c55e':'#eab308';
+            var sc = hb.estado==='sin_resolver'?'#a62e2e':hb.estado==='listo'?'#5a7a4a':'#d4a052';
             var ic = hb.estado==='sin_resolver'?'X':hb.estado==='listo'?'OK':'!';
             html += '<div class="hab-item '+hb.tipo+'">' +
                 '<span class="hab-badge '+hb.tipo+'">'+hb.tipo+'</span>' +
@@ -1665,13 +1796,13 @@ function renderCoherencia(d) {
     d.grupos_fusion.forEach(function(g, gi) {
       h += '<div class="card" style="margin-bottom:12px;border-left:3px solid var(--red)">';
       h += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">';
-      h += '<div><span style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(239,68,68,.15);color:var(--red);text-transform:uppercase;font-weight:600">Tema: '+g.tema+'</span> <span style="font-size:11px;color:var(--muted);margin-left:8px">'+g.tareas.length+' tareas relacionadas</span></div>';
-      h += '<button onclick="fusionarGrupo('+gi+')" style="background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.3);padding:6px 14px;border-radius:6px;font-size:11px;cursor:pointer;font-weight:600">Fusionar grupo</button>';
+      h += '<div><span style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(166,46,46,.15);color:var(--red);text-transform:uppercase;font-weight:600">Tema: '+g.tema+'</span> <span style="font-size:11px;color:var(--muted);margin-left:8px">'+g.tareas.length+' tareas relacionadas</span></div>';
+      h += '<button onclick="fusionarGrupo('+gi+')" style="background:rgba(166,46,46,.15);color:#8a2828;border:1px solid rgba(166,46,46,.3);padding:6px 14px;border-radius:6px;font-size:11px;cursor:pointer;font-weight:600">Fusionar grupo</button>';
       h += '</div>';
       g.tareas.forEach(function(t) {
-        var keeperBadge = t.is_keeper ? '<span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(34,197,94,.15);color:var(--green);margin-right:6px">KEEPER</span>' : '';
+        var keeperBadge = t.is_keeper ? '<span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(90,122,74,.15);color:var(--green);margin-right:6px">KEEPER</span>' : '';
         var puntaje = t.puntaje ? '<span style="font-family:monospace;color:var(--cyan);font-size:11px">['+t.puntaje+']</span>' : '<span style="font-size:10px;color:var(--muted)">sin evaluar</span>';
-        h += '<div style="padding:8px 10px;background:'+(t.is_keeper?'rgba(34,197,94,.05)':'var(--bg3)')+';border-radius:6px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:center;gap:8px">';
+        h += '<div style="padding:8px 10px;background:'+(t.is_keeper?'rgba(90,122,74,.05)':'var(--bg3)')+';border-radius:6px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:center;gap:8px">';
         h += '<div style="flex:1;font-size:12px">'+keeperBadge+t.tarea+'<div style="font-size:10px;color:var(--muted);margin-top:2px">'+(t.responsable||'')+' - '+(t.fecha_creacion||'')+' '+puntaje+'</div></div>';
         h += '</div>';
       });
@@ -1776,7 +1907,7 @@ async function loadFusiones() {
       keepers.forEach(function(k) {
         h += '<div class="card" style="margin-bottom:12px;border-left:3px solid var(--green)">';
         h += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">';
-        h += '<span style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(34,197,94,.15);color:var(--green);font-weight:600">KEEPER</span>';
+        h += '<span style="font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(90,122,74,.15);color:var(--green);font-weight:600">KEEPER</span>';
         h += '<div style="font-weight:500;font-size:14px;flex:1">'+k.tarea+'</div>';
         h += '</div>';
         h += '<div style="font-size:11px;color:var(--muted);margin-bottom:8px">Contexto consolidado: '+(k.contexto||'(vacio)').slice(0,250)+'</div>';
@@ -1786,7 +1917,7 @@ async function loadFusiones() {
           if (!mt) return;
           h += '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 10px;background:var(--bg3);border-radius:6px;margin-bottom:4px">';
           h += '<div style="flex:1;font-size:12px"><span style="opacity:.6;text-decoration:line-through">'+mt.tarea+'</span><div style="font-size:10px;color:var(--muted);margin-top:2px">'+mid+' - cerrada '+(mt.fecha_cierre||'')+'</div></div>';
-          h += '<button onclick="deshacerFusion(\''+mid+'\')" style="background:rgba(239,68,68,.1);color:#f87171;border:1px solid rgba(239,68,68,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">Deshacer</button>';
+          h += '<button onclick="deshacerFusion(\''+mid+'\')" style="background:rgba(166,46,46,.1);color:#8a2828;border:1px solid rgba(166,46,46,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">Deshacer</button>';
           h += '</div>';
         });
         h += '</div>';
@@ -1893,7 +2024,7 @@ async function loadCalendario() {
         h += '<div class="card" style="margin-bottom:6px;border-left:3px solid var(--orange);display:flex;justify-content:space-between;align-items:center;gap:8px">';
         h += '<div style="flex:1"><div style="font-size:13px">'+t.tarea+'</div>';
         h += '<div style="font-size:11px;color:var(--muted);margin-top:2px">'+(t.responsable||'')+' - puntaje '+(t.puntaje||'sin evaluar')+'</div></div>';
-        h += '<button onclick="setDeadline(\''+t.id+'\',\'\')" style="background:rgba(249,115,22,.15);color:var(--orange);border:1px solid rgba(249,115,22,.3);padding:5px 12px;border-radius:5px;font-size:11px;cursor:pointer;white-space:nowrap">Asignar fecha</button>';
+        h += '<button onclick="setDeadline(\''+t.id+'\',\'\')" style="background:rgba(201,168,74,.15);color:var(--orange);border:1px solid rgba(201,168,74,.3);padding:5px 12px;border-radius:5px;font-size:11px;cursor:pointer;white-space:nowrap">Asignar fecha</button>';
         h += '</div>';
       });
       h += '</div>';
@@ -1929,7 +2060,7 @@ function buildMiniCalendar(tareas) {
   });
 
   var h = '<div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px">';
-  h += '<div style="font-family:\'Instrument Serif\',serif;font-size:18px;margin-bottom:12px">'+monthNames[month]+' '+year+'</div>';
+  h += '<div style="font-family:\'Cormorant Garamond\',serif;font-size:18px;margin-bottom:12px">'+monthNames[month]+' '+year+'</div>';
   h += '<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;font-size:11px">';
   ['L','M','M','J','V','S','D'].forEach(function(d){h += '<div style="text-align:center;color:var(--muted);font-weight:600;padding:4px">'+d+'</div>'});
 
@@ -1942,8 +2073,8 @@ function buildMiniCalendar(tareas) {
     var dayTasks = byDate[dateStr] || [];
     var isToday = (day === hoy.getDate());
     var hasTasks = dayTasks.length > 0;
-    var bgCol = isToday ? 'rgba(6,182,212,.15)' : hasTasks ? 'rgba(239,68,68,.08)' : 'transparent';
-    var border = isToday ? 'border:1px solid var(--cyan)' : hasTasks ? 'border:1px solid rgba(239,68,68,.3)' : 'border:1px solid transparent';
+    var bgCol = isToday ? 'rgba(184,153,73,.15)' : hasTasks ? 'rgba(166,46,46,.08)' : 'transparent';
+    var border = isToday ? 'border:1px solid var(--cyan)' : hasTasks ? 'border:1px solid rgba(166,46,46,.3)' : 'border:1px solid transparent';
     h += '<div style="text-align:center;padding:8px 2px;border-radius:6px;background:'+bgCol+';'+border+';min-height:40px;cursor:'+(hasTasks?'pointer':'default')+'"';
     if (hasTasks) {
       var tt = dayTasks.map(function(t){return t.tarea}).join('\\n');
