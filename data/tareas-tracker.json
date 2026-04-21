@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-21T12:02:04",
+  "ultima_actualizacion": "2026-04-21T16:00:02",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -937,7 +937,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "being-core",
+      "categoria": "siendo-consulting",
       "descripcion": "",
       "proxima_accion": "Actualizar y parametrizar mas detallado Claude",
       "impacto": 5,
@@ -948,7 +948,7 @@
       "puntaje": 43,
       "nivel": "alta",
       "recomendacion": "Programar pronto",
-      "eje": "being-core"
+      "eje": "siendo-consulting"
     },
     {
       "id": "2026-04-13-m3515e9",
@@ -1112,8 +1112,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "being-core",
-      "eje": "being-core",
+      "categoria": "siendo-consulting",
+      "eje": "siendo-consulting",
       "estancada": true
     },
     {
@@ -2268,7 +2268,7 @@
       "origen": "limitless_auto",
       "contexto": "Crisis de liquidez y amenazas contractuales",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2288,7 +2288,7 @@
       "origen": "limitless_auto",
       "contexto": "Gestión de cadena de suministro urgente",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2413,6 +2413,21 @@
       "personas": [
         "Camilo Marín"
       ]
+    },
+    {
+      "id": "2026-04-20-r9-006",
+      "tarea": "Diseñar estructura de gobierno corporativo para grupo Sánchez Acevedo",
+      "responsable": "Asesores externos",
+      "prioridad": "media",
+      "fecha_creacion": "2026-04-20",
+      "fecha_cierre": null,
+      "estado": "abierta",
+      "origen": "limitless",
+      "contexto": "Solucionar transición generacional y diferencias en gestión",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "trabajo"
     }
   ]
 }

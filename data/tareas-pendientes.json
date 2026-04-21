@@ -521,7 +521,7 @@
       "estado": "aceptada",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": []
     },
@@ -563,7 +563,7 @@
       "estado": "aceptada",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": []
     },
@@ -577,7 +577,7 @@
       "estado": "aceptada",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": []
     },
@@ -1275,7 +1275,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": [],
       "segmento_idx": 14,
@@ -1319,7 +1319,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": [
         "Adolfo"
@@ -1365,7 +1365,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": [],
       "segmento_idx": 14,
@@ -1409,7 +1409,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": "2026-04-24",
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": [],
       "segmento_idx": 27,
@@ -1433,7 +1433,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": [
         "Mari"
@@ -1458,7 +1458,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": [
         "Adolfo"
@@ -1484,7 +1484,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": [
         "Mari",
@@ -1511,7 +1511,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": [
         "Sebastian Sanchez Acevedo"
@@ -1537,7 +1537,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": [
         "Carla"
@@ -2079,7 +2079,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-17",
       "fecha_limite": null,
-      "categoria_sugerida": "being-core",
+      "categoria_sugerida": "siendo-consulting",
       "monto_cop": null,
       "personas": [],
       "segmento_idx": 55,
@@ -2280,7 +2280,7 @@
       "prioridad": "media",
       "contexto": "Solucionar transición generacional y diferencias en gestión",
       "tipo": "compromiso",
-      "estado": "pendiente",
+      "estado": "aceptada",
       "fecha": "2026-04-20",
       "fecha_limite": null,
       "categoria_sugerida": "condugas",
