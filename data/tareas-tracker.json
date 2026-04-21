@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-19T00:00:01",
+  "ultima_actualizacion": "2026-04-21T12:02:04",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -18,7 +18,7 @@
     {
       "id": "2026-04-06-002",
       "tarea": "Recopilar información del proceso centro de operaciones",
-      "responsable": "Andrés Avendaño",
+      "responsable": "William Lopez",
       "prioridad": "alta",
       "fecha_creacion": "2026-04-06",
       "fecha_cierre": null,
@@ -152,7 +152,7 @@
       "origen": "limitless",
       "contexto": "Evaluación de desempeño de contratos, urgente programar a camilo | Operaciones Condugas",
       "tipo": "seguimiento",
-      "vencida": false,
+      "vencida": true,
       "impacto": 4,
       "urgencia": 5,
       "consecuencia": 4,
@@ -690,8 +690,8 @@
       "responsable": "Sebastian",
       "prioridad": "critica",
       "fecha_creacion": "2026-04-13",
-      "fecha_cierre": null,
-      "estado": "abierta",
+      "fecha_cierre": "2026-04-20",
+      "estado": "cerrada",
       "origen": "manual",
       "contexto": "",
       "tipo": "pendiente",
@@ -1351,7 +1351,8 @@
         "EPM",
         "Jorge William"
       ],
-      "eje": "condugas"
+      "eje": "condugas",
+      "estancada": true
     },
     {
       "id": "2026-04-15-c003",
@@ -1373,7 +1374,8 @@
         "EPM",
         "Catalina"
       ],
-      "eje": "condugas"
+      "eje": "condugas",
+      "estancada": true
     },
     {
       "id": "2026-04-16-c001",
@@ -1393,7 +1395,8 @@
       "monto_cop": null,
       "personas": [
         "Hamilton"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-16-c002",
@@ -1443,7 +1446,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-16-c001x",
@@ -1464,7 +1468,8 @@
       "personas": [
         "abogados",
         "dueños"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-16-c002x",
@@ -1478,7 +1483,7 @@
       "origen": "limitless_auto",
       "contexto": "Contrato quebrado en 3 meses si no hay reajustes",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -1487,7 +1492,8 @@
         "Catalina",
         "bancos",
         "socios"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-16-c003x",
@@ -1508,7 +1514,8 @@
       "personas": [
         "Camacol",
         "agremiacion"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-16-c004",
@@ -1531,7 +1538,8 @@
         "Leon",
         "Diana",
         "William"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-16-c005",
@@ -1594,7 +1602,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-002",
@@ -1609,7 +1618,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-003",
@@ -1624,7 +1634,8 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-004",
@@ -1639,7 +1650,8 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-005",
@@ -1654,7 +1666,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-006",
@@ -1669,7 +1682,8 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-007",
@@ -1684,7 +1698,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-008",
@@ -1699,7 +1714,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-009",
@@ -1714,7 +1730,8 @@
       "tipo": "decisión",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-010",
@@ -1729,7 +1746,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-011",
@@ -1744,7 +1762,8 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-012",
@@ -1759,7 +1778,8 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-013",
@@ -1774,7 +1794,8 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-15-014",
@@ -1789,7 +1810,8 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-r5-001",
@@ -1916,7 +1938,8 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-002",
@@ -1931,7 +1954,8 @@
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-003",
@@ -1946,7 +1970,8 @@
       "tipo": "decision",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-004",
@@ -1961,7 +1986,8 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-006",
@@ -1976,7 +2002,8 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-007",
@@ -1991,7 +2018,8 @@
       "tipo": "decision",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-008",
@@ -2006,7 +2034,8 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-r10-012",
@@ -2056,7 +2085,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-16-c002xx",
@@ -2078,7 +2108,8 @@
         "Catalina",
         "Hilda",
         "PM"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-17-c001",
@@ -2102,9 +2133,9 @@
     },
     {
       "id": "2026-04-17-c002",
-      "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en PM e incorporando Banti, gas de occidente, infraestructura",
+      "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en EPM e incorporando Vanti, gas de occidente, infraestructura",
       "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica",
+      "prioridad": "media",
       "fecha_creacion": "2026-04-17",
       "fecha_cierre": null,
       "fecha_limite": "2026-04-25",
@@ -2113,12 +2144,22 @@
       "contexto": "Narrativa corporativa Condugas",
       "tipo": "decision",
       "vencida": false,
-      "evaluada": false,
+      "evaluada": true,
       "categoria": "condugas",
       "monto_cop": null,
       "personas": [
         "Unknown"
-      ]
+      ],
+      "impacto": 2,
+      "urgencia": 3,
+      "consecuencia": 3,
+      "arrastre": 2,
+      "facilidad": 4,
+      "puntaje": 29,
+      "nivel": "media",
+      "recomendacion": "Programar",
+      "descripcion": "",
+      "proxima_accion": "diseñar y subir presentación corporativa"
     },
     {
       "id": "2026-04-17-c003",
@@ -2213,6 +2254,164 @@
       "personas": [
         "Mario",
         "Sebastian Sanchez Acevedo"
+      ]
+    },
+    {
+      "id": "2026-04-20-c001",
+      "tarea": "Armar plan de defensa y revisar números de caja con Andrea",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-20",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-20",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Crisis de liquidez y amenazas contractuales",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Andrea"
+      ]
+    },
+    {
+      "id": "2026-04-20-c002",
+      "tarea": "Contactar proveedores (3 llamadas pendientes)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-20",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-20",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Gestión de cadena de suministro urgente",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Humberto Iglesias",
+        "Santiago"
+      ]
+    },
+    {
+      "id": "2026-04-20-c003",
+      "tarea": "Gestionar saldo a favor de 1,200M COP esperado en septiembre 2026 para recuperación",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-20",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-09-30",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Única ruta de viabilidad si empresa no quiebra antes",
+      "tipo": "seguimiento",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": 1200000000,
+      "personas": []
+    },
+    {
+      "id": "2026-04-20-c004",
+      "tarea": "Resolver adición de contrato que genera perjuicio en valores con PM",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-20",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Contrato de Río Negro con ambientales incluidos pero no ejecutados",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Catalina",
+        "PM"
+      ]
+    },
+    {
+      "id": "2026-04-20-c005",
+      "tarea": "Comunicar a equipo y proveedores sobre insolvencia si PM no paga",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-20",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-21",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Crisis de caja día a día, proveedores sin pago",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "PM"
+      ]
+    },
+    {
+      "id": "2026-04-20-c006",
+      "tarea": "Preparar análisis de reducción de pasivos operativos (campamento/internet/personal)",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-20",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-21",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "130-140M COP en costos fijos insostenibles",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": 130000000,
+      "personas": []
+    },
+    {
+      "id": "2026-04-20-c007",
+      "tarea": "Compilar información financiera consolidada para junta de mañana",
+      "responsable": "Andrea",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-20",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-21",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Demasiada información dispersa, necesidad urgente de claridad",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez"
+      ]
+    },
+    {
+      "id": "2026-04-20-c008",
+      "tarea": "Exigir a socios cumplimiento de aportes o separación",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-20",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-21",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Socios no han hecho aportes, empresa se lleva por su responsabilidad",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Camilo Marín"
       ]
     }
   ]

@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-04-18",
-  "ultima_actualizacion": "2026-04-18T11:45:06",
+  "fecha": "2026-04-21",
+  "ultima_actualizacion": "2026-04-21T11:45:05",
   "comite_sv": {
     "caja_dias": 8,
     "facturacion_pct": 45,
@@ -8,32 +8,32 @@
     "ebitda": -2300,
     "whoop_recovery": null,
     "whoop_sleep": "4h 02m (37%)",
-    "tareas_criticas": 13,
+    "tareas_criticas": 20,
     "proyectos_crisis": 2
   },
   "frescura": {
     "caja_dias": {
       "valor": 8,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 0,
+      "dias_sin_actualizar": 3,
       "fuente": "limitless"
     },
     "facturacion_pct": {
       "valor": 45,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 0,
+      "dias_sin_actualizar": 3,
       "fuente": "limitless"
     },
     "produccion_deficit_pct": {
       "valor": 73,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 0,
+      "dias_sin_actualizar": 3,
       "fuente": "limitless"
     },
     "ebitda": {
       "valor": -2300,
       "fecha": "2026-04-16",
-      "dias_sin_actualizar": 2,
+      "dias_sin_actualizar": 5,
       "fuente": "limitless"
     },
     "whoop_recovery": {
@@ -49,32 +49,30 @@
       "fuente": "manual"
     },
     "tareas_criticas": {
-      "valor": 13,
-      "fecha": "2026-04-18",
+      "valor": 20,
+      "fecha": "2026-04-21",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     },
     "proyectos_crisis": {
       "valor": 2,
-      "fecha": "2026-04-18",
+      "fecha": "2026-04-21",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     }
   },
   "alertas": [
-    "Facturación 45% vs meta - gravísimo",
-    "Condugas insolvencia en 3 meses sin reajuste; caja = 8 días",
-    "Déficit de producción 73%",
-    "Defensa legal vs. Catalina: escalada inminente a PM",
-    "Deuda pendiente de 190 millones COP con Óscar",
-    "Conflicto contractual con EPM - pérdida de contrato",
-    "EPM: ~180M COP pendientes + no conformidad sin respuesta formal (VENCE HOY)",
-    "Caja crítica: 8 días de liquidez"
+    "3 críticas vencidas: comité proveedores 12 feb, debido proceso, escalada Camacol. Documentación para defensa ya.",
+    "Deuda pendiente de Oscar sin resolución",
+    "Casa de 600 millones de pesos genera cuentas por cobrar a socios",
+    "Condugas tiene deuda con socios que requiere pago inmediato",
+    "Contratos perdiendo dinero, requería aporte de Oscar que no se materializó",
+    "Caja crítica: 8 días. EPM vencido sin pago (~180M). Hamilton vencido 17 abr. Riesgo legal inminente."
   ],
   "oportunidades": [
-    "Ingresos esperados mañana de Avant y FM",
-    "Dashboard en desarrollo para monitoreo de KPIs",
-    "Revisión de rendimiento de contratos en 5 días"
+    "Financiación multilateral disponible (BID, CAF) con 20,000 millones de dólares adicionales para proyectos sostenibles",
+    "Programa Pymes Verdes a través de banca comercial con capacitación empresarial",
+    "Posibilidad de garantías de multilaterales para estructurar proyectos (modelo Argentina)"
   ],
   "whoop": {
     "recovery": 29,
@@ -99,6 +97,15 @@
       "ultimo_valor": "4h 02m (37%)",
       "ultima_fecha": null,
       "mensaje": "'whoop_sleep' lleva 99 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+    },
+    {
+      "campo": "caja_dias",
+      "dias_sin_dato": 3,
+      "umbral": 2,
+      "severidad": "media",
+      "ultimo_valor": 8,
+      "ultima_fecha": "2026-04-18",
+      "mensaje": "'caja_dias' lleva 3 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
     }
   ]
 }

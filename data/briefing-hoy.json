@@ -1,74 +1,67 @@
 {
-  "saludo": "Buenos días Sebastián — sábado 18 Apr",
+  "saludo": "Buenos días Sebastián — martes 21 Apr",
   "supervivencia": [
-    "EPM: ~180M COP pendientes + no conformidad sin respuesta formal (VENCE HOY)",
-    "Condugas insolvencia en 3 meses sin reajuste; caja = 8 días",
-    "Hamilton: cobro vencido (promesa no cumplida)",
-    "Defensa legal vs. Catalina: escalada inminente a PM"
+    "Caja crítica: 8 días. EPM vencido sin pago (~180M). Hamilton vencido 17 abr. Riesgo legal inminente.",
+    "3 críticas vencidas: comité proveedores 12 feb, debido proceso, escalada Camacol. Documentación para defensa ya."
   ],
   "top_3": [
     {
-      "tarea": "RESPONDER FORMAL no conformidad EPM + enviar comunicado cobro 180M",
+      "tarea": "Localizar acta comité 12 feb + llamadas Sanear/Proing + enviar documento reajuste EPM",
       "categoria": "SUPERVIVENCIA",
-      "porque": "P1 vencida hoy; bloquea relación contractual",
-      "tarea_id": "resolver-no-conformidad-epm"
+      "porque": "Score 48, vencida, bloquea estrategia legal",
+      "tarea_id": "comite_proveedores_feb"
     },
     {
-      "tarea": "Llamar Sanear + Proing: localizar acta comité 12-feb (reajuste no daba)",
+      "tarea": "Reunión 30min con Andrea: deuda Condugas + Hamilton + tiquetes Cartagena",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Prueba clave defensa legal EPM; score 48",
-      "tarea_id": "localizar-acta-feb"
+      "porque": "Flujo caja + compromisos personales resueltos en bloque",
+      "tarea_id": "reunion_andrea_urgente"
     },
     {
-      "tarea": "Reunión 30min con abogado: estrategia confrontación Catalina + documentación debido proceso",
+      "tarea": "Revisar caja real hoy + estado inversiones + proyección flujo 30 días",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Riesgo queja formal PM; vence mañana 19-Apr",
-      "tarea_id": "defensa-legal-catalina"
+      "porque": "KPI obsoleto (2 días). Decisiones sobre EPM renegociación dependen de esto",
+      "tarea_id": "caja_familiar_hoy"
     }
   ],
-  "mega_dia": "Cerrar respuesta formal EPM (no conformidad + cobro). El día valió si eso sale.",
+  "mega_dia": "Cierre acta comité feb + call Andrea 30min = desbloquea defensa EPM y caja",
   "contactar_hoy": [
     {
+      "persona": "Andrea",
+      "motivo": "Deuda, Hamilton, tiquetes en 30min"
+    },
+    {
       "persona": "Sanear/Proing",
-      "motivo": "Acta comité 12-feb sobre reajuste"
-    },
-    {
-      "persona": "Abogado",
-      "motivo": "Defensa Catalina + documentación EPM"
-    },
-    {
-      "persona": "Hamilton",
-      "motivo": "Cobro directo (vencido 17-Apr)"
+      "motivo": "Localizar acta comité 12 feb"
     }
   ],
   "ojo_con": [
-    "41 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "EBITDA -2.3M; sleep 4h (37%) — decisiones con fatiga TDAH = riesgo",
-    "16 críticas abiertas; no puedes atender todas hoy",
-    "EPM + Catalina son 2 frentes legales simultáneos"
+    "45 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+    "Sleep 37% → decisiones comprometidas. Pausar tareas no-críticas.",
+    "9 vencidas + 20 críticas = colapso inminente. DELEGA operativas.",
+    "EPM: renegociar vs terminar. Camacol data falta (52% vs 22-27% real)."
   ],
   "vencidas": [
-    "Cobro Hamilton (17-Apr)",
-    "Odoo review (16-Apr)",
-    "Nómina Valle (16-Apr)",
-    "Acta comité (deadline implícita)"
+    "Hamilton cobro (17 abr)",
+    "Procesar nómina Valle (16 abr)",
+    "Acta comité 12 feb (crítica)"
   ],
-  "frase_dia": "Hoy no es día de estrategia. Es día de apagar incendios legales. Enfócate en EPM + Catalina. El resto espera.",
-  "generado_at": "2026-04-18T11:00:10",
-  "fecha": "2026-04-18",
+  "frase_dia": "Hoy es localizar + llamar + decidir. El resto espera.",
+  "generado_at": "2026-04-21T11:00:10",
+  "fecha": "2026-04-21",
   "stats": {
-    "abiertas": 71,
-    "criticas": 13,
-    "vencidas": 5,
-    "estancadas": 3,
-    "sin_evaluar": 44
+    "abiertas": 79,
+    "criticas": 20,
+    "vencidas": 9,
+    "estancadas": 47,
+    "sin_evaluar": 52
   },
   "criticas_sin_fecha": [
     {
       "id": "2026-04-06-002",
       "tarea": "Recopilar información del proceso centro de operaciones",
       "prioridad": "alta",
-      "responsable": "Andrés Avendaño"
+      "responsable": "William Lopez"
     },
     {
       "id": "2026-04-08-001",
@@ -157,28 +150,16 @@
   ],
   "vence_pronto": [
     {
-      "id": "2026-04-16-c001x",
-      "tarea": "Preparar documentación de debido proceso ejecutivo con focus en ambiental y reajustes",
+      "id": "2026-04-17-c001",
+      "tarea": "Presentar propuesta de restructuración a don Darío",
       "dias": 0,
-      "fecha_limite": "2026-04-18"
+      "fecha_limite": "2026-04-21"
     },
     {
-      "id": "2026-04-16-c004",
-      "tarea": "Coordinar con equipo (Uner, Leon, Diana) estrategia de confrontación con Catalina",
-      "dias": 0,
-      "fecha_limite": "2026-04-18"
-    },
-    {
-      "id": "2026-04-08-005",
-      "tarea": "Revisar rendimiento de contratos compartidos que se ven críticos",
-      "dias": 2,
-      "fecha_limite": "2026-04-20"
-    },
-    {
-      "id": "2026-04-16-c002x",
-      "tarea": "Evaluar viabilidad de terminación contractual vs. renegociación de fórmula",
-      "dias": 2,
-      "fecha_limite": "2026-04-20"
+      "id": "2026-04-17-c003",
+      "tarea": "Auditar estructura de deuda y cuentas por cobrar entre Condugas, socios e IC (excisión no pagada)",
+      "dias": 3,
+      "fecha_limite": "2026-04-24"
     }
   ]
 }

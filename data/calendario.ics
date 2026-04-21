@@ -10,7 +10,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT15M
 X-PUBLISHED-TTL:PT15M
 BEGIN:VEVENT
 UID:tarea-2026-04-08-005@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260420
 DTEND;VALUE=DATE:20260421
 SUMMARY:[CRITICA] Revisar rendimiento de contratos compartidos que se ven críticos
@@ -21,20 +21,8 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:tarea-2026-04-13-m5b3b40@serjefe
-DTSTAMP:20260419T123001Z
-DTSTART;VALUE=DATE:20260416
-DTEND;VALUE=DATE:20260417
-SUMMARY:[CRITICA] Implementar Odoo\, revisión \, parámetros\, reglas 
-DESCRIPTION:Responsable: Sebastian\nPuntaje: 47 (maxima)\nProxima accion: Reunion con Lina y Ema para definir que hay y que no hay\n\nDashboard: https://72.60.28.156.nip.io/
-CATEGORIES:CONDUGAS
-PRIORITY:1
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:tarea-2026-04-16-c001@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260417
 DTEND;VALUE=DATE:20260418
 SUMMARY:[CRITICA] Cobrar pago pendiente de Hamilton según lo prometido
@@ -46,7 +34,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-16-c002@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260416
 DTEND;VALUE=DATE:20260417
 SUMMARY:[ALTA] Procesar nómina y resolver descuento de Valle con menor valor
@@ -58,7 +46,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-16-c001x@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260418
 DTEND;VALUE=DATE:20260419
 SUMMARY:[CRITICA] Preparar documentación de debido proceso ejecutivo con focus en ambiental y reajustes
@@ -70,7 +58,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-16-c002x@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260420
 DTEND;VALUE=DATE:20260421
 SUMMARY:[CRITICA] Evaluar viabilidad de terminación contractual vs. renegociación de fórmula
@@ -82,7 +70,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-16-c003x@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260417
 DTEND;VALUE=DATE:20260418
 SUMMARY:[CRITICA] Validar con Camacol data de escalada salarial (22-27% vs. 52% actual)
@@ -94,7 +82,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-16-c004@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260418
 DTEND;VALUE=DATE:20260419
 SUMMARY:[CRITICA] Coordinar con equipo (Uner\, Leon\, Diana) estrategia de confrontación con Catalina
@@ -106,7 +94,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-16-c005@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260416
 DTEND;VALUE=DATE:20260417
 SUMMARY:[CRITICA] Localizar registro de comité proveedores 12 de febrero donde todos dijeron reajuste no daba
@@ -118,7 +106,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-16-c001xx@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20301231
 DTEND;VALUE=DATE:20310101
 SUMMARY:[CRITICA] Avanzar proceso de licenciamiento ambiental y social (ruta crítica)
@@ -130,7 +118,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-17-c001@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260421
 DTEND;VALUE=DATE:20260422
 SUMMARY:[CRITICA] Presentar propuesta de restructuración a don Darío
@@ -142,19 +130,19 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-17-c002@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260425
 DTEND;VALUE=DATE:20260426
-SUMMARY:[CRITICA] Redefinir presentación corporativa eliminando foco exclusivo en PM e incorporando Banti\, gas de occidente\, infraestructura
-DESCRIPTION:Contexto: Narrativa corporativa Condugas\nResponsable: Sebastian Sanchez Acevedo\n\nDashboard: https://72.60.28.156.nip.io/
+SUMMARY:Redefinir presentación corporativa eliminando foco exclusivo en EPM e incorporando Vanti\, gas de occidente\, infraestructura
+DESCRIPTION:Contexto: Narrativa corporativa Condugas\nResponsable: Sebastian Sanchez Acevedo\nPuntaje: 29 (media)\nProxima accion: diseñar y subir presentación corporativa\n\nDashboard: https://72.60.28.156.nip.io/
 CATEGORIES:CONDUGAS
-PRIORITY:1
+PRIORITY:5
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-17-c003@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260424
 DTEND;VALUE=DATE:20260425
 SUMMARY:[CRITICA] Auditar estructura de deuda y cuentas por cobrar entre Condugas\, socios e IC (excisión no pagada)
@@ -166,7 +154,7 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tarea-2026-04-17-c007@serjefe
-DTSTAMP:20260419T123001Z
+DTSTAMP:20260421T120001Z
 DTSTART;VALUE=DATE:20260418
 DTEND;VALUE=DATE:20260419
 SUMMARY:[CRITICA] Preparar documento para Mario (entrega viernes para lunes\, ajuste proporciones mano de obra ~15%)
