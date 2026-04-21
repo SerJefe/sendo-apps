@@ -1,11 +1,11 @@
 {
-  "generado_at": "2026-04-21T12:00:01",
+  "generado_at": "2026-04-21T16:00:02",
   "resumen": {
-    "total_abiertas": 79,
-    "vencidas": 9,
-    "por_vencer_48h": 1,
+    "total_abiertas": 88,
+    "vencidas": 11,
+    "por_vencer_48h": 5,
     "estancadas_5d": 45,
-    "sin_evaluar": 52,
+    "sin_evaluar": 61,
     "criticas_sin_accion": 0
   },
   "vencidas": [
@@ -62,12 +62,48 @@
       "tarea": "Preparar documento para Mario (entrega viernes para lunes, ajuste proporciones mano de obra ~15%)",
       "deadline": "2026-04-18",
       "dias_vencida": 3
+    },
+    {
+      "id": "2026-04-20-c001",
+      "tarea": "Armar plan de defensa y revisar números de caja con Andrea",
+      "deadline": "2026-04-20",
+      "dias_vencida": 1
+    },
+    {
+      "id": "2026-04-20-c002",
+      "tarea": "Contactar proveedores (3 llamadas pendientes)",
+      "deadline": "2026-04-20",
+      "dias_vencida": 1
     }
   ],
   "por_vencer": [
     {
       "id": "2026-04-17-c001",
       "tarea": "Presentar propuesta de restructuración a don Darío",
+      "deadline": "2026-04-21",
+      "dias_restantes": 0
+    },
+    {
+      "id": "2026-04-20-c005",
+      "tarea": "Comunicar a equipo y proveedores sobre insolvencia si PM no paga",
+      "deadline": "2026-04-21",
+      "dias_restantes": 0
+    },
+    {
+      "id": "2026-04-20-c006",
+      "tarea": "Preparar análisis de reducción de pasivos operativos (campamento/internet/personal)",
+      "deadline": "2026-04-21",
+      "dias_restantes": 0
+    },
+    {
+      "id": "2026-04-20-c007",
+      "tarea": "Compilar información financiera consolidada para junta de mañana",
+      "deadline": "2026-04-21",
+      "dias_restantes": 0
+    },
+    {
+      "id": "2026-04-20-c008",
+      "tarea": "Exigir a socios cumplimiento de aportes o separación",
       "deadline": "2026-04-21",
       "dias_restantes": 0
     }

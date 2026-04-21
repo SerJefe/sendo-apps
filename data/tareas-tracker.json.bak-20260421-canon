@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-21T18:01:17",
+  "ultima_actualizacion": "2026-04-21T16:00:02",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -937,7 +937,7 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": true,
-      "categoria": "siendo-consulting",
+      "categoria": "being-core",
       "descripcion": "",
       "proxima_accion": "Actualizar y parametrizar mas detallado Claude",
       "impacto": 5,
@@ -948,7 +948,7 @@
       "puntaje": 43,
       "nivel": "alta",
       "recomendacion": "Programar pronto",
-      "eje": "siendo-consulting"
+      "eje": "being-core"
     },
     {
       "id": "2026-04-13-m3515e9",
@@ -1112,8 +1112,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "siendo-consulting",
-      "eje": "siendo-consulting",
+      "categoria": "being-core",
+      "eje": "being-core",
       "estancada": true
     },
     {
@@ -2428,181 +2428,6 @@
       "vencida": false,
       "evaluada": false,
       "categoria": "trabajo"
-    },
-    {
-      "id": "2026-04-20-c002x",
-      "tarea": "Contactar y negociar con 3 proveedores clave (Humberto Iglesias, Santiago y otros)",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
-      "fecha_limite": "2026-04-20",
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "cadena de suministro y liquidez",
-      "tipo": "compromiso",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Humberto Iglesias",
-        "Santiago"
-      ]
-    },
-    {
-      "id": "2026-04-20-c003x",
-      "tarea": "Analizar y discutir con Carlos López sobre situación financiera",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
-      "fecha_limite": "2026-04-20",
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "caja y liquidez",
-      "tipo": "seguimiento",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Carlos López"
-      ]
-    },
-    {
-      "id": "2026-04-20-c004x",
-      "tarea": "Separar socios y documentar cláusulas de responsabilidad por pérdidas",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
-      "fecha_limite": null,
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "disolucion de sociedad",
-      "tipo": "decision",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": null,
-      "personas": []
-    },
-    {
-      "id": "2026-04-20-c005x",
-      "tarea": "Reclamar saldo a favor de 1200M COP en septiembre y 1400M COP actuales para cierre de contratos",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
-      "fecha_limite": "2026-09-30",
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "recuperacion de caja",
-      "tipo": "compromiso",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": 2600000000,
-      "personas": []
-    },
-    {
-      "id": "2026-04-20-c006x",
-      "tarea": "Renegociar reajustes de costo con PM para reducir carga administrativa",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
-      "fecha_limite": null,
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "contrato Rio Negro",
-      "tipo": "compromiso",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "PM"
-      ]
-    },
-    {
-      "id": "2026-04-20-c007x",
-      "tarea": "Preparar comunicado para equipo: imposibilidad de pago a proveedores por falta de pago de PM",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
-      "fecha_limite": "2026-04-21",
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "transparencia interna y gestión de crisis",
-      "tipo": "compromiso",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "PM"
-      ]
-    },
-    {
-      "id": "2026-04-20-c008x",
-      "tarea": "Revisar y reducir carga administrativa del contrato (objetivo: bajar de 130M a sostenible)",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
-      "fecha_limite": "2026-04-21",
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "supervivencia operacional",
-      "tipo": "decision",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": 130000000,
-      "personas": []
-    },
-    {
-      "id": "2026-04-20-c009",
-      "tarea": "Obtener información consolidada de caja y proyecciones para presentación en junta",
-      "responsable": "Andrea",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
-      "fecha_limite": "2026-04-20",
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "gobernanza y transparencia",
-      "tipo": "compromiso",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Sebastian Sanchez Acevedo"
-      ]
-    },
-    {
-      "id": "2026-04-20-c010",
-      "tarea": "Analizar separación definitiva de sociedad (socios no aportan, no responden)",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica",
-      "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
-      "fecha_limite": null,
-      "estado": "abierta",
-      "origen": "limitless_auto",
-      "contexto": "restructura accionaria",
-      "tipo": "decision",
-      "vencida": false,
-      "evaluada": false,
-      "categoria": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Camilo Marín"
-      ]
     }
   ]
 }

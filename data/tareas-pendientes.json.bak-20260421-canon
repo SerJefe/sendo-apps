@@ -521,7 +521,7 @@
       "estado": "aceptada",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": []
     },
@@ -563,7 +563,7 @@
       "estado": "aceptada",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": []
     },
@@ -577,7 +577,7 @@
       "estado": "aceptada",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": []
     },
@@ -1275,7 +1275,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": [],
       "segmento_idx": 14,
@@ -1319,7 +1319,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": [
         "Adolfo"
@@ -1365,7 +1365,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": [],
       "segmento_idx": 14,
@@ -1409,7 +1409,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": "2026-04-24",
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": [],
       "segmento_idx": 27,
@@ -1433,7 +1433,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": [
         "Mari"
@@ -1458,7 +1458,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": [
         "Adolfo"
@@ -1484,7 +1484,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": [
         "Mari",
@@ -1511,7 +1511,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": [
         "Sebastian Sanchez Acevedo"
@@ -1537,7 +1537,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-16",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": [
         "Carla"
@@ -2079,7 +2079,7 @@
       "estado": "pendiente",
       "fecha": "2026-04-17",
       "fecha_limite": null,
-      "categoria_sugerida": "siendo-consulting",
+      "categoria_sugerida": "being-core",
       "monto_cop": null,
       "personas": [],
       "segmento_idx": 55,
@@ -2306,148 +2306,7 @@
         "Asesores externos (gobierno corporativo)"
       ],
       "segmento_impacto": "medio"
-    },
-    {
-      "id": "2026-04-20-r2-001",
-      "tarea": "Coordinar contacto del padre de Juan para futuras negociaciones",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media",
-      "contexto": "red de soporte financiero",
-      "tipo": "seguimiento",
-      "estado": "pendiente",
-      "fecha": "2026-04-20",
-      "fecha_limite": null,
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Juan",
-        "Juan padre"
-      ],
-      "segmento_idx": 2,
-      "segmento_titulo": "Una conversación entre dos personas que se ponen al día sobre sus vidas personales y profesionales, incluyendo discusiones sobre responsabilidades familiares, c",
-      "segmento_inicio": "2026-04-20T15:53:25Z",
-      "segmento_fin": "2026-04-20T16:23:53Z",
-      "segmento_personas": [
-        "Sebastian Sanchez Acevedo",
-        "Abogado/gestor (probablemente Juan)",
-        "Juan (su padre)",
-        "Natalia",
-        "PM"
-      ],
-      "segmento_impacto": "alto"
-    },
-    {
-      "id": "2026-04-20-r4-002",
-      "tarea": "Verificar equipos técnicos (micrófono, cámara, videollamada) antes de junta",
-      "responsable": "Andrés",
-      "prioridad": "media",
-      "contexto": "logística técnica",
-      "tipo": "compromiso",
-      "estado": "pendiente",
-      "fecha": "2026-04-20",
-      "fecha_limite": "2026-04-20",
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [],
-      "segmento_idx": 4,
-      "segmento_titulo": "Conversación sobre una presentación y problemas técnicos",
-      "segmento_inicio": "2026-04-20T16:58:40Z",
-      "segmento_fin": "2026-04-20T17:01:30Z",
-      "segmento_personas": [
-        "Sebastian Sanchez Acevedo",
-        "Andrés"
-      ],
-      "segmento_impacto": "bajo"
-    },
-    {
-      "id": "2026-04-20-r9-003",
-      "tarea": "Diagnosticar diferencias organizacionales y financieras entre empresas del grupo",
-      "responsable": "Equipo asesor corporativo",
-      "prioridad": "alta",
-      "contexto": "mapeo de problemas",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-20",
-      "fecha_limite": null,
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [],
-      "segmento_idx": 9,
-      "segmento_titulo": "Presentaciones y discusión sobre la conformación de un equipo asesor",
-      "segmento_inicio": "2026-04-20T21:02:12Z",
-      "segmento_fin": "2026-04-20T21:29:48Z",
-      "segmento_personas": [
-        "Sebastian Sanchez Acevedo",
-        "Consultores corporativos (no identificados por nombre)",
-        "Jairo Sánchez (patriarca, fallecido)",
-        "Natalia (gestora actual)",
-        "Olga (accionista principal)",
-        "Jaime (accionista principal)",
-        "Gilberto (probablemente cuñado)",
-        "Grupo familiar de Olga"
-      ],
-      "segmento_impacto": "alto"
-    },
-    {
-      "id": "2026-04-20-r9-004",
-      "tarea": "Proponer mecanismos de manejo de caja unificado (vs decisiones aisladas de gestores)",
-      "responsable": "Equipo asesor corporativo",
-      "prioridad": "alta",
-      "contexto": "gestión financiera consolidada",
-      "tipo": "pendiente",
-      "estado": "pendiente",
-      "fecha": "2026-04-20",
-      "fecha_limite": null,
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [
-        "Natalia"
-      ],
-      "segmento_idx": 9,
-      "segmento_titulo": "Presentaciones y discusión sobre la conformación de un equipo asesor",
-      "segmento_inicio": "2026-04-20T21:02:12Z",
-      "segmento_fin": "2026-04-20T21:29:48Z",
-      "segmento_personas": [
-        "Sebastian Sanchez Acevedo",
-        "Consultores corporativos (no identificados por nombre)",
-        "Jairo Sánchez (patriarca, fallecido)",
-        "Natalia (gestora actual)",
-        "Olga (accionista principal)",
-        "Jaime (accionista principal)",
-        "Gilberto (probablemente cuñado)",
-        "Grupo familiar de Olga"
-      ],
-      "segmento_impacto": "alto"
-    },
-    {
-      "id": "2026-04-20-r9-005",
-      "tarea": "Crear consejo asesor con miembros clave para supervisión de transición generacional",
-      "responsable": "Equipo asesor corporativo",
-      "prioridad": "alta",
-      "contexto": "transición accionaria",
-      "tipo": "decision",
-      "estado": "pendiente",
-      "fecha": "2026-04-20",
-      "fecha_limite": null,
-      "categoria_sugerida": "condugas",
-      "monto_cop": null,
-      "personas": [],
-      "segmento_idx": 9,
-      "segmento_titulo": "Presentaciones y discusión sobre la conformación de un equipo asesor",
-      "segmento_inicio": "2026-04-20T21:02:12Z",
-      "segmento_fin": "2026-04-20T21:29:48Z",
-      "segmento_personas": [
-        "Sebastian Sanchez Acevedo",
-        "Consultores corporativos (no identificados por nombre)",
-        "Jairo Sánchez (patriarca, fallecido)",
-        "Natalia (gestora actual)",
-        "Olga (accionista principal)",
-        "Jaime (accionista principal)",
-        "Gilberto (probablemente cuñado)",
-        "Grupo familiar de Olga"
-      ],
-      "segmento_impacto": "alto"
     }
   ],
-  "ultima_actualizacion": "2026-04-21T18:01:17.367415"
+  "ultima_actualizacion": "2026-04-21T12:02:04.219498"
 }

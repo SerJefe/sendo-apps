@@ -3,27 +3,27 @@
   "total_lifelogs": 10,
   "total_reuniones": 10,
   "procesado_con": "haiku_v3_structured",
-  "procesado_at": "2026-04-21T12:02:04",
+  "procesado_at": "2026-04-21T18:01:17",
   "reuniones": [
     {
       "idx": 0,
-      "resumen": "Discusión caótica sobre licitaciones, inventario de materiales, compra de tapas metálicas (>10M COP), gestión de contratos y 5 amenazas legales graves. Se menciona recuperación de informes de normalización pendientes pero aún hay retrasos en cumplimiento normativo.",
+      "resumen": "Sebastian analiza crisis de cadena de suministro, escasez de materiales (camiones de pita), compra de tapas metálicas por >10M COP, y enumera 5 amenazas graves en contratos: incumplimientos de proveedores, sanciones evitadas por informes de normalización entregados últimamente, pero requiere atención mes a mes. Equipos nuevos llegan en transición compleja. Urgencia de cobro y revisión de números de caja.",
       "impacto": "alto",
       "personas": [
-        "Sebastian Sanchez",
+        "Sebastian Sanchez Acevedo",
         "Santiago",
         "Alberto Iglesias",
-        "Andrea",
         "Carlos López",
-        "Humberto Iglesias"
+        "Humberto Iglesias",
+        "Andrea"
       ],
       "tareas": [
         {
           "tarea": "Armar plan de defensa y revisar números de caja con Andrea",
-          "responsable": "Sebastian Sanchez",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "critica",
           "tipo": "compromiso",
-          "contexto": "Crisis de liquidez y amenazas contractuales",
+          "contexto": "supervivencia financiera",
           "fecha_limite": "2026-04-20",
           "monto_cop": null,
           "personas_mencionadas": [
@@ -31,11 +31,11 @@
           ]
         },
         {
-          "tarea": "Contactar proveedores (3 llamadas pendientes)",
-          "responsable": "Sebastian Sanchez",
+          "tarea": "Contactar y negociar con 3 proveedores clave (Humberto Iglesias, Santiago y otros)",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "critica",
           "tipo": "compromiso",
-          "contexto": "Gestión de cadena de suministro urgente",
+          "contexto": "cadena de suministro y liquidez",
           "fecha_limite": "2026-04-20",
           "monto_cop": null,
           "personas_mencionadas": [
@@ -44,43 +44,44 @@
           ]
         },
         {
-          "tarea": "Negociar compra de 480 tapas metálicas directamente con proveedor",
-          "responsable": "Sebastian Sanchez",
+          "tarea": "Negociar compra de tapas metálicas (480 unidades, no semanal)",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "alta",
           "tipo": "compromiso",
-          "contexto": "Compra de >10M COP requiere negociación directa",
-          "fecha_limite": "2026-04-27",
+          "contexto": "proyecto licitación",
+          "fecha_limite": null,
           "monto_cop": 10000000,
           "personas_mencionadas": []
         },
         {
-          "tarea": "Entregar informes de normalización de contratos pendientes",
-          "responsable": "Sebastian Sanchez",
-          "prioridad": "alta",
-          "tipo": "compromiso",
-          "contexto": "Cumplimiento normativo con OBLP, ya hubo sanción anterior",
-          "fecha_limite": "2026-04-25",
+          "tarea": "Analizar y discutir con Carlos López sobre situación financiera",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "critica",
+          "tipo": "seguimiento",
+          "contexto": "caja y liquidez",
+          "fecha_limite": "2026-04-20",
           "monto_cop": null,
           "personas_mencionadas": [
-            "OBLP"
+            "Carlos López"
           ]
         }
       ],
       "decisiones": [
-        "Se debe negociar directamente con proveedores en lugar de pequeñas compras semanales",
-        "Contactar Santiago y Alberto Iglesias para espacio de negociación urgente"
+        "Se evitó sanción por informes de normalización al entregarlos la semana anterior",
+        "Se prioriza cobro sobre cualquier otra acción"
       ],
       "ideas": [
-        "Implementar compras consolidadas en lugar de compras fraccionadas semanales",
-        "Usar factoring y ceder proporciones de facturas como garantía a proveedores"
+        "Usar factoring de EPM/GDO como herramienta de flujo (mismo día pago)",
+        "Estudiar cesión de proporciones de facturas a proveedores como garantía",
+        "Poner énfasis en compras grandes (>10M) con negociación directa"
       ],
       "frases": [
-        "esto ya no aguanta más, y pues que sepan que puede pasar de todo en este proceso",
-        "esta compra de más de 10 millones de pesos merece la negociación que se merece"
+        "Porque esto ya no aguanta más, y pues que sepan que puede pasar de todo en este proceso",
+        "Esto es una compra de más de 10 millones de pesos, que se merece el punto de importancia que se merece"
       ],
       "preguntas_abiertas": [
-        "¿Cuál es el estado real de la cadena de suministro y qué materiales faltan críticos?",
-        "¿Se pueden resolver las 5 amenazas legales graves simultáneamente?"
+        "¿Cómo se resuelve la escasez de materiales (camiones de pita) sin alargar plazos?",
+        "¿Se pueden securitizar facturas con clientes como EPM/GDO para liberar caja inmediata?"
       ],
       "tension_signal": "alto",
       "titulo_limitless": "Discusión sobre licitaciones de proyectos, plazos y desafíos de la cadena de suministro",
@@ -90,21 +91,23 @@
     },
     {
       "idx": 1,
-      "resumen": "Conversación personal muy breve sobre confianza y futuro. Sin contexto claro, aparenta ser discusión de pareja o personal en momento de crisis emocional.",
-      "impacto": "bajo",
+      "resumen": "Conversación personal muy breve (0 min) entre Sebastian y alguien cercano donde expresan desconfianza sobre el futuro y se pide claridad sobre cómo saldrá todo. Contexto emocional de incertidumbre.",
+      "impacto": "medio",
       "personas": [
-        "Unknown 1",
-        "Unknown 2"
+        "Sebastian Sanchez Acevedo",
+        "Unknown (posible pareja/cercano)"
       ],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [
         "Tú no la des toda la fe que yo te tengo, amor",
-        "necesito que me digas cómo va a salir todo esto"
+        "Necesito que me digas cómo va a salir todo esto"
       ],
-      "preguntas_abiertas": [],
-      "tension_signal": "medio",
+      "preguntas_abiertas": [
+        "¿Cuál es la raíz de la desconfianza que mencionan?"
+      ],
+      "tension_signal": "alto",
       "titulo_limitless": "Conversación sobre una situación difícil",
       "startTime": "2026-04-20T15:30:43Z",
       "endTime": "2026-04-20T15:30:59Z",
@@ -112,43 +115,59 @@
     },
     {
       "idx": 2,
-      "resumen": "Conversación con asesor legal sobre garantías financieras, factoring con PM y GDO, cesión de facturas a proveedores como herramienta de garantía. Se discute la reputación como activo clave en negociaciones de crédito.",
-      "impacto": "medio",
+      "resumen": "Sebastian y alguien (abogado o gestor) discuten garantías financieras para factoring/crédito: factores EPM y GDO prestan casi al día; se estudia cesión de proporciones de facturas a proveedores como garantía alternativa a aval tradicional. Conversación sobre reputación: para el padre del interlocutor, la garantía es 'quiénes son ustedes', no documentos. Menciona relación con Natalia y conexión con PM (proyectos).",
+      "impacto": "alto",
       "personas": [
-        "Sebastian Sanchez",
-        "Unknown (asesor/abogado)",
-        "PM",
-        "GDO",
-        "Natalia"
+        "Sebastian Sanchez Acevedo",
+        "Abogado/gestor (probablemente Juan)",
+        "Juan (su padre)",
+        "Natalia",
+        "PM"
       ],
       "tareas": [
         {
-          "tarea": "Estudiar estrategia de cesión de facturas a proveedores como garantía",
-          "responsable": "Unknown (asesor legal)",
+          "tarea": "Estudiar mecanismo de cesión de proporciones de facturas a proveedores como garantía",
+          "responsable": "Abogado/gestor",
           "prioridad": "alta",
-          "tipo": "seguimiento",
-          "contexto": "Estrategia de garantías alternativas para flujo de caja",
+          "tipo": "pendiente",
+          "contexto": "estructura financiera y garantías",
           "fecha_limite": null,
           "monto_cop": null,
           "personas_mencionadas": [
-            "Sebastian Sanchez"
+            "Sebastian Sanchez Acevedo"
+          ]
+        },
+        {
+          "tarea": "Coordinar contacto del padre de Juan para futuras negociaciones",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "media",
+          "tipo": "seguimiento",
+          "contexto": "red de soporte financiero",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Juan",
+            "Juan padre"
           ]
         }
       ],
       "decisiones": [
-        "Usar reputación corporativa como principal garantía ante prestamistas",
-        "Explorar cesión de proporciones de facturas como mecanismo de garantía secundaria"
+        "Se valida el modelo de cesión de facturas como herramienta de garantía alternativa",
+        "Se reconoce que la reputación (quiénes son ustedes) es la garantía primaria ante actores sofisticados"
       ],
       "ideas": [
-        "Implementar amarres de facturas proporcionadas a proveedores para demostrar liquidez futura",
-        "Aprovechar relaciones con PM y GDO que prestan mismo día de pago para mejorar negociaciones"
+        "Amarrar proporciones de facturas a proveedores específicos para transparencia de garantía",
+        "Documentar gestiones de PM y expectativas compartidas con cliente como base de confianza",
+        "Separar garantías por factura para que proveedores vean claridad de pago"
       ],
       "frases": [
-        "para nosotros las garantías son ustedes. Con eso para él es suficiente",
-        "cuando uno sabe que es X empresa la que le está debiendo a mi cliente, ah, uno sabe que la empresa va a generar gestiones"
+        "La garantía es quiénes son ustedes. Con eso para él es suficiente",
+        "Ustedes siempre a los 30, 45 días, pues máximo 60, entonces la extrañeza fue rara",
+        "Él es el hombre más negociante que yo conozco en esta vida y el más tenso a la hora de manejar las cosas"
       ],
       "preguntas_abiertas": [
-        "¿Qué proporciones de facturas se pueden ceder manteniendo viabilidad operativa?"
+        "¿Qué timeline tiene PM para pagos de adiciones de contrato?",
+        "¿Cuál es el límite máximo de crédito que puede hacer Natalia sin poner en riesgo la estructura de capital?"
       ],
       "tension_signal": "medio",
       "titulo_limitless": "Una conversación entre dos personas que se ponen al día sobre sus vidas personales y profesionales, incluyendo discusiones sobre responsabilidades familiares, carreras y un asunto de cobro de deudas.",
@@ -158,18 +177,17 @@
     },
     {
       "idx": 3,
-      "resumen": "Intercambio emocional muy breve donde se expresan miedo, frustración, trabajo excesivo y falta de motivación. No hay tareas operativas claras.",
+      "resumen": "Microconversación emocional (0 min) donde alguien expresa frustración, miedo y cansancio ante el trabajo y la situación (expresa que dolor y ganas no le provoca nada, negación de tomar acción).",
       "impacto": "bajo",
       "personas": [
-        "Unknown 1",
-        "Unknown 2"
+        "Unknown"
       ],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [
         "Con el miedo, el trabajo y la atención tan idiota",
-        "Dolor, dan y ganas le provoca nada"
+        "Le provoca nada, la verdad"
       ],
       "preguntas_abiertas": [],
       "tension_signal": "alto",
@@ -180,33 +198,46 @@
     },
     {
       "idx": 4,
-      "resumen": "Preparación técnica para presentación a junta asesora. Sebastian reporta nerviosismo por primera vez presentando ante consultores con 140 diapositivas. Se resuelven problemas técnicos de videollamada.",
+      "resumen": "Sebastian prepara presentación de 140 diapositivas para junta asesora (primera vez hablando de gerencia a junta consultora). Nerviosismo y problemas técnicos de videollamada: micrófono y cámara. Ajustan a videollamada normal sin cámara para poder ver caras.",
       "impacto": "bajo",
       "personas": [
-        "Sebastian Sanchez",
-        "Andrés",
-        "Unknown"
+        "Sebastian Sanchez Acevedo",
+        "Andrés"
       ],
       "tareas": [
         {
-          "tarea": "Preparar presentación de 140 diapositivas para junta asesora",
-          "responsable": "Sebastian Sanchez",
+          "tarea": "Simplificar y revisar 140 diapositivas de presentación para junta asesora",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "alta",
+          "tipo": "compromiso",
+          "contexto": "presentación gerencial",
+          "fecha_limite": "2026-04-20",
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Verificar equipos técnicos (micrófono, cámara, videollamada) antes de junta",
+          "responsable": "Andrés",
           "prioridad": "media",
           "tipo": "compromiso",
-          "contexto": "Primera presentación formal a consultores de junta directiva",
+          "contexto": "logística técnica",
           "fecha_limite": "2026-04-20",
           "monto_cop": null,
           "personas_mencionadas": []
         }
       ],
       "decisiones": [
-        "Usar videollamada normal en lugar de videollamada con cámara enfocada para mejorar presentación"
+        "Usar videollamada normal sin cámara para mejorar visualización de caras"
       ],
-      "ideas": [],
+      "ideas": [
+        "Reducir diapositivas para no enredar la narrativa"
+      ],
       "frases": [
-        "Ay, marica, me asusta, eh, perdón, esos consultores asustan, hermano. Primera vez que voy a hablarle de la gerencia a una junta asesora"
+        "Ay, marica, me asusta, eh. Esos consultores asustan, hermano. Primera vez que voy a hablarle de la gerencia a una junta asesora"
       ],
-      "preguntas_abiertas": [],
+      "preguntas_abiertas": [
+        "¿Cuál es el objetivo clave que quiere comunicar a la junta asesora?"
+      ],
       "tension_signal": "medio",
       "titulo_limitless": "Conversación sobre una presentación y problemas técnicos",
       "startTime": "2026-04-20T16:58:40Z",
@@ -215,70 +246,71 @@
     },
     {
       "idx": 5,
-      "resumen": "Análisis profundo de crisis financiera: sanción ANS por inacción en contrato de marzo, obra Río Negro con costos ambientales no cubiertos, separación de socios, pérdidas de 1,900M COP en caja, retenciones de 20-27,000M COP anuales, endeudamiento forzado. Situación descrita como 'matar una empresa'.",
+      "resumen": "Sebastian hace análisis profundo de crisis financiera de Condugas: ANS surge por solicitud de suspensión de contrato no atendida (4 meses de advertencia); obra de Río Negro: costo ambiental no incluido por Catalina, se hizo adición de contrato perjudicial, empresa cercana al quiebre (600 familias). Falta liquidez total, socios no aportan, separación de socios inminente. Retenciones de 50% en un contrato = 25-27 mil millones COP, pérdidas de 1700-1900M COP en caja al año anterior + reajustes de costo mayores de PM. Utilizó ahorros personales. Deuda consolidada vs proyecciones de 2-3 años.",
       "impacto": "alto",
       "personas": [
-        "Sebastian Sanchez",
+        "Sebastian Sanchez Acevedo",
         "Santiago",
         "Catalina",
-        "PM",
         "Andrea",
-        "Abogados"
+        "Carlos López",
+        "PM (cliente)",
+        "Socios (no identificados)"
       ],
       "tareas": [
         {
-          "tarea": "Gestionar saldo a favor de 1,200M COP esperado en septiembre 2026 para recuperación",
-          "responsable": "Sebastian Sanchez",
+          "tarea": "Separar socios y documentar cláusulas de responsabilidad por pérdidas",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "critica",
-          "tipo": "seguimiento",
-          "contexto": "Única ruta de viabilidad si empresa no quiebra antes",
-          "fecha_limite": "2026-09-30",
-          "monto_cop": 1200000000,
+          "tipo": "decision",
+          "contexto": "disolucion de sociedad",
+          "fecha_limite": null,
+          "monto_cop": null,
           "personas_mencionadas": []
         },
         {
-          "tarea": "Resolver adición de contrato que genera perjuicio en valores con PM",
-          "responsable": "Sebastian Sanchez",
+          "tarea": "Reclamar saldo a favor de 1200M COP en septiembre y 1400M COP actuales para cierre de contratos",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "critica",
-          "tipo": "decision",
-          "contexto": "Contrato de Río Negro con ambientales incluidos pero no ejecutados",
+          "tipo": "compromiso",
+          "contexto": "recuperacion de caja",
+          "fecha_limite": "2026-09-30",
+          "monto_cop": 2600000000,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Renegociar reajustes de costo con PM para reducir carga administrativa",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "critica",
+          "tipo": "compromiso",
+          "contexto": "contrato Rio Negro",
           "fecha_limite": null,
           "monto_cop": null,
           "personas_mencionadas": [
-            "Catalina",
             "PM"
           ]
-        },
-        {
-          "tarea": "Solicitar separación de socios y que respondan por pérdidas hasta clausura",
-          "responsable": "Sebastian Sanchez",
-          "prioridad": "alta",
-          "tipo": "decision",
-          "contexto": "Socios no han aportado líquido, no responden a obligaciones",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
         }
       ],
       "decisiones": [
-        "Contrato Río Negro está quebrado si se mantiene condiciones actuales",
-        "Separación de socios es inevitable si no aportan y responden",
-        "Única estrategia viable es aguantar hasta septiembre para saldo a favor de 1,200M COP"
+        "Contrato Rio Negro está quebrado y no hay movimiento de corrección desde hace 4 meses",
+        "Necesidad de separación total de socios que no responden",
+        "Condugas ha asumido pérdidas personales de ahorros"
       ],
       "ideas": [
-        "Presionar PM por reajustes y ambientales comprometidos hace 4+ meses",
-        "Separar problemas de contrato con socios de problemas con cliente final"
+        "Documentar todas las advertencias previas (4 meses) para protección legal",
+        "Separar análisis de caja operacional vs retenciones para ver flujo real",
+        "Hacer gestión coordinada con PM sobre tiempos de pago (diciembre-febrero sin pago = sobreendeudamiento)"
       ],
       "frases": [
-        "Qué tristeza, hermano, qué tristeza",
         "Es matar una empresa y el interés es muy poco, muy poco para todo lo que nosotros nos hemos matado",
-        "yo vengo con vos apenas lo toqué en febrero, la primera semana, pero lo tocamos desde noviembre diciéndoles",
-        "la quiebra es demasiado grande en estos valores"
+        "Qué tristeza, hermano, qué tristeza",
+        "Una empresa de 600 familias que se va a desaparecer porque esta se la chupa al resto",
+        "Se trata de que no te cuentan todas las historias, entonces a usted le cuentan obviamente la parte que conviene"
       ],
       "preguntas_abiertas": [
-        "¿Puede Condugas sobrevivir 5 meses sin ese contrato o es insolvencia inmediata?",
-        "¿Se pueden recuperar los 1,900M COP de pérdida en caja este año?",
-        "¿Cuál es la fecha exacta de quiebre si no hay intervención?"
+        "¿Cuál es el plan de PM para recuperar capacidad de pago en 2026?",
+        "¿Se puede renegociar el contrato desde cero o hay que esperar a vencimiento?",
+        "¿Quiénes son los socios que no responden y cuál es su participación accionaria?"
       ],
       "tension_signal": "alto",
       "titulo_limitless": "Revisión detallada de la situación financiera, proyecciones y gestión de créditos",
@@ -288,17 +320,17 @@
     },
     {
       "idx": 6,
-      "resumen": "Conversación personal fragmentada sobre compras de día, tareas domésticas, cuidado de animales en finca y energía de familia. Sin relevancia operativa clara. Parece diálogo con familia/pareja.",
+      "resumen": "Conversación familiar-personal (3 min) fragmentada: alguien pregunta dónde está algo, discusión sobre mascotas (perro con displasia de cadera, gansos, animales en finca que consumían mucha energía) y comentarios sobre energía familiar. Contexto de cansancio y gestión de recursos. No hay tareas de negocio claras.",
       "impacto": "bajo",
       "personas": [
-        "Sebastian Sanchez",
-        "Unknown (pareja/familia)"
+        "Sebastian Sanchez Acevedo",
+        "Familia (pareja/cercana)"
       ],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [
-        "Es que tiene que tener una familia muy comprometida porque ellos gastan demasiada energía"
+        "Es que tiene que tener una familia muy comprometida porque ellos gastan demasiada, necesitan demasiada energía"
       ],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
@@ -309,7 +341,7 @@
     },
     {
       "idx": 7,
-      "resumen": "Intercambio informal muy breve de saludos sin contenido operativo.",
+      "resumen": "Saludos iniciales muy breves (0-3 min). Sin contenido de reunión.",
       "impacto": "bajo",
       "personas": [
         "Unknown"
@@ -327,22 +359,23 @@
     },
     {
       "idx": 8,
-      "resumen": "Conversación crítica sobre crisis de liquidez inmediata. Contrato Río Negro generará muerte empresarial de 100 familias. Pasivo de 130-140M COP en campamento/internet/operación. Gestión de crédito: pagarán 500M COP en créditos este mes, quedarán en 405M COP. Necesitan generar 9,000M+ COP en 3 años. Presión de proveedores sin pago de PM. Necesidad urgente de información clara para junta de decisiones mañana.",
+      "resumen": "Sebastian analiza quiebra inminente: contrato se acaba de morir mañana (100 familias sin trabajo). Cumplieron todo lo que PM pidió pero PM no respondió. Carga administrativa de 130M COP en contrato actual + pérdida de 100M si se para = muerte de empresa. Necesita reducción drástica o cierre. Crisis de caja: tenía 40M, ahora cero. Mañana hay que comunicar imposibilidad de pago a proveedores porque PM no paga (diciembre-febrero atraso). Asume posición: va a junta sin información clara por tensión excesiva. Socios no aportan. Considera separación total de sociedad.",
       "impacto": "alto",
       "personas": [
-        "Sebastian Sanchez",
+        "Sebastian Sanchez Acevedo",
         "Santiago",
-        "Andrea",
         "Camilo Marín",
-        "PM"
+        "PM",
+        "Andrea",
+        "Socios"
       ],
       "tareas": [
         {
-          "tarea": "Comunicar a equipo y proveedores sobre insolvencia si PM no paga",
-          "responsable": "Sebastian Sanchez",
+          "tarea": "Preparar comunicado para equipo: imposibilidad de pago a proveedores por falta de pago de PM",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "critica",
           "tipo": "compromiso",
-          "contexto": "Crisis de caja día a día, proveedores sin pago",
+          "contexto": "transparencia interna y gestión de crisis",
           "fecha_limite": "2026-04-21",
           "monto_cop": null,
           "personas_mencionadas": [
@@ -350,34 +383,34 @@
           ]
         },
         {
-          "tarea": "Preparar análisis de reducción de pasivos operativos (campamento/internet/personal)",
-          "responsable": "Sebastian Sanchez",
+          "tarea": "Revisar y reducir carga administrativa del contrato (objetivo: bajar de 130M a sostenible)",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "critica",
           "tipo": "decision",
-          "contexto": "130-140M COP en costos fijos insostenibles",
+          "contexto": "supervivencia operacional",
           "fecha_limite": "2026-04-21",
           "monto_cop": 130000000,
           "personas_mencionadas": []
         },
         {
-          "tarea": "Compilar información financiera consolidada para junta de mañana",
+          "tarea": "Obtener información consolidada de caja y proyecciones para presentación en junta",
           "responsable": "Andrea",
           "prioridad": "critica",
           "tipo": "compromiso",
-          "contexto": "Demasiada información dispersa, necesidad urgente de claridad",
-          "fecha_limite": "2026-04-21",
+          "contexto": "gobernanza y transparencia",
+          "fecha_limite": "2026-04-20",
           "monto_cop": null,
           "personas_mencionadas": [
-            "Sebastian Sanchez"
+            "Sebastian Sanchez Acevedo"
           ]
         },
         {
-          "tarea": "Exigir a socios cumplimiento de aportes o separación",
-          "responsable": "Sebastian Sanchez",
+          "tarea": "Analizar separación definitiva de sociedad (socios no aportan, no responden)",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "critica",
           "tipo": "decision",
-          "contexto": "Socios no han hecho aportes, empresa se lleva por su responsabilidad",
-          "fecha_limite": "2026-04-21",
+          "contexto": "restructura accionaria",
+          "fecha_limite": null,
           "monto_cop": null,
           "personas_mencionadas": [
             "Camilo Marín"
@@ -385,25 +418,25 @@
         }
       ],
       "decisiones": [
-        "Contrato Río Negro se está muriendo, 100 familias en riesgo",
-        "Hay que simplificar operación al máximo (reducir gente, costos fijos)",
-        "Separación de socios es inevitable si siguen sin aportar"
+        "Contrato está al borde de quiebre: debe cerrarse o reestructurarse inmediatamente",
+        "Necesidad urgente de comunicar a equipo sobre realidad de flujo de caja",
+        "Considera cierre de operaciones o reducción radical de escala"
       ],
       "ideas": [
-        "Plantear a PM modelo de pago acelerado o renegociación urgente",
-        "Reducir carga administrativa de 130-140M COP cortando personal y servicios no esenciales"
+        "Simplificar al máximo operaciones de contrato para reducir carga administrativa",
+        "Movilidad/flexibilización de recursos para sacar gente de nómina inmediatamente",
+        "Documentar lecciones: cuando haces favores a clientes grandes, no hay reciprocidad en crisis"
       ],
       "frases": [
-        "este contrato de acá se acaba de morir",
-        "mañana la empresa se para y vive, el trabajo en esta empresa son 100 millones de pesos, es decir, nosotros nos acabamos de morir",
-        "eso me mató y me mata por dentro",
-        "yo con 40 millones en la cuenta, y que ahorita no un peso",
-        "mañana hay que tenerlo claro para decirle a la gente que no"
+        "Este contrato de acá se acaba de morir",
+        "Mañana la empresa se para y vive, el trabajo en esta empresa son 100 millones de pesos, es decir, nosotros nos acabamos de de morir",
+        "Decirle a la gente, muchachos, no somos para pagar los proveedores, le hemos pedido que nos paguen ustedes, pero el PM no nos paga",
+        "Yo estoy igual ahorita voy para la junta, no tengo ni mierda de información, es demasiada información para un momentico, es tan tensionante"
       ],
       "preguntas_abiertas": [
-        "¿Cuántos días de operación quedan antes de insolvencia total?",
-        "¿Puede PM acelerar pagos o es negociación cerrada?",
-        "¿Qué alternativas hay si socios no aportan mañana?"
+        "¿PM tiene plan para recuperar pagos de diciembre-febrero-marzo?",
+        "¿Cuál es el break-even mínimo para mantener 80 empleados sin caer en quiebra?",
+        "¿Hay cláusula de fuerza mayor en contrato que permita pausa/renegociación?"
       ],
       "tension_signal": "alto",
       "titulo_limitless": "Conversación sobre problemas financieros y estrategias de gestión",
@@ -413,51 +446,84 @@
     },
     {
       "idx": 9,
-      "resumen": "Presentación formal a junta asesora sobre gobierno corporativo de familia Sánchez Acevedo. Se explica que empresas familiares pasaron de gestión centralizada bajo Jairo Sánchez a modelo actual fragmentado. Identifican necesidad de gobierno corporativo para mejorar dinámicas familiares. Se presenta equipo asesor externo (no serán parte de consejo pero acompañan). Objetivo: estructurar decisiones corporativas antes de transición generacional a hijos y hermano de Olga.",
-      "impacto": "medio",
+      "resumen": "Sebastian presenta a grupo asesor (consultores corporativos) sobre gobierno corporativo de grupo familiar Sánchez Acevedo. Contexto: empresas familiares heredadas de Jairo Sánchez (patriarca con visión 360), ahora gestionadas por Natalia (sin visión integral). Crisis de flujo de caja llevó a préstamo intra-grupo. Próximos accionistas: hijos de Olga y Jaime + hermano de Olga y su grupo. Objetivo: estructurar gobierno corporativo que resuelva diferencias organizacionales y financieras (no intervenir en conflictos familiares). Reconoce nobleza de Gilberto y familia al permitir conversación.",
+      "impacto": "alto",
       "personas": [
-        "Sebastian Sanchez",
-        "Olga",
-        "Jairo Sánchez",
-        "Jaime",
-        "Natalia",
-        "Gilberto",
-        "Ricardo",
-        "Fico",
-        "Asesores externos (gobierno corporativo)"
+        "Sebastian Sanchez Acevedo",
+        "Consultores corporativos (no identificados por nombre)",
+        "Jairo Sánchez (patriarca, fallecido)",
+        "Natalia (gestora actual)",
+        "Olga (accionista principal)",
+        "Jaime (accionista principal)",
+        "Gilberto (probablemente cuñado)",
+        "Grupo familiar de Olga"
       ],
       "tareas": [
         {
-          "tarea": "Diseñar estructura de gobierno corporativo para grupo Sánchez Acevedo",
-          "responsable": "Asesores externos",
-          "prioridad": "media",
+          "tarea": "Diseñar estructura de gobierno corporativo para grupo empresarial familiar",
+          "responsable": "Equipo asesor corporativo",
+          "prioridad": "alta",
           "tipo": "compromiso",
-          "contexto": "Solucionar transición generacional y diferencias en gestión",
+          "contexto": "gobernanza familiar y corporativa",
           "fecha_limite": null,
           "monto_cop": null,
           "personas_mencionadas": [
             "Olga",
-            "hijos",
-            "hermano de Olga"
+            "Jaime"
           ]
+        },
+        {
+          "tarea": "Diagnosticar diferencias organizacionales y financieras entre empresas del grupo",
+          "responsable": "Equipo asesor corporativo",
+          "prioridad": "alta",
+          "tipo": "pendiente",
+          "contexto": "mapeo de problemas",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Proponer mecanismos de manejo de caja unificado (vs decisiones aisladas de gestores)",
+          "responsable": "Equipo asesor corporativo",
+          "prioridad": "alta",
+          "tipo": "pendiente",
+          "contexto": "gestión financiera consolidada",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": [
+            "Natalia"
+          ]
+        },
+        {
+          "tarea": "Crear consejo asesor con miembros clave para supervisión de transición generacional",
+          "responsable": "Equipo asesor corporativo",
+          "prioridad": "alta",
+          "tipo": "decision",
+          "contexto": "transición accionaria",
+          "fecha_limite": null,
+          "monto_cop": null,
+          "personas_mencionadas": []
         }
       ],
       "decisiones": [
-        "Se conforma junta asesora (sin incluir asesores externos como miembros permanentes)",
-        "Prioridad es gobierno corporativo antes que solución de conflictos familiares",
-        "Transición accionaria será a hijos de Olga y Jairo + grupo familiar hermano de Olga"
+        "Equipo asesor actuará como soporte pero no forma parte del consejo asesor oficialmente",
+        "Foco en gobierno corporativo, no intervención en conflictos familiares directos",
+        "Reconocimiento de necesidad de cambio de gestión integral post-Jairo"
       ],
       "ideas": [
-        "Organizar aspecto corporativo para mejorar dinámicas familiares de forma indirecta",
-        "Aprovechar experiencia de asesores en M&A y valoración de empresas para proyecciones"
+        "Volver a modelo de visión 360° de caja consolidada (como hacía Jairo) vs decisiones aisladas",
+        "Estructura de consejo asesor para próxima generación accionista",
+        "Separación clara entre gestión operacional y decisiones de caja"
       ],
       "frases": [
-        "si somos capaces de organizar el aspecto corporativo, eso va a ayudar a que las dinámicas familiares se mejoren bastante",
-        "para es increíble eso, se merecían una conversada"
+        "Si somos capaces de organizar el aspecto corporativo, eso va a ayudar a que las dinámicas familiares se mejoren bastante",
+        "La nobleza de mi mamá y a Gilberto de haber tenido la oportunidad de conversar, se merecían una conversada",
+        "Para es un sueño, para es increíble eso"
       ],
       "preguntas_abiertas": [
-        "¿Cómo se administrará la caja unificada bajo nuevo modelo corporativo si hay múltiples accionistas?",
-        "¿Qué sucede con el financiamiento entre empresas bajo gobierno corporativo?"
+        "¿Cuáles son las 'diferencias complejas' que mencionan entre empresas del grupo?",
+        "¿Quiénes serán miembros del consejo asesor?",
+        "¿Cuál es el timeline para implementar nuevo gobierno corporativo antes de transición accionaria?"
       ],
       "tension_signal": "medio",
       "titulo_limitless": "Presentaciones y discusión sobre la conformación de un equipo asesor",
@@ -468,158 +534,181 @@
   ],
   "arcos_dia": [
     {
-      "tema": "Crisis de liquidez y viabilidad de Condugas",
+      "tema": "Crisis de liquidez y quiebre inminente de Condugas",
       "reuniones_idx": [
         0,
+        2,
         5,
         8
       ],
-      "peso_pct": 70,
+      "peso_pct": 75,
       "personas": [
-        "Sebastian Sanchez",
+        "Sebastian Sanchez Acevedo",
         "Santiago",
-        "Andrea",
         "PM",
-        "socios"
+        "Andrea",
+        "Socios"
       ],
-      "descripcion": "Progresión de alertas sobre cadena de suministro colapsada, contrato Río Negro quebrado, pérdidas de 1,900M COP anuales, retenciones masivas y necesidad de reducción urgente de costos. Insolvencia inminente en días si PM no paga."
+      "descripcion": "Flujo de caja crítico: atrasos de PM (dic-feb), retenciones de 25-27 mil M, pérdidas de 1700-1900M/año, ahorros agotados, imposibilidad de pagar proveedores. Contrato Rio Negro quebrado. Separación de socios inminente."
     },
     {
-      "tema": "Transición corporativa y gobierno familiar",
+      "tema": "Renegociación de estructuras de garantía y crédito",
+      "reuniones_idx": [
+        2,
+        3
+      ],
+      "peso_pct": 45,
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Abogado/gestor",
+        "Natalia",
+        "PM"
+      ],
+      "descripcion": "Estudio de cesión de facturas a proveedores como garantía alternativa; factoring EPM/GDO; reputación como garantía primaria; gestión de créditos sin aval tradicional."
+    },
+    {
+      "tema": "Transición de gobierno corporativo en grupo Sánchez Acevedo",
       "reuniones_idx": [
         9
       ],
-      "peso_pct": 25,
+      "peso_pct": 30,
       "personas": [
-        "Sebastian Sanchez",
+        "Sebastian Sanchez Acevedo",
+        "Consultores corporativos",
         "Olga",
-        "Jairo",
-        "Asesores externos"
+        "Jaime",
+        "Gilberto"
       ],
-      "descripcion": "Establecimiento de marco de gobierno corporativo para grupo Sánchez antes de transición generacional. Requiere claridad en decisiones financieras centralizadas."
+      "descripcion": "Diseño de gobierno corporativo para próxima generación (herederos) tras crisis de caja actual; cambio de modelo de gestión integral (Jairo) a gestionario aislado (Natalia)."
     }
   ],
   "preguntas_abiertas_dia": [
-    "¿Cuántos días de operación le quedan a Condugas antes de insolvencia total?",
-    "¿Puede PM ser presionado para pago acelerado o renegociación de términos?",
-    "¿Cuál es el plan B si socios no aportan y se fuerza separación?",
-    "¿Se puede recuperar viabilidad con saldo de 1,200M COP esperado en septiembre o es demasiado tarde?"
+    "¿PM tiene plan para pagos atrasados de diciembre-febrero-marzo 2026 y reajustes de costo?",
+    "¿Se puede renegociar contrato Rio Negro desde cero o queda solo opción de cierre/liquidación?",
+    "¿Cuál es límite de endeudamiento intra-grupo antes de que caiga toda la estructura familiar?",
+    "¿Quiénes serán miembros del nuevo consejo asesor y cómo supervisarán crisis de caja actual?",
+    "¿Se ejecuta separación total de socios que no aportan o hay mediación última posible?"
   ],
   "tensiones_dia": [
-    "Crisis de caja crítica: pasó de 40M COP a 0 en cuenta. Pago de créditos de 500M COP este mes dejará solo 405M disponibles.",
-    "Contrato Río Negro genera pérdidas de 1,900M COP anuales + retenciones de 20-27,000M COP. Muerte empresarial de 100 familias si continúa.",
-    "Socios no aportan, no responden, pero siguen siendo accionistas. Demanda de separación urgente.",
-    "PM no paga, proveedores no pueden ser pagados, pero se exige continuidad operativa. Situación insostenible en corto plazo.",
-    "Transición generacional de grupo Sánchez requiere gobierno corporativo urgente, pero crisis operativa de Condugas ocupa 100% de atención de Sebastian."
+    "CRÍTICA: Quiebre inminente de Condugas si PM no paga atrasos (100 familias sin empleo, caja en cero)",
+    "CRÍTICA: Presentación a junta asesora sobre gobierno corporativo mientras empresa se colapsa (falta información consolidada)",
+    "CRÍTICA: Socios no aportan capital pero retienen decisiones; Sebastian carga saldo solo (ahorros agotados)",
+    "ALTA: Desconexión entre promesas de PM y ejecución; 4 meses de advertencia no atendida en Rio Negro",
+    "ALTA: Tensión emocional de Sebastian: miedo, frustración, cansancio; dudas sobre viabilidad (expresadas a cercano)"
   ],
   "tareas_candidatas": [
     {
-      "tarea": "Negociar compra de 480 tapas metálicas directamente con proveedor",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Entregar informes de normalización de contratos pendientes",
-      "responsable": "Sebastian Sanchez",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Estudiar estrategia de cesión de facturas a proveedores como garantía",
-      "responsable": "Unknown (asesor legal)",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Preparar presentación de 140 diapositivas para junta asesora",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Coordinar contacto del padre de Juan para futuras negociaciones",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "media"
     },
     {
-      "tarea": "Solicitar separación de socios y que respondan por pérdidas hasta clausura",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Verificar equipos técnicos (micrófono, cámara, videollamada) antes de junta",
+      "responsable": "Andrés",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Diagnosticar diferencias organizacionales y financieras entre empresas del grupo",
+      "responsable": "Equipo asesor corporativo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Diseñar estructura de gobierno corporativo para grupo Sánchez Acevedo",
-      "responsable": "Asesores externos",
-      "prioridad": "media"
+      "tarea": "Proponer mecanismos de manejo de caja unificado (vs decisiones aisladas de gestores)",
+      "responsable": "Equipo asesor corporativo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Crear consejo asesor con miembros clave para supervisión de transición generacional",
+      "responsable": "Equipo asesor corporativo",
+      "prioridad": "alta"
     },
     {
       "tarea": "Armar plan de defensa y revisar números de caja con Andrea",
-      "responsable": "Sebastian Sanchez",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Contactar proveedores (3 llamadas pendientes)",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Contactar y negociar con 3 proveedores clave (Humberto Iglesias, Santiago y otros)",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Gestionar saldo a favor de 1,200M COP esperado en septiembre 2026 para recuperación",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Analizar y discutir con Carlos López sobre situación financiera",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Resolver adición de contrato que genera perjuicio en valores con PM",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Separar socios y documentar cláusulas de responsabilidad por pérdidas",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Comunicar a equipo y proveedores sobre insolvencia si PM no paga",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Reclamar saldo a favor de 1200M COP en septiembre y 1400M COP actuales para cierre de contratos",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Preparar análisis de reducción de pasivos operativos (campamento/internet/personal)",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Renegociar reajustes de costo con PM para reducir carga administrativa",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Compilar información financiera consolidada para junta de mañana",
+      "tarea": "Preparar comunicado para equipo: imposibilidad de pago a proveedores por falta de pago de PM",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Revisar y reducir carga administrativa del contrato (objetivo: bajar de 130M a sostenible)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Obtener información consolidada de caja y proyecciones para presentación en junta",
       "responsable": "Andrea",
       "prioridad": "critica"
     },
     {
-      "tarea": "Exigir a socios cumplimiento de aportes o separación",
-      "responsable": "Sebastian Sanchez",
+      "tarea": "Analizar separación definitiva de sociedad (socios no aportan, no responden)",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Se debe negociar directamente con proveedores en lugar de pequeñas compras semanales",
-    "Contactar Santiago y Alberto Iglesias para espacio de negociación urgente",
-    "Usar reputación corporativa como principal garantía ante prestamistas",
-    "Explorar cesión de proporciones de facturas como mecanismo de garantía secundaria",
-    "Usar videollamada normal en lugar de videollamada con cámara enfocada para mejorar presentación",
-    "Contrato Río Negro está quebrado si se mantiene condiciones actuales",
-    "Separación de socios es inevitable si no aportan y responden",
-    "Única estrategia viable es aguantar hasta septiembre para saldo a favor de 1,200M COP",
-    "Contrato Río Negro se está muriendo, 100 familias en riesgo",
-    "Hay que simplificar operación al máximo (reducir gente, costos fijos)"
+    "Se evitó sanción por informes de normalización al entregarlos la semana anterior",
+    "Se prioriza cobro sobre cualquier otra acción",
+    "Se valida el modelo de cesión de facturas como herramienta de garantía alternativa",
+    "Se reconoce que la reputación (quiénes son ustedes) es la garantía primaria ante actores sofisticados",
+    "Usar videollamada normal sin cámara para mejorar visualización de caras",
+    "Contrato Rio Negro está quebrado y no hay movimiento de corrección desde hace 4 meses",
+    "Necesidad de separación total de socios que no responden",
+    "Condugas ha asumido pérdidas personales de ahorros",
+    "Contrato está al borde de quiebre: debe cerrarse o reestructurarse inmediatamente",
+    "Necesidad urgente de comunicar a equipo sobre realidad de flujo de caja"
   ],
   "ideas_capturadas": [
-    "Implementar compras consolidadas en lugar de compras fraccionadas semanales",
-    "Usar factoring y ceder proporciones de facturas como garantía a proveedores",
-    "Implementar amarres de facturas proporcionadas a proveedores para demostrar liquidez futura",
-    "Aprovechar relaciones con PM y GDO que prestan mismo día de pago para mejorar negociaciones",
-    "Presionar PM por reajustes y ambientales comprometidos hace 4+ meses",
-    "Separar problemas de contrato con socios de problemas con cliente final",
-    "Plantear a PM modelo de pago acelerado o renegociación urgente",
-    "Reducir carga administrativa de 130-140M COP cortando personal y servicios no esenciales",
-    "Organizar aspecto corporativo para mejorar dinámicas familiares de forma indirecta",
-    "Aprovechar experiencia de asesores en M&A y valoración de empresas para proyecciones"
+    "Usar factoring de EPM/GDO como herramienta de flujo (mismo día pago)",
+    "Estudiar cesión de proporciones de facturas a proveedores como garantía",
+    "Poner énfasis en compras grandes (>10M) con negociación directa",
+    "Amarrar proporciones de facturas a proveedores específicos para transparencia de garantía",
+    "Documentar gestiones de PM y expectativas compartidas con cliente como base de confianza",
+    "Separar garantías por factura para que proveedores vean claridad de pago",
+    "Reducir diapositivas para no enredar la narrativa",
+    "Documentar todas las advertencias previas (4 meses) para protección legal",
+    "Separar análisis de caja operacional vs retenciones para ver flujo real",
+    "Hacer gestión coordinada con PM sobre tiempos de pago (diciembre-febrero sin pago = sobreendeudamiento)"
   ],
   "frases_poderosas": [
-    "esto ya no aguanta más, y pues que sepan que puede pasar de todo en este proceso",
-    "esta compra de más de 10 millones de pesos merece la negociación que se merece",
+    "Porque esto ya no aguanta más, y pues que sepan que puede pasar de todo en este proceso",
+    "Esto es una compra de más de 10 millones de pesos, que se merece el punto de importancia que se merece",
     "Tú no la des toda la fe que yo te tengo, amor",
-    "necesito que me digas cómo va a salir todo esto",
-    "para nosotros las garantías son ustedes. Con eso para él es suficiente"
+    "Necesito que me digas cómo va a salir todo esto",
+    "La garantía es quiénes son ustedes. Con eso para él es suficiente"
   ],
   "alertas_supervivencia": [
-    "CRÍTICA: Condugas está en insolvencia de caja en plazo de días (no semanas). Saldo de 0 COP actual + pago de 500M COP en créditos = incapacidad de pagar proveedores mañana.",
-    "CRÍTICA: Contrato Río Negro es inviable (pérdida de 1,900M COP anuales + 20-27,000M COP en retenciones). Requiere salida inmediata o restructuración radical.",
-    "CRÍTICA: PM no ha pagado según promesas. Sin pago de PM, colapso operativo es inminente (proveedores, nómina, campamento).",
-    "ALTA: Socios de Condugas no aportan capital. Hay demanda implícita de separación accionaria urgente.",
-    "ALTA: Sanción ANS por incumplimiento normativo. Se recuperaron informes pero hay amenaza legal latente y cinco amenazas graves adicionales sin resolver."
+    "🚨 COLAPSO INMINENTE: Condugas sin liquidez (caja = 0M, tenía 40M), no puede pagar proveedores ni nómina de 80 empleados desde mañana (2026-04-21) sin pago de PM",
+    "🚨 CONTRATO CRÍTICO QUEBRADO: Rio Negro pierde 1700-1900M COP/año, retenciones = 25-27 mil M, carga admin = 130M; separación de socios sin aportes inminente",
+    "🚨 DEUDA INTRA-GRUPO NO CONTROLADA: Préstamo de Natalia (familia) sin estructura clara, riesgo de contagio a grupo Sánchez Acevedo completo (6 empresas, múltiples accionistas)",
+    "🚨 PM EN ATRASO CRÍTICO: Falta de pago dic-feb-mar; Sebastian hizo 4 meses de advertencia, sin respuesta; riesgo de sanción legal o rescisión unilateral",
+    "🚨 EQUIPO EN CRISIS: Próxima junta asesora sin información consolidada; Sebastian sin datos, presentará situación de colapso a consejeros; riesgo de pérdida de confianza"
   ]
 }
