@@ -7,7 +7,7 @@
       "prioridad": "alta"
     },
     {
-      "tarea": "Enviar estados financieros y anexos a Supersociedades",
+      "tarea": "{'taja': 'Enviar estados financieros y anexos a Supersociedades', 'responsable': 'Sebastian', 'prioridad': 'alta', 'tipo': 'compromiso', 'contexto': 'Estados financieros listos - pendiente envío con i",
       "responsable": "Sebastian",
       "prioridad": "alta"
     },

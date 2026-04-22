@@ -225,7 +225,7 @@
     },
     {
       "id": "2026-04-14-011",
-      "tarea": "Diseñar visualizador de tareas en calendario por orden de prioridad",
+      "tarea": "{'taja': 'Diseñar visualizador de tareas en calendario por orden de prioridad', 'responsable': 'Seba",
       "responsable": "Sebastian",
       "dias": 8,
       "puntaje": null
@@ -316,7 +316,7 @@
     },
     {
       "id": "2026-04-15-002",
-      "tarea": "Enviar estados financieros y anexos a Supersociedades",
+      "tarea": "{'taja': 'Enviar estados financieros y anexos a Supersociedades', 'responsable': 'Sebastian', 'prior",
       "responsable": "Sebastian",
       "dias": 7,
       "puntaje": null
@@ -349,7 +349,7 @@
     },
     {
       "id": "2026-04-14-011",
-      "tarea": "Diseñar visualizador de tareas en calendario por orden de prioridad",
+      "tarea": "{'taja': 'Diseñar visualizador de tareas en calendario por orden de prioridad', 'responsable': 'Seba",
       "responsable": "Sebastian",
       "fecha_creacion": "2026-04-14"
     },
@@ -415,7 +415,7 @@
     },
     {
       "id": "2026-04-15-002",
-      "tarea": "Enviar estados financieros y anexos a Supersociedades",
+      "tarea": "{'taja': 'Enviar estados financieros y anexos a Supersociedades', 'responsable': 'Sebastian', 'prior",
       "responsable": "Sebastian",
       "fecha_creacion": "2026-04-15"
     },
