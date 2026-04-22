@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-22T06:18:45.124124Z",
+  "generated_at": "2026-04-22T14:07:40.067667Z",
   "fuente_novedades": "dia-v2",
-  "dia_v2_fecha": "2026-04-21",
+  "dia_v2_fecha": "2026-04-22",
   "total_abiertos": 97,
-  "total_novedades": 7,
+  "total_novedades": 2,
   "clasificador": "heuristico-keywords-v1",
   "roles": {
     "rol-1-condugas": {
@@ -183,35 +183,11 @@
       ],
       "novedades": [
         {
-          "fecha": "2026-04-21",
-          "tipo": "operativo-cliente",
-          "peso": "alto",
-          "tema": "Crisis de liquidez Condugas: pérdidas operativas, reajustes bloqueados, decisión de parar contratos",
-          "resumen": "Condugas enfrenta crisis de caja crítica. Pérdida operativa enero 22% (OYMA R1 -22.2% del canon). Reajustes bloqueados con EPM (solo 3% aprobado vs 14-18% necesario). Sebas evalúa detener contrato operación-mantenimiento si números no cuadran. Menciona reclamaciones vivas (Rio Negro, ANS, PHD) y nec",
-          "fuente": "dia-v2"
-        },
-        {
-          "fecha": "2026-04-21",
-          "tipo": "familia-empresa",
+          "fecha": "2026-04-22",
+          "tipo": "reflexion-sectorial",
           "peso": "medio",
-          "tema": "Caso Gilberto Rodriguez (EyC/DISA): operador excelente, no gerente estratégico",
-          "resumen": "Sebas analiza a Gilberto como operador de élite (DISA es el mejor organismo de inspección de Colombia, 20% endeudamiento, negocia con EPM desde posición de fuerza) pero reconoce que Gilberto mismo admite no ser buen gerente porque se cuestiona demasiado. Gilberto quiere rol operativo, no gerencial.",
-          "fuente": "dia-v2"
-        },
-        {
-          "fecha": "2026-04-21",
-          "tipo": "tesis",
-          "peso": "medio",
-          "tema": "Adopción de IA (Limitless, Cloud, Gemini, Notebook LM) como ventaja competitiva personal y empresarial",
-          "resumen": "Sebas muestra su stack tecnológico personal (Limitless para transcripciones, Cloud para tareas, Gemini para análisis, Notebook LM para procesos). Argumenta que dominar estas herramientas ahora da ventaja sobre 80% de la población. Propone grabar procesos en video, subirlos a YouTube, y usar IA para ",
-          "fuente": "dia-v2"
-        },
-        {
-          "fecha": "2026-04-21",
-          "tipo": "operativo-cliente",
-          "peso": "medio",
-          "tema": "Evaluación de equipo Condugas: Carlos Acevedo como resistencia, Aldemar/Diana en desarrollo",
-          "resumen": "Sebas identifica a Carlos (Acevedo, familia) como 'está pero no está', resistencia al cambio, no propicia movimiento hacia la visión. Contrasta con Aldemar (aprende lento pero seguro) y Diana Giraldo (necesita autonomía). Menciona que Edward es atrevido y aprende cometiendo errores.",
+          "tema": "Pregunta pública sobre energía combativa de gerente EPM ante crisis política/energética",
+          "resumen": "Sebas hace pregunta en evento público (posiblemente con gerente EPM) sobre preparación para crisis energética/política, comparando con pandemia. Menciona su rol como contratista EPM de 23 años y necesidad de liderazgo fuerte en Antioquia. Recibe aplauso por la intervención.",
           "fuente": "dia-v2"
         }
       ],
@@ -259,16 +235,7 @@
           "categoria": "trabajo"
         }
       ],
-      "novedades": [
-        {
-          "fecha": "2026-04-21",
-          "tipo": "familia-empresa",
-          "peso": "medio",
-          "tema": "Reunión familiar/junta directiva: presentación de crisis y gobierno corporativo",
-          "resumen": "Sebas menciona junta directiva donde presentó crisis de Condugas. Dice que llegaron 'en el mejor momento' (peor crisis pero con bases para recuperación). Critica que equipo no preparó materiales y él tuvo que improvisar. Propone diseñar estructura de gobierno corporativo para grupo Sanchez Acevedo.",
-          "fuente": "dia-v2"
-        }
-      ],
+      "novedades": [],
       "proximo": {
         "dtstart": "2026-04-24T00:00:00Z",
         "summary": "[CRITICA] Auditar estructura de deuda y cuentas por cobrar entre Condugas\\, socios e IC (excisión no pagada)",
@@ -431,16 +398,7 @@
           "categoria": "trabajo"
         }
       ],
-      "novedades": [
-        {
-          "fecha": "2026-04-21",
-          "tipo": "tesis",
-          "peso": "alto",
-          "tema": "Modelo Odu como cerebro empresarial: eliminación de mandos medios y humanos como sentidos",
-          "resumen": "Sebas presenta su visión de Odu (Odoo) como el 'cerebro' de la empresa, donde los humanos actúan como 'sentidos' que traen información en tiempo real. Los mandos medios desaparecen porque el sistema centraliza decisiones y tareas. Muestra su dashboard personal de priorización y explica cómo integrar",
-          "fuente": "dia-v2"
-        }
-      ],
+      "novedades": [],
       "proximo": null,
       "pulso": {
         "cerradas_esta_semana": 5,
@@ -490,11 +448,11 @@
       "abiertos": [],
       "novedades": [
         {
-          "fecha": "2026-04-21",
+          "fecha": "2026-04-22",
           "tipo": "personal-familia",
-          "peso": "medio",
-          "tema": "Impacto personal del ritmo de trabajo: tensión con Pauli, salud, sueño",
-          "resumen": "Sebas menciona que Pauli (su pareja) le dijo que no tendría otro hijo con él mientras mantenga este ritmo de trabajo. Reconoce que lleva año y medio sin dormir bien. Menciona exámenes médicos con resultados bajos. Dice que está armando sistemas (Odu, IA) para poder tener vida personal.",
+          "peso": "alto",
+          "tema": "Consultoría de sueño infantil con Daniel (Costa Rica) para Benjamin",
+          "resumen": "Sesión extensa con Daniel, consultor de sueño infantil en Costa Rica, evaluando rutinas nocturnas de Benjamin (10 meses). Se discuten despertares nocturnos (3-4 por noche), transición de colecho a cama propia, horarios de siestas, y se establece plan de sueño estructurado. Pauli y Sebas coordinan im",
           "fuente": "dia-v2"
         }
       ],
