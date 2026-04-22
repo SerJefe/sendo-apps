@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-04-21",
-  "ultima_actualizacion": "2026-04-21T11:45:05",
+  "fecha": "2026-04-22",
+  "ultima_actualizacion": "2026-04-22T11:45:10",
   "comite_sv": {
     "caja_dias": 8,
     "facturacion_pct": 45,
@@ -8,32 +8,32 @@
     "ebitda": -2300,
     "whoop_recovery": null,
     "whoop_sleep": "4h 02m (37%)",
-    "tareas_criticas": 20,
+    "tareas_criticas": 37,
     "proyectos_crisis": 2
   },
   "frescura": {
     "caja_dias": {
       "valor": 8,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 3,
+      "dias_sin_actualizar": 4,
       "fuente": "limitless"
     },
     "facturacion_pct": {
       "valor": 45,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 3,
+      "dias_sin_actualizar": 4,
       "fuente": "limitless"
     },
     "produccion_deficit_pct": {
       "valor": 73,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 3,
+      "dias_sin_actualizar": 4,
       "fuente": "limitless"
     },
     "ebitda": {
       "valor": -2300,
       "fecha": "2026-04-16",
-      "dias_sin_actualizar": 5,
+      "dias_sin_actualizar": 6,
       "fuente": "limitless"
     },
     "whoop_recovery": {
@@ -49,30 +49,34 @@
       "fuente": "manual"
     },
     "tareas_criticas": {
-      "valor": 20,
-      "fecha": "2026-04-21",
+      "valor": 37,
+      "fecha": "2026-04-22",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     },
     "proyectos_crisis": {
       "valor": 2,
-      "fecha": "2026-04-21",
+      "fecha": "2026-04-22",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     }
   },
   "alertas": [
-    "3 críticas vencidas: comité proveedores 12 feb, debido proceso, escalada Camacol. Documentación para defensa ya.",
-    "Deuda pendiente de Oscar sin resolución",
-    "Casa de 600 millones de pesos genera cuentas por cobrar a socios",
-    "Condugas tiene deuda con socios que requiere pago inmediato",
-    "Contratos perdiendo dinero, requería aporte de Oscar que no se materializó",
-    "Caja crítica: 8 días. EPM vencido sin pago (~180M). Hamilton vencido 17 abr. Riesgo legal inminente."
+    "EPM retiene pagos generando tensión de caja del 50% del capital de operación",
+    "Situación financiera descrita como 'demasiado oscuro' y 'muy tarde para reaccionar'",
+    "Cartera vencida desde octubre 2024, reajustes no pagados en contratos EPM",
+    "🚨 Caja Condugas = 8 días (crítico). EPM debe pagar reajuste ~180M COP para evitar colapso nómina 80 empleados",
+    "🚨 Río Negro pierde 1.7-1.9B COP/año. Defensa legal + documentación debido proceso VENCIDA (deadline 18 Apr)",
+    "No hay caja, no hay proyección de ingreso y proveedores bloqueados",
+    "🚨 Hamilton: cobro pendiente VENCIDO (deadline 17 Apr). Localizar acta comité 12 feb (score 48)",
+    "Deuda vencida de EPM: 700 millones (operación y mantenimiento) + 250 millones (zona dos) + 400 millones (Kima)"
   ],
   "oportunidades": [
-    "Financiación multilateral disponible (BID, CAF) con 20,000 millones de dólares adicionales para proyectos sostenibles",
-    "Programa Pymes Verdes a través de banca comercial con capacitación empresarial",
-    "Posibilidad de garantías de multilaterales para estructurar proyectos (modelo Argentina)"
+    "Recuperación de 100 millones mediante reajuste de contratos (25-40% ambiental, 60% costos)",
+    "Cobro pendiente en Bucaramanga: potencial 80 millones que significaría 3 meses de operación",
+    "Liquidación de contrato de mantenimiento con EPM para solventar obligaciones",
+    "Revisión de deudas de socios y activos en Bucaramanga para recuperación",
+    "Posibilidad de financiamiento por esposa en Bancolombia"
   ],
   "whoop": {
     "recovery": 29,
@@ -100,12 +104,12 @@
     },
     {
       "campo": "caja_dias",
-      "dias_sin_dato": 3,
+      "dias_sin_dato": 4,
       "umbral": 2,
-      "severidad": "media",
+      "severidad": "alta",
       "ultimo_valor": 8,
       "ultima_fecha": "2026-04-18",
-      "mensaje": "'caja_dias' lleva 3 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+      "mensaje": "'caja_dias' lleva 4 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
     }
   ]
 }

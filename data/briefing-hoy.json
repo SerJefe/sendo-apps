@@ -1,60 +1,66 @@
 {
-  "saludo": "Buenos días Sebastián — martes 21 Apr",
+  "saludo": "Buenos días Sebastián — miércoles 22 Apr",
   "supervivencia": [
-    "Caja crítica: 8 días. EPM vencido sin pago (~180M). Hamilton vencido 17 abr. Riesgo legal inminente.",
-    "3 críticas vencidas: comité proveedores 12 feb, debido proceso, escalada Camacol. Documentación para defensa ya."
+    "🚨 Caja Condugas = 8 días (crítico). EPM debe pagar reajuste ~180M COP para evitar colapso nómina 80 empleados",
+    "🚨 Río Negro pierde 1.7-1.9B COP/año. Defensa legal + documentación debido proceso VENCIDA (deadline 18 Apr)",
+    "🚨 Hamilton: cobro pendiente VENCIDO (deadline 17 Apr). Localizar acta comité 12 feb (score 48)"
   ],
   "top_3": [
     {
-      "tarea": "Localizar acta comité 12 feb + llamadas Sanear/Proing + enviar documento reajuste EPM",
+      "tarea": "Llamar HOY a Sanear/Proing. Enviar documento reajuste EPM con cálculos verificados. Programar cobro directo mismo día",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Score 48, vencida, bloquea estrategia legal",
-      "tarea_id": "comite_proveedores_feb"
+      "porque": "Sin pago EPM colapsa nómina en 8 días",
+      "tarea_id": "localizar_acta_feb12"
     },
     {
-      "tarea": "Reunión 30min con Andrea: deuda Condugas + Hamilton + tiquetes Cartagena",
+      "tarea": "Estructurar defensa legal Río Negro (documentación debido proceso + alternativas renegociación fórmula). Enviar a asesor",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Flujo caja + compromisos personales resueltos en bloque",
-      "tarea_id": "reunion_andrea_urgente"
+      "porque": "Contrato quebrado, retenciones 25-27mil M, separación socios inminente",
+      "tarea_id": "defensa_legal_rio_negro"
     },
     {
-      "tarea": "Revisar caja real hoy + estado inversiones + proyección flujo 30 días",
+      "tarea": "Reunión 30min con Andrea: deudas Condugas, caja familiar HOY, tiquetes Cartagena",
       "categoria": "SUPERVIVENCIA",
-      "porque": "KPI obsoleto (2 días). Decisiones sobre EPM renegociación dependen de esto",
-      "tarea_id": "caja_familiar_hoy"
+      "porque": "Liquidez cero requiere decisiones inmediatas sobre aportes/préstamos familia",
+      "tarea_id": "reunion_andrea"
     }
   ],
-  "mega_dia": "Cierre acta comité feb + call Andrea 30min = desbloquea defensa EPM y caja",
+  "mega_dia": "Cobro EPM. Todo lo demás espera.",
   "contactar_hoy": [
     {
-      "persona": "Andrea",
-      "motivo": "Deuda, Hamilton, tiquetes en 30min"
+      "persona": "Sanear/Proing",
+      "motivo": "Reajuste EPM con acta feb12 + exigir pago directo"
     },
     {
-      "persona": "Sanear/Proing",
-      "motivo": "Localizar acta comité 12 feb"
+      "persona": "Andrea",
+      "motivo": "Caja + decisión aportes familia + tiquetes"
+    },
+    {
+      "persona": "William Lopez",
+      "motivo": "Confirmar si EPM ya transfirió algo"
     }
   ],
   "ojo_con": [
-    "45 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "Sleep 37% → decisiones comprometidas. Pausar tareas no-críticas.",
-    "9 vencidas + 20 críticas = colapso inminente. DELEGA operativas.",
-    "EPM: renegociar vs terminar. Camacol data falta (52% vs 22-27% real)."
+    "50 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+    "Nómina 80 empleados vence en 8 días sin liquidez",
+    "Datos financieros desactualizados (últimas 3-5 días sin refresh)",
+    "Sueño 4h02m + EBITDA -2.3B = decisiones bajo estrés extremo"
   ],
   "vencidas": [
-    "Hamilton cobro (17 abr)",
-    "Procesar nómina Valle (16 abr)",
-    "Acta comité 12 feb (crítica)"
+    "Hamilton cobro (17 Apr) ❌",
+    "Defensa legal Río Negro (18 Apr) ❌",
+    "Acta comité 12 feb (16 Apr) ❌",
+    "Revisar rendimiento contratos críticos (20 Apr) ❌"
   ],
-  "frase_dia": "Hoy es localizar + llamar + decidir. El resto espera.",
-  "generado_at": "2026-04-21T11:00:10",
-  "fecha": "2026-04-21",
+  "frase_dia": "Hoy cobras o fracasas. El resto es ruido.",
+  "generado_at": "2026-04-22T11:00:10",
+  "fecha": "2026-04-22",
   "stats": {
-    "abiertas": 79,
-    "criticas": 20,
-    "vencidas": 9,
-    "estancadas": 47,
-    "sin_evaluar": 52
+    "abiertas": 98,
+    "criticas": 37,
+    "vencidas": 21,
+    "estancadas": 54,
+    "sin_evaluar": 71
   },
   "criticas_sin_fecha": [
     {
@@ -150,16 +156,16 @@
   ],
   "vence_pronto": [
     {
-      "id": "2026-04-17-c001",
-      "tarea": "Presentar propuesta de restructuración a don Darío",
-      "dias": 0,
-      "fecha_limite": "2026-04-21"
-    },
-    {
       "id": "2026-04-17-c003",
       "tarea": "Auditar estructura de deuda y cuentas por cobrar entre Condugas, socios e IC (excisión no pagada)",
-      "dias": 3,
+      "dias": 2,
       "fecha_limite": "2026-04-24"
+    },
+    {
+      "id": "2026-04-17-c002",
+      "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en EPM e incorporando Vanti, gas de occ",
+      "dias": 3,
+      "fecha_limite": "2026-04-25"
     }
   ]
 }

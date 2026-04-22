@@ -1,0 +1,25 @@
+{
+  "fecha": "2026-04-20",
+  "generated_at": "2026-04-22T05:26:59.791078Z",
+  "lifelogs_count": 10,
+  "input_chars": 120000,
+  "truncated": true,
+  "modelos": {
+    "pass1": "claude-sonnet-4-5-20250929",
+    "pass2_sonnet_para": [
+      "familia-empresa",
+      "tesis",
+      "operativo-cliente"
+    ],
+    "pass2_haiku_para": [
+      "reflexion-sectorial",
+      "personal-familia",
+      "anecdota"
+    ]
+  },
+  "cap_hilos": 5,
+  "hilos_dominantes": [],
+  "extracciones": [],
+  "ruido_descartado": 0,
+  "hilos_descartados_por_cap": 0
+}

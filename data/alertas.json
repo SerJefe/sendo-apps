@@ -54,10 +54,10 @@
         "no conformidad"
       ],
       "responsable_sugerido": "Sebastián",
-      "estado": "nuevo",
+      "estado": "resuelto",
       "sla_deadline": "2026-04-07T06:48:56.287379",
-      "fecha_atencion": null,
-      "comentario_cierre": null
+      "fecha_atencion": "2026-04-22T16:55:16.527768",
+      "comentario_cierre": ""
     }
   ],
   "stats": {

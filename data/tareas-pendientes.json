@@ -2172,7 +2172,7 @@
       "prioridad": "alta",
       "contexto": "Cumplimiento normativo con OBLP, ya hubo sanción anterior",
       "tipo": "compromiso",
-      "estado": "pendiente",
+      "estado": "aceptada",
       "fecha": "2026-04-20",
       "fecha_limite": "2026-04-25",
       "categoria_sugerida": "condugas",
@@ -2447,7 +2447,548 @@
         "Grupo familiar de Olga"
       ],
       "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-21-r3-001",
+      "tarea": "Hacer auditoría de causación histórica (operativo vs administrativo) en sistemas actuales",
+      "responsable": "Camilo Marín",
+      "prioridad": "alta",
+      "contexto": "Replicar metodología auditoría Sena para identificar errores paramétricos",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 3,
+      "segmento_titulo": "Conversación con Camilo Marín sobre asuntos laborales y organizativos",
+      "segmento_inicio": "2026-04-21T13:59:04Z",
+      "segmento_fin": "2026-04-21T14:11:22Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Camilo Marín"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-21-r5-002",
+      "tarea": "Llamar a Proin para validar términos de reajuste en contrato de 8% de vida",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Reajuste insuficiente en enero 22% pérdida operacional",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": "2026-04-22",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Proin"
+      ],
+      "segmento_idx": 5,
+      "segmento_titulo": "Análisis de la productividad y el gas natural",
+      "segmento_inicio": "2026-04-21T14:11:46Z",
+      "segmento_fin": "2026-04-21T14:12:54Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Aníbal",
+        "Camilo Marín"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-21-r7-003",
+      "tarea": "Asignar líder de migración Odu (Ricardo o Catalina) con bono de 5M y autoridad para eliminar cargos",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Incentivo para acelerar adopción; no es negociable",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": "2026-04-22",
+      "categoria_sugerida": "patrimonio",
+      "monto_cop": 5000000,
+      "personas": [
+        "Ricardo",
+        "Catalina"
+      ],
+      "segmento_idx": 7,
+      "segmento_titulo": "Demostración y visión de un sistema de gestión de tareas y proyectos",
+      "segmento_inicio": "2026-04-21T15:12:49Z",
+      "segmento_fin": "2026-04-21T15:38:23Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Carlos Eduardo",
+        "Emmanuel",
+        "Ricardo",
+        "Catalina",
+        "Edward"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-21-r8-004",
+      "tarea": "Estructurar Being CoRe como metodología complementaria a Condugas",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Paralelo a operaciones, no es despedida",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 8,
+      "segmento_titulo": "Análisis de la dinámica del equipo y la resistencia al cambio en la implementación de la visión de la empresa",
+      "segmento_inicio": "2026-04-21T15:38:23Z",
+      "segmento_fin": "2026-04-21T15:42:12Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Carlos Eduardo"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-21-r8-005",
+      "tarea": "Promover persona de logística a rol de mayor responsabilidad con mentoring",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Alto potencial organizacional, necesita empuje inicial",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 8,
+      "segmento_titulo": "Análisis de la dinámica del equipo y la resistencia al cambio en la implementación de la visión de la empresa",
+      "segmento_inicio": "2026-04-21T15:38:23Z",
+      "segmento_fin": "2026-04-21T15:42:12Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Carlos Eduardo"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-21-r9-006",
+      "tarea": "Investigar plataforma de grabación de pantalla directo desde computadores hacia ruta centralizada",
+      "responsable": "Juan",
+      "prioridad": "media",
+      "contexto": "Alternativa a grabación de procesos manual",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": "2026-04-25",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 9,
+      "segmento_titulo": "Discusión sobre la grabación de procesos y el uso de la IA",
+      "segmento_inicio": "2026-04-21T15:42:23Z",
+      "segmento_fin": "2026-04-21T15:48:01Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Juan",
+        "Emmanuel"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-21-r9-007",
+      "tarea": "Autorizar y configurar pre-setup de grabación automática a YouTube y Cloud Code con Notebook LM",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Automatizar generación de instructivos a través de IA (Gemini/LMCP)",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": "2026-04-28",
+      "categoria_sugerida": "ser-siendo",
+      "monto_cop": null,
+      "personas": [
+        "Juan"
+      ],
+      "segmento_idx": 9,
+      "segmento_titulo": "Discusión sobre la grabación de procesos y el uso de la IA",
+      "segmento_inicio": "2026-04-21T15:42:23Z",
+      "segmento_fin": "2026-04-21T15:48:01Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Juan",
+        "Emmanuel"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-21-r11-008",
+      "tarea": "Agregar visualización de cuadrillas al rastreador de rutas (actualmente solo muestra vehículos)",
+      "responsable": "William",
+      "prioridad": "alta",
+      "contexto": "Necesario para auditoría de obra vs liquidación",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": "2026-04-28",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 11,
+      "segmento_titulo": "Asuntos financieros, legales y estructura de gobernanza",
+      "segmento_inicio": "2026-04-21T15:50:24Z",
+      "segmento_fin": "2026-04-21T18:48:20Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "William"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-21-r11-009",
+      "tarea": "Implementar IA para contrastar dirección/tiempo de cuadrilla vs datos liquidación obra (detectar divergencias)",
+      "responsable": "William",
+      "prioridad": "alta",
+      "contexto": "Generar alertas automáticas si camión está en ubicación no mapeada o tiempo inconsistente",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 11,
+      "segmento_titulo": "Asuntos financieros, legales y estructura de gobernanza",
+      "segmento_inicio": "2026-04-21T15:50:24Z",
+      "segmento_fin": "2026-04-21T18:48:20Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "William"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-21-r11-010",
+      "tarea": "Generar alertas automáticas desde sistema sin intervención humana (recorrido 2h en dirección no mapeada)",
+      "responsable": "William",
+      "prioridad": "media",
+      "contexto": "Auditoría continua de operaciones vs reportes",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 11,
+      "segmento_titulo": "Asuntos financieros, legales y estructura de gobernanza",
+      "segmento_inicio": "2026-04-21T15:50:24Z",
+      "segmento_fin": "2026-04-21T18:48:20Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "William"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-21-r12-011",
+      "tarea": "Evaluar acceso y costo de sistema Odu (60-70K COP por usuario) vs alternativas de eficiencia operativa",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Infraestructura financiera y sistemas",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": 70000,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 12,
+      "segmento_titulo": "Anécdota personal sobre un accidente automovilístico y sus implicaciones",
+      "segmento_inicio": "2026-04-21T18:48:20Z",
+      "segmento_fin": "2026-04-21T19:17:49Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-21-r14-012",
+      "tarea": "Validar con mesa directiva decisiones estratégicas que requieren alcance compartido (no decisiones unilaterales)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Gobernanza y estrategia empresarial",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 14,
+      "segmento_titulo": "Reflexiones personales sobre la visión del negocio y el mercado",
+      "segmento_inicio": "2026-04-21T19:28:05Z",
+      "segmento_fin": "2026-04-21T19:57:40Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-21-r17-013",
+      "tarea": "Confirmar y asistir reunión con Juan Soberón a las 5:00 PM",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Logística diaria",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": "2026-04-21",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Juan Soberón"
+      ],
+      "segmento_idx": 17,
+      "segmento_titulo": "Conversación sobre el día y una reunión",
+      "segmento_inicio": "2026-04-21T21:09:59Z",
+      "segmento_fin": "2026-04-21T21:15:09Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Juan Soberón",
+        "mamá de Sebastian"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-21-r19-014",
+      "tarea": "Completar mapeo y nomenclatura de todos los potreros en la propiedad de 68 hectáreas",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Gestión de activos rurales",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "mamá"
+      ],
+      "segmento_idx": 19,
+      "segmento_titulo": "Conversación sobre propiedades y negocios",
+      "segmento_inicio": "2026-04-21T21:17:08Z",
+      "segmento_fin": "2026-04-21T22:02:36Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "mamá de Sebastian",
+        "amigo Jericó",
+        "Confama"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-21-r19-015",
+      "tarea": "Ejecutar valorización separada de teca, ganado y tierra para estrategia de venta",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Valoración de activos",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "mamá"
+      ],
+      "segmento_idx": 19,
+      "segmento_titulo": "Conversación sobre propiedades y negocios",
+      "segmento_inicio": "2026-04-21T21:17:08Z",
+      "segmento_fin": "2026-04-21T22:02:36Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "mamá de Sebastian",
+        "amigo Jericó",
+        "Confama"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-21-r19-016",
+      "tarea": "Desarrollar proyecto de 'economía plateada' en Jericó (turismo de bienestar, orgánico, cuidado personal)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Desarrollo de nuevos negocios/turismo",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "amigo Jericó"
+      ],
+      "segmento_idx": 19,
+      "segmento_titulo": "Conversación sobre propiedades y negocios",
+      "segmento_inicio": "2026-04-21T21:17:08Z",
+      "segmento_fin": "2026-04-21T22:02:36Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "mamá de Sebastian",
+        "amigo Jericó",
+        "Confama"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-21-r21-017",
+      "tarea": "Agendar reunión con doña Olga para mañana en la mañana",
+      "responsable": "asistente",
+      "prioridad": "alta",
+      "contexto": "Calendario ejecutivo",
+      "tipo": "logistica",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": "2026-04-22",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "doña Olga"
+      ],
+      "segmento_idx": 21,
+      "segmento_titulo": "Día ocupado de Sebastian",
+      "segmento_inicio": "2026-04-21T22:04:06Z",
+      "segmento_fin": "2026-04-21T22:08:29Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Rafa Jericó",
+        "doña Olga"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-21-r21-018",
+      "tarea": "Resolver problema de placa de vehículo en club/reunión PM",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Logística operativa",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": "2026-04-21",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 21,
+      "segmento_titulo": "Día ocupado de Sebastian",
+      "segmento_inicio": "2026-04-21T22:04:06Z",
+      "segmento_fin": "2026-04-21T22:08:29Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Rafa Jericó",
+        "doña Olga"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-21-r21-019",
+      "tarea": "Asegurar nutrición básica: Sebastian no ha comido desde ayer 7 PM",
+      "responsable": "asistente",
+      "prioridad": "media",
+      "contexto": "Bienestar ejecutivo",
+      "tipo": "logistica",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": "2026-04-21",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 21,
+      "segmento_titulo": "Día ocupado de Sebastian",
+      "segmento_inicio": "2026-04-21T22:04:06Z",
+      "segmento_fin": "2026-04-21T22:08:29Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Rafa Jericó",
+        "doña Olga"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-21-r27-020",
+      "tarea": "Definir y comunicar horizonte de tiempo para sustitución de carbón por combustibles alternativos",
+      "responsable": "Cementeras / Interlocutor PM",
+      "prioridad": "alta",
+      "contexto": "Estrategia de disponibilidad de carbón para térmicas",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Cementeras",
+        "Térmicas"
+      ],
+      "segmento_idx": 27,
+      "segmento_titulo": "Discusión sobre proyectos de gestión de residuos y desarrollo regional",
+      "segmento_inicio": "2026-04-21T23:00:12Z",
+      "segmento_fin": "2026-04-21T23:25:12Z",
+      "segmento_personas": [
+        "Cementeras",
+        "PM",
+        "Iribar",
+        "Gobernación"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-21-r27-021",
+      "tarea": "Finalizar diseños definitivos de red distribución PM",
+      "responsable": "PM",
+      "prioridad": "alta",
+      "contexto": "Proyecto Urabá",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-21",
+      "fecha_limite": "2026-08-31",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "PM"
+      ],
+      "segmento_idx": 27,
+      "segmento_titulo": "Discusión sobre proyectos de gestión de residuos y desarrollo regional",
+      "segmento_inicio": "2026-04-21T23:00:12Z",
+      "segmento_fin": "2026-04-21T23:25:12Z",
+      "segmento_personas": [
+        "Cementeras",
+        "PM",
+        "Iribar",
+        "Gobernación"
+      ],
+      "segmento_impacto": "alto"
     }
   ],
-  "ultima_actualizacion": "2026-04-21T18:01:17.367415"
+  "ultima_actualizacion": "2026-04-22T18:03:02.845378"
 }

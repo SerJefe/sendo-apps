@@ -1,200 +1,120 @@
 {
-  "fecha": "2026-04-17",
+  "fecha": "2026-04-20",
   "tareas_extraidas": [
     {
-      "tarea": "Educar al equipo en doctrina empresarial y administración financiera",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Asegurar que todos los que vayan como IC entreguen informe de gestión",
-      "responsable": "Unknown",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Validar sistema de 'orejas de levante' como mecanismo real de escucha a empleados vs percepción de artificio",
+      "tarea": "Coordinar contacto del padre de Juan para futuras negociaciones",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "media"
     },
     {
-      "tarea": "Evaluar oportunidad de venta de propiedad ('coco') en contexto de nuevo POT sin restricción de 5 predios",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Completar cursos de análisis fundamental con Sebastián Toro",
-      "responsable": "Sebastian Sanchez Acevedo",
+      "tarea": "Verificar equipos técnicos (micrófono, cámara, videollamada) antes de junta",
+      "responsable": "Andrés",
       "prioridad": "media"
     },
     {
-      "tarea": "Gestionar distribución de medidores rotativos y turbina desde inventario Bogotá",
-      "responsable": "equipo_comercial_Condugas",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Capacitar equipo en comunicación/prompt engineering para uso avanzado de IA (no solo consultivo)",
-      "responsable": "Sebastian Sanchez Acevedo",
+      "tarea": "Diagnosticar diferencias organizacionales y financieras entre empresas del grupo",
+      "responsable": "Equipo asesor corporativo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Seguimiento a desempeño y desarrollo de equipo en contratos (referencias a Fabián, Jorge William, Vanti)",
-      "responsable": "Humberto",
+      "tarea": "Proponer mecanismos de manejo de caja unificado (vs decisiones aisladas de gestores)",
+      "responsable": "Equipo asesor corporativo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Evaluar término de relación comercial con Oscar y Fabio o convertirlos mediante estrategia de inclusión",
-      "responsable": "Sebastian Sanchez Acevedo",
+      "tarea": "Crear consejo asesor con miembros clave para supervisión de transición generacional",
+      "responsable": "Equipo asesor corporativo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Establecer protocolo de comunicación de retrasos (avisar 10 días antes)",
-      "responsable": "Equipo Condugas",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Redactar y enviar carta estratégica (presentarse frágiles, defensiva)",
-      "responsable": "Cami",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Salir a las 5pm para llegar 2h antes al aeropuerto (logística vuelo)",
-      "responsable": "Jaime",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Comunicar asunto delicado a Camilo (no a través de mensaje, cara a cara)",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Redactar documento que explique intencionalidad de consejo (no junta directiva) para proteger carrera",
-      "responsable": "Alberto",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Imprimir QR por separado y coordinar pegado en regulador",
-      "responsable": "Unknown",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Delegar tareas a otros colaboradores para no sobrecargar responsable actual",
-      "responsable": "Unknown",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Enviar documento conceptual a Mario",
-      "responsable": "Unknown",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Enviar foto a Mario",
-      "responsable": "Unknown",
-      "prioridad": "baja"
-    },
-    {
-      "tarea": "Seguimiento pendiente sobre situacion discutida",
-      "responsable": "Unknown",
-      "prioridad": "baja"
-    },
-    {
-      "tarea": "Implementar bot de auditoría automática para procesos",
-      "responsable": "Unknown",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Configurar alertas y auditorías en sistema para seguimiento de entradas y actualizaciones",
-      "responsable": "Unknown",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Refinar prototipo de herramienta IA para detectar reuniones y generar presentaciones automáticas",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Diseñar y lanzar sandbox de debate para entrenar reacción inmediata",
-      "responsable": "Unknown",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Preparar competencias/ejercicios de debate para equipo",
-      "responsable": "Unknown",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Presentar propuesta de restructuración a don Darío",
+      "tarea": "Armar plan de defensa y revisar números de caja con Andrea",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en PM e incorporando Banti, gas de occidente, infraestructura",
+      "tarea": "Contactar y negociar con 3 proveedores clave (Humberto Iglesias, Santiago y otros)",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Auditar estructura de deuda y cuentas por cobrar entre Condugas, socios e IC (excisión no pagada)",
+      "tarea": "Analizar y discutir con Carlos López sobre situación financiera",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Definir arquitectura de datos (origen, flujo, seguridad) antes de implementar IA para registros",
+      "tarea": "Separar socios y documentar cláusulas de responsabilidad por pérdidas",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Resolver deuda pendiente con Oscar (2 años de incumplimiento)",
+      "tarea": "Reclamar saldo a favor de 1200M COP en septiembre y 1400M COP actuales para cierre de contratos",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Resolver crisis de tarjeta/caja (prioridad inmediata antes que empresa)",
+      "tarea": "Renegociar reajustes de costo con PM para reducir carga administrativa",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Preparar documento para Mario (entrega viernes para lunes, ajuste proporciones mano de obra ~15%)",
-      "responsable": "Alberto",
+      "tarea": "Preparar comunicado para equipo: imposibilidad de pago a proveedores por falta de pago de PM",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Revisar y reducir carga administrativa del contrato (objetivo: bajar de 130M a sostenible)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Obtener información consolidada de caja y proyecciones para presentación en junta",
+      "responsable": "Andrea",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Analizar separación definitiva de sociedad (socios no aportan, no responden)",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Cierre de transmisión en pantalla abierta, continuar en plataformas digitales",
-    "Presentar Plan Colombia-Venezuela a 20 años al Presidente Trump y candidato ganador desde 7 de agosto",
-    "Cambiar lenguaje corporativo: no solo PM, incluir Banti y gas de occidente",
-    "Los muchachos se quedan si se les trata bien y tienen beneficios",
-    "Sebastian se hizo 'cero a la izquierda' en el cargo eliminando su posición",
-    "POT nuevo elimina restricción de 5 predios para construir",
-    "Separación funcional de roles es requisito mínimo de imparcialidad en inspección y vigilancia",
-    "Suscribirse a casos de estudio de Sebastián Toro, costo compartido entre 3-4 personas",
-    "Traer a feria medidores tipo turbina, rotativos y ultrasónicos como diferencial en gas natural",
-    "No automatizar sin antes mapear: origen del dato, captura, destino, seguridad"
+    "Se evitó sanción por informes de normalización al entregarlos la semana anterior",
+    "Se prioriza cobro sobre cualquier otra acción",
+    "Se valida el modelo de cesión de facturas como herramienta de garantía alternativa",
+    "Se reconoce que la reputación (quiénes son ustedes) es la garantía primaria ante actores sofisticados",
+    "Usar videollamada normal sin cámara para mejorar visualización de caras",
+    "Contrato Rio Negro está quebrado y no hay movimiento de corrección desde hace 4 meses",
+    "Necesidad de separación total de socios que no responden",
+    "Condugas ha asumido pérdidas personales de ahorros",
+    "Contrato está al borde de quiebre: debe cerrarse o reestructurarse inmediatamente",
+    "Necesidad urgente de comunicar a equipo sobre realidad de flujo de caja"
   ],
   "ideas": [
-    "Involucrar comunidades como socios diretos en proyectos de minería/energía, no solo como receptores de regalías",
-    "Internacionalizar licenciamiento social: comunidades reciben utilidades e invierten en su territorio",
-    "Minería regulada con impuestos + obras públicas es modelo vs minería ilegal con mercurio",
-    "Minería ilegal (80% de exportaciones) es crimen sistemático que afecta medio ambiente y comunidades",
-    "Seguridad jurídica y tributaria son prioridad, no reducción de impuestos",
-    "Energías renovables y petróleo/gas NO son antagónicos; 46% territorio protegido, 54% abierto a exploración",
-    "Alianzas público-privadas-comunitarias: industria construye relaciones directas con comunidades para destrabar proyectos",
-    "Combatir criminalidad: empresarios legales vs criminales corruptos",
-    "Plan binacional Colombia-Venezuela con reglas comunes de inversión/impuestos/seguridad jurídica",
-    "3 ejes: energía (recuperar gasoducto), agroindustria (llanuras compartidas), bioeconomía-Amazonía"
+    "Usar factoring de EPM/GDO como herramienta de flujo (mismo día pago)",
+    "Estudiar cesión de proporciones de facturas a proveedores como garantía",
+    "Poner énfasis en compras grandes (>10M) con negociación directa",
+    "Amarrar proporciones de facturas a proveedores específicos para transparencia de garantía",
+    "Documentar gestiones de PM y expectativas compartidas con cliente como base de confianza",
+    "Separar garantías por factura para que proveedores vean claridad de pago",
+    "Reducir diapositivas para no enredar la narrativa",
+    "Documentar todas las advertencias previas (4 meses) para protección legal",
+    "Separar análisis de caja operacional vs retenciones para ver flujo real",
+    "Hacer gestión coordinada con PM sobre tiempos de pago (diciembre-febrero sin pago = sobreendeudamiento)"
   ],
   "frases": [
-    "¿Por qué no involucramos a las comunidades en los proyectos en los que va la inversión pública y privada como socios de esos proyectos?",
-    "La diferencia es si vamos a hacer minería o no. Es si la vamos a hacer con criminales, sometiendo a la gente con mercurio, o si la vamos a hacer con licencia ambiental",
-    "El 80% que se exporta hoy es proveniente de la minería ilegal, es un crimen de enormes dimensiones",
-    "El tema no es bajar impuestos sino darle seguridad jurídica, seguridad tributaria",
-    "Energías renovables y petróleo no son enemigos"
+    "Porque esto ya no aguanta más, y pues que sepan que puede pasar de todo en este proceso",
+    "Esto es una compra de más de 10 millones de pesos, que se merece el punto de importancia que se merece",
+    "Tú no la des toda la fe que yo te tengo, amor",
+    "Necesito que me digas cómo va a salir todo esto",
+    "La garantía es quiénes son ustedes. Con eso para él es suficiente"
   ],
   "alertas_supervivencia": [
-    "CRITICA: Salario diferido 7 meses al 60% genera riesgo inminente de salida de Sebastian o colapso operacional",
-    "POLITICA: Riesgo de intervención estatal en Condugas por dinámicas oscuras con EPM y socios asesinados históricos",
-    "FINANCIERA: Deuda entre socios de 2 años sin resolución, estructura financiera de bloques no clara, dinámicas de utilidades oscuras",
-    "OPERACIONAL: Personal sin educación financiera + falta de transferencia de conocimiento = empresa vulnerable a errores sistémicos",
-    "PERSONAL: Rabia y frustración creciente de Sebastian sobre 24 años sin resultados tangibles en transferencia de conocimiento"
+    "🚨 COLAPSO INMINENTE: Condugas sin liquidez (caja = 0M, tenía 40M), no puede pagar proveedores ni nómina de 80 empleados desde mañana (2026-04-21) sin pago de PM",
+    "🚨 CONTRATO CRÍTICO QUEBRADO: Rio Negro pierde 1700-1900M COP/año, retenciones = 25-27 mil M, carga admin = 130M; separación de socios sin aportes inminente",
+    "🚨 DEUDA INTRA-GRUPO NO CONTROLADA: Préstamo de Natalia (familia) sin estructura clara, riesgo de contagio a grupo Sánchez Acevedo completo (6 empresas, múltiples accionistas)",
+    "🚨 PM EN ATRASO CRÍTICO: Falta de pago dic-feb-mar; Sebastian hizo 4 meses de advertencia, sin respuesta; riesgo de sanción legal o rescisión unilateral",
+    "🚨 EQUIPO EN CRISIS: Próxima junta asesora sin información consolidada; Sebastian sin datos, presentará situación de colapso a consejeros; riesgo de pérdida de confianza"
   ],
-  "total_lifelogs": 61,
+  "total_lifelogs": 10,
   "procesado_con": "haiku_v3_structured"
 }

@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-21T18:01:17",
+  "ultima_actualizacion": "2026-04-22T18:03:02",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -1587,7 +1587,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "descripcion": "",
-      "proxima_accion": ""
+      "proxima_accion": "",
+      "estancada": true
     },
     {
       "id": "2026-04-15-001",
@@ -2059,15 +2060,17 @@
       "responsable": "Sebastian Sanchez",
       "prioridad": "media",
       "fecha_creacion": "2026-04-14",
-      "fecha_cierre": null,
-      "estado": "abierta",
+      "fecha_cierre": "2026-04-22",
+      "estado": "cerrada",
       "origen": "limitless",
       "contexto": "Eliminar ruido en comunicación",
       "tipo": "organizacion",
       "vencida": false,
       "evaluada": false,
       "categoria": "trabajo",
-      "estancada": true
+      "estancada": true,
+      "motivo_cierre": "fusionada en 2026-04-20-c002",
+      "fusionada_en": "2026-04-20-c002"
     },
     {
       "id": "2026-04-16-c001xx",
@@ -2123,13 +2126,14 @@
       "origen": "limitless_auto",
       "contexto": "Crisis financiera y de relación laboral en Condugas",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
       "personas": [
         "don Darío"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-17-c002",
@@ -2177,7 +2181,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-17-c004",
@@ -2195,7 +2200,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-17-c005",
@@ -2215,7 +2221,8 @@
       "monto_cop": null,
       "personas": [
         "Oscar"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-17-c006",
@@ -2233,7 +2240,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-17-c007",
@@ -2254,7 +2262,8 @@
       "personas": [
         "Mario",
         "Sebastian Sanchez Acevedo"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c001",
@@ -2286,7 +2295,7 @@
       "fecha_limite": "2026-04-20",
       "estado": "abierta",
       "origen": "limitless_auto",
-      "contexto": "Gestión de cadena de suministro urgente",
+      "contexto": "Gestión de cadena de suministro urgente | Eliminar ruido en comunicación | cadena de suministro y liquidez",
       "tipo": "compromiso",
       "vencida": true,
       "evaluada": false,
@@ -2295,6 +2304,10 @@
       "personas": [
         "Humberto Iglesias",
         "Santiago"
+      ],
+      "fusiono": [
+        "2026-04-16-r10-014",
+        "2026-04-20-c002x"
       ]
     },
     {
@@ -2348,7 +2361,7 @@
       "origen": "limitless_auto",
       "contexto": "Crisis de caja día a día, proveedores sin pago",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2368,7 +2381,7 @@
       "origen": "limitless_auto",
       "contexto": "130-140M COP en costos fijos insostenibles",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": 130000000,
@@ -2386,7 +2399,7 @@
       "origen": "limitless_auto",
       "contexto": "Demasiada información dispersa, necesidad urgente de claridad",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2406,7 +2419,7 @@
       "origen": "limitless_auto",
       "contexto": "Socios no han hecho aportes, empresa se lleva por su responsabilidad",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2435,20 +2448,22 @@
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica",
       "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
+      "fecha_cierre": "2026-04-22",
       "fecha_limite": "2026-04-20",
-      "estado": "abierta",
+      "estado": "cerrada",
       "origen": "limitless_auto",
       "contexto": "cadena de suministro y liquidez",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
       "personas": [
         "Humberto Iglesias",
         "Santiago"
-      ]
+      ],
+      "motivo_cierre": "fusionada en 2026-04-20-c002",
+      "fusionada_en": "2026-04-20-c002"
     },
     {
       "id": "2026-04-20-c003x",
@@ -2462,7 +2477,7 @@
       "origen": "limitless_auto",
       "contexto": "caja y liquidez",
       "tipo": "seguimiento",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2538,7 +2553,7 @@
       "origen": "limitless_auto",
       "contexto": "transparencia interna y gestión de crisis",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2558,7 +2573,7 @@
       "origen": "limitless_auto",
       "contexto": "supervivencia operacional",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": 130000000,
@@ -2576,7 +2591,7 @@
       "origen": "limitless_auto",
       "contexto": "gobernanza y transparencia",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2602,6 +2617,243 @@
       "monto_cop": null,
       "personas": [
         "Camilo Marín"
+      ]
+    },
+    {
+      "id": "2026-04-20-r0-002",
+      "tarea": "Entregar informes de normalización de contratos pendientes",
+      "responsable": "Sebastian Sanchez",
+      "prioridad": "alta",
+      "fecha_creacion": "2026-04-20",
+      "fecha_cierre": null,
+      "estado": "abierta",
+      "origen": "limitless",
+      "contexto": "Cumplimiento normativo con OBLP, ya hubo sanción anterior",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "trabajo"
+    },
+    {
+      "id": "2026-04-21-c001",
+      "tarea": "Revisar y reestructurar ecuaciones contractuales con EPM para evitar multas crecientes",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Contratos EPM con margen negativo e imposibilidad de recomposición",
+      "tipo": "pendiente",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Carlos Eduardo"
+      ]
+    },
+    {
+      "id": "2026-04-21-c002",
+      "tarea": "Auditar causación contable y distribución entre operativo/administrativo en múltiples sistemas (Perseo, Malfi, Odu)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Problemas de trazabilidad nómina y exógena por fuentes múltiples de pago",
+      "tipo": "pendiente",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Camilo Marín"
+      ]
+    },
+    {
+      "id": "2026-04-21-c003",
+      "tarea": "Parametrizar completamente Odu (cuentas, distribuciones, causales) antes de migración",
+      "responsable": "Camilo Marín",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Sin parametrización, Odu no resuelve errores causales actuales; riesgo exógena",
+      "tipo": "pendiente",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ]
+    },
+    {
+      "id": "2026-04-21-c004",
+      "tarea": "Parametrizar Odu completamente (eliminar cargos redundantes, mapear flujos de contabilidad/operaciones)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Empresa no está parametrizada para Odu; requiere reestructura masiva",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": 5000000,
+      "personas": [
+        "Carlos Eduardo",
+        "Ricardo",
+        "Catalina"
+      ]
+    },
+    {
+      "id": "2026-04-21-c005",
+      "tarea": "Establecer transición Odu como obligatoria (mañana y pasado mañana), sin negociación",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-23",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Resistencia al cambio requiere presión clara",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-21-c006",
+      "tarea": "Desarrollar e implementar sistema integrado 'mapa neuronal' para agregación de información operativa",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Visibilidad y control de caja/operaciones",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ]
+    },
+    {
+      "id": "2026-04-21-c007",
+      "tarea": "Diseñar e implementar sistema de automatización en Condugas para alcanzar operación 60-70% autónoma en <3 meses",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-07-21",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Transformación operativa Condugas",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ]
+    },
+    {
+      "id": "2026-04-21-c008",
+      "tarea": "Revertir transferencia de 14M COP a papá de Sebastian para cubrir fly pass y mantener nómina operativa",
+      "responsable": "Camilo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-24",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Flujo de caja de fin de semana",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": 14000000,
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "Camilo",
+        "papá"
+      ]
+    },
+    {
+      "id": "2026-04-21-c009",
+      "tarea": "Estructurar transparencia de flujos Inversora y Construtem para decisión de supervivencia conjunta",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Gobernanza familiar/empresarial",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ]
+    },
+    {
+      "id": "2026-04-21-c010",
+      "tarea": "Cumplir cronograma de construcción Fase 2 (concretos y máquinas)",
+      "responsable": "EPM",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": "2027-12-31",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Proyecto generación térmica",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "EPM"
+      ]
+    },
+    {
+      "id": "2026-04-21-c011",
+      "tarea": "Completar instalaciones para primeras dos máquinas",
+      "responsable": "EPM",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-21",
+      "fecha_cierre": null,
+      "fecha_limite": "2027-12-31",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Cronograma comprometido",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "EPM"
       ]
     }
   ]
