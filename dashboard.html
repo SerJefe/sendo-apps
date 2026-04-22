@@ -1888,12 +1888,41 @@ document.getElementById('projDetailModal').addEventListener('click', function(e)
 // ==========================================
 async function loadCoherencia() {
   try {
-    var r = await fetch(DATA_BASE+'/alertas-coherencia.json?t='+Date.now());
-    var d = await r.json();
+    // alertas-coherencia.json se regenera 1x/dia (cron 11:30 UTC via agent-coherencia.py).
+    // Cruzar con tracker (fresco) para ocultar tareas cerradas/fusionadas que siguen en el JSON stale.
+    var results = await Promise.all([
+      fetch(DATA_BASE+'/alertas-coherencia.json?t='+Date.now()),
+      fetch(DATA_BASE+'/tareas-tracker.json?t='+Date.now())
+    ]);
+    var d = await results[0].json();
+    var tracker = await results[1].json();
+    filterCoherenciaByTracker(d, tracker);
     renderCoherencia(d);
   } catch(e) {
     document.getElementById('coherencia-content').innerHTML='<div style="text-align:center;padding:30px;color:var(--muted)">Sin alertas de coherencia. Ejecuta /root/agent-coherencia.py</div>';
   }
+}
+
+function filterCoherenciaByTracker(d, tracker) {
+  var closed = new Set();
+  (tracker.tareas||[]).forEach(function(t){
+    if (t.estado === 'cerrada' || t.fusionada_en) closed.add(t.id);
+  });
+  if (!closed.size) return;
+  if (Array.isArray(d.grupos_fusion)) {
+    d.grupos_fusion = d.grupos_fusion.filter(function(g){
+      g.tareas = (g.tareas||[]).filter(function(t){ return !closed.has(t.id); });
+      g.merge_ids = (g.merge_ids||[]).filter(function(id){ return !closed.has(id); });
+      return g.tareas.length >= 2 && !closed.has(g.keep_id);
+    });
+    if (d.resumen) {
+      d.resumen.grupos_fusion = d.grupos_fusion.length;
+      d.resumen.tareas_en_grupos = d.grupos_fusion.reduce(function(s,g){return s+g.tareas.length;},0);
+    }
+  }
+  ['alta_prioridad_sin_accion','estancadas','sin_evaluar'].forEach(function(k){
+    if (Array.isArray(d[k])) d[k] = d[k].filter(function(t){ return !closed.has(t.id); });
+  });
 }
 
 function renderCoherencia(d) {
