@@ -1,0 +1,184 @@
+{
+  "fecha": "2026-04-22",
+  "generated_at": "2026-04-22T17:18:04.173061Z",
+  "model": "claude-haiku-4-5-20251001",
+  "total_hallazgos": 20,
+  "temas": {
+    "sector-energetico": {
+      "nombre": "Sector energético",
+      "emoji": "⚡",
+      "rol_asociado": "rol-1-condugas",
+      "searches_done": 5,
+      "hallazgos": [
+        {
+          "titulo": "MinMinas anuncia medidas regulatorias para ampliar oferta de gas: CREG expedirá regulación sobre swaps en 3 meses",
+          "resumen": "<cite index=\"5-2,5-5\">El Ministerio de Minas y Energía anunció un paquete de 20 medidas para evitar especulación y garantizar abastecimiento de gas. La CREG deberá expedir regulación sobre swaps operativos y contractuales en tres meses para optimizar el uso del Sistema Nacional de Transporte y mejorar la asignación del gas disponible.</cite> <cite index=\"5-3\">La oferta promedio de gas en los últimos cinco años fue 1.074 GBTUD con tendencia descendente, aumentando la dependencia de gas importado (7-19% de la oferta total).</cite>",
+          "relevancia": "alta",
+          "fuente": "https://www.semana.com/economia/macroeconomia/articulo/minminas-anuncia-medidas-para-liberar-gas-importado-y-produccion-local-busca-ampliar-la-oferta/202539/",
+          "fecha": "2025-12-15"
+        },
+        {
+          "titulo": "CREG ordena devolución de $150.000 millones a usuarios por sobrecobro en tarifas de gas (reducción WACC)",
+          "resumen": "<cite index=\"10-5,10-6\">El Ministerio de Minas y Energía, a través de la CREG, ordenó la devolución de más de 150 mil millones de pesos a usuarios de gas natural. La CREG redujo el WACC (tasa de descuento del costo de capital) y ordenó devolver valores cobrados en exceso desde 2023.</cite> <cite index=\"10-2\">Los involucrados serían TGI (filial del Grupo Energía de Bogotá) y Promigas (del Grupo Aval).</cite>",
+          "relevancia": "alta",
+          "fuente": "https://www.semana.com/finanzas/consumo-inteligente/articulo/alivio-en-la-factura-del-gas-la-creg-ordena-devolver-150000-millones-a-usuarios-porque-les-aplicaron-un-aumento-en-tarifas/202621/",
+          "fecha": "2026-03-04"
+        },
+        {
+          "titulo": "EPM concilia litigio Hidroituango: acuerdo evita terminación de contrato BOOMT y reactiva dividendos",
+          "resumen": "<cite index=\"41-2,41-7\">EPM y la Sociedad Hidroituango alcanzaron acuerdo de conciliación en diciembre de 2025 que pone fin a años de demandas. El gerente Rendón indicó que en 2026 entregarán más detalles de la conciliación que protege patrimonio público, garantiza sostenibilidad de EPM y asegura energía para el país.</cite> <cite index=\"43-12\">El acuerdo evita la terminación anticipada del contrato BOOMT que habría reducido rentas futuras de EPM y amenazado la estabilidad del sistema energético nacional.</cite>",
+          "relevancia": "alta",
+          "fuente": "https://www.eltiempo.com/colombia/medellin/acuerdo-entre-epm-y-la-sociedad-hidroelectrica-ituango-pone-fin-a-anos-de-demandas-y-litigios-por-hidroituango-estos-son-los-acuerdos-pactados-3519309",
+          "fecha": "2025-12-23"
+        },
+        {
+          "titulo": "Colombia planea 14 nuevos proyectos de regasificación para enfrentar déficit de gas (infraestructura LNG)",
+          "resumen": "<cite index=\"40-4,40-7\">Colombia tiene sobre la mesa al menos 14 proyectos adicionales de regasificación para responder a déficit creciente y caída sostenida de reservas, más allá de la terminal SPEC en Cartagena operada por Promigas.</cite> <cite index=\"40-10\">Se estructuraron iniciativas de gran escala como Ciénaga LNG, Pacific LNG, Ballena, Coveñas, Brisa Terminal y Andes Energy Terminal.</cite>",
+          "relevancia": "alta",
+          "fuente": "https://www.infobae.com/colombia/2026/01/28/alerta-en-el-gas-colombia-planea-14-proyectos-mientras-el-deficit-y-los-precios-se-disparan/",
+          "fecha": "2026-01-28"
+        },
+        {
+          "titulo": "EPM incorpora 7 nuevos equipos para transporte de gas natural en Antioquia",
+          "resumen": "<cite index=\"12-3\">EPM fortalece su capacidad de transporte de gas con la incorporación de siete nuevos equipos para las regiones de Antioquia.</cite> Este movimiento refleja la estrategia de expansión de infraestructura de transporte de gas de EPM en su zona de operación.",
+          "relevancia": "media",
+          "fuente": "https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/epm-incorpora-equipos-transporte-gas-natural-antioquia-2026",
+          "fecha": "2026-03-06"
+        }
+      ],
+      "error": null
+    },
+    "ia-automatizaciones": {
+      "nombre": "IA y automatizaciones",
+      "emoji": "🤖",
+      "rol_asociado": "rol-4-being-core",
+      "searches_done": 4,
+      "hallazgos": [
+        {
+          "titulo": "Claude Opus 4.7 + Managed Agents: Automatización empresarial de largo horizonte (Abril 16, 2026)",
+          "resumen": "<cite index=\"2-11\">Claude Opus 4.7 fue lanzado el 16 de abril como modelo flagship de Anthropic para razonamiento complejo y workflows de agentes de larga duración</cite>. <cite index=\"20-3,20-4\">Claude Managed Agents, lanzado en beta pública en abril 2026, proporciona hosting administrado, escalado automático, ejecución de código en sandbox y aislamiento seguro de credenciales para ejecutar agentes IA autónomamente en tareas de largo horizonte</cite>. Ventaja competitiva: infraestructura lista para producción sin gestionar servidores.",
+          "relevancia": "alta",
+          "fuente": "https://www.anthropic.com/research/measuring-agent-autonomy",
+          "fecha": "2026-04-16"
+        },
+        {
+          "titulo": "Odoo 20 + AI Agents: ERP con automatización agentic nativa (Septiembre 2026 esperado)",
+          "resumen": "<cite index=\"23-27,23-28,23-29,23-30\">Odoo 20 (septiembre 2026) tendrá IA agentic como pieza central, donde en lugar de responder a prompts, el sistema ejecuta workflows proactivamente—como un empleado que revisa inventario cada mañana, archiva reórdenes automáticamente y notifica al proveedor antes de que haya un problema</cite>. <cite index=\"25-20,25-21,25-22,25-25\">Caso real: un agente IA configurado para una marca de ropa UK que revisa calendarios de ventas y reserva autónomamente llamadas de descubrimiento con leads entrantes redujo el tiempo de respuesta de 4.2 horas a 11 minutos, generando $38,700 en ingresos recuperados en 90 días</cite>.",
+          "relevancia": "alta",
+          "fuente": "https://www.braincuber.com/blog/odoo-roadmap-2026-where-ai-fits-in",
+          "fecha": "2026-03-13"
+        },
+        {
+          "titulo": "Shift a Agentic Workflows: De 'AI que responde' a 'AI que ejecuta' (Abril 2026)",
+          "resumen": "<cite index=\"2-24\">La tendencia de primavera 2026 es un cambio de 'IA que responde' a 'IA que hace cosas'. El centro de competencia es ahora la cadena completa: mantener contexto largo, hacer planes, usar herramientas, verificar resultados y terminar la tarea</cite>. <cite index=\"2-19\">MCP (Model Context Protocol) cruzó 97 millones de instalaciones en marzo 2026, consolidándose como infraestructura agentic fundamental</cite>. Implicación: Odoo + Claude Code + MCP = stack completo para automatización empresarial.",
+          "relevancia": "alta",
+          "fuente": "https://blog.mean.ceo/new-ai-model-releases-news-april-2026/",
+          "fecha": "2026-04-16"
+        },
+        {
+          "titulo": "Claude Code: $2.5B en ingresos anualizados, 300k+ clientes empresariales (Febrero 2026)",
+          "resumen": "<cite index=\"18-7\">Claude Code generó $2.5 mil millones en ingresos anualizados en febrero 2026</cite>. <cite index=\"18-8\">Más de 300,000 clientes empresariales usan la API Claude Enterprise</cite>. <cite index=\"18-11\">Comerciantes reportan ahorrar 15-25 horas por semana delegando trabajo manual a agentes impulsados por Claude</cite>. Caso de uso: automatización de tagging de productos y análisis de órdenes en e-commerce.",
+          "relevancia": "media",
+          "fuente": "https://stormy.ai/blog/agentic-commerce-claude-code-automation-2026/",
+          "fecha": "2026-03-13"
+        },
+        {
+          "titulo": "Odoo AI: Automatización nativa sin código + ROI medible ($41k ahorrados año 1)",
+          "resumen": "<cite index=\"23-1,23-2,23-3,23-4\">Odoo permite construir reglas de automatización en lenguaje natural (ChatGPT/Claude) que se ejecutan en workflows ERP: aprobar facturas <$5k automáticamente, marcar órdenes con margen <22%, reordenar cuando inventario toca umbral calculado por ML</cite>. <cite index=\"23-47\">El cliente promedio de Braincuber usando IA + ERP ve $41,200 en ahorros operacionales anuales en año uno</cite>. Ventaja: sin desarrolladores, sin código, resultados en semanas.",
+          "relevancia": "alta",
+          "fuente": "https://www.braincuber.com/blog/odoo-roadmap-2026-where-ai-fits-in",
+          "fecha": "2026-03-13"
+        }
+      ],
+      "error": null
+    },
+    "vanguardia-empresarial": {
+      "nombre": "Vanguardia empresarial",
+      "emoji": "🏗️",
+      "rol_asociado": "rol-8-ser-siendo-dev",
+      "searches_done": 5,
+      "hallazgos": [
+        {
+          "titulo": "Jack Dorsey: La IA eliminará mandos medios en empresas (Block, abril 2026)",
+          "resumen": "<cite index=\"11-3,11-4\">Dorsey sostiene que \"la IA ya puede realizar gran parte del trabajo que actualmente hacen los mandos medios\", reflejado en Block que en febrero anunció el despido del 40% de su plantilla, más de 4.000 empleados</cite>. <cite index=\"11-5,11-8\">La eliminación de mandos medios podría dar lugar a organizaciones más planas y eficientes, permitiendo tomar decisiones antes de que los gerentes recopilen informes</cite>.",
+          "relevancia": "alta",
+          "fuente": "https://www.infobae.com/tecno/2026/04/02/jack-dorsey-cofundador-de-twitter-cree-que-la-ia-acabara-con-los-mandos-intermedios-en-las-empresas/",
+          "fecha": "2026-04-02"
+        },
+        {
+          "titulo": "WEF 2026: Transformación organizacional en la era de la IA - Personas centradas en juicio y coordinación",
+          "resumen": "<cite index=\"31-3\">Transición desde automatización de tareas hasta creación de valor humano, con personas centradas en el juicio, coordinación y responsabilidad, mientras que la IA acelera la comprensión y la ejecución</cite>. <cite index=\"31-11\">Analiza cómo las organizaciones líderes están integrando la IA en la experiencia del cliente, operaciones, I+D, planificación estratégica y gestión del talento</cite>.",
+          "relevancia": "alta",
+          "fuente": "https://www.cmm.org.pe/post/wef-publica-paper-transformaci%C3%B3n-organizacional-en-la-era-de-la-ia-c%C3%B3mo-las-organizaciones-maximi",
+          "fecha": "2026-04-20"
+        },
+        {
+          "titulo": "Deloitte Global Human Capital Trends 2026: Rediseño del trabajo humano-máquina y liberación del potencial humano",
+          "resumen": "<cite index=\"32-5,32-6\">Las organizaciones necesitan rediseñar el trabajo para aprovechar la sinergia entre humanos y máquinas, repensar la cultura organizacional, los derechos de decisión y la confianza en los datos</cite>. <cite index=\"32-22,32-23\">Construir la ventaja humana es crítico como gestionar la tecnología, desarrollando una fuerza laboral capaz de aprender, adaptarse y reinventarse de manera continua</cite>.",
+          "relevancia": "alta",
+          "fuente": "https://www.deloitte.com/latam/es/services/consulting/research/tendencias-globales-de-capital-humano-2026.html",
+          "fecha": "2026-04-08"
+        },
+        {
+          "titulo": "Organizaciones Teal: Autogestión, Plenitud y Propósito Evolutivo (Laloux & Scharmer convergencia)",
+          "resumen": "<cite index=\"21-3\">Organizaciones teal-integrales han introducido innovaciones exitosas: responsabilización y autogestión de grupos de trabajo, reivindicación de la integridad de las personas y carácter evolutivo del proyecto empresarial</cite>. <cite index=\"23-6,23-7,23-8\">Laloux y Scharmer convergen en un mapa de estadios de desarrollo donde con cada nueva etapa de consciencia vienen radicalmente nuevas formas de crear estructuras sociales y sistemas</cite>.",
+          "relevancia": "alta",
+          "fuente": "https://www.perlego.com/es/book/1867930/reinventar-las-organizaciones-pdf",
+          "fecha": "2016-04-05"
+        },
+        {
+          "titulo": "Liderazgo 2026: Equilibrio entre IA y toque humano - Inteligencia Paralela y Gran Aplanamiento",
+          "resumen": "<cite index=\"37-2,37-14,37-15\">El liderazgo en 2026 se define por equilibrar alta tecnología con toque profundamente humano. La \"Inteligencia Paralela\" integra IA para potenciar criterio, y el \"Gran Aplanamiento\" exige líderes que influyan por consenso y propósito en lugar de jerarquía</cite>. <cite index=\"40-16,40-18\">Transición del \"líder controlador\" al líder conector y orquestador; cambio cultural pasa a ser parte de la estrategia con estructuras flexibles que permitan experimentar con velocidad</cite>.",
+          "relevancia": "alta",
+          "fuente": "https://reachhrgroup.com/blog/4-tendencias-de-talento",
+          "fecha": "2025-12-30"
+        }
+      ],
+      "error": null
+    },
+    "jefatura-autores": {
+      "nombre": "Jefatura y autores",
+      "emoji": "📚",
+      "rol_asociado": "rol-8-ser-siendo-dev",
+      "searches_done": 5,
+      "hallazgos": [
+        {
+          "titulo": "What to Make of a Life: Cliffs, Fog, Fire and the Self-Knowledge Imperative",
+          "resumen": "Jim Collins publica su libro más personal tras una década de investigación sobre cómo las personas construyen y reconstruyen sus vidas a través de momentos críticos. Por primera vez, Collins narra su propia historia, explorando la identidad, el propósito y la transformación personal—conceptos clave para entender motivación humana más allá del desempeño empresarial.",
+          "relevancia": "alta",
+          "fuente": "https://www.jimcollins.com/books/whattomakeofalife.html",
+          "fecha": "2026-04-01"
+        },
+        {
+          "titulo": "Presencing: 7 Practices for Transforming Self, Society, and Business (con Katrin Kaufer)",
+          "resumen": "<cite index=\"45-1\">Otto Scharmer publica su nuevo libro co-autorado con Katrin Kaufer que ofrece 7 prácticas transformativas para catalizar cambio multi-sistémico y sanación planetaria</cite>. Integra frameworks de Social Fields con historias de agentes de cambio global, directamente relevante para jefatura consciente y desarrollo humano organizacional.",
+          "relevancia": "alta",
+          "fuente": "https://ottoscharmer.com/publications/",
+          "fecha": "2025-12-01"
+        },
+        {
+          "titulo": "Seven-Step Presencing Practice 2025–26 & Cultivating Planetary Coherence",
+          "resumen": "<cite index=\"41-1,41-3\">Otto Scharmer ofrece una práctica reflexiva de siete pasos diseñada para guiar a individuos y grupos a través de un ciclo de sensing profundo, creación de significado y acción intencional</cite>. Publicado enero 2026, enfatiza cómo la atención y la intención moldean la conciencia y la acción colectiva.",
+          "relevancia": "alta",
+          "fuente": "https://medium.com/presencing-institute-blog/seven-step-presencing-practice-2025-26-45d8b871b468",
+          "fecha": "2026-01-07"
+        },
+        {
+          "titulo": "Building a Science of the Social Field: Deep Sensing for Regeneration in Times of Rupture",
+          "resumen": "<cite index=\"42-16,42-17\">Scharmer y Pomeroy publican un paper académico en SocArXiv sobre construcción de una ciencia del campo social mediante deep sensing para regeneración en tiempos de ruptura</cite>. Introduce el concepto de \"fourth-person knowing\" como epistemología emergente para liderazgo sistémico.",
+          "relevancia": "media",
+          "fuente": "https://doi.org/10.31235/osf.io/d7jsg_v1",
+          "fecha": "2026-03-01"
+        },
+        {
+          "titulo": "Análisis comparativo: Jefatura vs Liderazgo en publicaciones empresariales serias (2023-2025)",
+          "resumen": "<cite index=\"40-2,40-3\">El liderazgo ya no es cuestión de rango sino de influencia, porque los equipos modernos responden mejor a la inspiración que a la imposición. Este cambio implica que los líderes ya no se limitan a dar órdenes: ahora movilizan, conectan y desarrollan a sus equipos</cite>. Múltiples publicaciones empresariales serias (Anáhuac Online, Personio, Integratec) distinguen formalmente jefatura de liderazgo.",
+          "relevancia": "media",
+          "fuente": "https://online.anahuac.mx/contenidos-educativos/desarrollo-personal-y-profesional/liderazgo-empresas/",
+          "fecha": "2025-09-08"
+        }
+      ],
+      "error": null
+    }
+  }
+}

@@ -376,6 +376,8 @@ body {
 
 <div class="totals" id="totals"></div>
 
+<section id="research-section" style="margin-bottom: 18px;"></section>
+
 <div id="roles-grid" class="roles-grid">
   <div style="grid-column: 1 / -1; color: var(--muted); text-align: center; padding: 40px 20px;">cargando…</div>
 </div>
@@ -389,6 +391,7 @@ body {
 const DATA_URL = './data/roles-vivos.json';
 const ROLES_URL = './data/roles.json';
 const ODOO_URL = './data/odoo-kpis.json';
+const RESEARCH_URL = './data/research-latest.json';
 
 function escapeHtml(s) {
   return (s || '').toString()
@@ -557,7 +560,77 @@ function renderPulso(pulse) {
     </div>`;
 }
 
-let ODOO_DATA = null;  // cargado globalmente en main()
+let ODOO_DATA = null;
+let RESEARCH_DATA = null;
+
+function renderResearchSection(research) {
+  const el = document.getElementById('research-section');
+  if (!el) return;
+  if (!research || !research.temas) { el.innerHTML = ''; return; }
+
+  const temas = research.temas || {};
+  const totalHallazgos = research.total_hallazgos || 0;
+  const fecha = research.fecha || '';
+
+  const temasHtml = Object.entries(temas).map(([id, t]) => {
+    const hallazgos = t.hallazgos || [];
+    if (!hallazgos.length) return '';
+    const top3 = hallazgos.slice(0, 3);
+    const rest = hallazgos.slice(3);
+    const items = top3.map(h => renderHallazgo(h)).join('');
+    const restItems = rest.length ? rest.map(h => renderHallazgo(h)).join('') : '';
+    return `
+      <div style="margin-bottom: 14px;">
+        <div style="font-weight: 600; font-size: 13px; color: var(--navy); margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+          <span>${t.emoji} ${escapeHtml(t.nombre)}</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); font-weight: 500;">${hallazgos.length}</span>
+        </div>
+        ${items}
+        ${rest.length ? `
+          <button class="ver-mas" onclick="
+            const hidden = this.nextElementSibling;
+            hidden.style.display = hidden.style.display === 'block' ? 'none' : 'block';
+            this.textContent = hidden.style.display === 'block' ? 'Ocultar' : 'Ver ${rest.length} más';
+          ">Ver ${rest.length} más</button>
+          <div style="display:none">${restItems}</div>
+        ` : ''}
+      </div>`;
+  }).filter(Boolean).join('');
+
+  el.innerHTML = `
+    <details style="background: var(--bg-card); border: 1px solid var(--border-soft); border-left: 4px solid var(--gold); border-radius: 10px; padding: 12px 16px; box-shadow: var(--shadow);">
+      <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; user-select: none;">
+        <div>
+          <div style="font-weight: 700; font-size: 14px; color: var(--navy);">📡 Radar externo</div>
+          <div style="font-size: 10.5px; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-top: 2px;">${fecha} · ${totalHallazgos} hallazgos · ${Object.keys(temas).length} temas</div>
+        </div>
+        <span style="font-size: 11px; color: var(--gold); font-weight: 600;">expandir ▾</span>
+      </summary>
+      <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border-soft);">
+        ${temasHtml || '<div class="empty">Sin hallazgos.</div>'}
+      </div>
+    </details>`;
+}
+
+function renderHallazgo(h) {
+  const rel = (h.relevancia || '').toLowerCase();
+  const relColor = rel === 'alta' ? 'var(--alert)' : rel === 'media' ? 'var(--gold)' : 'var(--muted)';
+  const fuenteHost = (() => {
+    try { return new URL(h.fuente || '').hostname.replace('www.', ''); } catch { return ''; }
+  })();
+  return `
+    <div style="padding: 6px 0; border-bottom: 1px dashed var(--border-soft); font-size: 12.5px;">
+      <div style="display: flex; gap: 6px; align-items: flex-start;">
+        <span style="font-size: 9px; font-weight: 700; color: ${relColor}; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.04em; flex-shrink: 0; margin-top: 3px;">${escapeHtml(rel || '·')}</span>
+        <div style="flex: 1;">
+          <div style="color: var(--navy); font-weight: 500; line-height: 1.35;">${escapeHtml(h.titulo || '')}</div>
+          ${h.resumen ? `<div style="color: var(--muted); font-size: 11.5px; margin-top: 3px; line-height: 1.4;">${escapeHtml(h.resumen)}</div>` : ''}
+          ${h.fuente ? `<a href="${escapeHtml(h.fuente)}" target="_blank" rel="noopener" style="font-size: 10px; color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace;">${escapeHtml(fuenteHost || h.fuente.slice(0, 60))} ↗</a>` : ''}
+        </div>
+      </div>
+    </div>`;
+}
+
 
 function renderRole(rolId, rol, roleDef) {
   const emoji = rol.emoji || roleDef?.emoji || '▫️';
@@ -646,12 +719,15 @@ function renderRole(rolId, rol, roleDef) {
 
 (async function main() {
   try {
-    const [vivos, rolesDef, odoo] = await Promise.all([
+    const [vivos, rolesDef, odoo, research] = await Promise.all([
       fetch(DATA_URL, { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error('roles-vivos.json no disponible'); return r.json(); }),
       fetch(ROLES_URL, { cache: 'no-cache' }).then(r => { if (!r.ok) return { roles: [] }; return r.json(); }),
       fetch(ODOO_URL, { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch(RESEARCH_URL, { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null),
     ]);
     ODOO_DATA = odoo;
+    RESEARCH_DATA = research;
+    renderResearchSection(research);
 
     // Index defs por id
     const defsById = {};
