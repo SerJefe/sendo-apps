@@ -839,7 +839,7 @@ function loadBriefing() {
       h += '<div id="bfcsf" style="display:none">';
       bh.criticas_sin_fecha.forEach(function(c) {
         h += '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:6px;margin-bottom:4px;gap:8px">';
-        h += '<div style="flex:1"><div style="font-size:12px">'+c.tarea+'</div><div style="font-size:10px;color:var(--muted);margin-top:2px">'+(c.responsable||'')+' - '+c.prioridad+'</div></div>';
+        h += '<div style="flex:1"><div style="font-size:12px">'+c.tarea+'</div><div style="font-size:10px;color:rgba(245,241,228,0.65);margin-top:2px">'+(c.responsable||'')+' - '+c.prioridad+'</div></div>';
         h += '<button onclick="setDeadline(\''+c.id+'\',\'\')" style="background:rgba(201,168,74,.15);color:var(--orange);border:1px solid rgba(201,168,74,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">Asignar fecha</button>';
         h += '</div>';
       });
@@ -1239,7 +1239,7 @@ async function loadPendientes() {
 
         html += '<div style="margin-bottom:16px;border:1px solid var(--border);border-radius:10px;overflow:hidden">';
         // Barra de reunion
-        html += '<div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--bg3);cursor:pointer" onclick="var b=this.nextElementSibling;b.style.display=b.style.display===\'none\'?\'block\':\'none\'">';
+        html += '<div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--bg3);color:#F5F1E4;cursor:pointer" onclick="var b=this.nextElementSibling;b.style.display=b.style.display===\'none\'?\'block\':\'none\'">';
         if (meta.impacto) {
           html += '<span style="font-size:9px;padding:2px 7px;border-radius:3px;background:'+impColor+'22;color:'+impColor+';text-transform:uppercase;font-weight:600;letter-spacing:.04em">'+meta.impacto+'</span>';
         }
