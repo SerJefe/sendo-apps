@@ -1923,7 +1923,7 @@ function renderCoherencia(d) {
       g.tareas.forEach(function(t) {
         var keeperBadge = t.is_keeper ? '<span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(90,122,74,.15);color:var(--green);margin-right:6px">KEEPER</span>' : '';
         var puntaje = t.puntaje ? '<span style="font-family:monospace;color:var(--cyan);font-size:11px">['+t.puntaje+']</span>' : '<span style="font-size:10px;color:var(--muted)">sin evaluar</span>';
-        h += '<div style="padding:8px 10px;background:'+(t.is_keeper?'rgba(90,122,74,.05)':'var(--bg3)')+';border-radius:6px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:center;gap:8px">';
+        h += '<div style="padding:8px 10px;background:'+(t.is_keeper?'rgba(90,122,74,.06)':'rgba(9,31,46,0.04)')+';color:var(--text);border-radius:6px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:center;gap:8px">';
         h += '<div style="flex:1;font-size:12px">'+keeperBadge+t.tarea+'<div style="font-size:10px;color:var(--muted);margin-top:2px">'+(t.responsable||'')+' - '+(t.fecha_creacion||'')+' '+puntaje+'</div></div>';
         h += '</div>';
       });
