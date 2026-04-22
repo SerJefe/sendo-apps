@@ -11,31 +11,77 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root { color-scheme: light; --bg:#faf7ee; --bg2:#f5eed5; --bg-card:#fdfbf2; --navy:#091f2e; --gold:#b89949; --gold-soft:#d4a052; --gold-line:#c9a84a; --olive:#5a7a4a; --alert:#a62e2e; --muted:#6b7580; --border-soft:rgba(201,168,74,0.3); }
-  html,body { background: var(--bg) !important; color: var(--navy) !important; font-family: 'Inter', -apple-system, system-ui, sans-serif !important; }
-  input[type=range]{-webkit-appearance:none;height:4px;background:var(--border-soft);border-radius:9999px;}
-  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:18px;width:18px;border-radius:9999px;background:var(--gold);cursor:pointer;border:2px solid var(--bg-card);box-shadow:0 0 0 1px var(--gold);}
-  .glass{background:rgba(184,153,73,0.04) !important;backdrop-filter:blur(6px);}
+  /* ═══════════════════════════════════════════════════════
+     PRIORIZADOR · paleta canon Ser Siendo (skill dashboard-organizer)
+     Principios: crema+navy+gold · Cormorant headers · JetBrains Mono cifras
+     · densidad controlada · papel editorial · móvil-first
+  ═══════════════════════════════════════════════════════ */
+  :root {
+    color-scheme: light;
+    --bg:         #faf7ee;
+    --bg2:        #f5eed5;
+    --bg-card:    #fdfbf2;
+    --bg-hi:      #fffef8;
+    --navy:       #091f2e;
+    --navy-med:   #0f2844;
+    --navy-soft:  #123b58;
+    --gold:       #b89949;
+    --gold-soft:  #d4a052;
+    --gold-line:  #c9a84a;
+    --olive:      #5a7a4a;
+    --alert:      #a62e2e;
+    --warn:       #d4a052;
+    --muted:      #6b7580;
+    --text-inv:   #F5F1E4;
+    --border-soft:rgba(201,168,74,0.3);
+    --paper-shadow: 0 1px 2px rgba(40,30,20,.04), 0 8px 24px rgba(40,30,20,.06);
+    --paper-shadow-lg: 0 2px 8px rgba(40,30,20,.06), 0 24px 48px rgba(40,30,20,.10);
+  }
+  * { -webkit-tap-highlight-color: transparent; }
+  html, body {
+    background: var(--bg) !important;
+    color: var(--navy) !important;
+    font-family: 'Inter', -apple-system, system-ui, sans-serif !important;
+    font-weight: 400 !important;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.005em;
+  }
+  body { background: radial-gradient(ellipse at top left, #f2ecd9 0%, #faf7ee 45%), #faf7ee !important; }
 
-  /* ═══ Paleta canon override — priorizador usa dashboard colors ═══ */
-  /* Fondos neutrals oscuros → cremas */
+  /* Contenedor principal móvil-first */
+  body > div#root > * { max-width: 920px; margin-left: auto; margin-right: auto; }
+
+  /* Sliders canon gold */
+  input[type=range]{-webkit-appearance:none;height:4px;background:var(--border-soft);border-radius:9999px;}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:20px;width:20px;border-radius:9999px;background:var(--gold);cursor:pointer;border:2px solid var(--bg-card);box-shadow:0 0 0 1px var(--gold), 0 2px 4px rgba(184,153,73,0.3);}
+
+  /* Glass → papel editorial */
+  .glass{
+    background: var(--bg-card) !important;
+    backdrop-filter: none !important;
+    border: 1px solid #e8e1c8 !important;
+    border-left: 3px solid var(--gold) !important;
+    box-shadow: var(--paper-shadow);
+  }
+
+  /* ═══ Fondos Tailwind neutrals → paleta crema ═══ */
   .bg-neutral-950{background-color:var(--bg) !important;}
   .bg-neutral-900,.bg-neutral-900\/60{background-color:var(--bg-card) !important;}
   .bg-neutral-800,.bg-neutral-800\/80{background-color:var(--bg2) !important;}
   .bg-neutral-500\/10,.bg-neutral-500{background-color:rgba(107,117,128,0.08) !important;}
   .bg-neutral-200{background-color:var(--bg2) !important;}
   .bg-black,.bg-black\/70{background-color:rgba(9,31,46,0.82) !important;}
-  .bg-white{background-color:#ffffff !important;}
+  .bg-white{background-color:var(--bg-card) !important;color:var(--navy) !important;}
 
-  /* Texto neutrals claros → navy */
+  /* ═══ Texto neutrals claros → navy/muted ═══ */
   .text-neutral-100,.text-neutral-200,.text-neutral-300,.text-white{color:var(--navy) !important;}
-  .text-neutral-400,.text-neutral-500,.text-neutral-600{color:var(--muted) !important;}
+  .text-neutral-400,.text-neutral-500,.text-neutral-600,.text-neutral-700{color:var(--muted) !important;}
 
-  /* Borders y rings */
+  /* ═══ Borders y rings ═══ */
   .border-neutral-600,.border-neutral-700,.border-neutral-800,.border-neutral-900,.border-neutral-800\/80,.border-neutral-300{border-color:var(--border-soft) !important;}
   .ring-neutral-700,.ring-neutral-800,.ring-neutral-500\/40{--tw-ring-color:var(--border-soft) !important;}
 
-  /* Acento principal: cyan/sky → dorado */
+  /* ═══ Cyan/Sky → dorado canon ═══ */
   .bg-cyan-500{background-color:var(--gold) !important;color:var(--navy) !important;}
   .bg-cyan-500\/8{background-color:rgba(184,153,73,0.06) !important;}
   .bg-cyan-500\/10{background-color:rgba(184,153,73,0.10) !important;}
@@ -45,53 +91,131 @@
   .ring-cyan-500\/60{--tw-ring-color:rgba(184,153,73,0.7) !important;}
   .text-cyan-300,.text-cyan-400,.text-cyan-500{color:var(--gold) !important;}
 
-  .bg-sky-500{background-color:var(--navy) !important;color:#F5F1E4 !important;}
+  .bg-sky-500{background-color:var(--navy) !important;color:var(--text-inv) !important;}
   .bg-sky-500\/10{background-color:rgba(9,31,46,0.07) !important;}
   .ring-sky-500\/40{--tw-ring-color:rgba(9,31,46,0.3) !important;}
   .text-sky-300,.text-sky-400,.text-sky-500{color:var(--navy) !important;}
 
-  /* Verdes → oliva Ser Siendo */
-  .bg-emerald-500,.bg-emerald-600{background-color:var(--olive) !important;color:#F5F1E4 !important;}
+  /* ═══ Oliva (cerrada/ok) ═══ */
+  .bg-emerald-500,.bg-emerald-600{background-color:var(--olive) !important;color:var(--text-inv) !important;}
   .border-emerald-500{border-color:var(--olive) !important;}
-  .text-emerald-300,.text-emerald-400,.text-emerald-500{color:var(--olive) !important;}
+  .text-emerald-200,.text-emerald-300,.text-emerald-400,.text-emerald-500{color:var(--olive) !important;}
 
-  /* Rojos → alert vinoso */
-  .bg-rose-500{background-color:var(--alert) !important;color:#F5F1E4 !important;}
+  /* ═══ Alert vinoso (urgencia real) ═══ */
+  .bg-rose-500{background-color:var(--alert) !important;color:var(--text-inv) !important;}
   .bg-rose-500\/10{background-color:rgba(166,46,46,0.08) !important;}
   .bg-rose-500\/15{background-color:rgba(166,46,46,0.12) !important;}
   .bg-rose-500\/20{background-color:rgba(166,46,46,0.16) !important;}
   .bg-rose-500\/25{background-color:rgba(166,46,46,0.2) !important;}
   .ring-rose-500\/30{--tw-ring-color:rgba(166,46,46,0.3) !important;}
   .ring-rose-500\/40{--tw-ring-color:rgba(166,46,46,0.4) !important;}
-  .text-rose-300,.text-rose-400,.text-rose-500{color:var(--alert) !important;}
+  .text-rose-200,.text-rose-300,.text-rose-400,.text-rose-500{color:var(--alert) !important;}
 
-  /* Amarillos/naranjas → mostaza/dorado soft */
+  /* ═══ Mostaza/dorado soft (atención) ═══ */
   .bg-amber-500{background-color:var(--gold-soft) !important;color:var(--navy) !important;}
   .bg-amber-500\/10{background-color:rgba(212,160,82,0.1) !important;}
   .bg-amber-500\/20{background-color:rgba(212,160,82,0.18) !important;}
   .ring-amber-500\/30{--tw-ring-color:rgba(212,160,82,0.35) !important;}
   .ring-amber-500\/40{--tw-ring-color:rgba(212,160,82,0.5) !important;}
-  .text-amber-300,.text-amber-400,.text-amber-500{color:var(--gold-soft) !important;}
+  .text-amber-200,.text-amber-300,.text-amber-400,.text-amber-500{color:var(--gold-soft) !important;}
   .bg-orange-500\/20{background-color:rgba(201,168,74,0.18) !important;}
   .ring-orange-500\/30{--tw-ring-color:rgba(201,168,74,0.35) !important;}
 
-  /* Morados → navy-soft (evitar morado según paleta canon) */
-  .bg-purple-500\/10{background-color:rgba(9,31,46,0.06) !important;}
+  /* ═══ Morados PROHIBIDOS por skill → navy soft ═══ */
+  .bg-purple-500,.bg-purple-500\/10{background-color:rgba(9,31,46,0.06) !important;}
   .bg-purple-500\/15{background-color:rgba(9,31,46,0.1) !important;}
   .bg-purple-500\/25{background-color:rgba(9,31,46,0.18) !important;}
   .ring-purple-500\/30{--tw-ring-color:rgba(9,31,46,0.3) !important;}
-  .text-purple-300,.text-purple-400,.text-purple-500{color:var(--navy) !important;}
+  .text-purple-200,.text-purple-300,.text-purple-400,.text-purple-500{color:var(--navy) !important;}
 
-  /* Tipografía headers */
-  h1,h2{font-family:'Cormorant Garamond',serif !important;font-weight:500 !important;color:var(--navy) !important;}
-  h3,h4,h5{font-family:'Inter',sans-serif !important;color:var(--navy) !important;}
+  /* ═══ TIPOGRAFÍA canon dashboard ═══ */
+  h1 { font-family:'Cormorant Garamond',serif !important; font-weight:500 !important; font-size:28px !important; letter-spacing:-0.01em; color:var(--navy) !important; line-height:1.1; }
+  h2 { font-family:'Cormorant Garamond',serif !important; font-weight:500 !important; font-size:20px !important; color:var(--navy) !important; letter-spacing:-0.005em; }
+  h3, h4, h5 { font-family:'Inter',sans-serif !important; color:var(--navy) !important; }
 
-  /* Mono digits */
-  .font-mono,code,pre{font-family:'JetBrains Mono',monospace !important;}
+  /* Labels uppercase tracked (skill: 10-11px, letter-spacing 0.1em, gold) */
+  .uppercase.tracking-wider, .uppercase.tracking-widest {
+    font-family:'Inter',sans-serif !important;
+    font-size:10.5px !important;
+    font-weight:600 !important;
+    letter-spacing:0.1em !important;
+    color:var(--gold) !important;
+  }
+
+  /* ═══ CIFRAS grandes → JetBrains Mono ═══ */
+  .tabular-nums, .text-5xl, .text-4xl, .text-3xl, .text-2xl, .text-xl {
+    font-family:'JetBrains Mono','Cormorant Garamond',monospace !important;
+  }
+  .text-5xl { font-size:44px !important; font-weight:600 !important; line-height:1 !important; color:var(--navy) !important; }
+  .text-4xl { font-size:34px !important; font-weight:600 !important; line-height:1.05 !important; color:var(--navy) !important; }
+  .text-3xl { font-size:26px !important; font-weight:600 !important; line-height:1.1 !important; color:var(--navy) !important; }
+  .text-2xl { font-size:22px !important; font-weight:700 !important; line-height:1.1 !important; color:var(--navy) !important; }
+
+  /* font-light en cifras → 600 (skill: bold en cifras) */
+  .font-light { font-weight:600 !important; }
+
+  /* Mono explícito */
+  .font-mono, code, pre { font-family:'JetBrains Mono',monospace !important; }
+
+  /* ═══ CARDS estilo papel editorial ═══ */
+  .rounded-2xl.border, .rounded-xl.ring-1 {
+    background: var(--bg-card) !important;
+    border-color: #e8e1c8 !important;
+    box-shadow: var(--paper-shadow) !important;
+  }
+  .glass, [class*="rounded-2xl"][class*="border-neutral"] {
+    border-left-width: 3px !important;
+    border-left-color: var(--gold) !important;
+  }
+
+  /* ═══ CARD.CRISIS (maxima urgencia) · drama navy gradient ═══ */
+  .ring-rose-500\/30.bg-rose-500\/15,
+  .ring-rose-500\/40.bg-rose-500\/20,
+  .ring-rose-500\/40.bg-rose-500\/25 {
+    background: linear-gradient(135deg, #091f2e 0%, #123b58 100%) !important;
+    color: var(--text-inv) !important;
+    border: 1px solid var(--gold) !important;
+    box-shadow: var(--paper-shadow-lg) !important;
+  }
+  .ring-rose-500\/30.bg-rose-500\/15 > *,
+  .ring-rose-500\/40.bg-rose-500\/20 > *,
+  .ring-rose-500\/40.bg-rose-500\/25 > * { color: var(--text-inv) !important; }
+
+  /* ═══ Form controls ═══ */
+  select, input[type="text"], input[type="date"], input[type="number"], textarea {
+    background: var(--bg-card) !important;
+    color: var(--navy) !important;
+    border-color: var(--border-soft) !important;
+    font-family:'Inter',sans-serif !important;
+  }
+  select:focus, input:focus, textarea:focus {
+    outline: 2px solid var(--gold) !important;
+    outline-offset: -1px;
+    border-color: var(--gold) !important;
+  }
+
+  /* Botón primary "Guardar" → gold */
+  button.bg-white { background: var(--gold) !important; color: var(--navy) !important; font-weight:600 !important; }
+  button.bg-white:hover { background: var(--gold-soft) !important; }
+
+  /* Tap targets */
+  button, a, select, input[type="date"] { min-height: 36px; }
+  nav button, .nav button { min-height: 40px; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar{ width:10px; height:10px; }
+  ::-webkit-scrollbar-track{ background: transparent; }
+  ::-webkit-scrollbar-thumb{ background: rgba(184,153,73,.25); border-radius:5px; }
+  ::-webkit-scrollbar-thumb:hover{ background: rgba(184,153,73,.45); }
+
+  /* Dividers y italic */
+  .border-t, .border-b { border-color: var(--border-soft) !important; }
+  .border-dashed { border-style: dashed !important; border-color: var(--border-soft) !important; }
+  .italic { color: var(--muted) !important; }
 </style>
 </head>
 <body class="font-sans antialiased" style="color:#091f2e;background:#faf7ee;">
-<a href="/" style="position:fixed;top:14px;left:14px;z-index:200;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(184,153,73,0.18);color:#d4a052;border:1px solid rgba(184,153,73,0.45);border-radius:8px;font-family:DM Sans,Segoe UI,system-ui,sans-serif;font-size:12px;font-weight:500;text-decoration:none;backdrop-filter:blur(8px)">← Dashboard</a>
+<a href="/" style="position:fixed;top:12px;left:12px;z-index:200;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(184,153,73,0.14);color:#091f2e;border:1px solid rgba(184,153,73,0.5);border-radius:8px;font-family:Inter,-apple-system,system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.02em;text-decoration:none;box-shadow:0 2px 8px rgba(9,31,46,0.06)">← Dashboard</a>
 
 <div id="root"></div>
 
