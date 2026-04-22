@@ -388,6 +388,7 @@ body {
 <script>
 const DATA_URL = './data/roles-vivos.json';
 const ROLES_URL = './data/roles.json';
+const ODOO_URL = './data/odoo-kpis.json';
 
 function escapeHtml(s) {
   return (s || '').toString()
@@ -413,6 +414,65 @@ function fmtHace(iso) {
   const hrs = Math.floor(mins / 60);
   if (hrs < 24) return `hace ${hrs} h`;
   return `hace ${Math.floor(hrs / 24)} d`;
+}
+
+function fmtCOP(n) {
+  if (n == null || isNaN(n)) return '—';
+  if (Math.abs(n) >= 1e9) return `$${(n/1e9).toFixed(2)}MM COP`;
+  if (Math.abs(n) >= 1e6) return `$${(n/1e6).toFixed(1)}M COP`;
+  if (Math.abs(n) >= 1e3) return `$${(n/1e3).toFixed(0)}K COP`;
+  return `$${Math.round(n)} COP`;
+}
+
+function renderOdoo(odoo) {
+  if (!odoo) return '';
+  const fact = odoo.facturacion_30d || {};
+  const cart = odoo.cartera_pendiente || {};
+  const proy = Array.isArray(odoo.proyectos_activos) ? odoo.proyectos_activos : [];
+  const tareas = odoo.tareas_proyectos_abiertas;
+  const emp = odoo.empleados_activos;
+  const top = Array.isArray(odoo.top_cartera) ? odoo.top_cartera : [];
+
+  const cartVenc = cart.vencidas || 0;
+  const alertClass = cartVenc > 0 ? 'alert' : '';
+
+  const topHtml = top.length ? `
+    <div style="margin-top: 10px;">
+      <div style="font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; margin-bottom: 4px;">Top cartera</div>
+      ${top.map(t => `
+        <div style="display:flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px dashed var(--border-soft);">
+          <span style="color: var(--navy);">${escapeHtml(t.partner || '—')}</span>
+          <span style="font-family: 'JetBrains Mono', monospace; color: var(--navy); font-weight: 600;">${fmtCOP(t.pendiente)}</span>
+        </div>
+      `).join('')}
+    </div>` : '';
+
+  return `
+    <div class="section" style="background: linear-gradient(135deg, rgba(184,153,73,0.06), transparent); border-left: 3px solid var(--gold);">
+      <div class="section-title">
+        📊 Odoo en vivo
+        <span class="count" style="color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500; text-transform: none; letter-spacing: 0;">${fmtHace(odoo.generated_at)}</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 4px;">
+        <div>
+          <div style="font-size: 17px; font-weight: 700; font-family: 'JetBrains Mono', monospace; color: var(--olive);">${fmtCOP(fact.total)}</div>
+          <div style="font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Facturación 30d · ${fact.count || 0} facturas</div>
+        </div>
+        <div>
+          <div style="font-size: 17px; font-weight: 700; font-family: 'JetBrains Mono', monospace; color: ${cartVenc > 0 ? 'var(--alert)' : 'var(--navy)'};">${fmtCOP(cart.total)}</div>
+          <div style="font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Cartera · ${cart.count || 0} facturas ${cartVenc ? `· <span style="color:var(--alert); font-weight:700;">${cartVenc} venc</span>` : ''}</div>
+        </div>
+        <div>
+          <div style="font-size: 17px; font-weight: 700; font-family: 'JetBrains Mono', monospace; color: var(--navy);">${proy.length || 0}</div>
+          <div style="font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Proyectos activos · ${tareas || 0} tareas</div>
+        </div>
+        <div>
+          <div style="font-size: 17px; font-weight: 700; font-family: 'JetBrains Mono', monospace; color: var(--navy);">${emp || 0}</div>
+          <div style="font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Empleados activos</div>
+        </div>
+      </div>
+      ${topHtml}
+    </div>`;
 }
 
 function renderTotals(vivos) {
@@ -497,6 +557,8 @@ function renderPulso(pulse) {
     </div>`;
 }
 
+let ODOO_DATA = null;  // cargado globalmente en main()
+
 function renderRole(rolId, rol, roleDef) {
   const emoji = rol.emoji || roleDef?.emoji || '▫️';
   const nombre = rol.nombre || roleDef?.nombre || rolId;
@@ -546,6 +608,8 @@ function renderRole(rolId, rol, roleDef) {
     <div class="role-body">
       ${desc ? `<div class="role-desc">${escapeHtml(desc)}</div>` : ''}
 
+      ${rolId === 'rol-1-condugas' && ODOO_DATA ? renderOdoo(ODOO_DATA) : ''}
+
       <div class="section">
         <div class="section-title">🆕 Novedades <span class="count">${novedades.length}</span></div>
         ${novedades.length ? novedades.map(renderNovedad).join('') : '<div class="empty">Sin novedades desde Limitless.</div>'}
@@ -582,10 +646,12 @@ function renderRole(rolId, rol, roleDef) {
 
 (async function main() {
   try {
-    const [vivos, rolesDef] = await Promise.all([
+    const [vivos, rolesDef, odoo] = await Promise.all([
       fetch(DATA_URL, { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error('roles-vivos.json no disponible'); return r.json(); }),
       fetch(ROLES_URL, { cache: 'no-cache' }).then(r => { if (!r.ok) return { roles: [] }; return r.json(); }),
+      fetch(ODOO_URL, { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null),
     ]);
+    ODOO_DATA = odoo;
 
     // Index defs por id
     const defsById = {};

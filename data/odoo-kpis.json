@@ -1,0 +1,74 @@
+{
+  "fecha": "2026-04-22",
+  "generated_at": "2026-04-22T15:29:52.225883Z",
+  "facturacion_30d": {
+    "total": 4463915411.12,
+    "count": 55,
+    "moneda": "COP"
+  },
+  "cartera_pendiente": {
+    "total": 1932524825.28,
+    "count": 63,
+    "vencidas": 27,
+    "moneda": "COP"
+  },
+  "proyectos_activos": [
+    {
+      "name": "Cantera de Profesionales",
+      "tareas": 33
+    },
+    {
+      "name": "Dirección Administrativa",
+      "tareas": 29
+    },
+    {
+      "name": "Estructuracion Being",
+      "tareas": 14
+    },
+    {
+      "name": "IMPLEMENTACION ODOO V19",
+      "tareas": 18
+    },
+    {
+      "name": "PLAN ESTRATEGICO DE SEGURIDAD VIAL",
+      "tareas": 49
+    },
+    {
+      "name": "Plan de trabajo coordinación administrativa",
+      "tareas": 9
+    },
+    {
+      "name": "Propuesta administración Construtem",
+      "tareas": 13
+    },
+    {
+      "name": "SISTEMA INTEGRADO DE GESTIÓN",
+      "tareas": 290
+    }
+  ],
+  "tareas_proyectos_abiertas": 409,
+  "payslips_30d": 0,
+  "empleados_activos": 637,
+  "top_cartera": [
+    {
+      "partner": "GAS NATURAL CUNDIBOYACENSE S.A. E.S.P.",
+      "pendiente": 734822948.6600001
+    },
+    {
+      "partner": "EMPRESAS PUBLICAS DE MEDELLIN E.S.P.",
+      "pendiente": 634078647.94
+    },
+    {
+      "partner": "METROGAS DE COLOMBIA S.A E.S.P",
+      "pendiente": 220263630.84000003
+    },
+    {
+      "partner": "CONSORCIO CONDUGAS NC ACUEDUCTOS 2021",
+      "pendiente": 159188822.0
+    },
+    {
+      "partner": "Jhon Christopher Angulo",
+      "pendiente": 59368482.98
+    }
+  ]
+}
