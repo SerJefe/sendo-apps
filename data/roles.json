@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-04-22",
+  "roles": [
+    {
+      "id": "rol-1-condugas",
+      "nombre": "Gerente Condugas",
+      "emoji": "🏭",
+      "color": "#091f2e",
+      "descripcion": "Gerencia operativa directa de Condugas. Triple transición (familiar + sectorial + operativa). 600 familias dependen.",
+      "ancla_3_decisiones": "sobrevivir_y_recuperar",
+      "controles_base": [
+        {
+          "id": "comite-sv",
+          "nombre": "Comité de Supervivencia — 16 KPIs",
+          "cadencia_dias": 7,
+          "critico": true,
+          "fuente_datos": "/data/kpis.json"
+        },
+        {
+          "id": "oyma-r1",
+          "nombre": "OYMA R1 · pérdida mensual",
+          "cadencia_dias": 30,
+          "critico": true,
+          "fuente_datos": "Andrea Bernal"
+        },
+        {
+          "id": "reclamaciones-epm",
+          "nombre": "Reclamaciones EPM (Río Negro, ANS, PHD, reajuste 22.53%)",
+          "cadencia_dias": 14,
+          "critico": true,
+          "fuente_datos": "/data/alertas.json"
+        },
+        {
+          "id": "contratos-activos",
+          "nombre": "Contratos Condugas activos",
+          "cadencia_dias": 30,
+          "critico": false,
+          "fuente_datos": "/data/contratos.json"
+        },
+        {
+          "id": "equipo-evaluacion",
+          "nombre": "Evaluación equipo (resistencia vs apropiación)",
+          "cadencia_dias": 14,
+          "critico": false,
+          "fuente_datos": "tracker + lifelogs"
+        }
+      ]
+    },
+    {
+      "id": "rol-2-familia",
+      "nombre": "Asesor y estructurador familia",
+      "emoji": "🏛️",
+      "color": "#8a6f2e",
+      "descripcion": "Asesor y estructurador dentro de su familia. NO es clan, NO es gerencia. Inversiones, deuda, renta, negociaciones grandes, oportunidades, relaciones, soporte económico desde las empresas.",
+      "ancla_3_decisiones": "recuperar_control",
+      "controles_base": [
+        {
+          "id": "analisis-inversiones",
+          "nombre": "Análisis de inversiones del grupo familiar",
+          "cadencia_dias": 30,
+          "critico": false,
+          "fuente_datos": "pendiente definir"
+        },
+        {
+          "id": "analisis-deuda",
+          "nombre": "Análisis de deuda y renta",
+          "cadencia_dias": 30,
+          "critico": true,
+          "fuente_datos": "pendiente definir"
+        },
+        {
+          "id": "negociaciones-grandes",
+          "nombre": "Planteamiento de negociaciones grandes · dónde moverse",
+          "cadencia_dias": 30,
+          "critico": false,
+          "fuente_datos": "calendario + lifelogs"
+        },
+        {
+          "id": "oportunidades",
+          "nombre": "Análisis de oportunidades",
+          "cadencia_dias": 30,
+          "critico": false,
+          "fuente_datos": "pendiente definir"
+        },
+        {
+          "id": "soporte-economico-empresas",
+          "nombre": "Soporte económico cruzado entre empresas del grupo",
+          "cadencia_dias": 30,
+          "critico": true,
+          "fuente_datos": "pendiente definir"
+        }
+      ],
+      "pendiente_confirmar": [
+        "rol exacto en cada empresa del grupo familiar",
+        "cadencia formal de reuniones de revisión"
+      ]
+    },
+    {
+      "id": "rol-3-junta-asesora",
+      "nombre": "Gerente en junta asesora",
+      "emoji": "🎯",
+      "color": "#0f2844",
+      "descripcion": "Gerencia temas ante la junta asesora (Isaza · Naranjo · Gutiérrez). Actas viven en Limitless. Wishlist: gestor de reuniones cruzadas con agenda.",
+      "ancla_3_decisiones": "recuperar_y_desarrollar",
+      "controles_base": [
+        {
+          "id": "junta-mensual",
+          "nombre": "Junta asesora mensual",
+          "cadencia_dias": 30,
+          "critico": true,
+          "fuente_datos": "Google Calendar"
+        },
+        {
+          "id": "temas-a-plantear",
+          "nombre": "Temas a plantear en próxima junta",
+          "cadencia_dias": 30,
+          "critico": true,
+          "fuente_datos": "pendiente definir dónde se acumulan"
+        },
+        {
+          "id": "actas-lifelog",
+          "nombre": "Actas desde Limitless (cruzar con agenda)",
+          "cadencia_dias": 30,
+          "critico": false,
+          "fuente_datos": "Limitless + Calendar (pendiente integrar)"
+        }
+      ],
+      "feature_pendiente": "gestor-reuniones-cruzadas-agenda"
+    },
+    {
+      "id": "rol-4-being-core",
+      "nombre": "Being CoRe (consultoría + desarrollo)",
+      "emoji": "🧠",
+      "color": "#b89949",
+      "descripcion": "Marca paraguas en exploración. Siendo Consulting + Siendo Resulting. Socios: Emanuel (Odoo+Being CoRe), Lina (admin).",
+      "ancla_3_decisiones": "desarrollar",
+      "controles_base": [
+        {
+          "id": "condugas-piloto",
+          "nombre": "Condugas como piloto del modelo empresa-cerebro",
+          "cadencia_dias": 7,
+          "critico": true,
+          "fuente_datos": "operación interna"
+        },
+        {
+          "id": "vendemos-activo",
+          "nombre": "Vendemos — diagnóstico y trabajo activo",
+          "cadencia_dias": 7,
+          "critico": true,
+          "fuente_datos": "calendario cliente"
+        },
+        {
+          "id": "prospectos",
+          "nombre": "Pipeline prospectos (Terret · Implantech · Dojo · Wellbeck)",
+          "cadencia_dias": 14,
+          "critico": false,
+          "fuente_datos": "pendiente definir (¿CRM?)"
+        },
+        {
+          "id": "estructura-admin",
+          "nombre": "Estructura administrativa (Lina + Emanuel armando)",
+          "cadencia_dias": 14,
+          "critico": false,
+          "fuente_datos": "pendiente definir"
+        }
+      ]
+    },
+    {
+      "id": "rol-5-financiero-personal",
+      "nombre": "Financiero personal + patrimonio",
+      "emoji": "💰",
+      "color": "#5a7a4a",
+      "descripcion": "Revisión mensual obligatoria. Inversiones, gastos, deuda personal, rendimientos, declaración. Fragmentado hoy — pendiente unificar Excel + Power BI + carpetas declaración.",
+      "ancla_3_decisiones": "sobrevivir_y_desarrollar",
+      "controles_base": [
+        {
+          "id": "revision-mensual",
+          "nombre": "Revisión mensual completa del patrimonio",
+          "cadencia_dias": 30,
+          "critico": true,
+          "fuente_datos": "Excel + Power BI (pendiente unificar)"
+        },
+        {
+          "id": "flujo-caja-personal",
+          "nombre": "Flujo de caja personal",
+          "cadencia_dias": 30,
+          "critico": true,
+          "fuente_datos": "banco + Excel"
+        },
+        {
+          "id": "rastreo-inversiones",
+          "nombre": "Rastreo de inversiones y rendimientos",
+          "cadencia_dias": 30,
+          "critico": true,
+          "fuente_datos": "Power BI"
+        },
+        {
+          "id": "declaracion",
+          "nombre": "Preparación declaración (anual)",
+          "cadencia_dias": 90,
+          "critico": false,
+          "fuente_datos": "carpetas declaración"
+        }
+      ],
+      "pendiente_confirmar": [
+        "unificar plantillas: Excel + Power BI + carpetas declaración"
+      ],
+      "nota_sebas": "He dejado de hacer este control. Impacto: olvido controles base, perdía panorama."
+    },
+    {
+      "id": "rol-6-salud",
+      "nombre": "Salud · fisio · deporte",
+      "emoji": "💪",
+      "color": "#123b58",
+      "descripcion": "Rutina semanal de entrenamiento + recuperación. WHOOP ya integrado.",
+      "ancla_3_decisiones": "sobrevivir",
+      "controles_base": [
+        {
+          "id": "fisio",
+          "nombre": "Fisio (2-3 sesiones/semana)",
+          "cadencia_dias": 3,
+          "critico": true,
+          "fuente_datos": "agenda"
+        },
+        {
+          "id": "gym-ejercicio",
+          "nombre": "Gym/ejercicio (2 sesiones/semana)",
+          "cadencia_dias": 4,
+          "critico": false,
+          "fuente_datos": "agenda + WHOOP"
+        },
+        {
+          "id": "futbol",
+          "nombre": "Fútbol (1/semana)",
+          "cadencia_dias": 7,
+          "critico": false,
+          "fuente_datos": "agenda"
+        },
+        {
+          "id": "padel",
+          "nombre": "Pádel (1/semana)",
+          "cadencia_dias": 7,
+          "critico": false,
+          "fuente_datos": "agenda"
+        },
+        {
+          "id": "whoop-recovery",
+          "nombre": "Recovery WHOOP",
+          "cadencia_dias": 1,
+          "critico": false,
+          "fuente_datos": "/data/kpis.json.whoop"
+        }
+      ]
+    },
+    {
+      "id": "rol-7-docencia",
+      "nombre": "Docencia independiente",
+      "emoji": "🎓",
+      "color": "#d4a052",
+      "descripcion": "Ya no EAFIT. Docencia como invitado independiente (Allegatus, Adolfo lo invita a clase, talleres esporádicos).",
+      "ancla_3_decisiones": "desarrollar",
+      "controles_base": [
+        {
+          "id": "invitaciones-docentes",
+          "nombre": "Invitaciones a dar clase (Adolfo y otros)",
+          "cadencia_dias": 30,
+          "critico": false,
+          "fuente_datos": "calendario"
+        },
+        {
+          "id": "allegatus-conversatorio",
+          "nombre": "Allegatus — conversatorio con ex y actuales docentes",
+          "cadencia_dias": 30,
+          "critico": false,
+          "fuente_datos": "pendiente definir"
+        }
+      ]
+    },
+    {
+      "id": "rol-8-ser-siendo-dev",
+      "nombre": "Ser Siendo — desarrollo metodológico",
+      "emoji": "🌱",
+      "color": "#003f5c",
+      "descripcion": "Marco conceptual/metodológico/filosófico en desarrollo. Proyectos derivados: dashboard sistemas vivos, empresa desarrollo potencial. Mentor: Adolfo León Delgado Muñoz.",
+      "ancla_3_decisiones": "desarrollar",
+      "controles_base": [
+        {
+          "id": "adolfo-quincenal",
+          "nombre": "Reunión quincenal con Adolfo para estructurar",
+          "cadencia_dias": 15,
+          "critico": true,
+          "fuente_datos": "calendario"
+        },
+        {
+          "id": "conceptos-vault",
+          "nombre": "Avances conceptuales (vault 02-ALETAGOGIA + concept-catcher)",
+          "cadencia_dias": 30,
+          "critico": false,
+          "fuente_datos": "concept-catcher 92 conceptos"
+        },
+        {
+          "id": "dashboard-sistemas-vivos",
+          "nombre": "Proyecto: dashboard sistemas vivos",
+          "cadencia_dias": 60,
+          "critico": false,
+          "fuente_datos": "pendiente definir"
+        },
+        {
+          "id": "empresa-desarrollo-potencial",
+          "nombre": "Proyecto: empresa del desarrollo del potencial",
+          "cadencia_dias": 60,
+          "critico": false,
+          "fuente_datos": "pendiente definir"
+        }
+      ]
+    }
+  ],
+  "semaforo_logica": {
+    "verde": "último control dentro de la cadencia (OK)",
+    "amarillo": "último control entre 1x y 2x cadencia (atrasado)",
+    "rojo": "último control supera 2x cadencia O nunca registrado (olvidado)",
+    "gris": "fuente_datos = 'pendiente definir' (sin forma de medir todavía)"
+  }
+}
