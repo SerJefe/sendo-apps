@@ -234,30 +234,144 @@ footer{ border-top: 1px solid var(--gold-line) !important; color: #6b7580 !impor
 ::-webkit-scrollbar-thumb{ background: rgba(184,153,73,.25); border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover{ background: rgba(184,153,73,.45); }
 
+/* ═══════════════════════════════════════════════════════
+   4-TAB REORG (2026-04-22 · skill dashboard-organizer)
+═══════════════════════════════════════════════════════ */
+nav button.primary{ font-size: 13px !important; padding: 6px 14px !important; }
+nav button.primary.on{ color: var(--navy) !important; background: rgba(184,153,73,.14) !important; border-color: var(--gold) !important; font-weight: 600; }
+nav button.secondary{ font-size: 11px !important; padding: 4px 10px !important; opacity: 0.72; }
+nav button.secondary:hover{ opacity: 1; }
+nav .divider{ width: 1px; height: 18px; background: var(--gold-line); margin: 0 6px; opacity: 0.5; }
+main > section{ display: none; }
+main > section.show{ display: block; }
+
+/* === PANORAMA HOME (nueva section) — canon panorama.html === */
+.panorama-host{ padding-bottom: 8px; }
+.panorama-host .ts{ color: var(--muted); font-size: 11px; font-family: 'JetBrains Mono', monospace; margin: -8px 0 10px; }
+.panorama-host .totals{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; background: var(--bg2); border: 1px solid rgba(201,168,74,0.3); border-radius: 10px; padding: 12px; margin: 0 0 14px; }
+.panorama-host .total-item{ text-align: center; padding: 2px 4px; }
+.panorama-host .total-val{ font-size: 24px; font-weight: 700; color: var(--navy); font-family: 'JetBrains Mono', monospace; line-height: 1; }
+.panorama-host .total-val.alert{ color: #a62e2e; }
+.panorama-host .total-val.warn{ color: #d4a052; }
+.panorama-host .total-val.ok{ color: #5a7a4a; }
+.panorama-host .total-lbl{ font-size: 9.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; margin-top: 3px; }
+
+.panorama-host .top-urgentes{ background: linear-gradient(135deg, rgba(166,46,46,0.04), transparent); border: 1px solid rgba(166,46,46,0.2); border-left: 3px solid #a62e2e; border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.panorama-host .top-urgentes h3{ font-size: 10.5px !important; color: #a62e2e !important; letter-spacing: 0.1em !important; margin: 0 0 8px !important; }
+.panorama-host .urg-item{ padding: 7px 0; border-bottom: 1px dashed rgba(166,46,46,0.15); font-size: 13px; color: var(--navy); line-height: 1.4; display: flex; gap: 10px; align-items: flex-start; }
+.panorama-host .urg-item:last-child{ border-bottom: none; }
+.panorama-host .urg-dot{ width: 8px; height: 8px; border-radius: 50%; background: #a62e2e; flex-shrink: 0; margin-top: 5px; box-shadow: 0 0 0 2px rgba(166,46,46,0.2); }
+.panorama-host .urg-meta{ font-size: 10.5px; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-top: 2px; }
+.panorama-host .urg-meta .venc{ color: #a62e2e; font-weight: 600; }
+
+.panorama-host .proxima-reu{ background: linear-gradient(135deg, rgba(184,153,73,0.08), var(--bg2)); border: 1px solid rgba(184,153,73,0.25); border-left: 3px solid #b89949; border-radius: 10px; padding: 11px 14px; margin-bottom: 14px; font-size: 13px; }
+.panorama-host .proxima-reu .lbl{ font-size: 10px; color: #b89949; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+.panorama-host .proxima-reu .title{ color: var(--navy); font-weight: 600; margin-top: 3px; }
+.panorama-host .proxima-reu .meta{ color: var(--muted); font-size: 11px; font-family: 'JetBrains Mono', monospace; margin-top: 3px; }
+
+.panorama-host .roles-grid{ display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 720px){ .panorama-host .roles-grid{ grid-template-columns: 1fr 1fr; } }
+.panorama-host .role{ background: #fdfbf2; border: 1px solid #e8e1c8; border-left: 5px solid var(--role-color, #b89949); border-radius: 12px; box-shadow: 0 2px 8px rgba(9,31,46,0.06); overflow: hidden; }
+.panorama-host .role-header{ padding: 14px 16px 12px; cursor: pointer; user-select: none; display: flex; align-items: center; gap: 12px; }
+.panorama-host .role-emoji{ font-size: 24px; flex-shrink: 0; }
+.panorama-host .role-ident{ flex: 1; min-width: 0; }
+.panorama-host .role-name{ font-size: 15px; font-weight: 600; color: var(--navy); line-height: 1.2; }
+.panorama-host .role-ancla{ font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: 'JetBrains Mono', monospace; margin-top: 3px; font-weight: 500; }
+.panorama-host .role-badges{ display: flex; gap: 5px; flex-wrap: wrap; align-items: center; flex-shrink: 0; }
+.panorama-host .pn-badge{ display: inline-flex; align-items: center; gap: 3px; padding: 3px 8px; font-size: 11px; font-weight: 600; font-family: 'JetBrains Mono', monospace; border-radius: 999px; background: var(--bg2); color: var(--muted); border: 1px solid rgba(201,168,74,0.3); }
+.panorama-host .pn-badge.abiertos{ background: rgba(184,153,73,0.08); color: #b89949; border-color: rgba(184,153,73,0.3); }
+.panorama-host .pn-badge.vencidos, .panorama-host .pn-badge.criticos{ background: rgba(166,46,46,0.08); color: #a62e2e; border-color: rgba(166,46,46,0.25); }
+.panorama-host .pn-badge.pulse-up{ background: rgba(90,122,74,0.1); color: #5a7a4a; border-color: rgba(90,122,74,0.3); }
+.panorama-host .pn-badge.pulse-down{ background: rgba(212,160,82,0.1); color: #d4a052; border-color: rgba(212,160,82,0.3); }
+.panorama-host .pn-badge.novedad{ background: rgba(9,31,46,0.04); color: var(--navy); border-color: rgba(9,31,46,0.15); }
+.panorama-host .role-body{ border-top: 1px solid rgba(201,168,74,0.3); display: none; }
+.panorama-host .role.open .role-body{ display: block; }
+.panorama-host .role-desc{ padding: 10px 16px; font-size: 12px; color: var(--muted); line-height: 1.5; background: var(--bg2); border-bottom: 1px solid rgba(201,168,74,0.3); font-style: italic; }
+.panorama-host .pn-section{ padding: 12px 16px; border-bottom: 1px solid rgba(201,168,74,0.3); }
+.panorama-host .pn-section:last-child{ border-bottom: none; }
+.panorama-host .pn-section-title{ font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
+.panorama-host .pn-section-title .count{ font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #b89949; font-weight: 600; }
+.panorama-host .pn-empty{ color: var(--muted); font-size: 12px; font-style: italic; padding: 4px 0; }
+.panorama-host .pn-tarea{ padding: 8px 0; border-bottom: 1px dashed rgba(201,168,74,0.3); display: flex; gap: 10px; align-items: flex-start; }
+.panorama-host .pn-tarea:last-child{ border-bottom: none; }
+.panorama-host .pn-tarea-dot{ width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; background: #c9a84a; }
+.panorama-host .pn-tarea.vencida .pn-tarea-dot{ background: #a62e2e; box-shadow: 0 0 0 2px rgba(166,46,46,0.2); }
+.panorama-host .pn-tarea.critica .pn-tarea-dot{ background: #d4a052; }
+.panorama-host .pn-tarea-body{ flex: 1; min-width: 0; font-size: 13px; line-height: 1.4; color: var(--navy); }
+.panorama-host .pn-tarea-meta{ font-size: 10.5px; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-top: 2px; display: flex; gap: 10px; flex-wrap: wrap; }
+.panorama-host .pn-tarea-meta .venc{ color: #a62e2e; font-weight: 600; }
+.panorama-host .pn-tarea-meta .crit{ color: #d4a052; font-weight: 600; }
+.panorama-host .ver-mas{ background: none; border: none; color: #b89949; font-size: 11px; padding: 6px 0 0; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500; }
+.panorama-host .pn-novedad{ padding: 8px 10px; background: var(--bg2); border-left: 3px solid #b89949; border-radius: 4px; margin-bottom: 6px; font-size: 12.5px; }
+.panorama-host .pn-novedad-titulo{ font-weight: 600; color: var(--navy); line-height: 1.3; }
+.panorama-host .pn-novedad-resumen{ color: var(--muted); font-size: 11.5px; margin-top: 3px; line-height: 1.4; }
+.panorama-host .pn-novedad-tag{ display: inline-block; font-size: 9px; padding: 1px 6px; background: rgba(9,31,46,0.06); color: var(--navy); border-radius: 3px; font-family: 'JetBrains Mono', monospace; margin-right: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
+.panorama-host .pn-proximo{ padding: 10px 12px; background: linear-gradient(135deg, var(--bg2), var(--bg)); border: 1px solid rgba(201,168,74,0.3); border-radius: 6px; font-size: 13px; }
+.panorama-host .pn-pulso{ display: flex; gap: 14px; align-items: center; font-size: 12px; color: var(--muted); }
+.panorama-host .drilldowns{ margin-top: 16px; padding: 12px 14px; background: rgba(9,31,46,0.03); border: 1px solid rgba(201,168,74,0.25); border-radius: 10px; }
+.panorama-host .drilldowns-title{ font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 8px; }
+.panorama-host .drilldowns-row{ display: flex; gap: 8px; flex-wrap: wrap; }
+.panorama-host .drill-btn{ background: #fdfbf2; border: 1px solid rgba(201,168,74,0.4); color: var(--navy); padding: 6px 12px; border-radius: 6px; font-size: 12px; cursor: pointer; font-family: inherit; }
+.panorama-host .drill-btn:hover{ background: rgba(184,153,73,0.08); border-color: #b89949; }
+
 </style>
 </head>
 <body>
 <nav>
 <span class="logo">SER.SIENDO</span>
-<button class="on" onclick="show('inicio')">Inicio</button>
-<button onclick="show('comite')">Comite SV</button>
-<button onclick="show('contratos')">Contratos</button>
-<button onclick="show('tareas')">Tareas Hoy</button>
-<button onclick="show('revisar')">Revisar <span id="pendientes-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
-<button onclick="show('mistareas')">Mis Tareas</button>
-<button onclick="show('radar')">Radar <span id="radar-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
-<button onclick="show('proyectos')">Proyectos</button>
-<button onclick="show('equipo')">Equipo</button>
-<button onclick="show('briefing')">Briefing</button>
-<button onclick="show('coherencia')">Coherencia <span id="coherencia-badge" style="background:var(--orange);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
-<button onclick="show('calendario')">Calendario <span id="calendario-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
-<button onclick="window.open('mapa-neuronal.html','_blank')">Mapa</button>
-<button onclick="window.location.href='priorizador.html'" style="background:rgba(168,85,247,.15);color:#5a4d88;border:1px solid rgba(168,85,247,.3)">Priorizar</button>
+<button class="primary on" data-tab="panorama" onclick="showTab('panorama',this)">Panorama</button>
+<button class="primary" data-tab="inbox" onclick="showTab('inbox',this)">Inbox <span id="pendientes-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
+<button class="primary" data-tab="agenda" onclick="showTab('agenda',this)">Agenda <span id="calendario-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
+<button class="primary" data-tab="alertas" onclick="showTab('alertas',this)">Alertas <span id="radar-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span> <span id="coherencia-badge" style="background:var(--orange);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
+<span class="divider"></span>
+<button class="secondary" onclick="window.location.href='priorizador.html'">Priorizar</button>
+<button class="secondary" onclick="window.open('mapa-neuronal.html','_blank')">Mapa</button>
 </nav>
 <main>
-<section id="inicio" class="show">
-<h2>Centro de Control</h2>
-<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px" id="fdate"></p>
+<!-- ═══════════════════════════════════════════════════════
+     TAB: PANORAMA (primero visible · urgencia-first)
+     Integra panorama.html (8 roles · Odoo live) + Top urgentes
+     Drilldowns a Comité SV · Contratos · Proyectos · Equipo · KPIs
+═══════════════════════════════════════════════════════ -->
+<section id="panorama" class="show panorama-host">
+<h2>Panorama</h2>
+<p style="font-size:12px;color:var(--muted);margin:-10px 0 8px" id="fdate">Si no lo veo, no lo hago.</p>
+<div class="ts" id="pn-ts">cargando…</div>
+
+<div class="totals" id="pn-totals"></div>
+
+<div class="top-urgentes" id="pn-urgentes">
+  <h3>🔴 Top 3 urgentes de hoy</h3>
+  <div id="pn-urg-list"><div class="pn-empty">cargando…</div></div>
+</div>
+
+<div class="proxima-reu" id="pn-proxima" style="display:none">
+  <div class="lbl">📅 Próxima reunión</div>
+  <div class="title" id="pn-prox-title"></div>
+  <div class="meta" id="pn-prox-meta"></div>
+</div>
+
+<div id="pn-roles-grid" class="roles-grid">
+  <div style="grid-column: 1 / -1; color: var(--muted); text-align: center; padding: 40px 20px;">cargando roles…</div>
+</div>
+
+<div class="drilldowns">
+  <div class="drilldowns-title">Drilldowns · contexto</div>
+  <div class="drilldowns-row">
+    <button class="drill-btn" onclick="showDrill('comite')">Comité SV · 16 KPIs</button>
+    <button class="drill-btn" onclick="showDrill('contratos')">Contratos Condugas</button>
+    <button class="drill-btn" onclick="showDrill('proyectos')">Centro de Operaciones</button>
+    <button class="drill-btn" onclick="showDrill('equipo')">Equipo</button>
+    <button class="drill-btn" onclick="showDrill('kpis-salud')">KPIs · WHOOP</button>
+    <a class="drill-btn" href="reportes/analisis-oyma-q1-2026.html" target="_blank" style="text-decoration:none">Informe OYMA Q1</a>
+  </div>
+</div>
+</section>
+
+<!-- ═══ drilldown: Centro de Control · KPIs · WHOOP (antes tab "Inicio") ═══ -->
+<section id="kpis-salud">
+<h2>Centro de Control · KPIs</h2>
+<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px" id="fdate2"></p>
 <div class="grid g4">
 <div class="card crisis" id="card-caja"><div class="label">Caja</div><div class="val" id="k-caja">--</div><div class="sub">objetivo: >30 dias</div></div>
 <div class="card crisis" id="card-oyma"><div class="label">OYMA R1</div><div class="val" style="color:var(--red)" id="k-oyma">--</div><div class="sub" id="k-oyma-sub">--</div></div>
@@ -271,11 +385,7 @@ footer{ border-top: 1px solid var(--gold-line) !important; color: #6b7580 !impor
 <div class="card"><div class="label">Strain</div><div class="val" id="w-str">--</div></div>
 </div>
 <div style="margin-top:8px;font-size:11px;color:var(--muted)" id="kpi-freshness"></div>
-<h3>Acceso rapido</h3>
-<div class="link-row">
-<a class="link-btn" href="mapa-neuronal.html">Mapa Neuronal (78 nodos)</a>
-<a class="link-btn" href="reportes/analisis-oyma-q1-2026.html">Informe OYMA Q1</a>
-</div>
+<p style="margin-top:16px"><button class="drill-btn" onclick="showTab('panorama',document.querySelector('[data-tab=panorama]'))">← Volver al Panorama</button></p>
 </section>
 
 <section id="comite">
@@ -380,40 +490,18 @@ footer{ border-top: 1px solid var(--gold-line) !important; color: #6b7580 !impor
 <div id="equipo-drilldown" style="margin-top:16px"></div>
 </section>
 
-<!-- ============================================ -->
-<!-- BRIEFING REESCRITO: HOY + SEMANA + HISTORIAL -->
-<!-- ============================================ -->
-<section id="briefing">
-<h2>Briefing</h2>
-<p style="font-size:12px;color:var(--muted);margin:-10px 0 16px" id="bf-date"></p>
-
-<div class="bf-tabs">
-  <button class="bf-tab active" onclick="showBfTab('bf-hoy',this)">Hoy</button>
-  <button class="bf-tab" onclick="showBfTab('bf-semana',this)">Semana</button>
-  <button class="bf-tab" onclick="showBfTab('bf-historial',this)">Historial</button>
+<!-- briefing section removido 2026-04-22 · reemplazado por panorama + dia-v2 -->
+<!-- stubs ocultos para que loadBriefing() del JS viejo no rompa -->
+<div style="display:none">
+  <div id="bf-date"></div>
+  <div id="bf-hoy-content"></div>
+  <div id="bf-semana-content"></div>
+  <div id="bf-historial-content"></div>
+  <div id="tareas-hoy-briefing"></div>
 </div>
 
-<!-- Panel HOY -->
-<div id="bf-hoy" class="bf-panel active">
-  <div id="bf-hoy-content"><div style="text-align:center;padding:30px;color:var(--muted)">Cargando briefing...</div></div>
-</div>
+<!-- section "tareas" removida 2026-04-22 · integrado en panorama Top 3 urgentes -->
 
-<!-- Panel SEMANA -->
-<div id="bf-semana" class="bf-panel">
-  <div id="bf-semana-content"><div style="text-align:center;padding:30px;color:var(--muted)">Cargando resumen semanal...</div></div>
-</div>
-
-<!-- Panel HISTORIAL -->
-<div id="bf-historial" class="bf-panel">
-  <div id="bf-historial-content"><div style="text-align:center;padding:30px;color:var(--muted)">Cargando historial...</div></div>
-</div>
-</section>
-
-<!-- TAREAS HOY (dentro de main, oculto por defecto) -->
-<section id="tareas">
-<h2>Tareas Criticas — Hoy</h2>
-<div id="tareas-hoy-briefing"><div style="text-align:center;padding:30px;color:var(--muted)">Cargando desde briefing...</div></div>
-</section>
 
 <!-- COHERENCIA: deteccion de duplicados y problemas del tracker -->
 <section id="coherencia">
@@ -466,7 +554,40 @@ footer{ border-top: 1px solid var(--gold-line) !important; color: #6b7580 !impor
 // ==========================================
 // NAVIGATION
 // ==========================================
-function show(id){document.querySelectorAll('main > section').forEach(function(s){s.classList.remove('show')});document.getElementById(id).classList.add('show');document.querySelectorAll('nav button').forEach(function(b){b.classList.remove('on')});if(event&&event.target)event.target.classList.add('on')}
+// 4-TAB REORG (2026-04-22 · skill dashboard-organizer)
+// Cada "tab" muestra un conjunto de sections viejas.
+var TAB_SECTIONS = {
+  panorama: ['panorama'],
+  inbox:    ['revisar', 'mistareas'],
+  agenda:   ['calendario'],
+  alertas:  ['radar', 'coherencia']
+};
+function showTab(tab, btn){
+  document.querySelectorAll('main > section').forEach(function(s){ s.classList.remove('show'); });
+  (TAB_SECTIONS[tab] || [tab]).forEach(function(id){
+    var el = document.getElementById(id); if (el) el.classList.add('show');
+  });
+  document.querySelectorAll('nav button.primary').forEach(function(b){ b.classList.remove('on'); });
+  if (btn) btn.classList.add('on');
+  else {
+    var found = document.querySelector('nav button[data-tab="'+tab+'"]');
+    if (found) found.classList.add('on');
+  }
+  try { window.scrollTo({top:0,behavior:'smooth'}); } catch(e){ window.scrollTo(0,0); }
+}
+// Drilldowns desde Panorama → muestra UNA section vieja (Comité, Contratos, Proyectos, Equipo, KPIs)
+function showDrill(id){
+  document.querySelectorAll('main > section').forEach(function(s){ s.classList.remove('show'); });
+  var el = document.getElementById(id); if (el) el.classList.add('show');
+  try { window.scrollTo({top:0,behavior:'smooth'}); } catch(e){ window.scrollTo(0,0); }
+}
+// Shim: código viejo que llame show('x') sigue funcionando (mapea a tab o drill)
+function show(id){
+  var tabOf = null;
+  Object.keys(TAB_SECTIONS).forEach(function(t){ if (TAB_SECTIONS[t].indexOf(id) !== -1) tabOf = t; });
+  if (tabOf) showTab(tabOf);
+  else showDrill(id);
+}
 document.getElementById('fdate').textContent='Hoy: '+new Date().toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 
 // ==========================================
@@ -2136,6 +2257,202 @@ function showIcsHelp() {
 loadCoherencia();
 loadCalendario();
 
+// ==========================================
+// PANORAMA HOME — 8 roles · Odoo · Top urgentes
+// (scoped IIFE · IDs con prefijo pn- · lee roles-vivos.json · roles.json · odoo-kpis.json · briefing-hoy.json)
+// ==========================================
+(function panoramaHome(){
+  var DATA_URL  = './data/roles-vivos.json';
+  var ROLES_URL = './data/roles.json';
+  var ODOO_URL  = './data/odoo-kpis.json';
+  var BRIEF_URL = './data/briefing-hoy.json';
+  var ODOO_DATA = null;
+
+  function esc(s){ return (s||'').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function fmtDate(iso){ if(!iso) return '—'; try{ return new Date(iso).toLocaleDateString('es-CO',{day:'2-digit',month:'short'}); }catch(e){ return iso.slice(0,10); } }
+  function fmtHace(iso){ if(!iso) return ''; var d=new Date(iso); var m=Math.floor((Date.now()-d.getTime())/60000); if(m<60) return 'hace '+m+' min'; var h=Math.floor(m/60); if(h<24) return 'hace '+h+' h'; return 'hace '+Math.floor(h/24)+' d'; }
+  function fmtCOP(n){ if(n==null||isNaN(n)) return '—'; if(Math.abs(n)>=1e9) return '$'+(n/1e9).toFixed(2)+'MM'; if(Math.abs(n)>=1e6) return '$'+(n/1e6).toFixed(1)+'M'; if(Math.abs(n)>=1e3) return '$'+(n/1e3).toFixed(0)+'K'; return '$'+Math.round(n); }
+
+  function renderOdoo(odoo){
+    if(!odoo) return '';
+    var fact = odoo.facturacion_30d || {};
+    var cart = odoo.cartera_pendiente || {};
+    var proy = Array.isArray(odoo.proyectos_activos) ? odoo.proyectos_activos : [];
+    var tareas = odoo.tareas_proyectos_abiertas;
+    var emp = odoo.empleados_activos;
+    var top = Array.isArray(odoo.top_cartera) ? odoo.top_cartera : [];
+    var cartVenc = cart.vencidas || 0;
+    var topHtml = top.length ? (
+      '<div style="margin-top:10px;">' +
+      '<div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:4px;">Top cartera</div>' +
+      top.map(function(t){ return '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0;border-bottom:1px dashed rgba(201,168,74,0.3);"><span style="color:var(--navy);">'+esc(t.partner||'—')+'</span><span style="font-family:\'JetBrains Mono\',monospace;color:var(--navy);font-weight:600;">'+fmtCOP(t.pendiente)+'</span></div>'; }).join('') +
+      '</div>'
+    ) : '';
+    return (
+      '<div class="pn-section" style="background:linear-gradient(135deg,rgba(184,153,73,0.06),transparent);border-left:3px solid #b89949;">' +
+      '<div class="pn-section-title">📊 Odoo en vivo <span class="count" style="color:var(--muted);font-size:9.5px;font-weight:500;text-transform:none;letter-spacing:0;">'+fmtHace(odoo.generated_at)+'</span></div>' +
+      '<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:4px;">' +
+        '<div><div style="font-size:17px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:#5a7a4a;">'+fmtCOP(fact.total)+'</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Facturación 30d · '+(fact.count||0)+' fact</div></div>' +
+        '<div><div style="font-size:17px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:'+(cartVenc>0?'#a62e2e':'var(--navy)')+';">'+fmtCOP(cart.total)+'</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Cartera · '+(cart.count||0)+' fact'+(cartVenc?' · <span style="color:#a62e2e;font-weight:700;">'+cartVenc+' venc</span>':'')+'</div></div>' +
+        '<div><div style="font-size:17px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:var(--navy);">'+(proy.length||0)+'</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Proy activos · '+(tareas||0)+' tareas</div></div>' +
+        '<div><div style="font-size:17px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:var(--navy);">'+(emp||0)+'</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Empleados activos</div></div>' +
+      '</div>' + topHtml + '</div>'
+    );
+  }
+
+  function renderTotals(vivos){
+    var roles = vivos.roles || {};
+    var total=0, vencidas=0, criticas=0, novedades=0;
+    Object.keys(roles).forEach(function(k){ var r=roles[k]; total+=r.abiertos_total||0; vencidas+=r.abiertos_vencidos||0; criticas+=r.abiertos_criticos||0; novedades+=(r.novedades||[]).length; });
+    document.getElementById('pn-totals').innerHTML =
+      '<div class="total-item"><div class="total-val">'+total+'</div><div class="total-lbl">abiertos</div></div>' +
+      '<div class="total-item"><div class="total-val alert">'+vencidas+'</div><div class="total-lbl">vencidas</div></div>' +
+      '<div class="total-item"><div class="total-val warn">'+criticas+'</div><div class="total-lbl">críticas</div></div>' +
+      '<div class="total-item"><div class="total-val ok">'+novedades+'</div><div class="total-lbl">novedades</div></div>';
+  }
+
+  function renderTopUrgentes(vivos){
+    var all = [];
+    var roles = vivos.roles || {};
+    Object.keys(roles).forEach(function(k){
+      var r = roles[k];
+      (r.abiertos || []).forEach(function(t){
+        var score = 0;
+        if (t.vencida) score += 1000 + (t.dias_vencida || 0) * 10;
+        if (t.prioridad && /crit/i.test(t.prioridad)) score += 500;
+        if (score > 0) all.push({ t: t, rol: r.nombre || k, emoji: r.emoji || '▫️', score: score });
+      });
+    });
+    all.sort(function(a,b){ return b.score - a.score; });
+    var top = all.slice(0, 3);
+    var box = document.getElementById('pn-urg-list');
+    if (!top.length) { box.innerHTML = '<div class="pn-empty">Sin vencidas ni críticas. 🟢</div>'; return; }
+    box.innerHTML = top.map(function(x){
+      var meta = [];
+      if (x.t.vencida) meta.push('<span class="venc">vencida '+(x.t.dias_vencida?x.t.dias_vencida+'d':'')+'</span>');
+      if (x.t.prioridad && /crit/i.test(x.t.prioridad)) meta.push('crítica');
+      meta.push(x.emoji+' '+esc(x.rol));
+      if (x.t.responsable) meta.push('→ '+esc(x.t.responsable));
+      return '<div class="urg-item"><span class="urg-dot"></span><div><div>'+esc(x.t.texto||'(sin texto)')+'</div><div class="urg-meta">'+meta.join(' · ')+'</div></div></div>';
+    }).join('');
+  }
+
+  function renderProxima(brief){
+    var box = document.getElementById('pn-proxima');
+    if (!brief) { box.style.display='none'; return; }
+    var prox = brief.proxima_reunion || brief.next_meeting || null;
+    if (!prox && Array.isArray(brief.reuniones_hoy) && brief.reuniones_hoy.length) prox = brief.reuniones_hoy[0];
+    if (!prox) { box.style.display='none'; return; }
+    var title = prox.summary || prox.titulo || prox.title || prox.name || '(reunión)';
+    var when = prox.cuando || prox.when || prox.dtstart || prox.fecha || '';
+    document.getElementById('pn-prox-title').textContent = title;
+    document.getElementById('pn-prox-meta').textContent = when ? (fmtDate(when) + ' · ' + (prox.participantes || prox.attendees || '').toString().slice(0,80)) : '';
+    box.style.display = 'block';
+  }
+
+  function renderTarea(t){
+    var cls = t.vencida ? 'vencida' : (t.prioridad && /crit/i.test(t.prioridad) ? 'critica' : '');
+    var meta = [];
+    if (t.vencida) meta.push('<span class="venc">vencida '+(t.dias_vencida?t.dias_vencida+'d':'')+'</span>');
+    if (t.prioridad && /crit/i.test(t.prioridad)) meta.push('<span class="crit">crítica</span>');
+    if (t.deadline && !t.vencida) meta.push('📅 '+fmtDate(t.deadline));
+    if (t.responsable) meta.push('→ '+esc(t.responsable));
+    return '<div class="pn-tarea '+cls+'"><span class="pn-tarea-dot"></span><div class="pn-tarea-body">'+esc(t.texto||'(sin texto)')+(meta.length?'<div class="pn-tarea-meta">'+meta.join(' · ')+'</div>':'')+'</div></div>';
+  }
+
+  function renderNovedad(n){
+    return '<div class="pn-novedad"><div><span class="pn-novedad-tag">'+esc(n.tipo||'—')+'</span><span style="font-size:10px;color:var(--muted);font-family:\'JetBrains Mono\',monospace;">'+(n.fecha?fmtDate(n.fecha):'')+'</span></div><div class="pn-novedad-titulo">'+esc(n.tema||'')+'</div>'+(n.resumen?'<div class="pn-novedad-resumen">'+esc(n.resumen)+'</div>':'')+'</div>';
+  }
+
+  function renderProximoRol(p){
+    if (!p) return '<div class="pn-empty">Sin próximo evento agendado.</div>';
+    return '<div class="pn-proximo"><div style="color:var(--navy);font-weight:600;">'+esc(p.summary)+'</div><div style="color:var(--muted);font-size:11px;font-family:\'JetBrains Mono\',monospace;margin-top:4px;">'+fmtDate(p.dtstart)+' · en '+p.dias_restantes+' d</div></div>';
+  }
+
+  function renderPulso(pulse){
+    if (!pulse) return '<div class="pn-empty">Sin actividad registrada.</div>';
+    var delta = pulse.delta || 0;
+    var arrow = delta>0?'↑':delta<0?'↓':'→';
+    var col = delta>0?'#5a7a4a':delta<0?'#d4a052':'var(--muted)';
+    return '<div class="pn-pulso"><div style="display:inline-flex;align-items:baseline;gap:4px;font-family:\'JetBrains Mono\',monospace;font-size:14px;font-weight:700;color:var(--navy);">'+(pulse.cerradas_esta_semana||0)+' <span style="color:var(--muted);font-size:11px;">esta sem</span><span style="font-size:13px;margin-left:8px;color:'+col+';">'+arrow+' '+Math.abs(delta)+'</span></div><span style="font-size:11px;">vs '+(pulse.cerradas_semana_anterior||0)+' anterior</span></div>';
+  }
+
+  function renderRole(rolId, rol, roleDef){
+    var emoji = rol.emoji || (roleDef&&roleDef.emoji) || '▫️';
+    var nombre = rol.nombre || (roleDef&&roleDef.nombre) || rolId;
+    var color = rol.color || (roleDef&&roleDef.color) || '#b89949';
+    var desc = roleDef && roleDef.descripcion || '';
+    var ancla = rol.ancla_3_decisiones || '';
+    var abiertos = rol.abiertos || [];
+    var vencidos = rol.abiertos_vencidos || 0;
+    var criticos = rol.abiertos_criticos || 0;
+    var total = rol.abiertos_total || 0;
+    var novedades = rol.novedades || [];
+    var pulse = rol.pulso;
+    var delta = pulse && pulse.delta || 0;
+    var badges = [];
+    if (total>0) badges.push('<span class="pn-badge abiertos">'+total+' abiertos</span>');
+    if (vencidos>0) badges.push('<span class="pn-badge vencidos">'+vencidos+' venc</span>');
+    if (criticos>0) badges.push('<span class="pn-badge criticos">'+criticos+' crít</span>');
+    if (novedades.length>0) badges.push('<span class="pn-badge novedad">'+novedades.length+' nuevas</span>');
+    if (delta>0) badges.push('<span class="pn-badge pulse-up">↑'+delta+'</span>');
+    else if (delta<0) badges.push('<span class="pn-badge pulse-down">↓'+Math.abs(delta)+'</span>');
+    var shouldOpen = vencidos>0 || criticos>0 || novedades.length>0;
+    var abiertosTop = abiertos.slice(0,5);
+    var abiertosRest = abiertos.slice(5);
+    var verMas = abiertosRest.length
+      ? '<button class="ver-mas" onclick="var h=this.nextElementSibling;h.style.display=h.style.display===\'block\'?\'none\':\'block\';this.textContent=h.style.display===\'block\'?\'Ocultar\':\'Ver '+abiertosRest.length+' más\';">Ver '+abiertosRest.length+' más</button><div style="display:none">'+abiertosRest.map(renderTarea).join('')+'</div>'
+      : '';
+    return '<article class="role '+(shouldOpen?'open':'')+'" style="--role-color:'+color+'">' +
+      '<div class="role-header" onclick="this.closest(\'.role\').classList.toggle(\'open\')">' +
+        '<div class="role-emoji">'+emoji+'</div>' +
+        '<div class="role-ident"><div class="role-name">'+esc(nombre)+'</div>'+(ancla?'<div class="role-ancla">'+esc(ancla)+'</div>':'')+'</div>' +
+        '<div class="role-badges">'+badges.join('')+'</div>' +
+      '</div>' +
+      '<div class="role-body">' +
+        (desc?'<div class="role-desc">'+esc(desc)+'</div>':'') +
+        (rolId==='rol-1-condugas' && ODOO_DATA ? renderOdoo(ODOO_DATA) : '') +
+        '<div class="pn-section"><div class="pn-section-title">🆕 Novedades <span class="count">'+novedades.length+'</span></div>'+(novedades.length?novedades.map(renderNovedad).join(''):'<div class="pn-empty">Sin novedades desde Limitless.</div>')+'</div>' +
+        '<div class="pn-section"><div class="pn-section-title">📋 Abiertos <span class="count">'+total+'</span></div>'+(abiertosTop.length?abiertosTop.map(renderTarea).join(''):'<div class="pn-empty">Nada abierto.</div>')+verMas+'</div>' +
+        '<div class="pn-section"><div class="pn-section-title">📅 Próximo</div>'+renderProximoRol(rol.proximo)+'</div>' +
+        '<div class="pn-section"><div class="pn-section-title">〰️ Pulso semanal</div>'+renderPulso(pulse)+'</div>' +
+      '</div>' +
+    '</article>';
+  }
+
+  function run(){
+    Promise.all([
+      fetch(DATA_URL+'?t='+Date.now(),{cache:'no-cache'}).then(function(r){ if(!r.ok) throw new Error('roles-vivos.json'); return r.json(); }),
+      fetch(ROLES_URL+'?t='+Date.now(),{cache:'no-cache'}).then(function(r){ return r.ok?r.json():{roles:[]}; }).catch(function(){ return {roles:[]}; }),
+      fetch(ODOO_URL+'?t='+Date.now(),{cache:'no-cache'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; }),
+      fetch(BRIEF_URL+'?t='+Date.now(),{cache:'no-cache'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; })
+    ]).then(function(arr){
+      var vivos = arr[0], rolesDef = arr[1], odoo = arr[2], brief = arr[3];
+      ODOO_DATA = odoo;
+      var defsById = {};
+      (rolesDef.roles || []).forEach(function(r){ defsById[r.id] = r; });
+      document.getElementById('pn-ts').textContent = 'Última actualización: '+fmtDate(vivos.generated_at)+' · '+fmtHace(vivos.generated_at)+' · clasificador: '+(vivos.clasificador||'heurístico');
+      renderTotals(vivos);
+      renderTopUrgentes(vivos);
+      renderProxima(brief);
+      var items = Object.keys(vivos.roles||{}).map(function(id){ return [id, vivos.roles[id]]; });
+      items.sort(function(a,b){
+        var A=a[1], B=b[1];
+        var uA = (A.abiertos_vencidos||0)*100 + (A.abiertos_criticos||0)*10 + (A.abiertos_total||0);
+        var uB = (B.abiertos_vencidos||0)*100 + (B.abiertos_criticos||0)*10 + (B.abiertos_total||0);
+        return uB - uA;
+      });
+      var html = items.map(function(pair){ return renderRole(pair[0], pair[1], defsById[pair[0]]); }).join('');
+      document.getElementById('pn-roles-grid').innerHTML = html || '<div style="color:var(--muted);text-align:center;padding:30px;">Sin datos.</div>';
+    }).catch(function(e){
+      document.getElementById('pn-roles-grid').innerHTML = '<div style="background:rgba(166,46,46,0.1);border:1px solid #a62e2e;color:#a62e2e;padding:12px;border-radius:8px;font-size:13px;">Error: '+esc(e.message)+'</div>';
+      console.error(e);
+    });
+  }
+
+  run();
+  window.__panoramaReload = run;
+})();
 
 // ==========================================
 // AUTO-REFRESH cada 5 minutos
@@ -2147,9 +2464,9 @@ setInterval(function(){
   try { loadRadar(); } catch(e){}
   try { loadProjDetail(); } catch(e){}
   try { loadKpis(); } catch(e){}
-  try { loadBriefing(); } catch(e){}
   try { loadCoherencia(); } catch(e){}
   try { loadCalendario(); } catch(e){}
+  try { if (window.__panoramaReload) window.__panoramaReload(); } catch(e){}
 }, REFRESH_INTERVAL_MS);
 
 document.addEventListener('visibilitychange', function(){
@@ -2157,7 +2474,7 @@ document.addEventListener('visibilitychange', function(){
     try { loadPendientes(); } catch(e){}
     try { loadMisTareas(); } catch(e){}
     try { loadKpis(); } catch(e){}
-    try { loadBriefing(); } catch(e){}
+    try { if (window.__panoramaReload) window.__panoramaReload(); } catch(e){}
   }
 });
 
