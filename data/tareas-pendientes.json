@@ -2988,7 +2988,335 @@
         "Gobernación"
       ],
       "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-22-r1-001",
+      "tarea": "Coordinar entrega/cambio de producto con Paulito",
+      "responsable": "Unknown",
+      "prioridad": "baja",
+      "contexto": "compras domésticas",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Paulito"
+      ],
+      "segmento_idx": 1,
+      "segmento_titulo": "Conversación sobre compras y otros temas",
+      "segmento_inicio": "2026-04-22T01:08:15Z",
+      "segmento_fin": "2026-04-22T01:16:57Z",
+      "segmento_personas": [
+        "Paulito",
+        "Paulina"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-22-r5-002",
+      "tarea": "Revisar y corregir funcionalidad de nombres en aplicación (está retornando rojo)",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "bug en UI de aplicación",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 5,
+      "segmento_titulo": "Conversación sobre una aplicación",
+      "segmento_inicio": "2026-04-22T01:27:12Z",
+      "segmento_fin": "2026-04-22T01:28:26Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-22-r6-003",
+      "tarea": "Conseguir niñera para cuidado martes y jueves",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "cuidado infantil",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 6,
+      "segmento_titulo": "Anécdotas personales y reflexiones",
+      "segmento_inicio": "2026-04-22T01:30:20Z",
+      "segmento_fin": "2026-04-22T02:37:18Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-22-r10-004",
+      "tarea": "Diagnosticar si hay cortocircuito por componentes juntos",
+      "responsable": "Unknown",
+      "prioridad": "media",
+      "contexto": "problema técnico/eléctrico",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 10,
+      "segmento_titulo": "Discusión inicial sobre un problema técnico de carga y un posible cortocircuito",
+      "segmento_inicio": "2026-04-22T02:55:20Z",
+      "segmento_fin": "2026-04-22T02:56:03Z",
+      "segmento_personas": [],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-22-r18-005",
+      "tarea": "Extraer información estructurada con Emmanuel (datos de jueves) en formato manual si es necesario",
+      "responsable": "Sebastian / Emmanuel",
+      "prioridad": "alta",
+      "contexto": "Información operativa de Condugas",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": "2026-04-22",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Emmanuel"
+      ],
+      "segmento_idx": 18,
+      "segmento_titulo": "Conversación sobre información y planes futuros",
+      "segmento_inicio": "2026-04-22T17:08:40Z",
+      "segmento_fin": "2026-04-22T17:10:30Z",
+      "segmento_personas": [
+        "Emmanuel",
+        "Paulita"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-22-r18-006",
+      "tarea": "Llamar a equipos para conteo/recopilación de datos no estructurados",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Completar información faltante",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": "2026-04-23",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 18,
+      "segmento_titulo": "Conversación sobre información y planes futuros",
+      "segmento_inicio": "2026-04-22T17:08:40Z",
+      "segmento_fin": "2026-04-22T17:10:30Z",
+      "segmento_personas": [
+        "Emmanuel",
+        "Paulita"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-22-r22-007",
+      "tarea": "Identificar 3 hechos probados de aviso anticipado antes del deterioro terminal",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Soporte narrativo de credibilidad",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": "2026-04-23",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 22,
+      "segmento_titulo": "Conversación sobre la situación de Condugas y otros temas",
+      "segmento_inicio": "2026-04-22T20:55:19Z",
+      "segmento_fin": "2026-04-22T21:19:36Z",
+      "segmento_personas": [
+        "Juan Alberto Matas Salazar",
+        "interventora"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-22-r22-008",
+      "tarea": "Definir frase de 12 palabras que resuma caso sin sonar llorón",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Voz ejecutiva grave y precisa",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": "2026-04-23",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 22,
+      "segmento_titulo": "Conversación sobre la situación de Condugas y otros temas",
+      "segmento_inicio": "2026-04-22T20:55:19Z",
+      "segmento_fin": "2026-04-22T21:19:36Z",
+      "segmento_personas": [
+        "Juan Alberto Matas Salazar",
+        "interventora"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-22-r23-009",
+      "tarea": "Realizar chequeos médicos periódicos para monitoreo de bacteria y prevención de recaídas",
+      "responsable": "Tercero (familia)",
+      "prioridad": "media",
+      "contexto": "Salud personal",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 23,
+      "segmento_titulo": "Conversación personal sobre un problema de salud y recuperación",
+      "segmento_inicio": "2026-04-22T21:19:37Z",
+      "segmento_fin": "2026-04-22T21:26:06Z",
+      "segmento_personas": [
+        "doctor",
+        "Andrea Bernal",
+        "mamá",
+        "papá de Pablo"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-22-r26-010",
+      "tarea": "Hablar con Manuel sobre apoyo en implementación de nómina y contabilidad",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Implementación paralela Condugas",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Manuel"
+      ],
+      "segmento_idx": 26,
+      "segmento_titulo": "Discusión sobre la colaboración y compensación en un proyecto",
+      "segmento_inicio": "2026-04-22T21:29:52Z",
+      "segmento_fin": "2026-04-22T21:36:06Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Lucas",
+        "Manuel"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-22-r26-011",
+      "tarea": "Revisar estrategia de implementación en producción con datos parametrizados",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Nómina y contabilidad Condugas",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": "2026-04-25",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Lucas",
+        "Manuel"
+      ],
+      "segmento_idx": 26,
+      "segmento_titulo": "Discusión sobre la colaboración y compensación en un proyecto",
+      "segmento_inicio": "2026-04-22T21:29:52Z",
+      "segmento_fin": "2026-04-22T21:36:06Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Lucas",
+        "Manuel"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-22-r28-012",
+      "tarea": "Desarrollar framework sobre 'el polvorín' como concepto de Being CoRe",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Metodología Being CoRe - emociones",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "siendo-consulting",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 28,
+      "segmento_titulo": "Conversación sobre emociones y metodologías",
+      "segmento_inicio": "2026-04-22T22:01:05Z",
+      "segmento_fin": "2026-04-22T22:09:23Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Andrea"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-22-r30-013",
+      "tarea": "Enviar ubicación (contexto no especificado)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "baja",
+      "contexto": "Desconocido",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 30,
+      "segmento_titulo": "Conversación sobre un proceso y tareas",
+      "segmento_inicio": "2026-04-22T22:11:30Z",
+      "segmento_fin": "2026-04-22T22:15:25Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-22-r32-014",
+      "tarea": "Formular preguntas específicas al entrenador sobre contextos de uso de 'sentido'",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Being CoRe - profundización conceptual",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "siendo-consulting",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 32,
+      "segmento_titulo": "Una discusión sobre cómo las personas forman creencias, aprenden, investigan y la distinción entre conceptos relacionados.",
+      "segmento_inicio": "2026-04-22T22:29:24Z",
+      "segmento_fin": "2026-04-23T00:06:25Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
     }
   ],
-  "ultima_actualizacion": "2026-04-22T18:03:02.845378"
+  "ultima_actualizacion": "2026-04-23T18:02:22.030074"
 }

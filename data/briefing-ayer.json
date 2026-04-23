@@ -1,120 +1,205 @@
 {
-  "fecha": "2026-04-20",
+  "fecha": "2026-04-21",
   "tareas_extraidas": [
     {
-      "tarea": "Coordinar contacto del padre de Juan para futuras negociaciones",
+      "tarea": "Hacer auditoría de causación histórica (operativo vs administrativo) en sistemas actuales",
+      "responsable": "Camilo Marín",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Llamar a Proin para validar términos de reajuste en contrato de 8% de vida",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Asignar líder de migración Odu (Ricardo o Catalina) con bono de 5M y autoridad para eliminar cargos",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Estructurar Being CoRe como metodología complementaria a Condugas",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "media"
     },
     {
-      "tarea": "Verificar equipos técnicos (micrófono, cámara, videollamada) antes de junta",
-      "responsable": "Andrés",
+      "tarea": "Promover persona de logística a rol de mayor responsabilidad con mentoring",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "media"
     },
     {
-      "tarea": "Diagnosticar diferencias organizacionales y financieras entre empresas del grupo",
-      "responsable": "Equipo asesor corporativo",
+      "tarea": "Investigar plataforma de grabación de pantalla directo desde computadores hacia ruta centralizada",
+      "responsable": "Juan",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Autorizar y configurar pre-setup de grabación automática a YouTube y Cloud Code con Notebook LM",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Agregar visualización de cuadrillas al rastreador de rutas (actualmente solo muestra vehículos)",
+      "responsable": "William",
       "prioridad": "alta"
     },
     {
-      "tarea": "Proponer mecanismos de manejo de caja unificado (vs decisiones aisladas de gestores)",
-      "responsable": "Equipo asesor corporativo",
+      "tarea": "Implementar IA para contrastar dirección/tiempo de cuadrilla vs datos liquidación obra (detectar divergencias)",
+      "responsable": "William",
       "prioridad": "alta"
     },
     {
-      "tarea": "Crear consejo asesor con miembros clave para supervisión de transición generacional",
-      "responsable": "Equipo asesor corporativo",
+      "tarea": "Generar alertas automáticas desde sistema sin intervención humana (recorrido 2h en dirección no mapeada)",
+      "responsable": "William",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Evaluar acceso y costo de sistema Odu (60-70K COP por usuario) vs alternativas de eficiencia operativa",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Armar plan de defensa y revisar números de caja con Andrea",
+      "tarea": "Validar con mesa directiva decisiones estratégicas que requieren alcance compartido (no decisiones unilaterales)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Confirmar y asistir reunión con Juan Soberón a las 5:00 PM",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Completar mapeo y nomenclatura de todos los potreros en la propiedad de 68 hectáreas",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Ejecutar valorización separada de teca, ganado y tierra para estrategia de venta",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Desarrollar proyecto de 'economía plateada' en Jericó (turismo de bienestar, orgánico, cuidado personal)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Agendar reunión con doña Olga para mañana en la mañana",
+      "responsable": "asistente",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Resolver problema de placa de vehículo en club/reunión PM",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Asegurar nutrición básica: Sebastian no ha comido desde ayer 7 PM",
+      "responsable": "asistente",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Definir y comunicar horizonte de tiempo para sustitución de carbón por combustibles alternativos",
+      "responsable": "Cementeras / Interlocutor PM",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Finalizar diseños definitivos de red distribución PM",
+      "responsable": "PM",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Revisar y reestructurar ecuaciones contractuales con EPM para evitar multas crecientes",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Contactar y negociar con 3 proveedores clave (Humberto Iglesias, Santiago y otros)",
+      "tarea": "Auditar causación contable y distribución entre operativo/administrativo en múltiples sistemas (Perseo, Malfi, Odu)",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Analizar y discutir con Carlos López sobre situación financiera",
+      "tarea": "Parametrizar completamente Odu (cuentas, distribuciones, causales) antes de migración",
+      "responsable": "Camilo Marín",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Parametrizar Odu completamente (eliminar cargos redundantes, mapear flujos de contabilidad/operaciones)",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Separar socios y documentar cláusulas de responsabilidad por pérdidas",
+      "tarea": "Establecer transición Odu como obligatoria (mañana y pasado mañana), sin negociación",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Reclamar saldo a favor de 1200M COP en septiembre y 1400M COP actuales para cierre de contratos",
+      "tarea": "Desarrollar e implementar sistema integrado 'mapa neuronal' para agregación de información operativa",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Renegociar reajustes de costo con PM para reducir carga administrativa",
+      "tarea": "Diseñar e implementar sistema de automatización en Condugas para alcanzar operación 60-70% autónoma en <3 meses",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Preparar comunicado para equipo: imposibilidad de pago a proveedores por falta de pago de PM",
+      "tarea": "Revertir transferencia de 14M COP a papá de Sebastian para cubrir fly pass y mantener nómina operativa",
+      "responsable": "Camilo",
+      "prioridad": "critica"
+    },
+    {
+      "tarea": "Estructurar transparencia de flujos Inversora y Construtem para decisión de supervivencia conjunta",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Revisar y reducir carga administrativa del contrato (objetivo: bajar de 130M a sostenible)",
-      "responsable": "Sebastian Sanchez Acevedo",
+      "tarea": "Cumplir cronograma de construcción Fase 2 (concretos y máquinas)",
+      "responsable": "EPM",
       "prioridad": "critica"
     },
     {
-      "tarea": "Obtener información consolidada de caja y proyecciones para presentación en junta",
-      "responsable": "Andrea",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Analizar separación definitiva de sociedad (socios no aportan, no responden)",
-      "responsable": "Sebastian Sanchez Acevedo",
+      "tarea": "Completar instalaciones para primeras dos máquinas",
+      "responsable": "EPM",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Se evitó sanción por informes de normalización al entregarlos la semana anterior",
-    "Se prioriza cobro sobre cualquier otra acción",
-    "Se valida el modelo de cesión de facturas como herramienta de garantía alternativa",
-    "Se reconoce que la reputación (quiénes son ustedes) es la garantía primaria ante actores sofisticados",
-    "Usar videollamada normal sin cámara para mejorar visualización de caras",
-    "Contrato Rio Negro está quebrado y no hay movimiento de corrección desde hace 4 meses",
-    "Necesidad de separación total de socios que no responden",
-    "Condugas ha asumido pérdidas personales de ahorros",
-    "Contrato está al borde de quiebre: debe cerrarse o reestructurarse inmediatamente",
-    "Necesidad urgente de comunicar a equipo sobre realidad de flujo de caja"
+    "Asistir a evento a las 19:00",
+    "Mantener estructura centralizada de administración para absorber ingresos en contabilidad general",
+    "Diagnosticar impacto de reajuste insuficiente (3% vs 14-18%) en pérdida operacional de enero (22%)",
+    "Migración a Odu es solución estructural porque centraliza nómina y reporte exógena en tiempo real",
+    "Presente: seguir operando con riesgo de mal causado; Futuro: resolver con Odu",
+    "Reconocer que reajuste del 3% en enero es insuficiente para cubrir costo (requiere 14-18%)",
+    "Implementar protocolo donde empleados traigan alternativas antes de elevar problema a jefatura",
+    "Priorizar resolución de consecuencias operativas (demandas, tutelas) antes que procesos",
+    "Odu es obligatorio, no negociable; plazo: mañana/pasado mañana",
+    "Bono de 5M para líder que elimine cargos redundantes e implemente Odu"
   ],
   "ideas": [
-    "Usar factoring de EPM/GDO como herramienta de flujo (mismo día pago)",
-    "Estudiar cesión de proporciones de facturas a proveedores como garantía",
-    "Poner énfasis en compras grandes (>10M) con negociación directa",
-    "Amarrar proporciones de facturas a proveedores específicos para transparencia de garantía",
-    "Documentar gestiones de PM y expectativas compartidas con cliente como base de confianza",
-    "Separar garantías por factura para que proveedores vean claridad de pago",
-    "Reducir diapositivas para no enredar la narrativa",
-    "Documentar todas las advertencias previas (4 meses) para protección legal",
-    "Separar análisis de caja operacional vs retenciones para ver flujo real",
-    "Hacer gestión coordinada con PM sobre tiempos de pago (diciembre-febrero sin pago = sobreendeudamiento)"
+    "Estrategia de administración central beneficia a Condugas cuando peso es bajo en contratos individuales",
+    "Falta de parametrización en Odu es raíz de errores causales y reportes incorrectos",
+    "Centro de operación único (Odu) elimina riesgo de múltiples reportes UGP",
+    "Exógena en tiempo real desde Odu permite pre-exógena como validación continua",
+    "Falta de soberanía en gas natural es barrera estructural a penetración de mercado",
+    "Conciencia es el apalancador para movimiento operacional",
+    "Jefatura como consejero requiere que empleado primero diagnostique su propio impacto",
+    "Conciencia operacional surge solo cuando se ve resultado en sistema (Odu)",
+    "Incentivo económico + presión temporal alinea equipo sin negociación",
+    "Resistencia inicial no es negativa; muchos adoptan cambios después (ej: cajas con logo)"
   ],
   "frases": [
-    "Porque esto ya no aguanta más, y pues que sepan que puede pasar de todo en este proceso",
-    "Esto es una compra de más de 10 millones de pesos, que se merece el punto de importancia que se merece",
-    "Tú no la des toda la fe que yo te tengo, amor",
-    "Necesito que me digas cómo va a salir todo esto",
-    "La garantía es quiénes son ustedes. Con eso para él es suficiente"
+    "A las 7, tú tienes que irte",
+    "Tiene unas ecuaciones y paga uno en todo y uno no tiene forma de recomponer, porque si se recompone, le va más mal porque la multa es grandísima",
+    "Nosotros en este resultado bruto no tenemos cargado... la administración central cobra sobre eso, entonces aparentemente sube la facturación",
+    "Cuando reporta nómina, reporta una UGP diferente. Cuando usted lo tiene en Odu, ya usted no tiene ese riesgo, porque todo, absolutamente todo sale por Odu",
+    "Este problema sigue estando y eso es aquí hacer una auditoría, como lo que pasó con el Sena"
   ],
   "alertas_supervivencia": [
-    "🚨 COLAPSO INMINENTE: Condugas sin liquidez (caja = 0M, tenía 40M), no puede pagar proveedores ni nómina de 80 empleados desde mañana (2026-04-21) sin pago de PM",
-    "🚨 CONTRATO CRÍTICO QUEBRADO: Rio Negro pierde 1700-1900M COP/año, retenciones = 25-27 mil M, carga admin = 130M; separación de socios sin aportes inminente",
-    "🚨 DEUDA INTRA-GRUPO NO CONTROLADA: Préstamo de Natalia (familia) sin estructura clara, riesgo de contagio a grupo Sánchez Acevedo completo (6 empresas, múltiples accionistas)",
-    "🚨 PM EN ATRASO CRÍTICO: Falta de pago dic-feb-mar; Sebastian hizo 4 meses de advertencia, sin respuesta; riesgo de sanción legal o rescisión unilateral",
-    "🚨 EQUIPO EN CRISIS: Próxima junta asesora sin información consolidada; Sebastian sin datos, presentará situación de colapso a consejeros; riesgo de pérdida de confianza"
+    "CRÍTICA: Caja con 8 días de cobertura. Ingresos al 45% de meta, producción al 27% (déficit 73%). Deuda consolidada -2.300M COP. Requiere inyección inmediata o restructuración.",
+    "CRÍTICA: Integración de sistemas de nómina (Perseo/Malfi/Odu) genera riesgo de reportes exógenos incorrectos con pagos desde múltiples fuentes sin trazabilidad clara.",
+    "SEVERA: Incumplimiento estructural de Carlos en promesas operacionales. Fuerza de ventas no ejecuta. Sistema Odu puede documentar incapacidad pero no la resuelve.",
+    "SEVERA: Agotamiento ejecutivo. Sebastian acumula decisiones sobre Condugas, propiedades rurales (68 hectáreas), estructura familiar, tensiones políticas sin descanso aparente.",
+    "MODERADA: Falta de soberanía en penetración de gas natural genera pérdidas del 22% en enero. Reajuste insuficiente compromete viabilidad de filial."
   ],
-  "total_lifelogs": 10,
+  "total_lifelogs": 31,
   "procesado_con": "haiku_v3_structured"
 }

@@ -1,66 +1,23 @@
 {
-  "saludo": "Buenos días Sebastián — miércoles 22 Apr",
-  "supervivencia": [
-    "🚨 Caja Condugas = 8 días (crítico). EPM debe pagar reajuste ~180M COP para evitar colapso nómina 80 empleados",
-    "🚨 Río Negro pierde 1.7-1.9B COP/año. Defensa legal + documentación debido proceso VENCIDA (deadline 18 Apr)",
-    "🚨 Hamilton: cobro pendiente VENCIDO (deadline 17 Apr). Localizar acta comité 12 feb (score 48)"
-  ],
-  "top_3": [
-    {
-      "tarea": "Llamar HOY a Sanear/Proing. Enviar documento reajuste EPM con cálculos verificados. Programar cobro directo mismo día",
-      "categoria": "SUPERVIVENCIA",
-      "porque": "Sin pago EPM colapsa nómina en 8 días",
-      "tarea_id": "localizar_acta_feb12"
-    },
-    {
-      "tarea": "Estructurar defensa legal Río Negro (documentación debido proceso + alternativas renegociación fórmula). Enviar a asesor",
-      "categoria": "SUPERVIVENCIA",
-      "porque": "Contrato quebrado, retenciones 25-27mil M, separación socios inminente",
-      "tarea_id": "defensa_legal_rio_negro"
-    },
-    {
-      "tarea": "Reunión 30min con Andrea: deudas Condugas, caja familiar HOY, tiquetes Cartagena",
-      "categoria": "SUPERVIVENCIA",
-      "porque": "Liquidez cero requiere decisiones inmediatas sobre aportes/préstamos familia",
-      "tarea_id": "reunion_andrea"
-    }
-  ],
-  "mega_dia": "Cobro EPM. Todo lo demás espera.",
-  "contactar_hoy": [
-    {
-      "persona": "Sanear/Proing",
-      "motivo": "Reajuste EPM con acta feb12 + exigir pago directo"
-    },
-    {
-      "persona": "Andrea",
-      "motivo": "Caja + decisión aportes familia + tiquetes"
-    },
-    {
-      "persona": "William Lopez",
-      "motivo": "Confirmar si EPM ya transfirió algo"
-    }
-  ],
+  "saludo": "Buenos días Sebastián — jueves 23 Apr",
+  "supervivencia": [],
+  "top_3": [],
+  "mega_dia": "Revisar tracker y priorizar tareas pendientes",
+  "contactar_hoy": [],
   "ojo_con": [
-    "50 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "Nómina 80 empleados vence en 8 días sin liquidez",
-    "Datos financieros desactualizados (últimas 3-5 días sin refresh)",
-    "Sueño 4h02m + EBITDA -2.3B = decisiones bajo estrés extremo"
+    "54 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+    "Haiku no respondió"
   ],
-  "vencidas": [
-    "Hamilton cobro (17 Apr) ❌",
-    "Defensa legal Río Negro (18 Apr) ❌",
-    "Acta comité 12 feb (16 Apr) ❌",
-    "Revisar rendimiento contratos críticos (20 Apr) ❌"
-  ],
-  "frase_dia": "Hoy cobras o fracasas. El resto es ruido.",
-  "generado_at": "2026-04-22T11:00:10",
-  "fecha": "2026-04-22",
+  "vencidas": [],
+  "frase_dia": "Un jefe es quien logra que otros logren.",
+  "generado_at": "2026-04-23T11:00:01",
+  "fecha": "2026-04-23",
   "stats": {
-    "abiertas": 98,
-    "criticas": 37,
-    "vencidas": 21,
-    "estancadas": 54,
-    "sin_evaluar": 71
+    "abiertas": 103,
+    "criticas": 44,
+    "vencidas": 18,
+    "estancadas": 51,
+    "sin_evaluar": 77
   },
   "criticas_sin_fecha": [
     {
@@ -156,15 +113,27 @@
   ],
   "vence_pronto": [
     {
+      "id": "2026-04-21-c005",
+      "tarea": "Establecer transición Odu como obligatoria (mañana y pasado mañana), sin negociación",
+      "dias": 0,
+      "fecha_limite": "2026-04-23"
+    },
+    {
       "id": "2026-04-17-c003",
       "tarea": "Auditar estructura de deuda y cuentas por cobrar entre Condugas, socios e IC (excisión no pagada)",
-      "dias": 2,
+      "dias": 1,
+      "fecha_limite": "2026-04-24"
+    },
+    {
+      "id": "2026-04-21-c008",
+      "tarea": "Revertir transferencia de 14M COP a papá de Sebastian para cubrir fly pass y mantener nómina operati",
+      "dias": 1,
       "fecha_limite": "2026-04-24"
     },
     {
       "id": "2026-04-17-c002",
       "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en EPM e incorporando Vanti, gas de occ",
-      "dias": 3,
+      "dias": 2,
       "fecha_limite": "2026-04-25"
     }
   ]

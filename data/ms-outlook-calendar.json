@@ -1,0 +1,366 @@
+{
+  "generated_at": "2026-04-22T20:17:59.550526Z",
+  "source": "microsoft-graph",
+  "user": "s.sanchez@condugas.com.co",
+  "event_count": 24,
+  "events": [
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qACGNJAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS1wAAEA==",
+      "subject": "Oficina",
+      "start": "2026-04-22T00:00:00.0000000",
+      "end": "2026-04-23T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAENAADD_CY0RKeIQYhbXX1OKrzKAADxYRE7AAA=",
+      "subject": "Adolfo",
+      "start": "2026-04-22T15:15:00.0000000",
+      "end": "2026-04-22T18:15:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "Sebastian  Sanchez\tacevedo",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qDLQzwAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS0wAAEA==",
+      "subject": "Oficina",
+      "start": "2026-04-23T00:00:00.0000000",
+      "end": "2026-04-24T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qDLQzwAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAArrM8pAAAEA==",
+      "subject": "ACTIVOS CORRIENTES [En persona]",
+      "start": "2026-04-23T10:00:00.0000000",
+      "end": "2026-04-23T12:00:00.0000000",
+      "location": "Reunión de Microsoft Teams",
+      "attendees": [
+        "Andrea Bernal Vélez",
+        "Sebastian  Sanchez\tacevedo"
+      ],
+      "organizer": "Andrea Bernal Vélez",
+      "is_online": true,
+      "online_url": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_OThjZGYzYmItZDBmNy00MDdlLTg0NTctODY2NjY2MmFmMjQz%40thread.v2/0?context=%7b%22Tid%22%3a%224e86276f-d92f-4241-b0e6-d5509e0d04bb%22%2c%22Oid%22%3a%22f7d0eb11-58ff-45e3-af6d-8cd75411b6fd%22%7d",
+      "preview": "________________________________________________________________________________\r\nMicrosoft Teams ¿Necesitas ayuda?\r\nUnirse a la reunión ahora\r\nId. de reunión: 272 806 777 144\r\nCódigo de acceso: 7Vb2C"
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qGUbaXAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS1gAAEA==",
+      "subject": "Oficina",
+      "start": "2026-04-24T00:00:00.0000000",
+      "end": "2026-04-25T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAENAADD_CY0RKeIQYhbXX1OKrzKAAD-THNBAAA=",
+      "subject": "Microminerles",
+      "start": "2026-04-24T08:00:00.0000000",
+      "end": "2026-04-24T17:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "Sebastian  Sanchez\tacevedo",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAENAADD_CY0RKeIQYhbXX1OKrzKAAD2soDWAAA=",
+      "subject": "REUNIÓN OLGA ACEVEDO-CONDUGAS",
+      "start": "2026-04-24T10:30:00.0000000",
+      "end": "2026-04-24T11:30:00.0000000",
+      "location": "CCI; https://meet.google.com/enj-qtvk-ynx",
+      "attendees": [
+        "director@cciantioquia.com",
+        "Sebastian  Sanchez\tacevedo",
+        "Olga Ines Acevedo Vargas"
+      ],
+      "organizer": "director@cciantioquia.com",
+      "is_online": false,
+      "online_url": null,
+      "preview": "REUNIÓN OLGA ACEVEDO-CONDUGAS\r\nUnirme con Google Meet: Juan David Pérez te ha invitado a asistir al evento llamado REUNIÓN OLGA ACEVEDO-CONDUGAS el viernes 24 de abr de 2026 ⋅ 10:30am – 11:30am (Hora "
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qPv7OMAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS1QAAEA==",
+      "subject": "Oficina",
+      "start": "2026-04-27T00:00:00.0000000",
+      "end": "2026-04-28T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qPv7OMAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAAudiI8gAAEA==",
+      "subject": "Comité \"Sobrevivir\"",
+      "start": "2026-04-27T09:00:00.0000000",
+      "end": "2026-04-27T10:00:00.0000000",
+      "location": "Reunión de Microsoft Teams",
+      "attendees": [
+        "William Alcides \tLopez Garcia",
+        "Andrea Bernal Vélez",
+        "Favio Nelson\t Escobar Velez",
+        "Claudia Patricia Quintero Duque",
+        "Sebastian  Sanchez\tacevedo",
+        "Natalia  Rojas",
+        "Juan Gmo\t Pérez Soberón",
+        "Juan Camilo Berrio Tirado",
+        "Carlos Hernan Lopez Restrepo"
+      ],
+      "organizer": "William Alcides \tLopez Garcia",
+      "is_online": true,
+      "online_url": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YmIzMjlhZjctOWJlOS00MzQzLWI3YjItNWQ0NzBjZmY5YTky%40thread.v2/0?context=%7b%22Tid%22%3a%224e86276f-d92f-4241-b0e6-d5509e0d04bb%22%2c%22Oid%22%3a%22545ece98-170b-44d1-bb6b-4cf130a516cd%22%7d",
+      "preview": "________________________________________________________________________________\r\nMicrosoft Teams ¿Necesita ayuda?\r\nUnirse a la reunión ahora\r\nId. de reunión: 279 066 671 225 77\r\nCódigo de acceso: LG7"
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAENAADD_CY0RKeIQYhbXX1OKrzKAADe3AIFAAA=",
+      "subject": "1pm Pediatra Juliana Jaramillo - clínica el prado 1609",
+      "start": "2026-04-27T13:00:00.0000000",
+      "end": "2026-04-27T13:30:00.0000000",
+      "location": "",
+      "attendees": [
+        "Paulina Echeverri",
+        "Sebastian  Sanchez\tacevedo"
+      ],
+      "organizer": "Paulina Echeverri",
+      "is_online": false,
+      "online_url": null,
+      "preview": "1pm Pediatra Juliana Jaramillo - clínica el prado 1609\r\nPaulina Echeverri te ha invitado a asistir al evento llamado 1pm Pediatra Juliana Jaramillo - clínica el prado 1609 el lunes 27 de abr de 2026 ⋅"
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAENAADD_CY0RKeIQYhbXX1OKrzKAAEDo5xgAAA=",
+      "subject": "Invitación mesa de trabajo EDU - Secretaría de Suministros lunes 27 de abril",
+      "start": "2026-04-27T15:00:00.0000000",
+      "end": "2026-04-27T17:00:00.0000000",
+      "location": "Sala de Juntas CCI Antioquia ",
+      "attendees": [
+        "Natalia Castaño",
+        "jgarcia@acassa.co",
+        "cmarin@arizaymarin.com",
+        "gerencia@aimingenieros.com.co",
+        "gerente@asfacol.com",
+        "gerencia@ccc.com.co",
+        "gerencia@conasfaltos.com",
+        "Sebastian  Sanchez\tacevedo",
+        "jgarcia@coninsa.co",
+        "luis.turizo@elcondor.com",
+        "gerencia@precomprimidos.com.co",
+        "gerenciaadm@conytrac.com",
+        "gerencia@deacivil.com",
+        "camilo.alvarez@doingenieria.com",
+        "gabriel.houghton@edemsa.com.co"
+      ],
+      "organizer": "Natalia Castaño",
+      "is_online": false,
+      "online_url": null,
+      "preview": "Estimado afiliado Consultor y Constructor, cordial saludo.\r\n\r\nDesde la CCI Antioquia extendemos una cordial invitación para participar en la mesa económica para infraestructura del Distrito de Medellí"
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qS5F0zAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS1AAAEA==",
+      "subject": "Oficina",
+      "start": "2026-04-28T00:00:00.0000000",
+      "end": "2026-04-29T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAENAADD_CY0RKeIQYhbXX1OKrzKAACrYJc3AAA=",
+      "subject": "Comité de estrategia",
+      "start": "2026-04-28T08:00:00.0000000",
+      "end": "2026-04-28T12:30:00.0000000",
+      "location": "Reunión de Microsoft Teams",
+      "attendees": [
+        "Juan Gmo\t Pérez Soberón",
+        "William Alcides \tLopez Garcia",
+        "Juan Camilo Berrio Tirado",
+        "Claudia Patricia Quintero Duque",
+        "Carlos Hernan Lopez Restrepo",
+        "Favio Nelson\t Escobar Velez",
+        "Andrea Bernal Vélez",
+        "Sebastian  Sanchez\tacevedo"
+      ],
+      "organizer": "Juan Gmo\t Pérez Soberón",
+      "is_online": true,
+      "online_url": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjBlMzE5YjktNzZmNS00OTcxLWIyZmYtNWU4ZjllNDhiZTY1%40thread.v2/0?context=%7b%22Tid%22%3a%224e86276f-d92f-4241-b0e6-d5509e0d04bb%22%2c%22Oid%22%3a%22a437527e-eb9a-4269-baff-3565802c8799%22%7d",
+      "preview": "________________________________________________________________________________\r\nMicrosoft Teams ¿Necesita ayuda?\r\nUnirse a la reunión ahora\r\nId. de reunión: 231 694 239 781 77\r\nCódigo de acceso: Rq3"
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAENAADD_CY0RKeIQYhbXX1OKrzKAAEDo5xhAAA=",
+      "subject": "Reunión con Natalia Rojas -definir lugar",
+      "start": "2026-04-28T14:00:00.0000000",
+      "end": "2026-04-28T15:00:00.0000000",
+      "location": "Reunión de Microsoft Teams",
+      "attendees": [
+        "William Alcides \tLopez Garcia",
+        "Sebastian  Sanchez\tacevedo"
+      ],
+      "organizer": "William Alcides \tLopez Garcia",
+      "is_online": true,
+      "online_url": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_OWNkY2JmMjgtOGFjMC00ZDdhLWJlNjAtYjM5MTI2OGI2Zjg2%40thread.v2/0?context=%7b%22Tid%22%3a%224e86276f-d92f-4241-b0e6-d5509e0d04bb%22%2c%22Oid%22%3a%22545ece98-170b-44d1-bb6b-4cf130a516cd%22%7d",
+      "preview": "________________________________________________________________________________\r\nReunión de Microsoft Teams\r\nUnirse: https://teams.microsoft.com/meet/28134585352935?p=VQRCXwkYeOZgFW2jhI\r\nId. de reuni"
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qWCQbaAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS1wAAEA==",
+      "subject": "Oficina",
+      "start": "2026-04-29T00:00:00.0000000",
+      "end": "2026-04-30T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qZLbCBAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS0wAAEA==",
+      "subject": "Oficina",
+      "start": "2026-04-30T00:00:00.0000000",
+      "end": "2026-05-01T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qZLbCBAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAArrM8pAAAEA==",
+      "subject": "ACTIVOS CORRIENTES [En persona]",
+      "start": "2026-04-30T10:00:00.0000000",
+      "end": "2026-04-30T12:00:00.0000000",
+      "location": "Reunión de Microsoft Teams",
+      "attendees": [
+        "Andrea Bernal Vélez",
+        "Sebastian  Sanchez\tacevedo"
+      ],
+      "organizer": "Andrea Bernal Vélez",
+      "is_online": true,
+      "online_url": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_OThjZGYzYmItZDBmNy00MDdlLTg0NTctODY2NjY2MmFmMjQz%40thread.v2/0?context=%7b%22Tid%22%3a%224e86276f-d92f-4241-b0e6-d5509e0d04bb%22%2c%22Oid%22%3a%22f7d0eb11-58ff-45e3-af6d-8cd75411b6fd%22%7d",
+      "preview": "________________________________________________________________________________\r\nMicrosoft Teams ¿Necesitas ayuda?\r\nUnirse a la reunión ahora\r\nId. de reunión: 272 806 777 144\r\nCódigo de acceso: 7Vb2C"
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qcUlooAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS1gAAEA==",
+      "subject": "Oficina",
+      "start": "2026-05-01T00:00:00.0000000",
+      "end": "2026-05-02T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qlwFcdAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS1QAAEA==",
+      "subject": "Oficina",
+      "start": "2026-05-04T00:00:00.0000000",
+      "end": "2026-05-05T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qlwFcdAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAAudiI8gAAEA==",
+      "subject": "Comité \"Sobrevivir\"",
+      "start": "2026-05-04T09:00:00.0000000",
+      "end": "2026-05-04T10:00:00.0000000",
+      "location": "Reunión de Microsoft Teams",
+      "attendees": [
+        "William Alcides \tLopez Garcia",
+        "Andrea Bernal Vélez",
+        "Favio Nelson\t Escobar Velez",
+        "Claudia Patricia Quintero Duque",
+        "Sebastian  Sanchez\tacevedo",
+        "Natalia  Rojas",
+        "Juan Gmo\t Pérez Soberón",
+        "Juan Camilo Berrio Tirado",
+        "Carlos Hernan Lopez Restrepo"
+      ],
+      "organizer": "William Alcides \tLopez Garcia",
+      "is_online": true,
+      "online_url": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YmIzMjlhZjctOWJlOS00MzQzLWI3YjItNWQ0NzBjZmY5YTky%40thread.v2/0?context=%7b%22Tid%22%3a%224e86276f-d92f-4241-b0e6-d5509e0d04bb%22%2c%22Oid%22%3a%22545ece98-170b-44d1-bb6b-4cf130a516cd%22%7d",
+      "preview": "________________________________________________________________________________\r\nMicrosoft Teams ¿Necesita ayuda?\r\nUnirse a la reunión ahora\r\nId. de reunión: 279 066 671 225 77\r\nCódigo de acceso: LG7"
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAENAADD_CY0RKeIQYhbXX1OKrzKAADxYRE8AAA=",
+      "subject": "Adolfo",
+      "start": "2026-05-04T15:00:00.0000000",
+      "end": "2026-05-04T18:30:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "Sebastian  Sanchez\tacevedo",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qo5QDEAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS1AAAEA==",
+      "subject": "Oficina",
+      "start": "2026-05-05T00:00:00.0000000",
+      "end": "2026-05-06T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAENAADD_CY0RKeIQYhbXX1OKrzKAACrYJc4AAA=",
+      "subject": "Comité de estrategia",
+      "start": "2026-05-05T08:00:00.0000000",
+      "end": "2026-05-05T12:30:00.0000000",
+      "location": "Reunión de Microsoft Teams",
+      "attendees": [
+        "Juan Gmo\t Pérez Soberón",
+        "William Alcides \tLopez Garcia",
+        "Juan Camilo Berrio Tirado",
+        "Claudia Patricia Quintero Duque",
+        "Carlos Hernan Lopez Restrepo",
+        "Favio Nelson\t Escobar Velez",
+        "Andrea Bernal Vélez",
+        "Sebastian  Sanchez\tacevedo"
+      ],
+      "organizer": "Juan Gmo\t Pérez Soberón",
+      "is_online": true,
+      "online_url": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YTU1YWNkZjMtODE4ZS00ODU2LTgxODktMjgxNzY3ZmY0MTdm%40thread.v2/0?context=%7b%22Tid%22%3a%224e86276f-d92f-4241-b0e6-d5509e0d04bb%22%2c%22Oid%22%3a%22a437527e-eb9a-4269-baff-3565802c8799%22%7d",
+      "preview": "________________________________________________________________________________\r\nMicrosoft Teams ¿Necesita ayuda?\r\nUnirse a la reunión ahora\r\nId. de reunión: 215 563 481 890 02\r\nCódigo de acceso: py6"
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZAFRAAgI3qsCaprAAEYAAAAADGDsrbn050OaLh2pxX6n_gcAw-gmNESniEGIW119Tiq8ygAAAAABDQAAw-gmNESniEGIW119Tiq8ygAACBKS1wAAEA==",
+      "subject": "Oficina",
+      "start": "2026-05-06T00:00:00.0000000",
+      "end": "2026-05-07T00:00:00.0000000",
+      "location": "",
+      "attendees": [],
+      "organizer": "s.sanchez@condugas.com.co",
+      "is_online": false,
+      "online_url": null,
+      "preview": ""
+    }
+  ]
+}

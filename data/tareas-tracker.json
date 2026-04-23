@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-22T18:03:02",
+  "ultima_actualizacion": "2026-04-23T18:02:21",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -1364,7 +1364,7 @@
       "fecha_limite": null,
       "estado": "abierta",
       "origen": "limitless_auto",
-      "contexto": "Negociación EPM - incluir mínimos de asignación y viabilidad operativa",
+      "contexto": "Negociación EPM - incluir mínimos de asignación y viabilidad operativa | Negociación EPM - Catalina afectada, requiere seguimiento",
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
@@ -1375,7 +1375,10 @@
         "Catalina"
       ],
       "eje": "condugas",
-      "estancada": true
+      "estancada": true,
+      "fusiono": [
+        "2026-04-15-014"
+      ]
     },
     {
       "id": "2026-04-16-c001",
@@ -1481,7 +1484,7 @@
       "fecha_limite": "2026-04-20",
       "estado": "abierta",
       "origen": "limitless_auto",
-      "contexto": "Contrato quebrado en 3 meses si no hay reajustes",
+      "contexto": "Contrato quebrado en 3 meses si no hay reajustes | No aparecer a Catalina para presionar desde otros flancos",
       "tipo": "decision",
       "vencida": true,
       "evaluada": false,
@@ -1491,9 +1494,16 @@
         "Jorge William",
         "Catalina",
         "bancos",
-        "socios"
+        "socios",
+        "Uner",
+        "Leon",
+        "Diana",
+        "William"
       ],
-      "estancada": true
+      "estancada": true,
+      "fusiono": [
+        "2026-04-16-c004"
+      ]
     },
     {
       "id": "2026-04-16-c003x",
@@ -1523,9 +1533,9 @@
       "responsable": "Sebastian Sanchez",
       "prioridad": "critica",
       "fecha_creacion": "2026-04-16",
-      "fecha_cierre": null,
+      "fecha_cierre": "2026-04-22",
       "fecha_limite": "2026-04-18",
-      "estado": "abierta",
+      "estado": "cerrada",
       "origen": "limitless_auto",
       "contexto": "No aparecer a Catalina para presionar desde otros flancos",
       "tipo": "compromiso",
@@ -1539,7 +1549,9 @@
         "Diana",
         "William"
       ],
-      "estancada": true
+      "estancada": true,
+      "motivo_cierre": "fusionada en 2026-04-16-c002x",
+      "fusionada_en": "2026-04-16-c002x"
     },
     {
       "id": "2026-04-16-c005",
@@ -1547,9 +1559,9 @@
       "responsable": "Sebastian Sanchez",
       "prioridad": "critica",
       "fecha_creacion": "2026-04-16",
-      "fecha_cierre": null,
+      "fecha_cierre": "2026-04-23",
       "fecha_limite": "2026-04-16",
-      "estado": "abierta",
+      "estado": "cerrada",
       "origen": "limitless_auto",
       "contexto": "Prueba de que todos contratistas reconocen desequilibrio con esta formula de camacol '",
       "tipo": "evidencia",
@@ -1804,15 +1816,17 @@
       "responsable": "Sebastian",
       "prioridad": "alta",
       "fecha_creacion": "2026-04-15",
-      "fecha_cierre": null,
-      "estado": "abierta",
+      "fecha_cierre": "2026-04-22",
+      "estado": "cerrada",
       "origen": "limitless",
       "contexto": "Negociación EPM - Catalina afectada, requiere seguimiento",
       "tipo": "seguimiento",
       "vencida": false,
       "evaluada": false,
       "categoria": "trabajo",
-      "estancada": true
+      "estancada": true,
+      "motivo_cierre": "fusionada en 2026-04-15-c003",
+      "fusionada_en": "2026-04-15-c003"
     },
     {
       "id": "2026-04-16-r5-001",
@@ -2417,7 +2431,7 @@
       "fecha_limite": "2026-04-21",
       "estado": "abierta",
       "origen": "limitless_auto",
-      "contexto": "Socios no han hecho aportes, empresa se lleva por su responsabilidad",
+      "contexto": "Socios no han hecho aportes, empresa se lleva por su responsabilidad | restructura accionaria",
       "tipo": "decision",
       "vencida": true,
       "evaluada": false,
@@ -2425,6 +2439,9 @@
       "monto_cop": null,
       "personas": [
         "Camilo Marín"
+      ],
+      "fusiono": [
+        "2026-04-20-c010"
       ]
     },
     {
@@ -2605,9 +2622,9 @@
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica",
       "fecha_creacion": "2026-04-20",
-      "fecha_cierre": null,
+      "fecha_cierre": "2026-04-22",
       "fecha_limite": null,
-      "estado": "abierta",
+      "estado": "cerrada",
       "origen": "limitless_auto",
       "contexto": "restructura accionaria",
       "tipo": "decision",
@@ -2617,7 +2634,9 @@
       "monto_cop": null,
       "personas": [
         "Camilo Marín"
-      ]
+      ],
+      "motivo_cierre": "fusionada en 2026-04-20-c008",
+      "fusionada_en": "2026-04-20-c008"
     },
     {
       "id": "2026-04-20-r0-002",
@@ -2855,6 +2874,136 @@
       "personas": [
         "EPM"
       ]
+    },
+    {
+      "id": "2026-04-22-c001",
+      "tarea": "Evaluar y reparar/reemplazar equipo dañado por sobreamperaje",
+      "responsable": "Unknown",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-22",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-23",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "incidente de seguridad eléctrica con riesgo de vida",
+      "tipo": "pendiente",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-22-c002",
+      "tarea": "Revisar protocolo de seguridad eléctrica en hogar/obra",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-22",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-23",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "prevención de accidentes con embarazada y menores",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-22-c003",
+      "tarea": "Definir cifra mínima de caja requerida en 5 días para salvar operación (nómina y proveedores críticos)",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-22",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-27",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Crisis de flujo Condugas",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-22-c004",
+      "tarea": "Construir narrativa madre (5 bloques): qué pasó, qué está probado, cuánto falta, riesgo para EPM, decisión concreta",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-22",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-23",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Preparación conversación alto nivel EPM",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": []
+    },
+    {
+      "id": "2026-04-22-c005",
+      "tarea": "Preparar mensaje ejecutivo de 20 minutos para pedir reunión con alto nivel EPM",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-22",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-23",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Activación rutas formales ante EPM",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Juan Alberto Matas Salazar"
+      ]
+    },
+    {
+      "id": "2026-04-22-c006",
+      "tarea": "Ejecutar 4 rutas simultáneas: 1) Negocio (VP Negocios), 2) Jurídica/Reclamaciones, 3) Portal Pagos Proveedores, 4) Canal Ética/Transparencia",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-22",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-25",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Presión legítima documentada",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Juan Alberto Matas Salazar"
+      ]
+    },
+    {
+      "id": "2026-04-22-c007",
+      "tarea": "Radicación formal paralela a llamada ejecutiva con bloques: hechos, impacto, riesgos, solicitud, plazo",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-22",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-23",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Deja constancia formal y eleva costo institucional de ignorar",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": []
     }
   ]
 }

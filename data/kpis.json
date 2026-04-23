@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-04-22",
-  "ultima_actualizacion": "2026-04-22T11:45:10",
+  "fecha": "2026-04-23",
+  "ultima_actualizacion": "2026-04-23T11:45:02",
   "comite_sv": {
     "caja_dias": 8,
     "facturacion_pct": 45,
@@ -8,32 +8,32 @@
     "ebitda": -2300,
     "whoop_recovery": null,
     "whoop_sleep": "4h 02m (37%)",
-    "tareas_criticas": 37,
+    "tareas_criticas": 44,
     "proyectos_crisis": 2
   },
   "frescura": {
     "caja_dias": {
       "valor": 8,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 4,
+      "dias_sin_actualizar": 5,
       "fuente": "limitless"
     },
     "facturacion_pct": {
       "valor": 45,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 4,
+      "dias_sin_actualizar": 5,
       "fuente": "limitless"
     },
     "produccion_deficit_pct": {
       "valor": 73,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 4,
+      "dias_sin_actualizar": 5,
       "fuente": "limitless"
     },
     "ebitda": {
       "valor": -2300,
       "fecha": "2026-04-16",
-      "dias_sin_actualizar": 6,
+      "dias_sin_actualizar": 7,
       "fuente": "limitless"
     },
     "whoop_recovery": {
@@ -49,28 +49,19 @@
       "fuente": "manual"
     },
     "tareas_criticas": {
-      "valor": 37,
-      "fecha": "2026-04-22",
+      "valor": 44,
+      "fecha": "2026-04-23",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     },
     "proyectos_crisis": {
       "valor": 2,
-      "fecha": "2026-04-22",
+      "fecha": "2026-04-23",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     }
   },
-  "alertas": [
-    "EPM retiene pagos generando tensión de caja del 50% del capital de operación",
-    "Situación financiera descrita como 'demasiado oscuro' y 'muy tarde para reaccionar'",
-    "Cartera vencida desde octubre 2024, reajustes no pagados en contratos EPM",
-    "🚨 Caja Condugas = 8 días (crítico). EPM debe pagar reajuste ~180M COP para evitar colapso nómina 80 empleados",
-    "🚨 Río Negro pierde 1.7-1.9B COP/año. Defensa legal + documentación debido proceso VENCIDA (deadline 18 Apr)",
-    "No hay caja, no hay proyección de ingreso y proveedores bloqueados",
-    "🚨 Hamilton: cobro pendiente VENCIDO (deadline 17 Apr). Localizar acta comité 12 feb (score 48)",
-    "Deuda vencida de EPM: 700 millones (operación y mantenimiento) + 250 millones (zona dos) + 400 millones (Kima)"
-  ],
+  "alertas": [],
   "oportunidades": [
     "Recuperación de 100 millones mediante reajuste de contratos (25-40% ambiental, 60% costos)",
     "Cobro pendiente en Bucaramanga: potencial 80 millones que significaría 3 meses de operación",
@@ -104,12 +95,12 @@
     },
     {
       "campo": "caja_dias",
-      "dias_sin_dato": 4,
+      "dias_sin_dato": 5,
       "umbral": 2,
       "severidad": "alta",
       "ultimo_valor": 8,
       "ultima_fecha": "2026-04-18",
-      "mensaje": "'caja_dias' lleva 4 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+      "mensaje": "'caja_dias' lleva 5 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
     }
   ]
 }
