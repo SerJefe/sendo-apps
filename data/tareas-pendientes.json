@@ -1162,7 +1162,7 @@
       "prioridad": "alta",
       "contexto": "EPM tiene regasificadoras en Antioquia; Promigas es competencia (problemas previos)",
       "tipo": "compromiso",
-      "estado": "pendiente",
+      "estado": "aceptada",
       "fecha": "2026-04-16",
       "fecha_limite": null,
       "categoria_sugerida": "condugas",
@@ -1272,7 +1272,7 @@
       "prioridad": "alta",
       "contexto": "Presentación Being CoRe",
       "tipo": "compromiso",
-      "estado": "pendiente",
+      "estado": "aceptada",
       "fecha": "2026-04-16",
       "fecha_limite": null,
       "categoria_sugerida": "siendo-consulting",
@@ -1384,7 +1384,7 @@
       "prioridad": "media",
       "contexto": "negocios Condugas",
       "tipo": "pendiente",
-      "estado": "pendiente",
+      "estado": "rechazada",
       "fecha": "2026-04-16",
       "fecha_limite": null,
       "categoria_sugerida": "condugas",
@@ -3316,7 +3316,177 @@
         "Sebastian Sanchez Acevedo"
       ],
       "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-22-r5-001",
+      "tarea": "Corregir interfaz de aplicación para mostrar nombres y direcciones correctamente",
+      "responsable": "equipo técnico",
+      "prioridad": "media",
+      "contexto": "aplicacion",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 5,
+      "segmento_titulo": "Conversación sobre una aplicación",
+      "segmento_inicio": "2026-04-22T01:27:12Z",
+      "segmento_fin": "2026-04-22T01:28:26Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-22-r11-002",
+      "tarea": "Evaluar daño completo del equipo y determinar reparación o reemplazo",
+      "responsable": "técnico",
+      "prioridad": "alta",
+      "contexto": "tecnico",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": "2026-04-23",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 11,
+      "segmento_titulo": "Discusión sobre un incidente y sus consecuencias",
+      "segmento_inicio": "2026-04-22T02:56:04Z",
+      "segmento_fin": "2026-04-22T02:57:42Z",
+      "segmento_personas": [],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-22-r18-003",
+      "tarea": "Sacar información estructurada o manual para análisis del jueves",
+      "responsable": "quien habla",
+      "prioridad": "media",
+      "contexto": "recopilación de datos",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Emmanuel"
+      ],
+      "segmento_idx": 18,
+      "segmento_titulo": "Conversación sobre información y planes futuros",
+      "segmento_inicio": "2026-04-22T17:08:40Z",
+      "segmento_fin": "2026-04-22T17:10:30Z",
+      "segmento_personas": [
+        "Emmanuel",
+        "Paulita"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-22-r18-004",
+      "tarea": "Organizar datos y hacer llamadas a falta información",
+      "responsable": "quien habla",
+      "prioridad": "media",
+      "contexto": "completar inventario de información",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 18,
+      "segmento_titulo": "Conversación sobre información y planes futuros",
+      "segmento_inicio": "2026-04-22T17:08:40Z",
+      "segmento_fin": "2026-04-22T17:10:30Z",
+      "segmento_personas": [
+        "Emmanuel",
+        "Paulita"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-22-r22-005",
+      "tarea": "Entrenar voz ejecutiva (nivel 1: decoración del caso; nivel 2: voz grave/precisa; nivel 3: cómo sostener presión)",
+      "responsable": "quien facilita sesión",
+      "prioridad": "alta",
+      "contexto": "entrenamiento conversacional para Sebastian",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": "2026-04-25",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 22,
+      "segmento_titulo": "Conversación sobre la situación de Condugas y otros temas",
+      "segmento_inicio": "2026-04-22T20:55:19Z",
+      "segmento_fin": "2026-04-22T21:19:36Z",
+      "segmento_personas": [
+        "Juan Alberto Matas Salazar",
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-22-r26-006",
+      "tarea": "Hablar con Manuel sobre carga de trabajo en implementación de nómina/contabilidad y buscar forma de apoyarlo",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Implementación Condugas",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Manuel"
+      ],
+      "segmento_idx": 26,
+      "segmento_titulo": "Discusión sobre la colaboración y compensación en un proyecto",
+      "segmento_inicio": "2026-04-22T21:29:52Z",
+      "segmento_fin": "2026-04-22T21:36:06Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Lucas",
+        "Manuel"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-22-r26-007",
+      "tarea": "Revisar implementación de nómina en producción con datos reales",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Implementación Condugas",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-22",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Manuel",
+        "Lucas"
+      ],
+      "segmento_idx": 26,
+      "segmento_titulo": "Discusión sobre la colaboración y compensación en un proyecto",
+      "segmento_inicio": "2026-04-22T21:29:52Z",
+      "segmento_fin": "2026-04-22T21:36:06Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Lucas",
+        "Manuel"
+      ],
+      "segmento_impacto": "alto"
     }
   ],
-  "ultima_actualizacion": "2026-04-23T18:02:22.030074"
+  "ultima_actualizacion": "2026-04-23T22:18:42.952820"
 }

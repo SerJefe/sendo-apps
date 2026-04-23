@@ -1,23 +1,62 @@
 {
   "saludo": "Buenos días Sebastián — jueves 23 Apr",
-  "supervivencia": [],
-  "top_3": [],
-  "mega_dia": "Revisar tracker y priorizar tareas pendientes",
-  "contactar_hoy": [],
-  "ojo_con": [
-    "54 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "Haiku no respondió"
+  "supervivencia": [
+    "Caja a 8 días: revisar movimientos hoy y estado inversiones (score 45, crítica)",
+    "EPM: 647.2M COP deuda acumulada requiere acción inmediata, no análisis",
+    "Hamilton: cobro vencido (deadline 17 abr), validar cumplimiento promesa"
   ],
-  "vencidas": [],
-  "frase_dia": "Un jefe es quien logra que otros logren.",
-  "generado_at": "2026-04-23T11:00:01",
+  "top_3": [
+    {
+      "tarea": "Revisar estado real de caja + inversiones + movimientos últimas 48h",
+      "categoria": "SUPERVIVENCIA",
+      "porque": "8 días de runway, necesitas números reales para decisiones",
+      "tarea_id": "situacion_caja_familiar"
+    },
+    {
+      "tarea": "Llamar a Andrea: deuda Condugas + cobro EPM (180M reajustes Río Negro) + definir estrategia inmediata",
+      "categoria": "SUPERVIVENCIA",
+      "porque": "647M COP en riesgo, requiere decisión ejecutiva hoy",
+      "tarea_id": "resolver_deudas_condugas"
+    },
+    {
+      "tarea": "Base de datos clientes única (necesidades + estado actual) — 30 min máximo",
+      "categoria": "ESTRATEGIA",
+      "porque": "Score 47, crítica. Sin visibilidad clara de ingresos potenciales no hay plan",
+      "tarea_id": "clientes_base"
+    }
+  ],
+  "mega_dia": "Si logras: llamada Andrea (deuda+cobro) + revisar caja real + base clientes = día ganado",
+  "contactar_hoy": [
+    {
+      "persona": "Andrea",
+      "motivo": "Deudas Condugas + estrategia cobro EPM 180M + tiquetes Cartagena"
+    },
+    {
+      "persona": "Pilar/Basa",
+      "motivo": "Propuestas POT Aguactala (agendar si es posible)"
+    }
+  ],
+  "ojo_con": [
+    "56 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+    "Sueño 4h 02m (37%) — TDAH + decisiones críticas = riesgo. Descansa antes de llamadas importantes",
+    "17 tareas vencidas acumuladas, 44 críticas abierta — priorización radical necesaria",
+    "Datos caja/facturación sin actualizar 5 días — trabajas con información obsoleta"
+  ],
+  "vencidas": [
+    "Cobro Hamilton (17 abr)",
+    "Validar Camacol escalada salarial (17 abr)",
+    "Documentación debido proceso EPM (18 abr)",
+    "Revisar rendimiento contratos críticos (20 abr)"
+  ],
+  "frase_dia": "No análisis sin acción. Hoy: números reales + una llamada que mueva caja.",
+  "generado_at": "2026-04-23T22:16:36",
   "fecha": "2026-04-23",
   "stats": {
-    "abiertas": 103,
-    "criticas": 44,
-    "vencidas": 18,
+    "abiertas": 111,
+    "criticas": 51,
+    "vencidas": 17,
     "estancadas": 51,
-    "sin_evaluar": 77
+    "sin_evaluar": 86
   },
   "criticas_sin_fecha": [
     {
@@ -119,6 +158,36 @@
       "fecha_limite": "2026-04-23"
     },
     {
+      "id": "2026-04-22-c001",
+      "tarea": "Evaluar y reparar/reemplazar equipo dañado por sobreamperaje",
+      "dias": 0,
+      "fecha_limite": "2026-04-23"
+    },
+    {
+      "id": "2026-04-22-c002",
+      "tarea": "Revisar protocolo de seguridad eléctrica en hogar/obra",
+      "dias": 0,
+      "fecha_limite": "2026-04-23"
+    },
+    {
+      "id": "2026-04-22-c004",
+      "tarea": "Construir narrativa madre (5 bloques): qué pasó, qué está probado, cuánto falta, riesgo para EPM, de",
+      "dias": 0,
+      "fecha_limite": "2026-04-23"
+    },
+    {
+      "id": "2026-04-22-c005",
+      "tarea": "Preparar mensaje ejecutivo de 20 minutos para pedir reunión con alto nivel EPM",
+      "dias": 0,
+      "fecha_limite": "2026-04-23"
+    },
+    {
+      "id": "2026-04-22-c007",
+      "tarea": "Radicación formal paralela a llamada ejecutiva con bloques: hechos, impacto, riesgos, solicitud, pla",
+      "dias": 0,
+      "fecha_limite": "2026-04-23"
+    },
+    {
       "id": "2026-04-17-c003",
       "tarea": "Auditar estructura de deuda y cuentas por cobrar entre Condugas, socios e IC (excisión no pagada)",
       "dias": 1,
@@ -133,6 +202,12 @@
     {
       "id": "2026-04-17-c002",
       "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en EPM e incorporando Vanti, gas de occ",
+      "dias": 2,
+      "fecha_limite": "2026-04-25"
+    },
+    {
+      "id": "2026-04-22-c006",
+      "tarea": "Ejecutar 4 rutas simultáneas: 1) Negocio (VP Negocios), 2) Jurídica/Reclamaciones, 3) Portal Pagos P",
       "dias": 2,
       "fecha_limite": "2026-04-25"
     }

@@ -40,19 +40,19 @@
       "semana": "W17",
       "periodo": "2026-04-17 a 2026-04-23",
       "metricas": {
-        "creadas_semana": 55,
-        "cerradas_semana": 9,
+        "creadas_semana": 64,
+        "cerradas_semana": 10,
         "evaluadas_semana": 3,
-        "abiertas_total": 103,
+        "abiertas_total": 111,
         "ratio_cierre": 16
       },
       "totales": {
-        "tareas_detectadas": 78,
-        "decisiones": 30,
-        "ideas": 30,
-        "alertas": 15
+        "tareas_detectadas": 99,
+        "decisiones": 40,
+        "ideas": 40,
+        "alertas": 20
       },
-      "generado_at": "2026-04-23T11:00:01"
+      "generado_at": "2026-04-23T22:16:36"
     }
   ]
 }

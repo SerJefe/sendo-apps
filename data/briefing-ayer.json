@@ -1,205 +1,150 @@
 {
-  "fecha": "2026-04-21",
+  "fecha": "2026-04-22",
   "tareas_extraidas": [
     {
-      "tarea": "Hacer auditoría de causación histórica (operativo vs administrativo) en sistemas actuales",
-      "responsable": "Camilo Marín",
-      "prioridad": "alta"
+      "tarea": "Coordinar entrega/cambio de producto con Paulito",
+      "responsable": "Unknown",
+      "prioridad": "baja"
     },
     {
-      "tarea": "Llamar a Proin para validar términos de reajuste en contrato de 8% de vida",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
+      "tarea": "Revisar y corregir funcionalidad de nombres en aplicación (está retornando rojo)",
+      "responsable": "Unknown",
+      "prioridad": "media"
     },
     {
-      "tarea": "Asignar líder de migración Odu (Ricardo o Catalina) con bono de 5M y autoridad para eliminar cargos",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Estructurar Being CoRe como metodología complementaria a Condugas",
+      "tarea": "Conseguir niñera para cuidado martes y jueves",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "media"
     },
     {
-      "tarea": "Promover persona de logística a rol de mayor responsabilidad con mentoring",
-      "responsable": "Sebastian Sanchez Acevedo",
+      "tarea": "Diagnosticar si hay cortocircuito por componentes juntos",
+      "responsable": "Unknown",
       "prioridad": "media"
     },
     {
-      "tarea": "Investigar plataforma de grabación de pantalla directo desde computadores hacia ruta centralizada",
-      "responsable": "Juan",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Autorizar y configurar pre-setup de grabación automática a YouTube y Cloud Code con Notebook LM",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Agregar visualización de cuadrillas al rastreador de rutas (actualmente solo muestra vehículos)",
-      "responsable": "William",
+      "tarea": "Extraer información estructurada con Emmanuel (datos de jueves) en formato manual si es necesario",
+      "responsable": "Sebastian / Emmanuel",
       "prioridad": "alta"
     },
     {
-      "tarea": "Implementar IA para contrastar dirección/tiempo de cuadrilla vs datos liquidación obra (detectar divergencias)",
-      "responsable": "William",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Generar alertas automáticas desde sistema sin intervención humana (recorrido 2h en dirección no mapeada)",
-      "responsable": "William",
+      "tarea": "Llamar a equipos para conteo/recopilación de datos no estructurados",
+      "responsable": "Sebastian",
       "prioridad": "media"
     },
     {
-      "tarea": "Evaluar acceso y costo de sistema Odu (60-70K COP por usuario) vs alternativas de eficiencia operativa",
-      "responsable": "Sebastian Sanchez Acevedo",
+      "tarea": "Identificar 3 hechos probados de aviso anticipado antes del deterioro terminal",
+      "responsable": "Sebastian",
       "prioridad": "alta"
     },
     {
-      "tarea": "Validar con mesa directiva decisiones estratégicas que requieren alcance compartido (no decisiones unilaterales)",
+      "tarea": "Definir frase de 12 palabras que resuma caso sin sonar llorón",
+      "responsable": "Sebastian",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Realizar chequeos médicos periódicos para monitoreo de bacteria y prevención de recaídas",
+      "responsable": "Tercero (familia)",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Hablar con Manuel sobre apoyo en implementación de nómina y contabilidad",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Confirmar y asistir reunión con Juan Soberón a las 5:00 PM",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Completar mapeo y nomenclatura de todos los potreros en la propiedad de 68 hectáreas",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Ejecutar valorización separada de teca, ganado y tierra para estrategia de venta",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Desarrollar proyecto de 'economía plateada' en Jericó (turismo de bienestar, orgánico, cuidado personal)",
+      "tarea": "Revisar estrategia de implementación en producción con datos parametrizados",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Agendar reunión con doña Olga para mañana en la mañana",
-      "responsable": "asistente",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Resolver problema de placa de vehículo en club/reunión PM",
+      "tarea": "Desarrollar framework sobre 'el polvorín' como concepto de Being CoRe",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "media"
     },
     {
-      "tarea": "Asegurar nutrición básica: Sebastian no ha comido desde ayer 7 PM",
-      "responsable": "asistente",
+      "tarea": "Enviar ubicación (contexto no especificado)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "baja"
+    },
+    {
+      "tarea": "Formular preguntas específicas al entrenador sobre contextos de uso de 'sentido'",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "media"
     },
     {
-      "tarea": "Definir y comunicar horizonte de tiempo para sustitución de carbón por combustibles alternativos",
-      "responsable": "Cementeras / Interlocutor PM",
-      "prioridad": "alta"
+      "tarea": "Evaluar y reparar/reemplazar equipo dañado por sobreamperaje",
+      "responsable": "Unknown",
+      "prioridad": "critica"
     },
     {
-      "tarea": "Finalizar diseños definitivos de red distribución PM",
-      "responsable": "PM",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Revisar y reestructurar ecuaciones contractuales con EPM para evitar multas crecientes",
+      "tarea": "Revisar protocolo de seguridad eléctrica en hogar/obra",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Auditar causación contable y distribución entre operativo/administrativo en múltiples sistemas (Perseo, Malfi, Odu)",
-      "responsable": "Sebastian Sanchez Acevedo",
+      "tarea": "Definir cifra mínima de caja requerida en 5 días para salvar operación (nómina y proveedores críticos)",
+      "responsable": "Sebastian",
       "prioridad": "critica"
     },
     {
-      "tarea": "Parametrizar completamente Odu (cuentas, distribuciones, causales) antes de migración",
-      "responsable": "Camilo Marín",
+      "tarea": "Construir narrativa madre (5 bloques): qué pasó, qué está probado, cuánto falta, riesgo para EPM, decisión concreta",
+      "responsable": "Sebastian",
       "prioridad": "critica"
     },
     {
-      "tarea": "Parametrizar Odu completamente (eliminar cargos redundantes, mapear flujos de contabilidad/operaciones)",
-      "responsable": "Sebastian Sanchez Acevedo",
+      "tarea": "Preparar mensaje ejecutivo de 20 minutos para pedir reunión con alto nivel EPM",
+      "responsable": "Sebastian",
       "prioridad": "critica"
     },
     {
-      "tarea": "Establecer transición Odu como obligatoria (mañana y pasado mañana), sin negociación",
-      "responsable": "Sebastian Sanchez Acevedo",
+      "tarea": "Ejecutar 4 rutas simultáneas: 1) Negocio (VP Negocios), 2) Jurídica/Reclamaciones, 3) Portal Pagos Proveedores, 4) Canal Ética/Transparencia",
+      "responsable": "Sebastian",
       "prioridad": "critica"
     },
     {
-      "tarea": "Desarrollar e implementar sistema integrado 'mapa neuronal' para agregación de información operativa",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Diseñar e implementar sistema de automatización en Condugas para alcanzar operación 60-70% autónoma en <3 meses",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Revertir transferencia de 14M COP a papá de Sebastian para cubrir fly pass y mantener nómina operativa",
-      "responsable": "Camilo",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Estructurar transparencia de flujos Inversora y Construtem para decisión de supervivencia conjunta",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Cumplir cronograma de construcción Fase 2 (concretos y máquinas)",
-      "responsable": "EPM",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Completar instalaciones para primeras dos máquinas",
-      "responsable": "EPM",
+      "tarea": "Radicación formal paralela a llamada ejecutiva con bloques: hechos, impacto, riesgos, solicitud, plazo",
+      "responsable": "Sebastian",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Asistir a evento a las 19:00",
-    "Mantener estructura centralizada de administración para absorber ingresos en contabilidad general",
-    "Diagnosticar impacto de reajuste insuficiente (3% vs 14-18%) en pérdida operacional de enero (22%)",
-    "Migración a Odu es solución estructural porque centraliza nómina y reporte exógena en tiempo real",
-    "Presente: seguir operando con riesgo de mal causado; Futuro: resolver con Odu",
-    "Reconocer que reajuste del 3% en enero es insuficiente para cubrir costo (requiere 14-18%)",
-    "Implementar protocolo donde empleados traigan alternativas antes de elevar problema a jefatura",
-    "Priorizar resolución de consecuencias operativas (demandas, tutelas) antes que procesos",
-    "Odu es obligatorio, no negociable; plazo: mañana/pasado mañana",
-    "Bono de 5M para líder que elimine cargos redundantes e implemente Odu"
+    "Aceptar descuento acumulable del 30%",
+    "Confirmar continuidad de estrategia combativa frente a volatilidad energética y política próximos 2 meses",
+    "Enfoque en regularidad de horarios más que ventanas de sueño",
+    "Transición gradual de colecho hacia independencia",
+    "Reducir dependencia de tetero/leche",
+    "Consideración de dieta baja en azúcares/carbohidratos",
+    "No volver a conectar cables sin verificar amperaje y contexto de seguridad",
+    "Aceptación implícita de invitación a evento privado con avión",
+    "Encuentro presencial confirmado para mañana en piscina",
+    "Cambio de narrativa: de 'nos están maltratando' a 'riesgo de continuidad operativa por decisiones acumuladas'"
   ],
   "ideas": [
-    "Estrategia de administración central beneficia a Condugas cuando peso es bajo en contratos individuales",
-    "Falta de parametrización en Odu es raíz de errores causales y reportes incorrectos",
-    "Centro de operación único (Odu) elimina riesgo de múltiples reportes UGP",
-    "Exógena en tiempo real desde Odu permite pre-exógena como validación continua",
-    "Falta de soberanía en gas natural es barrera estructural a penetración de mercado",
-    "Conciencia es el apalancador para movimiento operacional",
-    "Jefatura como consejero requiere que empleado primero diagnostique su propio impacto",
-    "Conciencia operacional surge solo cuando se ve resultado en sistema (Odu)",
-    "Incentivo económico + presión temporal alinea equipo sin negociación",
-    "Resistencia inicial no es negativa; muchos adoptan cambios después (ej: cajas con logo)"
+    "Pandemia aceleró transformación digital 24 años; ciclos de evolución humana se comprimen de 10 a 50 años (ahora 25)",
+    "Cambios en energéticos y tensión política requieren postura adaptativa y visible en liderazgo de PM",
+    "Diferencia estratégica de tener gerente como Sebastian vs. gestión anterior (últimos 4 años)",
+    "Necesidad de prepararse para escenarios adversos esperando lo mejor",
+    "Comportamiento infantil es manipulación inconsciente (supervivencia natural), no intencional",
+    "Regularidad de sueño mejora envejecimiento según datos",
+    "Necesidad de apoyo externo (hermana tiene límites de disponibilidad)",
+    "Eliminación de azúcares reduce inflamación y dolores articulares sin causar debilidad",
+    "Presencia en Instagram/Facebook como Quality Incat con productos de limpieza",
+    "Crear contenido educativo sobre animales para redes sociales"
   ],
   "frases": [
-    "A las 7, tú tienes que irte",
-    "Tiene unas ecuaciones y paga uno en todo y uno no tiene forma de recomponer, porque si se recompone, le va más mal porque la multa es grandísima",
-    "Nosotros en este resultado bruto no tenemos cargado... la administración central cobra sobre eso, entonces aparentemente sube la facturación",
-    "Cuando reporta nómina, reporta una UGP diferente. Cuando usted lo tiene en Odu, ya usted no tiene ese riesgo, porque todo, absolutamente todo sale por Odu",
-    "Este problema sigue estando y eso es aquí hacer una auditoría, como lo que pasó con el Sena"
+    "es acumulable, pero usted cada que",
+    "En esta nueva disputa vamos a ver quién se quema, y entre el yaje y el edema, quién trae más votación",
+    "el sistema me tiene enbolatado",
+    "Tengo mucho miedo con todo lo que está pasando con Tesla, todo lo que está pasando con la energía",
+    "cuál es esa fuerza y permitítame el atrevimiento de decirle cuál es la energía combativa que usted tiene para lo que se viene"
   ],
   "alertas_supervivencia": [
-    "CRÍTICA: Caja con 8 días de cobertura. Ingresos al 45% de meta, producción al 27% (déficit 73%). Deuda consolidada -2.300M COP. Requiere inyección inmediata o restructuración.",
-    "CRÍTICA: Integración de sistemas de nómina (Perseo/Malfi/Odu) genera riesgo de reportes exógenos incorrectos con pagos desde múltiples fuentes sin trazabilidad clara.",
-    "SEVERA: Incumplimiento estructural de Carlos en promesas operacionales. Fuerza de ventas no ejecuta. Sistema Odu puede documentar incapacidad pero no la resuelve.",
-    "SEVERA: Agotamiento ejecutivo. Sebastian acumula decisiones sobre Condugas, propiedades rurales (68 hectáreas), estructura familiar, tensiones políticas sin descanso aparente.",
-    "MODERADA: Falta de soberanía en penetración de gas natural genera pérdidas del 22% en enero. Reajuste insuficiente compromete viabilidad de filial."
+    "CRÍTICO: Deuda acumulada de 647.2M COP con EPM representa riesgo inmediato de interrupcción operativa de Condugas. Requiere decisión y acción en horas/días, no semanas.",
+    "CRÍTICO: Ausencia de plan de acción específico tras diagnóstico de crisis en reunión 23. Solo análisis sin ejecución visible.",
+    "ALTO: Extracción manual de información de Condugas indica falta de sistemas informativos operacionales en momento de máxima necesidad.",
+    "ALTO: Implementación fallida de nómina/contabilidad con recursos insuficientes afecta visibilidad financiera necesaria para resolver crisis.",
+    "MEDIO: Patrón de dispersión cognitiva en 22 de 33 reuniones sugiere agotamiento, sobrecarga o dificultad para priorizar ante crisis existencial de la empresa."
   ],
-  "total_lifelogs": 31,
+  "total_lifelogs": 34,
   "procesado_con": "haiku_v3_structured"
 }

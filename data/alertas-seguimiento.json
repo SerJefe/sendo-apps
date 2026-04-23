@@ -1,11 +1,11 @@
 {
-  "generado_at": "2026-04-23T16:00:01",
+  "generado_at": "2026-04-23T20:00:01",
   "resumen": {
-    "total_abiertas": 103,
+    "total_abiertas": 110,
     "vencidas": 18,
-    "por_vencer_48h": 4,
+    "por_vencer_48h": 10,
     "estancadas_5d": 49,
-    "sin_evaluar": 77,
+    "sin_evaluar": 84,
     "criticas_sin_accion": 0
   },
   "vencidas": [
@@ -142,6 +142,42 @@
       "tarea": "Revertir transferencia de 14M COP a papá de Sebastian para cubrir fly pass y mantener nómina operativa",
       "deadline": "2026-04-24",
       "dias_restantes": 1
+    },
+    {
+      "id": "2026-04-22-c001",
+      "tarea": "Evaluar y reparar/reemplazar equipo dañado por sobreamperaje",
+      "deadline": "2026-04-23",
+      "dias_restantes": 0
+    },
+    {
+      "id": "2026-04-22-c002",
+      "tarea": "Revisar protocolo de seguridad eléctrica en hogar/obra",
+      "deadline": "2026-04-23",
+      "dias_restantes": 0
+    },
+    {
+      "id": "2026-04-22-c004",
+      "tarea": "Construir narrativa madre (5 bloques): qué pasó, qué está probado, cuánto falta, riesgo para EPM, decisión concreta",
+      "deadline": "2026-04-23",
+      "dias_restantes": 0
+    },
+    {
+      "id": "2026-04-22-c005",
+      "tarea": "Preparar mensaje ejecutivo de 20 minutos para pedir reunión con alto nivel EPM",
+      "deadline": "2026-04-23",
+      "dias_restantes": 0
+    },
+    {
+      "id": "2026-04-22-c006",
+      "tarea": "Ejecutar 4 rutas simultáneas: 1) Negocio (VP Negocios), 2) Jurídica/Reclamaciones, 3) Portal Pagos Proveedores, 4) Canal Ética/Transparencia",
+      "deadline": "2026-04-25",
+      "dias_restantes": 2
+    },
+    {
+      "id": "2026-04-22-c007",
+      "tarea": "Radicación formal paralela a llamada ejecutiva con bloques: hechos, impacto, riesgos, solicitud, plazo",
+      "deadline": "2026-04-23",
+      "dias_restantes": 0
     }
   ],
   "estancadas": [

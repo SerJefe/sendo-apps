@@ -3,11 +3,11 @@
   "total_lifelogs": 34,
   "total_reuniones": 33,
   "procesado_con": "haiku_v3_structured",
-  "procesado_at": "2026-04-23T18:02:22",
+  "procesado_at": "2026-04-23T22:18:42",
   "reuniones": [
     {
       "idx": 0,
-      "resumen": "Conversación personal/doméstica sobre comida, planes nocturnos y clima. Discusión sobre disponibilidad de carne congelada y preparación de longaniza. Contexto completamente ajeno a operaciones empresariales.",
+      "resumen": "Conversación personal informal sobre comida, planes nocturnos y clima. Discusión sobre preparar longaniza, falta de carne congelada y temperatura ambiente.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -23,33 +23,20 @@
     },
     {
       "idx": 1,
-      "resumen": "Conversación sobre compras, descuentos (30%) y cambios de productos. Menciona a Paulito/Paulina y coordinación de entregas. Tema de logística doméstica con posibles implicaciones de gestión de inventario pequeño.",
+      "resumen": "Conversación sobre descuentos comerciales (30%), compras y gestión de inventario. Menciona cambios de productos, oportunidades de compra y coordinación con Paulito sobre selección de items.",
       "impacto": "bajo",
       "personas": [
         "Paulito",
         "Paulina"
       ],
-      "tareas": [
-        {
-          "tarea": "Coordinar entrega/cambio de producto con Paulito",
-          "responsable": "Unknown",
-          "prioridad": "baja",
-          "tipo": "seguimiento",
-          "contexto": "compras domésticas",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": [
-            "Paulito"
-          ]
-        }
-      ],
+      "tareas": [],
       "decisiones": [
-        "Aceptar descuento acumulable del 30%"
+        "Cambiar existencia de productos antes de que se corten"
       ],
-      "ideas": [],
-      "frases": [
-        "es acumulable, pero usted cada que"
+      "ideas": [
+        "Aprovechar descuentos acumulables del 30%"
       ],
+      "frases": [],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversación sobre compras y otros temas",
@@ -59,14 +46,14 @@
     },
     {
       "idx": 2,
-      "resumen": "Conversación política casual sobre candidaturas, figuras públicas y nueva candidata a vicepresidencia. Tono crítico/satírico. Sin relación con operaciones empresariales.",
+      "resumen": "Conversación política casual sobre candidatos y figuras públicas en disputa electoral. Comentarios sobre comportamiento de políticos y cuestionamiento sobre nueva candidata a vicepresidencia.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [
-        "En esta nueva disputa vamos a ver quién se quema, y entre el yaje y el edema, quién trae más votación"
+        "En esta nueva disputa vamos a ver quién se quema"
       ],
       "preguntas_abiertas": [
         "¿Quién es la nueva candidata a la vicepresidencia?"
@@ -79,18 +66,14 @@
     },
     {
       "idx": 3,
-      "resumen": "Conversación breve sobre problemas con sistema que causa confusión en llamadas y consultas sobre ubicaciones (puerto campestre, barra hermano). Muy fragmentada, contexto poco claro.",
+      "resumen": "Breve intercambio técnico sobre problemas con un sistema que causa confusión en llamadas y direcciones de ubicaciones (puerto, campestre).",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
-      "frases": [
-        "el sistema me tiene enbolatado"
-      ],
-      "preguntas_abiertas": [
-        "¿Qué sistema está causando confusión?"
-      ],
+      "frases": [],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversación sobre un sistema y ubicaciones",
       "startTime": "2026-04-22T01:20:07Z",
@@ -99,7 +82,7 @@
     },
     {
       "idx": 4,
-      "resumen": "Reflexión estratégica profunda sobre preparación digital, aceleración tecnológica (Tesla, energía), cambio político y necesidad de 'energía combativa' para enfrentar próximos 2 meses. Speaker expresa preocupación post-pandemia. Relación de 23 años como contratista de PM (presumiblemente Proyectos Metropolitanos o similar). Alto valor estratégico.",
+      "resumen": "Reflexión estratégica sobre preparación digital post-pandemia, cambio acelerado en energéticos (Tesla), tensión política y necesidad de 'energía combativa' para enfrentar desafíos futuros en próximos 2 meses. Sebastian como gerente en PM representa cambio positivo respecto a 3 años atrás.",
       "impacto": "alto",
       "personas": [
         "Sebastian Sanchez Acevedo",
@@ -107,24 +90,19 @@
         "Humberto Iglesia"
       ],
       "tareas": [],
-      "decisiones": [
-        "Confirmar continuidad de estrategia combativa frente a volatilidad energética y política próximos 2 meses"
-      ],
+      "decisiones": [],
       "ideas": [
-        "Pandemia aceleró transformación digital 24 años; ciclos de evolución humana se comprimen de 10 a 50 años (ahora 25)",
-        "Cambios en energéticos y tensión política requieren postura adaptativa y visible en liderazgo de PM",
-        "Diferencia estratégica de tener gerente como Sebastian vs. gestión anterior (últimos 4 años)",
-        "Necesidad de prepararse para escenarios adversos esperando lo mejor"
+        "Acelerar preparación digital para cambios energéticos y políticos",
+        "Aprovechar liderazgo de Sebastian en PM para afrontar incertidumbre",
+        "Documentar capacidad de gestion diferencial de últimos 4 años"
       ],
       "frases": [
-        "Tengo mucho miedo con todo lo que está pasando con Tesla, todo lo que está pasando con la energía",
-        "cuál es esa fuerza y permitítame el atrevimiento de decirle cuál es la energía combativa que usted tiene para lo que se viene",
-        "Nosotros somos contratistas de PM hace 23 años y no hemos podido tener unas conversaciones tan como tan fantasmagóricas como los últimos cuatro años"
+        "cuál es la energía combativa que usted tiene para lo que se viene",
+        "Nosotros somos contratistas de PM hace 23 años y no hemos podido tener unas conversaciones tan fantasmagóricas"
       ],
       "preguntas_abiertas": [
-        "¿Cuál es la energía combativa de Sebastian para enfrentar crisis energética y política próximos 2 meses?",
-        "¿Cuáles son escenarios adversos esperados en el entorno PM?",
-        "¿Cómo preparar equipo y contratación para volatilidad acelerada?"
+        "¿Cuál es la energía combativa del equipo para enfrentar lo peor en próximos 2 meses?",
+        "¿Cómo prepararse para velocidad acelerada de cambio energético?"
       ],
       "tension_signal": "alto",
       "titulo_limitless": "Discusión sobre desafíos actuales: energía, política, IA y liderazgo",
@@ -134,32 +112,32 @@
     },
     {
       "idx": 5,
-      "resumen": "Conversación técnica breve sobre interfaz/funcionalidad de aplicación. Problema: la aplicación no muestra nombres de ubicaciones, sale error rojo. Sebastian menciona no entender bien la solución. Muy fragmentado.",
+      "resumen": "Discusión técnica breve sobre interfaz de aplicación con problemas de direccionamiento. Sebastian se suma comentando que tampoco entiende funcionalidad. Validación de interfaz con resultado incorrecto (rojo).",
       "impacto": "bajo",
       "personas": [
         "Sebastian Sanchez Acevedo"
       ],
       "tareas": [
         {
-          "tarea": "Revisar y corregir funcionalidad de nombres en aplicación (está retornando rojo)",
-          "responsable": "Unknown",
+          "tarea": "Corregir interfaz de aplicación para mostrar nombres y direcciones correctamente",
+          "responsable": "equipo técnico",
           "prioridad": "media",
           "tipo": "pendiente",
-          "contexto": "bug en UI de aplicación",
+          "contexto": "aplicacion",
           "fecha_limite": null,
           "monto_cop": null,
-          "personas_mencionadas": []
+          "personas_mencionadas": [
+            "Sebastian Sanchez Acevedo"
+          ]
         }
       ],
       "decisiones": [],
       "ideas": [],
-      "frases": [
-        "la aplicación no le deja, no le dice el nombre de"
-      ],
+      "frases": [],
       "preguntas_abiertas": [
         "¿Por qué la aplicación no muestra nombres de ubicaciones?"
       ],
-      "tension_signal": "bajo",
+      "tension_signal": "medio",
       "titulo_limitless": "Conversación sobre una aplicación",
       "startTime": "2026-04-22T01:27:12Z",
       "endTime": "2026-04-22T01:28:26Z",
@@ -167,41 +145,42 @@
     },
     {
       "idx": 6,
-      "resumen": "Monólogo personal extenso (66 min) de Sebastian sobre: rutina de sueño del hijo (desafíos para regularizar horarios), comportamiento infantil y manipulación inconsciente, transición de colecho a cama propia, alimentación/leche, búsqueda de niñera (martes-jueves). Reflexión profunda sobre desarrollo infantil y gestión doméstica.",
-      "impacto": "bajo",
+      "resumen": "Reflexión profunda (66 min) de Sebastian sobre rutinas de sueño del hijo, comportamiento infantil, manipulación inconsciente por sobrevivencia, transición de colecho, alimentación con leche/tetero y búsqueda de niñera (martes y jueves) porque hermana no podrá seguir ayudando.",
+      "impacto": "medio",
       "personas": [
         "Sebastian Sanchez Acevedo"
       ],
       "tareas": [
         {
-          "tarea": "Conseguir niñera para cuidado martes y jueves",
+          "tarea": "Contratar niñera para cuidado de hijo martes y jueves",
           "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "media",
+          "prioridad": "alta",
           "tipo": "compromiso",
-          "contexto": "cuidado infantil",
-          "fecha_limite": null,
+          "contexto": "personal/familiar",
+          "fecha_limite": "2026-05-06",
           "monto_cop": null,
-          "personas_mencionadas": []
+          "personas_mencionadas": [
+            "hermana"
+          ]
         }
       ],
       "decisiones": [
-        "Enfoque en regularidad de horarios más que ventanas de sueño",
-        "Transición gradual de colecho hacia independencia",
-        "Reducir dependencia de tetero/leche"
+        "Establecer horarios regulares de sueño priorizando rutina sobre ventanas",
+        "Reducir dependencia de colecho e independizar niño a su propia cama",
+        "Evaluar necesidad real de tetero vs otros alimentos"
       ],
       "ideas": [
-        "Comportamiento infantil es manipulación inconsciente (supervivencia natural), no intencional",
-        "Regularidad de sueño mejora envejecimiento según datos",
-        "Necesidad de apoyo externo (hermana tiene límites de disponibilidad)"
+        "Rutina regularizada mejora envejecimiento según datos",
+        "Comportamiento infantil obedece sobrevivencia natural, no solo manipulación",
+        "Usar fin de semana para reforzar horarios es especialmente difícil"
       ],
       "frases": [
-        "él ya está manipulando inconscientemente porque él está tratando de sobrevivir",
-        "establecer el horario, más que las ventanas nos ha parecido más difícil, sobre todo cuando llega el fin de semana"
+        "hay un momento donde él ya está manipulando inconscientemente porque está tratando de sobrevivir",
+        "establecer el horario, más que las ventanas nos ha parecido más difícil"
       ],
       "preguntas_abiertas": [
-        "¿Cómo regularizar horarios de sueño con niño que se excita fácilmente?",
-        "¿Cuándo es momento optimo para transición completa de colecho?",
-        "¿Disponibilidad y costo de niñera para martes-jueves?"
+        "¿Cuán urgente es conseguir niñera antes de que hermana deje de ayudar?",
+        "¿Cuál es el momento óptimo para transición total a cama propia?"
       ],
       "tension_signal": "medio",
       "titulo_limitless": "Anécdotas personales y reflexiones",
@@ -211,15 +190,13 @@
     },
     {
       "idx": 7,
-      "resumen": "Conversación social breve sobre personas desconocidas, una mujer con 700 seguidores en redes y su amiga. Tono casual, sin contexto claro. Completamente ajeno a operaciones empresariales.",
+      "resumen": "Conversación casual sobre una mujer (pelada) con 700 seguidores en redes sociales, su amiga y bromas sobre estatus social. Tono informal y casual.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
-      "frases": [
-        "tiene una amiga como bacana"
-      ],
+      "frases": [],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversación sobre una persona desconocida",
@@ -229,18 +206,16 @@
     },
     {
       "idx": 8,
-      "resumen": "Conversación sobre nutrición: beneficios de eliminar azúcares y carbohidratos (reduce inflamación, dolor articular, sin debilidad). Reflexión personal sobre estado físico. Tema de salud/bienestar sin relación empresarial.",
+      "resumen": "Conversación breve sobre beneficios de dieta sin azúcares/carbohidratos: reducción de inflamación, eliminación de dolores articulares y ausencia de debilidad. Reflexión personal sobre sensación de bienestar.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
-      "decisiones": [
-        "Consideración de dieta baja en azúcares/carbohidratos"
-      ],
+      "decisiones": [],
       "ideas": [
-        "Eliminación de azúcares reduce inflamación y dolores articulares sin causar debilidad"
+        "Eliminar azúcares y carbohidratos reduce inflamación corporal y dolores articulares"
       ],
       "frases": [
-        "de hambre, no sentí debilidad, ¿tú ves?"
+        "no sentí hambre, no sentí debilidad"
       ],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
@@ -251,7 +226,7 @@
     },
     {
       "idx": 9,
-      "resumen": "Anécdota fragmentada sobre incidente en calle, cadena, interacción con personas que hablaban inglés, abrazos y agradecimientos, salida acelerada de alguien (Camilo). Muy poco coherente, contexto completamente oscuro.",
+      "resumen": "Anécdota personal sobre encuentro callejero, interacción con personas desconocidas, entrega de cadena, agradecimiento en inglés, encuentro con Camilo que arrancó. Relato narrativo sin contexto claro de negocio.",
       "impacto": "bajo",
       "personas": [
         "Camilo"
@@ -271,30 +246,17 @@
     },
     {
       "idx": 10,
-      "resumen": "Conversación técnica breve sobre problema de carga en dispositivo/batería y posible cortocircuito. Pregunta si dos componentes que están juntos podrían causar corto. Muy fragmentado, poco contexto.",
+      "resumen": "Discusión técnica muy breve sobre fallo de carga en dispositivo y posible cortocircuito. Indagación si dos componentes separados podrían tocarse y generar corto si se unen.",
       "impacto": "bajo",
       "personas": [],
-      "tareas": [
-        {
-          "tarea": "Diagnosticar si hay cortocircuito por componentes juntos",
-          "responsable": "Unknown",
-          "prioridad": "media",
-          "tipo": "pendiente",
-          "contexto": "problema técnico/eléctrico",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
-        }
-      ],
+      "tareas": [],
       "decisiones": [],
       "ideas": [],
-      "frases": [
-        "¿Se hizo corto?"
-      ],
+      "frases": [],
       "preguntas_abiertas": [
-        "¿Cuál es la causa real del fallo de carga?"
+        "¿Se generó un cortocircuito?"
       ],
-      "tension_signal": "medio",
+      "tension_signal": "bajo",
       "titulo_limitless": "Discusión inicial sobre un problema técnico de carga y un posible cortocircuito",
       "startTime": "2026-04-22T02:55:20Z",
       "endTime": "2026-04-22T02:56:03Z",
@@ -302,43 +264,29 @@
     },
     {
       "idx": 11,
-      "resumen": "Discusión sobre incidente que dañó equipo/dispositivo: conexión de cable con amperaje muy alto. Contexto de mujer embarazada, madre, hijo y alergia (riesgo de seguridad). Reproche por acción sin pensar. Daño significativo confirmado.",
-      "impacto": "alto",
+      "resumen": "Discusión sobre incidente que dañó equipo: conexión de cable con amperaje altísimo en presencia de mujer embarazada, madre e hijo con alergia. Reproche por acción sin pensar. Componente está dañado.",
+      "impacto": "medio",
       "personas": [],
       "tareas": [
         {
-          "tarea": "Evaluar y reparar/reemplazar equipo dañado por sobreamperaje",
-          "responsable": "Unknown",
-          "prioridad": "critica",
+          "tarea": "Evaluar daño completo del equipo y determinar reparación o reemplazo",
+          "responsable": "técnico",
+          "prioridad": "alta",
           "tipo": "pendiente",
-          "contexto": "incidente de seguridad eléctrica con riesgo de vida",
-          "fecha_limite": "2026-04-23",
-          "monto_cop": null,
-          "personas_mencionadas": []
-        },
-        {
-          "tarea": "Revisar protocolo de seguridad eléctrica en hogar/obra",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "critica",
-          "tipo": "compromiso",
-          "contexto": "prevención de accidentes con embarazada y menores",
+          "contexto": "tecnico",
           "fecha_limite": "2026-04-23",
           "monto_cop": null,
           "personas_mencionadas": []
         }
       ],
-      "decisiones": [
-        "No volver a conectar cables sin verificar amperaje y contexto de seguridad"
-      ],
+      "decisiones": [],
       "ideas": [],
       "frases": [
-        "Lo que tú hiciste esta semana daña todo",
-        "Pusiste a conectar eso con un cable conectado a un a un amperaje altísimo",
+        "Pusiste a conectar eso con un cable conectado a un amperaje altísimo",
         "no puedes por cualquier cable, depende de lo que esté pegado"
       ],
       "preguntas_abiertas": [
-        "¿Cuál es el costo de reparación/reemplazo del equipo dañado?",
-        "¿Hubo riesgo actual para embarazada/hijo/alergia?"
+        "¿Cuáles son implicaciones de seguridad con mujer embarazada, madre e hijo alérgico?"
       ],
       "tension_signal": "alto",
       "titulo_limitless": "Discusión sobre un incidente y sus consecuencias",
@@ -348,7 +296,7 @@
     },
     {
       "idx": 12,
-      "resumen": "Conversación fragmentada y poco clara sobre respuestas negativas, menciones de cinta, objetos separados y referencias a 'animalitos'. Audio de baja calidad sin contexto ejecutivo.",
+      "resumen": "Conversación fragmentada y poco clara sobre respuestas negativas a algo. Sin contexto definido, posiblemente audio de baja calidad o personal.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -364,22 +312,20 @@
     },
     {
       "idx": 13,
-      "resumen": "Charla casual sobre herramientas IA, un evento privado con invitación a mostrar avión para jugadores, medidas corporales para traje, productos de limpieza en redes sociales y un altercado verbal donde Sebastian mantuvo calma pese a provocación.",
+      "resumen": "Conversación sobre IA, un nuevo juego adictivo, un evento privado para ver un avión y medidas para un traje. Mención de productos de limpieza y un altercado donde alguien contiene su rabia.",
       "impacto": "bajo",
       "personas": [
-        "Alejandro",
-        "Tochima",
-        "organizador evento"
+        "Alejandro la Papa",
+        "Tochima"
       ],
       "tareas": [],
-      "decisiones": [
-        "Aceptación implícita de invitación a evento privado con avión"
-      ],
+      "decisiones": [],
       "ideas": [
-        "Presencia en Instagram/Facebook como Quality Incat con productos de limpieza"
+        "Uso de IA para productividad",
+        "Participación en evento privado de logística aérea"
       ],
       "frases": [
-        "Yo le agradezco a dios esa calma que yo tengo, esa tranquilidad que yo tengo"
+        "Yo le agradezco a dios esa calma que yo tengo, esa tranquilidad"
       ],
       "preguntas_abiertas": [],
       "tension_signal": "medio",
@@ -390,7 +336,7 @@
     },
     {
       "idx": 14,
-      "resumen": "Conversación desenfocada sobre calorías en porciones, hipopótamos en Colombia (herencia de Pepe Cardona Correa desde años 80), sobrepoblación no controlada y propuesta educativa sobre animales en redes.",
+      "resumen": "Discusión casual sobre comida, dinero y una historia larga sobre hipopótamos introducidos ilegalmente en Colombia que se reprodujeron sin control.",
       "impacto": "bajo",
       "personas": [
         "Pepe Cardona Correa"
@@ -398,9 +344,11 @@
       "tareas": [],
       "decisiones": [],
       "ideas": [
-        "Crear contenido educativo sobre animales para redes sociales"
+        "Educación como solución a problemas complejos de medio ambiente"
       ],
-      "frases": [],
+      "frases": [
+        "La solución no está sencilla como nosotros nos la imaginamos"
+      ],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversación sobre comida, dinero, y política",
@@ -410,7 +358,7 @@
     },
     {
       "idx": 15,
-      "resumen": "Conversación extremadamente fragmentada sobre experiencias en ferias, IA que se domina en 28 días, gas lacrimógeno en eventos, videos de reacciones, sistema de venta por $700 y consejos de moda para una cita. Contexto caótico.",
+      "resumen": "Conversación diversa sin hilo conductor claro. Menciona eventos, experiencias con gas, IA (28 días para dominarla), consejos de moda y ayuda para conquista.",
       "impacto": "bajo",
       "personas": [
         "Pibe",
@@ -418,8 +366,13 @@
       ],
       "tareas": [],
       "decisiones": [],
-      "ideas": [],
-      "frases": [],
+      "ideas": [
+        "IA como herramienta accesible en 2026",
+        "Estrategia de conquista con detalles y sorpresas"
+      ],
+      "frases": [
+        "dominar la IA toma 28 días y cuesta menos que una cena. Adivina cuál te salva en 2026?"
+      ],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversación diversa",
@@ -429,15 +382,15 @@
     },
     {
       "idx": 16,
-      "resumen": "Juego simple con abuela sobre encontrar color azul, con repetición de reglas (quien encuentre azul gana), instrucciones de contar hasta tres. Contenido lúdico familiar sin relevancia ejecutiva.",
+      "resumen": "Juego simple entre abuelo y abuela donde hay que encontrar algo de color azul. Reglas repetidas varias veces, poco claro el resultado final.",
       "impacto": "bajo",
-      "personas": [
-        "Abuela"
-      ],
+      "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
-      "frases": [],
+      "frases": [
+        "Abuela, mire, el que encuentre el azul gana, ¿okay?"
+      ],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Juego con la abuela",
@@ -447,7 +400,7 @@
     },
     {
       "idx": 17,
-      "resumen": "Fragmentos sobre pago en efectivo, referencias a Yves Saint Laurent repetidas sin contexto, mención de puré con carne molida y reflexiones vagas sobre anécdotas. Charla desconectada sin valor operativo.",
+      "resumen": "Charla breve sobre pagar en efectivo, repeticiones sobre Yves Saint Laurent y un plato de puré con carne molida.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -463,7 +416,7 @@
     },
     {
       "idx": 18,
-      "resumen": "Mensajería con Emmanuel sobre extracción de información (posiblemente datos de Condugas), confirmación de que se entregará información manual si no está estructurada. Plan de encuentro en piscina mañana (2026-04-23) pero cambios por evento de Paulita a las 6:30am y metro lento.",
+      "resumen": "Coordinación sobre obtención de información para el jueves, configuración de cosas con Emmanuel, y planes para reunirse al día siguiente en la piscina. Menciona delays por metro.",
       "impacto": "medio",
       "personas": [
         "Emmanuel",
@@ -471,37 +424,39 @@
       ],
       "tareas": [
         {
-          "tarea": "Extraer información estructurada con Emmanuel (datos de jueves) en formato manual si es necesario",
-          "responsable": "Sebastian / Emmanuel",
-          "prioridad": "alta",
-          "tipo": "seguimiento",
-          "contexto": "Información operativa de Condugas",
-          "fecha_limite": "2026-04-22",
+          "tarea": "Sacar información estructurada o manual para análisis del jueves",
+          "responsable": "quien habla",
+          "prioridad": "media",
+          "tipo": "pendiente",
+          "contexto": "recopilación de datos",
+          "fecha_limite": "2026-04-24",
           "monto_cop": null,
           "personas_mencionadas": [
             "Emmanuel"
           ]
         },
         {
-          "tarea": "Llamar a equipos para conteo/recopilación de datos no estructurados",
-          "responsable": "Sebastian",
+          "tarea": "Organizar datos y hacer llamadas a falta información",
+          "responsable": "quien habla",
           "prioridad": "media",
-          "tipo": "seguimiento",
-          "contexto": "Completar información faltante",
-          "fecha_limite": "2026-04-23",
+          "tipo": "pendiente",
+          "contexto": "completar inventario de información",
+          "fecha_limite": "2026-04-24",
           "monto_cop": null,
           "personas_mencionadas": []
         }
       ],
       "decisiones": [
-        "Encuentro presencial confirmado para mañana en piscina"
+        "Reunirse mañana en la piscina"
       ],
       "ideas": [],
-      "frases": [],
-      "preguntas_abiertas": [
-        "¿Qué información específica de jueves se necesita recopilar?"
+      "frases": [
+        "no lo tengo estructurado por ver, pero lo puedo sacar lo máximo que pueda eh manual"
       ],
-      "tension_signal": "bajo",
+      "preguntas_abiertas": [
+        "¿Cuáles son los datos exactos que se necesitan para el análisis del jueves?"
+      ],
+      "tension_signal": "medio",
       "titulo_limitless": "Conversación sobre información y planes futuros",
       "startTime": "2026-04-22T17:08:40Z",
       "endTime": "2026-04-22T17:10:30Z",
@@ -509,7 +464,7 @@
     },
     {
       "idx": 19,
-      "resumen": "Anuncio promocional sobre sorteo de entrada a Festival Estereo Picnic mediante compra de producto Chic, con detalles sobre estilo y ceremonia. Contenido publicitario/marketing sin relevancia estratégica.",
+      "resumen": "Anuncio muy breve sobre un sorteo para ir al festival Estéreo Picnic, promoción de marca Chic y cambios en ceremonia.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -525,16 +480,18 @@
     },
     {
       "idx": 20,
-      "resumen": "Mención crítica sobre disponibilidad de caja: 'Es que si no hay plata para de Condugas, no hay plata para nadie'. Señal de crisis de flujo de efectivo en empresa principal. Conversación superficial que tapa urgencia real.",
+      "resumen": "Conversación de 11 segundos sobre disponibilidad de fondos para Condugas. Señal clara de crisis de caja: 'si no hay plata para de condugas, no hay plata para nadie'.",
       "impacto": "alto",
       "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [
-        "Es que si no hay plata para de Condugas, no hay plata para nadie"
+        "Es que si no hay plata para de condugas, no hay plata para nadie"
       ],
-      "preguntas_abiertas": [],
+      "preguntas_abiertas": [
+        "¿Cuál es el estado actual de caja de Condugas?"
+      ],
       "tension_signal": "alto",
       "titulo_limitless": "Una discusión sobre dinero y recursos",
       "startTime": "2026-04-22T20:54:05Z",
@@ -543,7 +500,7 @@
     },
     {
       "idx": 21,
-      "resumen": "Conversación técnica sobre cable y batería de dispositivo, discusión sobre dónde pegarlo, nivel de carga y limitaciones. Contexto doméstico sin implicancia ejecutiva.",
+      "resumen": "Diálogo técnico muy breve sobre ubicación de un cable y estado de batería de dispositivo. Sin impacto empresarial.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
@@ -559,115 +516,93 @@
     },
     {
       "idx": 22,
-      "resumen": "SESION ESTRATEGICA CRÍTICA: Análisis exhaustivo de crisis de Condugas con EPM. Diagnóstico: ruptura económica con riesgo de continuidad operativa. Deuda acumulada 257.6M COP (ítems 60-63) + 389.6M COP en 4 meses. Intereses vencidos 3.106M. Arquitectura de presión legítima con narrativa madre: no favores, sino corrección de desviación de EPM. Metodología: 4 rutas simultáneas (negocio, jurídica, pagos, integridad). Entrenamiento ejecutivo en 3 niveles para presentación ante alto nivel de EPM (Juan Alberto Matas Salazar, Vicepresidencia Negocios). 10 preguntas de autoevaluación y posicionamiento de marca histórica (24 años) como credibilidad. Mensaje final: pago puente, mesa ejecutiva, congelación de descuentos, cronograma estricto.",
+      "resumen": "Sesión estratégica de 24 minutos sobre crisis de Condugas con EPM. Análisis exhaustivo de deuda acumulada (389.60M en 4 meses), riesgo de continuidad operativa, fundamentos jurídicos para reclamación y arquitectura de presión legítima hacia EPM. Propone narrativa madre, rutas simultáneas (negocio, jurídica, pagos, integridad) y entrenamiento ejecutivo para Sebastian.",
       "impacto": "alto",
       "personas": [
         "Juan Alberto Matas Salazar",
-        "interventora"
+        "Sebastian Sanchez Acevedo"
       ],
       "tareas": [
         {
-          "tarea": "Definir cifra mínima de caja requerida en 5 días para salvar operación (nómina y proveedores críticos)",
-          "responsable": "Sebastian",
+          "tarea": "Responder internamente 10 preguntas estratégicas sobre cifras mínimas, documentación, fecha crítica de caja y decisiones agresivas",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "critica",
           "tipo": "decision",
-          "contexto": "Crisis de flujo Condugas",
-          "fecha_limite": "2026-04-27",
-          "monto_cop": null,
-          "personas_mencionadas": []
-        },
-        {
-          "tarea": "Construir narrativa madre (5 bloques): qué pasó, qué está probado, cuánto falta, riesgo para EPM, decisión concreta",
-          "responsable": "Sebastian",
-          "prioridad": "critica",
-          "tipo": "decision",
-          "contexto": "Preparación conversación alto nivel EPM",
+          "contexto": "preparación para negociación con EPM",
           "fecha_limite": "2026-04-23",
           "monto_cop": null,
           "personas_mencionadas": []
         },
         {
-          "tarea": "Preparar mensaje ejecutivo de 20 minutos para pedir reunión con alto nivel EPM",
-          "responsable": "Sebastian",
+          "tarea": "Preparar mensaje ejecutivo de 5 bloques (qué pasó, prueba, cuánto falta, riesgo EPM, decisión solicitada)",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "critica",
           "tipo": "compromiso",
-          "contexto": "Activación rutas formales ante EPM",
+          "contexto": "contacto formal a alto nivel de EPM",
           "fecha_limite": "2026-04-23",
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Hacer llamada ejecutiva de 20 minutos a decisor de EPM con narrativa calibrada (hechos, impacto, riesgos, solicitud, plazo)",
+          "responsable": "Sebastian Sanchez Acevedo",
+          "prioridad": "critica",
+          "tipo": "compromiso",
+          "contexto": "negociación de pago puente y mesa ejecutiva",
+          "fecha_limite": "2026-04-24",
           "monto_cop": null,
           "personas_mencionadas": [
             "Juan Alberto Matas Salazar"
           ]
         },
         {
-          "tarea": "Ejecutar 4 rutas simultáneas: 1) Negocio (VP Negocios), 2) Jurídica/Reclamaciones, 3) Portal Pagos Proveedores, 4) Canal Ética/Transparencia",
-          "responsable": "Sebastian",
+          "tarea": "Radicación formal paralela a llamada (correo, portal de pagos proveedores, canal de integridad EPM)",
+          "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "critica",
           "tipo": "compromiso",
-          "contexto": "Presión legítima documentada",
+          "contexto": "crear registro documental y presión simultánea",
+          "fecha_limite": "2026-04-24",
+          "monto_cop": null,
+          "personas_mencionadas": []
+        },
+        {
+          "tarea": "Entrenar voz ejecutiva (nivel 1: decoración del caso; nivel 2: voz grave/precisa; nivel 3: cómo sostener presión)",
+          "responsable": "quien facilita sesión",
+          "prioridad": "alta",
+          "tipo": "seguimiento",
+          "contexto": "entrenamiento conversacional para Sebastian",
           "fecha_limite": "2026-04-25",
           "monto_cop": null,
           "personas_mencionadas": [
-            "Juan Alberto Matas Salazar"
+            "Sebastian Sanchez Acevedo"
           ]
-        },
-        {
-          "tarea": "Radicación formal paralela a llamada ejecutiva con bloques: hechos, impacto, riesgos, solicitud, plazo",
-          "responsable": "Sebastian",
-          "prioridad": "critica",
-          "tipo": "compromiso",
-          "contexto": "Deja constancia formal y eleva costo institucional de ignorar",
-          "fecha_limite": "2026-04-23",
-          "monto_cop": null,
-          "personas_mencionadas": []
-        },
-        {
-          "tarea": "Identificar 3 hechos probados de aviso anticipado antes del deterioro terminal",
-          "responsable": "Sebastian",
-          "prioridad": "alta",
-          "tipo": "decision",
-          "contexto": "Soporte narrativo de credibilidad",
-          "fecha_limite": "2026-04-23",
-          "monto_cop": null,
-          "personas_mencionadas": []
-        },
-        {
-          "tarea": "Definir frase de 12 palabras que resuma caso sin sonar llorón",
-          "responsable": "Sebastian",
-          "prioridad": "alta",
-          "tipo": "decision",
-          "contexto": "Voz ejecutiva grave y precisa",
-          "fecha_limite": "2026-04-23",
-          "monto_cop": null,
-          "personas_mencionadas": []
         }
       ],
       "decisiones": [
-        "Cambio de narrativa: de 'nos están maltratando' a 'riesgo de continuidad operativa por decisiones acumuladas'",
-        "Enfoque en 5 piezas documentadas: secuencia, números simples (64.4M mensual), explicación técnica, fundamento jurídico, medición concreta",
-        "Presión concreta con soporte, no amenaza",
-        "Pedir específicamente: pago puente, congelación temporal de descuentos, mesa ejecutiva con capacidad real, cronograma estricto, punto de contacto único",
-        "NO arrancar por rabia, difuso, historias de 24 años en primer contacto ni acusaciones personales"
+        "No iniciar por rabia ni acusación difusa",
+        "Usar arquitectura de 4 rutas simultáneas (negocio, jurídica, pagos, integridad)",
+        "Framing: riesgo de continuidad operativa, no victimización",
+        "Pedir 3 cosas concretas: pago puente, mesa ejecutiva, congelamiento de descuentos"
       ],
       "ideas": [
-        "Convertir dolor de 24 años en credibilidad, no en resentimiento: 'Precisamente por eso, si hoy llegamos a este punto, es porque el deterioro cruzó una línea'",
-        "Arquitectura de presión legítima: hechos + impacto + riesgos para PM (continuidad, reputación, jurídico, precedente, desabastecimiento) = mucho más potente que dolor",
-        "Entrenamiento en 3 niveles: decoración del caso (ruido fuera), voz ejecutiva (grave, preciso, difícil de evadir), conversación de presión (cómo sostener cuando te minimicen)",
-        "Síntesis en 90 segundos: contexto 2020, ejecución, alertas, cifra actual (389.6M en 4 meses), riesgo real, decisión concreta pedida (pago puente, mesa, congelamiento)",
-        "Definir cuál es la decisión más agresiva que ya tomó o está dispuesto a tomar si no responden (leverage real)"
+        "Narrativa madre: Condugas no pide favores, pide que EPM corrija desviación que ella ayudó crear",
+        "Capa moral (24 años), capa técnica (no financiar indefinidamente), capa institucional (problema de EPM si falla contratista histórico)",
+        "Cifras como arma: 257.60M acumulado, 389.60M en 4 meses, 120M pérdida mensual, 276.80M intereses",
+        "En 90 segundos: desacuerdo operativo vs riesgo de continuidad y precedente",
+        "Frase de 12 palabras que resume sin lloriqueo (aún sin definir)"
       ],
       "frases": [
         "Lo que falta no es más indignación, lo que falta es una arquitectura de presión legítima",
-        "Si esto no se corrige, el costo no será solo para Condugas, será para la continuidad del servicio",
-        "Durante 24 años preferimos trabajar antes que quejarnos. Pero trabajar no significa financiar indefinidamente un desbalance que no creamos nosotros",
-        "Esto ya no es un desacuerdo operativo, es un riesgo de continuidad",
+        "Al alto nivel no le mueve tanto tu dolor, le mueve riesgo de continuidad, riesgo reputacional, riesgo jurídico",
+        "Durante 24 años hemos preferido trabajar antes que quejarnos. Pero trabajar no significa financiar indefinidamente un desbalance que no creamos nosotros",
+        "Si un contratista histórico llega al borde por alertas ignoradas, el problema dejó de ser del contratista",
         "La secuencia debe ser: hechos, impacto, riesgos, solicitud, plazo"
       ],
       "preguntas_abiertas": [
-        "¿Cuál es la cifra mínima en 5 días para salvar operación?",
-        "¿Qué parte es absolutamente documentable sin discusión técnica?",
-        "¿En qué fecha exacta, si no entra caja, se cae algo real?",
-        "¿Qué quieres que piensen de ti: desesperado, bravo o advirtiendo con seriedad?",
-        "¿Quiero salvar contrato, salvar caja, salvar relación o no dejar precedente? (no siempre se pueden las 4)"
+        "¿Cuál es la cifra mínima que necesita Condugas en 5 días para salvar operación?",
+        "¿Cuál es la fecha exacta en que si no entra caja se cae operación real?",
+        "¿Quiere salvar el contrato, salvar caja, salvar relación, o no dejar precedente?",
+        "¿Cuál es la frase de 12 palabras que resume el caso sin sonar llorón?"
       ],
       "tension_signal": "alto",
       "titulo_limitless": "Conversación sobre la situación de Condugas y otros temas",
@@ -677,34 +612,22 @@
     },
     {
       "idx": 23,
-      "resumen": "Conversación personal sobre diagnóstico médico (bacteria encontrada en examen, historia anterior de hospitalización), chequeos recurrentes, preocupación por salud de tercero (posiblemente familia) y recomendaciones de seguimiento médico. Contexto de vulnerabilidad personal.",
+      "resumen": "Conversación personal con doctor sobre bacteria encontrada, necesidad de chequeos futuros y recuperación. Menciona gente cercana (mamá con ojos azules, papá de Pablo). Contexto de salud, no empresarial.",
       "impacto": "bajo",
       "personas": [
         "doctor",
-        "Andrea Bernal",
         "mamá",
-        "papá de Pablo"
+        "Pablo",
+        "Andrea Bernal"
       ],
-      "tareas": [
-        {
-          "tarea": "Realizar chequeos médicos periódicos para monitoreo de bacteria y prevención de recaídas",
-          "responsable": "Tercero (familia)",
-          "prioridad": "media",
-          "tipo": "seguimiento",
-          "contexto": "Salud personal",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
-        }
-      ],
+      "tareas": [],
       "decisiones": [],
       "ideas": [],
       "frases": [
-        "Menos mal, sí, menos mal",
-        "mucha energía para estar recuperada y que se vaya la bacteria para donde tenga que ir"
+        "Yo le agradezco a dios esa calma que yo tengo"
       ],
       "preguntas_abiertas": [
-        "¿Cada cuánto tiempo hay que hacer chequeos para monitoreo?"
+        "¿Cada cuánto debe hacerse chequeos para monitorear la bacteria?"
       ],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversación personal sobre un problema de salud y recuperación",
@@ -714,14 +637,17 @@
     },
     {
       "idx": 24,
-      "resumen": "Conversación informal sobre selección y recomendación de libros. Sebastian revisa títulos como 'Los números no mienten', 'Psicología del dinero' y 'Diario de un CEO'. Intercambio casual de opiniones sobre lecturas.",
+      "resumen": "Sebastian revisa libros personales con alguien, comenta títulos sobre psicología del dinero y diarios de CEO. Intercambio informal de recomendaciones y opiniones sobre lecturas.",
       "impacto": "bajo",
       "personas": [
         "Sebastian Sanchez Acevedo"
       ],
       "tareas": [],
       "decisiones": [],
-      "ideas": [],
+      "ideas": [
+        "Leer psicología del dinero",
+        "Leer diario de CEO"
+      ],
       "frases": [],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
@@ -732,7 +658,7 @@
     },
     {
       "idx": 25,
-      "resumen": "Discusión sobre participación y compensación económica con Adolfo. Debate sobre si una actividad es gratuita o pagada, confusión sobre pagos y préstamo de libros entre colegas (Alexis, Juan Guillermo). Tono informal y disperso.",
+      "resumen": "Discusión confusa sobre participación, pago con Adolfo y préstamo de libros a Alexis. Menciona viaje a Perú y referencias a 'Pensar rápido, pensar despacio'.",
       "impacto": "bajo",
       "personas": [
         "Adolfo",
@@ -742,12 +668,8 @@
       "tareas": [],
       "decisiones": [],
       "ideas": [],
-      "frases": [
-        "Al final de cuentas es el que le pagó a él solito"
-      ],
-      "preguntas_abiertas": [
-        "¿Cuál es la política clara sobre compensación y colaboraciones puntuales?"
-      ],
+      "frases": [],
+      "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversación sobre un tema desconocido",
       "startTime": "2026-04-22T21:28:02Z",
@@ -756,7 +678,7 @@
     },
     {
       "idx": 26,
-      "resumen": "Sebastian reflexiona sobre desafíos en implementación paralela de nómina y contabilidad con Lucas y Manuel. Reconoce que la carga de trabajo fue mayor a la esperada, con recursos insuficientes y procesos no parametrizados. Propone revisar cómo implementar en producción con datos reales.",
+      "resumen": "Sebastian analiza implementación paralela fallida de nómina y contabilidad con Lucas y Manuel. Le tocó a Manuel implementar solo sin recursos ni parametrización, generando carga de trabajo inesperada. Reconoce necesidad de aprender y apoyar diferente.",
       "impacto": "alto",
       "personas": [
         "Sebastian Sanchez Acevedo",
@@ -765,44 +687,44 @@
       ],
       "tareas": [
         {
-          "tarea": "Hablar con Manuel sobre apoyo en implementación de nómina y contabilidad",
+          "tarea": "Hablar con Manuel sobre carga de trabajo en implementación de nómina/contabilidad y buscar forma de apoyarlo",
           "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "alta",
-          "tipo": "seguimiento",
-          "contexto": "Implementación paralela Condugas",
-          "fecha_limite": "2026-04-24",
+          "tipo": "compromiso",
+          "contexto": "Implementación Condugas",
+          "fecha_limite": null,
           "monto_cop": null,
           "personas_mencionadas": [
             "Manuel"
           ]
         },
         {
-          "tarea": "Revisar estrategia de implementación en producción con datos parametrizados",
+          "tarea": "Revisar implementación de nómina en producción con datos reales",
           "responsable": "Sebastian Sanchez Acevedo",
           "prioridad": "alta",
-          "tipo": "decision",
-          "contexto": "Nómina y contabilidad Condugas",
-          "fecha_limite": "2026-04-25",
+          "tipo": "pendiente",
+          "contexto": "Implementación Condugas",
+          "fecha_limite": null,
           "monto_cop": null,
           "personas_mencionadas": [
-            "Lucas",
-            "Manuel"
+            "Manuel",
+            "Lucas"
           ]
         }
       ],
       "decisiones": [
-        "Cambiar enfoque: pasar de implementación paralela a implementación en producción con datos reales"
+        "Necesario aprender de la implementación fallida y cambiar enfoque de apoyo a Manuel"
       ],
       "ideas": [
-        "Aprender de los desafíos enfrentados y rediseñar cómo montar la solución",
-        "Buscar forma de ayudar mejor a quienes implementan sistemas complejos"
+        "Implementación en paralelo fue error: requiere mejor parametrización previa",
+        "Empresa compleja requiere diseño diferente de implementación"
       ],
       "frases": [
-        "Si no tenemos contabilidad en nómina, no vamos a tener, es como esencial de cubrir"
+        "le tocó un trabajo pues que no esperaba y que no es fácil pues de montar"
       ],
       "preguntas_abiertas": [
-        "¿Cómo se puede parametrizar mejor la información antes de implementar?",
-        "¿Qué recursos adicionales necesita Manuel para completar la implementación?"
+        "¿Cómo recuperar la implementación de nómina/contabilidad?",
+        "¿Qué recursos y apoyo necesita Manuel?"
       ],
       "tension_signal": "alto",
       "titulo_limitless": "Discusión sobre la colaboración y compensación en un proyecto",
@@ -812,18 +734,13 @@
     },
     {
       "idx": 27,
-      "resumen": "Exposición técnica sobre evolución de turbinas de gas y ciclos combinados. Cubre historia desde 1969, eficiencias de máquinas (60-63%), megavoltios generados y costos nivelados de electricidad (LCOE) en 2023. Mención de un libro sobre combustibles de aviación.",
+      "resumen": "Discusión educativa sobre historia de turbinas de gas (1969 Brown Boveri), evolución a ciclo combinado (eficiencia >60%), costos nivelados de electricidad y comparativa con energías renovables. Referencia a libro sobre combustible de avión.",
       "impacto": "bajo",
       "personas": [],
       "tareas": [],
       "decisiones": [],
-      "ideas": [
-        "Turbinas de ciclo combinado (TGCC) ofrecen eficiencia 60%+ con costos LCOE ~10$/MWh",
-        "Evolución tecnológica en generación eléctrica ha reducido costos radicalmente en últimos 50 años"
-      ],
-      "frases": [
-        "Una deficiencia superior al 40 por 100 produce gases de escape a unos 600 grados celsius"
-      ],
+      "ideas": [],
+      "frases": [],
       "preguntas_abiertas": [],
       "tension_signal": "bajo",
       "titulo_limitless": "Conversación sobre lectura y turbinas de gas",
@@ -833,36 +750,25 @@
     },
     {
       "idx": 28,
-      "resumen": "Sebastian desarrolla conceptos sobre emociones, metodología inductiva y 'el polvorín' (disparador emocional). Explora cómo las emociones se activan en contextos de dependencia grupal, falta de claridad en comunicación y expectativas no cumplidas. Intenta diferenciar entre identificación de emociones y su aplicación práctica.",
-      "impacto": "alto",
+      "resumen": "Sebastian explora metodología inductiva para mapeo de emociones. Introduce concepto de 'polvorín' como fenómeno donde se disparan emociones en contextos de dependencia (equipo, padres, empresa). Trabajo en módulo 1 sobre identificación de fortalezas.",
+      "impacto": "medio",
       "personas": [
         "Sebastian Sanchez Acevedo",
         "Andrea"
       ],
-      "tareas": [
-        {
-          "tarea": "Desarrollar framework sobre 'el polvorín' como concepto de Being CoRe",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "media",
-          "tipo": "pendiente",
-          "contexto": "Metodología Being CoRe - emociones",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
-        }
+      "tareas": [],
+      "decisiones": [
+        "Seguir trabajando en identificación de polvorín emocional"
       ],
-      "decisiones": [],
       "ideas": [
-        "El polvorín es el disparador emocional que ocurre cuando hay comunicación deficiente de necesidades",
-        "Las emociones se activan por grupos de dependencia (equipo, familia, empresa)",
-        "Metodología Being CoRe es inductiva, no deductiva"
+        "Las emociones se disparan en contextos de dependencia y comunicación fallida",
+        "Polvorín es el fenómeno donde aparece la brecha entre expectativa y comunicación"
       ],
       "frases": [
-        "Dónde se explotan las emociones? Cuando a mí me dicen, es que están en mi uniforme, cómo era, pero usted no me dijo que era lo que necesitaba"
+        "ese es el polvorín, que vamos a hablar del polvorín"
       ],
       "preguntas_abiertas": [
-        "¿Cómo se enseña el concepto de 'polvorín' sin que sea abstract?",
-        "¿Cuál es la diferencia operativa entre emociones en módulo 1 vs. su aplicación en contexto?"
+        "¿Cómo aplicar la identificación de polvorín en Being CoRe?"
       ],
       "tension_signal": "medio",
       "titulo_limitless": "Conversación sobre emociones y metodologías",
@@ -872,11 +778,9 @@
     },
     {
       "idx": 29,
-      "resumen": "Comentario fugaz sobre un partido de fútbol donde el equipo recibió 2 goles por el palo. Conversación trivial, sin contexto empresarial.",
+      "resumen": "Comentario breve sobre partido de fútbol visto. Dos goles recibidos por el palo.",
       "impacto": "bajo",
-      "personas": [
-        "Sebastian Sanchez Acevedo"
-      ],
+      "personas": [],
       "tareas": [],
       "decisiones": [],
       "ideas": [],
@@ -890,33 +794,19 @@
     },
     {
       "idx": 30,
-      "resumen": "Conversación fragmentada sobre un proceso con objetivo poco claro. Sebastian menciona que algo 'se regala', hay referencia a un diálogo previo sobre objetivos. Tono de incertidumbre sobre dinámicas y tareas. Propone enviar ubicación. Reflexión personal sobre estar 'ganándola en la vida'.",
+      "resumen": "Conversación fragmentada sobre un proceso, armar algo, menciona objetivo no claro. Pregunta sobre dinámica y tareas. Sebastian reflexiona que está ganando en su vida.",
       "impacto": "bajo",
       "personas": [
         "Sebastian Sanchez Acevedo"
       ],
-      "tareas": [
-        {
-          "tarea": "Enviar ubicación (contexto no especificado)",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "baja",
-          "tipo": "pendiente",
-          "contexto": "Desconocido",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
-        }
-      ],
+      "tareas": [],
       "decisiones": [],
       "ideas": [],
-      "frases": [
-        "Yo me he dado cuenta que yo estoy como ganándola en mi vida"
-      ],
+      "frases": [],
       "preguntas_abiertas": [
-        "¿Cuál es el objetivo real del proceso en cuestión?",
-        "¿Cuál es la dinámica esperada?"
+        "¿Cuál es la dinámica exacta del proceso?"
       ],
-      "tension_signal": "medio",
+      "tension_signal": "bajo",
       "titulo_limitless": "Conversación sobre un proceso y tareas",
       "startTime": "2026-04-22T22:11:30Z",
       "endTime": "2026-04-22T22:15:25Z",
@@ -924,26 +814,24 @@
     },
     {
       "idx": 31,
-      "resumen": "Reflexión profunda sobre teoría del cambio y motivación humana. Persona (probablemente colaborador de Being CoRe) desarrolla concepto de que humans no se resisten al cambio sino al gasto energético sin sentido. Propone que 'sentido' es el detonador del movimiento. Distingue entre 'gasto' e 'inversión' de energía. Dos principios clave: decisión para movimiento y decisión con sentido en motivación.",
+      "resumen": "Sebastian reflexiona profundamente sobre sentido, cambio y resistencia humana. Los humanos NO se resisten al cambio per se, sino al cambio sin sentido (gasto energético innecesario). Propone distinción entre 'gasto' e 'inversión' de energía. Conclusión: ser humano decide con sentido en lo que lo motiva.",
       "impacto": "alto",
       "personas": [],
       "tareas": [],
       "decisiones": [
-        "El ser humano decide para movimiento cuando hay sentido que lo motiva"
+        "El cambio es aceptado cuando hay sentido y motivación clara"
       ],
       "ideas": [
-        "Humans no se resisten al cambio, sino al gasto energético sin sentido",
-        "El sentido es lo que propicia inversión (no gasto) de energía en movimiento",
-        "Concepto, metodología y método requieren distinguirse operativamente",
-        "La evidencia y desarrollo son conceptos previos al cambio"
+        "La resistencia al cambio es por falta de sentido, no por naturaleza humana",
+        "El concepto clave es la 'inversión de energía' vs 'gasto sin sentido'",
+        "El entorno y desarrollo moldean dónde importa el sentido"
       ],
       "frases": [
-        "El ser humano se resiste al cambio si implica un gasto energético sin sentido",
-        "Me dio la oportunidad, es el ser humano decide con sentido en lo que lo motiva"
+        "se resisten al cambio, si implica un gasto energético sin sentido",
+        "el ser humano decide con sentido en lo que lo motiva"
       ],
       "preguntas_abiertas": [
-        "¿Cómo se mide o identifica el 'sentido' en una organización?",
-        "¿De dónde viene el sentido en contextos de crisis (como crisis de caja en Condugas)?"
+        "¿Cómo se estudia el sentido en el desarrollo de las personas?"
       ],
       "tension_signal": "medio",
       "titulo_limitless": "Conversación sobre el sentido y el cambio",
@@ -953,38 +841,26 @@
     },
     {
       "idx": 32,
-      "resumen": "Conversación filosófica extendida (~97 min) sobre Sócrates, ignorancia, formulación de preguntas, búsqueda de sentido vs. ansiedad de logro. Sebastian desarrolla idea de que Sócrates' genialidad fue reconocer su propia ignorancia y demostrar que otros no sabían que no sabían. Refleja sobre su propia tensión: búsqueda profunda vs. urgencia de resultados. Menciona 'culo' y profundidad como atracción intelectual. Tono existencial sobre frenar, ver y reafirmar.",
+      "resumen": "Sebastian profundiza en filosofía socrática (reconocimiento de la ignorancia vs falsa sabiduría). Luego reflexiona sobre la tensión entre búsqueda profunda de pensamiento (lenta, ansiógena) vs necesidad de frenar para ver claramente. La profundidad requiere tiempo pero genera ansiedad de logro que lo lleva a aceleración impulsiva.",
       "impacto": "alto",
       "personas": [
         "Sebastian Sanchez Acevedo"
       ],
-      "tareas": [
-        {
-          "tarea": "Formular preguntas específicas al entrenador sobre contextos de uso de 'sentido'",
-          "responsable": "Sebastian Sanchez Acevedo",
-          "prioridad": "media",
-          "tipo": "pendiente",
-          "contexto": "Being CoRe - profundización conceptual",
-          "fecha_limite": null,
-          "monto_cop": null,
-          "personas_mencionadas": []
-        }
-      ],
-      "decisiones": [
-        "Priorizar búsqueda profunda sobre ansiedad inmediata de resultados"
-      ],
+      "tareas": [],
+      "decisiones": [],
       "ideas": [
-        "La ignorancia consciente (saber que no sé) es más sabia que ignorancia inconsciente (no saber que no sé)",
-        "La búsqueda profunda requiere frenar la velocidad para ver mejor",
-        "Preguntas bien formuladas abren más que respuestas apresuraidas"
+        "La gracia de Sócrates: consciencia de la propia ignorancia + demostración de falsa sabiduría ajena",
+        "Búsqueda profunda de pensamiento es lenta, genera ansiedad, pero es necesaria",
+        "Necesidad de frenar para ver (no ir en moto a velocidad ciega)"
       ],
       "frases": [
-        "La gracia de Sócrates fue dos cosas: a partir de no saber nada y ser consciente que no sabía nada, hizo un cuestionamiento",
-        "Cuando más ansiedad de lograr, entonces me aviento, pero sé que es necesario y pues por eso mismo lo busco"
+        "lo único que yo sé, es que la gracia de Sócrates fue dos cosas",
+        "esto es lento como un hijo de puta, entonces le empieza a dar como esa ansiedad de lograr",
+        "tengo que frenar, que tengo que frenar, pero para poder ver"
       ],
       "preguntas_abiertas": [
-        "¿Cómo reconciliar urgencia de resultados (crisis de caja Condugas) con búsqueda reflexiva?",
-        "¿Cuál es el balance entre profundidad y velocidad en Being CoRe?"
+        "¿Cómo mantener ritmo de profundidad sin caer en ansiedad de logro?",
+        "¿Cómo traducir Sócrates a metodología Being CoRe?"
       ],
       "tension_signal": "alto",
       "titulo_limitless": "Una discusión sobre cómo las personas forman creencias, aprenden, investigan y la distinción entre conceptos relacionados.",
@@ -995,230 +871,159 @@
   ],
   "arcos_dia": [
     {
-      "tema": "Crisis financiera y operativa de Condugas",
+      "tema": "Crisis de liquidez y continuidad operativa",
       "reuniones_idx": [
-        5,
-        12,
         21,
-        23,
-        27
+        23
       ],
       "peso_pct": 35,
       "personas": [
-        "Sebastian",
+        "Emmanuel",
         "Lucas",
-        "Manuel",
-        "Emmanuel"
+        "Manuel"
       ],
-      "descripcion": "Identificación progresiva de crisis de flujo de caja en Condugas con deuda acumulada de 647.2M COP, ruptura económica con EPM y riesgo de continuidad operativa. Reconocimiento de insuficiencia de recursos e implementación paralela fallida de nómina y contabilidad."
+      "descripcion": "Señal crítica de falta de fondos para Condugas. Sesión estratégica de 24 min revela deuda acumulada de 389.60M en 4 meses con EPM, poniendo en riesgo la continuidad operativa. Indica problema estructural de cash flow."
     },
     {
-      "tema": "Reflexión estratégica y psicológica sobre liderazgo y cambio",
+      "tema": "Reflexión estratégica sobre sentido, cambio y resistencia",
       "reuniones_idx": [
         5,
         29,
         32,
         33
       ],
-      "peso_pct": 30,
+      "peso_pct": 40,
       "personas": [
-        "Sebastian",
-        "colaborador Being CoRe"
+        "Lucas",
+        "Manuel"
       ],
-      "descripcion": "Exploración de conceptos sobre resistencia al cambio, emociones como disparadores en contextos de dependencia grupal, motivación humana y metodología socrática. Sebastian desarrolla frameworks para entender dinámicas organizacionales y el papel de preguntas en la búsqueda de sentido."
+      "descripcion": "Sebastian desarrolla marco conceptual profundo sobre por qué los humanos resisten cambio sin sentido (no al cambio per se). Conecta con filosofía socrática y fenómeno del polvorín emocional. Tensión entre búsqueda profunda vs necesidad de acción rápida."
     },
     {
-      "tema": "Fragmentación personal y dispersión cognitiva",
+      "tema": "Problemas operacionales y técnicos acumulados",
       "reuniones_idx": [
-        1,
-        2,
-        3,
         4,
-        7,
-        8,
-        9,
-        10,
+        6,
         11,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        22,
-        24,
-        25,
-        26,
-        28,
-        30,
-        31
+        12,
+        27
       ],
-      "peso_pct": 35,
+      "peso_pct": 25,
       "personas": [
-        "Sebastian",
-        "familia",
-        "círculo cercano"
+        "Paulito",
+        "Manuel",
+        "Lucas"
       ],
-      "descripcion": "Predominancia de conversaciones fragmentadas sobre vida doméstica, salud, nutrición, IA, eventos sociales, herramientas técnicas y anécdotas sin conexión. Patrón sugiere dispersión atencional o múltiples contextos simultáneos sin integración coherente."
+      "descripcion": "Fallas técnicas recurrentes: problemas de interfaz de direccionamiento, cortocircuito en dispositivo, implementación fallida de nómina y contabilidad donde Manuel quedó sobrecargado sin recursos ni parametrización. Patrón de implementaciones mal coordinadas."
     }
   ],
   "preguntas_abiertas_dia": [
-    "¿Cuál es la estrategia específica para resolver la deuda de 647.2M COP con EPM antes de que se interrumpa la operación?",
-    "¿Qué recursos y personas serán asignados para implementar correctamente nómina y contabilidad con carga de trabajo adecuada?",
-    "¿Cómo se conectan las reflexiones filosóficas sobre preguntas socrática y emociones con la ejecución operativa de Condugas?",
-    "¿Quién es Emmanuel y qué información específica sobre Condugas está siendo extraída manualmente?",
-    "¿Por qué existe tal desconexión entre crisis operativa crítica (reuniones 21, 23) y conversaciones triviales domésticas?"
+    "¿Cuál es el plan concreto para resolver la crisis de liquidez de Condugas con EPM en los próximos 30 días?",
+    "¿Por qué fallaron las implementaciones paralelas de nómina y contabilidad y cómo se puede evitar que Manuel quede nuevamente sin recursos?",
+    "¿Cómo traducir la reflexión sobre cambio con sentido en una estrategia de transformación digital post-pandemia?",
+    "¿Cuál es el estado actual del equipo técnico después del incidente del cable de amperaje altísimo?",
+    "¿Cómo implementar la metodología inductiva del polvorín emocional en la gestión del equipo de forma operacional?"
   ],
   "tensiones_dia": [
-    "Brecha extrema entre diagnóstico estratégico profundo (crisis de 647.2M COP) y ausencia de plan de acción ejecutivo detallado.",
-    "Conflicto entre capacidad reflexiva/filosófica de Sebastian y fragmentación atencional evidente en mayoría de conversaciones del día.",
-    "Insuficiencia estructural de recursos para implementación paralela de nómina/contabilidad versus urgencia de resolución de crisis de Condugas.",
-    "Extracción de información manual de Condugas (reunión 19) sugiere sistemas informativos deficientes en momento crítico.",
-    "Carga emocional no resuelta sobre dependencia grupal y 'polvorín' emocional mientras empresa enfrenta riesgo de continuidad."
+    "Emergencia de cash flow (no hay plata para Condugas) vs necesidad de inversión en transformación digital",
+    "Búsqueda profunda de sentido y reflexión estratégica vs presión de acción rápida y operacional",
+    "Cambio acelerado requerido (Tesla, digitalización) vs resistencia natural basada en falta de sentido percibido",
+    "Sobrecarga de trabajo en equipo (Manuel sin recursos) vs falta de claridad en prioridades y parametrización",
+    "Visión filosófica sobre ignorancia socrática vs necesidad de decisiones rápidas con información incompleta"
   ],
   "tareas_candidatas": [
     {
-      "tarea": "Coordinar entrega/cambio de producto con Paulito",
-      "responsable": "Unknown",
-      "prioridad": "baja"
-    },
-    {
-      "tarea": "Revisar y corregir funcionalidad de nombres en aplicación (está retornando rojo)",
-      "responsable": "Unknown",
+      "tarea": "Corregir interfaz de aplicación para mostrar nombres y direcciones correctamente",
+      "responsable": "equipo técnico",
       "prioridad": "media"
     },
     {
-      "tarea": "Conseguir niñera para cuidado martes y jueves",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Diagnosticar si hay cortocircuito por componentes juntos",
-      "responsable": "Unknown",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Extraer información estructurada con Emmanuel (datos de jueves) en formato manual si es necesario",
-      "responsable": "Sebastian / Emmanuel",
+      "tarea": "Evaluar daño completo del equipo y determinar reparación o reemplazo",
+      "responsable": "técnico",
       "prioridad": "alta"
     },
     {
-      "tarea": "Llamar a equipos para conteo/recopilación de datos no estructurados",
-      "responsable": "Sebastian",
+      "tarea": "Sacar información estructurada o manual para análisis del jueves",
+      "responsable": "quien habla",
       "prioridad": "media"
     },
     {
-      "tarea": "Identificar 3 hechos probados de aviso anticipado antes del deterioro terminal",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Definir frase de 12 palabras que resuma caso sin sonar llorón",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Realizar chequeos médicos periódicos para monitoreo de bacteria y prevención de recaídas",
-      "responsable": "Tercero (familia)",
+      "tarea": "Organizar datos y hacer llamadas a falta información",
+      "responsable": "quien habla",
       "prioridad": "media"
     },
     {
-      "tarea": "Hablar con Manuel sobre apoyo en implementación de nómina y contabilidad",
+      "tarea": "Entrenar voz ejecutiva (nivel 1: decoración del caso; nivel 2: voz grave/precisa; nivel 3: cómo sostener presión)",
+      "responsable": "quien facilita sesión",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Hablar con Manuel sobre carga de trabajo en implementación de nómina/contabilidad y buscar forma de apoyarlo",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Revisar estrategia de implementación en producción con datos parametrizados",
+      "tarea": "Revisar implementación de nómina en producción con datos reales",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Desarrollar framework sobre 'el polvorín' como concepto de Being CoRe",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Enviar ubicación (contexto no especificado)",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "baja"
-    },
-    {
-      "tarea": "Formular preguntas específicas al entrenador sobre contextos de uso de 'sentido'",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Evaluar y reparar/reemplazar equipo dañado por sobreamperaje",
-      "responsable": "Unknown",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Revisar protocolo de seguridad eléctrica en hogar/obra",
+      "tarea": "Responder internamente 10 preguntas estratégicas sobre cifras mínimas, documentación, fecha crítica de caja y decisiones agresivas",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Definir cifra mínima de caja requerida en 5 días para salvar operación (nómina y proveedores críticos)",
-      "responsable": "Sebastian",
+      "tarea": "Preparar mensaje ejecutivo de 5 bloques (qué pasó, prueba, cuánto falta, riesgo EPM, decisión solicitada)",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Construir narrativa madre (5 bloques): qué pasó, qué está probado, cuánto falta, riesgo para EPM, decisión concreta",
-      "responsable": "Sebastian",
+      "tarea": "Hacer llamada ejecutiva de 20 minutos a decisor de EPM con narrativa calibrada (hechos, impacto, riesgos, solicitud, plazo)",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Preparar mensaje ejecutivo de 20 minutos para pedir reunión con alto nivel EPM",
-      "responsable": "Sebastian",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Ejecutar 4 rutas simultáneas: 1) Negocio (VP Negocios), 2) Jurídica/Reclamaciones, 3) Portal Pagos Proveedores, 4) Canal Ética/Transparencia",
-      "responsable": "Sebastian",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Radicación formal paralela a llamada ejecutiva con bloques: hechos, impacto, riesgos, solicitud, plazo",
-      "responsable": "Sebastian",
+      "tarea": "Radicación formal paralela a llamada (correo, portal de pagos proveedores, canal de integridad EPM)",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Aceptar descuento acumulable del 30%",
-    "Confirmar continuidad de estrategia combativa frente a volatilidad energética y política próximos 2 meses",
-    "Enfoque en regularidad de horarios más que ventanas de sueño",
-    "Transición gradual de colecho hacia independencia",
-    "Reducir dependencia de tetero/leche",
-    "Consideración de dieta baja en azúcares/carbohidratos",
-    "No volver a conectar cables sin verificar amperaje y contexto de seguridad",
-    "Aceptación implícita de invitación a evento privado con avión",
-    "Encuentro presencial confirmado para mañana en piscina",
-    "Cambio de narrativa: de 'nos están maltratando' a 'riesgo de continuidad operativa por decisiones acumuladas'"
+    "Cambiar existencia de productos antes de que se corten",
+    "Establecer horarios regulares de sueño priorizando rutina sobre ventanas",
+    "Reducir dependencia de colecho e independizar niño a su propia cama",
+    "Evaluar necesidad real de tetero vs otros alimentos",
+    "Reunirse mañana en la piscina",
+    "No iniciar por rabia ni acusación difusa",
+    "Usar arquitectura de 4 rutas simultáneas (negocio, jurídica, pagos, integridad)",
+    "Framing: riesgo de continuidad operativa, no victimización",
+    "Pedir 3 cosas concretas: pago puente, mesa ejecutiva, congelamiento de descuentos",
+    "Necesario aprender de la implementación fallida y cambiar enfoque de apoyo a Manuel"
   ],
   "ideas_capturadas": [
-    "Pandemia aceleró transformación digital 24 años; ciclos de evolución humana se comprimen de 10 a 50 años (ahora 25)",
-    "Cambios en energéticos y tensión política requieren postura adaptativa y visible en liderazgo de PM",
-    "Diferencia estratégica de tener gerente como Sebastian vs. gestión anterior (últimos 4 años)",
-    "Necesidad de prepararse para escenarios adversos esperando lo mejor",
-    "Comportamiento infantil es manipulación inconsciente (supervivencia natural), no intencional",
-    "Regularidad de sueño mejora envejecimiento según datos",
-    "Necesidad de apoyo externo (hermana tiene límites de disponibilidad)",
-    "Eliminación de azúcares reduce inflamación y dolores articulares sin causar debilidad",
-    "Presencia en Instagram/Facebook como Quality Incat con productos de limpieza",
-    "Crear contenido educativo sobre animales para redes sociales"
+    "Aprovechar descuentos acumulables del 30%",
+    "Acelerar preparación digital para cambios energéticos y políticos",
+    "Aprovechar liderazgo de Sebastian en PM para afrontar incertidumbre",
+    "Documentar capacidad de gestion diferencial de últimos 4 años",
+    "Rutina regularizada mejora envejecimiento según datos",
+    "Comportamiento infantil obedece sobrevivencia natural, no solo manipulación",
+    "Usar fin de semana para reforzar horarios es especialmente difícil",
+    "Eliminar azúcares y carbohidratos reduce inflamación corporal y dolores articulares",
+    "Uso de IA para productividad",
+    "Participación en evento privado de logística aérea"
   ],
   "frases_poderosas": [
-    "es acumulable, pero usted cada que",
-    "En esta nueva disputa vamos a ver quién se quema, y entre el yaje y el edema, quién trae más votación",
-    "el sistema me tiene enbolatado",
-    "Tengo mucho miedo con todo lo que está pasando con Tesla, todo lo que está pasando con la energía",
-    "cuál es esa fuerza y permitítame el atrevimiento de decirle cuál es la energía combativa que usted tiene para lo que se viene"
+    "En esta nueva disputa vamos a ver quién se quema",
+    "cuál es la energía combativa que usted tiene para lo que se viene",
+    "Nosotros somos contratistas de PM hace 23 años y no hemos podido tener unas conversaciones tan fantasmagóricas",
+    "hay un momento donde él ya está manipulando inconscientemente porque está tratando de sobrevivir",
+    "establecer el horario, más que las ventanas nos ha parecido más difícil"
   ],
   "alertas_supervivencia": [
-    "CRÍTICO: Deuda acumulada de 647.2M COP con EPM representa riesgo inmediato de interrupcción operativa de Condugas. Requiere decisión y acción en horas/días, no semanas.",
-    "CRÍTICO: Ausencia de plan de acción específico tras diagnóstico de crisis en reunión 23. Solo análisis sin ejecución visible.",
-    "ALTO: Extracción manual de información de Condugas indica falta de sistemas informativos operacionales en momento de máxima necesidad.",
-    "ALTO: Implementación fallida de nómina/contabilidad con recursos insuficientes afecta visibilidad financiera necesaria para resolver crisis.",
-    "MEDIO: Patrón de dispersión cognitiva en 22 de 33 reuniones sugiere agotamiento, sobrecarga o dificultad para priorizar ante crisis existencial de la empresa."
+    "CRÍTICA: Deuda EPM de 389.60M en 4 meses sin fondos disponibles amenaza continuidad operativa de Condugas",
+    "ALTA: Patrón de implementaciones fallidas sin recursos adecuados está sobrecargando a Manuel (nómina+contabilidad)",
+    "ALTA: Incidente con cable de amperaje altísimo en presencia de mujer embarazada, madre e hijo con alergia indica falta de protocolos de seguridad",
+    "MEDIA: Fallas técnicas recurrentes en interfaz de direccionamiento y sistemas generan confusión operacional",
+    "MEDIA: Equipo requiere alineación urgente sobre cambio organizacional y sentido de transformación digital para evitar resistencia improductiva"
   ]
 }
