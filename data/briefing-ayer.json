@@ -2,148 +2,98 @@
   "fecha": "2026-04-22",
   "tareas_extraidas": [
     {
-      "tarea": "Coordinar entrega/cambio de producto con Paulito",
-      "responsable": "Unknown",
-      "prioridad": "baja"
-    },
-    {
-      "tarea": "Revisar y corregir funcionalidad de nombres en aplicación (está retornando rojo)",
-      "responsable": "Unknown",
+      "tarea": "Corregir interfaz de aplicación para mostrar nombres y direcciones correctamente",
+      "responsable": "equipo técnico",
       "prioridad": "media"
     },
     {
-      "tarea": "Conseguir niñera para cuidado martes y jueves",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Diagnosticar si hay cortocircuito por componentes juntos",
-      "responsable": "Unknown",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Extraer información estructurada con Emmanuel (datos de jueves) en formato manual si es necesario",
-      "responsable": "Sebastian / Emmanuel",
+      "tarea": "Evaluar daño completo del equipo y determinar reparación o reemplazo",
+      "responsable": "técnico",
       "prioridad": "alta"
     },
     {
-      "tarea": "Llamar a equipos para conteo/recopilación de datos no estructurados",
-      "responsable": "Sebastian",
+      "tarea": "Sacar información estructurada o manual para análisis del jueves",
+      "responsable": "quien habla",
       "prioridad": "media"
     },
     {
-      "tarea": "Identificar 3 hechos probados de aviso anticipado antes del deterioro terminal",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Definir frase de 12 palabras que resuma caso sin sonar llorón",
-      "responsable": "Sebastian",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Realizar chequeos médicos periódicos para monitoreo de bacteria y prevención de recaídas",
-      "responsable": "Tercero (familia)",
+      "tarea": "Organizar datos y hacer llamadas a falta información",
+      "responsable": "quien habla",
       "prioridad": "media"
     },
     {
-      "tarea": "Hablar con Manuel sobre apoyo en implementación de nómina y contabilidad",
+      "tarea": "Entrenar voz ejecutiva (nivel 1: decoración del caso; nivel 2: voz grave/precisa; nivel 3: cómo sostener presión)",
+      "responsable": "quien facilita sesión",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Hablar con Manuel sobre carga de trabajo en implementación de nómina/contabilidad y buscar forma de apoyarlo",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Revisar estrategia de implementación en producción con datos parametrizados",
+      "tarea": "Revisar implementación de nómina en producción con datos reales",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Desarrollar framework sobre 'el polvorín' como concepto de Being CoRe",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Enviar ubicación (contexto no especificado)",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "baja"
-    },
-    {
-      "tarea": "Formular preguntas específicas al entrenador sobre contextos de uso de 'sentido'",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Evaluar y reparar/reemplazar equipo dañado por sobreamperaje",
-      "responsable": "Unknown",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Revisar protocolo de seguridad eléctrica en hogar/obra",
+      "tarea": "Responder internamente 10 preguntas estratégicas sobre cifras mínimas, documentación, fecha crítica de caja y decisiones agresivas",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Definir cifra mínima de caja requerida en 5 días para salvar operación (nómina y proveedores críticos)",
-      "responsable": "Sebastian",
+      "tarea": "Preparar mensaje ejecutivo de 5 bloques (qué pasó, prueba, cuánto falta, riesgo EPM, decisión solicitada)",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Construir narrativa madre (5 bloques): qué pasó, qué está probado, cuánto falta, riesgo para EPM, decisión concreta",
-      "responsable": "Sebastian",
+      "tarea": "Hacer llamada ejecutiva de 20 minutos a decisor de EPM con narrativa calibrada (hechos, impacto, riesgos, solicitud, plazo)",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     },
     {
-      "tarea": "Preparar mensaje ejecutivo de 20 minutos para pedir reunión con alto nivel EPM",
-      "responsable": "Sebastian",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Ejecutar 4 rutas simultáneas: 1) Negocio (VP Negocios), 2) Jurídica/Reclamaciones, 3) Portal Pagos Proveedores, 4) Canal Ética/Transparencia",
-      "responsable": "Sebastian",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Radicación formal paralela a llamada ejecutiva con bloques: hechos, impacto, riesgos, solicitud, plazo",
-      "responsable": "Sebastian",
+      "tarea": "Radicación formal paralela a llamada (correo, portal de pagos proveedores, canal de integridad EPM)",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Aceptar descuento acumulable del 30%",
-    "Confirmar continuidad de estrategia combativa frente a volatilidad energética y política próximos 2 meses",
-    "Enfoque en regularidad de horarios más que ventanas de sueño",
-    "Transición gradual de colecho hacia independencia",
-    "Reducir dependencia de tetero/leche",
-    "Consideración de dieta baja en azúcares/carbohidratos",
-    "No volver a conectar cables sin verificar amperaje y contexto de seguridad",
-    "Aceptación implícita de invitación a evento privado con avión",
-    "Encuentro presencial confirmado para mañana en piscina",
-    "Cambio de narrativa: de 'nos están maltratando' a 'riesgo de continuidad operativa por decisiones acumuladas'"
+    "Cambiar existencia de productos antes de que se corten",
+    "Establecer horarios regulares de sueño priorizando rutina sobre ventanas",
+    "Reducir dependencia de colecho e independizar niño a su propia cama",
+    "Evaluar necesidad real de tetero vs otros alimentos",
+    "Reunirse mañana en la piscina",
+    "No iniciar por rabia ni acusación difusa",
+    "Usar arquitectura de 4 rutas simultáneas (negocio, jurídica, pagos, integridad)",
+    "Framing: riesgo de continuidad operativa, no victimización",
+    "Pedir 3 cosas concretas: pago puente, mesa ejecutiva, congelamiento de descuentos",
+    "Necesario aprender de la implementación fallida y cambiar enfoque de apoyo a Manuel"
   ],
   "ideas": [
-    "Pandemia aceleró transformación digital 24 años; ciclos de evolución humana se comprimen de 10 a 50 años (ahora 25)",
-    "Cambios en energéticos y tensión política requieren postura adaptativa y visible en liderazgo de PM",
-    "Diferencia estratégica de tener gerente como Sebastian vs. gestión anterior (últimos 4 años)",
-    "Necesidad de prepararse para escenarios adversos esperando lo mejor",
-    "Comportamiento infantil es manipulación inconsciente (supervivencia natural), no intencional",
-    "Regularidad de sueño mejora envejecimiento según datos",
-    "Necesidad de apoyo externo (hermana tiene límites de disponibilidad)",
-    "Eliminación de azúcares reduce inflamación y dolores articulares sin causar debilidad",
-    "Presencia en Instagram/Facebook como Quality Incat con productos de limpieza",
-    "Crear contenido educativo sobre animales para redes sociales"
+    "Aprovechar descuentos acumulables del 30%",
+    "Acelerar preparación digital para cambios energéticos y políticos",
+    "Aprovechar liderazgo de Sebastian en PM para afrontar incertidumbre",
+    "Documentar capacidad de gestion diferencial de últimos 4 años",
+    "Rutina regularizada mejora envejecimiento según datos",
+    "Comportamiento infantil obedece sobrevivencia natural, no solo manipulación",
+    "Usar fin de semana para reforzar horarios es especialmente difícil",
+    "Eliminar azúcares y carbohidratos reduce inflamación corporal y dolores articulares",
+    "Uso de IA para productividad",
+    "Participación en evento privado de logística aérea"
   ],
   "frases": [
-    "es acumulable, pero usted cada que",
-    "En esta nueva disputa vamos a ver quién se quema, y entre el yaje y el edema, quién trae más votación",
-    "el sistema me tiene enbolatado",
-    "Tengo mucho miedo con todo lo que está pasando con Tesla, todo lo que está pasando con la energía",
-    "cuál es esa fuerza y permitítame el atrevimiento de decirle cuál es la energía combativa que usted tiene para lo que se viene"
+    "En esta nueva disputa vamos a ver quién se quema",
+    "cuál es la energía combativa que usted tiene para lo que se viene",
+    "Nosotros somos contratistas de PM hace 23 años y no hemos podido tener unas conversaciones tan fantasmagóricas",
+    "hay un momento donde él ya está manipulando inconscientemente porque está tratando de sobrevivir",
+    "establecer el horario, más que las ventanas nos ha parecido más difícil"
   ],
   "alertas_supervivencia": [
-    "CRÍTICO: Deuda acumulada de 647.2M COP con EPM representa riesgo inmediato de interrupcción operativa de Condugas. Requiere decisión y acción en horas/días, no semanas.",
-    "CRÍTICO: Ausencia de plan de acción específico tras diagnóstico de crisis en reunión 23. Solo análisis sin ejecución visible.",
-    "ALTO: Extracción manual de información de Condugas indica falta de sistemas informativos operacionales en momento de máxima necesidad.",
-    "ALTO: Implementación fallida de nómina/contabilidad con recursos insuficientes afecta visibilidad financiera necesaria para resolver crisis.",
-    "MEDIO: Patrón de dispersión cognitiva en 22 de 33 reuniones sugiere agotamiento, sobrecarga o dificultad para priorizar ante crisis existencial de la empresa."
+    "CRÍTICA: Deuda EPM de 389.60M en 4 meses sin fondos disponibles amenaza continuidad operativa de Condugas",
+    "ALTA: Patrón de implementaciones fallidas sin recursos adecuados está sobrecargando a Manuel (nómina+contabilidad)",
+    "ALTA: Incidente con cable de amperaje altísimo en presencia de mujer embarazada, madre e hijo con alergia indica falta de protocolos de seguridad",
+    "MEDIA: Fallas técnicas recurrentes en interfaz de direccionamiento y sistemas generan confusión operacional",
+    "MEDIA: Equipo requiere alineación urgente sobre cambio organizacional y sentido de transformación digital para evitar resistencia improductiva"
   ],
   "total_lifelogs": 34,
   "procesado_con": "haiku_v3_structured"

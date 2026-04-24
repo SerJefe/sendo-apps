@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-04-23",
-  "ultima_actualizacion": "2026-04-23T11:45:02",
+  "fecha": "2026-04-24",
+  "ultima_actualizacion": "2026-04-24T11:45:04",
   "comite_sv": {
     "caja_dias": 8,
     "facturacion_pct": 45,
@@ -8,32 +8,32 @@
     "ebitda": -2300,
     "whoop_recovery": null,
     "whoop_sleep": "4h 02m (37%)",
-    "tareas_criticas": 44,
+    "tareas_criticas": 55,
     "proyectos_crisis": 2
   },
   "frescura": {
     "caja_dias": {
       "valor": 8,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 5,
+      "dias_sin_actualizar": 6,
       "fuente": "limitless"
     },
     "facturacion_pct": {
       "valor": 45,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 5,
+      "dias_sin_actualizar": 6,
       "fuente": "limitless"
     },
     "produccion_deficit_pct": {
       "valor": 73,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 5,
+      "dias_sin_actualizar": 6,
       "fuente": "limitless"
     },
     "ebitda": {
       "valor": -2300,
       "fecha": "2026-04-16",
-      "dias_sin_actualizar": 7,
+      "dias_sin_actualizar": 8,
       "fuente": "limitless"
     },
     "whoop_recovery": {
@@ -49,25 +49,30 @@
       "fuente": "manual"
     },
     "tareas_criticas": {
-      "valor": 44,
-      "fecha": "2026-04-23",
+      "valor": 55,
+      "fecha": "2026-04-24",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     },
     "proyectos_crisis": {
       "valor": 2,
-      "fecha": "2026-04-23",
+      "fecha": "2026-04-24",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     }
   },
-  "alertas": [],
+  "alertas": [
+    "490 tareas suspendidas en operaciones",
+    "Contrato 24: no conformidad sin respuesta formal.",
+    "8 proyectos activos insuficientes para sostener operaciones",
+    "Tensión de caja de 100 millones de pesos",
+    "Ruptura del equilibrio económico con riesgo de continuidad",
+    "Caja: 8 días. EPM debe ~389M en 4 meses sin fondos. Acción YA.",
+    "Hamilton: cobro vencido 17-abr. Seguimiento directo hoy."
+  ],
   "oportunidades": [
-    "Recuperación de 100 millones mediante reajuste de contratos (25-40% ambiental, 60% costos)",
-    "Cobro pendiente en Bucaramanga: potencial 80 millones que significaría 3 meses de operación",
-    "Liquidación de contrato de mantenimiento con EPM para solventar obligaciones",
-    "Revisión de deudas de socios y activos en Bucaramanga para recuperación",
-    "Posibilidad de financiamiento por esposa en Bancolombia"
+    "Contrato nuevo de pérdidas de agua (Normalizaciones)",
+    "Potencial ahorro mediante optimización de estructura gerencial"
   ],
   "whoop": {
     "recovery": 29,
@@ -95,12 +100,12 @@
     },
     {
       "campo": "caja_dias",
-      "dias_sin_dato": 5,
+      "dias_sin_dato": 6,
       "umbral": 2,
       "severidad": "alta",
       "ultimo_valor": 8,
       "ultima_fecha": "2026-04-18",
-      "mensaje": "'caja_dias' lleva 5 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+      "mensaje": "'caja_dias' lleva 6 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
     }
   ]
 }

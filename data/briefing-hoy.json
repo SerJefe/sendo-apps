@@ -1,62 +1,61 @@
 {
-  "saludo": "Buenos días Sebastián — jueves 23 Apr",
+  "saludo": "Buenos días Sebastián — viernes 24 Apr",
   "supervivencia": [
-    "Caja a 8 días: revisar movimientos hoy y estado inversiones (score 45, crítica)",
-    "EPM: 647.2M COP deuda acumulada requiere acción inmediata, no análisis",
-    "Hamilton: cobro vencido (deadline 17 abr), validar cumplimiento promesa"
+    "Caja: 8 días. EPM debe ~389M en 4 meses sin fondos. Acción YA.",
+    "Hamilton: cobro vencido 17-abr. Seguimiento directo hoy.",
+    "Contrato 24: no conformidad sin respuesta formal."
   ],
   "top_3": [
     {
-      "tarea": "Revisar estado real de caja + inversiones + movimientos últimas 48h",
+      "tarea": "Llamar Andrea: deuda Condugas + plan de cobro EPM (reajuste 180M Río Negro + comunicado formal)",
       "categoria": "SUPERVIVENCIA",
-      "porque": "8 días de runway, necesitas números reales para decisiones",
-      "tarea_id": "situacion_caja_familiar"
-    },
-    {
-      "tarea": "Llamar a Andrea: deuda Condugas + cobro EPM (180M reajustes Río Negro) + definir estrategia inmediata",
-      "categoria": "SUPERVIVENCIA",
-      "porque": "647M COP en riesgo, requiere decisión ejecutiva hoy",
+      "porque": "Sin flujo, todo colapsa en 8 días",
       "tarea_id": "resolver_deudas_condugas"
     },
     {
-      "tarea": "Base de datos clientes única (necesidades + estado actual) — 30 min máximo",
-      "categoria": "ESTRATEGIA",
-      "porque": "Score 47, crítica. Sin visibilidad clara de ingresos potenciales no hay plan",
-      "tarea_id": "clientes_base"
+      "tarea": "Revisar caja familiar + inversiones a hoy (movimientos, estado real). 30min máximo.",
+      "categoria": "SUPERVIVENCIA",
+      "porque": "No sabes tu posición financiera personal vs presiones empresariales",
+      "tarea_id": "situacion_caja_familiar"
+    },
+    {
+      "tarea": "Enviar respuesta formal a EPM sobre no conformidad contrato 24 + estructura defensa legal",
+      "categoria": "SUPERVIVENCIA",
+      "porque": "Vencida. Riesgo legal exponencial sin documentación",
+      "tarea_id": "no_conformidad_contrato_24"
     }
   ],
-  "mega_dia": "Si logras: llamada Andrea (deuda+cobro) + revisar caja real + base clientes = día ganado",
+  "mega_dia": "Cobrar Hamilton + plan ejecutivo EPM. Si lo haces, respiras 48h.",
   "contactar_hoy": [
     {
       "persona": "Andrea",
-      "motivo": "Deudas Condugas + estrategia cobro EPM 180M + tiquetes Cartagena"
+      "motivo": "Deuda Condugas + tiquetes Cartagena + estrategia EPM"
     },
     {
-      "persona": "Pilar/Basa",
-      "motivo": "Propuestas POT Aguactala (agendar si es posible)"
+      "persona": "William",
+      "motivo": "Validar datos caja/facturación (5 días sin actualizar)"
     }
   ],
   "ojo_con": [
     "56 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "Sueño 4h 02m (37%) — TDAH + decisiones críticas = riesgo. Descansa antes de llamadas importantes",
-    "17 tareas vencidas acumuladas, 44 críticas abierta — priorización radical necesaria",
-    "Datos caja/facturación sin actualizar 5 días — trabajas con información obsoleta"
+    "Sueño 4h02m (37%). Decisiones en crisis = riesgo alto.",
+    "44 tareas críticas abiertas. No es priorización, es caos.",
+    "KPIs sin actualizar 5-7 días: navegas a ciegas."
   ],
   "vencidas": [
-    "Cobro Hamilton (17 abr)",
-    "Validar Camacol escalada salarial (17 abr)",
-    "Documentación debido proceso EPM (18 abr)",
-    "Revisar rendimiento contratos críticos (20 abr)"
+    "Hamilton (17-abr)",
+    "Revisión rendimiento contratos críticos (20-abr)",
+    "Documentación debido proceso (18-abr)"
   ],
-  "frase_dia": "No análisis sin acción. Hoy: números reales + una llamada que mueva caja.",
-  "generado_at": "2026-04-23T22:16:36",
-  "fecha": "2026-04-23",
+  "frase_dia": "8 días de caja = 8 decisiones claras, no 115 tareas difusas. Hoy: cobra + documenta + duerme 6h mínimo.",
+  "generado_at": "2026-04-24T11:00:10",
+  "fecha": "2026-04-24",
   "stats": {
-    "abiertas": 111,
-    "criticas": 51,
-    "vencidas": 17,
-    "estancadas": 51,
-    "sin_evaluar": 86
+    "abiertas": 115,
+    "criticas": 55,
+    "vencidas": 25,
+    "estancadas": 53,
+    "sin_evaluar": 90
   },
   "criticas_sin_fecha": [
     {
@@ -152,64 +151,46 @@
   ],
   "vence_pronto": [
     {
-      "id": "2026-04-21-c005",
-      "tarea": "Establecer transición Odu como obligatoria (mañana y pasado mañana), sin negociación",
-      "dias": 0,
-      "fecha_limite": "2026-04-23"
-    },
-    {
-      "id": "2026-04-22-c001",
-      "tarea": "Evaluar y reparar/reemplazar equipo dañado por sobreamperaje",
-      "dias": 0,
-      "fecha_limite": "2026-04-23"
-    },
-    {
-      "id": "2026-04-22-c002",
-      "tarea": "Revisar protocolo de seguridad eléctrica en hogar/obra",
-      "dias": 0,
-      "fecha_limite": "2026-04-23"
-    },
-    {
-      "id": "2026-04-22-c004",
-      "tarea": "Construir narrativa madre (5 bloques): qué pasó, qué está probado, cuánto falta, riesgo para EPM, de",
-      "dias": 0,
-      "fecha_limite": "2026-04-23"
-    },
-    {
-      "id": "2026-04-22-c005",
-      "tarea": "Preparar mensaje ejecutivo de 20 minutos para pedir reunión con alto nivel EPM",
-      "dias": 0,
-      "fecha_limite": "2026-04-23"
-    },
-    {
-      "id": "2026-04-22-c007",
-      "tarea": "Radicación formal paralela a llamada ejecutiva con bloques: hechos, impacto, riesgos, solicitud, pla",
-      "dias": 0,
-      "fecha_limite": "2026-04-23"
-    },
-    {
       "id": "2026-04-17-c003",
       "tarea": "Auditar estructura de deuda y cuentas por cobrar entre Condugas, socios e IC (excisión no pagada)",
-      "dias": 1,
+      "dias": 0,
       "fecha_limite": "2026-04-24"
     },
     {
       "id": "2026-04-21-c008",
       "tarea": "Revertir transferencia de 14M COP a papá de Sebastian para cubrir fly pass y mantener nómina operati",
-      "dias": 1,
+      "dias": 0,
+      "fecha_limite": "2026-04-24"
+    },
+    {
+      "id": "2026-04-22-c003x",
+      "tarea": "Hacer llamada ejecutiva de 20 minutos a decisor de EPM con narrativa calibrada (hechos, impacto, rie",
+      "dias": 0,
+      "fecha_limite": "2026-04-24"
+    },
+    {
+      "id": "2026-04-22-c004x",
+      "tarea": "Radicación formal paralela a llamada (correo, portal de pagos proveedores, canal de integridad EPM)",
+      "dias": 0,
       "fecha_limite": "2026-04-24"
     },
     {
       "id": "2026-04-17-c002",
       "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en EPM e incorporando Vanti, gas de occ",
-      "dias": 2,
+      "dias": 1,
       "fecha_limite": "2026-04-25"
     },
     {
       "id": "2026-04-22-c006",
       "tarea": "Ejecutar 4 rutas simultáneas: 1) Negocio (VP Negocios), 2) Jurídica/Reclamaciones, 3) Portal Pagos P",
-      "dias": 2,
+      "dias": 1,
       "fecha_limite": "2026-04-25"
+    },
+    {
+      "id": "2026-04-22-c003",
+      "tarea": "Definir cifra mínima de caja requerida en 5 días para salvar operación (nómina y proveedores crítico",
+      "dias": 3,
+      "fecha_limite": "2026-04-27"
     }
   ]
 }

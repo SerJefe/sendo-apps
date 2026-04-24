@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-23T22:18:42",
+  "ultima_actualizacion": "2026-04-24T18:02:06",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -2747,7 +2747,7 @@
       "origen": "limitless_auto",
       "contexto": "Resistencia al cambio requiere presión clara",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2887,7 +2887,7 @@
       "origen": "limitless_auto",
       "contexto": "incidente de seguridad eléctrica con riesgo de vida",
       "tipo": "pendiente",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2905,7 +2905,7 @@
       "origen": "limitless_auto",
       "contexto": "prevención de accidentes con embarazada y menores",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2941,7 +2941,7 @@
       "origen": "limitless_auto",
       "contexto": "Preparación conversación alto nivel EPM",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2959,7 +2959,7 @@
       "origen": "limitless_auto",
       "contexto": "Activación rutas formales ante EPM",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2999,7 +2999,7 @@
       "origen": "limitless_auto",
       "contexto": "Deja constancia formal y eleva costo institucional de ignorar",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -3018,7 +3018,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-16-r14-008",
@@ -3033,7 +3034,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-22-c001x",
@@ -3047,7 +3049,7 @@
       "origen": "limitless_auto",
       "contexto": "preparación para negociación con EPM",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -3065,7 +3067,7 @@
       "origen": "limitless_auto",
       "contexto": "contacto formal a alto nivel de EPM",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -3108,6 +3110,128 @@
       "categoria": "condugas",
       "monto_cop": null,
       "personas": []
+    },
+    {
+      "id": "2026-04-23-c001",
+      "tarea": "Comunicar decisión de salida de Carlos de la empresa",
+      "responsable": "You (Sebastian Sanchez Acevedo)",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-23",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-24",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Reducción de personal por bajo desempeño y tensión operativa",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Carlos",
+        "You"
+      ]
+    },
+    {
+      "id": "2026-04-23-c002",
+      "tarea": "Finalizar y radicar comunicación formal a EPM con: reserva derechos + propuesta de ajuste económico + convocatoria a mesa técnica 10 días hábiles",
+      "responsable": "You (Sebastian Sanchez Acevedo)",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-23",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-24",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Reclamación EPM - Ítems ambientales Río Negro",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "You",
+        "EPM"
+      ]
+    },
+    {
+      "id": "2026-04-23-c003",
+      "tarea": "Incorporar aclaración de ítems ambientales (80% vs 100% condicionado) en comunicación a EPM antes de radicar",
+      "responsable": "You (Sebastian Sanchez Acevedo)",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-23",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-24",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Propuesta técnica - Río Negro",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "You"
+      ]
+    },
+    {
+      "id": "2026-04-23-c004",
+      "tarea": "Urgente: actualizar contabilidad en paralelo con producción para tener contraste costo vs ingresos real",
+      "responsable": "Claudia",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-23",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-27",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Crisis financiera - falta visibilidad",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Claudia"
+      ]
+    },
+    {
+      "id": "2026-04-23-c005",
+      "tarea": "Crear modelo de rentabilidad de contratos (no solo APU de costos) con actualización mensual",
+      "responsable": "Camilo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-23",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-30",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Evaluacion financiera proyecto",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Camilo"
+      ]
+    },
+    {
+      "id": "2026-04-23-c006",
+      "tarea": "Análisis: Si crédito nuevo se usa para reducir gastos fijos operativos (arriendo, servicios) + comprar activos vs solo pagar crédito anterior, ¿qué % debería ser cada uno?",
+      "responsable": "You (Sebastian Sanchez Acevedo)",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-23",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-26",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Estrategia de crédito vs survival",
+      "tipo": "decision",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "You"
+      ]
     }
   ]
 }

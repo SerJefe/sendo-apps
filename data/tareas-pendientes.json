@@ -3486,7 +3486,477 @@
         "Manuel"
       ],
       "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r1-001",
+      "tarea": "Realizar presentación",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Presentación mañana (2026-04-24), requiere madrugada",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Pilarita"
+      ],
+      "segmento_idx": 1,
+      "segmento_titulo": "Conversación sobre horarios y documentos",
+      "segmento_inicio": "2026-04-23T00:11:15Z",
+      "segmento_fin": "2026-04-23T00:14:21Z",
+      "segmento_personas": [
+        "Pilarita"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-23-r1-002",
+      "tarea": "Revisar y confirmar documentación de horarios (8 horas)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Aclaración resuelta sobre 2 documentos",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 1,
+      "segmento_titulo": "Conversación sobre horarios y documentos",
+      "segmento_inicio": "2026-04-23T00:11:15Z",
+      "segmento_fin": "2026-04-23T00:14:21Z",
+      "segmento_personas": [
+        "Pilarita"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-23-r2-003",
+      "tarea": "Documentar framework metodológico de Being CoRe (método inductivo + Ventana de Johari)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Clarificación de enfoque para intervenciones en equipos (Condugas y clientes)",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 2,
+      "segmento_titulo": "Conversación sobre el comportamiento humano y la intervención en equipos",
+      "segmento_inicio": "2026-04-23T00:14:22Z",
+      "segmento_fin": "2026-04-23T00:31:47Z",
+      "segmento_personas": [
+        "You (Sebastian)"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r2-004",
+      "tarea": "Diseñar modelo de intervención para expertos técnicos en PM/Condugas",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Cómo tocar expertos desde reconocimiento de fortalezas, no solo técnica",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 2,
+      "segmento_titulo": "Conversación sobre el comportamiento humano y la intervención en equipos",
+      "segmento_inicio": "2026-04-23T00:14:22Z",
+      "segmento_fin": "2026-04-23T00:31:47Z",
+      "segmento_personas": [
+        "You (Sebastian)"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r5-005",
+      "tarea": "Hacer ruta matutina y enseñar a alguien",
+      "responsable": "Unknown",
+      "prioridad": "baja",
+      "contexto": "Actividad de capacitación informal o logística",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 5,
+      "segmento_titulo": "Conversación sobre la clínica y una ruta",
+      "segmento_inicio": "2026-04-23T01:32:34Z",
+      "segmento_fin": "2026-04-23T01:43:38Z",
+      "segmento_personas": [],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-23-r11-006",
+      "tarea": "Posicionar a Mario como futuro gerente de PM y voz estratégica",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Estrategia de influencia en EPM/PM usando visibilidad de Mario sin confrontación directa",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Mario",
+        "John Maya",
+        "William"
+      ],
+      "segmento_idx": 11,
+      "segmento_titulo": "Conversación sobre proyectos y estrategias",
+      "segmento_inicio": "2026-04-23T15:20:18Z",
+      "segmento_fin": "2026-04-23T15:35:27Z",
+      "segmento_personas": [
+        "John Maya",
+        "William",
+        "Marco Villa",
+        "Humberto",
+        "Mario"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r11-007",
+      "tarea": "Hacer conocer a Condugas/Being CoRe desde arriba ante John Maya y actores clave de EPM",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Ganar visibilidad sin parecer confrontacional, usando intermediarios de confianza",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "John Maya",
+        "Marco Villa",
+        "William"
+      ],
+      "segmento_idx": 11,
+      "segmento_titulo": "Conversación sobre proyectos y estrategias",
+      "segmento_inicio": "2026-04-23T15:20:18Z",
+      "segmento_fin": "2026-04-23T15:35:27Z",
+      "segmento_personas": [
+        "John Maya",
+        "William",
+        "Marco Villa",
+        "Humberto",
+        "Mario"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r11-008",
+      "tarea": "Involucrar a Humberto y Mario en estrategia de junta/información",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Crear red de comunicación indirecta que permita que Mario tenga visibilidad sin perder respeto",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Humberto",
+        "Mario"
+      ],
+      "segmento_idx": 11,
+      "segmento_titulo": "Conversación sobre proyectos y estrategias",
+      "segmento_inicio": "2026-04-23T15:20:18Z",
+      "segmento_fin": "2026-04-23T15:35:27Z",
+      "segmento_personas": [
+        "John Maya",
+        "William",
+        "Marco Villa",
+        "Humberto",
+        "Mario"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r12-009",
+      "tarea": "Enviar detalle de deuda EPM (reajustes + ambientales Río Negro) al correo S. Sánchez@condugas.com.co",
+      "responsable": "María Fernanda",
+      "prioridad": "alta",
+      "contexto": "Documentación de deuda EPM",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "condugas",
+      "monto_cop": 950000000,
+      "personas": [
+        "Sebastian Sanchez Acevedo",
+        "María Fernanda"
+      ],
+      "segmento_idx": 12,
+      "segmento_titulo": "Conversación sobre asuntos financieros y deudas",
+      "segmento_inicio": "2026-04-23T15:35:32Z",
+      "segmento_fin": "2026-04-23T15:38:24Z",
+      "segmento_personas": [
+        "María Fernanda",
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r13-010",
+      "tarea": "Revisar y validar si los 125M pendientes en contrato son correctos (no errores de interpretación)",
+      "responsable": "Carlos López",
+      "prioridad": "media",
+      "contexto": "Análisis de costos de proyecto",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-25",
+      "categoria_sugerida": "condugas",
+      "monto_cop": 125000000,
+      "personas": [
+        "Carlos López",
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 13,
+      "segmento_titulo": "Conversación sobre mentoría, costos y análisis de proyectos",
+      "segmento_inicio": "2026-04-23T15:38:35Z",
+      "segmento_fin": "2026-04-23T15:58:21Z",
+      "segmento_personas": [
+        "You (Sebastian)",
+        "Carlos López",
+        "Juan Pablo",
+        "Luis Robel"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-23-r14-011",
+      "tarea": "Desarrollar narrativa detallada de 1 caso histórico donde IPM tuvo problema gordo y Condugas lo resolvió (con nombres, fechas, costos, diálogos)",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Construcción de caso de estudio IPM para Being CoRe",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-28",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 14,
+      "segmento_titulo": "Discusión sobre un proyecto y la relación con IPM",
+      "segmento_inicio": "2026-04-23T15:58:35Z",
+      "segmento_fin": "2026-04-23T16:07:50Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Camilo",
+        "Tere",
+        "Catalina",
+        "IPM"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-23-r15-012",
+      "tarea": "Analizar opciones de reemplazo de Carlos: a) solo Catalina, b) traer persona mejor a menor costo con presupuesto de ambos",
+      "responsable": "You (Sebastian Sanchez Acevedo)",
+      "prioridad": "alta",
+      "contexto": "Optimización de nómina",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-27",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Catalina",
+        "You"
+      ],
+      "segmento_idx": 15,
+      "segmento_titulo": "Conversación sobre varios temas laborales",
+      "segmento_inicio": "2026-04-23T16:08:46Z",
+      "segmento_fin": "2026-04-23T16:45:20Z",
+      "segmento_personas": [
+        "Carlos",
+        "Catalina",
+        "Diego",
+        "You (Sebastian)"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r15-013",
+      "tarea": "Evaluar uso de crédito de 1500 (1.5M?) para comprar vehículos como activos operativos vs gasto corriente",
+      "responsable": "You (Sebastian Sanchez Acevedo)",
+      "prioridad": "alta",
+      "contexto": "Gestión de crédito + cashflow",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-28",
+      "categoria_sugerida": "condugas",
+      "monto_cop": 1500000,
+      "personas": [
+        "You"
+      ],
+      "segmento_idx": 15,
+      "segmento_titulo": "Conversación sobre varios temas laborales",
+      "segmento_inicio": "2026-04-23T16:08:46Z",
+      "segmento_fin": "2026-04-23T16:45:20Z",
+      "segmento_personas": [
+        "Carlos",
+        "Catalina",
+        "Diego",
+        "You (Sebastian)"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r18-014",
+      "tarea": "Implementar proceso de nómina centralizado en una persona para reduce fricción",
+      "responsable": "You (Sebastian Sanchez Acevedo)",
+      "prioridad": "media",
+      "contexto": "Optimización operativa",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-05-07",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "You"
+      ],
+      "segmento_idx": 18,
+      "segmento_titulo": "Conversación sobre finanzas, operaciones y personal",
+      "segmento_inicio": "2026-04-23T21:50:07Z",
+      "segmento_fin": "2026-04-23T22:10:58Z",
+      "segmento_personas": [
+        "You (Sebastian)",
+        "Andrés"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-23-r18-015",
+      "tarea": "Revisar y rediseñar puntos de enlace (mandos medios) para evitar que tareas incompletas se acumulen en Sebastian",
+      "responsable": "Andrés",
+      "prioridad": "media",
+      "contexto": "Gestion de recursos humanos",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-28",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Andrés",
+        "You"
+      ],
+      "segmento_idx": 18,
+      "segmento_titulo": "Conversación sobre finanzas, operaciones y personal",
+      "segmento_inicio": "2026-04-23T21:50:07Z",
+      "segmento_fin": "2026-04-23T22:10:58Z",
+      "segmento_personas": [
+        "You (Sebastian)",
+        "Andrés"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-23-r19-016",
+      "tarea": "Solicitar reunión a Banti para renegociar términos de pago/contrato (mencionar posibilidad de tercerizar perforación y acero)",
+      "responsable": "You (Sebastian Sanchez Acevedo)",
+      "prioridad": "alta",
+      "contexto": "Renegociación de proveedor",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-26",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Banti",
+        "You"
+      ],
+      "segmento_idx": 19,
+      "segmento_titulo": "Conversación sobre pagos, contratos y análisis financiero",
+      "segmento_inicio": "2026-04-23T22:10:59Z",
+      "segmento_fin": "2026-04-23T22:18:04Z",
+      "segmento_personas": [
+        "You (Sebastian)",
+        "Banti",
+        "Claudia",
+        "proveedor lento (posible Ayura)"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r19-017",
+      "tarea": "Analizar separación de contrato con proveedor lento: qué quedó pendiente en Valle (1300) y dónde está el peso de ese paquete",
+      "responsable": "You (Sebastian Sanchez Acevedo)",
+      "prioridad": "media",
+      "contexto": "Análisis de pasivos vs ingresos",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-27",
+      "categoria_sugerida": "condugas",
+      "monto_cop": 1300000,
+      "personas": [
+        "You"
+      ],
+      "segmento_idx": 19,
+      "segmento_titulo": "Conversación sobre pagos, contratos y análisis financiero",
+      "segmento_inicio": "2026-04-23T22:10:59Z",
+      "segmento_fin": "2026-04-23T22:18:04Z",
+      "segmento_personas": [
+        "You (Sebastian)",
+        "Banti",
+        "Claudia",
+        "proveedor lento (posible Ayura)"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-23-r19-018",
+      "tarea": "Solicitar a Manga estado/análisis de equipos (cuáles prestados, cuáles cobrados) para negociación",
+      "responsable": "Manga",
+      "prioridad": "media",
+      "contexto": "Validacion de activos para negociacion",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-23",
+      "fecha_limite": "2026-04-25",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Manga",
+        "You"
+      ],
+      "segmento_idx": 19,
+      "segmento_titulo": "Conversación sobre pagos, contratos y análisis financiero",
+      "segmento_inicio": "2026-04-23T22:10:59Z",
+      "segmento_fin": "2026-04-23T22:18:04Z",
+      "segmento_personas": [
+        "You (Sebastian)",
+        "Banti",
+        "Claudia",
+        "proveedor lento (posible Ayura)"
+      ],
+      "segmento_impacto": "alto"
     }
   ],
-  "ultima_actualizacion": "2026-04-23T22:18:42.952820"
+  "ultima_actualizacion": "2026-04-24T18:02:06.913050"
 }
