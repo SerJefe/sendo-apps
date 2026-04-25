@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-04-24",
-  "ultima_actualizacion": "2026-04-24T11:45:04",
+  "fecha": "2026-04-25",
+  "ultima_actualizacion": "2026-04-25T11:45:09",
   "comite_sv": {
     "caja_dias": 8,
     "facturacion_pct": 45,
@@ -8,32 +8,32 @@
     "ebitda": -2300,
     "whoop_recovery": null,
     "whoop_sleep": "4h 02m (37%)",
-    "tareas_criticas": 55,
+    "tareas_criticas": 61,
     "proyectos_crisis": 2
   },
   "frescura": {
     "caja_dias": {
       "valor": 8,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 6,
+      "dias_sin_actualizar": 7,
       "fuente": "limitless"
     },
     "facturacion_pct": {
       "valor": 45,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 6,
+      "dias_sin_actualizar": 7,
       "fuente": "limitless"
     },
     "produccion_deficit_pct": {
       "valor": 73,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 6,
+      "dias_sin_actualizar": 7,
       "fuente": "limitless"
     },
     "ebitda": {
       "valor": -2300,
       "fecha": "2026-04-16",
-      "dias_sin_actualizar": 8,
+      "dias_sin_actualizar": 9,
       "fuente": "limitless"
     },
     "whoop_recovery": {
@@ -49,30 +49,34 @@
       "fuente": "manual"
     },
     "tareas_criticas": {
-      "valor": 55,
-      "fecha": "2026-04-24",
+      "valor": 61,
+      "fecha": "2026-04-25",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     },
     "proyectos_crisis": {
       "valor": 2,
-      "fecha": "2026-04-24",
+      "fecha": "2026-04-25",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     }
   },
   "alertas": [
-    "490 tareas suspendidas en operaciones",
-    "Contrato 24: no conformidad sin respuesta formal.",
-    "8 proyectos activos insuficientes para sostener operaciones",
-    "Tensión de caja de 100 millones de pesos",
-    "Ruptura del equilibrio económico con riesgo de continuidad",
-    "Caja: 8 días. EPM debe ~389M en 4 meses sin fondos. Acción YA.",
-    "Hamilton: cobro vencido 17-abr. Seguimiento directo hoy."
+    "Déficit mensual en contrato Río Negro de 9.6 a 10 millones de pesos",
+    "Tensión financiera severa por situación compleja no especificada",
+    "Hamilton: cobro vencido (deadline 17 abr, hoy ya pasó). Acción legal pendiente.",
+    "Deuda de 900 millones de pesos pendiente por operación y mantenimiento",
+    "Caja crítica: 8 días. EPM retrasado 5+ meses (~180M). Nómina/proveedores en riesgo.",
+    "Pérdida de 1000 millones de pesos en operaciones regionales",
+    "Deterioro diario de rentabilidad y caja bajo condiciones actuales del contrato",
+    "55 tareas críticas abiertas. 32 vencidas. Déficit producción 73%."
   ],
   "oportunidades": [
-    "Contrato nuevo de pérdidas de agua (Normalizaciones)",
-    "Potencial ahorro mediante optimización de estructura gerencial"
+    "Aumentar producción a 150 millones de costo directo en Río Negro reduciría déficit",
+    "Reclamación contractual por desequilibrio económico con precedente de EPM reconociendo 100% de ítems ambientales",
+    "Propuesta de mecanismo de administración variable para diluir costos fijos",
+    "Reconocimiento de 35 millones en costos ambientales como costo directo",
+    "Precedente de pago EPM al 35% de producción en zona noroccidental"
   ],
   "whoop": {
     "recovery": 29,
@@ -100,12 +104,30 @@
     },
     {
       "campo": "caja_dias",
-      "dias_sin_dato": 6,
+      "dias_sin_dato": 7,
       "umbral": 2,
       "severidad": "alta",
       "ultimo_valor": 8,
       "ultima_fecha": "2026-04-18",
-      "mensaje": "'caja_dias' lleva 6 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+      "mensaje": "'caja_dias' lleva 7 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+    },
+    {
+      "campo": "facturacion_pct",
+      "dias_sin_dato": 7,
+      "umbral": 7,
+      "severidad": "media",
+      "ultimo_valor": 45,
+      "ultima_fecha": "2026-04-18",
+      "mensaje": "'facturacion_pct' lleva 7 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+    },
+    {
+      "campo": "produccion_deficit_pct",
+      "dias_sin_dato": 7,
+      "umbral": 7,
+      "severidad": "media",
+      "ultimo_valor": 73,
+      "ultima_fecha": "2026-04-18",
+      "mensaje": "'produccion_deficit_pct' lleva 7 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
     }
   ]
 }

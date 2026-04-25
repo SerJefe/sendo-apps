@@ -3956,7 +3956,411 @@
         "proveedor lento (posible Ayura)"
       ],
       "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-24-r0-001",
+      "tarea": "Repasar dinámicas de grupo y gestionar tensiones en el grupo",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Evento con amigos",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "amigos"
+      ],
+      "segmento_idx": 0,
+      "segmento_titulo": "Discusión sobre la preparación y logística de un evento.",
+      "segmento_inicio": "2026-04-24T00:51:24Z",
+      "segmento_fin": "2026-04-24T00:55:35Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-24-r2-002",
+      "tarea": "Evaluar daño de coche y decidir entre taller o seguro",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Choque de vehículo",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "abogada"
+      ],
+      "segmento_idx": 2,
+      "segmento_titulo": "Conversaciones sobre eventos cotidianos, un accidente automovilístico y planes de comida",
+      "segmento_inicio": "2026-04-24T01:24:51Z",
+      "segmento_fin": "2026-04-24T01:30:46Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "María"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-24-r4-003",
+      "tarea": "Seguimiento con cliente sobre entrega de consultoría de Being CoRe",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Primera entrega de consultoría",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": null,
+      "categoria_sugerida": "siendo-consulting",
+      "monto_cop": null,
+      "personas": [
+        "cliente"
+      ],
+      "segmento_idx": 4,
+      "segmento_titulo": "Resumen de la semana de Sebastian Sanchez Acevedo",
+      "segmento_inicio": "2026-04-24T01:35:33Z",
+      "segmento_fin": "2026-04-24T01:40:50Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Pablo",
+        "Humberto",
+        "John Mayer",
+        "Ludarí"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-24-r5-004",
+      "tarea": "Guardar secreto sobre 'la obra' y no revelar a Paoli",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Secreto de proyecto",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Paoli"
+      ],
+      "segmento_idx": 5,
+      "segmento_titulo": "Una conversación multifacética que abarca finanzas personales, deudas, un incidente con 'El Gringo', secretos relacionados con un proyecto, y discusiones sobre ",
+      "segmento_inicio": "2026-04-24T01:49:03Z",
+      "segmento_fin": "2026-04-24T01:54:52Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "El Gringo",
+        "Papá",
+        "Paoli",
+        "Estados Unidos"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-24-r6-005",
+      "tarea": "Confirmar ubicación de local con El Palito para decisión de 10 o 20 bandejas",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Negociación El Palito",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": "2026-05-07",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "El Palito"
+      ],
+      "segmento_idx": 6,
+      "segmento_titulo": "Conversación sobre proyectos y negociaciones",
+      "segmento_inicio": "2026-04-24T02:00:57Z",
+      "segmento_fin": "2026-04-24T02:07:03Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Esteban",
+        "El Palito"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-24-r6-006",
+      "tarea": "Obtener plano de Sincano para poder cotizar proyecto",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta",
+      "contexto": "Proyecto Sincano",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 6,
+      "segmento_titulo": "Conversación sobre proyectos y negociaciones",
+      "segmento_inicio": "2026-04-24T02:00:57Z",
+      "segmento_fin": "2026-04-24T02:07:03Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Esteban",
+        "El Palito"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-24-r17-007",
+      "tarea": "Revisar arquitectura actual de ERP y periféricos desarrollados internamente",
+      "responsable": "Ingeniero desarrollo",
+      "prioridad": "alta",
+      "contexto": "ERP/sistemas",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 17,
+      "segmento_titulo": "Discusión sobre la implementación de un ERP y sus desafíos",
+      "segmento_inicio": "2026-04-24T17:59:43Z",
+      "segmento_fin": "2026-04-24T18:02:15Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Ingeniero desarrollo (encargado)",
+        "2 ingenieros"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-24-r17-008",
+      "tarea": "Documentar dependencias técnicas y puntos de fallo en sistema ERP+periféricos",
+      "responsable": "Ingeniero desarrollo + 2 ingenieros",
+      "prioridad": "alta",
+      "contexto": "ERP/sistemas",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 17,
+      "segmento_titulo": "Discusión sobre la implementación de un ERP y sus desafíos",
+      "segmento_inicio": "2026-04-24T17:59:43Z",
+      "segmento_fin": "2026-04-24T18:02:15Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Ingeniero desarrollo (encargado)",
+        "2 ingenieros"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-24-r21-009",
+      "tarea": "Continuar exploración de dinámicas grupales y comportamientos en próximas sesiones",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Desarrollo organizacional/Being CoRe",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": null,
+      "categoria_sugerida": "siendo-consulting",
+      "monto_cop": null,
+      "personas": [
+        "Grupo"
+      ],
+      "segmento_idx": 21,
+      "segmento_titulo": "Actividades interactivas y discusiones diversas en un entorno grupal",
+      "segmento_inicio": "2026-04-24T18:22:46Z",
+      "segmento_fin": "2026-04-24T20:33:01Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Grupo (sin nombres específicos)"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-24-r23-010",
+      "tarea": "Evaluar implementación de Odoo como ERP/CRM centralizado para 560 empleados",
+      "responsable": "Sebastian Sanchez Acevedo + Ingeniero desarrollo",
+      "prioridad": "alta",
+      "contexto": "Transformación digital/ERP",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Condugas equipo"
+      ],
+      "segmento_idx": 23,
+      "segmento_titulo": "Sebastian Sanchez Acevedo's Business Proposal and System Design",
+      "segmento_inicio": "2026-04-24T20:37:50Z",
+      "segmento_fin": "2026-04-24T20:56:01Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-24-r23-011",
+      "tarea": "Diseñar automatizaciones para 7 modelos de pago diferentes en Odoo",
+      "responsable": "Ingeniero desarrollo",
+      "prioridad": "alta",
+      "contexto": "ERP/nómina",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_idx": 23,
+      "segmento_titulo": "Sebastian Sanchez Acevedo's Business Proposal and System Design",
+      "segmento_inicio": "2026-04-24T20:37:50Z",
+      "segmento_fin": "2026-04-24T20:56:01Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-24-r23-012",
+      "tarea": "Definir modelo de 'trabajo por resultados' vs. transaccional para equipo",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Organización/RRHH",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Condugas equipo"
+      ],
+      "segmento_idx": 23,
+      "segmento_titulo": "Sebastian Sanchez Acevedo's Business Proposal and System Design",
+      "segmento_inicio": "2026-04-24T20:37:50Z",
+      "segmento_fin": "2026-04-24T20:56:01Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-24-r25-013",
+      "tarea": "Elegir representante del grupo para debate",
+      "responsable": "Grupo (Giselle/Diego/Andrés)",
+      "prioridad": "alta",
+      "contexto": "debate y plenaria",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Giselle",
+        "Diego",
+        "Andrés"
+      ],
+      "segmento_idx": 25,
+      "segmento_titulo": "Conversación sobre organización y debate",
+      "segmento_inicio": "2026-04-24T20:57:36Z",
+      "segmento_fin": "2026-04-24T21:04:32Z",
+      "segmento_personas": [
+        "Giselle",
+        "Diego",
+        "Andrés",
+        "Alex",
+        "Adolfo"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-24-r27-014",
+      "tarea": "Llevar palo a Adolfo en motocicleta",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "baja",
+      "contexto": "logística personal",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Adolfo"
+      ],
+      "segmento_idx": 27,
+      "segmento_titulo": "Conversación sobre un palo y otros asuntos",
+      "segmento_inicio": "2026-04-24T22:34:07Z",
+      "segmento_fin": "2026-04-24T22:43:08Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Adolfo",
+        "Yaira"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-24-r29-015",
+      "tarea": "Grupos escriben manifiesto de comportamientos de jefe para lograr que otros logren",
+      "responsable": "Participantes (5 grupos de 4)",
+      "prioridad": "alta",
+      "contexto": "taller de liderazgo Being CoRe",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "siendo-consulting",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 29,
+      "segmento_titulo": "Conversación fragmentada sobre estrategias, frustraciones y un relato personal de un incidente en motocicleta.",
+      "segmento_inicio": "2026-04-24T22:55:27Z",
+      "segmento_fin": "2026-04-24T23:25:15Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-24-r29-016",
+      "tarea": "Realizar debate entre grupos (15 minutos) con audiencia observando comportamientos",
+      "responsable": "Participantes",
+      "prioridad": "alta",
+      "contexto": "taller de liderazgo",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-24",
+      "fecha_limite": "2026-04-24",
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 29,
+      "segmento_titulo": "Conversación fragmentada sobre estrategias, frustraciones y un relato personal de un incidente en motocicleta.",
+      "segmento_inicio": "2026-04-24T22:55:27Z",
+      "segmento_fin": "2026-04-24T23:25:15Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo"
+      ],
+      "segmento_impacto": "alto"
     }
   ],
-  "ultima_actualizacion": "2026-04-24T18:02:06.913050"
+  "ultima_actualizacion": "2026-04-25T18:02:33.775157"
 }

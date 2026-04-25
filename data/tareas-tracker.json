@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-24T18:02:06",
+  "ultima_actualizacion": "2026-04-25T18:02:33",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -2191,7 +2191,7 @@
       "origen": "limitless_auto",
       "contexto": "Riesgo financiero Condugas - crisis de caja",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2297,7 +2297,8 @@
       "monto_cop": null,
       "personas": [
         "Andrea"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c002",
@@ -2322,7 +2323,8 @@
       "fusiono": [
         "2026-04-16-r10-014",
         "2026-04-20-c002x"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c003",
@@ -2340,7 +2342,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": 1200000000,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c004",
@@ -2361,7 +2364,8 @@
       "personas": [
         "Catalina",
         "PM"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c005",
@@ -2381,7 +2385,8 @@
       "monto_cop": null,
       "personas": [
         "PM"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c006",
@@ -2399,7 +2404,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": 130000000,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c007",
@@ -2419,7 +2425,8 @@
       "monto_cop": null,
       "personas": [
         "Sebastian Sanchez"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c008",
@@ -2442,7 +2449,8 @@
       ],
       "fusiono": [
         "2026-04-20-c010"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-r9-006",
@@ -2457,7 +2465,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-20-c002x",
@@ -2500,7 +2509,8 @@
       "monto_cop": null,
       "personas": [
         "Carlos López"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c004x",
@@ -2518,7 +2528,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c005x",
@@ -2536,7 +2547,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": 2600000000,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c006x",
@@ -2556,7 +2568,8 @@
       "monto_cop": null,
       "personas": [
         "PM"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c007x",
@@ -2576,7 +2589,8 @@
       "monto_cop": null,
       "personas": [
         "PM"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c008x",
@@ -2594,7 +2608,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": 130000000,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c009",
@@ -2614,7 +2629,8 @@
       "monto_cop": null,
       "personas": [
         "Sebastian Sanchez Acevedo"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-20-c010",
@@ -2651,7 +2667,8 @@
       "tipo": "compromiso",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-21-c001",
@@ -2805,7 +2822,7 @@
       "origen": "limitless_auto",
       "contexto": "Flujo de caja de fin de semana",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": 14000000,
@@ -3085,7 +3102,7 @@
       "origen": "limitless_auto",
       "contexto": "negociación de pago puente y mesa ejecutiva",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -3105,7 +3122,7 @@
       "origen": "limitless_auto",
       "contexto": "crear registro documental y presión simultánea",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -3123,7 +3140,7 @@
       "origen": "limitless_auto",
       "contexto": "Reducción de personal por bajo desempeño y tensión operativa",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -3144,7 +3161,7 @@
       "origen": "limitless_auto",
       "contexto": "Reclamación EPM - Ítems ambientales Río Negro",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -3165,7 +3182,7 @@
       "origen": "limitless_auto",
       "contexto": "Propuesta técnica - Río Negro",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -3232,6 +3249,64 @@
       "personas": [
         "You"
       ]
+    },
+    {
+      "id": "2026-04-24-c001",
+      "tarea": "Reclamar deuda de 600 millones COP a EPM por reajustes no pagados",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-24",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Cobro EPM - reajustes",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": 600000000,
+      "personas": [
+        "EPM"
+      ]
+    },
+    {
+      "id": "2026-04-24-c002",
+      "tarea": "Resolver fórmula de reajustes con EPM para evitar tensión de 450M COP",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-24",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Liquidación de cobros",
+      "tipo": "pendiente",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": 450000000,
+      "personas": [
+        "EPM"
+      ]
+    },
+    {
+      "id": "2026-04-24-c003",
+      "tarea": "Resolver problema Burger Master - incidente con heridos en acera",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-24",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Inaudito - proyecto propio",
+      "tipo": "pendiente",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": []
     }
   ]
 }

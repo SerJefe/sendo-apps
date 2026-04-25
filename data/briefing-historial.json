@@ -38,21 +38,21 @@
     },
     {
       "semana": "W17",
-      "periodo": "2026-04-18 a 2026-04-24",
+      "periodo": "2026-04-19 a 2026-04-25",
       "metricas": {
-        "creadas_semana": 49,
-        "cerradas_semana": 10,
-        "evaluadas_semana": 1,
-        "abiertas_total": 115,
-        "ratio_cierre": 20
+        "creadas_semana": 47,
+        "cerradas_semana": 8,
+        "evaluadas_semana": 0,
+        "abiertas_total": 121,
+        "ratio_cierre": 17
       },
       "totales": {
-        "tareas_detectadas": 58,
-        "decisiones": 30,
-        "ideas": 30,
-        "alertas": 15
+        "tareas_detectadas": 82,
+        "decisiones": 40,
+        "ideas": 40,
+        "alertas": 20
       },
-      "generado_at": "2026-04-24T11:00:10"
+      "generado_at": "2026-04-25T11:00:10"
     }
   ]
 }

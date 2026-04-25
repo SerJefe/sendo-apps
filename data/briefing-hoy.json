@@ -1,61 +1,62 @@
 {
-  "saludo": "Buenos días Sebastián — viernes 24 Apr",
+  "saludo": "Buenos días Sebastián — sábado 25 Apr 2026",
   "supervivencia": [
-    "Caja: 8 días. EPM debe ~389M en 4 meses sin fondos. Acción YA.",
-    "Hamilton: cobro vencido 17-abr. Seguimiento directo hoy.",
-    "Contrato 24: no conformidad sin respuesta formal."
+    "Caja crítica: 8 días. EPM retrasado 5+ meses (~180M). Nómina/proveedores en riesgo.",
+    "Hamilton: cobro vencido (deadline 17 abr, hoy ya pasó). Acción legal pendiente.",
+    "55 tareas críticas abiertas. 32 vencidas. Déficit producción 73%."
   ],
   "top_3": [
     {
-      "tarea": "Llamar Andrea: deuda Condugas + plan de cobro EPM (reajuste 180M Río Negro + comunicado formal)",
+      "tarea": "Llamar hoy a EPM: cobro directo Río Negro + plan renegociación vs. terminación",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Sin flujo, todo colapsa en 8 días",
-      "tarea_id": "resolver_deudas_condugas"
+      "porque": "180M bloqueados. Define viabilidad de nómina próximas semanas",
+      "tarea_id": "critica_epm_cobro"
     },
     {
-      "tarea": "Revisar caja familiar + inversiones a hoy (movimientos, estado real). 30min máximo.",
+      "tarea": "Reunión 30min con Andrea: deudas Condugas, Hamilton, flujo caja semana",
       "categoria": "SUPERVIVENCIA",
-      "porque": "No sabes tu posición financiera personal vs presiones empresariales",
-      "tarea_id": "situacion_caja_familiar"
+      "porque": "Urgencia financial. Decisiones de corto plazo",
+      "tarea_id": "reunión_andrea"
     },
     {
-      "tarea": "Enviar respuesta formal a EPM sobre no conformidad contrato 24 + estructura defensa legal",
+      "tarea": "Estructurar defensa legal EPM (documentación debido proceso + reajuste contundente)",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Vencida. Riesgo legal exponencial sin documentación",
-      "tarea_id": "no_conformidad_contrato_24"
+      "porque": "Deadline vencida (18 abr). Riesgo legal escalado",
+      "tarea_id": "critica_defensa_legal"
     }
   ],
-  "mega_dia": "Cobrar Hamilton + plan ejecutivo EPM. Si lo haces, respiras 48h.",
+  "mega_dia": "Una llamada a EPM que cierre cobro OR define plan legal claro. Eso es victoria hoy.",
   "contactar_hoy": [
     {
       "persona": "Andrea",
-      "motivo": "Deuda Condugas + tiquetes Cartagena + estrategia EPM"
+      "motivo": "Caja, Hamilton, próximos 7 días"
     },
     {
-      "persona": "William",
-      "motivo": "Validar datos caja/facturación (5 días sin actualizar)"
+      "persona": "EPM (interventoria)",
+      "motivo": "Cobro + no conformidad contrato 24"
     }
   ],
   "ojo_con": [
     "56 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "Sueño 4h02m (37%). Decisiones en crisis = riesgo alto.",
-    "44 tareas críticas abiertas. No es priorización, es caos.",
-    "KPIs sin actualizar 5-7 días: navegas a ciegas."
+    "Sueño 4h02m (37%). Decisiones bajo fatiga = riesgo.",
+    "9 deadlines críticas vencidas. Priorización brutal necesaria.",
+    "Dashboard obsoleto (6 días sin actualizar KPIs)"
   ],
   "vencidas": [
-    "Hamilton (17-abr)",
-    "Revisión rendimiento contratos críticos (20-abr)",
-    "Documentación debido proceso (18-abr)"
+    "Hamilton pago (17 abr)",
+    "Documentación due process EPM (18 abr)",
+    "Revisar contratos críticos (20 abr)",
+    "Presentación junta (20 abr, pasó)"
   ],
-  "frase_dia": "8 días de caja = 8 decisiones claras, no 115 tareas difusas. Hoy: cobra + documenta + duerme 6h mínimo.",
-  "generado_at": "2026-04-24T11:00:10",
-  "fecha": "2026-04-24",
+  "frase_dia": "No es un sábado de oficio. Es triage. Tres cosas máximo. Caja. Legal. Jefatura.",
+  "generado_at": "2026-04-25T11:00:10",
+  "fecha": "2026-04-25",
   "stats": {
-    "abiertas": 115,
-    "criticas": 55,
-    "vencidas": 25,
-    "estancadas": 53,
-    "sin_evaluar": 90
+    "abiertas": 121,
+    "criticas": 61,
+    "vencidas": 32,
+    "estancadas": 70,
+    "sin_evaluar": 96
   },
   "criticas_sin_fecha": [
     {
@@ -151,45 +152,33 @@
   ],
   "vence_pronto": [
     {
-      "id": "2026-04-17-c003",
-      "tarea": "Auditar estructura de deuda y cuentas por cobrar entre Condugas, socios e IC (excisión no pagada)",
-      "dias": 0,
-      "fecha_limite": "2026-04-24"
-    },
-    {
-      "id": "2026-04-21-c008",
-      "tarea": "Revertir transferencia de 14M COP a papá de Sebastian para cubrir fly pass y mantener nómina operati",
-      "dias": 0,
-      "fecha_limite": "2026-04-24"
-    },
-    {
-      "id": "2026-04-22-c003x",
-      "tarea": "Hacer llamada ejecutiva de 20 minutos a decisor de EPM con narrativa calibrada (hechos, impacto, rie",
-      "dias": 0,
-      "fecha_limite": "2026-04-24"
-    },
-    {
-      "id": "2026-04-22-c004x",
-      "tarea": "Radicación formal paralela a llamada (correo, portal de pagos proveedores, canal de integridad EPM)",
-      "dias": 0,
-      "fecha_limite": "2026-04-24"
-    },
-    {
       "id": "2026-04-17-c002",
       "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en EPM e incorporando Vanti, gas de occ",
-      "dias": 1,
+      "dias": 0,
       "fecha_limite": "2026-04-25"
     },
     {
       "id": "2026-04-22-c006",
       "tarea": "Ejecutar 4 rutas simultáneas: 1) Negocio (VP Negocios), 2) Jurídica/Reclamaciones, 3) Portal Pagos P",
-      "dias": 1,
+      "dias": 0,
       "fecha_limite": "2026-04-25"
+    },
+    {
+      "id": "2026-04-23-c006",
+      "tarea": "Análisis: Si crédito nuevo se usa para reducir gastos fijos operativos (arriendo, servicios) + compr",
+      "dias": 1,
+      "fecha_limite": "2026-04-26"
     },
     {
       "id": "2026-04-22-c003",
       "tarea": "Definir cifra mínima de caja requerida en 5 días para salvar operación (nómina y proveedores crítico",
-      "dias": 3,
+      "dias": 2,
+      "fecha_limite": "2026-04-27"
+    },
+    {
+      "id": "2026-04-23-c004",
+      "tarea": "Urgente: actualizar contabilidad en paralelo con producción para tener contraste costo vs ingresos r",
+      "dias": 2,
       "fecha_limite": "2026-04-27"
     }
   ]
