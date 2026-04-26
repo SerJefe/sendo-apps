@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T18:00:01.325894Z",
+  "generated_at": "2026-04-26T12:30:01.502088Z",
   "total_controles_con_fuente": 12,
   "controles": {
     "comite-sv": {
@@ -35,7 +35,7 @@
       "source": "neural-activity (vendemos)"
     },
     "estructura-admin": {
-      "last_done": "2026-04-23",
+      "last_done": "2026-04-24",
       "source": "neural-activity (lina/emanuel)"
     },
     "whoop-recovery": {
@@ -43,11 +43,11 @@
       "source": "kpis.json.whoop"
     },
     "adolfo-quincenal": {
-      "last_done": "2026-04-22",
+      "last_done": "2026-04-24",
       "source": "neural+calendario"
     },
     "conceptos-vault": {
-      "last_done": "2026-04-23",
+      "last_done": "2026-04-24",
       "source": "neural-activity.last_updated"
     }
   }

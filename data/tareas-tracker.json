@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-25T18:02:33",
+  "ultima_actualizacion": "2026-04-26T00:00:02",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -25,7 +25,7 @@
       "estado": "abierta",
       "origen": "limitless",
       "contexto": "tarea urgente del briefing",
-      "vencida": false,
+      "vencida": true,
       "estancada": true,
       "impacto": 4,
       "urgencia": 4,
@@ -111,7 +111,7 @@
       "origen": "limitless",
       "contexto": "Fases PHD- estadística de realidad del proyecto",
       "tipo": "pendiente",
-      "vencida": false,
+      "vencida": true,
       "impacto": 4,
       "urgencia": 3,
       "consecuencia": 3,
@@ -213,7 +213,7 @@
       "origen": "limitless",
       "contexto": "Procesos de calidad y auditoría",
       "tipo": "pendiente",
-      "vencida": false,
+      "vencida": true,
       "impacto": 3,
       "urgencia": 2,
       "consecuencia": 4,
@@ -544,7 +544,7 @@
       "origen": "limitless",
       "contexto": "Proyecto de crear ERP que integre mejores metodologías de otros sistemas con framework de jefatura",
       "tipo": "pendiente",
-      "vencida": false,
+      "vencida": true,
       "evaluada": true,
       "categoria": "condugas",
       "impacto": 5,
@@ -2161,7 +2161,7 @@
       "origen": "limitless_auto",
       "contexto": "Narrativa corporativa Condugas",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": true,
       "categoria": "condugas",
       "monto_cop": null,
@@ -2688,7 +2688,8 @@
       "monto_cop": null,
       "personas": [
         "Carlos Eduardo"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-21-c002",
@@ -2708,7 +2709,8 @@
       "monto_cop": null,
       "personas": [
         "Camilo Marín"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-21-c003",
@@ -2728,7 +2730,8 @@
       "monto_cop": null,
       "personas": [
         "Sebastian Sanchez Acevedo"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-21-c004",
@@ -2750,7 +2753,8 @@
         "Carlos Eduardo",
         "Ricardo",
         "Catalina"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-21-c005",
@@ -2768,7 +2772,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-21-c006",
@@ -2788,7 +2793,8 @@
       "monto_cop": null,
       "personas": [
         "Sebastian Sanchez Acevedo"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-21-c007",
@@ -2808,7 +2814,8 @@
       "monto_cop": null,
       "personas": [
         "Sebastian Sanchez Acevedo"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-21-c008",
@@ -2830,7 +2837,8 @@
         "Sebastian Sanchez Acevedo",
         "Camilo",
         "papá"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-21-c009",
@@ -2850,7 +2858,8 @@
       "monto_cop": null,
       "personas": [
         "Sebastian Sanchez Acevedo"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-21-c010",
@@ -2870,7 +2879,8 @@
       "monto_cop": null,
       "personas": [
         "EPM"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-21-c011",
@@ -2890,7 +2900,8 @@
       "monto_cop": null,
       "personas": [
         "EPM"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-22-c001",
@@ -2996,7 +3007,7 @@
       "origen": "limitless_auto",
       "contexto": "Presión legítima documentada",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
