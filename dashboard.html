@@ -2325,12 +2325,72 @@ loadCalendario();
     var emp = odoo.empleados_activos;
     var top = Array.isArray(odoo.top_cartera) ? odoo.top_cartera : [];
     var cartVenc = cart.vencidas || 0;
+    var sb = odoo.sobrevivir || {};
+    var rc = odoo.recuperar || {};
+    var ds = odoo.desarrollar || {};
     var topHtml = top.length ? (
       '<div style="margin-top:10px;">' +
       '<div style="font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:4px;">Top cartera</div>' +
       top.map(function(t){ return '<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0;border-bottom:1px dashed rgba(201,168,74,0.3);"><span style="color:var(--navy);">'+esc(t.partner||'—')+'</span><span style="font-family:\'JetBrains Mono\',monospace;color:var(--navy);font-weight:600;">'+fmtCOP(t.pendiente)+'</span></div>'; }).join('') +
       '</div>'
     ) : '';
+
+    // 🔴 SOBREVIVIR
+    var sobrevivirHtml = '';
+    if (sb.caja || sb.deuda_proveedores || sb.cartera_vencida) {
+      var caja = sb.caja || {};
+      var warns = Array.isArray(caja.bancos_warnings) ? caja.bancos_warnings : [];
+      var deuda = sb.deuda_proveedores || {};
+      var cartVencDet = sb.cartera_vencida || {};
+      var topVenc = (cartVencDet.top || []).slice(0, 5);
+      var topDeuda = (deuda.top || []).slice(0, 5);
+      sobrevivirHtml =
+        '<details open style="margin-top:10px;border-left:3px solid #a62e2e;background:rgba(166,46,46,0.04);padding:8px 10px;border-radius:4px;">' +
+        '<summary style="cursor:pointer;font-weight:700;color:#a62e2e;font-size:11.5px;text-transform:uppercase;letter-spacing:0.06em;">🔴 Sobrevivir</summary>' +
+        '<div style="margin-top:8px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">' +
+          '<div><div style="font-size:14px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:var(--navy);">'+fmtCOP(caja.bancos_total)+'</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Bancos</div></div>' +
+          '<div><div style="font-size:14px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:var(--navy);">'+fmtCOP(caja.cartera_ejecutada)+'</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Cartera ejec</div></div>' +
+          '<div><div style="font-size:14px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:#a62e2e;">'+fmtCOP(deuda.total)+'</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Deuda prov · '+(deuda.vencidas||0)+' venc</div></div>' +
+        '</div>' +
+        (warns.length ? '<div style="margin-top:8px;padding:6px 8px;background:rgba(166,46,46,0.08);border-radius:3px;font-size:10.5px;color:#a62e2e;">⚠️ '+warns.length+' warnings plan de cuentas (parametrización en proceso)</div>' : '') +
+        (topVenc.length ? '<div style="margin-top:8px;"><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-bottom:3px;">Cartera vencida top</div>'+topVenc.map(function(t){ return '<div style="display:flex;justify-content:space-between;font-size:11.5px;padding:2px 0;"><span style="color:var(--navy);">'+esc(t.partner)+(t.dias_vencida?' <span style="color:#a62e2e;font-size:10px;">('+t.dias_vencida+'d)</span>':'')+'</span><span style="font-family:\'JetBrains Mono\',monospace;color:#a62e2e;font-weight:600;">'+fmtCOP(t.total)+'</span></div>'; }).join('')+'</div>' : '') +
+        (topDeuda.length ? '<div style="margin-top:8px;"><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-bottom:3px;">Deuda proveedores top</div>'+topDeuda.map(function(t){ return '<div style="display:flex;justify-content:space-between;font-size:11.5px;padding:2px 0;"><span style="color:var(--navy);">'+esc(t.proveedor)+'</span><span style="font-family:\'JetBrains Mono\',monospace;color:var(--navy);font-weight:600;">'+fmtCOP(t.pendiente)+'</span></div>'; }).join('')+'</div>' : '') +
+        '</details>';
+    }
+
+    // 🟡 RECUPERAR
+    var recuperarHtml = '';
+    if (rc.facturas_recientes || rc.compras_mes || rc.costos_por_contrato) {
+      var feed = Array.isArray(rc.facturas_recientes) ? rc.facturas_recientes : [];
+      var cmes = rc.compras_mes || {};
+      var cyear = rc.compras_acumulado_ano || {};
+      var contratos = ((rc.costos_por_contrato||{}).items || []).slice(0,8);
+      var inv = rc.inventario_transito || {};
+      recuperarHtml =
+        '<details style="margin-top:6px;border-left:3px solid #b89949;background:rgba(184,153,73,0.04);padding:8px 10px;border-radius:4px;">' +
+        '<summary style="cursor:pointer;font-weight:700;color:#9d7a25;font-size:11.5px;text-transform:uppercase;letter-spacing:0.06em;">🟡 Recuperar</summary>' +
+        '<div style="margin-top:8px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">' +
+          '<div><div style="font-size:14px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:var(--navy);">'+fmtCOP(cmes.total)+'</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Compras mes · '+(cmes.count||0)+'</div></div>' +
+          '<div><div style="font-size:14px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:var(--navy);">'+fmtCOP(cyear.total)+'</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Compras año · '+(cyear.count||0)+'</div></div>' +
+          '<div><div style="font-size:14px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:var(--navy);">'+(inv.count||0)+'</div><div style="font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Inv. tránsito</div></div>' +
+        '</div>' +
+        (contratos.length ? '<div style="margin-top:8px;"><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-bottom:3px;">Costo acumulado por contrato</div>'+contratos.map(function(c){ return '<div style="display:flex;justify-content:space-between;font-size:11.5px;padding:2px 0;"><span style="color:var(--navy);">'+esc(c.contrato)+'</span><span style="font-family:\'JetBrains Mono\',monospace;color:var(--navy);font-weight:600;">'+fmtCOP(c.gasto_acumulado)+'</span></div>'; }).join('')+'<div style="font-size:9.5px;color:var(--muted);margin-top:4px;font-style:italic;">Presupuesto pendiente · cruce contabilidad+finanzas+proyectos</div></div>' : '') +
+        (feed.length ? '<div style="margin-top:8px;"><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-bottom:3px;">Últimas facturas registradas</div>'+feed.slice(0,8).map(function(f){ var color = f.tipo==='venta' ? '#5a7a4a' : '#b89949'; return '<div style="display:flex;justify-content:space-between;font-size:11px;padding:2px 0;border-bottom:1px dashed rgba(184,153,73,0.2);"><span><span style="color:'+color+';font-weight:700;font-family:\'JetBrains Mono\',monospace;">'+(f.tipo==='venta'?'V':'C')+'</span> <span style="color:var(--navy);">'+esc((f.partner||'').slice(0,28))+'</span> <span style="color:var(--muted);font-size:10px;">'+esc(f.fecha||'')+'</span></span><span style="font-family:\'JetBrains Mono\',monospace;color:var(--navy);font-weight:600;">'+fmtCOP(f.monto)+'</span></div>'; }).join('')+'</div>' : '') +
+        '</details>';
+    }
+
+    // 🟢 DESARROLLAR
+    var desarrollarHtml = '';
+    if (ds.facturacion_tendencia_6m || ds.proyectos_activos_extendido) {
+      var tend = Array.isArray(ds.facturacion_tendencia_6m) ? ds.facturacion_tendencia_6m : [];
+      desarrollarHtml =
+        '<details style="margin-top:6px;border-left:3px solid #5a7a4a;background:rgba(90,122,74,0.04);padding:8px 10px;border-radius:4px;">' +
+        '<summary style="cursor:pointer;font-weight:700;color:#5a7a4a;font-size:11.5px;text-transform:uppercase;letter-spacing:0.06em;">🟢 Desarrollar</summary>' +
+        (tend.length ? '<div style="margin-top:8px;"><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-bottom:3px;">Facturación 6 meses</div>'+tend.map(function(m){ return '<div style="display:flex;justify-content:space-between;font-size:11.5px;padding:2px 0;"><span style="color:var(--navy);">'+esc(m.mes)+'</span><span style="font-family:\'JetBrains Mono\',monospace;color:var(--navy);font-weight:600;">'+fmtCOP(m.total)+'</span></div>'; }).join('')+'</div>' : '') +
+        '<div style="margin-top:8px;padding:6px 8px;background:rgba(90,122,74,0.06);border-radius:3px;font-size:10.5px;color:var(--muted);font-style:italic;">📈 Producción: modelo en proceso de montarse · liquidación de obra cuando esté diaria</div>' +
+        '</details>';
+    }
+
     return (
       '<div class="pn-section" style="background:linear-gradient(135deg,rgba(184,153,73,0.06),transparent);border-left:3px solid #b89949;">' +
       '<div class="pn-section-title">📊 Odoo en vivo <span class="count" style="color:var(--muted);font-size:9.5px;font-weight:500;text-transform:none;letter-spacing:0;">'+fmtHace(odoo.generated_at)+'</span></div>' +
@@ -2339,7 +2399,7 @@ loadCalendario();
         '<div><div style="font-size:17px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:'+(cartVenc>0?'#a62e2e':'var(--navy)')+';">'+fmtCOP(cart.total)+'</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Cartera · '+(cart.count||0)+' fact'+(cartVenc?' · <span style="color:#a62e2e;font-weight:700;">'+cartVenc+' venc</span>':'')+'</div></div>' +
         '<div><div style="font-size:17px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:var(--navy);">'+(proy.length||0)+'</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Proy activos · '+(tareas||0)+' tareas</div></div>' +
         '<div><div style="font-size:17px;font-weight:700;font-family:\'JetBrains Mono\',monospace;color:var(--navy);">'+(emp||0)+'</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Empleados activos</div></div>' +
-      '</div>' + topHtml + '</div>'
+      '</div>' + topHtml + sobrevivirHtml + recuperarHtml + desarrollarHtml + '</div>'
     );
   }
 
