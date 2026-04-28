@@ -1,62 +1,62 @@
 {
-  "saludo": "Buenos días Sebastián — sábado 25 Apr 2026",
+  "saludo": "Buenos días Sebastián — martes 28 Apr",
   "supervivencia": [
-    "Caja crítica: 8 días. EPM retrasado 5+ meses (~180M). Nómina/proveedores en riesgo.",
-    "Hamilton: cobro vencido (deadline 17 abr, hoy ya pasó). Acción legal pendiente.",
-    "55 tareas críticas abiertas. 32 vencidas. Déficit producción 73%."
+    "Caja crítica: 8 días de runway, EBITDA -2.3M. Revisar inversiones y movimientos hoy",
+    "EPM Río Negro: ~180M COP pendientes + no conformidad contrato 24 sin respuesta formal",
+    "Hamilton: Pago vencido desde 17 abril, debe cobrarse ya"
   ],
   "top_3": [
     {
-      "tarea": "Llamar hoy a EPM: cobro directo Río Negro + plan renegociación vs. terminación",
+      "tarea": "Revisar caja a hoy, movimiento, estado inversiones y opciones de liquidez",
       "categoria": "SUPERVIVENCIA",
-      "porque": "180M bloqueados. Define viabilidad de nómina próximas semanas",
-      "tarea_id": "critica_epm_cobro"
+      "porque": "8 días de runway es crítico; necesitas visibilidad real antes de cualquier otra decisión",
+      "tarea_id": "situacion_caja"
     },
     {
-      "tarea": "Reunión 30min con Andrea: deudas Condugas, Hamilton, flujo caja semana",
+      "tarea": "Sacar información real de contratos Condugas: préstamos, aportes, deudas, relaciones. Reunir con Andrea",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Urgencia financial. Decisiones de corto plazo",
-      "tarea_id": "reunión_andrea"
+      "porque": "64 tareas críticas abiertas, necesitas claridad sobre obligaciones antes de programar",
+      "tarea_id": "revisar_rendimiento_contratos"
     },
     {
-      "tarea": "Estructurar defensa legal EPM (documentación debido proceso + reajuste contundente)",
+      "tarea": "Enviar comunicado a EPM cobrando reajustes + respuesta formal a no conformidad contrato 24",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Deadline vencida (18 abr). Riesgo legal escalado",
-      "tarea_id": "critica_defensa_legal"
+      "porque": "Plazo vencido (18 abril). Sin acción legal/documental pierdes posición",
+      "tarea_id": "epm_defensa"
     }
   ],
-  "mega_dia": "Una llamada a EPM que cierre cobro OR define plan legal claro. Eso es victoria hoy.",
+  "mega_dia": "Cierre de caja + call con Andrea sobre deudas Condugas. Si haces esto, el día valió.",
   "contactar_hoy": [
     {
       "persona": "Andrea",
-      "motivo": "Caja, Hamilton, próximos 7 días"
+      "motivo": "Deudas pendientes Condugas, caja, viaje Cartagena"
     },
     {
-      "persona": "EPM (interventoria)",
-      "motivo": "Cobro + no conformidad contrato 24"
+      "persona": "William Lopez",
+      "motivo": "Informe avance Vanti (recibido 07 abr), fuentes datos KPIs"
     }
   ],
   "ojo_con": [
-    "56 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "Sueño 4h02m (37%). Decisiones bajo fatiga = riesgo.",
-    "9 deadlines críticas vencidas. Priorización brutal necesaria.",
-    "Dashboard obsoleto (6 días sin actualizar KPIs)"
+    "59 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+    "Whoop recovery 23% = cuerpo colapsado, necesitas dormir mejor (54% sleep)",
+    "41 tareas vencidas, 99 sin evaluar: sistema desbordado",
+    "Supersociedades: estados financieros pendientes, urgente"
   ],
   "vencidas": [
-    "Hamilton pago (17 abr)",
-    "Documentación due process EPM (18 abr)",
-    "Revisar contratos críticos (20 abr)",
-    "Presentación junta (20 abr, pasó)"
+    "Pago Hamilton (vencido 17 abr)",
+    "Revisar contratos críticos (vencido 20 abr)",
+    "Debido proceso EPM (vencido 18 abr)",
+    "Validar escalada salarial Camacol (vencido 17 abr)"
   ],
-  "frase_dia": "No es un sábado de oficio. Es triage. Tres cosas máximo. Caja. Legal. Jefatura.",
-  "generado_at": "2026-04-25T11:00:10",
-  "fecha": "2026-04-25",
+  "frase_dia": "Sin caja clara, no hay estrategia. Hoy: números reales o no salimos de aquí.",
+  "generado_at": "2026-04-28T11:00:10",
+  "fecha": "2026-04-28",
   "stats": {
-    "abiertas": 121,
-    "criticas": 61,
-    "vencidas": 32,
-    "estancadas": 70,
-    "sin_evaluar": 96
+    "abiertas": 124,
+    "criticas": 64,
+    "vencidas": 41,
+    "estancadas": 98,
+    "sin_evaluar": 99
   },
   "criticas_sin_fecha": [
     {
@@ -152,34 +152,10 @@
   ],
   "vence_pronto": [
     {
-      "id": "2026-04-17-c002",
-      "tarea": "Redefinir presentación corporativa eliminando foco exclusivo en EPM e incorporando Vanti, gas de occ",
-      "dias": 0,
-      "fecha_limite": "2026-04-25"
-    },
-    {
-      "id": "2026-04-22-c006",
-      "tarea": "Ejecutar 4 rutas simultáneas: 1) Negocio (VP Negocios), 2) Jurídica/Reclamaciones, 3) Portal Pagos P",
-      "dias": 0,
-      "fecha_limite": "2026-04-25"
-    },
-    {
-      "id": "2026-04-23-c006",
-      "tarea": "Análisis: Si crédito nuevo se usa para reducir gastos fijos operativos (arriendo, servicios) + compr",
-      "dias": 1,
-      "fecha_limite": "2026-04-26"
-    },
-    {
-      "id": "2026-04-22-c003",
-      "tarea": "Definir cifra mínima de caja requerida en 5 días para salvar operación (nómina y proveedores crítico",
+      "id": "2026-04-23-c005",
+      "tarea": "Crear modelo de rentabilidad de contratos (no solo APU de costos) con actualización mensual",
       "dias": 2,
-      "fecha_limite": "2026-04-27"
-    },
-    {
-      "id": "2026-04-23-c004",
-      "tarea": "Urgente: actualizar contabilidad en paralelo con producción para tener contraste costo vs ingresos r",
-      "dias": 2,
-      "fecha_limite": "2026-04-27"
+      "fecha_limite": "2026-04-30"
     }
   ]
 }

@@ -53,6 +53,24 @@
         "alertas": 20
       },
       "generado_at": "2026-04-25T11:00:10"
+    },
+    {
+      "semana": "W18",
+      "periodo": "2026-04-22 a 2026-04-28",
+      "metricas": {
+        "creadas_semana": 31,
+        "cerradas_semana": 7,
+        "evaluadas_semana": 0,
+        "abiertas_total": 124,
+        "ratio_cierre": 23
+      },
+      "totales": {
+        "tareas_detectadas": 54,
+        "decisiones": 30,
+        "ideas": 30,
+        "alertas": 15
+      },
+      "generado_at": "2026-04-28T11:00:10"
     }
   ]
 }

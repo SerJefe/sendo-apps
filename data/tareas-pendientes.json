@@ -4360,7 +4360,64 @@
         "Sebastian Sanchez Acevedo"
       ],
       "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-27-r12-001",
+      "tarea": "Revisar y validar carta de negociación con puntos de negociación y dos comunicados preparados por Melisa",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media",
+      "contexto": "Negociación con tercero (posiblemente EPM o cliente)",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-27",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Melisa"
+      ],
+      "segmento_idx": 12,
+      "segmento_titulo": "Conversación sobre varios temas",
+      "segmento_inicio": "2026-04-27T22:36:56Z",
+      "segmento_fin": "2026-04-27T22:46:40Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Melisa",
+        "Cami",
+        "pareja",
+        "niño"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-27-r12-002",
+      "tarea": "Definir horario fijo de sueño del niño considerando actividades extracurriculares (partido 7pm) y recomendaciones profesionales",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "baja",
+      "contexto": "Organización familiar",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-27",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "pareja",
+        "niño"
+      ],
+      "segmento_idx": 12,
+      "segmento_titulo": "Conversación sobre varios temas",
+      "segmento_inicio": "2026-04-27T22:36:56Z",
+      "segmento_fin": "2026-04-27T22:46:40Z",
+      "segmento_personas": [
+        "Sebastian Sanchez Acevedo",
+        "Melisa",
+        "Cami",
+        "pareja",
+        "niño"
+      ],
+      "segmento_impacto": "bajo"
     }
   ],
-  "ultima_actualizacion": "2026-04-25T18:02:33.775157"
+  "ultima_actualizacion": "2026-04-28T18:03:08.099903"
 }

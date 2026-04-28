@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-26T00:00:02",
+  "ultima_actualizacion": "2026-04-28T00:00:03",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -2919,7 +2919,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-22-c002",
@@ -2937,7 +2938,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-22-c003",
@@ -2951,11 +2953,12 @@
       "origen": "limitless_auto",
       "contexto": "Crisis de flujo Condugas",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-22-c004",
@@ -2973,7 +2976,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-22-c005",
@@ -2993,7 +2997,8 @@
       "monto_cop": null,
       "personas": [
         "Juan Alberto Matas Salazar"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-22-c006",
@@ -3013,7 +3018,8 @@
       "monto_cop": null,
       "personas": [
         "Juan Alberto Matas Salazar"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-22-c007",
@@ -3031,7 +3037,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-16-r7-004x",
@@ -3081,7 +3088,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-22-c002x",
@@ -3099,7 +3107,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-22-c003x",
@@ -3119,7 +3128,8 @@
       "monto_cop": null,
       "personas": [
         "Juan Alberto Matas Salazar"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-22-c004x",
@@ -3137,7 +3147,8 @@
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
-      "personas": []
+      "personas": [],
+      "estancada": true
     },
     {
       "id": "2026-04-23-c001",
@@ -3158,7 +3169,8 @@
       "personas": [
         "Carlos",
         "You"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-23-c002",
@@ -3179,7 +3191,8 @@
       "personas": [
         "You",
         "EPM"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-23-c003",
@@ -3199,7 +3212,8 @@
       "monto_cop": null,
       "personas": [
         "You"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-23-c004",
@@ -3213,13 +3227,14 @@
       "origen": "limitless_auto",
       "contexto": "Crisis financiera - falta visibilidad",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
       "personas": [
         "Claudia"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-23-c005",
@@ -3239,7 +3254,8 @@
       "monto_cop": null,
       "personas": [
         "Camilo"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-23-c006",
@@ -3253,13 +3269,14 @@
       "origen": "limitless_auto",
       "contexto": "Estrategia de crédito vs survival",
       "tipo": "decision",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
       "personas": [
         "You"
-      ]
+      ],
+      "estancada": true
     },
     {
       "id": "2026-04-24-c001",

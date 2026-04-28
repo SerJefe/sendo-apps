@@ -1,165 +1,140 @@
 {
-  "fecha": "2026-04-23",
+  "fecha": "2026-04-24",
   "tareas_extraidas": [
     {
-      "tarea": "Realizar presentación",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Revisar y confirmar documentación de horarios (8 horas)",
+      "tarea": "Repasar dinámicas de grupo y gestionar tensiones en el grupo",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "media"
     },
     {
-      "tarea": "Documentar framework metodológico de Being CoRe (método inductivo + Ventana de Johari)",
+      "tarea": "Evaluar daño de coche y decidir entre taller o seguro",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Seguimiento con cliente sobre entrega de consultoría de Being CoRe",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Diseñar modelo de intervención para expertos técnicos en PM/Condugas",
+      "tarea": "Guardar secreto sobre 'la obra' y no revelar a Paoli",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Confirmar ubicación de local con El Palito para decisión de 10 o 20 bandejas",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "alta"
     },
     {
-      "tarea": "Hacer ruta matutina y enseñar a alguien",
-      "responsable": "Unknown",
+      "tarea": "Obtener plano de Sincano para poder cotizar proyecto",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Revisar arquitectura actual de ERP y periféricos desarrollados internamente",
+      "responsable": "Ingeniero desarrollo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Documentar dependencias técnicas y puntos de fallo en sistema ERP+periféricos",
+      "responsable": "Ingeniero desarrollo + 2 ingenieros",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Continuar exploración de dinámicas grupales y comportamientos en próximas sesiones",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Evaluar implementación de Odoo como ERP/CRM centralizado para 560 empleados",
+      "responsable": "Sebastian Sanchez Acevedo + Ingeniero desarrollo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Diseñar automatizaciones para 7 modelos de pago diferentes en Odoo",
+      "responsable": "Ingeniero desarrollo",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Definir modelo de 'trabajo por resultados' vs. transaccional para equipo",
+      "responsable": "Sebastian Sanchez Acevedo",
+      "prioridad": "media"
+    },
+    {
+      "tarea": "Elegir representante del grupo para debate",
+      "responsable": "Grupo (Giselle/Diego/Andrés)",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Llevar palo a Adolfo en motocicleta",
+      "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "baja"
     },
     {
-      "tarea": "Posicionar a Mario como futuro gerente de PM y voz estratégica",
+      "tarea": "Grupos escriben manifiesto de comportamientos de jefe para lograr que otros logren",
+      "responsable": "Participantes (5 grupos de 4)",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Realizar debate entre grupos (15 minutos) con audiencia observando comportamientos",
+      "responsable": "Participantes",
+      "prioridad": "alta"
+    },
+    {
+      "tarea": "Reclamar deuda de 600 millones COP a EPM por reajustes no pagados",
       "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
+      "prioridad": "critica"
     },
     {
-      "tarea": "Hacer conocer a Condugas/Being CoRe desde arriba ante John Maya y actores clave de EPM",
+      "tarea": "Resolver fórmula de reajustes con EPM para evitar tensión de 450M COP",
       "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
+      "prioridad": "critica"
     },
     {
-      "tarea": "Involucrar a Humberto y Mario en estrategia de junta/información",
+      "tarea": "Resolver problema Burger Master - incidente con heridos en acera",
       "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Enviar detalle de deuda EPM (reajustes + ambientales Río Negro) al correo S. Sánchez@condugas.com.co",
-      "responsable": "María Fernanda",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Revisar y validar si los 125M pendientes en contrato son correctos (no errores de interpretación)",
-      "responsable": "Carlos López",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Desarrollar narrativa detallada de 1 caso histórico donde IPM tuvo problema gordo y Condugas lo resolvió (con nombres, fechas, costos, diálogos)",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Analizar opciones de reemplazo de Carlos: a) solo Catalina, b) traer persona mejor a menor costo con presupuesto de ambos",
-      "responsable": "You (Sebastian Sanchez Acevedo)",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Evaluar uso de crédito de 1500 (1.5M?) para comprar vehículos como activos operativos vs gasto corriente",
-      "responsable": "You (Sebastian Sanchez Acevedo)",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Implementar proceso de nómina centralizado en una persona para reduce fricción",
-      "responsable": "You (Sebastian Sanchez Acevedo)",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Revisar y rediseñar puntos de enlace (mandos medios) para evitar que tareas incompletas se acumulen en Sebastian",
-      "responsable": "Andrés",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Solicitar reunión a Banti para renegociar términos de pago/contrato (mencionar posibilidad de tercerizar perforación y acero)",
-      "responsable": "You (Sebastian Sanchez Acevedo)",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Analizar separación de contrato con proveedor lento: qué quedó pendiente en Valle (1300) y dónde está el peso de ese paquete",
-      "responsable": "You (Sebastian Sanchez Acevedo)",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Solicitar a Manga estado/análisis de equipos (cuáles prestados, cuáles cobrados) para negociación",
-      "responsable": "Manga",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Comunicar decisión de salida de Carlos de la empresa",
-      "responsable": "You (Sebastian Sanchez Acevedo)",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Finalizar y radicar comunicación formal a EPM con: reserva derechos + propuesta de ajuste económico + convocatoria a mesa técnica 10 días hábiles",
-      "responsable": "You (Sebastian Sanchez Acevedo)",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Incorporar aclaración de ítems ambientales (80% vs 100% condicionado) en comunicación a EPM antes de radicar",
-      "responsable": "You (Sebastian Sanchez Acevedo)",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Urgente: actualizar contabilidad en paralelo con producción para tener contraste costo vs ingresos real",
-      "responsable": "Claudia",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Crear modelo de rentabilidad de contratos (no solo APU de costos) con actualización mensual",
-      "responsable": "Camilo",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Análisis: Si crédito nuevo se usa para reducir gastos fijos operativos (arriendo, servicios) + comprar activos vs solo pagar crédito anterior, ¿qué % debería ser cada uno?",
-      "responsable": "You (Sebastian Sanchez Acevedo)",
       "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "La presentación será en un solo día de 8 horas (viernes 24 de abril)",
-    "Se simplificó la decisión de timing vs. hubiera preferido un mes después",
-    "El método es inductivo: participantes aportan 'la carne', luego se estructura en 'masa' colectiva",
-    "Se usa Ventana de Johari para identificar puntos ciegos (cosas que no se ven de sí mismo)",
-    "Los expertos técnicos deben reposicionarse como facilitadores de comportamiento, no solo como conocedores de detalles",
-    "Mario es clave como futuro gerente de PM: tiene visibilidad internacional y respeto de John Maya",
-    "Estrategia es conectar desde arriba (posición de fuerza) con John Maya y actores clave, no desde abajo",
-    "Mario actuará como puente de información y voz sin confrontar a William ni otros",
-    "El cuerpo y la mirada de Mario sobre hacia dónde van las 'cosas buenas' es su activo mayor",
-    "Se usará correo S. Sánchez@condugas.com.co para recibir información de deudas"
+    "Usar el evento para poner a hablar al grupo y gestionar tensiones existentes",
+    "Considerar cobertura de seguro para daño de puerta",
+    "Aumentar presión sobre cobros pendientes a EPM",
+    "No era el momento para contar sobre la obra a cierta persona",
+    "Entregar productos Cheburgo y Tres Trigos en 2ª semana de mayo (confirmado por clientes)",
+    "Los grupos van siendo más pequeños conforme crecen, escogiendo con quién seguir",
+    "Dejar de desayunar basado en recomendación médica (hace 2.5 años)",
+    "Desarrollar software propio que se conecte con ERP en lugar de ajustarse completamente a SAP",
+    "Odoo (código abierto) como alternativa a SAP para mayor flexibilidad",
+    "Eliminar mandos medios y transiciones de información no-generadoras de valor"
   ],
   "ideas": [
-    "La ignorancia y la búsqueda continua son valiosas; no saber más abre puertas",
-    "Necesidad personal de volver a estudiar/re-aprender",
-    "Las historias de vida, emociones y comportamiento propio determinan cómo se relaciona con otros",
-    "El reconocimiento de símbolos personales (tatuaje, anillo, etc.) revela motivaciones ocultas",
-    "La experticia técnica sin intervención emocional limita el potencial de jefatura",
-    "Crisis hídrica/sequía como factor contextual en región",
-    "Usar intermediarios de confianza (Mario, Humberto) para ganar visibilidad sin perder credibilidad",
-    "La inteligencia de mercado (mirada de Mario sobre tendencias) es más valiosa que la confrontación directa",
-    "John Maya está agotado y vulnerable; es oportunidad de reposicionamiento",
-    "Crear metodología de validación cruzada: ítem técnico real > pago asociado (no lo contrario)"
+    "Aprovechar dinámicas de grupo para resolver conflictos interpersonales",
+    "Exponer públicamente la estructura de operación descentralizada de EPM (pública pero privada) para presionar cobros",
+    "Proyecto Inaudito (restaurante propio) como diferenciador de mercado",
+    "El comportamiento es determinado por la psique (capacidad de manejo emocional) + normalización de conductas anormales + mentiras sistémicas",
+    "La amistad verdadera requiere que el amigo cambie por sí mismo, no por presión externa",
+    "El contexto influye en cómo se aplican principios morales (amistad)",
+    "Comportamiento coherente depende de identidad clara + autonomía + ausencia de crisis de supervivencia",
+    "Crisis de supervivencia (quiebra, enfermedad) cambia toda la estructura comportamental",
+    "Instinto (amígdala) puede prevalecer sobre coherencia racional",
+    "Solo se puede predecir comportamiento en el instante si contexto cambia constantemente"
   ],
   "frases": [
-    "yo realmente leer... exacto, continúo a indagar a buscar",
-    "que también no saber más",
-    "para poder simplificar el decisión, porque claro, pues que hubiera ido mejor que fuera dentro de un mes",
-    "ellos ponen todo la carne en estos espacios, individual y a partir de eso se hace como esa masa",
-    "se comportan por lo que ustedes reconocen de ustedes y por lo que ustedes no reconocen de ustedes"
+    "cuando comprometo a otros, soy otra cosa",
+    "Nosotros estamos en una tensión, parce, en la empresa que nos quebramos",
+    "Nosotros le ponemos los equipos de agua y todo",
+    "Se juntaron como, como que se juntó, se juntó, se juntó todo",
+    "Yo lo quiero perdonar, en Estados Unidos"
   ],
   "alertas_supervivencia": [
-    "CRITICA: Falta de flujo de caja por cobro EPM retrasado 5+ meses. Nómina y proveedores en riesgo inmediato.",
-    "CRITICA: No existe modelado de rentabilidad por proyecto ni presupuesto actualizado. Imposible tomar decisiones informadas sobre viabilidad.",
-    "ALTA: Salida de Carlos sin plan de transición conocido. Riesgo de discontinuidad operativa.",
-    "ALTA: Contabilidad paralizada post-salida Claudia. Información financiera no confiable.",
-    "MEDIA: Agotamiento visible de Sebastian (trabajo hasta 7pm, compras pendientes) sugiere insostenibilidad de estructura actual."
+    "Deuda existencial de 1.3 billones COP genera riesgo inmediato de colapso operacional si no hay reestructuración urgente",
+    "Sebastian opera bajo privación severa de sueño y síntomas no controlados de TDAH con impacto en toma de decisiones críticas",
+    "Incidentes de transporte (choque vehicular, motocicleta) sugieren estado de alerta elevado o falta de concentración ligada a estrés extremo",
+    "Proyectos en negociación (Cheburgo, El Palito, Tres Trigos, Inaudito) dependen de infraestructura y capital que pueden no materializarse",
+    "Crisis energética nacional (represas al 2%) amenaza directamente operaciones de empresa productiva que requiere energía confiable"
   ],
-  "total_lifelogs": 22,
+  "total_lifelogs": 31,
   "procesado_con": "haiku_v3_structured"
 }
