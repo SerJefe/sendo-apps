@@ -271,6 +271,21 @@ const NV = {
 // Ejes de Sebastian (2026-04-15): reemplazan las categorias legacy trabajo/personal/etc.
 // Orden en el dropdown. El default para tareas nuevas es "condugas".
 const CATS=["condugas","siendo-consulting","ser-siendo","docencia","patrimonio","casa-ozzio","salud"];
+// Equipo para reasignar/delegar al evaluar. Espejo de TEAM_MEMBERS en dashboard.html.
+const TEAM_MEMBERS_LITE=[
+  {alias:"Sebastian", full:"Sebastian Sanchez",   rol:"Gerente"},
+  {alias:"Cami",      full:"Juan Camilo Berrio",  rol:"Proyectos"},
+  {alias:"Andre",     full:"Andrea Bernal",       rol:"Finanzas y Contable"},
+  {alias:"Willi",     full:"William Lopez",       rol:"Admin"},
+  {alias:"Juan G",    full:"Juan Guillermo",      rol:"Estrategia y RRHH"},
+  {alias:"Carlos H",  full:"Carlos Hernan Lopez", rol:"Nuevos Negocios y Logistica"},
+  {alias:"JuanPa",    full:"Ex-dir Ayura",        rol:"Productividad"},
+  {alias:"Adolfo",    full:"Adolfo",              rol:"Mentor Junta"},
+  {alias:"Lina",      full:"Lina Russi",          rol:"Gestora · Being CoRe"},
+  {alias:"Mona",      full:"Monica Gonzalez",     rol:"Comercial · Being CoRe"},
+  {alias:"Ema",       full:"Emanuel",             rol:"Dev Odoo · Being CoRe"},
+  {alias:"Doctor",    full:"Camilo Marin",        rol:"Abogado"},
+];
 const CRIT=[
   {k:"impacto",l:"Impacto real",h:"¿Qué tanto cambia algo importante?"},
   {k:"urgencia",l:"Urgencia verdadera",h:"¿Qué tan pronto genera problema?"},
@@ -345,7 +360,7 @@ function EvalModal({tarea,onClose,onSave,onDelete,onMeta}){
   function set(k,v){setT(prev=>({...prev,[k]:v}));}
   async function save(){
     await onSave(t.id,{impacto:t.impacto,urgencia:t.urgencia,consecuencia:t.consecuencia,arrastre:t.arrastre,facilidad:t.facilidad});
-    await onMeta(t.id,{tarea:t.tarea,categoria:t.categoria||"condugas",proxima_accion:t.proxima_accion||"",descripcion:t.descripcion||"",contexto:t.contexto||""});
+    await onMeta(t.id,{tarea:t.tarea,categoria:t.categoria||"condugas",proxima_accion:t.proxima_accion||"",descripcion:t.descripcion||"",contexto:t.contexto||"",responsable:t.responsable||""});
     onClose();
   }
   return(
@@ -368,6 +383,15 @@ function EvalModal({tarea,onClose,onSave,onDelete,onMeta}){
           <div><label className="text-xs text-neutral-400">Eje</label><select value={t.categoria||"condugas"} onChange={e=>set("categoria",e.target.value)} className="w-full mt-1 bg-neutral-900 border border-neutral-800 rounded-lg px-3 py-2 text-sm">{CATS.map(c=><option key={c}>{c}</option>)}</select></div>
           <div><label className="text-xs text-neutral-400">Fecha límite</label><input type="date" value={t.fecha_limite||""} onChange={e=>set("fecha_limite",e.target.value||null)} className="w-full mt-1 bg-neutral-900 border border-neutral-800 rounded-lg px-3 py-2 text-sm outline-none"/></div>
           <div><label className="text-xs text-neutral-400">Próxima acción concreta (10-15 min)</label><input value={t.proxima_accion||""} onChange={e=>set("proxima_accion",e.target.value)} placeholder="¿Cuál es el primer paso ejecutable?" className="w-full mt-1 bg-neutral-900 border border-neutral-800 rounded-lg px-3 py-2 text-sm outline-none focus:border-neutral-600"/></div>
+          <div>
+            <label className="text-xs text-neutral-400">Responsable / Delegar a</label>
+            <select value={t.responsable||""} onChange={e=>set("responsable",e.target.value)} className="w-full mt-1 bg-neutral-900 border border-neutral-800 rounded-lg px-3 py-2 text-sm outline-none focus:border-cyan-600">
+              <option value="">— sin asignar —</option>
+              {TEAM_MEMBERS_LITE.map(m=><option key={m.alias} value={m.full}>{m.alias} · {m.full} ({m.rol})</option>)}
+              {t.responsable && !TEAM_MEMBERS_LITE.find(m=>m.full===t.responsable) && <option value={t.responsable}>{t.responsable} (libre)</option>}
+            </select>
+            {t.responsable && t.responsable!=="Sebastian Sanchez" && <div className="text-[10px] text-cyan-400 mt-1">→ tarea delegada · queda en seguimiento en el dashboard</div>}
+          </div>
           {t.contexto&&<div><label className="text-xs text-neutral-400">Contexto</label><textarea value={t.contexto||""} onChange={e=>set("contexto",e.target.value)} rows="2" className="w-full mt-1 bg-neutral-900 border border-neutral-800 rounded-lg px-3 py-2 text-xs text-neutral-400 outline-none resize-none"/></div>}
         </div>
       </div>

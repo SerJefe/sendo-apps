@@ -2169,11 +2169,19 @@ async function loadCalendario() {
     var renderRow = function(t, color, label) {
       var ddays = t._dias_restantes;
       var ddText = ddays === null ? '' : ddays < 0 ? Math.abs(ddays)+'d vencida' : ddays === 0 ? 'HOY' : 'en '+ddays+'d';
+      var match = matchMember(t.responsable||'');
+      var esDeOtro = match && match.alias !== 'Sebastian';
+      var respLabel = esDeOtro
+        ? '<strong style="color:var(--cyan)">→ '+match.alias+'</strong> <span style="color:var(--muted);font-size:10px">('+match.rol+')</span>'
+        : (t.responsable || 'sin responsable');
       return '<div class="card" style="margin-bottom:6px;border-left:3px solid '+color+';display:flex;justify-content:space-between;align-items:center;gap:8px">' +
         '<div style="flex:1"><div style="font-size:13px;font-weight:500">'+t.tarea+'</div>' +
-        '<div style="font-size:11px;color:var(--muted);margin-top:2px">'+(t.responsable||'')+' - '+(t.contexto||'').slice(0,80)+'</div></div>' +
-        '<div style="text-align:right;min-width:100px"><div style="font-family:monospace;font-size:13px;color:'+color+';font-weight:600">'+ddText+'</div>' +
-        '<div style="font-size:10px;color:var(--muted);font-family:monospace">'+t.fecha_limite+'</div></div>' +
+        '<div style="font-size:11px;color:var(--muted);margin-top:2px">'+respLabel+' · '+(t.contexto||'').slice(0,80)+'</div></div>' +
+        '<div style="text-align:right;min-width:140px;display:flex;flex-direction:column;align-items:flex-end;gap:4px">' +
+          '<div style="font-family:monospace;font-size:13px;color:'+color+';font-weight:600">'+ddText+'</div>' +
+          '<div style="font-size:10px;color:var(--muted);font-family:monospace">'+(t.fecha_limite||'')+'</div>' +
+          '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Delegar/reasignar" style="background:rgba(184,153,73,.1);color:var(--cyan);border:1px solid rgba(184,153,73,.25);padding:3px 9px;border-radius:4px;font-size:10px;cursor:pointer;white-space:nowrap">→ delegar</button>' +
+        '</div>' +
         '</div>';
     };
 
@@ -2192,6 +2200,39 @@ async function loadCalendario() {
     if (futuras.length) {
       h += '<h3>Mas adelante</h3>';
       futuras.forEach(function(t){h += renderRow(t, 'var(--cyan)')});
+    }
+
+    // === DELEGADAS EN SEGUIMIENTO ===
+    // Tareas abiertas con responsable distinto a Sebas. Ordenadas por fecha limite (vencidas primero).
+    var delegadas = tareas.filter(function(t){
+      if (!t.responsable) return false;
+      var m = matchMember(t.responsable);
+      return m && m.alias !== 'Sebastian';
+    });
+    if (delegadas.length) {
+      delegadas.forEach(function(t){
+        if (t.fecha_limite) {
+          try { var fl2 = new Date(t.fecha_limite); t._dias_restantes = Math.round((fl2 - hoy)/86400000); }
+          catch(e) { t._dias_restantes = null; }
+        } else { t._dias_restantes = null; }
+      });
+      delegadas.sort(function(a,b){
+        var da = a._dias_restantes === null ? 999 : a._dias_restantes;
+        var db = b._dias_restantes === null ? 999 : b._dias_restantes;
+        return da - db;
+      });
+      var venDelg = delegadas.filter(function(t){return t._dias_restantes !== null && t._dias_restantes < 0});
+      h += '<h3 style="color:var(--cyan);margin-top:24px;cursor:pointer" onclick="document.getElementById(\'delegadas-list\').style.display=document.getElementById(\'delegadas-list\').style.display===\'none\'?\'block\':\'none\'">🤝 Delegadas en seguimiento ('+delegadas.length+(venDelg.length?' · <span style=\'color:var(--red)\'>'+venDelg.length+' vencidas</span>':'')+') &#9662;</h3>';
+      h += '<p style="font-size:11px;color:var(--muted);margin-bottom:8px">Tareas abiertas con responsable distinto a ti. Click <strong style="color:var(--cyan)">→ delegar</strong> en cualquiera para reasignar.</p>';
+      h += '<div id="delegadas-list">';
+      delegadas.forEach(function(t){
+        var col = t._dias_restantes !== null && t._dias_restantes < 0 ? 'var(--red)' :
+                  t._dias_restantes === 0 ? 'var(--orange)' :
+                  t._dias_restantes !== null && t._dias_restantes <= 7 ? 'var(--yellow)' :
+                  'var(--cyan)';
+        h += renderRow(t, col);
+      });
+      h += '</div>';
     }
 
     if (sinFecha.length) {
