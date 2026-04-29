@@ -1,0 +1,24 @@
+{
+  "_comentarios": [
+    "Glosario de correcciones aplicado por extract-tasks-local.py ANTES de mandar a Haiku.",
+    "Se aplica a: titulos de lifelog, headings de sub-tema, samples (texto hablado).",
+    "",
+    "Estructura:",
+    "  simple: reemplazo word-boundary, exact match. Ej: 'Banti' -> 'Vanti'.",
+    "          ignore_case por defecto = true (Banti / banti / BANTI todos matchean).",
+    "  regex:  patrones avanzados con grupos. Usa \\1 para preservar el grupo capturado.",
+    "          ignore_case por defecto = false. Pon true cuando aplique.",
+    "",
+    "Para agregar un nombre nuevo, edita este archivo (no requiere redeploy del agente).",
+    "El cron diario lo recarga al correr."
+  ],
+  "simple": [
+    {"from": "Banti", "to": "Vanti"}
+  ],
+  "regex": [
+    {"pattern": "\\b[Bb]uca[rs]?a?\\s+manga\\b", "replacement": "Bucaramanga", "ignore_case": false, "_nota": "Whisper parte 'Bucaramanga' en 'Buca manga' o 'Bucara manga'"},
+    {"pattern": "\\b[Vv]uca[rs]?a?\\s+manga\\b", "replacement": "Bucaramanga", "ignore_case": false, "_nota": "Variante con V/B confundida"},
+    {"pattern": "\\b(el|la|con|de|del|al|para|contrato con|contrato de|contrato|contratos con|contratos de|contratos)\\s+PM\\b", "replacement": "\\1 EPM", "ignore_case": true, "_nota": "PM aislado solo se cambia con prefijo nominal claro, para no romper '8 PM' (hora)"},
+    {"pattern": "\\bCarla\\b", "replacement": "Karla", "ignore_case": true, "_nota": "Karla (con K) es companera de formacion con Adolfo, Whisper la transcribe con C"}
+  ]
+}
