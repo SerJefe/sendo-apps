@@ -1272,15 +1272,19 @@ async function loadPendientes() {
         gItems.forEach(function(t) {
           var priColor = t.prioridad==='critica'?'var(--red)':t.prioridad==='alta'?'var(--orange)':'var(--yellow)';
           var tipoColor = t.tipo==='compromiso'?'var(--cyan)':t.tipo==='seguimiento'?'var(--purple)':'var(--muted)';
+          var rolStr = t.rol_sugerido ? String(t.rol_sugerido).replace(/^rol-\d+-/,'') : '';
+          var rolPill = rolStr ? ' <span title="'+t.rol_sugerido+'" style="padding:1px 6px;border-radius:3px;background:rgba(90,122,74,.1);color:#3e5a30;font-size:9px;font-family:\'JetBrains Mono\',monospace;">'+rolStr+'</span>' : '';
           html += '<div id="p-'+t.id+'" class="card" style="margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;transition:opacity .3s,transform .3s;padding:8px 12px">' +
             '<div style="flex:1">' +
               '<div style="font-size:13px;font-weight:500">' + t.tarea + '</div>' +
               '<div style="font-size:10px;color:var(--muted);margin-top:3px">' + (t.responsable||'') +
                 ' <span style="padding:1px 6px;border-radius:3px;background:rgba(184,153,73,.1);color:'+tipoColor+'">' + (t.tipo||'') + '</span>' +
                 ' <span style="padding:1px 6px;border-radius:3px;background:rgba(166,46,46,.1);color:'+priColor+'">' + (t.prioridad||'') + '</span>' +
+                rolPill +
               '</div>' +
             '</div>' +
             '<div style="display:flex;gap:4px;margin-left:8px">' +
+              '<button onclick="editPendiente(\''+t.id+'\')" title="Editar texto" style="background:rgba(201,168,74,.1);color:#9d7a25;border:1px solid rgba(201,168,74,.25);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✎</button>' +
               '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Delegar" style="background:rgba(184,153,73,.1);color:#b89949;border:1px solid rgba(184,153,73,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">→</button>' +
               '<button onclick="reviewTask(\''+t.id+'\',\'reject\')" style="background:rgba(166,46,46,.1);color:#8a2828;border:1px solid rgba(166,46,46,.2);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✗</button>' +
               '<button onclick="reviewTask(\''+t.id+'\',\'accept\')" style="background:rgba(90,122,74,.15);color:#3e5a30;border:1px solid rgba(90,122,74,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer">✓</button>' +
@@ -1323,6 +1327,22 @@ async function reviewTask(id, action) {
     toast(action==='accept'?'Tarea aceptada':'Tarea rechazada', 'ok');
     setTimeout(function(){ if(el)el.remove(); loadPendientes(); if(action==='accept')loadMisTareas(); }, 300);
   } catch(e) { toast('Error de conexion','err'); if(el){el.style.opacity='1';el.style.transform='none';} }
+}
+
+async function editPendiente(id) {
+  // MVP: prompt() para editar el texto. Si Sebas lo usa, se puede mejorar a inline-edit.
+  var el = document.getElementById('p-'+id);
+  var textoActual = el ? (el.querySelector('div[style*="font-weight:500"]')||{}).textContent || '' : '';
+  var nuevo = window.prompt('Editar tarea:', textoActual);
+  if (nuevo === null) return; // cancelado
+  nuevo = (nuevo||'').trim();
+  if (!nuevo || nuevo === textoActual.trim()) return;
+  try {
+    var r = await fetch(API+'/edit-pendiente', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({id:id, tarea:nuevo})});
+    if (!r.ok) { toast('No se pudo editar ('+r.status+')','err'); return; }
+    toast('Tarea editada', 'ok');
+    loadPendientes();
+  } catch(e) { toast('Error de conexion','err'); }
 }
 
 async function bulkAction(action) {
@@ -2522,12 +2542,36 @@ loadCalendario();
       '</details>';
   }
 
+  // Cache de IDs de mails descartados — se carga al init y se actualiza al hacer dismiss.
+  // Vive en el IIFE de panoramaHome.
+  var MAIL_DISMISSED = new Set();
+
+  function loadMailDismissed(){
+    return fetch('/tasks/mail-dismissed', {cache:'no-cache'})
+      .then(function(r){ return r.ok ? r.json() : {ids:[]}; })
+      .then(function(d){ MAIL_DISMISSED = new Set(d.ids||[]); })
+      .catch(function(){ MAIL_DISMISSED = new Set(); });
+  }
+
+  window.dismissMail = async function(mailId, btn){
+    try {
+      var r = await fetch('/tasks/mail-dismiss', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({id:mailId})});
+      if (!r.ok) return;
+      MAIL_DISMISSED.add(mailId);
+      // Esconder el item en el DOM sin re-render completo
+      var row = btn && btn.closest('div[data-mail-id]');
+      if (row) { row.style.opacity = '0.3'; row.style.textDecoration='line-through'; setTimeout(function(){ row.remove(); }, 250); }
+    } catch(e) {}
+  };
+
   function renderMSMail(mail){
     var box = document.getElementById('pn-ms-mail');
     if (!box) return;
     if (!mail || !mail.pendientes){ box.innerHTML = ''; return; }
-    var top = mail.pendientes.filter(function(p){ return p.important_sender; }).slice(0, 8);
-    var rest = mail.pendientes.filter(function(p){ return !p.important_sender; }).slice(0, 10);
+    // Filtrar correos descartados por el usuario.
+    var pendActivos = mail.pendientes.filter(function(p){ return !MAIL_DISMISSED.has(p.id); });
+    var top = pendActivos.filter(function(p){ return p.important_sender; }).slice(0, 8);
+    var rest = pendActivos.filter(function(p){ return !p.important_sender; }).slice(0, 10);
     if (!top.length && !rest.length){ box.innerHTML = ''; return; }
     function fmtMail(p){
       var razones = (p.razon||[]).map(function(r){
@@ -2536,10 +2580,14 @@ loadCalendario();
       }).join('');
       var d = p.received ? new Date(p.received) : null;
       var fecha = d ? d.toLocaleDateString('es-CO',{day:'2-digit',month:'short'}) : '';
-      return '<div style="padding:7px 0;border-bottom:1px dashed rgba(201,168,74,0.3);font-size:12.5px;">' +
-        '<div style="display:flex;justify-content:space-between;gap:8px;margin-bottom:2px;">' +
+      var midEsc = (p.id||'').replace(/'/g,"\\'");
+      return '<div data-mail-id="'+esc(p.id||'')+'" style="padding:7px 0;border-bottom:1px dashed rgba(201,168,74,0.3);font-size:12.5px;transition:opacity .25s;">' +
+        '<div style="display:flex;justify-content:space-between;gap:8px;margin-bottom:2px;align-items:center;">' +
           '<span style="color:var(--navy);font-weight:600;">' + esc(p.from_name||p.from||'—') + '</span>' +
-          '<span style="color:var(--muted);font-size:10px;font-family:\'JetBrains Mono\',monospace;flex-shrink:0;">' + fecha + '</span>' +
+          '<div style="display:flex;gap:6px;align-items:center;flex-shrink:0;">' +
+            '<span style="color:var(--muted);font-size:10px;font-family:\'JetBrains Mono\',monospace;">' + fecha + '</span>' +
+            '<button onclick="dismissMail(\''+midEsc+'\', this)" title="Marcar resuelto" style="background:rgba(90,122,74,.1);color:#3e5a30;border:1px solid rgba(90,122,74,.25);padding:2px 7px;border-radius:4px;font-size:10px;cursor:pointer;line-height:1;">✓</button>' +
+          '</div>' +
         '</div>' +
         '<div style="color:var(--navy);line-height:1.3;">' + esc(p.subject||'') + '</div>' +
         (razones ? '<div style="margin-top:3px;">' + razones + '</div>' : '') +
@@ -2654,7 +2702,8 @@ loadCalendario();
       fetch(BRIEF_URL+'?t='+Date.now(),{cache:'no-cache'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; }),
       fetch(RESEARCH_URL+'?t='+Date.now(),{cache:'no-cache'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; }),
       fetch(MS_CAL_URL+'?t='+Date.now(),{cache:'no-cache'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; }),
-      fetch(MS_MAIL_URL+'?t='+Date.now(),{cache:'no-cache'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; })
+      fetch(MS_MAIL_URL+'?t='+Date.now(),{cache:'no-cache'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; }),
+      loadMailDismissed()
     ]).then(function(arr){
       var vivos = arr[0], rolesDef = arr[1], odoo = arr[2], brief = arr[3], research = arr[4], msCal = arr[5], msMail = arr[6];
       ODOO_DATA = odoo;
