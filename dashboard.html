@@ -322,7 +322,8 @@ main > section.show{ display: block; }
 <button class="primary on" data-tab="panorama" onclick="showTab('panorama',this)">Panorama</button>
 <button class="primary" data-tab="inbox" onclick="showTab('inbox',this)">Inbox <span id="pendientes-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
 <button class="primary" data-tab="agenda" onclick="showTab('agenda',this)">Agenda <span id="calendario-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
-<button class="primary" data-tab="alertas" onclick="showTab('alertas',this)">Alertas <span id="radar-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span> <span id="coherencia-badge" style="background:var(--orange);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
+<button class="primary" data-tab="equipo" onclick="showTab('equipo',this)">Equipo</button>
+<button class="primary" data-tab="radar" onclick="showTab('radar',this)">Radar <span id="radar-badge" style="background:var(--red);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
 <span class="divider"></span>
 <button class="secondary" onclick="window.location.href='priorizador.html'">Priorizar</button>
 <button class="secondary" onclick="window.open('mapa-neuronal.html','_blank')">Mapa</button>
@@ -365,7 +366,7 @@ main > section.show{ display: block; }
     <button class="drill-btn" onclick="showDrill('comite')">Comité SV · 16 KPIs</button>
     <button class="drill-btn" onclick="showDrill('contratos')">Contratos Condugas</button>
     <button class="drill-btn" onclick="showDrill('proyectos')">Centro de Operaciones</button>
-    <button class="drill-btn" onclick="showDrill('equipo')">Equipo</button>
+    <button class="drill-btn" onclick="showTab('equipo',document.querySelector('[data-tab=equipo]'))">Equipo</button>
     <button class="drill-btn" onclick="showDrill('kpis-salud')">KPIs · WHOOP</button>
     <a class="drill-btn" href="reportes/analisis-oyma-q1-2026.html" target="_blank" style="text-decoration:none">Informe OYMA Q1</a>
   </div>
@@ -467,6 +468,11 @@ main > section.show{ display: block; }
   Resueltas <span id="radar-resueltas-count" style="font-family:'JetBrains Mono',monospace;color:var(--muted)"></span> &#9662;
 </h3>
 <div id="radar-resueltas" style="display:none"></div>
+
+<div style="margin-top:24px;padding-top:14px;border-top:1px dashed var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+  <div style="font-size:11px;color:var(--muted)">¿Tracker con duplicados o tareas estancadas? Revisa la salud del sistema.</div>
+  <button onclick="showDrill('coherencia');if(typeof loadCoherencia==='function')loadCoherencia();" class="link-btn" style="font-size:11px;padding:4px 10px">🩺 Salud del tracker (coherencia) <span id="coherencia-badge" style="background:var(--orange);color:white;padding:1px 6px;border-radius:10px;font-size:10px;margin-left:4px"></span></button>
+</div>
 </section>
 
 <section id="proyectos">
@@ -511,8 +517,9 @@ main > section.show{ display: block; }
 <!-- section "tareas" removida 2026-04-22 · integrado en panorama Top 3 urgentes -->
 
 
-<!-- COHERENCIA: deteccion de duplicados y problemas del tracker -->
+<!-- COHERENCIA: deteccion de duplicados y problemas del tracker (drilldown desde Radar) -->
 <section id="coherencia">
+<button class="drill-btn" onclick="showTab('radar',document.querySelector('[data-tab=radar]'))" style="margin-bottom:12px">← Volver a Radar</button>
 <h2>Coherencia del Tracker</h2>
 <p style="font-size:12px;color:var(--muted);margin:-10px 0 16px">Deteccion automatica de duplicados, sin accion, sobrecarga y estancadas. Generado por agent-coherencia.py</p>
 <div style="display:flex;gap:8px;margin-bottom:16px">
@@ -562,13 +569,17 @@ main > section.show{ display: block; }
 // ==========================================
 // NAVIGATION
 // ==========================================
-// 4-TAB REORG (2026-04-22 · skill dashboard-organizer)
-// Cada "tab" muestra un conjunto de sections viejas.
+// 6-TAB REORG (2026-04-29 · skill dashboard-organizer)
+// Cada "tab" muestra un conjunto de sections. Coherencia salio del tab principal,
+// queda como drilldown desde Radar para no saturar la nav.
 var TAB_SECTIONS = {
   panorama: ['panorama'],
   inbox:    ['revisar', 'mistareas'],
   agenda:   ['calendario'],
-  alertas:  ['radar', 'coherencia']
+  equipo:   ['equipo'],
+  radar:    ['radar']
+  // mapa-neuronal.html y priorizador.html son paginas aparte (botones secondary).
+  // coherencia, comite, contratos, proyectos, kpis-salud son drilldowns (showDrill).
 };
 function showTab(tab, btn){
   document.querySelectorAll('main > section').forEach(function(s){ s.classList.remove('show'); });
@@ -587,7 +598,8 @@ function showTab(tab, btn){
     if (tab==='panorama' && window.__panoramaReload) window.__panoramaReload();
     if (tab==='inbox')    { loadPendientes(); loadMisTareas(); loadDelegadasInbox(); }
     if (tab==='agenda')   loadCalendario();
-    if (tab==='alertas')  { loadRadar(); loadCoherencia(); }
+    if (tab==='equipo')   { if (typeof loadEquipo === 'function') loadEquipo(); }
+    if (tab==='radar')    loadRadar();
   } catch(e){}
 }
 // Drilldowns desde Panorama → muestra UNA section vieja (Comité, Contratos, Proyectos, Equipo, KPIs)
