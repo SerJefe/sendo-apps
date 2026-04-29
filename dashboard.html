@@ -428,6 +428,10 @@ main > section.show{ display: block; }
   Cerradas <span id="cerradas-count" style="font-family:'JetBrains Mono',monospace;color:var(--muted)"></span> &#9662;
 </h3>
 <div id="tareas-cerradas" style="display:none"></div>
+
+<h3 style="margin-top:24px;color:var(--cyan)">🤝 Delegadas en seguimiento <span id="delegadas-count" style="font-family:'JetBrains Mono',monospace;color:var(--muted);font-size:13px"></span></h3>
+<p style="font-size:11px;color:var(--muted);margin:-6px 0 10px">Agrupadas por miembro del equipo. Click <strong style="color:var(--cyan)">→ delegar</strong> para reasignar, <strong style="color:#9d7a25">→ Odoo</strong> para crearla en project.task con todo el detalle.</p>
+<div id="delegadas-grouped"></div>
 </section>
 
 
@@ -581,7 +585,7 @@ function showTab(tab, btn){
   // Re-fire loaders al cambiar de tab · mantiene data fresca
   try {
     if (tab==='panorama' && window.__panoramaReload) window.__panoramaReload();
-    if (tab==='inbox')    { loadPendientes(); loadMisTareas(); }
+    if (tab==='inbox')    { loadPendientes(); loadMisTareas(); loadDelegadasInbox(); }
     if (tab==='agenda')   loadCalendario();
     if (tab==='alertas')  { loadRadar(); loadCoherencia(); }
   } catch(e){}
@@ -1345,6 +1349,181 @@ async function editPendiente(id) {
   } catch(e) { toast('Error de conexion','err'); }
 }
 
+// === DELEGADAS POR RESPONSABLE (en inbox) ===
+async function loadDelegadasInbox() {
+  var box = document.getElementById('delegadas-grouped');
+  var counter = document.getElementById('delegadas-count');
+  if (!box) return;
+  try {
+    var r = await fetch(API+'/tareas');
+    var d = await r.json();
+    var abiertas = (d.tareas||[]).filter(function(t){return t.estado==='abierta'});
+    // Agrupar por miembro del equipo (usando matchMember). Si no matchea pero tiene responsable distinto a Sebas, va a "otros".
+    var groups = {}; // alias -> {member, tareas:[]}
+    abiertas.forEach(function(t){
+      var resp = t.responsable || '';
+      var m = matchMember(resp);
+      if (m && m.alias === 'Sebastian') return;
+      if (!resp.trim()) return;
+      var key = m ? m.alias : '__otros__';
+      if (!groups[key]) groups[key] = {member: m || {alias:'Otros', full:'Sin matchear', rol:'(libre)', empresa:''}, tareas:[]};
+      groups[key].tareas.push(t);
+    });
+    var aliasOrder = TEAM_MEMBERS.filter(function(m){return m.alias !== 'Sebastian'}).map(function(m){return m.alias});
+    aliasOrder.push('__otros__');
+    var totalDelg = Object.keys(groups).reduce(function(s,k){return s+groups[k].tareas.length},0);
+    if (counter) counter.textContent = totalDelg ? '('+totalDelg+')' : '';
+    if (!totalDelg) {
+      box.innerHTML = '<div style="text-align:center;padding:20px;color:var(--muted);font-size:12px">Nada delegado todavia. Cuando asignes una tarea a alguien del equipo va a aparecer aqui agrupada.</div>';
+      return;
+    }
+    var hoy = new Date(); hoy.setHours(0,0,0,0);
+    var html = '';
+    aliasOrder.forEach(function(alias){
+      var g = groups[alias]; if (!g) return;
+      var m = g.member;
+      var tareas = g.tareas;
+      // Calcular vencidas / dias restantes
+      var vencidas = 0;
+      tareas.forEach(function(t){
+        if (t.fecha_limite) {
+          try { var fl = new Date(t.fecha_limite); t._dr = Math.round((fl-hoy)/86400000); if (t._dr < 0) vencidas++; }
+          catch(e) { t._dr = null; }
+        } else { t._dr = null; }
+      });
+      tareas.sort(function(a,b){var da=a._dr===null?999:a._dr; var db=b._dr===null?999:b._dr; return da-db;});
+      html += '<details ' + (vencidas>0?'open':'') + ' style="margin-bottom:10px;border:1px solid var(--border);border-radius:8px;background:rgba(184,153,73,.04);padding:8px 12px">';
+      html += '<summary style="cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none">';
+      html += '<div><strong style="color:var(--cyan);font-size:14px">'+m.alias+'</strong> <span style="color:var(--muted);font-size:11px">· '+m.full+' · '+m.rol+'</span></div>';
+      html += '<div style="display:flex;gap:8px;align-items:center"><span style="font-family:\'JetBrains Mono\',monospace;color:var(--muted);font-size:11px">'+tareas.length+(vencidas>0?' · <span style=\'color:var(--red);font-weight:600\'>'+vencidas+' venc</span>':'')+'</span><span style="font-size:11px;color:var(--muted)">▾</span></div>';
+      html += '</summary>';
+      html += '<div style="margin-top:8px">';
+      tareas.forEach(function(t){
+        var col = t._dr !== null && t._dr < 0 ? 'var(--red)' : t._dr === 0 ? 'var(--orange)' : t._dr !== null && t._dr <= 7 ? 'var(--yellow)' : 'var(--cyan)';
+        var ddText = t._dr === null ? '—' : t._dr < 0 ? Math.abs(t._dr)+'d venc' : t._dr === 0 ? 'HOY' : 'en '+t._dr+'d';
+        var enOdoo = t.odoo_task_id ? '<span title="Ya en Odoo task #'+t.odoo_task_id+'" style="font-size:9px;color:#9d7a25;margin-right:4px">⊙ Odoo</span>' : '';
+        html += '<div class="card" style="margin-bottom:5px;border-left:3px solid '+col+';display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 10px">';
+        html += '<div style="flex:1"><div style="font-size:12.5px;font-weight:500">'+enOdoo+t.tarea+'</div>';
+        html += '<div style="font-size:10px;color:var(--muted);margin-top:2px">'+(t.contexto||'').slice(0,90)+'</div></div>';
+        html += '<div style="text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:3px;min-width:130px">';
+        html += '<div style="font-family:\'JetBrains Mono\',monospace;font-size:11px;color:'+col+';font-weight:600">'+ddText+'</div>';
+        html += '<div style="display:flex;gap:4px">';
+        html += '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Reasignar" style="background:rgba(184,153,73,.1);color:var(--cyan);border:1px solid rgba(184,153,73,.25);padding:3px 8px;border-radius:4px;font-size:10px;cursor:pointer">→ delegar</button>';
+        html += '<button onclick="openOdooModal(\''+t.id+'\')" title="Crear en Odoo project.task" style="background:rgba(201,168,74,.12);color:#9d7a25;border:1px solid rgba(201,168,74,.3);padding:3px 8px;border-radius:4px;font-size:10px;cursor:pointer">→ Odoo</button>';
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+      });
+      html += '</div></details>';
+    });
+    box.innerHTML = html;
+  } catch(e) {
+    box.innerHTML = '<div style="color:var(--muted);font-size:12px">No se pudo cargar.</div>';
+  }
+}
+
+// === MODAL: ENVIAR A ODOO ===
+var _odooProjectsCache = null;
+async function openOdooModal(taskId) {
+  // Buscar la tarea en el tracker para prellenar
+  var tracker;
+  try {
+    var r = await fetch(API+'/tareas');
+    tracker = await r.json();
+  } catch(e) { toast('No se pudo leer tracker','err'); return; }
+  var t = (tracker.tareas||[]).find(function(x){return x.id===taskId});
+  if (!t) { toast('Tarea no encontrada','err'); return; }
+
+  if (t.odoo_task_id) {
+    if (!confirm('Esta tarea ya esta en Odoo (#'+t.odoo_task_id+'). ¿Crear otra copia?')) return;
+  }
+
+  // Cargar proyectos (cache 5min en backend, pero hacemos cache cliente tambien)
+  if (!_odooProjectsCache) {
+    try {
+      var pr = await fetch(API+'/odoo-projects');
+      var pd = await pr.json();
+      if (pd.error) { toast('Odoo: '+pd.error,'err'); return; }
+      _odooProjectsCache = pd.projects||[];
+    } catch(e) { toast('No se pudo conectar a Odoo','err'); return; }
+  }
+  var projects = _odooProjectsCache;
+
+  // Modal HTML
+  var existing = document.getElementById('odoo-modal'); if (existing) existing.remove();
+  var modal = document.createElement('div');
+  modal.id = 'odoo-modal';
+  modal.style.cssText = 'position:fixed;inset:0;background:rgba(9,31,46,.6);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px';
+  var responsableLabel = '';
+  var match = matchMember(t.responsable||'');
+  if (match && match.alias !== 'Sebastian') responsableLabel = '<div style="font-size:11px;color:var(--cyan);margin-bottom:6px">Delegada a: <strong>'+match.alias+'</strong> · '+match.rol+'</div>';
+
+  modal.innerHTML =
+    '<div style="background:#fff;border-radius:12px;max-width:560px;width:100%;padding:20px;box-shadow:0 8px 30px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto">' +
+      '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px">' +
+        '<div><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Crear en Odoo · project.task</div>' +
+        '<h3 style="margin:4px 0 0;color:var(--navy);font-size:16px">'+t.tarea+'</h3></div>' +
+        '<button onclick="document.getElementById(\'odoo-modal\').remove()" style="background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;line-height:1">×</button>' +
+      '</div>' +
+      responsableLabel +
+      '<label style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;display:block;margin-top:8px">Proyecto Odoo *</label>' +
+      '<select id="odoo-modal-project" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;margin-top:4px">' +
+        '<option value="">— elige proyecto —</option>' +
+        projects.map(function(p){return '<option value="'+p.id+'">'+p.name+'</option>'}).join('') +
+      '</select>' +
+      '<label style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;display:block;margin-top:12px">Nombre de la tarea *</label>' +
+      '<input id="odoo-modal-name" value="'+(t.tarea||'').replace(/"/g,'&quot;')+'" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;margin-top:4px"/>' +
+      '<label style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;display:block;margin-top:12px">Descripcion (contexto + proxima accion)</label>' +
+      '<textarea id="odoo-modal-desc" rows="5" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:12px;margin-top:4px;font-family:inherit;resize:vertical">' +
+        [t.contexto||'', t.proxima_accion?'\nProxima accion: '+t.proxima_accion:'', t.responsable?'\nResponsable: '+t.responsable:'', t.prioridad?'\nPrioridad local: '+t.prioridad:''].join('') +
+      '</textarea>' +
+      '<label style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;display:block;margin-top:12px">Fecha limite (opcional)</label>' +
+      '<input id="odoo-modal-deadline" type="date" value="'+(t.fecha_limite||'')+'" style="padding:8px;border:1px solid var(--border);border-radius:6px;font-size:13px;margin-top:4px"/>' +
+      '<div style="display:flex;gap:8px;justify-content:flex-end;margin-top:18px">' +
+        '<button onclick="document.getElementById(\'odoo-modal\').remove()" style="padding:8px 14px;border:1px solid var(--border);background:#fff;color:var(--muted);border-radius:6px;font-size:12px;cursor:pointer">Cancelar</button>' +
+        '<button id="odoo-modal-submit" onclick="submitOdooCreate(\''+taskId+'\')" style="padding:8px 16px;background:#9d7a25;color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer">Crear en Odoo</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(modal);
+  document.getElementById('odoo-modal-project').focus();
+}
+
+async function submitOdooCreate(taskId) {
+  var btn = document.getElementById('odoo-modal-submit');
+  var projSel = document.getElementById('odoo-modal-project');
+  var nameIn = document.getElementById('odoo-modal-name');
+  var descIn = document.getElementById('odoo-modal-desc');
+  var dlIn = document.getElementById('odoo-modal-deadline');
+  var pid = projSel ? projSel.value : '';
+  var name = nameIn ? nameIn.value.trim() : '';
+  if (!pid) { toast('Elige un proyecto','err'); return; }
+  if (!name) { toast('La tarea necesita nombre','err'); return; }
+  btn.disabled = true; btn.textContent = 'Creando…';
+  try {
+    var r = await fetch(API+'/odoo-create-task', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        name: name,
+        project_id: parseInt(pid,10),
+        description: descIn ? descIn.value : '',
+        deadline: dlIn && dlIn.value ? dlIn.value : null,
+        tarea_id_origen: taskId,
+      })
+    });
+    var d = await r.json();
+    if (!r.ok || !d.ok) { toast('Odoo: '+(d.error||'error '+r.status),'err'); btn.disabled=false; btn.textContent='Crear en Odoo'; return; }
+    toast('Creada en Odoo #'+d.odoo_task_id, 'ok');
+    if (d.odoo_url) window.open(d.odoo_url, '_blank');
+    document.getElementById('odoo-modal').remove();
+    loadMisTareas();
+    loadDelegadasInbox();
+  } catch(e) {
+    toast('Error de conexion a Odoo','err');
+    btn.disabled=false; btn.textContent='Crear en Odoo';
+  }
+}
+
 async function bulkAction(action) {
   var items = document.querySelectorAll('[id^="p-"]');
   for(var i=0;i<items.length;i++) {
@@ -1409,6 +1588,7 @@ async function loadMisTareas() {
       }
       var dateBtn = isCerrada ? '' : '<button onclick="setDeadline(\''+t.id+'\',\''+(t.fecha_limite||'')+'\')" title="Asignar fecha limite" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">'+(t.fecha_limite?'editar fecha':'asignar fecha')+'</button>';
       var delegarBtn = isCerrada ? '' : '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Delegar a miembro del equipo" style="background:rgba(184,153,73,.1);color:var(--cyan);border:1px solid rgba(184,153,73,.25);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">→ delegar</button>';
+      var odooBtn = isCerrada ? '' : '<button onclick="openOdooModal(\''+t.id+'\')" title="Crear en Odoo project.task" style="background:rgba(201,168,74,.12);color:#9d7a25;border:1px solid rgba(201,168,74,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">'+(t.odoo_task_id?'⊙ Odoo':'→ Odoo')+'</button>';
       return '<div class="card" style="margin-bottom:6px;display:flex;align-items:center;gap:12px;'+(isCerrada?'opacity:.5':'')+'">' +
         '<input type="checkbox" '+(isCerrada?'checked':'')+' onchange="toggleTarea(\''+t.id+'\')" style="width:18px;height:18px;cursor:pointer;accent-color:var(--cyan)">' +
         '<div style="flex:1">' +
@@ -1422,6 +1602,7 @@ async function loadMisTareas() {
             (t.motivo_cierre?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(110,95,153,.15);color:var(--purple)">'+t.motivo_cierre+'</span>':'') +
           '</div>' +
         '</div>' +
+        odooBtn +
         delegarBtn +
         dateBtn +
       '</div>';
@@ -1461,6 +1642,7 @@ function filterTareas(f) {
 
 loadPendientes();
 loadMisTareas();
+loadDelegadasInbox();
 
 
 // ==========================================
@@ -2200,39 +2382,6 @@ async function loadCalendario() {
     if (futuras.length) {
       h += '<h3>Mas adelante</h3>';
       futuras.forEach(function(t){h += renderRow(t, 'var(--cyan)')});
-    }
-
-    // === DELEGADAS EN SEGUIMIENTO ===
-    // Tareas abiertas con responsable distinto a Sebas. Ordenadas por fecha limite (vencidas primero).
-    var delegadas = tareas.filter(function(t){
-      if (!t.responsable) return false;
-      var m = matchMember(t.responsable);
-      return m && m.alias !== 'Sebastian';
-    });
-    if (delegadas.length) {
-      delegadas.forEach(function(t){
-        if (t.fecha_limite) {
-          try { var fl2 = new Date(t.fecha_limite); t._dias_restantes = Math.round((fl2 - hoy)/86400000); }
-          catch(e) { t._dias_restantes = null; }
-        } else { t._dias_restantes = null; }
-      });
-      delegadas.sort(function(a,b){
-        var da = a._dias_restantes === null ? 999 : a._dias_restantes;
-        var db = b._dias_restantes === null ? 999 : b._dias_restantes;
-        return da - db;
-      });
-      var venDelg = delegadas.filter(function(t){return t._dias_restantes !== null && t._dias_restantes < 0});
-      h += '<h3 style="color:var(--cyan);margin-top:24px;cursor:pointer" onclick="document.getElementById(\'delegadas-list\').style.display=document.getElementById(\'delegadas-list\').style.display===\'none\'?\'block\':\'none\'">🤝 Delegadas en seguimiento ('+delegadas.length+(venDelg.length?' · <span style=\'color:var(--red)\'>'+venDelg.length+' vencidas</span>':'')+') &#9662;</h3>';
-      h += '<p style="font-size:11px;color:var(--muted);margin-bottom:8px">Tareas abiertas con responsable distinto a ti. Click <strong style="color:var(--cyan)">→ delegar</strong> en cualquiera para reasignar.</p>';
-      h += '<div id="delegadas-list">';
-      delegadas.forEach(function(t){
-        var col = t._dias_restantes !== null && t._dias_restantes < 0 ? 'var(--red)' :
-                  t._dias_restantes === 0 ? 'var(--orange)' :
-                  t._dias_restantes !== null && t._dias_restantes <= 7 ? 'var(--yellow)' :
-                  'var(--cyan)';
-        h += renderRow(t, col);
-      });
-      h += '</div>';
     }
 
     if (sinFecha.length) {
