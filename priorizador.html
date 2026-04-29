@@ -322,12 +322,14 @@ function QuickCapture({onAdd,busy}){
     <button disabled={busy} className="px-5 py-3 rounded-xl bg-white text-black font-medium hover:bg-neutral-200 transition disabled:opacity-50">Añadir</button>
   </form>);}
 
-function TaskRow({t,onClick,onToggle}){
+function TaskRow({t,onClick,onToggle,onSnooze,onDelegar}){
   const ev=!!t.evaluada;const p=ev?(t.puntaje??calcP(t)):null;const nivel=ev?(t.nivel??clasN(p)):null;
   const r2=ev?rec(t):null;const al=ev?alertas(t):[];const cerr=t.estado==="cerrada";
   const dl=deadlineBadge(t.fecha_limite);
+  const hoyISO=new Date().toISOString().slice(0,10);
+  const snoozed=t.snooze_until && t.snooze_until>hoyISO;
   return(
-  <div className={`glass border ${cerr?"border-neutral-900 opacity-50":"border-neutral-800/80"} hover:border-neutral-700 rounded-2xl p-4 transition`}>
+  <div className={`glass border ${cerr?"border-neutral-900 opacity-50":snoozed?"border-purple-900/40 opacity-70":"border-neutral-800/80"} hover:border-neutral-700 rounded-2xl p-4 transition`}>
     <div className="flex items-start gap-3">
       <button onClick={e=>{e.stopPropagation();onToggle(t);}} className={`mt-1 w-5 h-5 rounded-full border-2 ${cerr?"bg-emerald-500 border-emerald-500":"border-neutral-600 hover:border-neutral-300"} shrink-0 flex items-center justify-center transition`}>
         {cerr&&<span className="text-[10px] text-black">✓</span>}
@@ -341,14 +343,23 @@ function TaskRow({t,onClick,onToggle}){
           {dl&&<span className={`text-[10px] px-1.5 py-0.5 rounded-full ring-1 ${dl.cls}`}>{dl.label}</span>}
           {t.vencida&&<span className="text-[10px] px-1.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 ring-1 ring-rose-500/40">VENCIDA</span>}
           {t.estancada&&<span className="text-[10px] px-1.5 py-0.5 rounded-full bg-orange-500/20 text-orange-300 ring-1 ring-orange-500/30">estancada</span>}
+          {snoozed&&<span title={t.snooze_nota||""} className="text-[10px] px-1.5 py-0.5 rounded-full bg-purple-500/15 text-purple-300 ring-1 ring-purple-500/30">💤 hasta {t.snooze_until}</span>}
+          {t.responsable && t.responsable!=="Sebastian Sanchez" && t.responsable!=="Sebastian" && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 ring-1 ring-cyan-500/30">→ {t.responsable.split(' ').slice(0,2).join(' ')}</span>}
         </div>
         <div className={`text-base font-medium ${cerr?"line-through text-neutral-500":"text-neutral-100"}`}>{t.tarea}</div>
         {t.proxima_accion&&<div className="text-xs text-neutral-400 mt-1">→ {t.proxima_accion}</div>}
         {!t.proxima_accion&&t.contexto&&<div className="text-xs text-neutral-600 mt-1 italic">{t.contexto}</div>}
+        {snoozed&&t.snooze_nota&&<div className="text-[11px] text-purple-300/80 mt-1">💤 {t.snooze_nota}</div>}
       </button>
       <div className="flex flex-col items-end gap-2 shrink-0">
         {ev&&<Badge nivel={nivel} puntaje={p}/>}
         {ev&&<span className="text-[11px] text-neutral-400">{r2.a}</span>}
+        {!cerr && (
+          <div className="flex gap-1.5 mt-1" onClick={e=>e.stopPropagation()}>
+            {onSnooze && <button onClick={e=>{e.stopPropagation();onSnooze(t);}} title="Posponer / volver mañana" className="text-[10px] px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 ring-1 ring-purple-500/30">💤 snooze</button>}
+            {onDelegar && <button onClick={e=>{e.stopPropagation();onDelegar(t);}} title="Delegar al equipo" className="text-[10px] px-2 py-0.5 rounded-md bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 ring-1 ring-cyan-500/30">→ delegar</button>}
+          </div>
+        )}
       </div>
     </div>
     {al.length>0&&<div className="mt-3 flex flex-wrap gap-1.5 pl-8">{al.map((a,i)=><span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-300 ring-1 ring-amber-500/30">⚠ {a.t}</span>)}</div>}
@@ -596,10 +607,57 @@ function App(){
   async function meta(id,body){try{await apiPost("/update",{id,...body});}catch(e){setError(e.message);}}
   async function toggle(t){try{await apiPost("/toggle",{id:t.id});await load();}catch(e){setError(e.message);}}
   async function remove(id){try{await apiPost("/delete",{id});setEditando(null);await load();}catch(e){setError(e.message);}}
+  async function snooze(t){
+    // Posponer una tarea: deja de aparecer en HOY hasta una fecha. Si ya tiene snooze, lo limpia.
+    const hoyISO=new Date().toISOString().slice(0,10);
+    const yaSnoozed = t.snooze_until && t.snooze_until>hoyISO;
+    if (yaSnoozed) {
+      if (!confirm("Esta tarea esta pospuesta hasta "+t.snooze_until+". ¿Reactivar (quitar snooze)?")) return;
+      try { await apiPost("/snooze-tarea",{id:t.id, until:"clear"}); await load(); } catch(e){setError(e.message);}
+      return;
+    }
+    // Default: mañana. Permitir override con prompt.
+    const manana=new Date(); manana.setDate(manana.getDate()+1);
+    const def=manana.toISOString().slice(0,10);
+    const until=window.prompt("¿Hasta cuándo? (YYYY-MM-DD, default mañana = "+def+")\nEjemplos:\n  "+def+" — mañana\n  "+new Date(Date.now()+3*86400000).toISOString().slice(0,10)+" — en 3 dias\n  "+new Date(Date.now()+7*86400000).toISOString().slice(0,10)+" — en 1 semana", def);
+    if (until===null) return;
+    const fecha=(until||"").trim()||def;
+    const nota=window.prompt("¿Por qué la pospones? (opcional, alimenta el sistema)","");
+    if (nota===null) return; // cancelado
+    try {
+      await apiPost("/snooze-tarea",{id:t.id, until:fecha, nota:nota||""});
+      await load();
+    } catch(e){setError(e.message);}
+  }
+  async function delegar(t){
+    // Reasignar al equipo. Lista TEAM_MEMBERS_LITE.
+    const opciones = TEAM_MEMBERS_LITE.map((m,i)=>(i+1)+". "+m.alias+" — "+m.full+" ("+m.rol+")").join("\n");
+    const ans=window.prompt("Delegar a quien? Escribe el numero o el nombre.\n\nActual: "+(t.responsable||"sin asignar")+"\n\n"+opciones+"\n\n0. dejar como está\n-1. limpiar (sin asignar)");
+    if (ans===null) return;
+    const trimmed=(ans||"").trim();
+    if (!trimmed||trimmed==="0") return;
+    let nuevo="";
+    if (trimmed==="-1") nuevo="";
+    else {
+      const n=parseInt(trimmed,10);
+      if (!isNaN(n)&&n>=1&&n<=TEAM_MEMBERS_LITE.length) nuevo=TEAM_MEMBERS_LITE[n-1].full;
+      else {
+        // Buscar por nombre/alias parcial case-insensitive
+        const low=trimmed.toLowerCase();
+        const match=TEAM_MEMBERS_LITE.find(m=>m.alias.toLowerCase().includes(low)||m.full.toLowerCase().includes(low));
+        nuevo=match?match.full:trimmed;
+      }
+    }
+    try { await apiPost("/update",{id:t.id, responsable:nuevo}); await load(); } catch(e){setError(e.message);}
+  }
 
   const abiertas=tareas.filter(t=>t.estado!=="cerrada");
-  const sinEval=abiertas.filter(t=>!t.evaluada);
-  const evaluadas=sortPri(abiertas.filter(t=>t.evaluada));
+  // Snooze: oculta tareas pospuestas hasta una fecha futura. Activas hoy = no snoozed o snooze vencido.
+  const __hoyISO_view=new Date().toISOString().slice(0,10);
+  const isSnoozed=t=>t.snooze_until && t.snooze_until>__hoyISO_view;
+  const sinEval=abiertas.filter(t=>!t.evaluada && !isSnoozed(t));
+  const sinEvalSnoozed=abiertas.filter(t=>!t.evaluada && isSnoozed(t));
+  const evaluadas=sortPri(abiertas.filter(t=>t.evaluada && !isSnoozed(t)));
   const top5=evaluadas.slice(0,5);
 
   const filtradas=useMemo(()=>{
@@ -646,9 +704,16 @@ function App(){
         <div className="mt-2"><Summary tareas={abiertas}/></div>
         {sinEval.length>0&&(
           <section className="mt-6">
-            <div className="flex items-center justify-between mb-3"><h2 className="text-sm uppercase tracking-wider text-neutral-400">Sin evaluar · {sinEval.length}</h2><span className="text-xs text-neutral-600">Click para priorizar</span></div>
-            <div className="grid sm:grid-cols-2 gap-3">{sinEval.slice(0,6).map(t=><TaskRow key={t.id} t={t} onClick={setEditando} onToggle={toggle}/>)}</div>
+            <div className="flex items-center justify-between mb-3"><h2 className="text-sm uppercase tracking-wider text-neutral-400">Sin evaluar · {sinEval.length}</h2><span className="text-xs text-neutral-600">Click para priorizar · 💤 = posponer</span></div>
+            <div className="grid sm:grid-cols-2 gap-3">{sinEval.slice(0,6).map(t=><TaskRow key={t.id} t={t} onClick={setEditando} onToggle={toggle} onSnooze={snooze} onDelegar={delegar}/>)}</div>
             {sinEval.length>6&&<div className="text-center mt-2"><button onClick={()=>setTab("lista")} className="text-xs text-neutral-500 hover:text-neutral-200">Ver todas ({sinEval.length})</button></div>}
+          </section>)}
+        {sinEvalSnoozed.length>0&&(
+          <section className="mt-4">
+            <details>
+              <summary className="text-xs uppercase tracking-wider text-purple-400/80 cursor-pointer">💤 Pospuestas ({sinEvalSnoozed.length}) · click para ver</summary>
+              <div className="grid sm:grid-cols-2 gap-3 mt-3">{sinEvalSnoozed.map(t=><TaskRow key={t.id} t={t} onClick={setEditando} onToggle={toggle} onSnooze={snooze} onDelegar={delegar}/>)}</div>
+            </details>
           </section>)}
         <div className="mt-6 space-y-3">
           <BriefingAyer data={briefingAyer}/>
@@ -662,7 +727,7 @@ function App(){
         <Summary tareas={abiertas}/>
         <section className="mt-6"><h2 className="text-sm uppercase tracking-wider text-neutral-400 mb-3">Top prioridades</h2>
           {top5.length===0?<div className="text-center py-12 text-neutral-600 text-sm border border-dashed border-neutral-800 rounded-2xl">{tareas.length===0?"Sin tareas.":"Evalúa tareas para ver prioridades."}</div>
-          :<div className="space-y-3">{top5.map(t=><TaskRow key={t.id} t={t} onClick={setEditando} onToggle={toggle}/>)}</div>}
+          :<div className="space-y-3">{top5.map(t=><TaskRow key={t.id} t={t} onClick={setEditando} onToggle={toggle} onSnooze={snooze} onDelegar={delegar}/>)}</div>}
         </section>
       </>)}
 
@@ -671,7 +736,7 @@ function App(){
         <Filters filtros={filtros} setFiltros={setFiltros}/>
         <section className="mt-4 space-y-3">
           {filtradas.length===0?<div className="text-center py-12 text-neutral-600 text-sm border border-dashed border-neutral-800 rounded-2xl">Sin resultados.</div>
-          :filtradas.map(t=><TaskRow key={t.id} t={t} onClick={setEditando} onToggle={toggle}/>)}
+          :filtradas.map(t=><TaskRow key={t.id} t={t} onClick={setEditando} onToggle={toggle} onSnooze={snooze} onDelegar={delegar}/>)}
         </section>
       </>)}
 
