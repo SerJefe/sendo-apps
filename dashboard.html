@@ -1468,21 +1468,18 @@ loadMisTareas();
 // ==========================================
 // Miembros del equipo con alias -> nombre completo + rol + empresa + keywords para matching
 var TEAM_MEMBERS = [
-  {alias:"Cami",    full:"Juan Camilo Berrio",   rol:"Proyectos",       empresa:"Condugas", kws:["cami","camilo berrio","juan camilo"]},
-  {alias:"Andre",   full:"Andrea Bernal",        rol:"Finanzas",        empresa:"Condugas", kws:["andre","andrea","bernal"]},
-  {alias:"Willi",   full:"William Lopez",        rol:"Admin",           empresa:"Condugas", kws:["willi","william","lopez"]},
-  {alias:"Naty",    full:"Natalia Rojas",        rol:"RRHH",            empresa:"Condugas", kws:["naty","natalia","rojas"]},
-  {alias:"Nelson",  full:"Favio Nelson Escobar", rol:"Logistica",       empresa:"Condugas", kws:["nelson","favio","escobar"]},
-  {alias:"Clau",    full:"Claudia Quintero",     rol:"Contable",        empresa:"Condugas", kws:["clau","claudia","quintero"]},
-  {alias:"Juan G",  full:"Juan Guillermo",       rol:"Estrategia",      empresa:"Condugas", kws:["juan g","juan guillermo","juang"]},
-  {alias:"Carlos H",full:"Carlos Hernan Lopez",  rol:"Nuevos Negocios", empresa:"Condugas", kws:["carlos h","carlos hernan"]},
-  {alias:"JuanPa",  full:"Ex-dir Ayura",         rol:"Productividad",   empresa:"Condugas", kws:["juanpa","juan pa"]},
-  {alias:"Adolfo",  full:"Adolfo",               rol:"Mentor Junta",    empresa:"Junta",    kws:["adolfo","gilberto","mario","marisol"]},
-  {alias:"Lina",    full:"Lina Russi",           rol:"Gestora",         empresa:"Being CoRe", kws:["lina","russi"]},
-  {alias:"Mona",    full:"Monica Gonzalez",      rol:"Comercial",       empresa:"Being CoRe", kws:["mona","monica","gonzalez"]},
-  {alias:"Ema",     full:"Emanuel",              rol:"Dev (Odoo)",      empresa:"Being CoRe", kws:["ema","emanuel"]},
-  {alias:"Doctor",  full:"Camilo Marin",         rol:"Abogado",         empresa:"Condugas", kws:["doctor","camilo marin","abogado"]},
-  {alias:"Sebastian", full:"Sebastian Sanchez",  rol:"Gerente",         empresa:"Condugas", kws:["sebastian","seba","sanchez"]},
+  {alias:"Cami",    full:"Juan Camilo Berrio",   rol:"Proyectos",                  empresa:"Condugas", kws:["cami","camilo berrio","juan camilo"]},
+  {alias:"Andre",   full:"Andrea Bernal",        rol:"Finanzas y Contable",        empresa:"Condugas", kws:["andre","andrea","bernal","contable","contabilidad"]},
+  {alias:"Willi",   full:"William Lopez",        rol:"Admin",                      empresa:"Condugas", kws:["willi","william","lopez admin"]},
+  {alias:"Juan G",  full:"Juan Guillermo",       rol:"Estrategia y RRHH",          empresa:"Condugas", kws:["juan g","juan guillermo","juang","rrhh","talento humano"]},
+  {alias:"Carlos H",full:"Carlos Hernan Lopez",  rol:"Nuevos Negocios y Logistica",empresa:"Condugas", kws:["carlos h","carlos hernan","carlos lopez","logistica"]},
+  {alias:"JuanPa",  full:"Ex-dir Ayura",         rol:"Productividad",              empresa:"Condugas", kws:["juanpa","juan pa"]},
+  {alias:"Adolfo",  full:"Adolfo",               rol:"Mentor Junta",               empresa:"Junta",    kws:["adolfo","gilberto","mario","marisol"]},
+  {alias:"Lina",    full:"Lina Russi",           rol:"Gestora",                    empresa:"Being CoRe", kws:["lina","russi","lina russi"]},
+  {alias:"Mona",    full:"Monica Gonzalez",      rol:"Comercial",                  empresa:"Being CoRe", kws:["mona","monica","gonzalez"]},
+  {alias:"Ema",     full:"Emanuel",              rol:"Dev (Odoo)",                 empresa:"Being CoRe", kws:["ema","emanuel"]},
+  {alias:"Doctor",  full:"Camilo Marin",         rol:"Abogado",                    empresa:"Condugas", kws:["doctor","camilo marin","abogado"]},
+  {alias:"Sebastian", full:"Sebastian Sanchez",  rol:"Gerente",                    empresa:"Condugas", kws:["sebastian","seba","sanchez"]},
 ];
 
 function matchMember(responsableText) {
