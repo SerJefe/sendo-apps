@@ -1361,6 +1361,69 @@ async function editPendiente(id) {
   } catch(e) { toast('Error de conexion','err'); }
 }
 
+// === ROL MANUAL (override de rol_sugerido y heuristica) ===
+var ROLES_LIST = [
+  ['rol-1-condugas','Condugas (gerente)'],
+  ['rol-2-familia','Familia/Patrimonio'],
+  ['rol-3-junta-asesora','Junta asesora'],
+  ['rol-4-being-core','Being CoRe'],
+  ['rol-5-financiero-personal','Financiero personal'],
+  ['rol-6-salud','Salud y nuclear'],
+  ['rol-7-docencia','Docencia'],
+  ['rol-8-ser-siendo-dev','Ser Siendo (dev)'],
+];
+
+function rolEfectivo(t) {
+  // Espejo del orden de prioridad de agent-roles-vivos.py
+  if (t.rol_manual) return {id: t.rol_manual, fuente: 'manual'};
+  if (t.rol_sugerido) return {id: t.rol_sugerido, fuente: 'sugerido'};
+  return null;
+}
+
+function rolLabel(t) {
+  var ef = rolEfectivo(t);
+  if (!ef) return '🎯 sin rol';
+  var pair = ROLES_LIST.find(function(r){return r[0]===ef.id});
+  var name = pair ? pair[0].replace(/^rol-\d+-/,'') : ef.id;
+  // Marca: 🎯 manual, 💡 sugerido (LLM)
+  var icon = ef.fuente === 'manual' ? '🎯' : '💡';
+  return icon + ' ' + name;
+}
+
+function showRolMenu(taskId, anchorEl) {
+  var existing = document.getElementById('rol-menu'); if (existing) existing.remove();
+  var rect = anchorEl.getBoundingClientRect();
+  var menu = document.createElement('div');
+  menu.id = 'rol-menu';
+  menu.style.cssText = 'position:fixed;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.18);padding:6px 0;z-index:9999;min-width:220px;';
+  menu.style.top = (rect.bottom + 4) + 'px';
+  menu.style.left = Math.max(8, rect.right - 220) + 'px';
+  var html = '<div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;padding:4px 12px 6px;border-bottom:1px solid var(--border);margin-bottom:4px">Asignar rol manual</div>';
+  ROLES_LIST.forEach(function(r){
+    html += '<button onclick="setRolTarea(\''+taskId+'\',\''+r[0]+'\')" style="display:block;width:100%;text-align:left;padding:7px 12px;border:none;background:none;font-size:12px;cursor:pointer;color:var(--navy)" onmouseover="this.style.background=\'rgba(184,153,73,.08)\'" onmouseout="this.style.background=\'none\'">'+r[1]+'</button>';
+  });
+  html += '<button onclick="setRolTarea(\''+taskId+'\',\'\')" style="display:block;width:100%;text-align:left;padding:7px 12px;border:none;background:none;font-size:11px;cursor:pointer;color:var(--muted);border-top:1px solid var(--border);margin-top:4px" onmouseover="this.style.background=\'rgba(184,153,73,.08)\'" onmouseout="this.style.background=\'none\'">↺ limpiar (volver a auto)</button>';
+  menu.innerHTML = html;
+  document.body.appendChild(menu);
+  setTimeout(function(){
+    document.addEventListener('click', function close(e){
+      if (!menu.contains(e.target) && e.target !== anchorEl) { menu.remove(); document.removeEventListener('click', close); }
+    });
+  }, 50);
+}
+
+async function setRolTarea(taskId, rol) {
+  var menu = document.getElementById('rol-menu'); if (menu) menu.remove();
+  try {
+    var r = await fetch(API+'/set-rol-tarea', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({id:taskId, rol:rol})});
+    if (!r.ok) { var d=await r.json(); toast('Error: '+(d.error||r.status),'err'); return; }
+    toast(rol ? 'Rol asignado: '+rol.replace(/^rol-\d+-/,'') : 'Rol limpiado (auto)', 'ok');
+    loadMisTareas();
+    loadDelegadasInbox();
+    if (window.__panoramaReload) try { window.__panoramaReload(); } catch(e){}
+  } catch(e) { toast('Error de conexion','err'); }
+}
+
 // === DELEGADAS POR RESPONSABLE (en inbox) ===
 async function loadDelegadasInbox() {
   var box = document.getElementById('delegadas-grouped');
@@ -1419,7 +1482,8 @@ async function loadDelegadasInbox() {
         html += '<div style="font-size:10px;color:var(--muted);margin-top:2px">'+(t.contexto||'').slice(0,90)+'</div></div>';
         html += '<div style="text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:3px;min-width:130px">';
         html += '<div style="font-family:\'JetBrains Mono\',monospace;font-size:11px;color:'+col+';font-weight:600">'+ddText+'</div>';
-        html += '<div style="display:flex;gap:4px">';
+        html += '<div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">';
+        html += '<button onclick="showRolMenu(\''+t.id+'\', this)" title="Asignar rol manual" style="background:rgba(90,122,74,.1);color:#3e5a30;border:1px solid rgba(90,122,74,.25);padding:3px 8px;border-radius:4px;font-size:10px;cursor:pointer">'+rolLabel(t)+'</button>';
         html += '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Reasignar" style="background:rgba(184,153,73,.1);color:var(--cyan);border:1px solid rgba(184,153,73,.25);padding:3px 8px;border-radius:4px;font-size:10px;cursor:pointer">→ delegar</button>';
         html += '<button onclick="openOdooModal(\''+t.id+'\')" title="Crear en Odoo project.task" style="background:rgba(201,168,74,.12);color:#9d7a25;border:1px solid rgba(201,168,74,.3);padding:3px 8px;border-radius:4px;font-size:10px;cursor:pointer">→ Odoo</button>';
         html += '</div>';
@@ -1601,6 +1665,7 @@ async function loadMisTareas() {
       var dateBtn = isCerrada ? '' : '<button onclick="setDeadline(\''+t.id+'\',\''+(t.fecha_limite||'')+'\')" title="Asignar fecha limite" style="background:transparent;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">'+(t.fecha_limite?'editar fecha':'asignar fecha')+'</button>';
       var delegarBtn = isCerrada ? '' : '<button onclick="showDelegarMenu(\''+t.id+'\', this)" title="Delegar a miembro del equipo" style="background:rgba(184,153,73,.1);color:var(--cyan);border:1px solid rgba(184,153,73,.25);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">→ delegar</button>';
       var odooBtn = isCerrada ? '' : '<button onclick="openOdooModal(\''+t.id+'\')" title="Crear en Odoo project.task" style="background:rgba(201,168,74,.12);color:#9d7a25;border:1px solid rgba(201,168,74,.3);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">'+(t.odoo_task_id?'⊙ Odoo':'→ Odoo')+'</button>';
+      var rolBtn = isCerrada ? '' : '<button onclick="showRolMenu(\''+t.id+'\', this)" title="Asignar rol (override de la heuristica). 🎯=manual, 💡=sugerido por IA" style="background:rgba(90,122,74,.1);color:#3e5a30;border:1px solid rgba(90,122,74,.25);padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer;white-space:nowrap">'+rolLabel(t)+'</button>';
       return '<div class="card" style="margin-bottom:6px;display:flex;align-items:center;gap:12px;'+(isCerrada?'opacity:.5':'')+'">' +
         '<input type="checkbox" '+(isCerrada?'checked':'')+' onchange="toggleTarea(\''+t.id+'\')" style="width:18px;height:18px;cursor:pointer;accent-color:var(--cyan)">' +
         '<div style="flex:1">' +
@@ -1614,6 +1679,7 @@ async function loadMisTareas() {
             (t.motivo_cierre?' <span style="font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(110,95,153,.15);color:var(--purple)">'+t.motivo_cierre+'</span>':'') +
           '</div>' +
         '</div>' +
+        rolBtn +
         odooBtn +
         delegarBtn +
         dateBtn +
