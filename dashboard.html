@@ -2896,7 +2896,10 @@ loadCalendario();
     if (t.prioridad && /crit/i.test(t.prioridad)) meta.push('<span class="crit">crítica</span>');
     if (t.deadline && !t.vencida) meta.push('📅 '+fmtDate(t.deadline));
     if (t.responsable) meta.push('→ '+esc(t.responsable));
-    return '<div class="pn-tarea '+cls+'"><span class="pn-tarea-dot"></span><div class="pn-tarea-body">'+esc(t.texto||'(sin texto)')+(meta.length?'<div class="pn-tarea-meta">'+meta.join(' · ')+'</div>':'')+'</div></div>';
+    var evalBtn = t.id
+      ? '<a href="priorizador.html#evaluar='+encodeURIComponent(t.id)+'" title="Abrir en priorizador para evaluar / reclasificar" class="pn-tarea-eval" style="font-size:10px;color:var(--gold);text-decoration:none;border:1px solid rgba(184,153,73,0.3);padding:2px 7px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-left:8px">→ evaluar</a>'
+      : '';
+    return '<div class="pn-tarea '+cls+'" style="display:flex;align-items:center;gap:8px"><span class="pn-tarea-dot"></span><div class="pn-tarea-body" style="flex:1">'+esc(t.texto||'(sin texto)')+(meta.length?'<div class="pn-tarea-meta">'+meta.join(' · ')+'</div>':'')+'</div>'+evalBtn+'</div>';
   }
 
   function renderNovedad(n){

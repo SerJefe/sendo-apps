@@ -602,6 +602,31 @@ function App(){
   useEffect(()=>{load();const id=setInterval(load,REFRESH_MS);return()=>clearInterval(id);},[load]);
   useEffect(()=>{document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")load();});},[load]);
 
+  // Deep-link: si el dashboard te trajo aqui via priorizador.html#evaluar=ID,
+  // abrir el modal de evaluacion de esa tarea apenas las tareas esten cargadas.
+  // Tambien soporta ?evaluar=ID para compatibilidad. Solo dispara una vez.
+  const _deeplinkFired = useRef(false);
+  useEffect(()=>{
+    if (_deeplinkFired.current) return;
+    if (!tareas || tareas.length === 0) return;
+    let targetId = "";
+    const hash = window.location.hash || "";
+    const m = hash.match(/evaluar=([^&]+)/);
+    if (m) targetId = decodeURIComponent(m[1]);
+    if (!targetId) {
+      const qs = new URLSearchParams(window.location.search);
+      targetId = qs.get("evaluar") || "";
+    }
+    if (!targetId) return;
+    const found = tareas.find(t => t.id === targetId);
+    if (found) {
+      _deeplinkFired.current = true;
+      setEditando(found);
+      // Limpiar el hash sin recargar para que el back del browser sea coherente
+      try { history.replaceState(null, "", window.location.pathname + window.location.search); } catch(e) {}
+    }
+  }, [tareas]);
+
   async function add(titulo,cat){setBusy(true);try{await apiPost("/create",{tarea:titulo,categoria:cat});await load();}catch(e){setError(e.message);}finally{setBusy(false);}}
   async function score(id,body){try{await apiPost("/score",{id,...body});await load();}catch(e){setError(e.message);}}
   async function meta(id,body){try{await apiPost("/update",{id,...body});}catch(e){setError(e.message);}}
