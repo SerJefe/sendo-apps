@@ -4417,7 +4417,433 @@
         "niño"
       ],
       "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-30-r2-001",
+      "tarea": "Llamar a Juan Carlos Gómez para confirmar firmas pendientes",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Trámites administrativos",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": "2026-04-30",
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-1-condugas",
+      "monto_cop": null,
+      "personas": [
+        "Juan Carlos Gómez"
+      ],
+      "segmento_idx": 2,
+      "segmento_titulo": "Conversación sobre varios temas",
+      "segmento_inicio": "2026-04-30T17:17:20Z",
+      "segmento_fin": "2026-04-30T17:29:30Z",
+      "segmento_personas": [
+        "Juan Carlos Gómez",
+        "Bill Gates"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-30-r4-002",
+      "tarea": "Completar implementación con persona asignada a social (lotes tres y cinco) para desarrollar operación liviana posterior",
+      "responsable": null,
+      "prioridad": "alta",
+      "contexto": "Contrato EPM - optimización operativa",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-1-condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 4,
+      "segmento_titulo": "Una discusión sobre disputas financieras y la falta de crédito, lo que lleva a la parálisis en un proyecto.",
+      "segmento_inicio": "2026-04-30T19:03:50Z",
+      "segmento_fin": "2026-04-30T19:35:44Z",
+      "segmento_personas": [
+        "Luis",
+        "Juan Arturo",
+        "Pacho",
+        "Claudia",
+        "Carlos"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-30-r4-003",
+      "tarea": "Revisar y ajustar fórmulas de reajuste en transporte y mano de obra para alineación con realidad de costos (transporte medido por tabla Excel de EPM)",
+      "responsable": null,
+      "prioridad": "alta",
+      "contexto": "Contrato EPM - análisis costo",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-1-condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 4,
+      "segmento_titulo": "Una discusión sobre disputas financieras y la falta de crédito, lo que lleva a la parálisis en un proyecto.",
+      "segmento_inicio": "2026-04-30T19:03:50Z",
+      "segmento_fin": "2026-04-30T19:35:44Z",
+      "segmento_personas": [
+        "Luis",
+        "Juan Arturo",
+        "Pacho",
+        "Claudia",
+        "Carlos"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-30-r5-004",
+      "tarea": "Enviar preguntas pendientes a Sebastian",
+      "responsable": "Alejandra",
+      "prioridad": "baja",
+      "contexto": "Seguimiento administrativo",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": null,
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 5,
+      "segmento_titulo": "Conversación sobre preguntas",
+      "segmento_inicio": "2026-04-30T19:36:32Z",
+      "segmento_fin": "2026-04-30T19:36:42Z",
+      "segmento_personas": [
+        "Alejandra"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-30-r6-005",
+      "tarea": "Escribir en WhatsApp para confirmar disponibilidad miércoles o viernes 9-12 para reunión/actividad no especificada",
+      "responsable": null,
+      "prioridad": "baja",
+      "contexto": "Coordinación personal/familiar",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": "2026-05-02",
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-6-salud",
+      "monto_cop": null,
+      "personas": [
+        "Benjamín"
+      ],
+      "segmento_idx": 6,
+      "segmento_titulo": "Conversación informal entre Sebastian Sanchez Acevedo",
+      "segmento_inicio": "2026-04-30T19:36:43Z",
+      "segmento_fin": "2026-04-30T19:40:20Z",
+      "segmento_personas": [
+        "Benjamín"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-30-r7-006",
+      "tarea": "Corregir reporte de horarios en sistema para que refleje jornada real de trabajo (5:30am hasta 6/7/8pm) de todo el equipo incluyendo Sebastian",
+      "responsable": null,
+      "prioridad": "media",
+      "contexto": "Sistema de nómina y horas",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-1-condugas",
+      "monto_cop": null,
+      "personas": [
+        "Valentina"
+      ],
+      "segmento_idx": 7,
+      "segmento_titulo": "Problemas con el sistema de horas extras de Valentina",
+      "segmento_inicio": "2026-04-30T19:47:49Z",
+      "segmento_fin": "2026-04-30T19:48:24Z",
+      "segmento_personas": [
+        "Valentina"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-30-r9-007",
+      "tarea": "Escribir a Juan Guillermo por privado para que se conecte a reunión importante",
+      "responsable": "William",
+      "prioridad": "media",
+      "contexto": "Coordinación de reunión",
+      "tipo": "pendiente",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": "2026-04-30",
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": null,
+      "monto_cop": null,
+      "personas": [
+        "Juan Guillermo"
+      ],
+      "segmento_idx": 9,
+      "segmento_titulo": "Conversación informal entre colegas",
+      "segmento_inicio": "2026-04-30T20:00:36Z",
+      "segmento_fin": "2026-04-30T20:02:49Z",
+      "segmento_personas": [
+        "William",
+        "Andrea",
+        "Diana",
+        "Juan Guillermo"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-30-r10-008",
+      "tarea": "Compartir carta escrita con William y equipo explicando situación completa de crisis contractual y visión de resolución",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Comunicación interna - crisis operativa",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": "2026-04-30",
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-1-condugas",
+      "monto_cop": null,
+      "personas": [
+        "William",
+        "Nica"
+      ],
+      "segmento_idx": 10,
+      "segmento_titulo": "Discusión profunda sobre la crisis financiera y operativa de un contrato",
+      "segmento_inicio": "2026-04-30T20:03:01Z",
+      "segmento_fin": "2026-04-30T20:46:59Z",
+      "segmento_personas": [
+        "Diana",
+        "William",
+        "Camilo",
+        "Carol G",
+        "Nica"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-30-r10-009",
+      "tarea": "Analizar reubicación de personal en otros contratos si cierre de contrato actual es inminente",
+      "responsable": "William",
+      "prioridad": "alta",
+      "contexto": "Gestión de personal - contingencia",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-1-condugas",
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 10,
+      "segmento_titulo": "Discusión profunda sobre la crisis financiera y operativa de un contrato",
+      "segmento_inicio": "2026-04-30T20:03:01Z",
+      "segmento_fin": "2026-04-30T20:46:59Z",
+      "segmento_personas": [
+        "Diana",
+        "William",
+        "Camilo",
+        "Carol G",
+        "Nica"
+      ],
+      "segmento_impacto": "alto"
+    },
+    {
+      "id": "2026-04-30-r11-010",
+      "tarea": "Confirmar ejecución de modificaciones bilaterales firmadas por vicepresidente y comunicar al equipo cadena de valor",
+      "responsable": null,
+      "prioridad": "alta",
+      "contexto": "Contrato EPM - implementación de cambios",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": "2026-05-01",
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-1-condugas",
+      "monto_cop": null,
+      "personas": [
+        "Juan Carlos",
+        "Carlos",
+        "vicepresidente"
+      ],
+      "segmento_idx": 11,
+      "segmento_titulo": "Conversación sobre un tema desconocido",
+      "segmento_inicio": "2026-04-30T20:49:24Z",
+      "segmento_fin": "2026-04-30T20:54:57Z",
+      "segmento_personas": [
+        "Juan Carlos",
+        "Carlos",
+        "vicepresidente"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-30-r13-011",
+      "tarea": "Confirmar si desea reintegro en nivel 2",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Propuesta de incorporacion a nivel 2 con opcion de reintegro",
+      "tipo": "decision",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-4-being-core",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian"
+      ],
+      "segmento_idx": 13,
+      "segmento_titulo": "Conversación sobre la incorporación de Sebas",
+      "segmento_inicio": "2026-04-30T21:19:56Z",
+      "segmento_fin": "2026-04-30T21:22:21Z",
+      "segmento_personas": [
+        "Sebastian",
+        "desconocido"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-30-r13-012",
+      "tarea": "Participar en nivelacion previa antes de iniciar nivel 2",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Se requiere nivelacion antes de empezar contenido de segundo nivel",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-4-being-core",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian"
+      ],
+      "segmento_idx": 13,
+      "segmento_titulo": "Conversación sobre la incorporación de Sebas",
+      "segmento_inicio": "2026-04-30T21:19:56Z",
+      "segmento_fin": "2026-04-30T21:22:21Z",
+      "segmento_personas": [
+        "Sebastian",
+        "desconocido"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-30-r17-013",
+      "tarea": "Implementar rutina de sueno a las 7pm con monitorizacion de senales de irritacion",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Nino requiere rutina consistente de sueno para evitar ciclos fragmentados de 10 minutos",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "salud",
+      "rol_sugerido": "rol-6-salud",
+      "monto_cop": null,
+      "personas": [
+        "Benjamin"
+      ],
+      "segmento_idx": 17,
+      "segmento_titulo": "Conversación sobre construcción y rutinas de sueño",
+      "segmento_inicio": "2026-04-30T23:08:10Z",
+      "segmento_fin": "2026-04-30T23:21:20Z",
+      "segmento_personas": [
+        "Sebastian",
+        "gestora de sueno",
+        "Benjamin"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-30-r17-014",
+      "tarea": "Coordinar sesion con gestora de sueno para protocolo fijo",
+      "responsable": "Sebastian",
+      "prioridad": "alta",
+      "contexto": "Gestora de sueno ya aviso que hara protocolo fijo",
+      "tipo": "seguimiento",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "salud",
+      "rol_sugerido": "rol-6-salud",
+      "monto_cop": null,
+      "personas": [
+        "Benjamin",
+        "gestora de sueno"
+      ],
+      "segmento_idx": 17,
+      "segmento_titulo": "Conversación sobre construcción y rutinas de sueño",
+      "segmento_inicio": "2026-04-30T23:08:10Z",
+      "segmento_fin": "2026-04-30T23:21:20Z",
+      "segmento_personas": [
+        "Sebastian",
+        "gestora de sueno",
+        "Benjamin"
+      ],
+      "segmento_impacto": "medio"
+    },
+    {
+      "id": "2026-04-30-r19-015",
+      "tarea": "Preparar nino para dormir antes de partido",
+      "responsable": "Sebastian",
+      "prioridad": "media",
+      "contexto": "Sebastian necesita acostar al nino para poder asistir a partido",
+      "tipo": "compromiso",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": "rol-6-salud",
+      "monto_cop": null,
+      "personas": [
+        "Benjamin"
+      ],
+      "segmento_idx": 19,
+      "segmento_titulo": "Conversación sobre transporte y ubicaciones",
+      "segmento_inicio": "2026-04-30T23:22:47Z",
+      "segmento_fin": "2026-04-30T23:34:52Z",
+      "segmento_personas": [
+        "Sebastian",
+        "Benjamin",
+        "desconocido"
+      ],
+      "segmento_impacto": "bajo"
+    },
+    {
+      "id": "2026-04-30-r19-016",
+      "tarea": "Apagar objeto/tanque despues de uso para evitar danios",
+      "responsable": "Sebastian",
+      "prioridad": "baja",
+      "contexto": "Objeto no se seca si se deja encendido",
+      "tipo": "rutina",
+      "estado": "pendiente",
+      "fecha": "2026-04-30",
+      "fecha_limite": null,
+      "categoria_sugerida": "condugas",
+      "rol_sugerido": null,
+      "monto_cop": null,
+      "personas": [],
+      "segmento_idx": 19,
+      "segmento_titulo": "Conversación sobre transporte y ubicaciones",
+      "segmento_inicio": "2026-04-30T23:22:47Z",
+      "segmento_fin": "2026-04-30T23:34:52Z",
+      "segmento_personas": [
+        "Sebastian",
+        "Benjamin",
+        "desconocido"
+      ],
+      "segmento_impacto": "bajo"
     }
   ],
-  "ultima_actualizacion": "2026-04-28T18:03:08.099903"
+  "ultima_actualizacion": "2026-05-01T18:01:52.244681"
 }

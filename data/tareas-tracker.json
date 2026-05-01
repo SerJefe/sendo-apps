@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-05-01T00:00:01",
+  "ultima_actualizacion": "2026-05-01T18:01:52",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -4730,6 +4730,126 @@
       "evaluada": false,
       "categoria": "trabajo",
       "estancada": true
+    },
+    {
+      "id": "2026-04-30-c001",
+      "tarea": "Reclamar formalmente a EPM por reconocimiento de 257M COP acumulados y proyección 2340M por desactualización de fórmula de reajuste",
+      "responsable": null,
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-30",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Contrato EPM - crisis de caja",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": 2340000000,
+      "personas": [],
+      "rol_sugerido": "rol-1-condugas"
+    },
+    {
+      "id": "2026-04-30-c002",
+      "tarea": "Analizar y presentar a EPM impacto real de incrementos (salario mínimo +23%, mano de obra +14%, transporte) vs índices Camacol desactualizados",
+      "responsable": null,
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-30",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Contrato EPM - reajuste de fórmulas",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": 920000000,
+      "personas": [],
+      "rol_sugerido": "rol-1-condugas"
+    },
+    {
+      "id": "2026-04-30-c003",
+      "tarea": "Implementar propuesta de Diana: operativo + estrategia táctica con Diana y William liderando estructura",
+      "responsable": "Diana",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-30",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Contrato EPM - plan de supervivencia operativa",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "William"
+      ],
+      "rol_sugerido": "rol-1-condugas"
+    },
+    {
+      "id": "2026-04-30-c004",
+      "tarea": "Estructurar plan de Camilo: reducción de ciertos pagos, transmisión de recursos a operación, desbloqueo de 'marrano amarrado' y posible inyección de Condugas",
+      "responsable": "Camilo",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-30",
+      "fecha_cierre": null,
+      "fecha_limite": null,
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Contrato EPM - rescate financiero",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [],
+      "rol_sugerido": "rol-1-condugas"
+    },
+    {
+      "id": "2026-04-30-c005",
+      "tarea": "Firmar documentacion de suspension de contrato de patrullaje",
+      "responsable": "Sebastian",
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-30",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-30",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Suspension debe efectuarse el lunes para activar siguiente mes de contrato",
+      "tipo": "compromiso",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian"
+      ],
+      "rol_sugerido": "rol-1-condugas"
+    },
+    {
+      "id": "2026-04-30-c006",
+      "tarea": "Revisar documento de contrato (~120 paginas) en Word antes de firma",
+      "responsable": null,
+      "prioridad": "critica",
+      "fecha_creacion": "2026-04-30",
+      "fecha_cierre": null,
+      "fecha_limite": "2026-04-30",
+      "estado": "abierta",
+      "origen": "limitless_auto",
+      "contexto": "Documento esta en Word, requiere revision previa a firma",
+      "tipo": "pendiente",
+      "vencida": false,
+      "evaluada": false,
+      "categoria": "condugas",
+      "monto_cop": null,
+      "personas": [
+        "Sebastian"
+      ],
+      "rol_sugerido": "rol-1-condugas"
     }
   ]
 }
