@@ -1,122 +1,10 @@
 {
-  "generated_at": "2026-04-28T03:45:09.814052Z",
+  "generated_at": "2026-04-29T21:38:59.042796Z",
   "source": "microsoft-graph",
   "user": "s.sanchez@condugas.com.co",
   "total_recientes_30d": 200,
-  "total_pendientes": 87,
+  "total_pendientes": 86,
   "pendientes": [
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEDosstAAA=",
-      "from": "ncastano@infraestructura.org.co",
-      "from_name": "Natalia Castaño",
-      "subject": "Café con afiliados: Perspectivas del sector ELÉCTRICO ::: ISAGEN ",
-      "received": "2026-04-22T12:46:55Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": true,
-      "has_attachments": false,
-      "preview": "________________________________\r\nDe: Natalia Castaño\r\nEnviado: Friday, April 17, 2026 2:46:41 PM\r\nPara: Natalia Castaño <ncastano@infraestructura.org.co>\r\nAsunto: Café con afiliados: Perspectivas del",
-      "razon": [
-        "no_leido",
-        "importante"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEDoss_AAA=",
-      "from": "ncastano@infraestructura.org.co",
-      "from_name": "Natalia Castaño",
-      "subject": "Invitación mesa de trabajo EDU - Secretaría de Suministros lunes 27 de abril",
-      "received": "2026-04-22T17:47:47Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": true,
-      "has_attachments": true,
-      "preview": "Estimado afiliado Consultor y Constructor, cordial saludo.\r\n\r\nDesde la CCI Antioquia extendemos una cordial invitación para participar en la mesa económica para infraestructura del Distrito de Medellí",
-      "razon": [
-        "no_leido",
-        "importante"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEDoss-AAA=",
-      "from": "ncastano@infraestructura.org.co",
-      "from_name": "Natalia Castaño",
-      "subject": "Invitación mesa de trabajo EDU - Secretaría de Suministros lunes 27 de abril",
-      "received": "2026-04-22T18:05:24Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": true,
-      "has_attachments": false,
-      "preview": "Estimado afiliado Consultor y Constructor, cordial saludo.\r\n\r\nDesde la CCI Antioquia extendemos una cordial invitación para participar en la mesa económica para infraestructura del Distrito de Medellí",
-      "razon": [
-        "no_leido",
-        "importante"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEOR_BAAA=",
-      "from": "olga.acevedo@condugas.com.co",
-      "from_name": "Olga Ines Acevedo Vargas",
-      "subject": "Fw: AUN ESTÁS A TIEMPO DE INSCRIBITE A LA MASTERCLASS PENSIONAL PARA EMPRESAS",
-      "received": "2026-04-23T13:08:45Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": true,
-      "has_attachments": false,
-      "preview": "Obtener Outlook para iOS\r\n________________________________\r\nDe: Carolina Alzate Osorio <calzateo@colpensiones.gov.co>\r\nEnviado: Wednesday, April 22, 2026 1:40:56 PM\r\nAsunto: AUN ESTÁS A TIEMPO DE INSC",
-      "razon": [
-        "no_leido",
-        "importante"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEOR_CAAA=",
-      "from": "olga.acevedo@condugas.com.co",
-      "from_name": "Olga Ines Acevedo Vargas",
-      "subject": "Fw: Solicitud de documentos para actualizacion de base de datos",
-      "received": "2026-04-23T13:09:59Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": true,
-      "has_attachments": true,
-      "preview": "Mirar porque a mi correo\r\n\r\nObtener Outlook para iOS\r\n________________________________\r\nDe: Omar Ramirez <almacen@ladrilleradiamante.com>\r\nEnviado: miércoles, abril 22, 2026 11:23 a.m.\r\nPara: Olga Ine",
-      "razon": [
-        "no_leido",
-        "importante"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEOR_EAAA=",
-      "from": "vmolinas@camaramedellin.com.co",
-      "from_name": "Valeria Molina Sanchez",
-      "subject": "♻️ Invitación a participar como oferente y/o Comprador | 1era Rueda de Negocios Antioquia Circula",
-      "received": "2026-04-23T14:01:54Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": true,
-      "has_attachments": false,
-      "preview": "Recibe un saludo cordial.\r\nDesde el Cluster Hábitat Sostenible queremos invitarte a participar como empresa oferente y/o Comprador en la 1era Rueda de Negocios Antioquia Circular: Conectando Valor, un",
-      "razon": [
-        "no_leido",
-        "importante"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEOR_IAAA=",
-      "from": "cobrosaterceros@epm.com.co",
-      "from_name": "cobrosaterceros",
-      "subject": "NOTIFICACIÓN DE COBRO ",
-      "received": "2026-04-23T16:14:22Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": true,
-      "has_attachments": true,
-      "preview": "Cordial Saludo\r\n\r\nCONSORCIO CONDUGAS NC ACUEDUCTO 2021\r\n\r\nDe acuerdo con el registro en nuestra base de datos, el Área Mantenimiento Redes Secundarias Acueducto le comparte la consulta de daños atendi",
-      "razon": [
-        "no_leido",
-        "importante"
-      ]
-    },
     {
       "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEOR_VAAA=",
       "from": "olga.acevedo@condugas.com.co",
@@ -128,38 +16,6 @@
       "important_sender": true,
       "has_attachments": false,
       "preview": "Obtener Outlook para iOS\r\n________________________________\r\nDe: MEDELLÍN URBAN FEST <gerencia@lamtickets.com>\r\nEnviado: Thursday, April 23, 2026 5:00:15 PM\r\nPara: Olga Ines Acevedo Vargas <olga.aceved",
-      "razon": [
-        "no_leido",
-        "importante"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSqAAA=",
-      "from": "uo1004110170@epm.com.co",
-      "from_name": "Área Mantenimiento Redes Secundarias Acueducto",
-      "subject": "20260130075929 - Notificación de incumplimiento de las obligaciones de EPM. Contrato CW350951",
-      "received": "2026-04-24T22:32:58Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": true,
-      "has_attachments": true,
-      "preview": "Señores:\r\nSebastian Sanchez                                                                                                                                  20260130075929\r\nCONSORCIO CONDUGAS NC ACUED",
-      "razon": [
-        "no_leido",
-        "importante"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEFUcCJAAA=",
-      "from": "olga.acevedo@condugas.com.co",
-      "from_name": "Olga Ines Acevedo Vargas",
-      "subject": "Fw: Jornada empresarial: Abastecimiento inteligente: El rol de la IA en la optimización de compras",
-      "received": "2026-04-25T01:20:02Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": true,
-      "has_attachments": false,
-      "preview": "Obtener Outlook para iOS\r\n________________________________\r\nDe: Elizabeth de la CCI <erodriguez@infraestructura.org.co>\r\nEnviado: Friday, April 24, 2026 8:40:16 AM\r\nPara: Olga Ines Acevedo Vargas <olg",
       "razon": [
         "no_leido",
         "importante"
@@ -214,256 +70,397 @@
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAECwfmBAAA=",
-      "from": "dircomunicaciones@camacol.info",
-      "from_name": "Camacol Comunicaciones",
-      "subject": "📣 Candidatos presidenciales hablan de vivienda, Cumbre de IA, Ganador del Concurso de Ponentes y más",
-      "received": "2026-04-21T15:43:18Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEGd2xLAAA=",
+      "from": "olga.acevedo@condugas.com.co",
+      "from_name": "Olga Ines Acevedo Vargas",
+      "subject": "Fw: Últimos días para responder la Encuesta de Expertos en Infraestructura",
+      "received": "2026-04-28T03:57:16Z",
       "is_read": false,
       "flagged": false,
-      "important_sender": false,
+      "important_sender": true,
       "has_attachments": false,
-      "preview": "En esta edición del 20 de abril encontrará: análisis de 'Urbana' sobre coyuntura política y vivienda; el Informe Jurídico con nuevas disposiciones sobre ordenamiento territorial y vivienda; inscripcio",
+      "preview": "Obtener Outlook para iOS\r\n________________________________\r\nDe: Marcela de la CCI <comunicaciones@infraestructura.org.co>\r\nEnviado: Monday, 27 April 2026 12:11:23\r\nPara: Olga Ines Acevedo Vargas <olga",
       "razon": [
-        "no_leido"
+        "no_leido",
+        "importante"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAECwfmGAAA=",
-      "from": "comunicaciones@infraestructura.org.co",
-      "from_name": "Marcela de la CCI",
-      "subject": "Afiliado CCI: encuesta BIM 🏗️ su voz es clave",
-      "received": "2026-04-21T16:26:45Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEGd2xMAAA=",
+      "from": "olga.acevedo@condugas.com.co",
+      "from_name": "Olga Ines Acevedo Vargas",
+      "subject": "Fw: Cierra el miércoles — ¿ya respondió la encuesta?",
+      "received": "2026-04-28T03:58:03Z",
       "is_read": false,
       "flagged": false,
-      "important_sender": false,
+      "important_sender": true,
       "has_attachments": false,
-      "preview": "Ver este email como una página web\r\n\r\n¿Cómo está usando BIM su empresa?\r\n\r\nEstimado afiliado CCI,\r\n\r\nLo invitamos, muy especialmente, a responder la siguiente encuesta -elaborada desde el gremio- para",
+      "preview": "Obtener Outlook para iOS\r\n________________________________\r\nDe: Presidencia Cámara Colombiana de la Infraestructura <presidencia@infraestructura.org.co>\r\nEnviado: Monday, 27 April 2026 12:05:03\r\nPara:",
       "razon": [
-        "no_leido"
+        "no_leido",
+        "importante"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAECwfmKAAA=",
-      "from": "info.co@wobi.com",
-      "from_name": "WOBI | Inspiring Ideas",
-      "subject": "Asista por primera vez al World Business Forum Bogotá 📈",
-      "received": "2026-04-21T16:49:42Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEGd2xsAAA=",
+      "from": "nataly.meza@asonaphse.org",
+      "from_name": "Nataly Andrea Meza Ramírez",
+      "subject": "Aprende, conecta y posiciona tu marca en el Congreso de SST de ASONAP 2026 | Cartagena",
+      "received": "2026-04-29T12:58:43Z",
       "is_read": false,
       "flagged": false,
-      "important_sender": false,
-      "has_attachments": false,
-      "preview": "Aprendizaje, inspiración y networking todo el año ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ",
+      "important_sender": true,
+      "has_attachments": true,
+      "preview": "Recibe un cordial saludo,\r\nSi eres profesional en Seguridad y Salud en el Trabajo, lideras procesos organizacionales o te interesa el futuro de la SST, este es un espacio que definitivamente no te pue",
       "razon": [
-        "no_leido"
+        "no_leido",
+        "importante"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAECwfmLAAA=",
-      "from": "a1medellin@grupoa1.co",
-      "from_name": "a1medellin@grupoa1.co",
-      "subject": "Estado de cuenta actualizado",
-      "received": "2026-04-21T17:16:51Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEGd2xzAAA=",
+      "from": "cvillegas@fgs.co",
+      "from_name": "Catalina Villegas Rico",
+      "subject": "LA MEJOR NÓMINA CERO COSTOS CON CAJA SOCIAL DE LA FUNDACION GRUPO SOCIAL",
+      "received": "2026-04-29T14:25:02Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": true,
+      "has_attachments": true,
+      "preview": "Muy buenos días, cordial saludo\r\n\r\nPara su información y revisión\r\n\r\n\r\n\r\n\r\nBENDICIONES\r\n\r\nMil gracias\r\n\r\nCatalina Villegas Rico\r\nGerente Empresarial\r\nVicepresidencia Comercial\r\nCra. 48 #18 A 14 piso 1",
+      "razon": [
+        "no_leido",
+        "importante"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEGd2x_AAA=",
+      "from": "ncastano@infraestructura.org.co",
+      "from_name": "Natalia Castaño",
+      "subject": "Corporaciones Autónomas Regionales (CAR) en la competitividad de los sectores productivos de Antioquia - Constructores - Consultores - Concesionarios ",
+      "received": "2026-04-29T16:31:31Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": true,
+      "has_attachments": false,
+      "preview": "Estimado afiliado, cordial saludo,\r\n\r\nDesde la Cámara de Comercio de Medellín para Antioquia se está realizando una encuesta dirigida a empresarios del sector con el fin de identificar el impacto de l",
+      "razon": [
+        "no_leido",
+        "importante"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEGd2yQAAA=",
+      "from": "olga.acevedo@condugas.com.co",
+      "from_name": "Olga Ines Acevedo Vargas",
+      "subject": "Fw: Inscripciones abiertas | Evaluación Financiera de Proyectos con IA",
+      "received": "2026-04-29T20:16:57Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": true,
+      "has_attachments": false,
+      "preview": "Obtener Outlook para iOS\r\n________________________________\r\nDe: Capacitaciones de la CCI <erodriguez@infraestructura.org.co>\r\nEnviado: miércoles, abril 29, 2026 12:27 p.m.\r\nPara: Olga Ines Acevedo Var",
+      "razon": [
+        "no_leido",
+        "importante"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEOR_NAAA=",
+      "from": "carlos.lopez@condugas.com.co",
+      "from_name": "Carlos Hernan Lopez Restrepo",
+      "subject": "RV: Resultado del proceso OF-242-2026 Construcción de Redes Externas Quindio",
+      "received": "2026-04-23T19:48:03Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
       "has_attachments": true,
-      "preview": "Cordial saludo,\r\n\r\nAdjuntamos el estado de cuenta de CONSORCIO CONDUGAS NC 2021 Y CONDUGAS SA a la fecha para su revisión y seguimiento. Al revisar el mismo, se evidencia cartera en mora; Agradecemos ",
+      "preview": "Me acaban de notificar que no ganamos este proceso, quedamos de segundos, después de Abbi, pero con una oferta muy cercana y ellos tienen como política que \"no llaman a negociar\" o al menos no sobre l",
       "razon": [
         "no_leido"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAV8zxAADD_CY0RKeIQYhbXX1OKrzKAAECweXzAAA=",
-      "from": "comercial@burosupply.com.co",
-      "from_name": "Luis Alberto Penagos, ESAL en Colombia, obligaciones contables y tributarias",
-      "subject": "¡Evite sanciones de la UGPP! Inscríbase hoy en la conferencia del 27 de mayo",
-      "received": "2026-04-21T17:26:54Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEOR_OAAA=",
+      "from": "info@mercadeo.correobancolombia.com",
+      "from_name": "Bancolombia",
+      "subject": "Paga tu impuesto predial",
+      "received": "2026-04-23T20:17:25Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
       "has_attachments": false,
-      "preview": "7 MAYO - ESAL EN COLOMBIA, ENFOQUE CONTABLE Y TRIBUTARIO\r\n\r\n\r\n\r\n\r\n27 MAYO - UGPP, CONTROL A EMPLEADORES E INDEPENDIENTES\r\n\r\n\r\n\r\n\r\n_______________________________________________________________\r\n\r\n\r\n\r",
+      "preview": "¡Es de una y ganas tiempo!\r\n\r\n\r\nPaga tu Impuesto Predial a través de nuestros canales:\r\n\r\nHola CONSORCIO CONDUGAS NC ACUEDUCTO 2021,\r\n\r\n¡Llegó el Impuesto Predial de MEDELLIN!\r\n\r\nTu negocio esta listo",
       "razon": [
         "no_leido"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAECwfmOAAA=",
-      "from": "oceanic@oceanicsa.com",
-      "from_name": "Oceanic Software Empresarial",
-      "subject": "🚀 Activa tu prueba gratis del Ecosistema de Comunicación",
-      "received": "2026-04-21T17:58:11Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAV8zxAADD_CY0RKeIQYhbXX1OKrzKAAEEOS8oAAA=",
+      "from": "servicios@servicioscamara.com",
+      "from_name": "Cámara de Comercio de Medellín Para Antioquia",
+      "subject": "¡Encuentra la opción de financiación adecuada para tu empresa!",
+      "received": "2026-04-23T20:44:32Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
       "has_attachments": false,
-      "preview": "Hola,\r\n\r\n¿Quieres vender más sin subir gastos? 🚀Con nuestro Ecosistema de Comunicación automatizas todo en un solo lugar:\r\n\r\n✨ Atención 24/7📱 Multicanal📊 CRM + métricas📬 Envíos masivos\r\n\r\n🔥 Más ventas",
+      "preview": "Conexión Financiera.\r\n\r\nVer en mi navegador\r\n\r\nHola, SEBASTIAN SANCHEZ ACEVEDO\r\n\r\nSabemos que encontrar la financiación adecuada para un negocio no siempre es sencillo. Muchas veces existen diferentes",
       "razon": [
         "no_leido"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAV8zxAADD_CY0RKeIQYhbXX1OKrzKAAECweX0AAA=",
-      "from": "camacolauxiliar@camacolantioquia.org.co",
-      "from_name": "Liz Morales",
-      "subject": "Encuesta experiencia auditorías EDGE",
-      "received": "2026-04-21T19:12:30Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAV8zxAADD_CY0RKeIQYhbXX1OKrzKAAEEOS8pAAA=",
+      "from": "daniela.villarreal@norventas.com",
+      "from_name": "Dani de Norventas",
+      "subject": "La nueva tendencia en alcantarillado",
+      "received": "2026-04-23T21:37:05Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
       "has_attachments": false,
-      "preview": "Cordial saludo,\r\n\r\nQueremos recordarle la importancia de su participación en la encuesta sobre el proceso de auditoría EDGE en Colombia, un insumo clave para seguir fortaleciendo la certificación en e",
+      "preview": "Ingenieros ya están apostando por nuevas tecnologías\r\n \r\n\r\nHola Sebastian   👋\r\nEn los proyectos de infraestructura actuales, las decisiones técnicas ya no se toman por costumbre, sino por rendimiento.",
       "razon": [
         "no_leido"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAECwfmQAAA=",
-      "from": "452362@mailcert.lleida.net",
-      "from_name": "EMAIL CERTIFICADO de Colmena Seguros Riesgos Laborales",
-      "subject": "Constitución en Mora 202602, contrato 1206620 (EMAIL CERTIFICADO de colmenaseguros@serviefectivo.com.co) ",
-      "received": "2026-04-21T20:35:02Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEOR_SAAA=",
+      "from": "eafit_inf-institucional@eafit.edu.co",
+      "from_name": "Universidad EAFIT",
+      "subject": "EAFIT - Te invitamos a la conversación informativa de la Maestría en Biociencias.",
+      "received": "2026-04-23T22:19:29Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": false,
+      "has_attachments": false,
+      "preview": "Conoce la oferta\r\nacadémica EAFIT\r\n\r\nHola, Sebastián\r\n\r\n\r\n\r\n\r\nRecibiste este mensaje porque haces parte de la base de datos de contactos de la Universidad EAFIT o porque solicitaste que se te envíe in",
+      "razon": [
+        "no_leido"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEOR_TAAA=",
+      "from": "director@cciantioquia.com",
+      "from_name": "director@cciantioquia.com",
+      "subject": "REUNIÓN OLGA ACEVEDO-CONDUGAS",
+      "received": "2026-04-23T22:23:22Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
       "has_attachments": true,
-      "preview": "CONSORCIO AYURA,\r\n\r\nColmena Seguros desea compartirle información importante, por ello, anexo encontrará la comunicación Constitucion mora empresas dependientes independientes riesgo IV V 202602. Recu",
+      "preview": "________________________________\r\nDe: director@cciantioquia.com\r\nEnviado: Tuesday, April 7, 2026 10:19:07 AM\r\nPara: director@cciantioquia.com <director@cciantioquia.com>; Sebastian Sanchez acevedo <s.",
       "razon": [
         "no_leido"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAECwfmRAAA=",
-      "from": "colmenaseguros@serviefectivo.com.co",
-      "from_name": "Colmena Seguros Riesgos Laborales",
-      "subject": "Constitución en Mora _Copasst 202602, contrato 1206620",
-      "received": "2026-04-21T20:36:29Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSCAAA=",
+      "from": "comunicaciones.oficiales@medellin.gov.co",
+      "from_name": "comunicaciones.oficiales@medellin.gov.co",
+      "subject": "Documento - 202610103180",
+      "received": "2026-04-24T12:44:28Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": false,
+      "has_attachments": false,
+      "preview": "Respetado(a) se?or(a):\r\n\r\nEl Distrito de Medell?n, en atenci?n a la solicitud PQRSD presentada ante esta entidad, genera respuesta mediante el radicado N.° 202610103180, la cual se remite como documen",
+      "razon": [
+        "no_leido"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSDAAA=",
+      "from": "notificacion.gedo1@medellin.gov.co",
+      "from_name": "notificacion.gedo1@medellin.gov.co",
+      "subject": "Documento - 202610103180",
+      "received": "2026-04-24T12:44:42Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
       "has_attachments": true,
-      "preview": "CONSORCIO AYURA,\r\n\r\nColmena Seguros desea compartirle información importante, por ello, anexo encontrará la comunicación Constitucion mora empresas dependientes independientes riesgo IV V 202602. Recu",
+      "preview": "Respetado(a) se?or(a): El Distrito de Medell?n, en atenci?n a la solicitud PQRSD presentada ante esta entidad, genera respuesta mediante el radicado N.° 202610103180, la cual se remite como documento ",
       "razon": [
         "no_leido"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAECwfmSAAA=",
-      "from": "tatiana.gonzalez@iac.com.co",
-      "from_name": "Tatiana Gonzalez",
-      "subject": "Congreso IA GRATIS: sin ROI no hay IA... ¿estás listo?",
-      "received": "2026-04-21T20:46:35Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAV8zxAADD_CY0RKeIQYhbXX1OKrzKAAEEvU2QAAA=",
+      "from": "env@thebestphonesupport.com",
+      "from_name": "Aproveche Promo 4x2",
+      "subject": "Gestiòn de Mantenimiento Preventivo, Correctivo y Predictivo",
+      "received": "2026-04-24T13:25:38Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
       "has_attachments": false,
-      "preview": "Tatiana Gonzalez\r\n\r\nIngeniería Asistida por Computador S.A.S.\r\n\r\nTeléfono Medellín  (4) 2656868\r\n\r\nTeléfono Bogotá   (1) 3213030\r\n\r\nwww.iac.com.co\r\n\r\nwww.acaddemia.com\r\n\r\ncancelar la suscripción a tod",
+      "preview": "ENTRENAMIENTO PROFESIONAL\r\nGESTIÓN MODERNA DEL MANTENIMIENTO\r\nPREVENTIVO, PREDICTIVO Y CORRECTIVO\r\n\r\nCómo Implementar un Modelo de Gestión de Clase Mundial\r\n\r\nFechas: 28 y 30 de Abril\r\nHorario: 19:00 ",
       "razon": [
         "no_leido"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAV8zxAADD_CY0RKeIQYhbXX1OKrzKAAECweX1AAA=",
-      "from": "comunicaciones@dacti.co",
-      "from_name": "Curso de IA para RH",
-      "subject": "Selección y Gestión Humana con IA",
-      "received": "2026-04-21T21:39:18Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": false,
-      "has_attachments": false,
-      "preview": "Selección y Gestión Humana con IA\r\n28, 29 y 30 de abril de 2026\r\nEste curso le permitirá aplicar la inteligencia artificial de forma práctica en procesos clave de gestión humana como reclutamiento, se",
-      "razon": [
-        "no_leido"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAECwfmUAAA=",
-      "from": "bancodavivienda@davivienda.com",
-      "from_name": "Davivienda S.A",
-      "subject": "Extractos de sus Productos de Crédito 20260417",
-      "received": "2026-04-21T23:12:35Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": false,
-      "has_attachments": true,
-      "preview": "Asunto: Extracto de sus productos de crédito\r\n\r\n\r\n\r\nReciba un cordial saludo. Adjunto encontrará el último extracto de sus productos para su consulta.\r\n\r\n\r\nAsimismo, puede consultar sus extractos en n",
-      "razon": [
-        "no_leido"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEDossvAAA=",
-      "from": "dircomunicaciones@camacol.info",
-      "from_name": "Camacol Comunicaciones",
-      "subject": "Invitación a postulación | Premios Construimos a la Par 2026",
-      "received": "2026-04-22T13:41:17Z",
-      "is_read": false,
-      "flagged": false,
-      "important_sender": false,
-      "has_attachments": false,
-      "preview": "Invitación a postulación | Premios Construimos a la Par 2026\r\n\r\nCordial saludo,\r\n\r\nDesde Camacol, le invitamos a postular su iniciativa a la quinta edición del Premio Construimos a la Par, un reconoci",
-      "razon": [
-        "no_leido"
-      ]
-    },
-    {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAV8zxAADD_CY0RKeIQYhbXX1OKrzKAAEDozDVAAA=",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSFAAA=",
       "from": "justariz@ustarizcompliance.com",
       "from_name": "Ustáriz & Abogados",
-      "subject": "⏳ Alerta regulatoria: Vence el plazo para implementar SARLAFT y PTEE en el sector transporte",
-      "received": "2026-04-22T14:09:48Z",
+      "subject": "🚨 Alerta Regulatoria: Conozca las exigencias de la Supertransporte para el cumplimiento del SARLAFT  ",
+      "received": "2026-04-24T14:02:53Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
       "has_attachments": false,
-      "preview": "La normativa de la Supertransporte es de cumplimiento inmediato. Conozca si su empresa está obligada y cómo podemos ayudarle.‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­",
+      "preview": "Conozca las obligaciones que asumen los Oficiales de Cumplimiento y Representantes Legales frente a la Supertransporte.‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌   ­‌",
       "razon": [
         "no_leido"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEDoss2AAA=",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSIAAA=",
       "from": "contacto@mesatics.com",
       "from_name": "MesaTICS FENALCO Antioquia",
       "subject": "Madurez Digital Empresarial \"Liderazgo y Estrategia en la Era Digital\"",
-      "received": "2026-04-22T14:39:48Z",
+      "received": "2026-04-24T15:53:22Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
       "has_attachments": false,
-      "preview": "Nodo de Desarrollo de Software\r\n\r\n\r\n\r\n\r\nInstagram\r\n\r\n¿Desea cambiar la forma en que recibe estos correos electrónicos?:\r\n\r\nActualice sus preferencias o cancele su suscripción a esta lista de correo, e",
+      "preview": "Nodo de Desarrollo de Software\r\n\r\n\r\n\r\n¡Quiero mi cupo!\r\n\r\n\r\nInstagram\r\n\r\n¿Desea cambiar la forma en que recibe estos correos electrónicos?:\r\n\r\nActualice sus preferencias o cancele su suscripción a est",
       "razon": [
         "no_leido"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAV8zxAADD_CY0RKeIQYhbXX1OKrzKAAEDozDWAAA=",
-      "from": "sales@maslow.hr",
-      "from_name": "Maslow",
-      "subject": "¿Tu estrategia de beneficios está realmente optimizada? 🤔",
-      "received": "2026-04-22T16:52:27Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSKAAA=",
+      "from": "camilo.berrio@condugas.com.co",
+      "from_name": "Juan Camilo Berrio Tirado",
+      "subject": "RE: Complemento info reajustes contrato oym aguas ",
+      "received": "2026-04-24T16:17:00Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
-      "has_attachments": false,
-      "preview": "Descargar gratis\r\n\r\n\r\nUnsubscribe me | Terms and Conditions",
+      "has_attachments": true,
+      "preview": "Buenos días Willi\r\n\r\nPor favor hacer firmar y radicar.\r\n\r\n________________________________\r\nDe: Miguel Restrepo Gomez <mrestrepog@arizaymarin.com>\r\nEnviado: jueves, 23 de abril de 2026 9:28\r\nPara: Jua",
       "razon": [
         "no_leido"
       ]
     },
     {
-      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEDostNAAA=",
-      "from": "info@accionverde.org.co",
-      "from_name": "Acción Verde",
-      "subject": "🌍 ¿Cuánto más puede esperar el planeta?",
-      "received": "2026-04-22T19:33:43Z",
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSLAAA=",
+      "from": "nbamercadeo@pb08.wixemails.com",
+      "from_name": "NBA ASESORES SAS",
+      "subject": "Fechas clave del Calendario Tributario 2026 para tu empresa",
+      "received": "2026-04-24T16:29:55Z",
       "is_read": false,
       "flagged": false,
       "important_sender": false,
       "has_attachments": false,
-      "preview": "Hoy es el Día Mundial de la Tierra. Y vale la pena preguntarnos: ¿Estamos haciendo lo suficiente para proteger el único hogar que conocemos?\r\n\r\n\r\n\r\nHoy, los desafíos son evidentes: La deforestación, l",
+      "preview": "Infórmate sobre los plazos y pagos con el Calendario Tributario 2026. Accede a toda la información aquí.‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ",
+      "razon": [
+        "no_leido"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSMAAA=",
+      "from": "comunicados@unita.app",
+      "from_name": "Comunicados UNITA",
+      "subject": "[Monte Sereno Refugio Campestre] DEPURACIÓN DE VEHÍCULOS ",
+      "received": "2026-04-24T16:55:51Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": false,
+      "has_attachments": false,
+      "preview": "DEPURACIÓN DE VEHÍCULOS\r\nEs de suma importancia que cada propietario ingrese a la plataforma y realice la depuración de los vehículos registrados en su parcela, con el fin de mantener actualizada la i",
+      "razon": [
+        "no_leido"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSNAAA=",
+      "from": "direccion.registros@camaramedellin.com.co",
+      "from_name": "direccion.registros@camaramedellin.com.co",
+      "subject": "Alerta temprana",
+      "received": "2026-04-24T17:16:01Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": false,
+      "has_attachments": false,
+      "preview": "Servicio de Alerta Temprana\r\nLugar y fecha de generación: Medellín, 24/04/2026 12:15:14 PM\r\n\r\nSeñor(es)\r\nCONDUGAS S.A BIC\r\nMatrícula Nro.: 308475-04\r\n\r\nDestinatarios del correo: notificacionesjudicial",
+      "razon": [
+        "no_leido"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSSAAA=",
+      "from": "queli.ortiz@condugas.com.co",
+      "from_name": "Queli Bibiana \tPossu Ortiz",
+      "subject": "TENTATIVA DE DESCUENTO Y FACTURACION MES ABRIL  2026",
+      "received": "2026-04-24T19:27:37Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": false,
+      "has_attachments": true,
+      "preview": "Buena tarde\r\n\r\nEnvio tentaiva de descuento y facturacion mes abril 2026\r\n\r\nGracias",
+      "razon": [
+        "no_leido"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSTAAA=",
+      "from": "eventos@infraestructura.org.co",
+      "from_name": "Evento Proyectos Estratégicos",
+      "subject": "📊 Nuevos proyectos, licitaciones y visión de infraestructura – 21 de mayo",
+      "received": "2026-04-24T20:13:17Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": false,
+      "has_attachments": false,
+      "preview": "ÚLTIMOS DÍAS CON TARIFA ESPECIAL\r\n \r\n\r\nEntérate de los proyectos, licitaciones y oportunidades que vienen para el sector de infraestructura.\r\n\r\n \r\n\r\nLa Cámara Colombiana de la Infraestructura te invit",
+      "razon": [
+        "no_leido"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSWAAA=",
+      "from": "gerencia@fonconstruimos.com.co",
+      "from_name": "GERENCIA",
+      "subject": "Solicitud Urgente - Saldo pendiente por Pagar -  Convenio firmado - Condugas",
+      "received": "2026-04-24T20:38:07Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": false,
+      "has_attachments": false,
+      "preview": "Cordial saludo Sebastián.\r\n\r\nAgradezco que por favor nos apoyes revisando internamente con el área administrativa de Condugas, la solución de unos pagos pendientes por parte de la empresa al Fondo de ",
+      "razon": [
+        "no_leido"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSjAAA=",
+      "from": "informate@eia.edu.co",
+      "from_name": "Universidad EIA",
+      "subject": "Músicas del mundo llegan al Teatro EIA | Entrada libre",
+      "received": "2026-04-24T20:55:59Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": false,
+      "has_attachments": false,
+      "preview": "You are receiving this email as you signed up for our newsletters.\r\n\r\nWant to change how you receive these emails?\r\n\r\nYou can Unsubscribe or Update your preferences",
+      "razon": [
+        "no_leido"
+      ]
+    },
+    {
+      "id": "AAMkADhjMTJkYjYxLTA1ZWItNDc4Ni1iNzcwLWFlNjE3MzMzMjBlZABGAAAAAAAMYOytufTnQ5ouHanFfqf6BwDD_CY0RKeIQYhbXX1OKrzKAAAAAAEMAADD_CY0RKeIQYhbXX1OKrzKAAEEvSSlAAA=",
+      "from": "erodriguez@infraestructura.org.co",
+      "from_name": "Elizabeth de la CCI",
+      "subject": "Webinar gratuito de lanzamiento: Evaluación financiera de proyectos de inversión con herramientas de IA - 28 de abril",
+      "received": "2026-04-24T21:16:45Z",
+      "is_read": false,
+      "flagged": false,
+      "important_sender": false,
+      "has_attachments": false,
+      "preview": "Ver este email como una página web\r\n\r\nWebinar de lanzamiento: Evaluación financiera de proyectos de inversión con herramientas de IA\r\n \r\n\r\nMartes\r\n28 de abril\r\n\r\n4:00 p.m.\r\n\r\n \r\nAsegura tu cupo AQUÍ\r\n",
       "razon": [
         "no_leido"
       ]

@@ -1,140 +1,37 @@
 {
-  "fecha": "2026-04-24",
+  "fecha": "2026-04-27",
   "tareas_extraidas": [
     {
-      "tarea": "Repasar dinámicas de grupo y gestionar tensiones en el grupo",
+      "tarea": "Revisar y validar carta de negociación con puntos de negociación y dos comunicados preparados por Melisa",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "media"
     },
     {
-      "tarea": "Evaluar daño de coche y decidir entre taller o seguro",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Seguimiento con cliente sobre entrega de consultoría de Being CoRe",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Guardar secreto sobre 'la obra' y no revelar a Paoli",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Confirmar ubicación de local con El Palito para decisión de 10 o 20 bandejas",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Obtener plano de Sincano para poder cotizar proyecto",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Revisar arquitectura actual de ERP y periféricos desarrollados internamente",
-      "responsable": "Ingeniero desarrollo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Documentar dependencias técnicas y puntos de fallo en sistema ERP+periféricos",
-      "responsable": "Ingeniero desarrollo + 2 ingenieros",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Continuar exploración de dinámicas grupales y comportamientos en próximas sesiones",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Evaluar implementación de Odoo como ERP/CRM centralizado para 560 empleados",
-      "responsable": "Sebastian Sanchez Acevedo + Ingeniero desarrollo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Diseñar automatizaciones para 7 modelos de pago diferentes en Odoo",
-      "responsable": "Ingeniero desarrollo",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Definir modelo de 'trabajo por resultados' vs. transaccional para equipo",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "media"
-    },
-    {
-      "tarea": "Elegir representante del grupo para debate",
-      "responsable": "Grupo (Giselle/Diego/Andrés)",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Llevar palo a Adolfo en motocicleta",
+      "tarea": "Definir horario fijo de sueño del niño considerando actividades extracurriculares (partido 7pm) y recomendaciones profesionales",
       "responsable": "Sebastian Sanchez Acevedo",
       "prioridad": "baja"
-    },
-    {
-      "tarea": "Grupos escriben manifiesto de comportamientos de jefe para lograr que otros logren",
-      "responsable": "Participantes (5 grupos de 4)",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Realizar debate entre grupos (15 minutos) con audiencia observando comportamientos",
-      "responsable": "Participantes",
-      "prioridad": "alta"
-    },
-    {
-      "tarea": "Reclamar deuda de 600 millones COP a EPM por reajustes no pagados",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Resolver fórmula de reajustes con EPM para evitar tensión de 450M COP",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica"
-    },
-    {
-      "tarea": "Resolver problema Burger Master - incidente con heridos en acera",
-      "responsable": "Sebastian Sanchez Acevedo",
-      "prioridad": "critica"
     }
   ],
   "decisiones": [
-    "Usar el evento para poner a hablar al grupo y gestionar tensiones existentes",
-    "Considerar cobertura de seguro para daño de puerta",
-    "Aumentar presión sobre cobros pendientes a EPM",
-    "No era el momento para contar sobre la obra a cierta persona",
-    "Entregar productos Cheburgo y Tres Trigos en 2ª semana de mayo (confirmado por clientes)",
-    "Los grupos van siendo más pequeños conforme crecen, escogiendo con quién seguir",
-    "Dejar de desayunar basado en recomendación médica (hace 2.5 años)",
-    "Desarrollar software propio que se conecte con ERP en lugar de ajustarse completamente a SAP",
-    "Odoo (código abierto) como alternativa a SAP para mayor flexibilidad",
-    "Eliminar mandos medios y transiciones de información no-generadoras de valor"
+    "Propuesta de Melisa: dos comunicados separados (puntos de negociación + propuesta futura) para demostrar diligencia",
+    "Establecer que horario de sueño infantil no es estándar diario sino dependiente de siestas y recomendaciones profesionales"
   ],
   "ideas": [
-    "Aprovechar dinámicas de grupo para resolver conflictos interpersonales",
-    "Exponer públicamente la estructura de operación descentralizada de EPM (pública pero privada) para presionar cobros",
-    "Proyecto Inaudito (restaurante propio) como diferenciador de mercado",
-    "El comportamiento es determinado por la psique (capacidad de manejo emocional) + normalización de conductas anormales + mentiras sistémicas",
-    "La amistad verdadera requiere que el amigo cambie por sí mismo, no por presión externa",
-    "El contexto influye en cómo se aplican principios morales (amistad)",
-    "Comportamiento coherente depende de identidad clara + autonomía + ausencia de crisis de supervivencia",
-    "Crisis de supervivencia (quiebra, enfermedad) cambia toda la estructura comportamental",
-    "Instinto (amígdala) puede prevalecer sobre coherencia racional",
-    "Solo se puede predecir comportamiento en el instante si contexto cambia constantemente"
+    "Estrategia de dos comunicados para separar negociación inmediata de propuestas futuras, evidenciando diligencia"
   ],
   "frases": [
-    "cuando comprometo a otros, soy otra cosa",
-    "Nosotros estamos en una tensión, parce, en la empresa que nos quebramos",
-    "Nosotros le ponemos los equipos de agua y todo",
-    "Se juntaron como, como que se juntó, se juntó, se juntó todo",
-    "Yo lo quiero perdonar, en Estados Unidos"
+    "Ella lo que plantea es lo siguiente, Sebas, nos vamos a recomendarle que pongamos puntos de negociación en esa carta y más bien dos comunicados",
+    "Que ese eje claro que hemos sido diligentes y que hemos presentado toda la información",
+    "Increíble el tiempo que me demoré, amor",
+    "ese niño tan hermoso que hay aquí, con los zapatos como el papá"
   ],
   "alertas_supervivencia": [
-    "Deuda existencial de 1.3 billones COP genera riesgo inmediato de colapso operacional si no hay reestructuración urgente",
-    "Sebastian opera bajo privación severa de sueño y síntomas no controlados de TDAH con impacto en toma de decisiones críticas",
-    "Incidentes de transporte (choque vehicular, motocicleta) sugieren estado de alerta elevado o falta de concentración ligada a estrés extremo",
-    "Proyectos en negociación (Cheburgo, El Palito, Tres Trigos, Inaudito) dependen de infraestructura y capital que pueden no materializarse",
-    "Crisis energética nacional (represas al 2%) amenaza directamente operaciones de empresa productiva que requiere energía confiable"
+    "Reunion 13 marcada como bajo pero involucra negociacion activa que requiere seguimiento",
+    "Reunion 14 extremadamente breve 48 segundos sugiere comunicacion incompleta o urgente",
+    "Horario de partido 7pm requiere confirmacion para evitar descoordinacion familiar",
+    "Patrones de conversacion fragmentada pueden indicar estres acumulado o multitarea",
+    "Falta de claridad en devolucion de carros podria generar conflicto posterior"
   ],
-  "total_lifelogs": 31,
+  "total_lifelogs": 15,
   "procesado_con": "haiku_v3_structured"
 }

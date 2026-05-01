@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-04-28",
-  "ultima_actualizacion": "2026-04-28T11:45:07",
+  "fecha": "2026-04-30",
+  "ultima_actualizacion": "2026-04-30T11:45:11",
   "comite_sv": {
     "caja_dias": 8,
     "facturacion_pct": 45,
@@ -8,73 +8,75 @@
     "ebitda": -2300,
     "whoop_recovery": 23,
     "whoop_sleep": "54%",
-    "tareas_criticas": 64,
+    "tareas_criticas": 59,
     "proyectos_crisis": 2
   },
   "frescura": {
     "caja_dias": {
       "valor": 8,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 10,
+      "dias_sin_actualizar": 12,
       "fuente": "limitless"
     },
     "facturacion_pct": {
       "valor": 45,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 10,
+      "dias_sin_actualizar": 12,
       "fuente": "limitless"
     },
     "produccion_deficit_pct": {
       "valor": 4.5,
       "fecha": "2026-04-28",
-      "dias_sin_actualizar": 0,
+      "dias_sin_actualizar": 2,
       "fuente": "limitless"
     },
     "ebitda": {
       "valor": -2300,
       "fecha": "2026-04-16",
-      "dias_sin_actualizar": 12,
+      "dias_sin_actualizar": 14,
       "fuente": "limitless"
     },
     "whoop_recovery": {
       "valor": 23,
       "fecha": "2026-04-28",
-      "dias_sin_actualizar": 0,
+      "dias_sin_actualizar": 2,
       "fuente": "limitless"
     },
     "whoop_sleep": {
       "valor": "54%",
       "fecha": "2026-04-28",
-      "dias_sin_actualizar": 0,
+      "dias_sin_actualizar": 2,
       "fuente": "limitless"
     },
     "tareas_criticas": {
-      "valor": 64,
-      "fecha": "2026-04-28",
+      "valor": 59,
+      "fecha": "2026-04-30",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     },
     "proyectos_crisis": {
       "valor": 2,
-      "fecha": "2026-04-28",
+      "fecha": "2026-04-30",
       "dias_sin_actualizar": 0,
       "fuente": "auto"
     }
   },
   "alertas": [
-    "Implementación de salario mínimo al 23% provocó caída de producción 4.5 días",
-    "Deudas pendientes de ~1.300 millones COP generando tensión de 450 millones adicionales",
-    "Caja quemado - tensión de liquidez crítica",
-    "EPM Río Negro: ~180M COP pendientes + no conformidad contrato 24 sin respuesta formal",
-    "Falta de pago RDL por ausencia de caja disponible",
-    "Contratos con EPM desconfiguran flujo de caja (protocolo de 150 millones vs pagos de 30 millones)",
-    "Caja crítica: 8 días de runway, EBITDA -2.3M. Revisar inversiones y movimientos hoy",
-    "Hamilton: Pago vencido desde 17 abril, debe cobrarse ya"
+    "Caja en 8 días: revisar movimientos hoy y estado inversiones (crítica)",
+    "Deuda Condugas: reunión con Andrea para clarificar pendientes",
+    "EPM Río Negro: ~180M pendientes + no conformidad contrato 24 sin respuesta formal",
+    "Reclamaciones pendientes con EPM por 3000 millones de pesos",
+    "Deuda bancaria 4800 millones + anticipo 600 millones, endeudamiento total 10400 millones",
+    "EPM adeuda más de 1000 millones en contrato de operación y mantenimiento de agua",
+    "Flujo de caja crítico: ingresan 2600 millones mensuales, después de deducciones quedan ~350-200 millones para proveedores",
+    "Un día sin producción genera pérdida de 150 millones de pesos; empresas construcción no aguantan más de 90 días sin producción"
   ],
   "oportunidades": [
-    "Diseño de sistema hiperpersonalizado de supervivencia empresarial mediante métodos de conceptualización y pago por resultados",
-    "Resolución de tensión de caja como prioridad inmediata (caja = oxígeno)",
-    "Implementación de ERP para optimizar operación"
+    "Contrato Boyacá se desempeña bien y puede aportar al escenario financiero",
+    "Reclamación de 3000 millones a EPM (600-700 millones en auxilios, 600 millones en ambientales, reajustes operación y mantenimiento)",
+    "Reajuste de contrato de 7-9% adicional podría equilibrar estructura financiera",
+    "Negociación de Río Negro con condiciones incumplidas por cliente",
+    "Potencial crédito de 1000 millones para aliviar tensión de caja si se demuestra viabilidad de contratos"
   ],
   "whoop": {
     "recovery": 23,
@@ -83,22 +85,49 @@
   },
   "recordatorios_datos_faltantes": [
     {
+      "campo": "ebitda",
+      "dias_sin_dato": 14,
+      "umbral": 14,
+      "severidad": "media",
+      "ultimo_valor": -2300,
+      "ultima_fecha": "2026-04-16",
+      "mensaje": "'ebitda' lleva 14 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+    },
+    {
       "campo": "caja_dias",
-      "dias_sin_dato": 10,
+      "dias_sin_dato": 12,
       "umbral": 2,
       "severidad": "alta",
       "ultimo_valor": 8,
       "ultima_fecha": "2026-04-18",
-      "mensaje": "'caja_dias' lleva 10 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+      "mensaje": "'caja_dias' lleva 12 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
     },
     {
       "campo": "facturacion_pct",
-      "dias_sin_dato": 10,
+      "dias_sin_dato": 12,
       "umbral": 7,
       "severidad": "media",
       "ultimo_valor": 45,
       "ultima_fecha": "2026-04-18",
-      "mensaje": "'facturacion_pct' lleva 10 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+      "mensaje": "'facturacion_pct' lleva 12 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+    },
+    {
+      "campo": "whoop_recovery",
+      "dias_sin_dato": 2,
+      "umbral": 1,
+      "severidad": "alta",
+      "ultimo_valor": 23,
+      "ultima_fecha": "2026-04-28",
+      "mensaje": "'whoop_recovery' lleva 2 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+    },
+    {
+      "campo": "whoop_sleep",
+      "dias_sin_dato": 2,
+      "umbral": 1,
+      "severidad": "alta",
+      "ultimo_valor": "54%",
+      "ultima_fecha": "2026-04-28",
+      "mensaje": "'whoop_sleep' lleva 2 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
     }
   ]
 }

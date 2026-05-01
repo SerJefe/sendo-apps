@@ -1,62 +1,61 @@
 {
-  "saludo": "Buenos días Sebastián — martes 28 Apr",
+  "saludo": "Buenos días Sebastián — jueves 30 Apr",
   "supervivencia": [
-    "Caja crítica: 8 días de runway, EBITDA -2.3M. Revisar inversiones y movimientos hoy",
-    "EPM Río Negro: ~180M COP pendientes + no conformidad contrato 24 sin respuesta formal",
-    "Hamilton: Pago vencido desde 17 abril, debe cobrarse ya"
+    "Caja en 8 días: revisar movimientos hoy y estado inversiones (crítica)",
+    "EPM Río Negro: ~180M pendientes + no conformidad contrato 24 sin respuesta formal",
+    "Deuda Condugas: reunión con Andrea para clarificar pendientes"
   ],
   "top_3": [
     {
-      "tarea": "Revisar caja a hoy, movimiento, estado inversiones y opciones de liquidez",
+      "tarea": "Revisar caja a hoy, movimientos e inversiones + proyección siguiente semana",
       "categoria": "SUPERVIVENCIA",
-      "porque": "8 días de runway es crítico; necesitas visibilidad real antes de cualquier otra decisión",
-      "tarea_id": "situacion_caja"
+      "porque": "8 días de caja, EBITDA -2.3M, sin actualización de hace 13 días",
+      "tarea_id": "situacion-caja-familiar"
     },
     {
-      "tarea": "Sacar información real de contratos Condugas: préstamos, aportes, deudas, relaciones. Reunir con Andrea",
+      "tarea": "Responder formalmente no conformidad contrato 24 (EPM) + enviar comunicado reajuste Río Negro",
       "categoria": "SUPERVIVENCIA",
-      "porque": "64 tareas críticas abiertas, necesitas claridad sobre obligaciones antes de programar",
-      "tarea_id": "revisar_rendimiento_contratos"
+      "porque": "Vencida 2026-04-18, riesgo legal y cobro de 180M está bloqueado",
+      "tarea_id": "responder-no-conformidad-24"
     },
     {
-      "tarea": "Enviar comunicado a EPM cobrando reajustes + respuesta formal a no conformidad contrato 24",
+      "tarea": "Reunión Andrea: deudas Condugas + cobro Hamilton (vencida 2026-04-17)",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Plazo vencido (18 abril). Sin acción legal/documental pierdes posición",
-      "tarea_id": "epm_defensa"
+      "porque": "Clarificar pasivos y recuperar pagos prometidos",
+      "tarea_id": "resolver-deudas-condugas"
     }
   ],
-  "mega_dia": "Cierre de caja + call con Andrea sobre deudas Condugas. Si haces esto, el día valió.",
+  "mega_dia": "Escribir respuesta formal no conformidad EPM + revisar caja real. El resto espera.",
   "contactar_hoy": [
     {
-      "persona": "Andrea",
-      "motivo": "Deudas pendientes Condugas, caja, viaje Cartagena"
+      "persona": "Andrea Bernal",
+      "motivo": "Deudas Condugas + cobro Hamilton vencido"
     },
     {
       "persona": "William Lopez",
-      "motivo": "Informe avance Vanti (recibido 07 abr), fuentes datos KPIs"
+      "motivo": "Confirmación viabilidad terminación vs renegociación EPM"
     }
   ],
   "ojo_con": [
-    "59 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "Whoop recovery 23% = cuerpo colapsado, necesitas dormir mejor (54% sleep)",
-    "41 tareas vencidas, 99 sin evaluar: sistema desbordado",
-    "Supersociedades: estados financieros pendientes, urgente"
+    "100 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+    "Recovery WHOOP 23% (muy bajo, estrés acumulado)",
+    "64 tareas críticas abiertas + 38 vencidas = saturación extrema",
+    "KPIs de caja/EBITDA sin actualizar hace 11-13 días: decisiones con data obsoleta"
   ],
   "vencidas": [
-    "Pago Hamilton (vencido 17 abr)",
-    "Revisar contratos críticos (vencido 20 abr)",
-    "Debido proceso EPM (vencido 18 abr)",
-    "Validar escalada salarial Camacol (vencido 17 abr)"
+    "Documentación debido proceso ejecutivo (2026-04-18)",
+    "No conformidad contrato 24 respuesta formal",
+    "Cobro Hamilton (2026-04-17)"
   ],
-  "frase_dia": "Sin caja clara, no hay estrategia. Hoy: números reales o no salimos de aquí.",
-  "generado_at": "2026-04-28T11:00:10",
-  "fecha": "2026-04-28",
+  "frase_dia": "No es productivity, es supervivencia. Caja primero, legal segundo, el resto no existe hoy.",
+  "generado_at": "2026-04-30T11:00:09",
+  "fecha": "2026-04-30",
   "stats": {
-    "abiertas": 124,
-    "criticas": 64,
-    "vencidas": 41,
-    "estancadas": 98,
-    "sin_evaluar": 99
+    "abiertas": 196,
+    "criticas": 59,
+    "vencidas": 38,
+    "estancadas": 174,
+    "sin_evaluar": 168
   },
   "criticas_sin_fecha": [
     {
@@ -69,13 +68,13 @@
       "id": "2026-04-08-001",
       "tarea": "Compartir informes diarios, actas de obra o correos de febrero a abril que mencionen lluvias, parada",
       "prioridad": "alta",
-      "responsable": "Sebastian"
+      "responsable": "Juan Camilo Berrio"
     },
     {
       "id": "2026-04-12-003",
       "tarea": "Conectar modelo de KPIs con el briefing para mayor claridad",
       "prioridad": "alta",
-      "responsable": "Equipo de Proyectos"
+      "responsable": "Lina Russi"
     },
     {
       "id": "2026-04-12-004",
@@ -90,20 +89,8 @@
       "responsable": "Emanuel"
     },
     {
-      "id": "2026-04-13-mc8a7e3",
-      "tarea": "Conversar con basa, pilar y averiguar que propuestas hay en el POT para casa de aguactala",
-      "prioridad": "alta",
-      "responsable": "Sebastian"
-    },
-    {
       "id": "2026-04-13-m20be25",
       "tarea": "Resolver deudas con Condugas",
-      "prioridad": "alta",
-      "responsable": "Sebastian"
-    },
-    {
-      "id": "2026-04-13-mcd50a4",
-      "tarea": "Viaje Cartagena",
       "prioridad": "alta",
       "responsable": "Sebastian"
     },
@@ -148,13 +135,25 @@
       "tarea": "Unificar base de datos y fuentes Siendo Consulting",
       "prioridad": "alta",
       "responsable": "Sebastian"
+    },
+    {
+      "id": "2026-04-14-001",
+      "tarea": "Reunirse con Andrea para resolver deuda Condugas",
+      "prioridad": "alta",
+      "responsable": "Lina Russi"
+    },
+    {
+      "id": "2026-04-14-006",
+      "tarea": "Coordinar reunión con leads/clientes para definición estratégica",
+      "prioridad": "alta",
+      "responsable": "Sebastian"
     }
   ],
   "vence_pronto": [
     {
       "id": "2026-04-23-c005",
       "tarea": "Crear modelo de rentabilidad de contratos (no solo APU de costos) con actualización mensual",
-      "dias": 2,
+      "dias": 0,
       "fecha_limite": "2026-04-30"
     }
   ]
