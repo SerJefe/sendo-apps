@@ -3,3 +3,7 @@
 data/proyectos-detail.json
 data/proyectos-detail.json.bak-*
 *.bak-*
+
+# Reportes agent-rigor-semanal (citas verbatim de lifelogs sensibles)
+data/rigor-semanal-*.json
+data/rigor-semanal-*.md
