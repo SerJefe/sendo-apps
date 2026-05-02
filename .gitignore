@@ -1,0 +1,5 @@
+
+# Datos sensibles que NO deben ir a GitHub público (decisión 2026-05-01)
+data/proyectos-detail.json
+data/proyectos-detail.json.bak-*
+*.bak-*
