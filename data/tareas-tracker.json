@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-05-01T18:01:52",
+  "ultima_actualizacion": "2026-05-02T00:00:01",
   "tareas": [
     {
       "id": "2026-04-06-001",
@@ -3432,7 +3432,8 @@
       "tipo": "pendiente",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-27-r12-002",
@@ -3447,7 +3448,8 @@
       "tipo": "decision",
       "vencida": false,
       "evaluada": false,
-      "categoria": "trabajo"
+      "categoria": "trabajo",
+      "estancada": true
     },
     {
       "id": "2026-04-24-r4-003",
@@ -4821,7 +4823,7 @@
       "origen": "limitless_auto",
       "contexto": "Suspension debe efectuarse el lunes para activar siguiente mes de contrato",
       "tipo": "compromiso",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,
@@ -4842,7 +4844,7 @@
       "origen": "limitless_auto",
       "contexto": "Documento esta en Word, requiere revision previa a firma",
       "tipo": "pendiente",
-      "vencida": false,
+      "vencida": true,
       "evaluada": false,
       "categoria": "condugas",
       "monto_cop": null,

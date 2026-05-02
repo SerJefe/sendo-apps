@@ -1031,5 +1031,204 @@
     "Desgaste emocional y físico de Sebastian alcanzando niveles críticos por negociación sostenida con EPM desde octubre 2025",
     "Sistema de horas extras mal configurado afectando nómina de empleados y generando datos incorrectos",
     "Ciclos de sueño fragmentado de Benjamin sin solución clara, generando estrés en contexto de viaje inminente a las 2am"
-  ]
+  ],
+  "briefing_hoy": {
+    "saludo": "Buenos días Sebastián — sábado 02 May",
+    "supervivencia": [
+      "Hamilton: cobro vencido HOY (deadline 2026-05-02) — Lina debe ejecutar",
+      "Caja familiar: revisar estado real y movimientos de inversiones — crítico para liquidez",
+      "Base de clientes Siendo: consolidar en un lugar con necesidades documentadas — sin esto no hay estrategia"
+    ],
+    "top_3": [
+      {
+        "tarea": "Confirmar pago Hamilton con Lina (ejecutar HOY)",
+        "categoria": "SUPERVIVENCIA",
+        "porque": "Vence hoy, impacta flujo inmediato",
+        "tarea_id": "hamilton-cobro"
+      },
+      {
+        "tarea": "Revisar caja y estado inversiones (1 hora, datos reales)",
+        "categoria": "SUPERVIVENCIA",
+        "porque": "Crisis acumulada 3040M — necesitas certeza hoy",
+        "tarea_id": "caja-familiar"
+      },
+      {
+        "tarea": "Reunión 30min Ema + Lina: estructura Siendo (roles, presupuesto, prohibiciones)",
+        "categoria": "ESTRATEGIA",
+        "porque": "Sin claridad operativa, automatizaciones y ERP caen",
+        "tarea_id": "estructura-siendo"
+      }
+    ],
+    "mega_dia": "Cobro Hamilton + Caja clara = respira. El resto espera lunes.",
+    "contactar_hoy": [
+      {
+        "persona": "Lina Russi",
+        "motivo": "Ejecutar cobro Hamilton — vence HOY"
+      },
+      {
+        "persona": "Andrea",
+        "motivo": "Cifras reales caja y estado deudas Condugas"
+      }
+    ],
+    "ojo_con": [
+      "104 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+      "59 tareas críticas abiertas: priorizas 3 o te ahogás",
+      "WHOOP: 23% recovery, 54% sleep — descanso es operativo, no lujo",
+      "EPM sigue congelando reclamos (600M ambientales > 180M reajuste tuyo)"
+    ],
+    "vencidas": [
+      "Hamilton: deadline HOY",
+      "Debido proceso ambiental: vencida 2026-04-18"
+    ],
+    "frase_dia": "Hoy: cobro + claridad. Lunes: estrategia. No es pereza, es supervivencia.",
+    "generado_at": "2026-05-02T11:00:08",
+    "fecha": "2026-05-02",
+    "stats": {
+      "abiertas": 202,
+      "criticas": 65,
+      "vencidas": 41,
+      "estancadas": 176,
+      "sin_evaluar": 174
+    },
+    "criticas_sin_fecha": [
+      {
+        "id": "2026-04-06-002",
+        "tarea": "Recopilar información del proceso centro de operaciones",
+        "prioridad": "alta",
+        "responsable": "William Lopez"
+      },
+      {
+        "id": "2026-04-08-001",
+        "tarea": "Compartir informes diarios, actas de obra o correos de febrero a abril que mencionen lluvias, parada",
+        "prioridad": "alta",
+        "responsable": "Juan Camilo Berrio"
+      },
+      {
+        "id": "2026-04-12-003",
+        "tarea": "Conectar modelo de KPIs con el briefing para mayor claridad",
+        "prioridad": "alta",
+        "responsable": "Lina Russi"
+      },
+      {
+        "id": "2026-04-12-004",
+        "tarea": "Publicar documentación de KPIs en repositorio público",
+        "prioridad": "alta",
+        "responsable": "Equipo Técnico"
+      },
+      {
+        "id": "2026-04-09-004",
+        "tarea": "Desarrollar ERP basado en IA",
+        "prioridad": "alta",
+        "responsable": "Emanuel"
+      },
+      {
+        "id": "2026-04-13-m20be25",
+        "tarea": "Resolver deudas con Condugas",
+        "prioridad": "alta",
+        "responsable": "Sebastian"
+      },
+      {
+        "id": "2026-04-13-m5960dc",
+        "tarea": "Situación de caja familiar , inversiones",
+        "prioridad": "critica",
+        "responsable": "Sebastian"
+      },
+      {
+        "id": "2026-04-13-m35598a",
+        "tarea": "Proyecto automatizaciones (App para cobra, diagnostico actual, Aleteagogia)",
+        "prioridad": "alta",
+        "responsable": "Sebastian"
+      },
+      {
+        "id": "2026-04-13-me871ed",
+        "tarea": "Carros, créditos, proyecciones",
+        "prioridad": "alta",
+        "responsable": "Sebastian"
+      },
+      {
+        "id": "2026-04-13-m3137b0",
+        "tarea": "Clientes base, iniciar por propuestas claras",
+        "prioridad": "critica",
+        "responsable": "Sebastian"
+      },
+      {
+        "id": "2026-04-13-m5c9509",
+        "tarea": "Presentación empresa junta 20 de abril",
+        "prioridad": "alta",
+        "responsable": "Sebastian"
+      },
+      {
+        "id": "2026-04-13-mb61536",
+        "tarea": "Reunión Vendemos",
+        "prioridad": "alta",
+        "responsable": "Sebastian"
+      },
+      {
+        "id": "2026-04-13-mc17d26",
+        "tarea": "Unificar base de datos y fuentes Siendo Consulting",
+        "prioridad": "alta",
+        "responsable": "Sebastian"
+      },
+      {
+        "id": "2026-04-14-001",
+        "tarea": "Reunirse con Andrea para resolver deuda Condugas",
+        "prioridad": "alta",
+        "responsable": "Lina Russi"
+      },
+      {
+        "id": "2026-04-14-006",
+        "tarea": "Coordinar reunión con leads/clientes para definición estratégica",
+        "prioridad": "alta",
+        "responsable": "Sebastian"
+      }
+    ],
+    "vence_pronto": [
+      {
+        "id": "2026-04-16-c001",
+        "tarea": "Cobrar pago pendiente de Hamilton según lo prometido",
+        "dias": 0,
+        "fecha_limite": "2026-05-02"
+      },
+      {
+        "id": "2026-04-13-mc8a7e3",
+        "tarea": "Conversar con basa, pilar y averiguar que propuestas hay en el POT para casa de aguactala",
+        "dias": 3,
+        "fecha_limite": "2026-05-05"
+      }
+    ]
+  },
+  "semana": {
+    "generado_at": "2026-05-02T11:00:08",
+    "semana": "W18",
+    "periodo": "2026-04-26 a 2026-05-02",
+    "metricas_tracker": {
+      "creadas_semana": 8,
+      "cerradas_semana": 9,
+      "evaluadas_semana": 0,
+      "abiertas_total": 202,
+      "ratio_cierre": 112
+    },
+    "dias": [
+      {
+        "fecha": "2026-04-30",
+        "tareas": 22,
+        "decisiones": 10,
+        "ideas": 10,
+        "alertas": 5
+      },
+      {
+        "fecha": "2026-04-27",
+        "tareas": 2,
+        "decisiones": 2,
+        "ideas": 1,
+        "alertas": 5
+      }
+    ],
+    "totales_semana": {
+      "tareas_detectadas": 24,
+      "decisiones": 12,
+      "ideas": 11,
+      "alertas": 10
+    }
+  }
 }

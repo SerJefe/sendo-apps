@@ -1,61 +1,60 @@
 {
-  "saludo": "Buenos días Sebastián — viernes 01 May",
+  "saludo": "Buenos días Sebastián — sábado 02 May",
   "supervivencia": [
-    "EPM Río Negro: ~180M sin cobrar + no conformidad sin respuesta formal (crítica vencida)",
-    "Caja a 8 días + EBITDA -2.3M: necesitas flujo ya",
-    "Hamilton debe pagar hoy (deadline mañana 02 May)"
+    "Hamilton: cobro vencido HOY (deadline 2026-05-02) — Lina debe ejecutar",
+    "Caja familiar: revisar estado real y movimientos de inversiones — crítico para liquidez",
+    "Base de clientes Siendo: consolidar en un lugar con necesidades documentadas — sin esto no hay estrategia"
   ],
   "top_3": [
     {
-      "tarea": "Responder formalmente no conformidad contrato 24 a EPM + preparar defensa legal documentada",
+      "tarea": "Confirmar pago Hamilton con Lina (ejecutar HOY)",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Vencida, P1, riesgo contractual grave",
-      "tarea_id": "no-conformidad-24"
-    },
-    {
-      "tarea": "Llamar a Hamilton ahora: cobrar pago prometido antes del deadline 02 May",
-      "categoria": "SUPERVIVENCIA",
-      "porque": "Deadline mañana, caja crítica (8 días)",
+      "porque": "Vence hoy, impacta flujo inmediato",
       "tarea_id": "hamilton-cobro"
     },
     {
-      "tarea": "Revisar caja familiar e inversiones hoy: estado real vs proyecciones",
+      "tarea": "Revisar caja y estado inversiones (1 hora, datos reales)",
       "categoria": "SUPERVIVENCIA",
-      "porque": "Score 45, crítica, necesitas claridad financiera personal",
+      "porque": "Crisis acumulada 3040M — necesitas certeza hoy",
       "tarea_id": "caja-familiar"
-    }
-  ],
-  "mega_dia": "Resolver no conformidad EPM por escrito + asegurar cobro Hamilton",
-  "contactar_hoy": [
-    {
-      "persona": "Hamilton (cliente)",
-      "motivo": "Cobro vence mañana, caja urgente"
     },
     {
-      "persona": "Andrea Bernal",
-      "motivo": "Deuda Condugas + declaración renta"
+      "tarea": "Reunión 30min Ema + Lina: estructura Siendo (roles, presupuesto, prohibiciones)",
+      "categoria": "ESTRATEGIA",
+      "porque": "Sin claridad operativa, automatizaciones y ERP caen",
+      "tarea_id": "estructura-siendo"
+    }
+  ],
+  "mega_dia": "Cobro Hamilton + Caja clara = respira. El resto espera lunes.",
+  "contactar_hoy": [
+    {
+      "persona": "Lina Russi",
+      "motivo": "Ejecutar cobro Hamilton — vence HOY"
+    },
+    {
+      "persona": "Andrea",
+      "motivo": "Cifras reales caja y estado deudas Condugas"
     }
   ],
   "ojo_con": [
-    "100 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
-    "39 tareas vencidas no es normalizar",
-    "168 sin evaluar = decisiones paralizadas",
-    "Whoop 23% recovery: descanso no es lujo ahora"
+    "104 tareas criticas/alta sin fecha limite — asignales deadline en el calendario",
+    "59 tareas críticas abiertas: priorizas 3 o te ahogás",
+    "WHOOP: 23% recovery, 54% sleep — descanso es operativo, no lujo",
+    "EPM sigue congelando reclamos (600M ambientales > 180M reajuste tuyo)"
   ],
   "vencidas": [
-    "No conformidad contrato 24 (crítica)",
-    "Documentación debido proceso EPM (04-18, crítica)",
-    "Revisar rendimiento contratos críticos (04-20)"
+    "Hamilton: deadline HOY",
+    "Debido proceso ambiental: vencida 2026-04-18"
   ],
-  "frase_dia": "Hoy: responde EPM, cobra Hamilton, respira. El lunes estructuras lo demás.",
-  "generado_at": "2026-05-01T11:00:08",
-  "fecha": "2026-05-01",
+  "frase_dia": "Hoy: cobro + claridad. Lunes: estrategia. No es pereza, es supervivencia.",
+  "generado_at": "2026-05-02T11:00:08",
+  "fecha": "2026-05-02",
   "stats": {
-    "abiertas": 196,
-    "criticas": 59,
-    "vencidas": 39,
-    "estancadas": 174,
-    "sin_evaluar": 168
+    "abiertas": 202,
+    "criticas": 65,
+    "vencidas": 41,
+    "estancadas": 176,
+    "sin_evaluar": 174
   },
   "criticas_sin_fecha": [
     {
@@ -153,8 +152,14 @@
     {
       "id": "2026-04-16-c001",
       "tarea": "Cobrar pago pendiente de Hamilton según lo prometido",
-      "dias": 1,
+      "dias": 0,
       "fecha_limite": "2026-05-02"
+    },
+    {
+      "id": "2026-04-13-mc8a7e3",
+      "tarea": "Conversar con basa, pilar y averiguar que propuestas hay en el POT para casa de aguactala",
+      "dias": 3,
+      "fecha_limite": "2026-05-05"
     }
   ]
 }

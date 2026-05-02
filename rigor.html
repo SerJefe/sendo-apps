@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#091f2e">
+<title>Rigor — Aletagogía aplicada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf7ee;
+  --bg-2: #f2ecd9;
+  --ink: #091f2e;
+  --ink-mid: #3d4f5e;
+  --ink-light: #8a8a86;
+  --line: #d8d0b8;
+  --line-soft: #e8e1c8;
+  --accent: #dbc078;
+  --accent-deep: #b89949;
+  --gold-soft: #e6d3a0;
+  --status-saved: #5a8a5e;
+  --status-pending: #c9a052;
+  --status-error: #b85c4a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body {
+  padding-bottom: 120px;
+}
+
+header {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 18px 16px 14px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(9,31,46,0.15);
+}
+.dash-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+  background: rgba(212,160,82,0.15);
+  color: var(--gold-soft);
+  border: 1px solid rgba(212,160,82,0.4);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease;
+}
+.dash-back:hover, .dash-back:active {
+  background: rgba(212,160,82,0.28);
+}
+header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+header .sub {
+  font-size: 11px;
+  color: var(--gold-soft);
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+header .progress {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.progress-count {
+  color: var(--accent);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.intro {
+  background: var(--bg-2);
+  border-left: 3px solid var(--accent);
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+  color: var(--ink-mid);
+  font-style: italic;
+}
+.intro b { color: var(--ink); font-style: normal; }
+
+.question-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 6px rgba(9,31,46,0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.question-card.saved {
+  border-color: var(--status-saved);
+  background: linear-gradient(white, #f4f9f4);
+}
+.question-card .q-num {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+.question-card.saved .q-num {
+  background: var(--status-saved);
+}
+.question-card .q-num .saved-mark {
+  margin-left: 6px;
+}
+.question-card .q-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-deep);
+  background: white;
+}
+
+.q-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--ink-light);
+}
+.q-meta .status {
+  font-weight: 500;
+}
+.q-meta .status.saved { color: var(--status-saved); }
+.q-meta .status.pending { color: var(--status-pending); }
+.q-meta .last-saved {
+  font-style: italic;
+}
+
+.actions-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid var(--line);
+  padding: 12px 16px;
+  box-shadow: 0 -2px 12px rgba(9,31,46,0.08);
+  z-index: 100;
+}
+.actions-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  gap: 8px;
+}
+button {
+  flex: 1;
+  padding: 14px 12px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  letter-spacing: 0.02em;
+}
+button:active { transform: scale(0.98); }
+button.secondary {
+  background: white;
+  color: var(--ink);
+}
+button.primary {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+  color: white;
+}
+button.primary:hover { background: #a08540; }
+
+.toast {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  background: var(--ink);
+  color: var(--bg);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 200;
+  box-shadow: 0 4px 12px rgba(9,31,46,0.25);
+  transition: transform 0.3s ease;
+  max-width: 90%;
+  text-align: center;
+}
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+.toast.success { background: var(--status-saved); }
+.toast.error { background: var(--status-error); }
+
+.empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--ink-mid);
+}
+.empty h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+.empty p {
+  font-size: 14px;
+  color: var(--ink-light);
+}
+
+footer {
+  text-align: center;
+  padding: 24px 16px 100px;
+  color: var(--ink-light);
+  font-size: 11px;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  header h1 { font-size: 19px; }
+  .question-card .q-text { font-size: 17px; }
+  textarea { min-height: 100px; font-size: 16px; }
+  button { font-size: 13px; padding: 13px 10px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Mantenemos paleta clara — coherente con canon de Sebas */
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="dash-back" aria-label="Volver al dashboard">← Dashboard</a>
+  <h1>Rigor — aletagogía aplicada</h1>
+  <div class="sub" id="header-sub">cargando...</div>
+  <div class="progress">
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="progress-count" id="progress-count">0 / 0</div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="intro" id="intro">
+    Las preguntas son para <b>vos</b>. Pará. No respondas rápido.
+    Cada respuesta se guarda automáticamente en este dispositivo.
+    Cuando termines (o cuando quieras), tocá <b>"Copiar para Claude"</b>
+    abajo y pegalo en Claude Code para que calibre cada respuesta contra el canon.
+  </div>
+  <div id="questions-container"></div>
+</main>
+
+<div class="actions-fixed">
+  <div class="actions-inner">
+    <button class="secondary" id="btn-clear">Limpiar todo</button>
+    <button class="primary" id="btn-copy">Copiar para Claude</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<footer>
+  Generado por agent-rigor-semanal · paleta canon Ser Siendo
+</footer>
+
+<script>
+(async function() {
+  const STORAGE_KEY_PREFIX = 'rigor-respuesta-';
+  const container = document.getElementById('questions-container');
+  const subTitle = document.getElementById('header-sub');
+  const progressFill = document.getElementById('progress-fill');
+  const progressCount = document.getElementById('progress-count');
+  const toast = document.getElementById('toast');
+
+  function showToast(msg, type='info', duration=2200) {
+    toast.textContent = msg;
+    toast.className = 'toast show ' + type;
+    setTimeout(() => toast.classList.remove('show'), duration);
+  }
+
+  // Encontrar el JSON de la semana actual
+  // Estrategia: probar últimas 3 semanas hasta encontrar uno
+  function isoWeekId(d) {
+    const tmp = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+    const dayNum = tmp.getUTCDay() || 7;
+    tmp.setUTCDate(tmp.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(tmp.getUTCFullYear(), 0, 1));
+    const week = Math.ceil(((tmp - yearStart) / 86400000 + 1) / 7);
+    return tmp.getUTCFullYear() + '-W' + String(week).padStart(2, '0');
+  }
+
+  async function loadJson(semanaId) {
+    try {
+      const res = await fetch(`/data/rigor-semanal-${semanaId}.json?t=` + Date.now(), {cache: 'no-cache'});
+      if (!res.ok) return null;
+      return await res.json();
+    } catch (e) {
+      return null;
+    }
+  }
+
+  let report = null;
+  let semanaUsada = null;
+  const today = new Date();
+  for (let i = 0; i < 4; i++) {
+    const d = new Date(today.getTime() - i * 7 * 86400000);
+    const semId = isoWeekId(d);
+    const r = await loadJson(semId);
+    if (r) { report = r; semanaUsada = semId; break; }
+  }
+
+  if (!report) {
+    container.innerHTML = `
+      <div class="empty">
+        <h2>Sin reporte disponible</h2>
+        <p>El agente todavía no generó el rigor de esta semana. Corre cada viernes 12pm Colombia.</p>
+      </div>
+    `;
+    subTitle.textContent = 'Sin datos';
+    progressCount.textContent = '0 / 0';
+    return;
+  }
+
+  const preguntas = report.preguntas_socraticas || [];
+  const semana = report.semana || semanaUsada;
+  const rango = report.rango_fechas || '';
+  const patron = report.patron_semana?.predominante || '';
+  subTitle.textContent = `Semana ${semana} · ${rango}${patron ? ' · patrón: ' + patron : ''}`;
+
+  // Render questions
+  const cards = [];
+  preguntas.forEach((pregunta, idx) => {
+    const n = idx + 1;
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    card.dataset.qNum = n;
+
+    const stored = localStorage.getItem(STORAGE_KEY_PREFIX + semana + '-' + n) || '';
+    const storedMeta = JSON.parse(localStorage.getItem(STORAGE_KEY_PREFIX + semana + '-' + n + '-meta') || '{}');
+    if (stored.trim()) card.classList.add('saved');
+
+    card.innerHTML = `
+      <span class="q-num">PREGUNTA ${n}<span class="saved-mark"></span></span>
+      <div class="q-text">${pregunta}</div>
+      <textarea placeholder="Tu respuesta aquí... (se guarda automáticamente)" data-q-num="${n}">${stored}</textarea>
+      <div class="q-meta">
+        <span class="status ${stored.trim() ? 'saved' : 'pending'}">${stored.trim() ? '✓ guardado' : '○ pendiente'}</span>
+        <span class="last-saved">${storedMeta.savedAt ? 'Última edición ' + new Date(storedMeta.savedAt).toLocaleString('es-CO', {hour: '2-digit', minute: '2-digit', day: '2-digit', month: 'short'}) : ''}</span>
+      </div>
+    `;
+
+    container.appendChild(card);
+    cards.push(card);
+
+    const ta = card.querySelector('textarea');
+    let saveTimer;
+    ta.addEventListener('input', () => {
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(() => {
+        const val = ta.value;
+        const key = STORAGE_KEY_PREFIX + semana + '-' + n;
+        if (val.trim()) {
+          localStorage.setItem(key, val);
+          localStorage.setItem(key + '-meta', JSON.stringify({savedAt: Date.now()}));
+          card.classList.add('saved');
+          card.querySelector('.status').className = 'status saved';
+          card.querySelector('.status').textContent = '✓ guardado';
+          card.querySelector('.last-saved').textContent = 'Última edición ' + new Date().toLocaleString('es-CO', {hour: '2-digit', minute: '2-digit', day: '2-digit', month: 'short'});
+        } else {
+          localStorage.removeItem(key);
+          localStorage.removeItem(key + '-meta');
+          card.classList.remove('saved');
+          card.querySelector('.status').className = 'status pending';
+          card.querySelector('.status').textContent = '○ pendiente';
+          card.querySelector('.last-saved').textContent = '';
+        }
+        updateProgress();
+      }, 600); // debounce 600ms
+    });
+  });
+
+  function updateProgress() {
+    const respondidas = cards.filter(c => c.classList.contains('saved')).length;
+    const total = cards.length;
+    progressCount.textContent = `${respondidas} / ${total}`;
+    progressFill.style.width = (total ? (respondidas / total) * 100 : 0) + '%';
+  }
+  updateProgress();
+
+  // Botón Copiar para Claude
+  document.getElementById('btn-copy').addEventListener('click', () => {
+    const lineas = [`Respuestas rigor ${semana}:`, ''];
+    let count = 0;
+    preguntas.forEach((p, idx) => {
+      const n = idx + 1;
+      const r = (localStorage.getItem(STORAGE_KEY_PREFIX + semana + '-' + n) || '').trim();
+      if (r) {
+        // Recortar pregunta a 80 chars para identificar
+        const pCorta = p.length > 80 ? p.slice(0, 77) + '...' : p;
+        lineas.push(`P${n} (${pCorta})`);
+        lineas.push(`Mi respuesta: ${r}`);
+        lineas.push('');
+        count++;
+      }
+    });
+    if (count === 0) {
+      showToast('Aún no respondiste ninguna pregunta', 'error');
+      return;
+    }
+    lineas.push('---');
+    lineas.push('Por favor calibrá cada respuesta contra el canon (SINTESIS + GLOSARIO + MAPA), aplicando aletagogía. Para cada una, decime: categoría (CONFIRMA/DESAFÍA/INTRODUCE/TENSIÓN), contraste con canon, pregunta de vuelta socrática, y acción concreta si aplica.');
+    const texto = lineas.join('\n');
+
+    navigator.clipboard.writeText(texto).then(() => {
+      showToast(`✓ ${count} respuesta${count===1?'':'s'} copiada${count===1?'':'s'}. Pegá en Claude Code.`, 'success', 3500);
+    }).catch(() => {
+      // Fallback: textarea select
+      const ta = document.createElement('textarea');
+      ta.value = texto;
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast(`✓ ${count} respuesta${count===1?'':'s'} copiada${count===1?'':'s'}.`, 'success', 3500);
+      } catch (e) {
+        showToast('No se pudo copiar — selecciona manualmente', 'error');
+      }
+      document.body.removeChild(ta);
+    });
+  });
+
+  // Botón Limpiar
+  document.getElementById('btn-clear').addEventListener('click', () => {
+    if (!confirm('¿Borrar todas las respuestas guardadas en este dispositivo? (no afecta lo que ya pegaste a Claude)')) return;
+    preguntas.forEach((_, idx) => {
+      const n = idx + 1;
+      localStorage.removeItem(STORAGE_KEY_PREFIX + semana + '-' + n);
+      localStorage.removeItem(STORAGE_KEY_PREFIX + semana + '-' + n + '-meta');
+    });
+    cards.forEach(c => {
+      c.classList.remove('saved');
+      c.querySelector('textarea').value = '';
+      c.querySelector('.status').className = 'status pending';
+      c.querySelector('.status').textContent = '○ pendiente';
+      c.querySelector('.last-saved').textContent = '';
+    });
+    updateProgress();
+    showToast('Respuestas borradas', 'success');
+  });
+})();
+</script>
+</body>
+</html>
