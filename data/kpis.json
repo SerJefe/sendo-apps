@@ -1,13 +1,13 @@
 {
   "fecha": "2026-05-03",
-  "ultima_actualizacion": "2026-05-03T05:40:00",
+  "ultima_actualizacion": "2026-05-03T07:40:00",
   "comite_sv": {
     "caja_dias": 8,
     "facturacion_pct": 45,
     "produccion_deficit_pct": 4.5,
     "ebitda": -800,
-    "whoop_recovery": 70,
-    "whoop_sleep": "5:48",
+    "whoop_recovery": 14,
+    "whoop_sleep": "27%",
     "tareas_criticas": 3,
     "proyectos_crisis": 1
   },
@@ -15,109 +15,96 @@
     "caja_dias": {
       "valor": 8,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 14,
+      "dias_sin_actualizar": 15,
       "fuente": "limitless"
     },
     "facturacion_pct": {
       "valor": 45,
       "fecha": "2026-04-18",
-      "dias_sin_actualizar": 14,
+      "dias_sin_actualizar": 15,
       "fuente": "limitless"
     },
     "produccion_deficit_pct": {
       "valor": 4.5,
       "fecha": "2026-04-28",
-      "dias_sin_actualizar": 4,
+      "dias_sin_actualizar": 5,
       "fuente": "limitless"
     },
     "ebitda": {
       "valor": -800,
-      "fecha": "2026-05-02",
+      "fecha": "2026-05-03",
       "dias_sin_actualizar": 0,
-      "fuente": "limitless"
+      "fuente": "crisis oyma r1"
     },
     "whoop_recovery": {
-      "valor": 23,
-      "fecha": "2026-04-28",
-      "dias_sin_actualizar": 4,
-      "fuente": "limitless"
+      "valor": 14,
+      "fecha": "2026-05-03",
+      "dias_sin_actualizar": 0,
+      "fuente": "whoop api"
     },
     "whoop_sleep": {
-      "valor": "54%",
-      "fecha": "2026-04-28",
-      "dias_sin_actualizar": 4,
-      "fuente": "limitless"
+      "valor": "27%",
+      "fecha": "2026-05-03",
+      "dias_sin_actualizar": 0,
+      "fuente": "whoop api"
     },
     "tareas_criticas": {
-      "valor": 65,
-      "fecha": "2026-05-02",
+      "valor": 3,
+      "fecha": "2026-05-03",
       "dias_sin_actualizar": 0,
-      "fuente": "auto"
+      "fuente": "tasks.md"
     },
     "proyectos_crisis": {
-      "valor": 2,
-      "fecha": "2026-05-02",
+      "valor": 1,
+      "fecha": "2026-05-03",
       "dias_sin_actualizar": 0,
-      "fuente": "auto"
+      "fuente": "oyma r1"
     }
   },
   "alertas": [
-    "Contrato de gas insostenible: mano de obra al 37% vs máximo viable del 27%",
-    "2.5 meses sin caja por migración del sistema interno de PM",
-    "Base de clientes Siendo: consolidar en un lugar con necesidades documentadas — sin esto no hay estrategia",
-    "Pérdida de 800 millones COP en contrato de Sabana Larga por incumplimiento de metodología",
-    "Deuda de más de 200 millones COP con proveedores más 500 millones COP adicionales",
-    "Caja familiar: revisar estado real y movimientos de inversiones — crítico para liquidez",
-    "Hamilton: cobro vencido HOY (deadline 2026-05-02) — Lina debe ejecutar",
-    "Liquidación pendiente de contrato Ayuda y 800 millones COP del cambio metodológico no reconocidos"
+    "🚨 RECOVERY CRÍTICO 14% — Deuda sueño 2:07, domingo descanso obligatorio",
+    "🔥 REUNIÓN EPM LUNES 6 MAYO DETERMINANTE — Decisión final continuidad vs cierre OYMA R1",
+    "⚠️ COMUNICACIÓN INTERVENTORÍA URGENTE — Diana + abogados notificar reducción operativa oficial",
+    "📊 CRISIS OYMA 7 MESES CONFIRMADA — Solo 3-4 cuadrillas emergencias, cero pavimentos/obras nuevas",
+    "💰 CONDUGAS DEUDA +500M — Acta +838M pendiente, sin recursos operativos",
+    "👥 GESTIÓN PERSONAL CRÍTICA — Vacaciones rotativas vs retención talento, reubicación si colapso"
   ],
   "oportunidades": [
-    "Negociación de reajuste de fórmula contractual con sustento técnico para 85-15 (mínimos-IPC)",
-    "Renegociación de contrato TRC con potencial de mantención tras aprender curva operativa",
-    "Mesa de decisión con EPM para resolver insostenibilidad contractual durante conciliación",
-    "Asignación de 64 millones COP mensuales según cálculo de EPM para ítems negociados"
+    "✅ Andrea promoción confirmada — Directora Financiera $4.2M + $800K, responsabilidades ampliadas",
+    "✅ Mario Naranjo contactado — Potencial asesor junta, reunión 7 abril exitosa",
+    "🎯 Framework Aleteagogía validado — Crisis real confirma energías expansiva/intensiva funcionales",
+    "🔄 Sistema auto-operativo mantenido — Dashboard + procesos funcionando bajo crisis extrema",
+    "📈 Outros contratos estables — Capacidad absorción personal si OYMA colapsa"
   ],
   "whoop": {
-    "recovery": 70,
-    "sleep": "5:48",
-    "strain": "12.4"
+    "recovery": 14,
+    "sleep": "27%",
+    "strain": "N/A",
+    "hrv": "25.8ms",
+    "resting_hr": "69 bpm",
+    "debt": "2:07"
   },
   "recordatorios_datos_faltantes": [
     {
-      "campo": "caja_dias",
-      "dias_sin_dato": 14,
-      "umbral": 2,
-      "severidad": "alta",
-      "ultimo_valor": 8,
-      "ultima_fecha": "2026-04-18",
-      "mensaje": "'caja_dias' lleva 14 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+      "campo": "REUNION_EPM_LUNES",
+      "urgencia": "MAXIMA",
+      "severidad": "critica",
+      "accion": "PREPARAR argumentos, documentos, postura legal para reunion Humberto Iglesias EPM",
+      "mensaje": "Reunion DETERMINANTE lunes 6 mayo - decision final OYMA R1 continuidad vs cierre"
     },
     {
-      "campo": "facturacion_pct",
-      "dias_sin_dato": 14,
-      "umbral": 7,
-      "severidad": "alta",
-      "ultimo_valor": 45,
-      "ultima_fecha": "2026-04-18",
-      "mensaje": "'facturacion_pct' lleva 14 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+      "campo": "COMUNICACION_INTERVENTORIA", 
+      "urgencia": "ALTA",
+      "severidad": "critica",
+      "accion": "Diana + Camilo Marin comunicar reduccion operativa oficial",
+      "mensaje": "Notificar interventoria: solo emergencias, cero pavimentos, respaldo legal abogados"
     },
     {
-      "campo": "whoop_recovery",
-      "dias_sin_dato": 4,
-      "umbral": 1,
-      "severidad": "alta",
-      "ultimo_valor": 23,
-      "ultima_fecha": "2026-04-28",
-      "mensaje": "'whoop_recovery' lleva 4 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
-    },
-    {
-      "campo": "whoop_sleep",
-      "dias_sin_dato": 4,
-      "umbral": 1,
-      "severidad": "alta",
-      "ultimo_valor": "54%",
-      "ultima_fecha": "2026-04-28",
-      "mensaje": "'whoop_sleep' lleva 4 dias sin mencion en Limitless. Mencionalo en el proximo comite o registralo manualmente."
+      "campo": "DESCANSO_PERSONAL",
+      "urgencia": "OBLIGATORIO",
+      "severidad": "salud",
+      "accion": "Domingo completo descanso, cero actividad intensa",
+      "mensaje": "Recovery 14% critico, deuda sueno 2:07, HRV bajo 25.8ms"
     }
   ]
 }
