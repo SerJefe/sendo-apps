@@ -1,15 +1,15 @@
 {
-  "fecha": "2026-05-02",
-  "ultima_actualizacion": "2026-05-02T11:45:08",
+  "fecha": "2026-05-03",
+  "ultima_actualizacion": "2026-05-03T05:40:00",
   "comite_sv": {
     "caja_dias": 8,
     "facturacion_pct": 45,
     "produccion_deficit_pct": 4.5,
     "ebitda": -800,
-    "whoop_recovery": 23,
-    "whoop_sleep": "54%",
-    "tareas_criticas": 65,
-    "proyectos_crisis": 2
+    "whoop_recovery": 70,
+    "whoop_sleep": "5:48",
+    "tareas_criticas": 3,
+    "proyectos_crisis": 1
   },
   "frescura": {
     "caja_dias": {
@@ -78,8 +78,8 @@
     "Asignación de 64 millones COP mensuales según cálculo de EPM para ítems negociados"
   ],
   "whoop": {
-    "recovery": 23,
-    "sleep": "54%",
+    "recovery": 70,
+    "sleep": "5:48",
     "strain": "12.4"
   },
   "recordatorios_datos_faltantes": [

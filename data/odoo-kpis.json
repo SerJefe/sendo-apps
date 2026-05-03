@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-05-02",
-  "generated_at": "2026-05-02T10:30:04.592404Z",
+  "fecha": "2026-05-03",
+  "generated_at": "2026-05-03T10:30:04.642243Z",
   "version": "v2-3decisiones",
   "facturacion_30d": {
     "total": 4264619421.67,
@@ -415,70 +415,70 @@
           "total": 701370508.88,
           "facturas_vencidas": 11,
           "mas_vieja": "2026-04-19",
-          "dias_vencida": 13
+          "dias_vencida": 14
         },
         {
           "partner": "EMPRESAS PUBLICAS DE MEDELLIN E.S.P.",
           "total": 357285096.28000003,
           "facturas_vencidas": 5,
           "mas_vieja": "2026-04-15",
-          "dias_vencida": 17
+          "dias_vencida": 18
         },
         {
           "partner": "CONSORCIO CONDUGAS NC ACUEDUCTOS 2021",
           "total": 159188822.0,
           "facturas_vencidas": 4,
           "mas_vieja": "2026-02-23",
-          "dias_vencida": 68
+          "dias_vencida": 69
         },
         {
           "partner": "METROGAS DE COLOMBIA S.A E.S.P",
           "total": 93251269.39,
           "facturas_vencidas": 10,
           "mas_vieja": "2026-04-11",
-          "dias_vencida": 21
+          "dias_vencida": 22
         },
         {
           "partner": "CONSORCIO SILAR CONDUGAS",
           "total": 86588132.44,
           "facturas_vencidas": 1,
           "mas_vieja": "2026-04-30",
-          "dias_vencida": 2
+          "dias_vencida": 3
         },
         {
           "partner": "Jhon Christopher Angulo",
           "total": 59368482.98,
           "facturas_vencidas": 1,
           "mas_vieja": "2026-03-24",
-          "dias_vencida": 39
+          "dias_vencida": 40
         },
         {
           "partner": "GASES DE OCCIDENTE SA ESP",
           "total": 55554076.62,
           "facturas_vencidas": 1,
           "mas_vieja": "2026-05-01",
-          "dias_vencida": 1
+          "dias_vencida": 2
         },
         {
           "partner": "UNION TEMPORAL HABILITACION INFRAESTRUCTURA HOSPITALARIA",
           "total": 24521525.67,
           "facturas_vencidas": 1,
           "mas_vieja": "2026-04-14",
-          "dias_vencida": 18
+          "dias_vencida": 19
         },
         {
           "partner": "CONINSA  S.A.S",
           "total": 18868581.69,
           "facturas_vencidas": 1,
           "mas_vieja": "2026-04-20",
-          "dias_vencida": 12
+          "dias_vencida": 13
         },
         {
           "partner": "CONSTRUTEM S A S",
           "total": 15598151.76,
           "facturas_vencidas": 1,
           "mas_vieja": "2026-04-14",
-          "dias_vencida": 18
+          "dias_vencida": 19
         }
       ],
       "total": 1581854604.83,
@@ -487,7 +487,7 @@
     "deuda_proveedores": {
       "total": 3364002072.78,
       "count": 1000,
-      "vencidas": 872,
+      "vencidas": 880,
       "top": [
         {
           "proveedor": "GASES DE OCCIDENTE SA ESP",
@@ -726,7 +726,7 @@
       "nota_presupuesto": "Campos presupuesto/cumplimiento pendientes hasta carga de estructuración"
     },
     "inventario_transito": {
-      "count": 65,
+      "count": 64,
       "items": [
         {
           "name": "OM&Z2/IN/00076",
