@@ -2,24 +2,24 @@
   "semana": "2026-W18",
   "fecha_generacion": "2026-05-03",
   "aprendizajes": [
-    "Crisis financiera EPM: 257M acumulados desde octubre 2025, proyección total 3040M COP por fórmulas de reajuste desactualizadas vs realidad de costos (salario mínimo +23%, mano obra +14%)",
-    "Fragmentación crítica entre crisis empresarial y vida doméstica: gestión de 120 empleos sostenidos en pandemia mientras maneja ciclos de sueño fragmentado de Benjamin a las 7pm",
-    "Resoluciones tácticas emergentes: Diana propone operativo + estrategia táctica, William estructura soporte, Camilo plan financiero con 'marrano amarrado' + posible inyección Condugas",
-    "Desacoplamiento sistémico: horas extras mal configuradas, AMS reducidos de 109 a 51 centros, pero persistencia de problemas técnicos sin resolver en reportes",
-    "Coherencia emocional-operativa: 'haga las cosas por usted, que cuando termine lo dejen tranquilo' - visión de independencia post-crisis con empresa 'super liviana'"
+    "Las fórmulas de reajuste desacopladas de la realidad de costos erosionan márgenes de forma silenciosa y acumulada: en Condugas, el desfase entre índices Camacol y la realidad (salario mínimo +23%, mano de obra +14%) generó 257M COP no reconocidos desde octubre 2025 y una proyección de daño de 3040M COP total.",
+    "La estrategia de dos comunicados separados (puntos de negociación inmediata + propuesta futura) permite demostrar diligencia ante contrapartes como EPM sin comprometer la posición negociadora de largo plazo; Melisa lo propuso concretamente para la carta de negociación.",
+    "Cuando un contratante principal (EPM) enfrenta su propia crisis (600M en ambientales), sus prioridades internas desplazan activamente los reclamos del contratista; Sebastian verbalizó esto como 'para ellos hoy somos un proveedor', lo que implica que la presión debe activarse por rutas formales simultáneas, no por relacionamiento.",
+    "La decisión de mantener 120 empleos durante la pandemia —que Sebastian defiende como correcta— se convirtió en un factor de desgaste acumulado porque generó compromisos de continuidad que hoy limitan la capacidad de cierre o renegociación del contrato EPM.",
+    "El progreso en reducción de incumplimientos AMS de 109 a 51 centros (mayores a 7 días) muestra que la operación tiene capacidad de mejora continua incluso en contexto de crisis financiera severa; el equipo no se paralizó."
   ],
   "decisiones_clave": [
-    "Mantener contrato EPM pese a 257M no reconocidos y desgaste extremo, con compromiso total de Sebastian: 'si se cierra con mi renuncia, no tengo líos con eso'",
-    "Modificaciones bilaterales firmadas por vicepresidente el 30/04, urgencia crítica de firma de suspensión contrato patrullaje para activar continuidad mes siguiente",
-    "Plan post-implementación: reducción drástica estructura operativa a 'empresa super liviana' con horario fijo sueño Benjamin 7pm y gestora de sueño con protocolo fijo"
+    "Mantener el contrato con EPM hasta completar la implementación, con plan post-implementación de reducción drástica de estructura operativa ('empresa super liviana'), asumiendo Sebastian responsabilidad total incluida su renuncia si el cierre es necesario; decisión tomada en reunión del 2026-04-30 con Diana, William y Camilo presentes.",
+    "Activar operación mínima (2 mínimos de Diana) con posible inyección de caja de Condugas para sostener el contrato EPM mientras se ejecutan 4 rutas simultáneas de presión formal: VP Negocios, Jurídica/Reclamaciones, Portal Pagos Proveedores y Canal Ética/Transparencia.",
+    "Firma de modificaciones bilaterales por el vicepresidente de EPM completada el 2026-04-30, y firma de documentación de suspensión de contrato de patrullaje requerida ese mismo día para activar continuidad del mes siguiente; ambas decisiones con urgencia crítica y ambiente de alta presión ejecutiva."
   ],
   "patterns": [
-    "Alternancia extrema diaria entre tensión contractual máxima (EPM, firmas, crisis caja) y micro-gestión doméstica (sueño Benjamin, rutinas, comida) sin transición visible",
-    "Propuestas colaborativas emergentes en crisis: equipo genera soluciones tácticas específicas (Diana-William-Camilo) cuando Sebastian verbaliza responsabilidad total y compromiso de arropamiento"
+    "Sebastian fragmenta el mismo día entre decisiones de supervivencia empresarial de altísimo impacto (crisis de 3040M COP, renuncias potenciales, 120 empleos) y gestión doméstica detallada (rutinas de sueño de Benjamín, comida, viaje a Bogotá a las 2am); la ausencia de transición entre estos contextos sugiere un modo de procesamiento continuo sin cierre emocional entre roles, lo que puede amplificar el desgaste acumulado ya verbalizado.",
+    "Las tareas críticas relacionadas con EPM (defensa legal, narrativa madre de 5 bloques, radicación formal, auditoría de fórmulas) se generan con claridad estratégica en conversación pero acumulan estado 'estancada' en el tracker semana tras semana; el patrón indica que Sebastian identifica correctamente qué hacer pero la ejecución se bloquea, posiblemente por concentración de responsabilidad sin delegación efectiva."
   ],
-  "prediccion_proxima": "Escalada crítica en negociación EPM por plazos vencidos de firma patrullaje, con impacto directo en rutinas familiares por viaje Bogotá 2am",
-  "resumen_ejecutivo": "Semana de convergencia crítica entre crisis financiera EPM (3040M proyectados) y gestión doméstica fragmentada. Emergencia de resoluciones tácticas colaborativas del equipo ante compromiso total de Sebastian. Modificaciones contractuales firmadas pero urgencia extrema en documentación patrullaje. Consolidación rutinas Benjamin (7pm) con gestora profesional mientras se mantiene operación mínima con posible inyección Condugas.",
-  "tareas_cerradas_semana": 0,
-  "tareas_abiertas_acumuladas": 22,
-  "ideas_totales": 10
+  "prediccion_proxima": "La semana 2026-W19 estará dominada por la presión de resolución EPM vía rutas formales simultáneas, con riesgo de nuevo estancamiento si no se ejecuta la delegación efectiva en William y Camilo para las tareas operativas, mientras la caja familiar y de Condugas continúa siendo el limitante real de margen de maniobra.",
+  "resumen_ejecutivo": "La semana 2026-W18 estuvo marcada por la profundización de la crisis financiera con EPM: 257M COP no reconocidos desde octubre 2025, proyección de daño total de 3040M COP, y una reunión de crisis del 30 de abril donde Sebastian asumió responsabilidad total incluida renuncia ante cierre de contrato. Se firmaron modificaciones bilaterales por el vicepresidente y se activó un plan táctico con Diana y Camilo para mantener operación mínima. En paralelo, la vida doméstica —rutinas de sueño de Benjamín, gestión de horarios, cuidados familiares— ocupó un espacio significativo del día, evidenciando la fragmentación extrema de atención. El tracker acumula decenas de tareas críticas estancadas, lo que señala que el cuello de botella ya no es claridad estratégica sino capacidad de ejecución delegada.",
+  "tareas_cerradas_semana": 4,
+  "tareas_abiertas_acumuladas": 89,
+  "ideas_totales": 14
 }
